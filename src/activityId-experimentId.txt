@@ -2,7 +2,7 @@
 [CMIP, 1pctCO2]
 [CMIP, abrupt-4xCO2]
 [CMIP, amip]
-[CMIP, esm-historical]
+[CMIP, esm-hist]
 [CMIP, esm-piControl]
 [CMIP, historical]
 [CMIP, piClim-4xCO2]
@@ -10,9 +10,30 @@
 [CMIP, piClim-control]
 [CMIP, piControl]
 # AR7 Fast Track
-[AerChemMIP, piClim-X] # multiple
-[AerChemMIP, hist-piAer] # multiple
-[AerChemMIP, hist-piSLCF] # multiple
+[AerChemMIP, piClim-CH4]
+[AerChemMIP, piClim-HC]
+[AerChemMIP, piClim-N2O]
+[AerChemMIP, piClim-NOx]
+[AerChemMIP, piClim-SO2]
+[AerChemMIP, piClim-2xDMS
+[AerChemMIP, piClim-2xdust
+[AerChemMIP, piClim-2xfire
+[AerChemMIP, piClim-2xNox
+[AerChemMIP, piClim-2xss
+[AerChemMIP, piClim-2xVOC
+[AerChemMIP, piClim-BC
+[AerChemMIP, piClim-CH4
+[AerChemMIP, piClim-HC
+[AerChemMIP, piClim-N2O
+[AerChemMIP, piClim-NH3
+[AerChemMIP, piClim-NOx
+[AerChemMIP, piClim-NTCF
+[AerChemMIP, piClim-O3
+[AerChemMIP, piClim-OC
+[AerChemMIP, piClim-SO2
+[AerChemMIP, piClim-VOC
+[AerChemMIP, hist-piAer]
+[AerChemMIP, hist-piSLCF] # possibly a dupe of hist-piAer
 [AerChemMIP, SSPX-SLCF]
 [C4MIP, 1pctCO2-bgc]
 [C4MIP, 1pctCO2-rad]
@@ -26,17 +47,17 @@
 [DAMIP, hist-nat]
 [DAMIP, hist-GHG]
 [DCPP, Initialised prediction (2025-2036)]
-[GeoMIP, newGeoMIP]
+[GeoMIP, G7-1.5K-SAI] # needs renaming with controlled characters [no "."]
 [LMIP, land-hist]
 [PMIP, LIGabrupt]
 [RFMIP, piClim-aer]
 [RFMIP, piClim-histaer]
 [RFMIP, piClim-histall]
 [ScenarioMIP, High scenario]
-[ScenarioMIP, Low scenario 1]
-[ScenarioMIP, Low scenario 2]
-[ScenarioMIP, Low scenario 3]
-[ScenarioMIP, Medium scenario]
+[ScenarioMIP, Low scenario]
+[ScenarioMIP, Low overshoot scenario]
+[ScenarioMIP, Medium scenario, and extension]
+[ScenarioMIP, Very low scenario]
 https://wcrp-cmip.org/cmip-panel-meet-to-advance-cmip7-and-ar7-fast-track/
-https://wcrp-cmip.onlyoffice.eu/Products/Files/DocEditor.aspx?fileid=9282348 - all AerChemMIP experiments defined here, Calculator sheet
-https://wcrp-cmip.onlyoffice.eu/Products/Files/#3135223
+https://office.wcrp-cmip.org/Products/Files/DocEditor.aspx?fileid=6388 - all AerChemMIP experiments defined here, Calculator sheet
+https://office.wcrp-cmip.org/Products/Files/#1808
