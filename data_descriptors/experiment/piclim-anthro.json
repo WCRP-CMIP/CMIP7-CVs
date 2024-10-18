@@ -1,0 +1,28 @@
+{
+    "@context": "https://wcrp-cmip.github.io/CMIP7_CVs/data_descriptors/experiment/_context",
+    "id": "piclim-anthro.json",
+    "type": "experiment_id",
+    "activity_id": [
+        {
+            "@id": "cmip"
+        }
+    ],
+    "description": "DECK: effective radiative forcing by present day anthropogenic forcings",
+    "experiment_description": "Effective radiative forcing by present day anthropogenic forcings",
+    "model-components": {
+        "additional-allowed": [],
+        "required": []
+    },
+    "name": "piClim-anthro",
+    "parameters": {
+        "end": "unknown",
+        "min-number-yrs-per-sim": 0,
+        "start": "unknown"
+    },
+    "parent": {
+        "activity_id": [],
+        "experiment-id": []
+    },
+    "sub-experiment-id": {},
+    "tier": 0
+}

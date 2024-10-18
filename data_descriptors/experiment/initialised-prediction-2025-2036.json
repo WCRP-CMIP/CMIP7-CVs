@@ -1,0 +1,28 @@
+{
+    "@context": "https://wcrp-cmip.github.io/CMIP7_CVs/data_descriptors/experiment/_context",
+    "id": "initialised-prediction-2025-2036.json",
+    "type": "experiment_id",
+    "activity_id": [
+        {
+            "@id": "dcpp"
+        }
+    ],
+    "description": "Initialised prediction for 2025-2036",
+    "experiment_description": "Decadal climate prediction project initialised forecast for 2025-2036",
+    "model-components": {
+        "additional-allowed": [],
+        "required": []
+    },
+    "name": "Initialised-prediction-2025-2036",
+    "parameters": {
+        "end": 2036,
+        "min-number-yrs-per-sim": 11,
+        "start": 2025
+    },
+    "parent": {
+        "activity_id": [],
+        "experiment-id": []
+    },
+    "sub-experiment-id": {},
+    "tier": 0
+}

@@ -1,0 +1,28 @@
+{
+    "@context": "https://wcrp-cmip.github.io/CMIP7_CVs/data_descriptors/experiment/_context",
+    "id": "abrupt-2xco2.json",
+    "type": "experiment_id",
+    "activity_id": [
+        {
+            "@id": "cfmip"
+        }
+    ],
+    "description": "Abrupt doubling of CO2",
+    "experiment_description": "Abrupt doubling of atmospheric CO2",
+    "model-components": {
+        "additional-allowed": [],
+        "required": []
+    },
+    "name": "abrupt-2xCO2",
+    "parameters": {
+        "end": "unknown",
+        "min-number-yrs-per-sim": 0,
+        "start": "unknown"
+    },
+    "parent": {
+        "activity_id": [],
+        "experiment-id": []
+    },
+    "sub-experiment-id": {},
+    "tier": 0
+}

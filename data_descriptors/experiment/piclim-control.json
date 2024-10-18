@@ -1,0 +1,28 @@
+{
+    "@context": "https://wcrp-cmip.github.io/CMIP7_CVs/data_descriptors/experiment/_context",
+    "id": "piclim-control.json",
+    "type": "experiment_id",
+    "activity_id": [
+        {
+            "@id": "cmip"
+        }
+    ],
+    "description": "DECK: effective radiative forcing control",
+    "experiment_description": "Effective radiative forcing control simulation",
+    "model-components": {
+        "additional-allowed": [],
+        "required": []
+    },
+    "name": "piClim-control",
+    "parameters": {
+        "end": "unknown",
+        "min-number-yrs-per-sim": 0,
+        "start": "unknown"
+    },
+    "parent": {
+        "activity_id": [],
+        "experiment-id": []
+    },
+    "sub-experiment-id": {},
+    "tier": 0
+}

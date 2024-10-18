@@ -1,0 +1,8 @@
+{
+    "@context": "https://wcrp-cmip.github.io/CMIP7_CVs/data_descriptors/activity/_context",
+    "id": "damip.json",
+    "type": "activity",
+    "description": "DAMIP focuses on detection and attribution of climate change, covering experiments like hist-aer and hist-nat.",
+    "name": "DAMIP",
+    "url": "https://gmd.copernicus.org/articles/13/7947/2020/gmd-13-7947-2020.pdf"
+}

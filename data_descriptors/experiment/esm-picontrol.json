@@ -1,0 +1,28 @@
+{
+    "@context": "https://wcrp-cmip.github.io/CMIP7_CVs/data_descriptors/experiment/_context",
+    "id": "esm-picontrol.json",
+    "type": "experiment_id",
+    "activity_id": [
+        {
+            "@id": "cmip"
+        }
+    ],
+    "description": "DECK: pre-industrial control simulation with Earth System Models",
+    "experiment_description": "Pre-industrial control run for Earth System Models",
+    "model-components": {
+        "additional-allowed": [],
+        "required": []
+    },
+    "name": "esm-piControl",
+    "parameters": {
+        "end": "unknown",
+        "min-number-yrs-per-sim": 0,
+        "start": "unknown"
+    },
+    "parent": {
+        "activity_id": [],
+        "experiment-id": []
+    },
+    "sub-experiment-id": {},
+    "tier": 0
+}

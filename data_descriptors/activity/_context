@@ -1,0 +1,6 @@
+{
+    "@context":{
+    	"@base": "https://wcrp-cmip.github.io/CMIP7_CVs/data_descriptors/activity/",
+	"@vocab": "https://wcrp-cmip.github.io/CMIP7_CVs/data_descriptors/activity/",
+     }
+}

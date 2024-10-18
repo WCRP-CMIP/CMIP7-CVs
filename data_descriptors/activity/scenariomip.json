@@ -1,0 +1,8 @@
+{
+    "@context": "https://wcrp-cmip.github.io/CMIP7_CVs/data_descriptors/activity/_context",
+    "id": "scenariomip.json",
+    "type": "activity",
+    "description": "ScenarioMIP focuses on future climate projections based on different socio-economic pathways, including High, Medium, and Very Low scenarios.",
+    "name": "ScenarioMIP",
+    "url": "https://gmd.copernicus.org/articles/12/1443/2019/gmd-12-1443-2019.pdf"
+}

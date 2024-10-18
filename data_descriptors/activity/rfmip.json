@@ -1,0 +1,8 @@
+{
+    "@context": "https://wcrp-cmip.github.io/CMIP7_CVs/data_descriptors/activity/_context",
+    "id": "rfmip.json",
+    "type": "activity",
+    "description": "RFMIP assesses the radiative forcing of climate change with experiments such as piClim-aer, piClim-histaer, and piClim-histall.",
+    "name": "RFMIP",
+    "url": "https://gmd.copernicus.org/articles/13/169/2020/gmd-13-169-2020.pdf"
+}

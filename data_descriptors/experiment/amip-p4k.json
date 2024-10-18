@@ -1,0 +1,28 @@
+{
+    "@context": "https://wcrp-cmip.github.io/CMIP7_CVs/data_descriptors/experiment/_context",
+    "id": "amip-p4k.json",
+    "type": "experiment_id",
+    "activity_id": [
+        {
+            "@id": "cfmip"
+        }
+    ],
+    "description": "AMIP experiment with uniform 4K SST increase",
+    "experiment_description": "AMIP experiment with uniform 4K SST increase",
+    "model-components": {
+        "additional-allowed": [],
+        "required": []
+    },
+    "name": "amip-p4k",
+    "parameters": {
+        "end": "unknown",
+        "min-number-yrs-per-sim": 0,
+        "start": "unknown"
+    },
+    "parent": {
+        "activity_id": [],
+        "experiment-id": []
+    },
+    "sub-experiment-id": {},
+    "tier": 0
+}

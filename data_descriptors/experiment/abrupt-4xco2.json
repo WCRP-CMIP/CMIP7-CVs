@@ -1,0 +1,28 @@
+{
+    "@context": "https://wcrp-cmip.github.io/CMIP7_CVs/data_descriptors/experiment/_context",
+    "id": "abrupt-4xco2.json",
+    "type": "experiment_id",
+    "activity_id": [
+        {
+            "@id": "cmip"
+        }
+    ],
+    "description": "DECK: abrupt quadrupling of CO2",
+    "experiment_description": "Abrupt increase in CO2 concentration from pre-industrial level to quadrupling",
+    "model-components": {
+        "additional-allowed": [],
+        "required": []
+    },
+    "name": "abrupt-4xCO2",
+    "parameters": {
+        "end": "unknown",
+        "min-number-yrs-per-sim": 150,
+        "start": "unknown"
+    },
+    "parent": {
+        "activity_id": [],
+        "experiment-id": []
+    },
+    "sub-experiment-id": {},
+    "tier": 0
+}

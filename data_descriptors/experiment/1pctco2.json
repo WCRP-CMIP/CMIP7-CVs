@@ -1,0 +1,28 @@
+{
+    "@context": "https://wcrp-cmip.github.io/CMIP7_CVs/data_descriptors/experiment/_context",
+    "id": "1pctco2.json",
+    "type": "experiment_id",
+    "activity_id": [
+        {
+            "@id": "cmip"
+        }
+    ],
+    "description": "DECK: 1 percent per year CO2 increase",
+    "experiment_description": "Increase CO2 concentration from pre-industrial level at 1% per year until quadrupling",
+    "model-components": {
+        "additional-allowed": [],
+        "required": []
+    },
+    "name": "1pctCO2",
+    "parameters": {
+        "end": "unknown",
+        "min-number-yrs-per-sim": 150,
+        "start": "unknown"
+    },
+    "parent": {
+        "activity_id": [],
+        "experiment-id": []
+    },
+    "sub-experiment-id": {},
+    "tier": 0
+}

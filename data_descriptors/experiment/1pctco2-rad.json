@@ -1,0 +1,28 @@
+{
+    "@context": "https://wcrp-cmip.github.io/CMIP7_CVs/data_descriptors/experiment/_context",
+    "id": "1pctco2-rad.json",
+    "type": "experiment_id",
+    "activity_id": [
+        {
+            "@id": "c4mip"
+        }
+    ],
+    "description": "Radiatively-coupled version of 1 percent per year CO2 increase experiment",
+    "experiment_description": "Radiatively-coupled version of 1 percent per year CO2 increase experiment",
+    "model-components": {
+        "additional-allowed": [],
+        "required": []
+    },
+    "name": "1pctCO2-rad",
+    "parameters": {
+        "end": "unknown",
+        "min-number-yrs-per-sim": 0,
+        "start": "unknown"
+    },
+    "parent": {
+        "activity_id": [],
+        "experiment-id": []
+    },
+    "sub-experiment-id": {},
+    "tier": 0
+}
