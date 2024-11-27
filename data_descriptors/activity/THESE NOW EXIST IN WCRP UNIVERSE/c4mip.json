@@ -1,8 +1,0 @@
-{
-    "@context": "https://wcrp-cmip.github.io/CMIP7_CVs/data_descriptors/activity/_context",
-    "id": "c4mip.json",
-    "type": "activity",
-    "description": "C4MIP experiments focus on carbon cycle feedbacks and interactions, including 1pctCO2-bgc and esm-flat10-cdr experiments.",
-    "name": "C4MIP",
-    "url": "https://gmd.copernicus.org/articles/9/2853/2016/gmd-9-2853-2016.pdf"
-}

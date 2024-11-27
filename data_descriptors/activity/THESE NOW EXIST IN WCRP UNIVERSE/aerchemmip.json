@@ -1,8 +1,0 @@
-{
-    "@context": "https://wcrp-cmip.github.io/CMIP7_CVs/data_descriptors/activity/_context",
-    "id": "aerchemmip.json",
-    "type": "activity",
-    "description": "AerChemMIP experiments focus on the role of atmospheric chemistry and aerosols in climate, including piClim and hist-piSLCF simulations.",
-    "name": "AerChemMIP",
-    "url": "https://gmd.copernicus.org/articles/10/585/2017/gmd-10-585-2017.pdf"
-}

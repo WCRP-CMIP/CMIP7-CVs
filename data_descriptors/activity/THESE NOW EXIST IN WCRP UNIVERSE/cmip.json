@@ -1,8 +1,0 @@
-{
-    "@context": "https://wcrp-cmip.github.io/CMIP7_CVs/data_descriptors/activity/_context",
-    "id": "cmip.json",
-    "type": "activity",
-    "description": "CMIP DECK: 1pctCO2, abrupt-4xCO2, amip, esm-piControl, esm-historical, historical, and piControl experiments",
-    "name": "CMIP",
-    "url": "https://gmd.copernicus.org/articles/9/1937/2016/gmd-9-1937-2016.pdf"
-}

@@ -1,8 +1,0 @@
-{
-    "@context": "https://wcrp-cmip.github.io/CMIP7_CVs/data_descriptors/activity/_context",
-    "id": "cfmip.json",
-    "type": "activity",
-    "description": "CFMIP experiments focus on cloud feedbacks and their role in climate, including abrupt-0p5CO2 and amip-piForcing simulations.",
-    "name": "CFMIP",
-    "url": "https://gmd.copernicus.org/articles/10/359/2017/gmd-10-359-2017.pdf"
-}
