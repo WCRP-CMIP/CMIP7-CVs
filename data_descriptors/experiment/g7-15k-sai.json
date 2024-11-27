@@ -1,5 +1,5 @@
 {
-    "@context": "https://wcrp-cmip.github.io/CMIP7_CVs/data_descriptors/experiment/_context",
+    "@context": "_context_",
     "id": "g7-15k-sai.json",
     "type": "experiment_id",
     "activity_id": [
@@ -9,10 +9,6 @@
     ],
     "description": "Stratospheric aerosol injection to reduce warming to 1.5K",
     "experiment_description": "Stratospheric aerosol injection to reduce warming to 1.5K above pre-industrial levels",
-    "model-components": {
-        "additional-allowed": [],
-        "required": []
-    },
     "name": "G7-15K-SAI",
     "parameters": {
         "end": "unknown",
@@ -23,6 +19,9 @@
         "activity_id": [],
         "experiment-id": []
     },
-    "sub-experiment-id": {},
-    "tier": 0
+    "tier": 0,
+    "model_realms": {},
+    "parent_activity": [],
+    "parent_experiment": [],
+    "sub_experiment": {}
 }

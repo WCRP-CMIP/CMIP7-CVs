@@ -1,5 +1,5 @@
 {
-    "@context": "https://wcrp-cmip.github.io/CMIP7_CVs/data_descriptors/experiment/_context",
+    "@context": "_context_",
     "id": "ligabrupt.json",
     "type": "experiment_id",
     "activity_id": [
@@ -9,10 +9,6 @@
     ],
     "description": "Last Interglacial abrupt change experiment",
     "experiment_description": "Simulation of abrupt change during the Last Interglacial period",
-    "model-components": {
-        "additional-allowed": [],
-        "required": []
-    },
     "name": "LIGabrupt",
     "parameters": {
         "end": "unknown",
@@ -23,6 +19,9 @@
         "activity_id": [],
         "experiment-id": []
     },
-    "sub-experiment-id": {},
-    "tier": 0
+    "tier": 0,
+    "model_realms": {},
+    "parent_activity": [],
+    "parent_experiment": [],
+    "sub_experiment": {}
 }

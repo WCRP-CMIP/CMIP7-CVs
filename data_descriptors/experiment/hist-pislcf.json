@@ -1,5 +1,5 @@
 {
-    "@context": "https://wcrp-cmip.github.io/CMIP7_CVs/data_descriptors/experiment/_context",
+    "@context": "_context_",
     "id": "hist-pislcf.json",
     "type": "experiment_id",
     "activity_id": [
@@ -9,10 +9,6 @@
     ],
     "description": "Historical simulation with pre-industrial short-lived climate forcers",
     "experiment_description": "Historical simulation but with pre-industrial short-lived climate forcer emissions",
-    "model-components": {
-        "additional-allowed": [],
-        "required": []
-    },
     "name": "hist-piSLCF",
     "parameters": {
         "end": "unknown",
@@ -23,6 +19,9 @@
         "activity_id": [],
         "experiment-id": []
     },
-    "sub-experiment-id": {},
-    "tier": 0
+    "tier": 0,
+    "model_realms": {},
+    "parent_activity": [],
+    "parent_experiment": [],
+    "sub_experiment": {}
 }

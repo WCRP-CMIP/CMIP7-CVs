@@ -1,5 +1,5 @@
 {
-    "@context": "https://wcrp-cmip.github.io/CMIP7_CVs/data_descriptors/experiment/_context",
+    "@context": "_context_",
     "id": "piclim-aer.json",
     "type": "experiment_id",
     "activity_id": [
@@ -9,10 +9,6 @@
     ],
     "description": "Effective radiative forcing by present-day aerosols",
     "experiment_description": "Effective radiative forcing by present-day aerosols",
-    "model-components": {
-        "additional-allowed": [],
-        "required": []
-    },
     "name": "piClim-aer",
     "parameters": {
         "end": "unknown",
@@ -23,6 +19,9 @@
         "activity_id": [],
         "experiment-id": []
     },
-    "sub-experiment-id": {},
-    "tier": 0
+    "tier": 0,
+    "model_realms": {},
+    "parent_activity": [],
+    "parent_experiment": [],
+    "sub_experiment": {}
 }

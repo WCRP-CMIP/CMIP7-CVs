@@ -1,0 +1,105 @@
+name: 'Add/Modify: Experiment'
+description: 'Type: experiment'
+title: 'Add/Modify: Experiment: <enter item name>'
+labels:
+- delta
+- experiment
+body:
+-   type: markdown
+    attributes:
+        value: ''
+-   id: activity
+    attributes:
+        label: Activity
+        description: Research activities associated with the experiment
+        options:
+        -   label: cmip
+        -   label: aerchemmip
+        -   label: c4mip
+        -   label: cfmip
+        -   label: damip
+        -   label: dcpp
+        -   label: geomip
+        -   label: lesfmip
+        -   label: lmip
+        -   label: pmip
+        -   label: ramip
+        -   label: rfmip
+        -   label: scenariomip
+        -   label: tipmip
+    validations:
+        required: true
+    type: checkboxes
+    multiple: false
+-   id: description
+    attributes:
+        label: Description
+        description: Detailed description of the experiment
+    validations:
+        required: true
+    type: input
+-   id: model_realms
+    attributes:
+        label: Model Realms
+        description: Model realms and their requirement status
+    validations:
+        required: true
+    type: input
+-   id: name
+    attributes:
+        label: Name
+        description: Human-readable name of the experiment
+    validations:
+        required: true
+    type: input
+-   id: parameters
+    attributes:
+        label: Parameters
+        description: Additional parameters for the experiment
+    validations:
+        required: true
+    type: input
+-   id: parent_activity
+    attributes:
+        label: Parent Activity
+        description: Parent activities of the experiment
+        options:
+        -   label: cmip
+        -   label: aerchemmip
+        -   label: c4mip
+        -   label: cfmip
+        -   label: damip
+        -   label: dcpp
+        -   label: geomip
+        -   label: lesfmip
+        -   label: lmip
+        -   label: pmip
+        -   label: ramip
+        -   label: rfmip
+        -   label: scenariomip
+        -   label: tipmip
+    validations:
+        required: true
+    type: checkboxes
+    multiple: false
+-   id: parent_experiment
+    attributes:
+        label: Parent Experiment
+        description: Parent experiments
+    validations:
+        required: true
+    type: input
+-   id: sub_experiment
+    attributes:
+        label: Sub Experiment
+        description: Sub-experiments
+    validations:
+        required: true
+    type: input
+-   id: tier
+    attributes:
+        label: Tier
+        description: Tier level of the experiment
+    validations:
+        required: true
+    type: input

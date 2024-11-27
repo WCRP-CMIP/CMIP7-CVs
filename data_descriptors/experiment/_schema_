@@ -1,0 +1,263 @@
+{
+    "type": "object",
+    "properties": {
+        "id": {
+            "type": "string",
+            "description": "Unique identifier for the experiment",
+            "pattern": "^[a-z0-9_]+$"
+        },
+        "type": {
+            "type": "string",
+            "description": "Type of the entry",
+            "enum": [
+                "experiment"
+            ]
+        },
+        "activity": {
+            "type": "array",
+            "description": "Research activities associated with the experiment",
+            "items": {
+                "type": "string",
+                "enum": [
+                    "cmip",
+                    "aerchemmip",
+                    "c4mip",
+                    "cfmip",
+                    "damip",
+                    "dcpp",
+                    "geomip",
+                    "lesfmip",
+                    "lmip",
+                    "pmip",
+                    "ramip",
+                    "rfmip",
+                    "scenariomip",
+                    "tipmip"
+                ]
+            },
+            "minItems": 1
+        },
+        "description": {
+            "type": "string",
+            "description": "Detailed description of the experiment",
+            "minLength": 5
+        },
+        "model_realms": {
+            "type": "object",
+            "description": "Model realms and their requirement status",
+            "properties": {
+                "aogcm": {
+                    "type": "object",
+                    "properties": {
+                        "is_required": {
+                            "type": "boolean",
+                            "description": "Whether this realm is required for the experiment"
+                        }
+                    },
+                    "required": [
+                        "is_required"
+                    ]
+                },
+                "aer": {
+                    "type": "object",
+                    "properties": {
+                        "is_required": {
+                            "type": "boolean",
+                            "description": "Whether this realm is required for the experiment"
+                        }
+                    },
+                    "required": [
+                        "is_required"
+                    ]
+                },
+                "chem": {
+                    "type": "object",
+                    "properties": {
+                        "is_required": {
+                            "type": "boolean",
+                            "description": "Whether this realm is required for the experiment"
+                        }
+                    },
+                    "required": [
+                        "is_required"
+                    ]
+                },
+                "bgc": {
+                    "type": "object",
+                    "properties": {
+                        "is_required": {
+                            "type": "boolean",
+                            "description": "Whether this realm is required for the experiment"
+                        }
+                    },
+                    "required": [
+                        "is_required"
+                    ]
+                }
+            },
+            "additionalProperties": false
+        },
+        "name": {
+            "type": "string",
+            "description": "Human-readable name of the experiment",
+            "pattern": "^[a-zA-Z0-9-]+$"
+        },
+        "parameters": {
+            "type": "object",
+            "description": "Additional parameters for the experiment",
+            "properties": {
+                "end": {
+                    "type": "number",
+                    "description": "End parameter for the experiment"
+                },
+                "min-number-yrs-per-sim": {
+                    "type": "integer",
+                    "description": "Minimum number of years per simulation",
+                    "minimum": 0
+                },
+                "start": {
+                    "type": "number",
+                    "description": "Start parameter for the experiment"
+                },
+                "id": {
+                    "type": "string",
+                    "description": "Identifier for additional parameters"
+                }
+            },
+            "required": [
+                "end",
+                "min-number-yrs-per-sim",
+                "start",
+                "id"
+            ]
+        },
+        "parent_activity": {
+            "type": "array",
+            "description": "Parent activities of the experiment",
+            "items": {
+                "type": "string",
+                "enum": [
+                    "cmip",
+                    "aerchemmip",
+                    "c4mip",
+                    "cfmip",
+                    "damip",
+                    "dcpp",
+                    "geomip",
+                    "lesfmip",
+                    "lmip",
+                    "pmip",
+                    "ramip",
+                    "rfmip",
+                    "scenariomip",
+                    "tipmip"
+                ]
+            },
+            "minItems": 1
+        },
+        "parent_experiment": {
+            "type": "array",
+            "description": "Parent experiments",
+            "items": {
+                "type": "string"
+            }
+        },
+        "sub_experiment": {
+            "type": "array",
+            "description": "Sub-experiments",
+            "items": {
+                "type": "string"
+            }
+        },
+        "tier": {
+            "type": "integer",
+            "description": "Tier level of the experiment",
+            "minimum": 1,
+            "maximum": 3
+        }
+    },
+    "required": [
+        "@context",
+        "id",
+        "type",
+        "activity",
+        "description",
+        "model_realms",
+        "name",
+        "parameters",
+        "parent_activity",
+        "parent_experiment",
+        "sub_experiment",
+        "tier"
+    ],
+    "additionalProperties": false,
+    "id": "experiment",
+    "contains": {
+        "type": "string",
+        "enum": [
+            "1pctco2",
+            "1pctco2-bgc",
+            "1pctco2-rad",
+            "abrupt-0p5co2",
+            "abrupt-2xco2",
+            "abrupt-4xco2",
+            "amip",
+            "amip-p4k",
+            "amip-piforcing",
+            "esm-flat10-cdr",
+            "esm-flat10-zec",
+            "esm-hist",
+            "esm-picontrol",
+            "g7-15k-sai",
+            "high-scenario",
+            "hist-aer",
+            "hist-ghg",
+            "hist-nat",
+            "hist-piaer",
+            "hist-pislcf",
+            "historical",
+            "initialised-prediction-2025-2036",
+            "land-hist",
+            "ligabrupt",
+            "low-overshoot-scenario",
+            "low-scenario",
+            "medium-scenario-and-extension",
+            "piclim-4xco2",
+            "piclim-aer",
+            "piclim-anthro",
+            "piclim-ch4",
+            "piclim-control",
+            "piclim-hc",
+            "piclim-histaer",
+            "piclim-histall",
+            "piclim-n2o",
+            "piclim-nox",
+            "piclim-so2",
+            "piclim-voc",
+            "picontrol",
+            "sspx-slcf",
+            "very-low-scenario"
+        ]
+    },
+    "activity": {
+        "description": "A reference object from <a href=https://wcrp-cmip.github.io/WCRP-UNIVERSE/activity/> https://wcrp-cmip.github.io/WCRP-UNIVERSE/activity/ </a>",
+        "$ref": "https://wcrp-cmip.github.io/WCRP-UNIVERSE/activity/#/activity"
+    },
+    "model_realms": {
+        "description": "A reference object from <a href=https://wcrp-cmip.github.io/WCRP-UNIVERSE/realm/> https://wcrp-cmip.github.io/WCRP-UNIVERSE/realm/ </a>",
+        "$ref": "https://wcrp-cmip.github.io/WCRP-UNIVERSE/realm/#/realm"
+    },
+    "parent_activity": {
+        "description": "A reference object from <a href=https://wcrp-cmip.github.io/WCRP-UNIVERSE/activity/> https://wcrp-cmip.github.io/WCRP-UNIVERSE/activity/ </a>",
+        "$ref": "https://wcrp-cmip.github.io/WCRP-UNIVERSE/activity/#/activity"
+    },
+    "parent_experiment": {
+        "description": "A reference object from <a href=https://wcrp-cmip.github.io/CMIP6Plus_CVs/experiment/> https://wcrp-cmip.github.io/CMIP6Plus_CVs/experiment/ </a>",
+        "$ref": "https://wcrp-cmip.github.io/CMIP6Plus_CVs/experiment/#/experiment"
+    },
+    "sub_experiment": {
+        "description": "A reference object from <a href=https://wcrp-cmip.github.io/CMIP6Plus_CVs/sub_experiment/> https://wcrp-cmip.github.io/CMIP6Plus_CVs/sub_experiment/ </a>",
+        "$ref": "https://wcrp-cmip.github.io/CMIP6Plus_CVs/sub_experiment/#/sub_experiment"
+    },
+    "base": "https://github.com/wcrp-cmip/CMIP7_CVs/tree/main/data_descriptors/experiment/"
+}

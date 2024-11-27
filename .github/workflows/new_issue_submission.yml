@@ -1,0 +1,56 @@
+name: Process a new issue
+
+on:
+  issues:
+    types: [edited, labeled]
+    # opened
+
+jobs:
+
+  process_template:
+    runs-on: ubuntu-latest
+    permissions:
+          actions: write
+          checks: write
+          contents: write
+          deployments: write
+          id-token: write
+          issues: write
+          # discussions: write
+          packages: write
+          pages: write
+          pull-requests: write
+          repository-projects: write
+          # security-events: write
+          statuses: write
+          
+
+
+
+    steps:
+
+      - name: Get a list of directories with updated files
+        id: install-cmipld
+        uses: WCRP-CMIP/CMIP-LD/actions/cmipld@main
+      
+
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+
+      - name: Run Python script
+        id: run_python
+        env:
+          ISSUE_TITLE: ${{ github.event.issue.title }}
+          ISSUE_BODY: |
+              ${{ github.event.issue.body }}
+          # pipe should preseve newline properties for multilines
+          ISSUE_SUBMITTER: ${{ github.event.issue.user.login }}
+          ISSUE_NUMBER: ${{ github.event.issue.number }}
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+        run: |
+          new_element
+
+          
+
