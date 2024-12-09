@@ -1,0 +1,28 @@
+{
+    "@context": "_context_",
+    "id": "low-overshoot-scenario",
+    "type": [
+        "wcrp:experiment",
+        "cmip7"
+    ],
+    "activity": [
+        "scenariomip"
+    ],
+    "description": "Low overshoot scenario for future climate projections",
+    "model_realms": {},
+    "name": "low-overshoot-scenario",
+    "parent_activity": [
+        "none"
+    ],
+    "parent_experiment": [
+        "none"
+    ],
+    "sub_experiment": [
+        "none"
+    ],
+    "tier": 0,
+    "experiment_description": "Low overshoot scenario for future climate projections",
+    "end": -999,
+    "min-number-yrs-per-sim": -999,
+    "start": -999
+}

@@ -1,0 +1,51 @@
+{
+    "type": "object",
+    "properties": {
+        "@context": {
+            "type": "string",
+            "description": "Context identifier, typically set to '_context_'",
+            "enum": [
+                "_context_"
+            ]
+        },
+        "id": {
+            "type": "string",
+            "description": "Unique identifier for the sub-experiment",
+            "pattern": "^[a-z0-9_]+$"
+        },
+        "type": {
+            "type": "string",
+            "description": "Type of the entry",
+            "enum": [
+                "sub-experiment"
+            ]
+        },
+        "description": {
+            "type": "string",
+            "description": "Detailed description of the sub-experiment",
+            "minLength": 5,
+            "maxLength": 200
+        },
+        "name": {
+            "type": "string",
+            "description": "Name of the sub-experiment",
+            "pattern": "^[a-z0-9_]+$"
+        }
+    },
+    "required": [
+        "@context",
+        "id",
+        "type",
+        "description",
+        "name"
+    ],
+    "additionalProperties": false,
+    "id": "sub_experiment",
+    "contains": {
+        "type": "string",
+        "enum": [
+            "none"
+        ]
+    },
+    "base": "https://github.com/wcrp-cmip/CMIP7_CVs/tree/main/src-data/sub_experiment/"
+}

@@ -1,0 +1,33 @@
+name: 'Add/Modify: Sub_experiment'
+description: 'Type: sub_experiment'
+title: 'Add/Modify: Sub_experiment: <enter item name>'
+labels:
+- delta
+- sub_experiment
+body:
+-   type: markdown
+    attributes:
+        value: Please fill in the form below.
+-   id: '@context'
+    attributes:
+        label: '@Context'
+        description: Context identifier, typically set to '_context_'
+        options:
+        - _context_
+    validations:
+        required: true
+    type: dropdown
+-   id: description
+    attributes:
+        label: Description
+        description: Detailed description of the sub-experiment
+    validations:
+        required: true
+    type: input
+-   id: name
+    attributes:
+        label: Name
+        description: Name of the sub-experiment
+    validations:
+        required: true
+    type: input

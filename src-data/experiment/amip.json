@@ -1,0 +1,28 @@
+{
+    "@context": "_context_",
+    "id": "amip",
+    "type": [
+        "wcrp:experiment",
+        "cmip7"
+    ],
+    "activity": [
+        "cmip"
+    ],
+    "description": "DECK: AMIP",
+    "model_realms": {},
+    "name": "amip",
+    "parent_activity": [
+        "none"
+    ],
+    "parent_experiment": [
+        "none"
+    ],
+    "sub_experiment": [
+        "none"
+    ],
+    "tier": 0,
+    "experiment_description": "AMIP (Atmospheric Model Intercomparison Project) experiment with prescribed SSTs and sea ice",
+    "end": -999,
+    "min-number-yrs-per-sim": -999,
+    "start": -999
+}

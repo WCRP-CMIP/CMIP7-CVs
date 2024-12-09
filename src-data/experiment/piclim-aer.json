@@ -1,0 +1,28 @@
+{
+    "@context": "_context_",
+    "id": "piclim-aer",
+    "type": [
+        "wcrp:experiment",
+        "cmip7"
+    ],
+    "activity": [
+        "rfmip"
+    ],
+    "description": "Effective radiative forcing by present-day aerosols",
+    "model_realms": {},
+    "name": "piClim-aer",
+    "parent_activity": [
+        "none"
+    ],
+    "parent_experiment": [
+        "none"
+    ],
+    "sub_experiment": [
+        "none"
+    ],
+    "tier": 0,
+    "experiment_description": "Effective radiative forcing by present-day aerosols",
+    "end": -999,
+    "min-number-yrs-per-sim": -999,
+    "start": -999
+}

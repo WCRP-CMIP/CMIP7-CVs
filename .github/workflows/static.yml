@@ -33,7 +33,7 @@ jobs:
 
     #   - name: Pre-check files
     #     run: |
-    #       for file in data_descriptors/*; do
+    #       for file in src-data/*; do
     #         if [ ! -f "$file" ]; then
     #           echo "Error: $file does not exist."
     #           exit 1
@@ -43,7 +43,7 @@ jobs:
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
-          path: 'data_descriptors'
+          path: 'src-data'
           retention-days: 0
 
       - name: Deploy to GitHub Pages

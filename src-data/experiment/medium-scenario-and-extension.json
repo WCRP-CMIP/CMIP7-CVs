@@ -1,0 +1,28 @@
+{
+    "@context": "_context_",
+    "id": "medium-scenario-and-extension",
+    "type": [
+        "wcrp:experiment",
+        "cmip7"
+    ],
+    "activity": [
+        "scenariomip"
+    ],
+    "description": "Medium emission scenario for future climate projections with extension",
+    "model_realms": {},
+    "name": "medium-scenario-and-extension",
+    "parent_activity": [
+        "none"
+    ],
+    "parent_experiment": [
+        "none"
+    ],
+    "sub_experiment": [
+        "none"
+    ],
+    "tier": 0,
+    "experiment_description": "Medium emission scenario for future climate projections with extension",
+    "end": -999,
+    "min-number-yrs-per-sim": -999,
+    "start": -999
+}
