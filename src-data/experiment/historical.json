@@ -1,0 +1,28 @@
+{
+    "@context": "_context_",
+    "id": "historical",
+    "type": [
+        "wcrp:experiment",
+        "cmip7"
+    ],
+    "activity": [
+        "cmip"
+    ],
+    "description": "DECK: historical",
+    "model_realms": {},
+    "name": "historical",
+    "parent_activity": [
+        "none"
+    ],
+    "parent_experiment": [
+        "none"
+    ],
+    "sub_experiment": [
+        "none"
+    ],
+    "tier": 0,
+    "experiment_description": "Simulation of the recent past",
+    "end": -999,
+    "min-number-yrs-per-sim": -999,
+    "start": -999
+}

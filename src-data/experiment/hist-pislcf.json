@@ -1,0 +1,28 @@
+{
+    "@context": "_context_",
+    "id": "hist-pislcf",
+    "type": [
+        "wcrp:experiment",
+        "cmip7"
+    ],
+    "activity": [
+        "aerchemmip"
+    ],
+    "description": "Historical simulation with pre-industrial short-lived climate forcers",
+    "model_realms": {},
+    "name": "hist-piSLCF",
+    "parent_activity": [
+        "none"
+    ],
+    "parent_experiment": [
+        "none"
+    ],
+    "sub_experiment": [
+        "none"
+    ],
+    "tier": 0,
+    "experiment_description": "Historical simulation but with pre-industrial short-lived climate forcer emissions",
+    "end": -999,
+    "min-number-yrs-per-sim": -999,
+    "start": -999
+}

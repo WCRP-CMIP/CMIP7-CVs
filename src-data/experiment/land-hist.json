@@ -1,0 +1,28 @@
+{
+    "@context": "_context_",
+    "id": "land-hist",
+    "type": [
+        "wcrp:experiment",
+        "cmip7"
+    ],
+    "activity": [
+        "lmip"
+    ],
+    "description": "Land-only simulation of the historical period",
+    "model_realms": {},
+    "name": "land-hist",
+    "parent_activity": [
+        "none"
+    ],
+    "parent_experiment": [
+        "none"
+    ],
+    "sub_experiment": [
+        "none"
+    ],
+    "tier": 0,
+    "experiment_description": "Land-only simulation of the historical period",
+    "end": -999,
+    "min-number-yrs-per-sim": -999,
+    "start": -999
+}

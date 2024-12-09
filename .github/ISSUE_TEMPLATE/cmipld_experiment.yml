@@ -7,99 +7,240 @@ labels:
 body:
 -   type: markdown
     attributes:
-        value: ''
--   id: activity
+        value: Please fill in the form below.
+-   id: name
     attributes:
-        label: Activity
-        description: Research activities associated with the experiment
-        options:
-        -   label: cmip
-        -   label: aerchemmip
-        -   label: c4mip
-        -   label: cfmip
-        -   label: damip
-        -   label: dcpp
-        -   label: geomip
-        -   label: lesfmip
-        -   label: lmip
-        -   label: pmip
-        -   label: ramip
-        -   label: rfmip
-        -   label: scenariomip
-        -   label: tipmip
+        label: Experiment ID
+        description: A string containing alphanumeric characters or "-" (i.e. no underscores,
+            spaces or other characters). Please keep this string below 14 characters
+            in length if possible.
     validations:
         required: true
-    type: checkboxes
-    multiple: false
+    type: input
 -   id: description
     attributes:
         label: Description
-        description: Detailed description of the experiment
+        description: Include a description of the experiment, links to any appropriate
+            references and indicate similarities to CMIP6 experiments
     validations:
         required: true
-    type: input
--   id: model_realms
+    type: textarea
+-   id: activity
     attributes:
-        label: Model Realms
-        description: Model realms and their requirement status
+        label: MIP / Activity ID
+        description: 'A reference object from <a href=https://wcrp-cmip.github.io/WCRP-universe/activity/>
+            https://wcrp-cmip.github.io/WCRP-universe/activity/ </a>. '
+        options:
+        - aerchemmip
+        - c4mip
+        - cfmip
+        - cmip
+        - damip
+        - dcpp
+        - geomip
+        - lesfmip
+        - lmip
+        - pmip
+        - ramip
+        - rfmip
+        - scenariomip
+        - tipmip
     validations:
         required: true
-    type: input
--   id: name
+    type: dropdown
+-   id: activity_other
     attributes:
-        label: Name
-        description: Human-readable name of the experiment
-    validations:
-        required: true
+        label: ^
+        description: New Activity For new values only, please register them in the
+            relevant area.
     type: input
--   id: parameters
-    attributes:
-        label: Parameters
-        description: Additional parameters for the experiment
     validations:
-        required: true
-    type: input
+        required: false
 -   id: parent_activity
     attributes:
         label: Parent Activity
-        description: Parent activities of the experiment
+        description: 'A reference object from <a href=https://wcrp-cmip.github.io/WCRP-universe/activity/>
+            https://wcrp-cmip.github.io/WCRP-universe/activity/ </a>. '
         options:
-        -   label: cmip
-        -   label: aerchemmip
-        -   label: c4mip
-        -   label: cfmip
-        -   label: damip
-        -   label: dcpp
-        -   label: geomip
-        -   label: lesfmip
-        -   label: lmip
-        -   label: pmip
-        -   label: ramip
-        -   label: rfmip
-        -   label: scenariomip
-        -   label: tipmip
+        - aerchemmip
+        - c4mip
+        - cfmip
+        - cmip
+        - damip
+        - dcpp
+        - geomip
+        - lesfmip
+        - lmip
+        - pmip
+        - ramip
+        - rfmip
+        - scenariomip
+        - tipmip
     validations:
         required: true
+    type: dropdown
+-   id: parent_activity_other
+    attributes:
+        label: ^
+        description: New Parent Activity For new values only, please register them
+            in the relevant area.
+    type: input
+    validations:
+        required: false
+-   id: required_model_realms
+    attributes:
+        label: Required Model Components
+        description: Components that must be included in models when running this
+            experiment
+        options:
+        -   label: aer
+        -   label: agcm
+        -   label: aogcm
+        -   label: bgc
+        -   label: chem
+        -   label: gridded_insitu
+        -   label: ism
+        -   label: land
+        -   label: ogcm
+        -   label: rad
+        -   label: reanalysis
+        -   label: satellite_blended
+        -   label: satellite_retrieval
+        -   label: slab
+    validations:
+        required: false
     type: checkboxes
-    multiple: false
+-   id: model_realms
+    attributes:
+        label: Allowed Model Components
+        description: 'A reference object from <a href=https://wcrp-cmip.github.io/WCRP-universe/source_type/>
+            https://wcrp-cmip.github.io/WCRP-universe/source_type/ </a>. '
+        options:
+        -   label: aer
+        -   label: agcm
+        -   label: aogcm
+        -   label: bgc
+        -   label: chem
+        -   label: gridded_insitu
+        -   label: ism
+        -   label: land
+        -   label: ogcm
+        -   label: rad
+        -   label: reanalysis
+        -   label: satellite_blended
+        -   label: satellite_retrieval
+        -   label: slab
+    validations:
+        required: false
+    type: checkboxes
 -   id: parent_experiment
     attributes:
         label: Parent Experiment
-        description: Parent experiments
+        description: 'A reference object from <a href=https://wcrp-cmip.github.io/CMIP7_CVs/experiment/>
+            https://wcrp-cmip.github.io/CMIP7_CVs/experiment/ </a>. '
+        options:
+        - 1pctco2
+        - 1pctco2-bgc
+        - 1pctco2-rad
+        - abrupt-0p5co2
+        - abrupt-2xco2
+        - abrupt-4xco2
+        - amip
+        - amip-p4k
+        - amip-piforcing
+        - esm-flat10-cdr
+        - esm-flat10-zec
+        - esm-hist
+        - esm-picontrol
+        - g7-15k-sai
+        - high-scenario
+        - hist-aer
+        - hist-ghg
+        - hist-nat
+        - hist-piaer
+        - hist-pislcf
+        - historical
+        - initialised-prediction-2025-2036
+        - land-hist
+        - ligabrupt
+        - low-overshoot-scenario
+        - low-scenario
+        - medium-scenario-and-extension
+        - piclim-4xco2
+        - piclim-aer
+        - piclim-anthro
+        - piclim-ch4
+        - piclim-control
+        - piclim-hc
+        - piclim-histaer
+        - piclim-histall
+        - piclim-n2o
+        - piclim-nox
+        - piclim-so2
+        - piclim-voc
+        - picontrol
+        - sspx-slcf
+        - very-low-scenario
     validations:
         required: true
+    type: dropdown
+-   id: parent_experiment_other
+    attributes:
+        label: ^
+        description: New Parent Experiment For new values only, please register them
+            in the relevant area.
     type: input
+    validations:
+        required: false
 -   id: sub_experiment
     attributes:
         label: Sub Experiment
-        description: Sub-experiments
+        description: 'A reference object from <a href=https://wcrp-cmip.github.io/CMIP7_CVs/sub_experiment/>
+            https://wcrp-cmip.github.io/CMIP7_CVs/sub_experiment/ </a>. '
     validations:
         required: true
     type: input
+-   id: sub_experiment_other
+    attributes:
+        label: ^
+        description: New Sub Experiment For new values only, please register them
+            in the relevant area.
+    type: input
+    validations:
+        required: false
 -   id: tier
     attributes:
         label: Tier
-        description: Tier level of the experiment
+        description: Tier level of the experiment (1, 2, or 3)
+    validations:
+        required: true
+    type: input
+-   id: experiment_description
+    attributes:
+        label: Experiment Description
+        description: Additional details about forcings, changes relative to parent
+            experiment
+    validations:
+        required: true
+    type: textarea
+-   id: end
+    attributes:
+        label: End Date
+        description: The point at which the simulations should finish (e.g., 2020-01-01)
+    validations:
+        required: false
+    type: input
+-   id: min-number-yrs-per-sim
+    attributes:
+        label: Minimum Number of Years
+        description: Minimum number of years for the simulation
+    validations:
+        required: false
+    type: input
+-   id: start
+    attributes:
+        label: Start Date
+        description: Start date of the simulation (e.g., 1850-01-01)
     validations:
         required: true
     type: input

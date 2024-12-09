@@ -1,0 +1,28 @@
+{
+    "@context": "_context_",
+    "id": "amip-p4k",
+    "type": [
+        "wcrp:experiment",
+        "cmip7"
+    ],
+    "activity": [
+        "cfmip"
+    ],
+    "description": "AMIP experiment with uniform 4K SST increase",
+    "model_realms": {},
+    "name": "amip-p4k",
+    "parent_activity": [
+        "none"
+    ],
+    "parent_experiment": [
+        "none"
+    ],
+    "sub_experiment": [
+        "none"
+    ],
+    "tier": 0,
+    "experiment_description": "AMIP experiment with uniform 4K SST increase",
+    "end": -999,
+    "min-number-yrs-per-sim": -999,
+    "start": -999
+}

@@ -30,7 +30,7 @@ jobs:
       id: updated-dirs
       uses: WCRP-CMIP/CMIP-LD/actions/updated-dirs@main
       with:
-        filter_dir: "data_descriptors"
+        filter_dir: "src-data"
 
     - name: Group JSONLD files
       id: group-jsonld
