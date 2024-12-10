@@ -21,15 +21,17 @@ body:
     attributes:
         label: Description
         description: Include a description of the experiment, links to any appropriate
-            references and indicate similarities to CMIP6 experiments
+            references and indicate similarities to CMIP6 experiments. Please also include details 
+            of forcing differences relative to the parent experiment
     validations:
         required: true
     type: textarea
 -   id: activity
     attributes:
-        label: MIP / Activity ID
-        description: 'A reference object from <a href=https://wcrp-cmip.github.io/WCRP-universe/activity/>
-            https://wcrp-cmip.github.io/WCRP-universe/activity/ </a>. '
+        label: MIP / Activity ID (registered)
+        description: The MIP / activity owning the experiment.
+        # This would ideally be a reference object from <a href=https://wcrp-cmip.github.io/WCRP-universe/activity/>
+        #    https://wcrp-cmip.github.io/WCRP-universe/activity/ </a>. '
         options:
         - aerchemmip
         - c4mip
@@ -38,29 +40,26 @@ body:
         - damip
         - dcpp
         - geomip
-        - lesfmip
         - lmip
         - pmip
-        - ramip
         - rfmip
         - scenariomip
-        - tipmip
     validations:
         required: true
     type: dropdown
 -   id: activity_other
     attributes:
-        label: ^
-        description: New Activity For new values only, please register them in the
-            relevant area.
+        label: MIP / Activity ID (unregistered)
+        description: Please enter your MIP / activity ID below if it does not appear in the list above. Leave blank otherwise.
     type: input
     validations:
         required: false
 -   id: parent_activity
     attributes:
-        label: Parent Activity
-        description: 'A reference object from <a href=https://wcrp-cmip.github.io/WCRP-universe/activity/>
-            https://wcrp-cmip.github.io/WCRP-universe/activity/ </a>. '
+        label: Parent Activity ID (registered)
+        description: The MIP / Activity ID of the parent experiment
+        #'A reference object from <a href=https://wcrp-cmip.github.io/WCRP-universe/activity/>
+        #    https://wcrp-cmip.github.io/WCRP-universe/activity/ </a>. '
         options:
         - aerchemmip
         - c4mip
@@ -69,43 +68,56 @@ body:
         - damip
         - dcpp
         - geomip
-        - lesfmip
         - lmip
         - pmip
-        - ramip
         - rfmip
         - scenariomip
-        - tipmip
     validations:
         required: true
     type: dropdown
 -   id: parent_activity_other
     attributes:
-        label: ^
-        description: New Parent Activity For new values only, please register them
-            in the relevant area.
+        label: Parent Activity ID (unregistered)
+        description: Please enter the MIP / Activity ID of the parent experiment if not listed 
+            in the dropdown above. Leave blank otherwise.
+        # New Parent Activity For new values only, please register them
+        #    in the relevant area.
     type: input
     validations:
         required: false
+-   type: markdown
+    attributes:
+        value: "*Notes on model components*"
+-   type: markdown
+    attributes:
+        value: |
+            Model component codes defined in the following sections below have the following descriptions
+            * aer  : Aerosol treatment in an atmospheric model where concentrations are calculated based on emissions, transformation, and removal processes (rather than being prescribed or omitted entirely)
+            * agcm : Atmospheric general circulation model run with prescribed ocean surface conditions and usually a model of the land surface
+            * aogcm : Coupled atmosphere-ocean global climate model, additionally including explicit representation of at least the land and sea ice
+            * bgc  : Biogeochemistry model component that at the very least accounts for carbon reservoirs and fluxes in the atmosphere, terrestrial biosphere, and ocean
+            * chem : Chemistry treatment in an atmospheric model that calculates atmospheric oxidant concentrations (including at least ozone), rather than prescribing them
+            * ism  : Ice-sheet model that includes ice-flow
+            * land : Land model run uncoupled from the atmosphere
+            * ogcm : Ocean general circulation model run uncoupled from an AGCM but, usually including a sea-ice model
+            * rad  : Radiation component of an atmospheric model run 'offline'
+            * slab : Slab-ocean used with an AGCM in representing the atmosphere-ocean coupled system
+       
 -   id: required_model_realms
     attributes:
         label: Required Model Components
         description: Components that must be included in models when running this
-            experiment
+            experiment. See note 15 in https://wcrp-cmip.github.io/WGCM_Infrastructure_Panel/Papers/CMIP6_global_attributes_filenames_CVs_v6.2.7.pdf for full descriptions
         options:
         -   label: aer
         -   label: agcm
         -   label: aogcm
         -   label: bgc
         -   label: chem
-        -   label: gridded_insitu
         -   label: ism
         -   label: land
         -   label: ogcm
         -   label: rad
-        -   label: reanalysis
-        -   label: satellite_blended
-        -   label: satellite_retrieval
         -   label: slab
     validations:
         required: false
@@ -113,31 +125,28 @@ body:
 -   id: model_realms
     attributes:
         label: Allowed Model Components
-        description: 'A reference object from <a href=https://wcrp-cmip.github.io/WCRP-universe/source_type/>
-            https://wcrp-cmip.github.io/WCRP-universe/source_type/ </a>. '
+        description: Components that must be included in models when running this
+            experiment. See note 15 in https://wcrp-cmip.github.io/WGCM_Infrastructure_Panel/Papers/CMIP6_global_attributes_filenames_CVs_v6.2.7.pdf for full description
         options:
         -   label: aer
         -   label: agcm
         -   label: aogcm
         -   label: bgc
         -   label: chem
-        -   label: gridded_insitu
         -   label: ism
         -   label: land
         -   label: ogcm
         -   label: rad
-        -   label: reanalysis
-        -   label: satellite_blended
-        -   label: satellite_retrieval
         -   label: slab
     validations:
         required: false
     type: checkboxes
 -   id: parent_experiment
     attributes:
-        label: Parent Experiment
-        description: 'A reference object from <a href=https://wcrp-cmip.github.io/CMIP7_CVs/experiment/>
-            https://wcrp-cmip.github.io/CMIP7_CVs/experiment/ </a>. '
+        label: Parent Experiment ID (Registered)
+        description: The ID of the experiment providing the initial conditions / forcings
+        #'A reference object from <a href=https://wcrp-cmip.github.io/CMIP7_CVs/experiment/>
+        # https://wcrp-cmip.github.io/CMIP7_CVs/experiment/ </a>. '
         options:
         - 1pctco2
         - 1pctco2-bgc
@@ -186,28 +195,18 @@ body:
     type: dropdown
 -   id: parent_experiment_other
     attributes:
-        label: ^
-        description: New Parent Experiment For new values only, please register them
-            in the relevant area.
+        label: Parent Experiment ID (unregistered)
+        description: The ID of the experiment providing the initial conditions / forcings, where it has not already been registered.
     type: input
     validations:
         required: false
 -   id: sub_experiment
     attributes:
-        label: Sub Experiment
-        description: 'A reference object from <a href=https://wcrp-cmip.github.io/CMIP7_CVs/sub_experiment/>
-            https://wcrp-cmip.github.io/CMIP7_CVs/sub_experiment/ </a>. '
+        label: Sub-experiment
+        description: The Sub-experiment ID where relevant. For most experiments this will be "none"
     validations:
         required: true
     type: input
--   id: sub_experiment_other
-    attributes:
-        label: ^
-        description: New Sub Experiment For new values only, please register them
-            in the relevant area.
-    type: input
-    validations:
-        required: false
 -   id: tier
     attributes:
         label: Tier
@@ -215,14 +214,6 @@ body:
     validations:
         required: true
     type: input
--   id: experiment_description
-    attributes:
-        label: Experiment Description
-        description: Additional details about forcings, changes relative to parent
-            experiment
-    validations:
-        required: true
-    type: textarea
 -   id: end
     attributes:
         label: End Date
