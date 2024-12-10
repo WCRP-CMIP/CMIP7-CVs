@@ -1,246 +1,328 @@
 name: 'Add/Modify: Experiment'
 description: 'Type: experiment'
-title: 'Add/Modify: Experiment: <enter item name>'
+title: 'Add/Modify: Experiment: <Type experiment name here>'
 labels:
-- delta
-- experiment
+    - delta
+    - experiment
 body:
+
+
 -   type: markdown
     attributes:
-        value: Please fill in the form below.
--   id: name
+        value: |
+            ####
+            ## Generic Experiment information
+
+            Please fill in the information below. 
+            
+-   id: label
     attributes:
         label: Experiment ID
-        description: A string containing alphanumeric characters or "-" (i.e. no underscores,
-            spaces or other characters). Please keep this string below 14 characters
-            in length if possible.
+        description: |
+            There are rules for constructing acceptable experiment names which
+            can be found in this <a href="https://doi.org/10.5281/zenodo.12768887">guidance document</a>.
+            
+            Note: This name must be unique across all experiments.
+        placeholder: 'e.g., piClim-CH4, hist-GHG, amip-p4k'
+    validations:
+        required: true
+    type: input
+-   id: long_label
+    attributes:
+        label: Experiment Title
+        description: |
+            A short phrase that can help in interpreting the unique
+            experiment_id’s. 
+            
+            As examples, the CMIP6 titles are listed [here](https://wcrp-cmip.github.io/CMIP6_CVs/docs/CMIP6_experiment_id.html) in the third column labeled “experiments”.
+        placeholder: 'e.g., AMIP plus 4K sea surface temperature'
     validations:
         required: true
     type: input
 -   id: description
     attributes:
         label: Description
-        description: Include a description of the experiment, links to any appropriate
-            references and indicate similarities to CMIP6 experiments
+        description: |
+            Please provide:
+             >      1. Detailed experiment configuration
+             >      2. Required model settings
+             >      3. Experiment conditions
+             >      4. Links to relevant references
+             >      5. Similarities to CMIP6 experiments
+             >      6. Forcing differences from parent experiment
+        placeholder: 'Describe the experiment configuration, conditions, and requirements...'
     validations:
         required: true
     type: textarea
 -   id: activity
     attributes:
-        label: MIP / Activity ID
-        description: 'A reference object from <a href=https://wcrp-cmip.github.io/WCRP-universe/activity/>
-            https://wcrp-cmip.github.io/WCRP-universe/activity/ </a>. '
+        label: MIP / Activity ID (registered)
+        description: |
+            The MIP / activity owning the experiment
+            
+            Please select a parent from the list below. 
         options:
-        - aerchemmip
-        - c4mip
-        - cfmip
-        - cmip
-        - damip
-        - dcpp
-        - geomip
-        - lesfmip
-        - lmip
-        - pmip
-        - ramip
-        - rfmip
-        - scenariomip
-        - tipmip
+            - "Custom Activity: specify below"
+            - AerChemMIP
+            - C4MIP
+            - CFMIP
+            - DAMIP
+            - DCPP
+            - GeoMIP
+            - LMIP
+            - PMIP
+            - RFMIP
+            - ScenarioMIP
+        
     validations:
         required: true
     type: dropdown
 -   id: activity_other
     attributes:
-        label: ^
-        description: New Activity For new values only, please register them in the
-            relevant area.
+        label: MIP / Activity ID (unregistered)
+        description: Please enter your MIP / activity ID below if it does not appear in the list above. Leave blank otherwise.
     type: input
     validations:
         required: false
--   id: parent_activity
+
+        
+-   type: markdown
     attributes:
-        label: Parent Activity
-        description: 'A reference object from <a href=https://wcrp-cmip.github.io/WCRP-universe/activity/>
-            https://wcrp-cmip.github.io/WCRP-universe/activity/ </a>. '
-        options:
-        - aerchemmip
-        - c4mip
-        - cfmip
-        - cmip
-        - damip
-        - dcpp
-        - geomip
-        - lesfmip
-        - lmip
-        - pmip
-        - ramip
-        - rfmip
-        - scenariomip
-        - tipmip
-    validations:
-        required: true
-    type: dropdown
--   id: parent_activity_other
-    attributes:
-        label: ^
-        description: New Parent Activity For new values only, please register them
-            in the relevant area.
-    type: input
-    validations:
-        required: false
--   id: required_model_realms
-    attributes:
-        label: Required Model Components
-        description: Components that must be included in models when running this
-            experiment
-        options:
-        -   label: aer
-        -   label: agcm
-        -   label: aogcm
-        -   label: bgc
-        -   label: chem
-        -   label: gridded_insitu
-        -   label: ism
-        -   label: land
-        -   label: ogcm
-        -   label: rad
-        -   label: reanalysis
-        -   label: satellite_blended
-        -   label: satellite_retrieval
-        -   label: slab
-    validations:
-        required: false
-    type: checkboxes
--   id: model_realms
-    attributes:
-        label: Allowed Model Components
-        description: 'A reference object from <a href=https://wcrp-cmip.github.io/WCRP-universe/source_type/>
-            https://wcrp-cmip.github.io/WCRP-universe/source_type/ </a>. '
-        options:
-        -   label: aer
-        -   label: agcm
-        -   label: aogcm
-        -   label: bgc
-        -   label: chem
-        -   label: gridded_insitu
-        -   label: ism
-        -   label: land
-        -   label: ogcm
-        -   label: rad
-        -   label: reanalysis
-        -   label: satellite_blended
-        -   label: satellite_retrieval
-        -   label: slab
-    validations:
-        required: false
-    type: checkboxes
+        value: |
+            ####
+            ## Parent information and Tier
+                    
 -   id: parent_experiment
     attributes:
         label: Parent Experiment
-        description: 'A reference object from <a href=https://wcrp-cmip.github.io/CMIP7_CVs/experiment/>
-            https://wcrp-cmip.github.io/CMIP7_CVs/experiment/ </a>. '
+        description: |
+            Select the experiment that provides initial conditions. Expected ScenarioMIP experiments are listed in the table below.
+            If the parent experiment id required is one of these scenarios please enter this text in the custom parent box below.
+            | Scenario | emissions driven | emissions driven extension | concentration driven | concentration driven extension |
+            | :--- | :---: | :---: | :---: | :---: | 
+            | high | `esm-scen7-h` | `esm-scen7-h-ext` | `scen7-hc` | `scen7-hc-ext` |
+            | high overshoot extensions  |   | `esm-scen7-h-ext-os` |  | `scen7-hc-ext-os` |
+            | medium | `esm-scen7-m` | `esm-scen7-m-ext` | `scen7-mc` | `scen7-mc-ext` |
+            | medium-low | `esm-scen7-ml` | `esm-scen7-ml-ext` | `scen7-mlc` | `scen7-mlc-ext` |
+            | low | `esm-scen7-l` | `esm-scen7-l-ext` | `scen7-lc` | `scen7-lc-ext` |
+            | very low, low overshoot | `esm-scen7-vllo` | `esm-scen7-vllo-ext` | `scen7-vlloc` | `scen7-vlloc-ext` |
+            | very low, high overshoot | `esm-scen7-vlho` | `esm-scen7-vlho-ext` | `scen7-vlhoc` | `scen7-vlhoc-ext` |
+
+            Please select a parent from the list below. 
+            
         options:
-        - 1pctco2
-        - 1pctco2-bgc
-        - 1pctco2-rad
-        - abrupt-0p5co2
-        - abrupt-2xco2
-        - abrupt-4xco2
+        - "Custom Parent: specify below"
+        - no-parent
+        - 1pctCO2
+        - 1pctCO2-bgc
+        - 1pctCO2-rad
+        - abrupt-0p5CO2
+        - abrupt-2xCO2
+        - abrupt-4xCO2
         - amip
         - amip-p4k
-        - amip-piforcing
+        - amip-piForcing
         - esm-flat10-cdr
         - esm-flat10-zec
         - esm-hist
-        - esm-picontrol
-        - g7-15k-sai
+        - esm-piControl
+        - G7-15K-SAI
         - high-scenario
         - hist-aer
-        - hist-ghg
+        - hist-GHG
         - hist-nat
-        - hist-piaer
-        - hist-pislcf
+        - hist-piAer
+        - hist-piSLCF
         - historical
         - initialised-prediction-2025-2036
         - land-hist
-        - ligabrupt
-        - low-overshoot-scenario
+        - LIGabrupt
         - low-scenario
+        - medium-low-scenario
         - medium-scenario-and-extension
-        - piclim-4xco2
-        - piclim-aer
-        - piclim-anthro
-        - piclim-ch4
-        - piclim-control
-        - piclim-hc
-        - piclim-histaer
-        - piclim-histall
-        - piclim-n2o
-        - piclim-nox
-        - piclim-so2
-        - piclim-voc
-        - picontrol
-        - sspx-slcf
-        - very-low-scenario
+        - piClim-4xCO2
+        - piClim-aer
+        - piClim-anthro
+        - piClim-CH4
+        - piClim-control
+        - piClim-HC
+        - piClim-histaer
+        - piClim-histall
+        - piClim-N2O
+        - piClim-NOx
+        - piClim-SO2
+        - piClim-VOC
+        - piControl
+        - SSPX-SLCF
+        - very-low-scenario-low-overshoot
+        - very-low-scenario-high-overshoot
+        
     validations:
         required: true
     type: dropdown
 -   id: parent_experiment_other
     attributes:
-        label: ^
-        description: New Parent Experiment For new values only, please register them
-            in the relevant area.
-    type: input
+        label: Custom Parent Experiment
+        description: Only fill this if your parent experiment is not in the list above.
+        placeholder: 'e.g., new-experiment-2024'
     validations:
         required: false
+    type: input
 -   id: sub_experiment
     attributes:
-        label: Sub Experiment
-        description: 'A reference object from <a href=https://wcrp-cmip.github.io/CMIP7_CVs/sub_experiment/>
-            https://wcrp-cmip.github.io/CMIP7_CVs/sub_experiment/ </a>. '
+        label: Sub-experiment
+        description: The list of sub-experiment IDs where relevant. For most experiments this will be "none"
+        placeholder: 'e.g., "none"'
     validations:
         required: true
     type: input
--   id: sub_experiment_other
-    attributes:
-        label: ^
-        description: New Sub Experiment For new values only, please register them
-            in the relevant area.
-    type: input
-    validations:
-        required: false
 -   id: tier
     attributes:
-        label: Tier
-        description: Tier level of the experiment (1, 2, or 3)
+        label: Priority Tier
+        description: |
+            Select the experiment's priority level:
+            
+                - Tier 1: Essential to primary scientific goals
+                - Tier 2: Major scientific value
+                - Tier 3: Useful but lower priority
+        options:
+            - '1'
+            - '2'
+            - '3'
     validations:
         required: true
-    type: input
--   id: experiment_description
+    type: dropdown
+
+            
+
+
+-   type: markdown
     attributes:
-        label: Experiment Description
-        description: Additional details about forcings, changes relative to parent
-            experiment
-    validations:
-        required: true
-    type: textarea
--   id: end
+        value: |
+            ####
+            ## Model Component Requirements
+            
+            Select the required and optional model components for this experiment:
+
+                
+                
+                > * AER  : Aerosol treatment in an atmospheric model where concentrations are calculated based on emissions, transformation, and removal processes (rather than being prescribed or omitted entirely)
+                > * AGCM : Atmospheric general circulation model run with prescribed ocean surface conditions and usually a model of the land surface
+                > * AOGCM : Coupled atmosphere-ocean global climate model, additionally including explicit representation of at least the land and sea ice
+                > * BGC  : Biogeochemistry model component that at the very least accounts for carbon reservoirs and fluxes in the atmosphere, terrestrial biosphere, and ocean
+                > * CHEM : Chemistry treatment in an atmospheric model that calculates atmospheric oxidant concentrations (including at least ozone), rather than prescribing them
+                > * ISM  : Ice-sheet model that includes ice-flow
+                > * LAND : Land model run uncoupled from the atmosphere
+                > * OGCM : Ocean general circulation model run uncoupled from an AGCM but, usually including a sea-ice model
+                > * RAD  : Radiation component of an atmospheric model run 'offline'
+                > * SLAB : Slab-ocean used with an AGCM in representing the atmosphere-ocean coupled system
+                    
+-   id: required_model_realms
     attributes:
-        label: End Date
-        description: The point at which the simulations should finish (e.g., 2020-01-01)
+        label: Source type codes for required model components
+        description: |
+            Components that must be included in models when running this experiment. 
+            See note 15 in https://wcrp-cmip.github.io/WGCM_Infrastructure_Panel/Papers/CMIP6_global_attributes_filenames_CVs_v6.2.7.pdf for full descriptions
+            
+            * Select Multiple * 
+            
+        options:
+            -  AER
+            -  AGCM
+            -  AOGCM
+            -  BGC
+            -  CHEM
+            -  ISM
+            -  LAND
+            -  OGCM
+            -  RAD
+            -  SLAB
+        multiple: true
     validations:
         required: false
-    type: input
--   id: min-number-yrs-per-sim
+    type: dropdown
+-   id: model_realms
     attributes:
-        label: Minimum Number of Years
-        description: Minimum number of years for the simulation
+        label: Source type codes for additional allowed model components
+        description: |
+            Components that may be included in models when running this experiment in addition to the required components listed above. 
+            See note 15 in https://wcrp-cmip.github.io/WGCM_Infrastructure_Panel/Papers/CMIP6_global_attributes_filenames_CVs_v6.2.7.pdf for full description
+
+            * Select Multiple * 
+            
+        options:
+            -  AER
+            -  AGCM
+            -  AOGCM
+            -  BGC
+            -  CHEM
+            -  ISM
+            -  LAND
+            -  OGCM
+            -  RAD
+            -  SLAB
+        multiple: true
     validations:
         required: false
-    type: input
+    type: dropdown
+
+-   type: markdown
+    attributes:
+        value: |
+            ####
+            ## Experiment duration, start and end
+            Some additional information on the experiment
+            
+
 -   id: start
     attributes:
         label: Start Date
-        description: Start date of the simulation (e.g., 1850-01-01)
+        description: |
+            For experiments initialized on a particular historical date, enter
+            that date in the form YYYY-MM-DD. 
+            
+                If a set of sub-experiments are
+                initialized at different times, list all the start times requested.
+            
+                - For example, for an historical simulation initialized at the beginning of
+                1850, enter “1850-01-01”. 
+                - For a set of DCPP “prediction” runs, enter all
+                dates of the first full forecast/hindcast year (e.g., 1960, 1970, 1980,
+                1990, 2000, 2010). 
+                - If there is no specific start date please leave this
+                field blank
+        placeholder: 'e.g., 1850-01-01 or 1960,1970,1980'
     validations:
-        required: true
+        required: false
+    type: input
+-   id: branch-date
+    attributes:
+      label: Branch Date
+      description: |
+        For experiments initialized from a non-arbitrary point in a parent
+        experiment, enter the branch date in the parent,i.e. the point at which
+        initial conditions should be taken. 
+            
+            - For example, “2022-01-01” should be
+            entered for an experiment initialized from the end of the historical
+            experiment and extending into the future. 
+            - If there is no parent
+            experiment please leave this field blank.
+      placeholder: 'e.g., 2022-01-01'
+    validations:
+      required: false
+    type: input
+-   id: min-number-yrs-per-sim
+    attributes:
+      label: (Minimum) Number of Years
+      description: |
+          For most experiments this will be the actual length of the desired
+          simulation.
+              
+              Calculation : (end_year - start_year + 1)
+              - For example, “172” would be specified for a run initialized
+              in 1850-01-01 and extending to 2022-01-01.
+      placeholder: 'e.g., 172'
+    validations:
+      required: true
     type: input
