@@ -86,7 +86,7 @@ body:
        
 -   id: required_model_realms
     attributes:
-        label: Required Model Components
+        label: Source type codes for required Model Components
         description: Components that must be included in models when running this
             experiment. See note 15 in https://wcrp-cmip.github.io/WGCM_Infrastructure_Panel/Papers/CMIP6_global_attributes_filenames_CVs_v6.2.7.pdf for full descriptions
         options:
@@ -105,7 +105,7 @@ body:
     type: checkboxes
 -   id: model_realms
     attributes:
-        label: Allowed Model Components
+        label: Source type codes for additional allowed model components
         description: Components that may be included in models when running this
             experiment. See note 15 in https://wcrp-cmip.github.io/WGCM_Infrastructure_Panel/Papers/CMIP6_global_attributes_filenames_CVs_v6.2.7.pdf for full description
         options:
@@ -144,7 +144,7 @@ body:
         - esm-hist
         - esm-picontrol
         - g7-15k-sai
-        - high-scenario
+        - high-scenario (esm-scen7-h or scen7-hc)
         - hist-aer
         - hist-ghg
         - hist-nat
@@ -154,9 +154,9 @@ body:
         - initialised-prediction-2025-2036
         - land-hist
         - ligabrupt
-        - low-overshoot-scenario
         - low-scenario (esm-scen7-l or scen7-lc)
-        - medium-scenario-and-extension
+        - medium-low-scenario (esm-scen7-ml and scen7-mlc)
+        - medium-scenario-and-extension (esm-scen7-m or scen7-mc)
         - piclim-4xco2
         - piclim-aer
         - piclim-anthro
@@ -171,7 +171,8 @@ body:
         - piclim-voc
         - picontrol
         - sspx-slcf
-        - very-low-scenario
+        - very-low-scenario-low-overshoot (esm-scen7-vllo and scen7-vlloc)  
+        - very-low-scenario-high-overshoot (esm-scen7-vlho and scen7-vlhoc)  
         - no-parent
     validations:
         required: true
