@@ -72,7 +72,7 @@ body:
 -   type: markdown
     attributes:
         value: |
-            Source type codes representing different model component defined in the next two sections have the following descriptions
+            Source type codes representing different model components defined in the next two sections have the following descriptions
             * AER  : Aerosol treatment in an atmospheric model where concentrations are calculated based on emissions, transformation, and removal processes (rather than being prescribed or omitted entirely)
             * AGCM : Atmospheric general circulation model run with prescribed ocean surface conditions and usually a model of the land surface
             * AOGCM : Coupled atmosphere-ocean global climate model, additionally including explicit representation of at least the land and sea ice
@@ -86,7 +86,7 @@ body:
        
 -   id: required_model_realms
     attributes:
-        label: Source type codes for required Model Components
+        label: Source type codes for required model components
         description: Components that must be included in models when running this
             experiment. See note 15 in https://wcrp-cmip.github.io/WGCM_Infrastructure_Panel/Papers/CMIP6_global_attributes_filenames_CVs_v6.2.7.pdf for full descriptions
         options:
