@@ -68,21 +68,21 @@ body:
         required: false
 -   type: markdown
     attributes:
-        value: "*Notes on model components*"
+        value: "*Notes on Source types*"
 -   type: markdown
     attributes:
         value: |
-            Model component codes defined in the following sections below have the following descriptions
-            * aer  : Aerosol treatment in an atmospheric model where concentrations are calculated based on emissions, transformation, and removal processes (rather than being prescribed or omitted entirely)
-            * agcm : Atmospheric general circulation model run with prescribed ocean surface conditions and usually a model of the land surface
-            * aogcm : Coupled atmosphere-ocean global climate model, additionally including explicit representation of at least the land and sea ice
-            * bgc  : Biogeochemistry model component that at the very least accounts for carbon reservoirs and fluxes in the atmosphere, terrestrial biosphere, and ocean
-            * chem : Chemistry treatment in an atmospheric model that calculates atmospheric oxidant concentrations (including at least ozone), rather than prescribing them
-            * ism  : Ice-sheet model that includes ice-flow
-            * land : Land model run uncoupled from the atmosphere
-            * ogcm : Ocean general circulation model run uncoupled from an AGCM but, usually including a sea-ice model
-            * rad  : Radiation component of an atmospheric model run 'offline'
-            * slab : Slab-ocean used with an AGCM in representing the atmosphere-ocean coupled system
+            Source type codes representing different model component defined in the next two sections have the following descriptions
+            * AER  : Aerosol treatment in an atmospheric model where concentrations are calculated based on emissions, transformation, and removal processes (rather than being prescribed or omitted entirely)
+            * AGCM : Atmospheric general circulation model run with prescribed ocean surface conditions and usually a model of the land surface
+            * AOGCM : Coupled atmosphere-ocean global climate model, additionally including explicit representation of at least the land and sea ice
+            * BGC  : Biogeochemistry model component that at the very least accounts for carbon reservoirs and fluxes in the atmosphere, terrestrial biosphere, and ocean
+            * CHEM : Chemistry treatment in an atmospheric model that calculates atmospheric oxidant concentrations (including at least ozone), rather than prescribing them
+            * ISM  : Ice-sheet model that includes ice-flow
+            * LAND : Land model run uncoupled from the atmosphere
+            * OGCM : Ocean general circulation model run uncoupled from an AGCM but, usually including a sea-ice model
+            * RAD  : Radiation component of an atmospheric model run 'offline'
+            * SLAB : Slab-ocean used with an AGCM in representing the atmosphere-ocean coupled system
        
 -   id: required_model_realms
     attributes:
@@ -90,16 +90,16 @@ body:
         description: Components that must be included in models when running this
             experiment. See note 15 in https://wcrp-cmip.github.io/WGCM_Infrastructure_Panel/Papers/CMIP6_global_attributes_filenames_CVs_v6.2.7.pdf for full descriptions
         options:
-        -   label: aer
-        -   label: agcm
-        -   label: aogcm
-        -   label: bgc
-        -   label: chem
-        -   label: ism
-        -   label: land
-        -   label: ogcm
-        -   label: rad
-        -   label: slab
+        -   label: AER
+        -   label: AGCM
+        -   label: AOGCM
+        -   label: BGC
+        -   label: CHEM
+        -   label: ISM
+        -   label: LAND
+        -   label: OGCM
+        -   label: RAD
+        -   label: SLAB
     validations:
         required: false
     type: checkboxes
@@ -109,16 +109,16 @@ body:
         description: Components that may be included in models when running this
             experiment. See note 15 in https://wcrp-cmip.github.io/WGCM_Infrastructure_Panel/Papers/CMIP6_global_attributes_filenames_CVs_v6.2.7.pdf for full description
         options:
-        -   label: aer
-        -   label: agcm
-        -   label: aogcm
-        -   label: bgc
-        -   label: chem
-        -   label: ism
-        -   label: land
-        -   label: ogcm
-        -   label: rad
-        -   label: slab
+        -   label: AER
+        -   label: AGCM
+        -   label: AOGCM
+        -   label: BGC
+        -   label: CHEM
+        -   label: ISM
+        -   label: LAND
+        -   label: OGCM
+        -   label: RAD
+        -   label: SLAB
     validations:
         required: false
     type: checkboxes
@@ -155,7 +155,7 @@ body:
         - land-hist
         - ligabrupt
         - low-overshoot-scenario
-        - low-scenario
+        - low-scenario (esm-scen7-l or scen7-lc)
         - medium-scenario-and-extension
         - piclim-4xco2
         - piclim-aer
