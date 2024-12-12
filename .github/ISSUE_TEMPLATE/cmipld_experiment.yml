@@ -212,7 +212,7 @@ body:
             1990, 2000, 2010). If there is no specific start date please leave this
             field blank
     validations:
-        required: false
+        required: true
     type: input
 -   id: branch-date
     attributes:
@@ -233,5 +233,5 @@ body:
         simulation. For example, “172” would be specified for a run initialized
         in 1850-01-01 and extending to 2022-01-01.
     validations:
-      required: false
+      required: true
     type: input
