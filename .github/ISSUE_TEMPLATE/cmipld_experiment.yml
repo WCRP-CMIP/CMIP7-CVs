@@ -71,7 +71,7 @@ body:
       value: "*Notes on model components*"
   - type: markdown
     attributes:
-      value: >
+      value: |
         Model component codes defined in the following sections below have the
         following descriptions
 
