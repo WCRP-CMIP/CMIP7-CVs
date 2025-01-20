@@ -20,7 +20,7 @@ body:
         label: Experiment ID
         description: |
             There are rules for constructing acceptable experiment names which
-            can be found in this <a href="https://docs.google.com/document/d/1CeMkNsE74v1wD4x48lKJ_uixWu8DsKgAa9fpD9q94aM/edit?tab=t.0">guidance document</a>.
+            can be found in this <a href="https://doi.org/10.5281/zenodo.12768887">guidance document</a>.
             
             Note: This name must be unique across all experiments.
         placeholder: 'e.g., piClim-CH4, hist-GHG, amip-p4k'
@@ -72,7 +72,7 @@ body:
             - RFMIP
             - ScenarioMIP
     validations:
-        required: true
+        required: false
     type: dropdown
 -   id: activity_other
     attributes:
@@ -139,13 +139,15 @@ body:
         - very-low-scenario-low-overshoot
         - very-low-scenario-high-overshoot
     validations:
-        required: true
+        required: false
     type: dropdown
 -   id: parent_experiment_other
     attributes:
         label: Custom Parent Experiment
         description: Only fill this if your parent experiment is not in the list above.
         placeholder: 'e.g., new-experiment-2024'
+    validations:
+        required: false
     type: input
 -   id: sub_experiment
     attributes:
@@ -217,7 +219,7 @@ body:
 -   id: model_realms
     attributes:
         label: Source type codes for additional allowed model components
-        description: Components that may be included in models when running this experiment. See note 15 in https://wcrp-cmip.github.io/WGCM_Infrastructure_Panel/Papers/CMIP6_global_attributes_filenames_CVs_v6.2.7.pdf for full description
+        description: Components that may be included in models when running this experiment in addition to the required components listed above. See note 15 in https://wcrp-cmip.github.io/WGCM_Infrastructure_Panel/Papers/CMIP6_global_attributes_filenames_CVs_v6.2.7.pdf for full description
         options:
         -   label: AER
         -   label: AGCM
@@ -260,7 +262,7 @@ body:
                 field blank
         placeholder: 'e.g., 1850-01-01 or 1960,1970,1980'
     validations:
-        required: true
+        required: false
     type: input
 -   id: branch-date
     attributes:
