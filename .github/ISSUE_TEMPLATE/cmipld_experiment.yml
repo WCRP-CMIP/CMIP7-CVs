@@ -182,21 +182,35 @@ body:
             ## Model Component Requirements
             
             Select the required and optional model components for this experiment:
+
+                
+                
+                * AER  : Aerosol treatment in an atmospheric model where concentrations are calculated based on emissions, transformation, and removal processes (rather than being prescribed or omitted entirely)
+                * AGCM : Atmospheric general circulation model run with prescribed ocean surface conditions and usually a model of the land surface
+                * AOGCM : Coupled atmosphere-ocean global climate model, additionally including explicit representation of at least the land and sea ice
+                * BGC  : Biogeochemistry model component that at the very least accounts for carbon reservoirs and fluxes in the atmosphere, terrestrial biosphere, and ocean
+                * CHEM : Chemistry treatment in an atmospheric model that calculates atmospheric oxidant concentrations (including at least ozone), rather than prescribing them
+                * ISM  : Ice-sheet model that includes ice-flow
+                * LAND : Land model run uncoupled from the atmosphere
+                * OGCM : Ocean general circulation model run uncoupled from an AGCM but, usually including a sea-ice model
+                * RAD  : Radiation component of an atmospheric model run 'offline'
+                * SLAB : Slab-ocean used with an AGCM in representing the atmosphere-ocean coupled system
+                    
 -   id: required_model_realms
     attributes:
         label: Source type codes for required model components
         description: Components that must be included in models when running this experiment. See note 15 in https://wcrp-cmip.github.io/WGCM_Infrastructure_Panel/Papers/CMIP6_global_attributes_filenames_CVs_v6.2.7.pdf for full descriptions
         options:
-        -   label: "AER (Aerosol treatment in an atmospheric model where concentrations are calculated based on emissions, transformation, and removal processes (rather than being prescribed or omitted entirely))"
-        -   label: "AGCM (Atmospheric general circulation model run with prescribed ocean surface conditions and usually a model of the land surface)"
-        -   label: "AOGCM (Coupled atmosphere-ocean global climate model, additionally including explicit representation of at least the land and sea ice)"
-        -   label: "BGC (Biogeochemistry model component that at the very least accounts for carbon reservoirs and fluxes in the atmosphere, terrestrial biosphere, and ocean)"
-        -   label: "CHEM (Chemistry treatment in an atmospheric model that calculates atmospheric oxidant concentrations (including at least ozone), rather than prescribing them)"
-        -   label: "ISM (Ice-sheet model that includes ice-flow)"
-        -   label: "LAND (Land model run uncoupled from the atmosphere)"
-        -   label: "OGCM (Ocean general circulation model run uncoupled from an AGCM but, usually including a sea-ice model)"
-        -   label: "RAD (Radiation component of an atmospheric model run 'offline')"
-        -   label: "SLAB (Slab-ocean used with an AGCM in representing the atmosphere-ocean coupled system)"
+        -   label: AER
+        -   label: AGCM
+        -   label: AOGCM
+        -   label: BGC
+        -   label: CHEM
+        -   label: ISM
+        -   label: LAND
+        -   label: OGCM
+        -   label: RAD
+        -   label: SLAB
     validations:
         required: false
     type: checkboxes
@@ -205,16 +219,16 @@ body:
         label: Source type codes for additional allowed model components
         description: Components that may be included in models when running this experiment. See note 15 in https://wcrp-cmip.github.io/WGCM_Infrastructure_Panel/Papers/CMIP6_global_attributes_filenames_CVs_v6.2.7.pdf for full description
         options:
-        -   label: "AER (Aerosol treatment in an atmospheric model where concentrations are calculated based on emissions, transformation, and removal processes (rather than being prescribed or omitted entirely))"
-        -   label: "AGCM (Atmospheric general circulation model run with prescribed ocean surface conditions and usually a model of the land surface)"
-        -   label: "AOGCM (Coupled atmosphere-ocean global climate model, additionally including explicit representation of at least the land and sea ice)"
-        -   label: "BGC (Biogeochemistry model component that at the very least accounts for carbon reservoirs and fluxes in the atmosphere, terrestrial biosphere, and ocean)"
-        -   label: "CHEM (Chemistry treatment in an atmospheric model that calculates atmospheric oxidant concentrations (including at least ozone), rather than prescribing them)"
-        -   label: "ISM (Ice-sheet model that includes ice-flow)"
-        -   label: "LAND (Land model run uncoupled from the atmosphere)"
-        -   label: "OGCM (Ocean general circulation model run uncoupled from an AGCM but, usually including a sea-ice model)"
-        -   label: "RAD (Radiation component of an atmospheric model run 'offline')"
-        -   label: "SLAB (Slab-ocean used with an AGCM in representing the atmosphere-ocean coupled system)"
+        -   label: AER
+        -   label: AGCM
+        -   label: AOGCM
+        -   label: BGC
+        -   label: CHEM
+        -   label: ISM
+        -   label: LAND
+        -   label: OGCM
+        -   label: RAD
+        -   label: SLAB
     validations:
         required: false
     type: checkboxes
