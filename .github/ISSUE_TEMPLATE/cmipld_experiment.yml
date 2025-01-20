@@ -185,16 +185,16 @@ body:
 
                 
                 
-                * AER  : Aerosol treatment in an atmospheric model where concentrations are calculated based on emissions, transformation, and removal processes (rather than being prescribed or omitted entirely)
-                * AGCM : Atmospheric general circulation model run with prescribed ocean surface conditions and usually a model of the land surface
-                * AOGCM : Coupled atmosphere-ocean global climate model, additionally including explicit representation of at least the land and sea ice
-                * BGC  : Biogeochemistry model component that at the very least accounts for carbon reservoirs and fluxes in the atmosphere, terrestrial biosphere, and ocean
-                * CHEM : Chemistry treatment in an atmospheric model that calculates atmospheric oxidant concentrations (including at least ozone), rather than prescribing them
-                * ISM  : Ice-sheet model that includes ice-flow
-                * LAND : Land model run uncoupled from the atmosphere
-                * OGCM : Ocean general circulation model run uncoupled from an AGCM but, usually including a sea-ice model
-                * RAD  : Radiation component of an atmospheric model run 'offline'
-                * SLAB : Slab-ocean used with an AGCM in representing the atmosphere-ocean coupled system
+                > * AER  : Aerosol treatment in an atmospheric model where concentrations are calculated based on emissions, transformation, and removal processes (rather than being prescribed or omitted entirely)
+                > * AGCM : Atmospheric general circulation model run with prescribed ocean surface conditions and usually a model of the land surface
+                > * AOGCM : Coupled atmosphere-ocean global climate model, additionally including explicit representation of at least the land and sea ice
+                > * BGC  : Biogeochemistry model component that at the very least accounts for carbon reservoirs and fluxes in the atmosphere, terrestrial biosphere, and ocean
+                > * CHEM : Chemistry treatment in an atmospheric model that calculates atmospheric oxidant concentrations (including at least ozone), rather than prescribing them
+                > * ISM  : Ice-sheet model that includes ice-flow
+                > * LAND : Land model run uncoupled from the atmosphere
+                > * OGCM : Ocean general circulation model run uncoupled from an AGCM but, usually including a sea-ice model
+                > * RAD  : Radiation component of an atmospheric model run 'offline'
+                > * SLAB : Slab-ocean used with an AGCM in representing the atmosphere-ocean coupled system
                     
 -   id: required_model_realms
     attributes:
