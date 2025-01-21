@@ -61,6 +61,7 @@ body:
         # This would ideally be a reference object from <a href=https://wcrp-cmip.github.io/WCRP-universe/activity/>
         #    https://wcrp-cmip.github.io/WCRP-universe/activity/ </a>. '
         options:
+            - "Custom Activity: specified below"
             - AerChemMIP
             - C4MIP
             - CFMIP
@@ -71,8 +72,9 @@ body:
             - PMIP
             - RFMIP
             - ScenarioMIP
+        default: 0 
     validations:
-        required: false
+        required: true
     type: dropdown
 -   id: activity_other
     attributes:
@@ -94,7 +96,7 @@ body:
         label: Parent Experiment
         description: Select the experiment that provides initial conditions.
         options:
-        - "custom parent: specified below"
+        - "Custom Parent: specified below"
         - no-parent
         - 1pctCO2
         - 1pctCO2-bgc
@@ -141,7 +143,7 @@ body:
         - very-low-scenario-high-overshoot
         default: 0
     validations:
-        required: false
+        required: true
     type: dropdown
 -   id: parent_experiment_other
     attributes:
