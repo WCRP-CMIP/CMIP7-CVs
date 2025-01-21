@@ -1,6 +1,6 @@
 name: 'Add/Modify: Experiment'
 description: 'Type: experiment'
-title: 'Add/Modify: Experiment: <enter item name>'
+title: 'Add/Modify: Experiment: <Type experiment name here>'
 labels:
     - delta
     - experiment
@@ -57,9 +57,10 @@ body:
 -   id: activity
     attributes:
         label: MIP / Activity ID (registered)
-        description: The MIP / activity owning the experiment.
-        # This would ideally be a reference object from <a href=https://wcrp-cmip.github.io/WCRP-universe/activity/>
-        #    https://wcrp-cmip.github.io/WCRP-universe/activity/ </a>. '
+        description: |
+            The MIP / activity owning the experiment
+            
+            Please select a parent from the list below. 
         options:
             - "Custom Activity: specify below"
             - AerChemMIP
@@ -72,7 +73,7 @@ body:
             - PMIP
             - RFMIP
             - ScenarioMIP
-        default: 0 
+        
     validations:
         required: true
     type: dropdown
@@ -106,8 +107,11 @@ body:
             | low | `esm-scen7-l` | `esm-scen7-l-ext` | `scen7-lc` | `scen7-lc-ext` |
             | very low, low overshoot | `esm-scen7-vllo` | `esm-scen7-vllo-ext` | `scen7-vlloc` | `scen7-vlloc-ext` |
             | very low, high overshoot | `esm-scen7-vlho` | `esm-scen7-vlho-ext` | `scen7-vlhoc` | `scen7-vlhoc-ext` |
+
+            Please select a parent from the list below. 
+            
         options:
-        - "Custom Parent: specified below"
+        - "Custom Parent: specify below"
         - no-parent
         - 1pctCO2
         - 1pctCO2-bgc
@@ -152,7 +156,7 @@ body:
         - SSPX-SLCF
         - very-low-scenario-low-overshoot
         - very-low-scenario-high-overshoot
-        default: 0
+        
     validations:
         required: true
     type: dropdown
@@ -216,39 +220,51 @@ body:
 -   id: required_model_realms
     attributes:
         label: Source type codes for required model components
-        description: Components that must be included in models when running this experiment. See note 15 in https://wcrp-cmip.github.io/WGCM_Infrastructure_Panel/Papers/CMIP6_global_attributes_filenames_CVs_v6.2.7.pdf for full descriptions
+        description: |
+            Components that must be included in models when running this experiment. 
+            See note 15 in https://wcrp-cmip.github.io/WGCM_Infrastructure_Panel/Papers/CMIP6_global_attributes_filenames_CVs_v6.2.7.pdf for full descriptions
+            
+            * Select Multiple * 
+            
         options:
-        -   label: AER
-        -   label: AGCM
-        -   label: AOGCM
-        -   label: BGC
-        -   label: CHEM
-        -   label: ISM
-        -   label: LAND
-        -   label: OGCM
-        -   label: RAD
-        -   label: SLAB
+            -  AER
+            -  AGCM
+            -  AOGCM
+            -  BGC
+            -  CHEM
+            -  ISM
+            -  LAND
+            -  OGCM
+            -  RAD
+            -  SLAB
+        multiple: true
     validations:
         required: false
-    type: checkboxes
+    type: dropdown
 -   id: model_realms
     attributes:
         label: Source type codes for additional allowed model components
-        description: Components that may be included in models when running this experiment in addition to the required components listed above. See note 15 in https://wcrp-cmip.github.io/WGCM_Infrastructure_Panel/Papers/CMIP6_global_attributes_filenames_CVs_v6.2.7.pdf for full description
+        description: |
+            Components that may be included in models when running this experiment in addition to the required components listed above. 
+            See note 15 in https://wcrp-cmip.github.io/WGCM_Infrastructure_Panel/Papers/CMIP6_global_attributes_filenames_CVs_v6.2.7.pdf for full description
+
+            * Select Multiple * 
+            
         options:
-        -   label: AER
-        -   label: AGCM
-        -   label: AOGCM
-        -   label: BGC
-        -   label: CHEM
-        -   label: ISM
-        -   label: LAND
-        -   label: OGCM
-        -   label: RAD
-        -   label: SLAB
+            -  AER
+            -  AGCM
+            -  AOGCM
+            -  BGC
+            -  CHEM
+            -  ISM
+            -  LAND
+            -  OGCM
+            -  RAD
+            -  SLAB
+        multiple: true
     validations:
         required: false
-    type: checkboxes
+    type: dropdown
 
 -   type: markdown
     attributes:
