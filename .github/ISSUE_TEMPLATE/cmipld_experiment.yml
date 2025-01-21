@@ -94,6 +94,7 @@ body:
         label: Parent Experiment
         description: Select the experiment that provides initial conditions.
         options:
+        - "custom parent: specified below"
         - no-parent
         - 1pctCO2
         - 1pctCO2-bgc
