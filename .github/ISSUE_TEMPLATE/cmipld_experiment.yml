@@ -61,7 +61,8 @@ body:
         # This would ideally be a reference object from <a href=https://wcrp-cmip.github.io/WCRP-universe/activity/>
         #    https://wcrp-cmip.github.io/WCRP-universe/activity/ </a>. '
         options:
-            - "Custom Activity: specified below"
+            - "Select Activity ID"
+            - "Custom Activity: specify below"
             - AerChemMIP
             - C4MIP
             - CFMIP
