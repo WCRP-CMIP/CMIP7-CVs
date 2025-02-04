@@ -6,7 +6,6 @@ labels:
     - experiment
 body:
 
-
 -   type: markdown
     attributes:
         value: |
@@ -14,7 +13,8 @@ body:
             ## Generic Experiment information
 
             Please fill in the information below. 
-            
+
+    
 -   id: label
     attributes:
         label: Experiment ID
@@ -326,3 +326,39 @@ body:
     validations:
       required: true
     type: input
+
+
+
+-   type: markdown
+    attributes:
+        value: |
+            ####
+            ## Issue Handling Metadata
+
+            The following options are only here such that the github actions know what to do with the information provided above. 
+
+            In almost all cases, these do not require to be changed. 
+
+
+
+-   id: issue_category
+    type: dropdown
+    attributes:
+        label: "Issue Type"
+        #   description: "This is pre-set and cannot be changed."
+        options:
+            - "experiment"
+        default: 0
+    validations:
+        required: true
+
+-   id: issue_kind
+    type: dropdown
+    attributes:
+        label: "Issue Kind"
+        options:
+            - "new"
+            - "modify"
+        default: 0
+    validations:
+        required: true  
