@@ -20,7 +20,7 @@ body:
         label: Experiment ID
         description: |
             There are rules for constructing acceptable experiment names which
-            can be found in this <a href="https://doi.org/10.5281/zenodo.12768887">guidance document</a>.
+            can be found in this <a href="https://zenodo.org/records/14929769">guidance document</a>.
             
             Note: This name must be unique across all experiments.
         placeholder: 'e.g., piClim-CH4, hist-GHG, amip-p4k'
