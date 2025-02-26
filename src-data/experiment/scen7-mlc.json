@@ -1,0 +1,32 @@
+{
+    "@context": "_context_",
+    "id": "scen7-mlc",
+    "type": [
+        "wcrp:experiment",
+        "cmip7"
+    ],
+    "activity": [
+        "ScenarioMIP"
+    ],
+    "description": "Concentration driven scenario with delayed increase in mitigation effort, insufficient to meet Paris Agreement objectives",
+    "model_realms": {
+        "required": [
+            "AOGCM"
+        ]
+    },
+    "name": "Medium, Concentration Driven Scenario",
+    "parent_activity": [
+        "CMIP"
+    ],
+    "parent_experiment": [
+        "historical"
+    ],
+    "sub_experiment": [
+        "none"
+    ],
+    "tier": 0,
+    "experiment_description": "Concentration driven scenario with delayed increase in mitigation effort, insufficient to meet Paris Agreement objectives",
+    "end": 2100,
+    "min-number-yrs-per-sim": 76,
+    "start": 2025
+}

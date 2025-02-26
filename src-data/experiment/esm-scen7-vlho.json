@@ -1,0 +1,32 @@
+{
+    "@context": "_context_",
+    "id": "esm-scen7-vlho",
+    "type": [
+        "wcrp:experiment",
+        "cmip7"
+    ],
+    "activity": [
+        "ScenarioMIP"
+    ],
+    "description": "Scenario with similar endof-century temperature impact to VLLO, but with less aggressive near-term mitigation and large reliance on net negative emissions, resulting in a higher overshoot.",
+    "model_realms": {
+        "required": [
+            "AOGCM"
+        ]
+    },
+    "name": "Very Low Scenario after High Overshoot",
+    "parent_activity": [
+        "CMIP"
+    ],
+    "parent_experiment": [
+        "esm-hist"
+    ],
+    "sub_experiment": [
+        "none"
+    ],
+    "tier": 0,
+    "experiment_description": "Scenario with similar endof-century temperature impact to VLLO, but with less aggressive near-term mitigation and large reliance on net negative emissions, resulting in a higher overshoot.",
+    "end": 2100,
+    "min-number-yrs-per-sim": 76,
+    "start": 2025
+}

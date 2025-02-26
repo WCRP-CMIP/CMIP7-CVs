@@ -1,0 +1,32 @@
+{
+    "@context": "_context_",
+    "id": "esm-scen7-m-ext",
+    "type": [
+        "wcrp:experiment",
+        "cmip7"
+    ],
+    "activity": [
+        "ScenarioMIP"
+    ],
+    "description": "Medium emission scenario extension consistent with current policies",
+    "model_realms": {
+        "required": [
+            "AOGCM"
+        ]
+    },
+    "name": "Medium Scenario Extension",
+    "parent_activity": [
+        "CMIP"
+    ],
+    "parent_experiment": [
+        "esm-scen7-m"
+    ],
+    "sub_experiment": [
+        "none"
+    ],
+    "tier": 0,
+    "experiment_description": "Medium emission scenario extension consistent with current policies",
+    "end": 2500,
+    "min-number-yrs-per-sim": 50,
+    "start": 2101
+}
