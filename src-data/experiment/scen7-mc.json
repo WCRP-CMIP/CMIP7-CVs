@@ -27,6 +27,6 @@
     "tier": 0,
     "experiment_description": "Medium concentration driven emission scenario consistent with current policies",
     "end": 2100,
-    "min-number-yrs-per-sim": 76,
-    "start": 2025
+    "min-number-yrs-per-sim": 79,
+    "start": 2022
 }
