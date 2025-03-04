@@ -9,8 +9,7 @@
         "cfmip"
     ],
     "description": "AMIP experiment with pre-industrial forcing",
-    "model_realms": {},
-    "name": "amip-piForcing",
+    "model_realms": [],
     "parent_activity": [
         "none"
     ],
@@ -24,5 +23,7 @@
     "experiment_description": "AMIP experiment with pre-industrial forcing",
     "end": -999,
     "min-number-yrs-per-sim": -999,
-    "start": -999
+    "start": -999,
+    "label": "amip-piForcing",
+    "long_label": "Describe amip-piForcing in one sentence."
 }

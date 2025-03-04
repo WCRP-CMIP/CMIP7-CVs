@@ -9,12 +9,7 @@
         "ScenarioMIP"
     ],
     "description": "Scenario consistent with staying likely below 2 degrees C",
-    "model_realms": {
-        "required": [
-            "AOGCM"
-        ]
-    },
-    "name": "Low Scenario",
+    "model_realms": [],
     "parent_activity": [
         "CMIP"
     ],
@@ -28,5 +23,7 @@
     "experiment_description": "Scenario consistent with staying likely below 2 degrees C",
     "end": 2100,
     "min-number-yrs-per-sim": 79,
-    "start": 2022
+    "start": 2022,
+    "long_label": "Low Scenario",
+    "label": "esm-scen7-l"
 }

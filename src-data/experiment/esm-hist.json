@@ -9,8 +9,7 @@
         "cmip"
     ],
     "description": "DECK: Earth System Model historical simulation",
-    "model_realms": {},
-    "name": "esm-hist",
+    "model_realms": [],
     "parent_activity": [
         "none"
     ],
@@ -24,5 +23,7 @@
     "experiment_description": "Historical simulation with Earth System Models",
     "end": -999,
     "min-number-yrs-per-sim": -999,
-    "start": -999
+    "start": -999,
+    "label": "esm-hist",
+    "long_label": "Describe esm-hist in one sentence."
 }

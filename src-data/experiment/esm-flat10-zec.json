@@ -9,8 +9,7 @@
         "c4mip"
     ],
     "description": "Zero Emissions Commitment (ZEC) experiment following 10 years of constant atmospheric CO2",
-    "model_realms": {},
-    "name": "esm-flat10-zec",
+    "model_realms": [],
     "parent_activity": [
         "none"
     ],
@@ -24,5 +23,7 @@
     "experiment_description": "Zero Emissions Commitment (ZEC) experiment following 10 years of constant atmospheric CO2",
     "end": -999,
     "min-number-yrs-per-sim": -999,
-    "start": -999
+    "start": -999,
+    "label": "esm-flat10-zec",
+    "long_label": "Describe esm-flat10-zec in one sentence."
 }

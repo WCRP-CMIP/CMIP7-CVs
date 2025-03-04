@@ -9,8 +9,7 @@
         "cmip"
     ],
     "description": "DECK: pre-industrial control simulation with Earth System Models",
-    "model_realms": {},
-    "name": "esm-piControl",
+    "model_realms": [],
     "parent_activity": [
         "none"
     ],
@@ -24,5 +23,7 @@
     "experiment_description": "Pre-industrial control run for Earth System Models",
     "end": -999,
     "min-number-yrs-per-sim": -999,
-    "start": -999
+    "start": -999,
+    "label": "esm-piControl",
+    "long_label": "Describe esm-piControl in one sentence."
 }

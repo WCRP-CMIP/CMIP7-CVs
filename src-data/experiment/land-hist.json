@@ -9,8 +9,7 @@
         "lmip"
     ],
     "description": "Land-only simulation of the historical period",
-    "model_realms": {},
-    "name": "land-hist",
+    "model_realms": [],
     "parent_activity": [
         "none"
     ],
@@ -24,5 +23,7 @@
     "experiment_description": "Land-only simulation of the historical period",
     "end": -999,
     "min-number-yrs-per-sim": -999,
-    "start": -999
+    "start": -999,
+    "label": "land-hist",
+    "long_label": "Describe land-hist in one sentence."
 }

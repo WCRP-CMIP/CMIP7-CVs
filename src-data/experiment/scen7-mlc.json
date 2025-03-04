@@ -9,12 +9,7 @@
         "ScenarioMIP"
     ],
     "description": "Concentration driven scenario with delayed increase in mitigation effort, insufficient to meet Paris Agreement objectives",
-    "model_realms": {
-        "required": [
-            "AOGCM"
-        ]
-    },
-    "name": "Medium, Concentration Driven Scenario",
+    "model_realms": [],
     "parent_activity": [
         "CMIP"
     ],
@@ -28,5 +23,7 @@
     "experiment_description": "Concentration driven scenario with delayed increase in mitigation effort, insufficient to meet Paris Agreement objectives",
     "end": 2100,
     "min-number-yrs-per-sim": 79,
-    "start": 2022
+    "start": 2022,
+    "long_label": "Medium, Concentration Driven Scenario",
+    "label": "scen7-mlc"
 }

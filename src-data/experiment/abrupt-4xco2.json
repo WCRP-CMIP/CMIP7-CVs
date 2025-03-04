@@ -9,8 +9,7 @@
         "cmip"
     ],
     "description": "DECK: abrupt quadrupling of CO2",
-    "model_realms": {},
-    "name": "abrupt-4xCO2",
+    "model_realms": [],
     "parent_activity": [
         "none"
     ],
@@ -24,5 +23,7 @@
     "experiment_description": "Abrupt increase in CO2 concentration from pre-industrial level to quadrupling",
     "end": -999,
     "min-number-yrs-per-sim": -999,
-    "start": -999
+    "start": -999,
+    "label": "abrupt-4xCO2",
+    "long_label": "Describe abrupt-4xCO2 in one sentence."
 }

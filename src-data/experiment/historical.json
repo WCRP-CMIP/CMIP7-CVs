@@ -9,8 +9,7 @@
         "cmip"
     ],
     "description": "DECK: historical",
-    "model_realms": {},
-    "name": "historical",
+    "model_realms": [],
     "parent_activity": [
         "none"
     ],
@@ -24,5 +23,7 @@
     "experiment_description": "Simulation of the recent past",
     "end": -999,
     "min-number-yrs-per-sim": -999,
-    "start": -999
+    "start": -999,
+    "label": "historical",
+    "long_label": "Describe historical in one sentence."
 }

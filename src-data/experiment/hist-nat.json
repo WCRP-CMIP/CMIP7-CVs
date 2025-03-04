@@ -9,8 +9,7 @@
         "damip"
     ],
     "description": "Historical simulation with natural forcing only",
-    "model_realms": {},
-    "name": "hist-nat",
+    "model_realms": [],
     "parent_activity": [
         "none"
     ],
@@ -24,5 +23,7 @@
     "experiment_description": "Historical simulation with natural forcing only",
     "end": -999,
     "min-number-yrs-per-sim": -999,
-    "start": -999
+    "start": -999,
+    "label": "hist-nat",
+    "long_label": "Describe hist-nat in one sentence."
 }

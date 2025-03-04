@@ -9,8 +9,7 @@
         "rfmip"
     ],
     "description": "Effective radiative forcing by all historical forcing agents",
-    "model_realms": {},
-    "name": "piClim-histall",
+    "model_realms": [],
     "parent_activity": [
         "none"
     ],
@@ -24,5 +23,7 @@
     "experiment_description": "Effective radiative forcing by all historical forcing agents",
     "end": -999,
     "min-number-yrs-per-sim": -999,
-    "start": -999
+    "start": -999,
+    "label": "piClim-histall",
+    "long_label": "Describe piClim-histall in one sentence."
 }

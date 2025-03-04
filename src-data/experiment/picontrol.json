@@ -9,8 +9,7 @@
         "cmip"
     ],
     "description": "DECK: pre-industrial control",
-    "model_realms": {},
-    "name": "piControl",
+    "model_realms": [],
     "parent_activity": [
         "none"
     ],
@@ -24,5 +23,7 @@
     "experiment_description": "Pre-industrial control simulation",
     "end": -999,
     "min-number-yrs-per-sim": -999,
-    "start": -999
+    "start": -999,
+    "label": "piControl",
+    "long_label": "Describe piControl in one sentence."
 }
