@@ -9,12 +9,7 @@
         "ScenarioMIP"
     ],
     "description": "Extension to concentration driven scenario consistent with staying likely below 2 degrees C",
-    "model_realms": {
-        "required": [
-            "AOGCM"
-        ]
-    },
-    "name": "Low, Concentration Driven Scenario Extension",
+    "model_realms": [],
     "parent_activity": [
         "ScenarioMIP"
     ],
@@ -28,5 +23,7 @@
     "experiment_description": "Extension to concentration driven scenario consistent with staying likely below 2 degrees C",
     "end": 2500,
     "min-number-yrs-per-sim": 50,
-    "start": 2101
+    "start": 2101,
+    "long_label": "Low, Concentration Driven Scenario Extension",
+    "label": "scen7-lc-ext"
 }

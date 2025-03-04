@@ -9,8 +9,7 @@
         "aerchemmip"
     ],
     "description": "Perturbation from pre-industrial control using 1850 halocarbon concentrations",
-    "model_realms": {},
-    "name": "piClim-HC",
+    "model_realms": [],
     "parent_activity": [
         "none"
     ],
@@ -24,5 +23,7 @@
     "experiment_description": "Pre-industrial climatological SSTs and sea ice extent, 1850 halocarbon concentrations",
     "end": -999,
     "min-number-yrs-per-sim": -999,
-    "start": -999
+    "start": -999,
+    "label": "piClim-HC",
+    "long_label": "Describe piClim-HC in one sentence."
 }

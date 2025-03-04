@@ -9,8 +9,7 @@
         "cmip"
     ],
     "description": "DECK: AMIP",
-    "model_realms": {},
-    "name": "amip",
+    "model_realms": [],
     "parent_activity": [
         "none"
     ],
@@ -24,5 +23,7 @@
     "experiment_description": "AMIP (Atmospheric Model Intercomparison Project) experiment with prescribed SSTs and sea ice",
     "end": -999,
     "min-number-yrs-per-sim": -999,
-    "start": -999
+    "start": -999,
+    "label": "amip",
+    "long_label": "Describe amip in one sentence."
 }

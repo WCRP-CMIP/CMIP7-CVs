@@ -9,8 +9,7 @@
         "dcpp"
     ],
     "description": "Initialised prediction for 2025-2036",
-    "model_realms": {},
-    "name": "Initialised-prediction-2025-2036",
+    "model_realms": [],
     "parent_activity": [
         "none"
     ],
@@ -24,5 +23,7 @@
     "experiment_description": "Decadal climate prediction project initialised forecast for 2025-2036",
     "end": -999,
     "min-number-yrs-per-sim": -999,
-    "start": -999
+    "start": -999,
+    "label": "Initialised-prediction-2025-2036",
+    "long_label": "Describe Initialised-prediction-2025-2036 in one sentence."
 }

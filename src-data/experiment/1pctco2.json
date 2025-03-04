@@ -9,8 +9,7 @@
         "cmip"
     ],
     "description": "DECK: 1 percent per year CO2 increase",
-    "model_realms": {},
-    "name": "1pctCO2",
+    "model_realms": [],
     "parent_activity": [
         "none"
     ],
@@ -24,5 +23,7 @@
     "experiment_description": "Increase CO2 concentration from pre-industrial level at 1% per year until quadrupling",
     "end": -999,
     "min-number-yrs-per-sim": -999,
-    "start": -999
+    "start": -999,
+    "label": "1pctCO2",
+    "long_label": "Describe 1pctCO2 in one sentence."
 }

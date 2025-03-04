@@ -9,8 +9,7 @@
         "cfmip"
     ],
     "description": "AMIP experiment with uniform 4K SST increase",
-    "model_realms": {},
-    "name": "amip-p4k",
+    "model_realms": [],
     "parent_activity": [
         "none"
     ],
@@ -24,5 +23,7 @@
     "experiment_description": "AMIP experiment with uniform 4K SST increase",
     "end": -999,
     "min-number-yrs-per-sim": -999,
-    "start": -999
+    "start": -999,
+    "label": "amip-p4k",
+    "long_label": "Describe amip-p4k in one sentence."
 }

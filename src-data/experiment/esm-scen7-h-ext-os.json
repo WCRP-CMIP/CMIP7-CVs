@@ -9,12 +9,7 @@
         "ScenarioMIP"
     ],
     "description": "High emission scenario overshoot extension to explore potential high-end impacts",
-    "model_realms": {
-        "required": [
-            "AOGCM"
-        ]
-    },
-    "name": "High Scenario Overshoot Extension",
+    "model_realms": [],
     "parent_activity": [
         "ScenarioMIP"
     ],
@@ -28,5 +23,7 @@
     "experiment_description": "High emission scenario overshoot extension to explore potential high-end impacts",
     "end": 2500,
     "min-number-yrs-per-sim": 50,
-    "start": 2101
+    "start": 2101,
+    "long_label": "High Scenario Overshoot Extension",
+    "label": "esm-scen7-h-ext-os"
 }

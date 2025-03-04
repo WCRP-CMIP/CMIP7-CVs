@@ -9,8 +9,7 @@
         "damip"
     ],
     "description": "Historical simulation with aerosol forcing only",
-    "model_realms": {},
-    "name": "hist-aer",
+    "model_realms": [],
     "parent_activity": [
         "none"
     ],
@@ -24,5 +23,7 @@
     "experiment_description": "Historical simulation with aerosol forcing only",
     "end": -999,
     "min-number-yrs-per-sim": -999,
-    "start": -999
+    "start": -999,
+    "label": "hist-aer",
+    "long_label": "Describe hist-aer in one sentence."
 }

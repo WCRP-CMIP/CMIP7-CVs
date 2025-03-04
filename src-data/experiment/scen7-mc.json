@@ -9,12 +9,7 @@
         "ScenarioMIP"
     ],
     "description": "Medium concentration driven emission scenario consistent with current policies",
-    "model_realms": {
-        "required": [
-            "AOGCM"
-        ]
-    },
-    "name": "Medium, Concentration Driven Scenario",
+    "model_realms": [],
     "parent_activity": [
         "CMIP"
     ],
@@ -28,5 +23,7 @@
     "experiment_description": "Medium concentration driven emission scenario consistent with current policies",
     "end": 2100,
     "min-number-yrs-per-sim": 79,
-    "start": 2022
+    "start": 2022,
+    "long_label": "Medium, Concentration Driven Scenario",
+    "label": "scen7-mc"
 }

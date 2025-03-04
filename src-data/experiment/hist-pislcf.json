@@ -9,8 +9,7 @@
         "aerchemmip"
     ],
     "description": "Historical simulation with pre-industrial short-lived climate forcers",
-    "model_realms": {},
-    "name": "hist-piSLCF",
+    "model_realms": [],
     "parent_activity": [
         "none"
     ],
@@ -24,5 +23,7 @@
     "experiment_description": "Historical simulation but with pre-industrial short-lived climate forcer emissions",
     "end": -999,
     "min-number-yrs-per-sim": -999,
-    "start": -999
+    "start": -999,
+    "label": "hist-piSLCF",
+    "long_label": "Describe hist-piSLCF in one sentence."
 }

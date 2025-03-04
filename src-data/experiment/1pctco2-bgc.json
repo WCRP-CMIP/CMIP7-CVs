@@ -9,8 +9,7 @@
         "c4mip"
     ],
     "description": "Biogeochemically-coupled version of 1 percent per year CO2 increase experiment",
-    "model_realms": {},
-    "name": "1pctCO2-bgc",
+    "model_realms": [],
     "parent_activity": [
         "none"
     ],
@@ -24,5 +23,7 @@
     "experiment_description": "Biogeochemically-coupled version of 1 percent per year CO2 increase experiment",
     "end": -999,
     "min-number-yrs-per-sim": -999,
-    "start": -999
+    "start": -999,
+    "label": "1pctCO2-bgc",
+    "long_label": "Describe 1pctCO2-bgc in one sentence."
 }

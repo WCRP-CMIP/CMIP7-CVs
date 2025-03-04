@@ -9,8 +9,7 @@
         "c4mip"
     ],
     "description": "10 years of carbon dioxide removal (CDR) following 10 years of constant atmospheric CO2",
-    "model_realms": {},
-    "name": "esm-flat10-cdr",
+    "model_realms": [],
     "parent_activity": [
         "none"
     ],
@@ -24,5 +23,7 @@
     "experiment_description": "10 years of carbon dioxide removal (CDR) following 10 years of constant atmospheric CO2",
     "end": -999,
     "min-number-yrs-per-sim": -999,
-    "start": -999
+    "start": -999,
+    "label": "esm-flat10-cdr",
+    "long_label": "Describe esm-flat10-cdr in one sentence."
 }

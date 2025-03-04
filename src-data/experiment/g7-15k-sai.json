@@ -9,8 +9,7 @@
         "geomip"
     ],
     "description": "Stratospheric aerosol injection to reduce warming to 1.5K",
-    "model_realms": {},
-    "name": "G7-15K-SAI",
+    "model_realms": [],
     "parent_activity": [
         "none"
     ],
@@ -24,5 +23,7 @@
     "experiment_description": "Stratospheric aerosol injection to reduce warming to 1.5K above pre-industrial levels",
     "end": -999,
     "min-number-yrs-per-sim": -999,
-    "start": -999
+    "start": -999,
+    "label": "G7-15K-SAI",
+    "long_label": "Describe G7-15K-SAI in one sentence."
 }

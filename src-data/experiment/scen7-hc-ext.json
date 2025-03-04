@@ -9,12 +9,7 @@
         "ScenarioMIP"
     ],
     "description": "High concentration driven emission scenario extension to explore potential high-end impacts",
-    "model_realms": {
-        "required": [
-            "AOGCM"
-        ]
-    },
-    "name": "High, Concentration Driven Scenario Extension",
+    "model_realms": [],
     "parent_activity": [
         "ScenarioMIP"
     ],
@@ -28,5 +23,7 @@
     "experiment_description": "High concentration driven emission scenario extension to explore potential high-end impacts",
     "end": 2500,
     "min-number-yrs-per-sim": 50,
-    "start": 2101
+    "start": 2101,
+    "long_label": "High, Concentration Driven Scenario Extension",
+    "label": "scen7-hc-ext"
 }

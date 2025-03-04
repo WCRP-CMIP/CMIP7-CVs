@@ -9,12 +9,7 @@
         "ScenarioMIP"
     ],
     "description": "Medium emission scenario extension consistent with current policies",
-    "model_realms": {
-        "required": [
-            "AOGCM"
-        ]
-    },
-    "name": "Medium Scenario Extension",
+    "model_realms": [],
     "parent_activity": [
         "CMIP"
     ],
@@ -28,5 +23,7 @@
     "experiment_description": "Medium emission scenario extension consistent with current policies",
     "end": 2500,
     "min-number-yrs-per-sim": 50,
-    "start": 2101
+    "start": 2101,
+    "long_label": "Medium Scenario Extension",
+    "label": "esm-scen7-m-ext"
 }

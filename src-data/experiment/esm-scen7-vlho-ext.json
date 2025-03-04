@@ -9,12 +9,7 @@
         "ScenarioMIP"
     ],
     "description": "Extension to scenario with similar end-of-century temperature impact to VLLO, but with less aggressive near-term mitigation and large reliance on net negative emissions, resulting in a higher overshoot.",
-    "model_realms": {
-        "required": [
-            "AOGCM"
-        ]
-    },
-    "name": "Very Low Scenario with Limited Overshoot Extension",
+    "model_realms": [],
     "parent_activity": [
         "CMIP"
     ],
@@ -28,5 +23,7 @@
     "experiment_description": "Extension to scenario with similar end-of-century temperature impact to VLLO, but with less aggressive near-term mitigation and large reliance on net negative emissions, resulting in a higher overshoot.",
     "end": 2500,
     "min-number-yrs-per-sim": 50,
-    "start": 2101
+    "start": 2101,
+    "long_label": "Very Low Scenario with Limited Overshoot Extension",
+    "label": "esm-scen7-vlho-ext"
 }

@@ -9,12 +9,7 @@
         "ScenarioMIP"
     ],
     "description": "Extension to concentration driven scenario with delayed increase in mitigation effort, insufficient to meet Paris Agreement objectives",
-    "model_realms": {
-        "required": [
-            "AOGCM"
-        ]
-    },
-    "name": "Medium, Concentration Driven Scenario Extension",
+    "model_realms": [],
     "parent_activity": [
         "ScenarioMIP"
     ],
@@ -28,5 +23,7 @@
     "experiment_description": "Extension to concentration driven scenario with delayed increase in mitigation effort, insufficient to meet Paris Agreement objectives",
     "end": 2500,
     "min-number-yrs-per-sim": 50,
-    "start": 2101
+    "start": 2101,
+    "long_label": "Medium, Concentration Driven Scenario Extension",
+    "label": "scen7-mlc-ext"
 }
