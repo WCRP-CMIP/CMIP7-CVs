@@ -9,7 +9,24 @@
         "cmip"
     ],
     "description": "DECK: AMIP",
-    "model_realms": [],
+    "model_realms": [
+        {
+            "id": "agcm",
+            "is_required": true
+        },
+        {
+            "id": "aer",
+            "is_required": false
+        },
+        {
+            "id": "chem",
+            "is_required": false
+        },
+        {
+            "id": "bgc",
+            "is_required": false
+        }
+    ],
     "parent_activity": [
         "none"
     ],

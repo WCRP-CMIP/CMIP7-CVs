@@ -9,7 +9,24 @@
         "cmip"
     ],
     "description": "DECK: pre-industrial control simulation with Earth System Models",
-    "model_realms": [],
+    "model_realms": [
+        {
+            "id": "aogcm",
+            "is_required": true
+        },
+        {
+            "id": "bgc",
+            "is_required": true
+        },
+        {
+            "id": "aer",
+            "is_required": false
+        },
+        {
+            "id": "chem",
+            "is_required": false
+        }
+    ],
     "parent_activity": [
         "none"
     ],
