@@ -2,7 +2,7 @@
     "@context": "_context_",
     "id": "none",
     "type": [
-        "wcrp:sub_experiment",
+        "wcrp:sub-experiment",
         "cmip7"
     ],
     "description": "none",

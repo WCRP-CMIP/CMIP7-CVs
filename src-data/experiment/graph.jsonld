@@ -2,6 +2,7 @@
   "@context": {
   "@base": "https://wcrp-cmip.github.io/CMIP7_CVs/experiment/",
   "@vocab": "https://wcrp-cmip.github.io/CMIP7_CVs/experiment/",
+  "entries": "@none",
   "id": "@id",
   "type": "@type",
   "cf": "https://wcrp-cmip.github.io/CF/",
@@ -10,25 +11,23 @@
   "obs4mips": "https://wolfiex.github.io/obs4MIPs-cmor-tables-ld/",
   "universal": "https://wcrp-cmip.github.io/WCRP-universe/",
   "variables": "https://wcrp-cmip.github.io/MIP-variables/",
+  "parent_experiment": {
+    "@type": "@id"
+  },
+  "sub_experiment": {
+    "@type": "@id"
+  },
   "activity": {
     "@type": "@id",
     "@context": "https://wcrp-cmip.github.io/WCRP-universe/activity/_context_"
   },
   "model_realms": {
-    "@container": "@id",
-    "@context": "https://wcrp-cmip.github.io/WCRP-universe/source_type/_context_"
+    "@type": "@id",
+    "@context": "https://wcrp-cmip.github.io/WCRP-universe/source-type/_context_"
   },
   "parent_activity": {
     "@type": "@id",
     "@context": "https://wcrp-cmip.github.io/WCRP-universe/activity/_context_"
-  },
-  "parent_experiment": {
-    "@type": "@id",
-    "@context": "https://wcrp-cmip.github.io/CMIP7_CVs/experiment/_context_"
-  },
-  "sub_experiment": {
-    "@type": "@id",
-    "@context": "https://wcrp-cmip.github.io/CMIP7_CVs/sub_experiment/_context_"
   }
 },
   "@graph": [
@@ -42,8 +41,7 @@
     "c4mip"
   ],
   "description": "Biogeochemically-coupled version of 1 percent per year CO2 increase experiment",
-  "model_realms": {},
-  "name": "1pctCO2-bgc",
+  "model_realms": [],
   "parent_activity": [
     "none"
   ],
@@ -57,7 +55,9 @@
   "experiment_description": "Biogeochemically-coupled version of 1 percent per year CO2 increase experiment",
   "end": -999,
   "min-number-yrs-per-sim": -999,
-  "start": -999
+  "start": -999,
+  "label": "1pctCO2-bgc",
+  "long_label": "Describe 1pctCO2-bgc in one sentence."
 }
     ,{
   "id": "1pctco2-rad",
@@ -69,8 +69,7 @@
     "c4mip"
   ],
   "description": "Radiatively-coupled version of 1 percent per year CO2 increase experiment",
-  "model_realms": {},
-  "name": "1pctCO2-rad",
+  "model_realms": [],
   "parent_activity": [
     "none"
   ],
@@ -84,7 +83,9 @@
   "experiment_description": "Radiatively-coupled version of 1 percent per year CO2 increase experiment",
   "end": -999,
   "min-number-yrs-per-sim": -999,
-  "start": -999
+  "start": -999,
+  "label": "1pctCO2-rad",
+  "long_label": "Describe 1pctCO2-rad in one sentence."
 }
     ,{
   "id": "1pctco2",
@@ -96,8 +97,24 @@
     "cmip"
   ],
   "description": "DECK: 1 percent per year CO2 increase",
-  "model_realms": {},
-  "name": "1pctCO2",
+  "model_realms": [
+    {
+      "id": "aogcm",
+      "is_required": true
+    },
+    {
+      "id": "aer",
+      "is_required": false
+    },
+    {
+      "id": "chem",
+      "is_required": false
+    },
+    {
+      "id": "bgc",
+      "is_required": false
+    }
+  ],
   "parent_activity": [
     "none"
   ],
@@ -111,7 +128,9 @@
   "experiment_description": "Increase CO2 concentration from pre-industrial level at 1% per year until quadrupling",
   "end": -999,
   "min-number-yrs-per-sim": -999,
-  "start": -999
+  "start": -999,
+  "label": "1pctCO2",
+  "long_label": "Describe 1pctCO2 in one sentence."
 }
     ,{
   "id": "abrupt-0p5co2",
@@ -123,8 +142,7 @@
     "cfmip"
   ],
   "description": "Abrupt halving of CO2",
-  "model_realms": {},
-  "name": "abrupt-0p5CO2",
+  "model_realms": [],
   "parent_activity": [
     "none"
   ],
@@ -138,7 +156,9 @@
   "experiment_description": "Abrupt halving of atmospheric CO2",
   "end": -999,
   "min-number-yrs-per-sim": -999,
-  "start": -999
+  "start": -999,
+  "label": "abrupt-0p5CO2",
+  "long_label": "Describe abrupt-0p5CO2 in one sentence."
 }
     ,{
   "id": "abrupt-2xco2",
@@ -150,8 +170,7 @@
     "cfmip"
   ],
   "description": "Abrupt doubling of CO2",
-  "model_realms": {},
-  "name": "abrupt-2xCO2",
+  "model_realms": [],
   "parent_activity": [
     "none"
   ],
@@ -165,7 +184,9 @@
   "experiment_description": "Abrupt doubling of atmospheric CO2",
   "end": -999,
   "min-number-yrs-per-sim": -999,
-  "start": -999
+  "start": -999,
+  "label": "abrupt-2xCO2",
+  "long_label": "Describe abrupt-2xCO2 in one sentence."
 }
     ,{
   "id": "abrupt-4xco2",
@@ -177,8 +198,24 @@
     "cmip"
   ],
   "description": "DECK: abrupt quadrupling of CO2",
-  "model_realms": {},
-  "name": "abrupt-4xCO2",
+  "model_realms": [
+    {
+      "id": "aogcm",
+      "is_required": true
+    },
+    {
+      "id": "aer",
+      "is_required": false
+    },
+    {
+      "id": "chem",
+      "is_required": false
+    },
+    {
+      "id": "bgc",
+      "is_required": false
+    }
+  ],
   "parent_activity": [
     "none"
   ],
@@ -192,7 +229,9 @@
   "experiment_description": "Abrupt increase in CO2 concentration from pre-industrial level to quadrupling",
   "end": -999,
   "min-number-yrs-per-sim": -999,
-  "start": -999
+  "start": -999,
+  "label": "abrupt-4xCO2",
+  "long_label": "Describe abrupt-4xCO2 in one sentence."
 }
     ,{
   "id": "amip-p4k",
@@ -204,8 +243,7 @@
     "cfmip"
   ],
   "description": "AMIP experiment with uniform 4K SST increase",
-  "model_realms": {},
-  "name": "amip-p4k",
+  "model_realms": [],
   "parent_activity": [
     "none"
   ],
@@ -219,7 +257,9 @@
   "experiment_description": "AMIP experiment with uniform 4K SST increase",
   "end": -999,
   "min-number-yrs-per-sim": -999,
-  "start": -999
+  "start": -999,
+  "label": "amip-p4k",
+  "long_label": "Describe amip-p4k in one sentence."
 }
     ,{
   "id": "amip-piforcing",
@@ -231,8 +271,7 @@
     "cfmip"
   ],
   "description": "AMIP experiment with pre-industrial forcing",
-  "model_realms": {},
-  "name": "amip-piForcing",
+  "model_realms": [],
   "parent_activity": [
     "none"
   ],
@@ -246,7 +285,9 @@
   "experiment_description": "AMIP experiment with pre-industrial forcing",
   "end": -999,
   "min-number-yrs-per-sim": -999,
-  "start": -999
+  "start": -999,
+  "label": "amip-piForcing",
+  "long_label": "Describe amip-piForcing in one sentence."
 }
     ,{
   "id": "amip",
@@ -258,8 +299,24 @@
     "cmip"
   ],
   "description": "DECK: AMIP",
-  "model_realms": {},
-  "name": "amip",
+  "model_realms": [
+    {
+      "id": "agcm",
+      "is_required": true
+    },
+    {
+      "id": "aer",
+      "is_required": false
+    },
+    {
+      "id": "chem",
+      "is_required": false
+    },
+    {
+      "id": "bgc",
+      "is_required": false
+    }
+  ],
   "parent_activity": [
     "none"
   ],
@@ -273,7 +330,9 @@
   "experiment_description": "AMIP (Atmospheric Model Intercomparison Project) experiment with prescribed SSTs and sea ice",
   "end": -999,
   "min-number-yrs-per-sim": -999,
-  "start": -999
+  "start": -999,
+  "label": "amip",
+  "long_label": "Describe amip in one sentence."
 }
     ,{
   "id": "esm-flat10-cdr",
@@ -285,8 +344,7 @@
     "c4mip"
   ],
   "description": "10 years of carbon dioxide removal (CDR) following 10 years of constant atmospheric CO2",
-  "model_realms": {},
-  "name": "esm-flat10-cdr",
+  "model_realms": [],
   "parent_activity": [
     "none"
   ],
@@ -300,7 +358,9 @@
   "experiment_description": "10 years of carbon dioxide removal (CDR) following 10 years of constant atmospheric CO2",
   "end": -999,
   "min-number-yrs-per-sim": -999,
-  "start": -999
+  "start": -999,
+  "label": "esm-flat10-cdr",
+  "long_label": "Describe esm-flat10-cdr in one sentence."
 }
     ,{
   "id": "esm-flat10-zec",
@@ -312,8 +372,7 @@
     "c4mip"
   ],
   "description": "Zero Emissions Commitment (ZEC) experiment following 10 years of constant atmospheric CO2",
-  "model_realms": {},
-  "name": "esm-flat10-zec",
+  "model_realms": [],
   "parent_activity": [
     "none"
   ],
@@ -327,7 +386,9 @@
   "experiment_description": "Zero Emissions Commitment (ZEC) experiment following 10 years of constant atmospheric CO2",
   "end": -999,
   "min-number-yrs-per-sim": -999,
-  "start": -999
+  "start": -999,
+  "label": "esm-flat10-zec",
+  "long_label": "Describe esm-flat10-zec in one sentence."
 }
     ,{
   "id": "esm-hist",
@@ -339,8 +400,24 @@
     "cmip"
   ],
   "description": "DECK: Earth System Model historical simulation",
-  "model_realms": {},
-  "name": "esm-hist",
+  "model_realms": [
+    {
+      "id": "aogcm",
+      "is_required": true
+    },
+    {
+      "id": "bgc",
+      "is_required": true
+    },
+    {
+      "id": "aer",
+      "is_required": false
+    },
+    {
+      "id": "chem",
+      "is_required": false
+    }
+  ],
   "parent_activity": [
     "none"
   ],
@@ -354,7 +431,9 @@
   "experiment_description": "Historical simulation with Earth System Models",
   "end": -999,
   "min-number-yrs-per-sim": -999,
-  "start": -999
+  "start": -999,
+  "label": "esm-hist",
+  "long_label": "Describe esm-hist in one sentence."
 }
     ,{
   "id": "esm-picontrol",
@@ -366,8 +445,24 @@
     "cmip"
   ],
   "description": "DECK: pre-industrial control simulation with Earth System Models",
-  "model_realms": {},
-  "name": "esm-piControl",
+  "model_realms": [
+    {
+      "id": "aogcm",
+      "is_required": true
+    },
+    {
+      "id": "bgc",
+      "is_required": true
+    },
+    {
+      "id": "aer",
+      "is_required": false
+    },
+    {
+      "id": "chem",
+      "is_required": false
+    }
+  ],
   "parent_activity": [
     "none"
   ],
@@ -381,7 +476,373 @@
   "experiment_description": "Pre-industrial control run for Earth System Models",
   "end": -999,
   "min-number-yrs-per-sim": -999,
-  "start": -999
+  "start": -999,
+  "label": "esm-piControl",
+  "long_label": "Describe esm-piControl in one sentence."
+}
+    ,{
+  "id": "esm-scen7-h-ext-os",
+  "type": [
+    "wcrp:experiment",
+    "cmip7"
+  ],
+  "activity": [
+    "ScenarioMIP"
+  ],
+  "description": "High emission scenario overshoot extension to explore potential high-end impacts",
+  "model_realms": [],
+  "parent_activity": [
+    "ScenarioMIP"
+  ],
+  "parent_experiment": [
+    "esm-scen7-h"
+  ],
+  "sub_experiment": [
+    "none"
+  ],
+  "tier": 0,
+  "experiment_description": "High emission scenario overshoot extension to explore potential high-end impacts",
+  "end": 2500,
+  "min-number-yrs-per-sim": 50,
+  "start": 2101,
+  "long_label": "High Scenario Overshoot Extension",
+  "label": "esm-scen7-h-ext-os"
+}
+    ,{
+  "id": "esm-scen7-h-ext",
+  "type": [
+    "wcrp:experiment",
+    "cmip7"
+  ],
+  "activity": [
+    "ScenarioMIP"
+  ],
+  "description": "High emission scenario extension to explore potential high-end impacts",
+  "model_realms": [],
+  "parent_activity": [
+    "ScenarioMIP"
+  ],
+  "parent_experiment": [
+    "esm-scen7-h"
+  ],
+  "sub_experiment": [
+    "none"
+  ],
+  "tier": 0,
+  "experiment_description": "High emission scenario extension to explore potential high-end impacts",
+  "end": 2500,
+  "min-number-yrs-per-sim": 50,
+  "start": 2101,
+  "long_label": "High Scenario Extension",
+  "label": "esm-scen7-h-ext"
+}
+    ,{
+  "id": "esm-scen7-h",
+  "type": [
+    "wcrp:experiment",
+    "cmip7"
+  ],
+  "activity": [
+    "ScenarioMIP"
+  ],
+  "description": "High emission scenario to explore potential high-end impacts",
+  "model_realms": [],
+  "parent_activity": [
+    "CMIP"
+  ],
+  "parent_experiment": [
+    "esm-hist"
+  ],
+  "sub_experiment": [
+    "none"
+  ],
+  "tier": 0,
+  "experiment_description": "High emission scenario to explore potential high-end impacts",
+  "end": 2100,
+  "min-number-yrs-per-sim": 79,
+  "start": 2022,
+  "long_label": "High Scenario",
+  "label": "esm-scen7-h"
+}
+    ,{
+  "id": "esm-scen7-l-ext",
+  "type": [
+    "wcrp:experiment",
+    "cmip7"
+  ],
+  "activity": [
+    "ScenarioMIP"
+  ],
+  "description": "Scenario extension consistent with staying likely below 2 degrees C",
+  "model_realms": [],
+  "parent_activity": [
+    "CMIP"
+  ],
+  "parent_experiment": [
+    "esm-scen7-l"
+  ],
+  "sub_experiment": [
+    "none"
+  ],
+  "tier": 0,
+  "experiment_description": "Scenario extension consistent with staying likely below 2 degrees C",
+  "end": 2500,
+  "min-number-yrs-per-sim": 50,
+  "start": 2101,
+  "long_label": "Low Scenario Extension",
+  "label": "esm-scen7-l-ext"
+}
+    ,{
+  "id": "esm-scen7-l",
+  "type": [
+    "wcrp:experiment",
+    "cmip7"
+  ],
+  "activity": [
+    "ScenarioMIP"
+  ],
+  "description": "Scenario consistent with staying likely below 2 degrees C",
+  "model_realms": [],
+  "parent_activity": [
+    "CMIP"
+  ],
+  "parent_experiment": [
+    "esm-hist"
+  ],
+  "sub_experiment": [
+    "none"
+  ],
+  "tier": 0,
+  "experiment_description": "Scenario consistent with staying likely below 2 degrees C",
+  "end": 2100,
+  "min-number-yrs-per-sim": 79,
+  "start": 2022,
+  "long_label": "Low Scenario",
+  "label": "esm-scen7-l"
+}
+    ,{
+  "id": "esm-scen7-m-ext",
+  "type": [
+    "wcrp:experiment",
+    "cmip7"
+  ],
+  "activity": [
+    "ScenarioMIP"
+  ],
+  "description": "Medium emission scenario extension consistent with current policies",
+  "model_realms": [],
+  "parent_activity": [
+    "CMIP"
+  ],
+  "parent_experiment": [
+    "esm-scen7-m"
+  ],
+  "sub_experiment": [
+    "none"
+  ],
+  "tier": 0,
+  "experiment_description": "Medium emission scenario extension consistent with current policies",
+  "end": 2500,
+  "min-number-yrs-per-sim": 50,
+  "start": 2101,
+  "long_label": "Medium Scenario Extension",
+  "label": "esm-scen7-m-ext"
+}
+    ,{
+  "id": "esm-scen7-m",
+  "type": [
+    "wcrp:experiment",
+    "cmip7"
+  ],
+  "activity": [
+    "ScenarioMIP"
+  ],
+  "description": "Medium emission scenario consistent with current policies",
+  "model_realms": [],
+  "parent_activity": [
+    "CMIP"
+  ],
+  "parent_experiment": [
+    "esm-hist"
+  ],
+  "sub_experiment": [
+    "none"
+  ],
+  "tier": 0,
+  "experiment_description": "Medium emission scenario consistent with current policies",
+  "end": 2100,
+  "min-number-yrs-per-sim": 79,
+  "start": 2022,
+  "long_label": "Medium Scenario",
+  "label": "esm-scen7-m"
+}
+    ,{
+  "id": "esm-scen7-ml-ext",
+  "type": [
+    "wcrp:experiment",
+    "cmip7"
+  ],
+  "activity": [
+    "ScenarioMIP"
+  ],
+  "description": "Extension to scenario with delayed increase in mitigation effort, insufficient to meet Paris Agreement objectives",
+  "model_realms": [],
+  "parent_activity": [
+    "CMIP"
+  ],
+  "parent_experiment": [
+    "esm-scen7-ml"
+  ],
+  "sub_experiment": [
+    "none"
+  ],
+  "tier": 0,
+  "experiment_description": "Extension to scenario with delayed increase in mitigation effort, insufficient to meet Paris Agreement objectives",
+  "end": 2500,
+  "min-number-yrs-per-sim": 50,
+  "start": 2101,
+  "long_label": "Medium Low Scenario Extension",
+  "label": "esm-scen7-ml-ext"
+}
+    ,{
+  "id": "esm-scen7-ml",
+  "type": [
+    "wcrp:experiment",
+    "cmip7"
+  ],
+  "activity": [
+    "ScenarioMIP"
+  ],
+  "description": "Scenario with delayed increase in mitigation effort, insufficient to meet Paris Agreement objectives",
+  "model_realms": [],
+  "parent_activity": [
+    "CMIP"
+  ],
+  "parent_experiment": [
+    "esm-hist"
+  ],
+  "sub_experiment": [
+    "none"
+  ],
+  "tier": 0,
+  "experiment_description": "Scenario with delayed increase in mitigation effort, insufficient to meet Paris Agreement objectives",
+  "end": 2100,
+  "min-number-yrs-per-sim": 79,
+  "start": 2022,
+  "long_label": "Medium-Low Scenario",
+  "label": "esm-scen7-ml"
+}
+    ,{
+  "id": "esm-scen7-vlho-ext",
+  "type": [
+    "wcrp:experiment",
+    "cmip7"
+  ],
+  "activity": [
+    "ScenarioMIP"
+  ],
+  "description": "Extension to scenario with similar end-of-century temperature impact to VLLO, but with less aggressive near-term mitigation and large reliance on net negative emissions, resulting in a higher overshoot.",
+  "model_realms": [],
+  "parent_activity": [
+    "CMIP"
+  ],
+  "parent_experiment": [
+    "esm-scen7-vlho"
+  ],
+  "sub_experiment": [
+    "none"
+  ],
+  "tier": 0,
+  "experiment_description": "Extension to scenario with similar end-of-century temperature impact to VLLO, but with less aggressive near-term mitigation and large reliance on net negative emissions, resulting in a higher overshoot.",
+  "end": 2500,
+  "min-number-yrs-per-sim": 50,
+  "start": 2101,
+  "long_label": "Very Low Scenario with Limited Overshoot Extension",
+  "label": "esm-scen7-vlho-ext"
+}
+    ,{
+  "id": "esm-scen7-vlho",
+  "type": [
+    "wcrp:experiment",
+    "cmip7"
+  ],
+  "activity": [
+    "ScenarioMIP"
+  ],
+  "description": "Scenario with similar endof-century temperature impact to VLLO, but with less aggressive near-term mitigation and large reliance on net negative emissions, resulting in a higher overshoot.",
+  "model_realms": [],
+  "parent_activity": [
+    "CMIP"
+  ],
+  "parent_experiment": [
+    "esm-hist"
+  ],
+  "sub_experiment": [
+    "none"
+  ],
+  "tier": 0,
+  "experiment_description": "Scenario with similar endof-century temperature impact to VLLO, but with less aggressive near-term mitigation and large reliance on net negative emissions, resulting in a higher overshoot.",
+  "end": 2100,
+  "min-number-yrs-per-sim": 79,
+  "start": 2022,
+  "long_label": "Very Low Scenario after High Overshoot",
+  "label": "esm-scen7-vlho"
+}
+    ,{
+  "id": "esm-scen7-vllo-ext",
+  "type": [
+    "wcrp:experiment",
+    "cmip7"
+  ],
+  "activity": [
+    "ScenarioMIP"
+  ],
+  "description": "Extension to scenario consistent with limiting warming to 1.5 degree C by 2100 AD with limited overshoot (as low as plausible) of 1.5 degree C",
+  "model_realms": [],
+  "parent_activity": [
+    "CMIP"
+  ],
+  "parent_experiment": [
+    "esm-scen7-vllo"
+  ],
+  "sub_experiment": [
+    "none"
+  ],
+  "tier": 0,
+  "experiment_description": "Extension to scenario consistent with limiting warming to 1.5 degree C by 2100 AD with limited overshoot (as low as plausible) of 1.5 degree C",
+  "end": 2500,
+  "min-number-yrs-per-sim": 50,
+  "start": 2101,
+  "long_label": "Very Low Scenario with Limited Overshoot Extension",
+  "label": "esm-scen7-vllo-ext"
+}
+    ,{
+  "id": "esm-scen7-vllo",
+  "type": [
+    "wcrp:experiment",
+    "cmip7"
+  ],
+  "activity": [
+    "ScenarioMIP"
+  ],
+  "description": "Scenario consistent with limiting warming to 1.5 degree C by 2100 AD with limited overshoot (as low as plausible) of 1.5 degree C",
+  "model_realms": [],
+  "parent_activity": [
+    "CMIP"
+  ],
+  "parent_experiment": [
+    "esm-hist"
+  ],
+  "sub_experiment": [
+    "none"
+  ],
+  "tier": 0,
+  "experiment_description": "Scenario consistent with limiting warming to 1.5 degree C by 2100 AD with limited overshoot (as low as plausible) of 1.5 degree C",
+  "end": 2100,
+  "min-number-yrs-per-sim": 79,
+  "start": 2022,
+  "long_label": "Very Low Scenario with Limited Overshoot",
+  "label": "esm-scen7-vllo"
 }
     ,{
   "id": "g7-15k-sai",
@@ -393,8 +854,7 @@
     "geomip"
   ],
   "description": "Stratospheric aerosol injection to reduce warming to 1.5K",
-  "model_realms": {},
-  "name": "G7-15K-SAI",
+  "model_realms": [],
   "parent_activity": [
     "none"
   ],
@@ -408,34 +868,9 @@
   "experiment_description": "Stratospheric aerosol injection to reduce warming to 1.5K above pre-industrial levels",
   "end": -999,
   "min-number-yrs-per-sim": -999,
-  "start": -999
-}
-    ,{
-  "id": "high-scenario",
-  "type": [
-    "wcrp:experiment",
-    "cmip7"
-  ],
-  "activity": [
-    "scenariomip"
-  ],
-  "description": "High emission scenario for future climate projections",
-  "model_realms": {},
-  "name": "high-scenario",
-  "parent_activity": [
-    "none"
-  ],
-  "parent_experiment": [
-    "none"
-  ],
-  "sub_experiment": [
-    "none"
-  ],
-  "tier": 0,
-  "experiment_description": "High emission scenario for future climate projections",
-  "end": -999,
-  "min-number-yrs-per-sim": -999,
-  "start": -999
+  "start": -999,
+  "label": "G7-15K-SAI",
+  "long_label": "Describe G7-15K-SAI in one sentence."
 }
     ,{
   "id": "hist-aer",
@@ -447,8 +882,24 @@
     "damip"
   ],
   "description": "Historical simulation with aerosol forcing only",
-  "model_realms": {},
-  "name": "hist-aer",
+  "model_realms": [
+    {
+      "id": "aogcm",
+      "is_required": true
+    },
+    {
+      "id": "aer",
+      "is_required": false
+    },
+    {
+      "id": "chem",
+      "is_required": false
+    },
+    {
+      "id": "bgc",
+      "is_required": false
+    }
+  ],
   "parent_activity": [
     "none"
   ],
@@ -462,7 +913,9 @@
   "experiment_description": "Historical simulation with aerosol forcing only",
   "end": -999,
   "min-number-yrs-per-sim": -999,
-  "start": -999
+  "start": -999,
+  "label": "hist-aer",
+  "long_label": "Describe hist-aer in one sentence."
 }
     ,{
   "id": "hist-ghg",
@@ -474,8 +927,24 @@
     "damip"
   ],
   "description": "Historical simulation with greenhouse gas forcing only",
-  "model_realms": {},
-  "name": "hist-GHG",
+  "model_realms": [
+    {
+      "id": "aogcm",
+      "is_required": true
+    },
+    {
+      "id": "aer",
+      "is_required": false
+    },
+    {
+      "id": "chem",
+      "is_required": false
+    },
+    {
+      "id": "bgc",
+      "is_required": false
+    }
+  ],
   "parent_activity": [
     "none"
   ],
@@ -489,7 +958,9 @@
   "experiment_description": "Historical simulation with greenhouse gas forcing only",
   "end": -999,
   "min-number-yrs-per-sim": -999,
-  "start": -999
+  "start": -999,
+  "label": "hist-GHG",
+  "long_label": "Describe hist-GHG in one sentence."
 }
     ,{
   "id": "hist-nat",
@@ -501,8 +972,24 @@
     "damip"
   ],
   "description": "Historical simulation with natural forcing only",
-  "model_realms": {},
-  "name": "hist-nat",
+  "model_realms": [
+    {
+      "id": "aogcm",
+      "is_required": true
+    },
+    {
+      "id": "aer",
+      "is_required": false
+    },
+    {
+      "id": "chem",
+      "is_required": false
+    },
+    {
+      "id": "bgc",
+      "is_required": false
+    }
+  ],
   "parent_activity": [
     "none"
   ],
@@ -516,7 +1003,9 @@
   "experiment_description": "Historical simulation with natural forcing only",
   "end": -999,
   "min-number-yrs-per-sim": -999,
-  "start": -999
+  "start": -999,
+  "label": "hist-nat",
+  "long_label": "Describe hist-nat in one sentence."
 }
     ,{
   "id": "hist-piaer",
@@ -528,8 +1017,24 @@
     "aerchemmip"
   ],
   "description": "Historical simulation with pre-industrial aerosols",
-  "model_realms": {},
-  "name": "hist-piAer",
+  "model_realms": [
+    {
+      "id": "aogcm",
+      "is_required": true
+    },
+    {
+      "id": "aer",
+      "is_required": false
+    },
+    {
+      "id": "chem",
+      "is_required": false
+    },
+    {
+      "id": "bgc",
+      "is_required": false
+    }
+  ],
   "parent_activity": [
     "none"
   ],
@@ -543,7 +1048,9 @@
   "experiment_description": "Historical simulation but with pre-industrial aerosol emissions",
   "end": -999,
   "min-number-yrs-per-sim": -999,
-  "start": -999
+  "start": -999,
+  "label": "hist-piAer",
+  "long_label": "Describe hist-piAer in one sentence."
 }
     ,{
   "id": "hist-pislcf",
@@ -555,8 +1062,7 @@
     "aerchemmip"
   ],
   "description": "Historical simulation with pre-industrial short-lived climate forcers",
-  "model_realms": {},
-  "name": "hist-piSLCF",
+  "model_realms": [],
   "parent_activity": [
     "none"
   ],
@@ -570,7 +1076,9 @@
   "experiment_description": "Historical simulation but with pre-industrial short-lived climate forcer emissions",
   "end": -999,
   "min-number-yrs-per-sim": -999,
-  "start": -999
+  "start": -999,
+  "label": "hist-piSLCF",
+  "long_label": "Describe hist-piSLCF in one sentence."
 }
     ,{
   "id": "historical",
@@ -582,8 +1090,24 @@
     "cmip"
   ],
   "description": "DECK: historical",
-  "model_realms": {},
-  "name": "historical",
+  "model_realms": [
+    {
+      "id": "aogcm",
+      "is_required": true
+    },
+    {
+      "id": "aer",
+      "is_required": false
+    },
+    {
+      "id": "chem",
+      "is_required": false
+    },
+    {
+      "id": "bgc",
+      "is_required": false
+    }
+  ],
   "parent_activity": [
     "none"
   ],
@@ -597,7 +1121,9 @@
   "experiment_description": "Simulation of the recent past",
   "end": -999,
   "min-number-yrs-per-sim": -999,
-  "start": -999
+  "start": -999,
+  "label": "historical",
+  "long_label": "Describe historical in one sentence."
 }
     ,{
   "id": "initialised-prediction-2025-2036",
@@ -609,8 +1135,7 @@
     "dcpp"
   ],
   "description": "Initialised prediction for 2025-2036",
-  "model_realms": {},
-  "name": "Initialised-prediction-2025-2036",
+  "model_realms": [],
   "parent_activity": [
     "none"
   ],
@@ -624,7 +1149,9 @@
   "experiment_description": "Decadal climate prediction project initialised forecast for 2025-2036",
   "end": -999,
   "min-number-yrs-per-sim": -999,
-  "start": -999
+  "start": -999,
+  "label": "Initialised-prediction-2025-2036",
+  "long_label": "Describe Initialised-prediction-2025-2036 in one sentence."
 }
     ,{
   "id": "land-hist",
@@ -636,8 +1163,7 @@
     "lmip"
   ],
   "description": "Land-only simulation of the historical period",
-  "model_realms": {},
-  "name": "land-hist",
+  "model_realms": [],
   "parent_activity": [
     "none"
   ],
@@ -651,7 +1177,9 @@
   "experiment_description": "Land-only simulation of the historical period",
   "end": -999,
   "min-number-yrs-per-sim": -999,
-  "start": -999
+  "start": -999,
+  "label": "land-hist",
+  "long_label": "Describe land-hist in one sentence."
 }
     ,{
   "id": "ligabrupt",
@@ -663,8 +1191,7 @@
     "pmip"
   ],
   "description": "Last Interglacial abrupt change experiment",
-  "model_realms": {},
-  "name": "LIGabrupt",
+  "model_realms": [],
   "parent_activity": [
     "none"
   ],
@@ -678,20 +1205,21 @@
   "experiment_description": "Simulation of abrupt change during the Last Interglacial period",
   "end": -999,
   "min-number-yrs-per-sim": -999,
-  "start": -999
+  "start": -999,
+  "label": "LIGabrupt",
+  "long_label": "Describe LIGabrupt in one sentence."
 }
     ,{
-  "id": "low-overshoot-scenario",
+  "id": "none",
   "type": [
     "wcrp:experiment",
     "cmip7"
   ],
   "activity": [
-    "scenariomip"
+    "none"
   ],
-  "description": "Low overshoot scenario for future climate projections",
-  "model_realms": {},
-  "name": "low-overshoot-scenario",
+  "description": "a 'none' entry only permissable for the parent_experiment category",
+  "model_realms": [],
   "parent_activity": [
     "none"
   ],
@@ -702,64 +1230,12 @@
     "none"
   ],
   "tier": 0,
-  "experiment_description": "Low overshoot scenario for future climate projections",
+  "experiment_description": "",
   "end": -999,
   "min-number-yrs-per-sim": -999,
-  "start": -999
-}
-    ,{
-  "id": "low-scenario",
-  "type": [
-    "wcrp:experiment",
-    "cmip7"
-  ],
-  "activity": [
-    "scenariomip"
-  ],
-  "description": "Low emission scenario for future climate projections",
-  "model_realms": {},
-  "name": "low-scenario",
-  "parent_activity": [
-    "none"
-  ],
-  "parent_experiment": [
-    "none"
-  ],
-  "sub_experiment": [
-    "none"
-  ],
-  "tier": 0,
-  "experiment_description": "Low emission scenario for future climate projections",
-  "end": -999,
-  "min-number-yrs-per-sim": -999,
-  "start": -999
-}
-    ,{
-  "id": "medium-scenario-and-extension",
-  "type": [
-    "wcrp:experiment",
-    "cmip7"
-  ],
-  "activity": [
-    "scenariomip"
-  ],
-  "description": "Medium emission scenario for future climate projections with extension",
-  "model_realms": {},
-  "name": "medium-scenario-and-extension",
-  "parent_activity": [
-    "none"
-  ],
-  "parent_experiment": [
-    "none"
-  ],
-  "sub_experiment": [
-    "none"
-  ],
-  "tier": 0,
-  "experiment_description": "Medium emission scenario for future climate projections with extension",
-  "end": -999,
-  "min-number-yrs-per-sim": -999,
-  "start": -999
+  "start": -999,
+  "label": "none",
+  "long_label": ""
 }
     ,{
   "id": "piclim-4xco2",
@@ -771,8 +1247,7 @@
     "cmip"
   ],
   "description": "DECK: effective radiative forcing by 4xCO2",
-  "model_realms": {},
-  "name": "piClim-4xCO2",
+  "model_realms": [],
   "parent_activity": [
     "none"
   ],
@@ -786,7 +1261,9 @@
   "experiment_description": "Effective radiative forcing by 4xCO2",
   "end": -999,
   "min-number-yrs-per-sim": -999,
-  "start": -999
+  "start": -999,
+  "label": "piClim-4xCO2",
+  "long_label": "Describe piClim-4xCO2 in one sentence."
 }
     ,{
   "id": "piclim-aer",
@@ -798,8 +1275,7 @@
     "rfmip"
   ],
   "description": "Effective radiative forcing by present-day aerosols",
-  "model_realms": {},
-  "name": "piClim-aer",
+  "model_realms": [],
   "parent_activity": [
     "none"
   ],
@@ -813,7 +1289,9 @@
   "experiment_description": "Effective radiative forcing by present-day aerosols",
   "end": -999,
   "min-number-yrs-per-sim": -999,
-  "start": -999
+  "start": -999,
+  "label": "piClim-aer",
+  "long_label": "Describe piClim-aer in one sentence."
 }
     ,{
   "id": "piclim-anthro",
@@ -825,8 +1303,7 @@
     "cmip"
   ],
   "description": "DECK: effective radiative forcing by present day anthropogenic forcings",
-  "model_realms": {},
-  "name": "piClim-anthro",
+  "model_realms": [],
   "parent_activity": [
     "none"
   ],
@@ -840,7 +1317,9 @@
   "experiment_description": "Effective radiative forcing by present day anthropogenic forcings",
   "end": -999,
   "min-number-yrs-per-sim": -999,
-  "start": -999
+  "start": -999,
+  "label": "piClim-anthro",
+  "long_label": "Describe piClim-anthro in one sentence."
 }
     ,{
   "id": "piclim-ch4",
@@ -852,8 +1331,7 @@
     "aerchemmip"
   ],
   "description": "Perturbation from pre-industrial control using 1850 methane concentrations",
-  "model_realms": {},
-  "name": "piClim-CH4",
+  "model_realms": [],
   "parent_activity": [
     "none"
   ],
@@ -867,7 +1345,9 @@
   "experiment_description": "Pre-industrial climatological SSTs and sea ice extent, 1850 methane concentrations",
   "end": -999,
   "min-number-yrs-per-sim": -999,
-  "start": -999
+  "start": -999,
+  "label": "piClim-CH4",
+  "long_label": "Describe piClim-CH4 in one sentence."
 }
     ,{
   "id": "piclim-control",
@@ -879,8 +1359,7 @@
     "cmip"
   ],
   "description": "DECK: effective radiative forcing control",
-  "model_realms": {},
-  "name": "piClim-control",
+  "model_realms": [],
   "parent_activity": [
     "none"
   ],
@@ -894,7 +1373,9 @@
   "experiment_description": "Effective radiative forcing control simulation",
   "end": -999,
   "min-number-yrs-per-sim": -999,
-  "start": -999
+  "start": -999,
+  "label": "piClim-control",
+  "long_label": "Describe piClim-control in one sentence."
 }
     ,{
   "id": "piclim-hc",
@@ -906,8 +1387,7 @@
     "aerchemmip"
   ],
   "description": "Perturbation from pre-industrial control using 1850 halocarbon concentrations",
-  "model_realms": {},
-  "name": "piClim-HC",
+  "model_realms": [],
   "parent_activity": [
     "none"
   ],
@@ -921,7 +1401,9 @@
   "experiment_description": "Pre-industrial climatological SSTs and sea ice extent, 1850 halocarbon concentrations",
   "end": -999,
   "min-number-yrs-per-sim": -999,
-  "start": -999
+  "start": -999,
+  "label": "piClim-HC",
+  "long_label": "Describe piClim-HC in one sentence."
 }
     ,{
   "id": "piclim-histaer",
@@ -933,8 +1415,7 @@
     "rfmip"
   ],
   "description": "Effective radiative forcing by historical aerosol concentrations",
-  "model_realms": {},
-  "name": "piClim-histaer",
+  "model_realms": [],
   "parent_activity": [
     "none"
   ],
@@ -948,7 +1429,9 @@
   "experiment_description": "Effective radiative forcing by historical aerosol concentrations",
   "end": -999,
   "min-number-yrs-per-sim": -999,
-  "start": -999
+  "start": -999,
+  "label": "piClim-histaer",
+  "long_label": "Describe piClim-histaer in one sentence."
 }
     ,{
   "id": "piclim-histall",
@@ -960,8 +1443,7 @@
     "rfmip"
   ],
   "description": "Effective radiative forcing by all historical forcing agents",
-  "model_realms": {},
-  "name": "piClim-histall",
+  "model_realms": [],
   "parent_activity": [
     "none"
   ],
@@ -975,7 +1457,9 @@
   "experiment_description": "Effective radiative forcing by all historical forcing agents",
   "end": -999,
   "min-number-yrs-per-sim": -999,
-  "start": -999
+  "start": -999,
+  "label": "piClim-histall",
+  "long_label": "Describe piClim-histall in one sentence."
 }
     ,{
   "id": "piclim-n2o",
@@ -987,8 +1471,7 @@
     "aerchemmip"
   ],
   "description": "Perturbation from pre-industrial control using 1850 N2O concentrations",
-  "model_realms": {},
-  "name": "piClim-N2O",
+  "model_realms": [],
   "parent_activity": [
     "none"
   ],
@@ -1002,7 +1485,9 @@
   "experiment_description": "Pre-industrial climatological SSTs and sea ice extent, 1850 N2O concentrations",
   "end": -999,
   "min-number-yrs-per-sim": -999,
-  "start": -999
+  "start": -999,
+  "label": "piClim-N2O",
+  "long_label": "Describe piClim-N2O in one sentence."
 }
     ,{
   "id": "piclim-nox",
@@ -1014,8 +1499,7 @@
     "aerchemmip"
   ],
   "description": "Perturbation from pre-industrial control using 1850 NOx emissions",
-  "model_realms": {},
-  "name": "piClim-NOx",
+  "model_realms": [],
   "parent_activity": [
     "none"
   ],
@@ -1029,7 +1513,9 @@
   "experiment_description": "Pre-industrial climatological SSTs and sea ice extent, 1850 NOx emissions",
   "end": -999,
   "min-number-yrs-per-sim": -999,
-  "start": -999
+  "start": -999,
+  "label": "piClim-NOx",
+  "long_label": "Describe piClim-NOx in one sentence."
 }
     ,{
   "id": "piclim-so2",
@@ -1041,8 +1527,7 @@
     "aerchemmip"
   ],
   "description": "Perturbation from pre-industrial control using 1850 SO2 emissions",
-  "model_realms": {},
-  "name": "piClim-SO2",
+  "model_realms": [],
   "parent_activity": [
     "none"
   ],
@@ -1056,7 +1541,9 @@
   "experiment_description": "Pre-industrial climatological SSTs and sea ice extent, 1850 SO2 emissions",
   "end": -999,
   "min-number-yrs-per-sim": -999,
-  "start": -999
+  "start": -999,
+  "label": "piClim-SO2",
+  "long_label": "Describe piClim-SO2 in one sentence."
 }
     ,{
   "id": "piclim-voc",
@@ -1068,8 +1555,7 @@
     "aerchemmip"
   ],
   "description": "Perturbation from pre-industrial control using 1850 VOC emissions",
-  "model_realms": {},
-  "name": "piClim-VOC",
+  "model_realms": [],
   "parent_activity": [
     "none"
   ],
@@ -1083,7 +1569,9 @@
   "experiment_description": "Pre-industrial climatological SSTs and sea ice extent, 1850 VOC emissions",
   "end": -999,
   "min-number-yrs-per-sim": -999,
-  "start": -999
+  "start": -999,
+  "label": "piClim-VOC",
+  "long_label": "Describe piClim-VOC in one sentence."
 }
     ,{
   "id": "picontrol",
@@ -1095,8 +1583,24 @@
     "cmip"
   ],
   "description": "DECK: pre-industrial control",
-  "model_realms": {},
-  "name": "piControl",
+  "model_realms": [
+    {
+      "id": "aogcm",
+      "is_required": true
+    },
+    {
+      "id": "aer",
+      "is_required": false
+    },
+    {
+      "id": "chem",
+      "is_required": false
+    },
+    {
+      "id": "bgc",
+      "is_required": false
+    }
+  ],
   "parent_activity": [
     "none"
   ],
@@ -1110,7 +1614,373 @@
   "experiment_description": "Pre-industrial control simulation",
   "end": -999,
   "min-number-yrs-per-sim": -999,
-  "start": -999
+  "start": -999,
+  "label": "piControl",
+  "long_label": "Describe piControl in one sentence."
+}
+    ,{
+  "id": "scen7-hc-ext-os",
+  "type": [
+    "wcrp:experiment",
+    "cmip7"
+  ],
+  "activity": [
+    "ScenarioMIP"
+  ],
+  "description": "High concentration driven emission scenario overshoot extension to explore potential high-end impacts",
+  "model_realms": [],
+  "parent_activity": [
+    "ScenarioMIP"
+  ],
+  "parent_experiment": [
+    "scen7-hc"
+  ],
+  "sub_experiment": [
+    "none"
+  ],
+  "tier": 0,
+  "experiment_description": "High concentration driven emission scenario overshoot extension to explore potential high-end impacts",
+  "end": 2500,
+  "min-number-yrs-per-sim": 50,
+  "start": 2101,
+  "long_label": "High, Concentration Driven Scenario Overshoot Extension",
+  "label": "scen7-hc-ext-os"
+}
+    ,{
+  "id": "scen7-hc-ext",
+  "type": [
+    "wcrp:experiment",
+    "cmip7"
+  ],
+  "activity": [
+    "ScenarioMIP"
+  ],
+  "description": "High concentration driven emission scenario extension to explore potential high-end impacts",
+  "model_realms": [],
+  "parent_activity": [
+    "ScenarioMIP"
+  ],
+  "parent_experiment": [
+    "scen7-hc"
+  ],
+  "sub_experiment": [
+    "none"
+  ],
+  "tier": 0,
+  "experiment_description": "High concentration driven emission scenario extension to explore potential high-end impacts",
+  "end": 2500,
+  "min-number-yrs-per-sim": 50,
+  "start": 2101,
+  "long_label": "High, Concentration Driven Scenario Extension",
+  "label": "scen7-hc-ext"
+}
+    ,{
+  "id": "scen7-hc",
+  "type": [
+    "wcrp:experiment",
+    "cmip7"
+  ],
+  "activity": [
+    "ScenarioMIP"
+  ],
+  "description": "High concentration driven emission scenario to explore potential high-end impacts",
+  "model_realms": [],
+  "parent_activity": [
+    "CMIP"
+  ],
+  "parent_experiment": [
+    "historical"
+  ],
+  "sub_experiment": [
+    "none"
+  ],
+  "tier": 0,
+  "experiment_description": "High concentration driven emission scenario to explore potential high-end impacts",
+  "end": 2100,
+  "min-number-yrs-per-sim": 79,
+  "start": 2022,
+  "long_label": "High, Concentration Driven Scenario",
+  "label": "scen7-hc"
+}
+    ,{
+  "id": "scen7-lc-ext",
+  "type": [
+    "wcrp:experiment",
+    "cmip7"
+  ],
+  "activity": [
+    "ScenarioMIP"
+  ],
+  "description": "Extension to concentration driven scenario consistent with staying likely below 2 degrees C",
+  "model_realms": [],
+  "parent_activity": [
+    "ScenarioMIP"
+  ],
+  "parent_experiment": [
+    "scen7-lc"
+  ],
+  "sub_experiment": [
+    "none"
+  ],
+  "tier": 0,
+  "experiment_description": "Extension to concentration driven scenario consistent with staying likely below 2 degrees C",
+  "end": 2500,
+  "min-number-yrs-per-sim": 50,
+  "start": 2101,
+  "long_label": "Low, Concentration Driven Scenario Extension",
+  "label": "scen7-lc-ext"
+}
+    ,{
+  "id": "scen7-lc",
+  "type": [
+    "wcrp:experiment",
+    "cmip7"
+  ],
+  "activity": [
+    "ScenarioMIP"
+  ],
+  "description": "Concentration driven scenario consistent with staying likely below 2 degrees C",
+  "model_realms": [],
+  "parent_activity": [
+    "CMIP"
+  ],
+  "parent_experiment": [
+    "historical"
+  ],
+  "sub_experiment": [
+    "none"
+  ],
+  "tier": 0,
+  "experiment_description": "Concentration driven scenario consistent with staying likely below 2 degrees C",
+  "end": 2100,
+  "min-number-yrs-per-sim": 79,
+  "start": 2022,
+  "long_label": "Low, Concentration Driven Scenario",
+  "label": "scen7-lc"
+}
+    ,{
+  "id": "scen7-mc-ext",
+  "type": [
+    "wcrp:experiment",
+    "cmip7"
+  ],
+  "activity": [
+    "ScenarioMIP"
+  ],
+  "description": "Medium concentration driven emission scenario extension consistent with current policies",
+  "model_realms": [],
+  "parent_activity": [
+    "ScenarioMIP"
+  ],
+  "parent_experiment": [
+    "scen7-mc"
+  ],
+  "sub_experiment": [
+    "none"
+  ],
+  "tier": 0,
+  "experiment_description": "Medium concentration driven emission scenario extension consistent with current policies",
+  "end": 2500,
+  "min-number-yrs-per-sim": 50,
+  "start": 2101,
+  "long_label": "Medium, Concentration Driven Scenario Extension",
+  "label": "scen7-mc-ext"
+}
+    ,{
+  "id": "scen7-mc",
+  "type": [
+    "wcrp:experiment",
+    "cmip7"
+  ],
+  "activity": [
+    "ScenarioMIP"
+  ],
+  "description": "Medium concentration driven emission scenario consistent with current policies",
+  "model_realms": [],
+  "parent_activity": [
+    "CMIP"
+  ],
+  "parent_experiment": [
+    "historical"
+  ],
+  "sub_experiment": [
+    "none"
+  ],
+  "tier": 0,
+  "experiment_description": "Medium concentration driven emission scenario consistent with current policies",
+  "end": 2100,
+  "min-number-yrs-per-sim": 79,
+  "start": 2022,
+  "long_label": "Medium, Concentration Driven Scenario",
+  "label": "scen7-mc"
+}
+    ,{
+  "id": "scen7-mlc-ext",
+  "type": [
+    "wcrp:experiment",
+    "cmip7"
+  ],
+  "activity": [
+    "ScenarioMIP"
+  ],
+  "description": "Extension to concentration driven scenario with delayed increase in mitigation effort, insufficient to meet Paris Agreement objectives",
+  "model_realms": [],
+  "parent_activity": [
+    "ScenarioMIP"
+  ],
+  "parent_experiment": [
+    "scen7-mlc"
+  ],
+  "sub_experiment": [
+    "none"
+  ],
+  "tier": 0,
+  "experiment_description": "Extension to concentration driven scenario with delayed increase in mitigation effort, insufficient to meet Paris Agreement objectives",
+  "end": 2500,
+  "min-number-yrs-per-sim": 50,
+  "start": 2101,
+  "long_label": "Medium, Concentration Driven Scenario Extension",
+  "label": "scen7-mlc-ext"
+}
+    ,{
+  "id": "scen7-mlc",
+  "type": [
+    "wcrp:experiment",
+    "cmip7"
+  ],
+  "activity": [
+    "ScenarioMIP"
+  ],
+  "description": "Concentration driven scenario with delayed increase in mitigation effort, insufficient to meet Paris Agreement objectives",
+  "model_realms": [],
+  "parent_activity": [
+    "CMIP"
+  ],
+  "parent_experiment": [
+    "historical"
+  ],
+  "sub_experiment": [
+    "none"
+  ],
+  "tier": 0,
+  "experiment_description": "Concentration driven scenario with delayed increase in mitigation effort, insufficient to meet Paris Agreement objectives",
+  "end": 2100,
+  "min-number-yrs-per-sim": 79,
+  "start": 2022,
+  "long_label": "Medium, Concentration Driven Scenario",
+  "label": "scen7-mlc"
+}
+    ,{
+  "id": "scen7-vlhoc-ext",
+  "type": [
+    "wcrp:experiment",
+    "cmip7"
+  ],
+  "activity": [
+    "ScenarioMIP"
+  ],
+  "description": "Extension to Concentration driven scenario with similar end-of-century temperature impact to VLLO, but with less aggressive near-term mitigation and large reliance on net negative emissions, resulting in a higher overshoot.",
+  "model_realms": [],
+  "parent_activity": [
+    "ScenarioMIP"
+  ],
+  "parent_experiment": [
+    "scen7-vlhoc"
+  ],
+  "sub_experiment": [
+    "none"
+  ],
+  "tier": 0,
+  "experiment_description": "Extension to Concentration driven scenario with similar end-of-century temperature impact to VLLO, but with less aggressive near-term mitigation and large reliance on net negative emissions, resulting in a higher overshoot.",
+  "end": 2500,
+  "min-number-yrs-per-sim": 50,
+  "start": 2101,
+  "long_label": "Very Low Concentration Driven Scenario Extension after High Overshoot",
+  "label": "scen7-vlhoc-ext"
+}
+    ,{
+  "id": "scen7-vlhoc",
+  "type": [
+    "wcrp:experiment",
+    "cmip7"
+  ],
+  "activity": [
+    "ScenarioMIP"
+  ],
+  "description": "Concentration driven scenario with similar end-of-century temperature impact to VLLO, but with less aggressive near-term mitigation and large reliance on net negative emissions, resulting in a higher overshoot.",
+  "model_realms": [],
+  "parent_activity": [
+    "CMIP"
+  ],
+  "parent_experiment": [
+    "historical"
+  ],
+  "sub_experiment": [
+    "none"
+  ],
+  "tier": 0,
+  "experiment_description": "Concentration driven scenario with similar end-of-century temperature impact to VLLO, but with less aggressive near-term mitigation and large reliance on net negative emissions, resulting in a higher overshoot.",
+  "end": 2100,
+  "min-number-yrs-per-sim": 79,
+  "start": 2022,
+  "long_label": "Very Low Concentration Driven Scenario after High Overshoot",
+  "label": "scen7-vlhoc"
+}
+    ,{
+  "id": "scen7-vlloc-ext",
+  "type": [
+    "wcrp:experiment",
+    "cmip7"
+  ],
+  "activity": [
+    "ScenarioMIP"
+  ],
+  "description": "Extension to Concentration driven scenario consistent with limiting warming to 1.5 degree C by 2100 AD with limited overshoot (as low as plausible) of 1.5 degree C",
+  "model_realms": [],
+  "parent_activity": [
+    "ScenarioMIP"
+  ],
+  "parent_experiment": [
+    "scen7-vlloc"
+  ],
+  "sub_experiment": [
+    "none"
+  ],
+  "tier": 0,
+  "experiment_description": "Extension to Concentration driven scenario consistent with limiting warming to 1.5 degree C by 2100 AD with limited overshoot (as low as plausible) of 1.5 degree C",
+  "end": 2500,
+  "min-number-yrs-per-sim": 50,
+  "start": 2101,
+  "long_label": "Very Low, Concentration Driven Scenario Extension with Limited Overshoot",
+  "label": "scen7-vlloc-ext"
+}
+    ,{
+  "id": "scen7-vlloc",
+  "type": [
+    "wcrp:experiment",
+    "cmip7"
+  ],
+  "activity": [
+    "ScenarioMIP"
+  ],
+  "description": "Concentration driven scenario consistent with limiting warming to 1.5 degree C by 2100 AD with limited overshoot (as low as plausible) of 1.5 degree C",
+  "model_realms": [],
+  "parent_activity": [
+    "CMIP"
+  ],
+  "parent_experiment": [
+    "historical"
+  ],
+  "sub_experiment": [
+    "none"
+  ],
+  "tier": 0,
+  "experiment_description": "Concentration driven scenario consistent with limiting warming to 1.5 degree C by 2100 AD with limited overshoot (as low as plausible) of 1.5 degree C",
+  "end": 2100,
+  "min-number-yrs-per-sim": 79,
+  "start": 2022,
+  "long_label": "Very Low Concentration Driven Scenario with Limited Overshoot",
+  "label": "scen7-vlloc"
 }
     ,{
   "id": "sspx-slcf",
@@ -1122,8 +1992,7 @@
     "aerchemmip"
   ],
   "description": "Future scenario with specified SLCF emissions",
-  "model_realms": {},
-  "name": "SSPX-SLCF",
+  "model_realms": [],
   "parent_activity": [
     "none"
   ],
@@ -1137,34 +2006,9 @@
   "experiment_description": "Future scenario simulation with specified short-lived climate forcer emissions",
   "end": -999,
   "min-number-yrs-per-sim": -999,
-  "start": -999
-}
-    ,{
-  "id": "very-low-scenario",
-  "type": [
-    "wcrp:experiment",
-    "cmip7"
-  ],
-  "activity": [
-    "scenariomip"
-  ],
-  "description": "Very low emission scenario for future climate projections",
-  "model_realms": {},
-  "name": "very-low-scenario",
-  "parent_activity": [
-    "none"
-  ],
-  "parent_experiment": [
-    "none"
-  ],
-  "sub_experiment": [
-    "none"
-  ],
-  "tier": 0,
-  "experiment_description": "Very low emission scenario for future climate projections",
-  "end": -999,
-  "min-number-yrs-per-sim": -999,
-  "start": -999
+  "start": -999,
+  "label": "SSPX-SLCF",
+  "long_label": "Describe SSPX-SLCF in one sentence."
 }
   ]
 }

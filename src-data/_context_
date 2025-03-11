@@ -2,6 +2,7 @@
     "@context": {
         "@base": "https://wcrp-cmip.github.io/CMIP7_CVs/",
         "@vocab": "https://wcrp-cmip.github.io/CMIP7_CVs/",
+        "entries": "@none",
         "id": "@id",
         "type": "@type",
         "cf": "https://wcrp-cmip.github.io/CF/",
