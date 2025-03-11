@@ -6,8 +6,8 @@ me = __file__.split('/')[-1].replace('.py','')
 
 def run(localhost,whoami,repopath,reponame):
 
-    url = f'{localhost}/{whoami}/{me}/graph.jsonld'
-    ctx = f'{localhost}/{whoami}/{me}/_context_'
+    url = f'{localhost}/{whoami}/experiment/graph.jsonld'
+    ctx = f'{localhost}/{whoami}/experiment/_context_'
     
     data = cmipld.jsonld.frame(url,ctx)["@graph"]
     
