@@ -6,24 +6,23 @@
         "cmip7"
     ],
     "activity": [
-        "ScenarioMIP"
+        "scenariomip"
     ],
     "description": "Extension to concentration driven scenario with delayed increase in mitigation effort, insufficient to meet Paris Agreement objectives",
-    "model_realms": [],
-    "parent_activity": [
-        "ScenarioMIP"
-    ],
-    "parent_experiment": [
-        "scen7-mlc"
-    ],
-    "sub_experiment": [
-        "none"
-    ],
     "tier": 0,
-    "experiment_description": "Extension to concentration driven scenario with delayed increase in mitigation effort, insufficient to meet Paris Agreement objectives",
     "end": 2500,
     "min-number-yrs-per-sim": 50,
     "start": 2101,
-    "long_label": "Medium, Concentration Driven Scenario Extension",
-    "label": "scen7-mlc-ext"
+    "label": "scen7-mlc-ext",
+    "model-realms": [],
+    "parent-activity": [
+        "scenariomip"
+    ],
+    "parent-experiment": [
+        "scen7-mlc"
+    ],
+    "sub-experiment": [
+        "none"
+    ],
+    "long-label": "Medium, Concentration Driven Scenario Extension"
 }

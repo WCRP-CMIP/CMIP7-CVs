@@ -6,24 +6,23 @@
         "cmip7"
     ],
     "activity": [
-        "ScenarioMIP"
+        "scenariomip"
     ],
     "description": "Scenario extension consistent with staying likely below 2 degrees C",
-    "model_realms": [],
-    "parent_activity": [
-        "CMIP"
-    ],
-    "parent_experiment": [
-        "esm-scen7-l"
-    ],
-    "sub_experiment": [
-        "none"
-    ],
     "tier": 0,
-    "experiment_description": "Scenario extension consistent with staying likely below 2 degrees C",
     "end": 2500,
     "min-number-yrs-per-sim": 50,
     "start": 2101,
-    "long_label": "Low Scenario Extension",
-    "label": "esm-scen7-l-ext"
+    "label": "esm-scen7-l-ext",
+    "model-realms": [],
+    "parent-activity": [
+        "CMIP"
+    ],
+    "parent-experiment": [
+        "esm-scen7-l"
+    ],
+    "sub-experiment": [
+        "none"
+    ],
+    "long-label": "Low Scenario Extension"
 }

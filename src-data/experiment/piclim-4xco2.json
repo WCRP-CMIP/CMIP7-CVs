@@ -8,22 +8,21 @@
     "activity": [
         "cmip"
     ],
-    "description": "DECK: effective radiative forcing by 4xCO2",
-    "model_realms": [],
-    "parent_activity": [
-        "none"
-    ],
-    "parent_experiment": [
-        "none"
-    ],
-    "sub_experiment": [
-        "none"
-    ],
+    "description": "DECK: effective radiative forcing by 4xCO2 \n Effective radiative forcing by 4xCO2",
     "tier": 0,
-    "experiment_description": "Effective radiative forcing by 4xCO2",
     "end": -999,
     "min-number-yrs-per-sim": -999,
     "start": -999,
     "label": "piClim-4xCO2",
-    "long_label": "Describe piClim-4xCO2 in one sentence."
+    "model-realms": [],
+    "parent-activity": [
+        "none"
+    ],
+    "parent-experiment": [
+        "none"
+    ],
+    "sub-experiment": [
+        "none"
+    ],
+    "long-label": "Describe piClim-4xCO2 in one sentence."
 }

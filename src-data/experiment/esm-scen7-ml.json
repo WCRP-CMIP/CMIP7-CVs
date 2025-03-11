@@ -6,24 +6,23 @@
         "cmip7"
     ],
     "activity": [
-        "ScenarioMIP"
+        "scenariomip"
     ],
     "description": "Scenario with delayed increase in mitigation effort, insufficient to meet Paris Agreement objectives",
-    "model_realms": [],
-    "parent_activity": [
-        "CMIP"
-    ],
-    "parent_experiment": [
-        "esm-hist"
-    ],
-    "sub_experiment": [
-        "none"
-    ],
     "tier": 0,
-    "experiment_description": "Scenario with delayed increase in mitigation effort, insufficient to meet Paris Agreement objectives",
     "end": 2100,
     "min-number-yrs-per-sim": 79,
     "start": 2022,
-    "long_label": "Medium-Low Scenario",
-    "label": "esm-scen7-ml"
+    "label": "esm-scen7-ml",
+    "model-realms": [],
+    "parent-activity": [
+        "CMIP"
+    ],
+    "parent-experiment": [
+        "esm-hist"
+    ],
+    "sub-experiment": [
+        "none"
+    ],
+    "long-label": "Medium-Low Scenario"
 }

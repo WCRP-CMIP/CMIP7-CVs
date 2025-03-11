@@ -9,21 +9,20 @@
         "rfmip"
     ],
     "description": "Effective radiative forcing by historical aerosol concentrations",
-    "model_realms": [],
-    "parent_activity": [
-        "none"
-    ],
-    "parent_experiment": [
-        "none"
-    ],
-    "sub_experiment": [
-        "none"
-    ],
     "tier": 0,
-    "experiment_description": "Effective radiative forcing by historical aerosol concentrations",
     "end": -999,
     "min-number-yrs-per-sim": -999,
     "start": -999,
     "label": "piClim-histaer",
-    "long_label": "Describe piClim-histaer in one sentence."
+    "model-realms": [],
+    "parent-activity": [
+        "none"
+    ],
+    "parent-experiment": [
+        "none"
+    ],
+    "sub-experiment": [
+        "none"
+    ],
+    "long-label": "Describe piClim-histaer in one sentence."
 }

@@ -8,39 +8,38 @@
     "activity": [
         "cmip"
     ],
-    "description": "DECK: historical",
-    "model_realms": [
-        {
-            "id": "aogcm",
-            "is_required": true
-        },
-        {
-            "id": "aer",
-            "is_required": false
-        },
-        {
-            "id": "chem",
-            "is_required": false
-        },
-        {
-            "id": "bgc",
-            "is_required": false
-        }
-    ],
-    "parent_activity": [
-        "none"
-    ],
-    "parent_experiment": [
-        "none"
-    ],
-    "sub_experiment": [
-        "none"
-    ],
+    "description": "DECK: historical \n Simulation of the recent past",
     "tier": 0,
-    "experiment_description": "Simulation of the recent past",
     "end": -999,
     "min-number-yrs-per-sim": -999,
     "start": -999,
     "label": "historical",
-    "long_label": "Describe historical in one sentence."
+    "model-realms": [
+        {
+            "id": "aogcm",
+            "is-required": true
+        },
+        {
+            "id": "aer",
+            "is-required": false
+        },
+        {
+            "id": "chem",
+            "is-required": false
+        },
+        {
+            "id": "bgc",
+            "is-required": false
+        }
+    ],
+    "parent-activity": [
+        "none"
+    ],
+    "parent-experiment": [
+        "none"
+    ],
+    "sub-experiment": [
+        "none"
+    ],
+    "long-label": "Describe historical in one sentence."
 }

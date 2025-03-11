@@ -9,21 +9,20 @@
         "c4mip"
     ],
     "description": "Radiatively-coupled version of 1 percent per year CO2 increase experiment",
-    "model_realms": [],
-    "parent_activity": [
-        "none"
-    ],
-    "parent_experiment": [
-        "none"
-    ],
-    "sub_experiment": [
-        "none"
-    ],
     "tier": 0,
-    "experiment_description": "Radiatively-coupled version of 1 percent per year CO2 increase experiment",
     "end": -999,
     "min-number-yrs-per-sim": -999,
     "start": -999,
     "label": "1pctCO2-rad",
-    "long_label": "Describe 1pctCO2-rad in one sentence."
+    "model-realms": [],
+    "parent-activity": [
+        "none"
+    ],
+    "parent-experiment": [
+        "none"
+    ],
+    "sub-experiment": [
+        "none"
+    ],
+    "long-label": "Describe 1pctCO2-rad in one sentence."
 }

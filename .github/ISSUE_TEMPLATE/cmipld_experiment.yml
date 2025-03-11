@@ -289,29 +289,28 @@ body:
                 - For a set of DCPP “prediction” runs, enter all
                 dates of the first full forecast/hindcast year (e.g., 1960, 1970, 1980,
                 1990, 2000, 2010). 
-                - If there is no specific start date please leave this
-                field blank
+                - If there is no specific start date please enter the word `none`
         placeholder: 'e.g., 1850-01-01 or 1960,1970,1980'
     validations:
         required: false
     type: input
--   id: branch-date
-    attributes:
-      label: Branch Date
-      description: |
-        For experiments initialized from a non-arbitrary point in a parent
-        experiment, enter the branch date in the parent,i.e. the point at which
-        initial conditions should be taken. 
+# -   id: branch-date
+#     attributes:
+#       label: Branch Date
+#       description: |
+#         For experiments initialized from a non-arbitrary point in a parent
+#         experiment, enter the branch date in the parent,i.e. the point at which
+#         initial conditions should be taken. 
             
-            - For example, “2022-01-01” should be
-            entered for an experiment initialized from the end of the historical
-            experiment and extending into the future. 
-            - If there is no parent
-            experiment please leave this field blank.
-      placeholder: 'e.g., 2022-01-01'
-    validations:
-      required: false
-    type: input
+#             - For example, “2022-01-01” should be
+#             entered for an experiment initialized from the end of the historical
+#             experiment and extending into the future. 
+#             - If there is no parent
+#             experiment please leave this field blank.
+#       placeholder: 'e.g., 2022-01-01'
+#     validations:
+#       required: false
+#     type: input
 -   id: min-number-yrs-per-sim
     attributes:
       label: (Minimum) Number of Years

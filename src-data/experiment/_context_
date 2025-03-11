@@ -2,27 +2,25 @@
     "@context": [
         "../_context_",
         {
-            "@base": "https://wcrp-cmip.github.io/CMIP7_CVs/experiment/",
-            "@vocab": "https://wcrp-cmip.github.io/CMIP7_CVs/experiment/",
+            "@base": "https://wcrp-cmip.github.io/CMIP7-CVs/experiment/",
+            "@vocab": "https://wcrp-cmip.github.io/CMIP7-CVs/experiment/",
+            "parent-experiment": {
+                "@type": "@id"
+            },
+            "sub-experiment": {
+                "@type": "@id"
+            },
             "activity": {
                 "@type": "@id",
                 "@context": "https://wcrp-cmip.github.io/WCRP-universe/activity/_context_"
             },
-            "model_realms": {
-                "@container": "@id",
-                "@context": "https://wcrp-cmip.github.io/WCRP-universe/source_type/_context_"
+            "model-realms": {
+                "@type": "@id",
+                "@context": "https://wcrp-cmip.github.io/WCRP-universe/source-type/_context_"
             },
-            "parent_activity": {
+            "parent-activity": {
                 "@type": "@id",
                 "@context": "https://wcrp-cmip.github.io/WCRP-universe/activity/_context_"
-            },
-            "parent_experiment": {
-                "@type": "@id",
-                "@context": "https://wcrp-cmip.github.io/CMIP7_CVs/experiment/_context_"
-            },
-            "sub_experiment": {
-                "@type": "@id",
-                "@context": "https://wcrp-cmip.github.io/CMIP7_CVs/sub_experiment/_context_"
             }
         }
     ],

@@ -6,24 +6,23 @@
         "cmip7"
     ],
     "activity": [
-        "ScenarioMIP"
+        "scenariomip"
     ],
     "description": "High concentration driven emission scenario extension to explore potential high-end impacts",
-    "model_realms": [],
-    "parent_activity": [
-        "ScenarioMIP"
-    ],
-    "parent_experiment": [
-        "scen7-hc"
-    ],
-    "sub_experiment": [
-        "none"
-    ],
     "tier": 0,
-    "experiment_description": "High concentration driven emission scenario extension to explore potential high-end impacts",
     "end": 2500,
     "min-number-yrs-per-sim": 50,
     "start": 2101,
-    "long_label": "High, Concentration Driven Scenario Extension",
-    "label": "scen7-hc-ext"
+    "label": "scen7-hc-ext",
+    "model-realms": [],
+    "parent-activity": [
+        "scenariomip"
+    ],
+    "parent-experiment": [
+        "scen7-hc"
+    ],
+    "sub-experiment": [
+        "none"
+    ],
+    "long-label": "High, Concentration Driven Scenario Extension"
 }

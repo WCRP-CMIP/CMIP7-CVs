@@ -6,24 +6,23 @@
         "cmip7"
     ],
     "activity": [
-        "ScenarioMIP"
+        "scenariomip"
     ],
     "description": "Medium concentration driven emission scenario extension consistent with current policies",
-    "model_realms": [],
-    "parent_activity": [
-        "ScenarioMIP"
-    ],
-    "parent_experiment": [
-        "scen7-mc"
-    ],
-    "sub_experiment": [
-        "none"
-    ],
     "tier": 0,
-    "experiment_description": "Medium concentration driven emission scenario extension consistent with current policies",
     "end": 2500,
     "min-number-yrs-per-sim": 50,
     "start": 2101,
-    "long_label": "Medium, Concentration Driven Scenario Extension",
-    "label": "scen7-mc-ext"
+    "label": "scen7-mc-ext",
+    "model-realms": [],
+    "parent-activity": [
+        "scenariomip"
+    ],
+    "parent-experiment": [
+        "scen7-mc"
+    ],
+    "sub-experiment": [
+        "none"
+    ],
+    "long-label": "Medium, Concentration Driven Scenario Extension"
 }

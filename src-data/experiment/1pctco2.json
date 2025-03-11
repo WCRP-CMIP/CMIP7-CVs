@@ -8,39 +8,38 @@
     "activity": [
         "cmip"
     ],
-    "description": "DECK: 1 percent per year CO2 increase",
-    "model_realms": [
-        {
-            "id": "aogcm",
-            "is_required": true
-        },
-        {
-            "id": "aer",
-            "is_required": false
-        },
-        {
-            "id": "chem",
-            "is_required": false
-        },
-        {
-            "id": "bgc",
-            "is_required": false
-        }
-    ],
-    "parent_activity": [
-        "none"
-    ],
-    "parent_experiment": [
-        "none"
-    ],
-    "sub_experiment": [
-        "none"
-    ],
+    "description": "DECK: 1 percent per year CO2 increase \n Increase CO2 concentration from pre-industrial level at 1% per year until quadrupling",
     "tier": 0,
-    "experiment_description": "Increase CO2 concentration from pre-industrial level at 1% per year until quadrupling",
     "end": -999,
     "min-number-yrs-per-sim": -999,
     "start": -999,
     "label": "1pctCO2",
-    "long_label": "Describe 1pctCO2 in one sentence."
+    "model-realms": [
+        {
+            "id": "aogcm",
+            "is-required": true
+        },
+        {
+            "id": "aer",
+            "is-required": false
+        },
+        {
+            "id": "chem",
+            "is-required": false
+        },
+        {
+            "id": "bgc",
+            "is-required": false
+        }
+    ],
+    "parent-activity": [
+        "none"
+    ],
+    "parent-experiment": [
+        "none"
+    ],
+    "sub-experiment": [
+        "none"
+    ],
+    "long-label": "Describe 1pctCO2 in one sentence."
 }

@@ -8,39 +8,38 @@
     "activity": [
         "aerchemmip"
     ],
-    "description": "Historical simulation with pre-industrial aerosols",
-    "model_realms": [
-        {
-            "id": "aogcm",
-            "is_required": true
-        },
-        {
-            "id": "aer",
-            "is_required": false
-        },
-        {
-            "id": "chem",
-            "is_required": false
-        },
-        {
-            "id": "bgc",
-            "is_required": false
-        }
-    ],
-    "parent_activity": [
-        "none"
-    ],
-    "parent_experiment": [
-        "none"
-    ],
-    "sub_experiment": [
-        "none"
-    ],
+    "description": "Historical simulation with pre-industrial aerosols \n Historical simulation but with pre-industrial aerosol emissions",
     "tier": 0,
-    "experiment_description": "Historical simulation but with pre-industrial aerosol emissions",
     "end": -999,
     "min-number-yrs-per-sim": -999,
     "start": -999,
     "label": "hist-piAer",
-    "long_label": "Describe hist-piAer in one sentence."
+    "model-realms": [
+        {
+            "id": "aogcm",
+            "is-required": true
+        },
+        {
+            "id": "aer",
+            "is-required": false
+        },
+        {
+            "id": "chem",
+            "is-required": false
+        },
+        {
+            "id": "bgc",
+            "is-required": false
+        }
+    ],
+    "parent-activity": [
+        "none"
+    ],
+    "parent-experiment": [
+        "none"
+    ],
+    "sub-experiment": [
+        "none"
+    ],
+    "long-label": "Describe hist-piAer in one sentence."
 }

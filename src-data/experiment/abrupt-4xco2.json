@@ -8,39 +8,38 @@
     "activity": [
         "cmip"
     ],
-    "description": "DECK: abrupt quadrupling of CO2",
-    "model_realms": [
-        {
-            "id": "aogcm",
-            "is_required": true
-        },
-        {
-            "id": "aer",
-            "is_required": false
-        },
-        {
-            "id": "chem",
-            "is_required": false
-        },
-        {
-            "id": "bgc",
-            "is_required": false
-        }
-    ],
-    "parent_activity": [
-        "none"
-    ],
-    "parent_experiment": [
-        "none"
-    ],
-    "sub_experiment": [
-        "none"
-    ],
+    "description": "DECK: abrupt quadrupling of CO2 \n Abrupt increase in CO2 concentration from pre-industrial level to quadrupling",
     "tier": 0,
-    "experiment_description": "Abrupt increase in CO2 concentration from pre-industrial level to quadrupling",
     "end": -999,
     "min-number-yrs-per-sim": -999,
     "start": -999,
     "label": "abrupt-4xCO2",
-    "long_label": "Describe abrupt-4xCO2 in one sentence."
+    "model-realms": [
+        {
+            "id": "aogcm",
+            "is-required": true
+        },
+        {
+            "id": "aer",
+            "is-required": false
+        },
+        {
+            "id": "chem",
+            "is-required": false
+        },
+        {
+            "id": "bgc",
+            "is-required": false
+        }
+    ],
+    "parent-activity": [
+        "none"
+    ],
+    "parent-experiment": [
+        "none"
+    ],
+    "sub-experiment": [
+        "none"
+    ],
+    "long-label": "Describe abrupt-4xCO2 in one sentence."
 }

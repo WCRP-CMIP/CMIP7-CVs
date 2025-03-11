@@ -8,39 +8,38 @@
     "activity": [
         "cmip"
     ],
-    "description": "DECK: Earth System Model historical simulation",
-    "model_realms": [
-        {
-            "id": "aogcm",
-            "is_required": true
-        },
-        {
-            "id": "bgc",
-            "is_required": true
-        },
-        {
-            "id": "aer",
-            "is_required": false
-        },
-        {
-            "id": "chem",
-            "is_required": false
-        }
-    ],
-    "parent_activity": [
-        "none"
-    ],
-    "parent_experiment": [
-        "none"
-    ],
-    "sub_experiment": [
-        "none"
-    ],
+    "description": "DECK: Earth System Model historical simulation \n Historical simulation with Earth System Models",
     "tier": 0,
-    "experiment_description": "Historical simulation with Earth System Models",
     "end": -999,
     "min-number-yrs-per-sim": -999,
     "start": -999,
     "label": "esm-hist",
-    "long_label": "Describe esm-hist in one sentence."
+    "model-realms": [
+        {
+            "id": "aogcm",
+            "is-required": true
+        },
+        {
+            "id": "bgc",
+            "is-required": true
+        },
+        {
+            "id": "aer",
+            "is-required": false
+        },
+        {
+            "id": "chem",
+            "is-required": false
+        }
+    ],
+    "parent-activity": [
+        "none"
+    ],
+    "parent-experiment": [
+        "none"
+    ],
+    "sub-experiment": [
+        "none"
+    ],
+    "long-label": "Describe esm-hist in one sentence."
 }

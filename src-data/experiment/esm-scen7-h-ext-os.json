@@ -6,24 +6,23 @@
         "cmip7"
     ],
     "activity": [
-        "ScenarioMIP"
+        "scenariomip"
     ],
     "description": "High emission scenario overshoot extension to explore potential high-end impacts",
-    "model_realms": [],
-    "parent_activity": [
-        "ScenarioMIP"
-    ],
-    "parent_experiment": [
-        "esm-scen7-h"
-    ],
-    "sub_experiment": [
-        "none"
-    ],
     "tier": 0,
-    "experiment_description": "High emission scenario overshoot extension to explore potential high-end impacts",
     "end": 2500,
     "min-number-yrs-per-sim": 50,
     "start": 2101,
-    "long_label": "High Scenario Overshoot Extension",
-    "label": "esm-scen7-h-ext-os"
+    "label": "esm-scen7-h-ext-os",
+    "model-realms": [],
+    "parent-activity": [
+        "scenariomip"
+    ],
+    "parent-experiment": [
+        "esm-scen7-h"
+    ],
+    "sub-experiment": [
+        "none"
+    ],
+    "long-label": "High Scenario Overshoot Extension"
 }
