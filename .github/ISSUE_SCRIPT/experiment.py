@@ -1,33 +1,38 @@
 import sys
 # from pathlib import Path
 # set the path to read local files 
-# sys.path.append(str(Path(__file__).parent))
+# sys.path.append(str(Path(--file--).parent))
 
 import json,os
 from cmipld.utils import git
 from  cmipld.tests import jsonld as tests
+from collections import OrderedDict
+
+from cmipld import reverse_mapping
+
+rmap = reverse_mapping()
+prefix = rmap[git.url2io(git.url())]
 
 
 
-
-{
-   "experiment_id": "imaginary",
-   "experiment_title": "none",
-   "description": "some info here",
-   "mip_/_activity_id_(registered)": "Custom Activity: specify below",
-   "mip_/_activity_id_(unregistered)": "superman",
-   "parent_experiment": "Custom Parent: specify below",
-   "custom_parent_experiment": "_No response_",
-   "sub-experiment": "\"none\"",
-   "priority_tier": "3",
-   "source_type_codes_for_required_model_components": "ISM, CHEM",
-   "source_type_codes_for_additional_allowed_model_components": "ISM, AOGCM",
-   "start_date": "1900",
-   "branch_date": "9000",
-   "(minimum)_number_of_years": "0",
-   "issue_type": "experiment",
-   "issue_kind": "new"
-}
+# {
+#    "experiment-id": "imaginary",
+#    "experiment-title": "none",
+#    "description": "some info here",
+#    "mip-/-activity-id-(registered)": "Custom Activity: specify below",
+#    "mip-/-activity-id-(unregistered)": "superman",
+#    "parent-experiment": "Custom Parent: specify below",
+#    "custom-parent-experiment": "-No response-",
+#    "sub-experiment": "\"none\"",
+#    "priority-tier": "3",
+#    "source-type-codes-for-required-model-components": "ISM, CHEM",
+#    "source-type-codes-for-additional-allowed-model-components": "ISM, AOGCM",
+#    "start-date": "1900",
+#    "branch-date": "9000",
+#    "(minimum)-number-of-years": "0",
+#    "issue-type": "experiment",
+#    "issue-kind": "new"
+# }
 
 
 
@@ -36,54 +41,73 @@ def run(issue,packet):
     
     git.update_summary(f"### Issue content\n ```json\n{json.dumps(issue,indent=4)}\n```")
     
-    path = f'./src-data/{issue['issue_type']}/'
+    path = f'./src-data/{issue['issue-type']}/'
     
-    acronym = issue['experiment_id']
+    acronym = issue['experiment-id']
+    id = acronym.lower()
     
-    title = f'{issue["issue_type"].capitalize()}_{acronym}'
+    # update the issue title and create an issue branch
+    title = f'{issue["issue-type"].capitalize()}-{acronym}'
+    git.update_issue_title(title)
+    git.newbranch(title)
     
-    
-#    # This code snippet is performing several tasks related to processing an `issue` object. Here is a
-#    # breakdown of what each step is doing:
-#     ror = issue['ror']
-#     acronym = issue['acronym']
-#     id = acronym.lower()
-    
-
-#     # update the issue title and create an issue branch
-#     title = f'{issue["issue_type"].capitalize()}_{acronym}'
-#     git.update_issue_title(title)
-#     git.newbranch(title)
-    
-#     acronym_test = tests.field_test(tests.components.id.id_field)
-#     ror_test = tests.field_test(tests.organisation.ror.ror_field)
-#     # testclass = tests.multi_field_test([tests.organisation.ror.ror_field,tests.components.id.id_field])
-    
-#     if ror != 'pending':
-    
-#         tests.run_checks(acronym_test,{"id" : id})
-#         tests.run_checks(ror_test,{"ror" : ror})
+    # activity
+    activity = issue['mip-/-activity-id-(registered)'] 
+    if issue['mip-/-activity-id-(unregistered)'] != "-No response-":
         
-
-#         data = update_ror.get_institution(ror, acronym)
-
-#         ranking = similarity(issue['full_name_of_the_organisation'], data['long_label'])
+        git.update_summary(f"### Custom Activity {issue['mip-/-activity-id-(unregistered)']} \n Please register this in both the [universal](https://github.com/WCRP-CMIP/WCRP-universe/issues/new?template=add_institution.yml) and current repo.)")
         
-#         git.update_summary(f"### Similarity\nThe similarity between the full name ({issue['full_name_of_the_organisation']}) of the organisation and the long label ({data['long_label']}) is {ranking}%")
+        print('check activity exists in universal and project?')
         
+        activity = issue['mip-/-activity-id-(unregistered)']
+    
+    
+    
+    # parent
+    parent = issue['parent-experiment']
+    if issue['custom-parent-experiment'] != "-No response-":
         
-#         if ranking < 80:
-#             git.update_issue(f"Warning: The similarity between the full name of the organisation and the long label is {ranking}%")
+        git.update_summary(f"### Custom Parent {issue['custom-parent-experiment']} \n Please the parent experiment as well.")
+        
+        parent = issue['custom-parent-experiment']
+        
+    # components
+    "source-type-codes-for-required-model-components": issue['source-type-codes-for-required-model-components'],
+            "source-type-codes-for-additional-allowed-model-components": issue['source-type-codes-for-additional-allowed-model-components'],
+        
+    
+    realms = []
+    for mr in issue['source-type-codes-for-required-model-components'].split(', '):
+        realms.append({'id':mr,'is-required':True})
+    for mr in issue['source-type-codes-for-additional-allowed-model-components'].split(', '):
+        realms.append({'id':mr,'is-required':False})
+    
+    data = {
+            "id": f"{id}",
+            "type": [f'wcrp:{issue['issue-type']}',prefix],
+            "label": acronym,    
+            "long-label": issue['experiment-title'],
+            "description": issue['description'],
             
-#     else:
+            "activity": [activity],
+            "parent-experiment": [parent],
+            "sub-experiment": issue['sub-experiment'],
+            
+            "tier": issue['priority-tier'],
+            
+            
+            "start-date": issue['start-date'],
+            "branch-date": issue['branch-date'],
+            "minimum-number-of-years": issue['(minimum)-number-of-years'],
 
-#         tests.run_checks(acronym_test,{"id" : id})
+            
+            
+        }   
+    
+    
         
-#         data = {
-#                     "id": f"{id}",
-#                     "type": ['wcrp:organisation',f'wcrp:{issue['issue_type']}','universal'],
-#                     "label": acronym,    
-#                 }        
+        
+     
 
     git.update_summary(f"### Data content\n ```json\n{json.dumps(data,indent=4)}\n```")
     
@@ -103,14 +127,14 @@ def run(issue,packet):
     
     if 'submitter' in issue: 
         # override the current author
-        os.environ['OVERRIDE_AUTHOR'] = issue['submitter']
+        os.environ['OVERRIDE-AUTHOR'] = issue['submitter']
     
-    author = os.environ.get('OVERRIDE_AUTHOR')
+    author = os.environ.get('OVERRIDE-AUTHOR')
     
-    # git.commit_override_author(acronym,issue["issue_type"])
-    git.commit_one(outfile,author,comment=f'New entry {acronym} in {issue["issue_type"]} files.' ,branch=title)
+    # git.commit-override-author(acronym,issue["issue-type"])
+    git.commit_one(outfile,author,comment=f'New entry {acronym} in {issue["issue-type"]} files.' ,branch=title)
 
-    git.newpull(title,author,json.dumps(issue,indent=4),title,os.environ['ISSUE_NUMBER'])
+    git.newpull(title,author,json.dumps(issue,indent=4),title,os.environ['ISSUE-NUMBER'])
     
     
         
