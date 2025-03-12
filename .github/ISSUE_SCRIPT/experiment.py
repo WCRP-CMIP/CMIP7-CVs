@@ -6,6 +6,7 @@ import sys
 import json,os
 from cmipld.utils import git
 from  cmipld.tests import jsonld as tests
+from cmipld.utils.json import sorted_json
 from collections import OrderedDict
 
 from cmipld import reverse_mapping
@@ -53,35 +54,48 @@ def run(issue,packet):
     
     # activity
     activity = issue['mip-/-activity-id-(registered)'] 
-    if issue['mip-/-activity-id-(unregistered)'] != "-No response-":
-        
-        git.update_summary(f"### Custom Activity {issue['mip-/-activity-id-(unregistered)']} \n Please register this in both the [universal](https://github.com/WCRP-CMIP/WCRP-universe/issues/new?template=add_institution.yml) and current repo.)")
-        
-        print('check activity exists in universal and project?')
-        
-        activity = issue['mip-/-activity-id-(unregistered)']
     
+    if issue['mip-/-activity-id-(registered)'] == "Custom Activity: specify below":
+        if issue['mip-/-activity-id-(unregistered)'] != "-No response-":
+            
+            git.update_summary(f"### Custom Activity {issue['mip-/-activity-id-(unregistered)']} \n Please register this in both the [universal](https://github.com/WCRP-CMIP/WCRP-universe/issues/new?template=add_institution.yml) and current repo.)")
+            
+            print('check activity exists in universal and project?')
+            
+            activity = issue['mip-/-activity-id-(unregistered)']
+        else:
+            git.update_summary(f"### Custom activity given, in addition to the selection of an existing one. Please correct! ")
+            sys.exit('Incorrect activity specified')
+        
     
     
     # parent
     parent = issue['parent-experiment']
-    if issue['custom-parent-experiment'] != "-No response-":
+    if parent == 'no-parent':
+        parent = "none"
+    
+    if issue['parent-experiment'] == "Custom Parent: specify below":
+        if issue['custom-parent-experiment'] != "-No response-":
+            
+            git.update_summary(f"### Custom Parent {issue['custom-parent-experiment']} \n Please the parent experiment as well.")
+            
+            parent = issue['custom-parent-experiment']
         
-        git.update_summary(f"### Custom Parent {issue['custom-parent-experiment']} \n Please the parent experiment as well.")
-        
-        parent = issue['custom-parent-experiment']
+        else: 
+            git.update_summary(f"### Custom parent given, in addition to the selection of an existing one. Please correct! ")
+            sys.exit('Incorrect parent experiment specified')
         
     # components
-    "source-type-codes-for-required-model-components": issue['source-type-codes-for-required-model-components'],
-            "source-type-codes-for-additional-allowed-model-components": issue['source-type-codes-for-additional-allowed-model-components'],
-        
-    
     realms = []
     for mr in issue['source-type-codes-for-required-model-components'].split(', '):
-        realms.append({'id':mr,'is-required':True})
+        realms.append({'id':mr.lower(),'is-required':True})
     for mr in issue['source-type-codes-for-additional-allowed-model-components'].split(', '):
-        realms.append({'id':mr,'is-required':False})
+        realms.append({'id':mr.lower(),'is-required':False})
     
+    
+    
+    
+    # file content
     data = {
             "id": f"{id}",
             "type": [f'wcrp:{issue['issue-type']}',prefix],
@@ -95,7 +109,7 @@ def run(issue,packet):
             
             "tier": issue['priority-tier'],
             
-            
+            "model-realms": realms,
             "start-date": issue['start-date'],
             "branch-date": issue['branch-date'],
             "minimum-number-of-years": issue['(minimum)-number-of-years'],
@@ -106,12 +120,19 @@ def run(issue,packet):
     
     
         
-        
-     
+    data = sorted_json(data)
+
 
     git.update_summary(f"### Data content\n ```json\n{json.dumps(data,indent=4)}\n```")
     
     # write the data to a file
+    
+    
+    
+    
+    # tests
+    
+    
 
     outfile = path+id+'.json'
     print('writing to',outfile)
