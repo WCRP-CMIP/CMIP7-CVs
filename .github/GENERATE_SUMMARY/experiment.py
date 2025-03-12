@@ -15,4 +15,10 @@ def run(localhost,whoami,repopath,reponame):
     
     location = f'{repopath}/{reponame}_{me}.json'
     summary = version(summary, me, location.split("/")[-1])
+    
+    if os.path.exists(location):
+        old = cmipld.utils.io.rjson(location)
+        if old['Header']['checksum'] == summary['Header']['checksum']:
+            return 'no update - file already exists'
+    
     cmipld.utils.io.wjsn(summary,location)
