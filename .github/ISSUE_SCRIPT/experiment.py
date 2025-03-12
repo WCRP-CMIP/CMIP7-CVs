@@ -35,11 +35,14 @@ def run(issue,packet):
     mainfiles = git.getfilenames('main')
     if outfile in mainfiles:
         git.close_issue(f'File {outfile} already exists, please check and correct. ')
+        sys.exit('File already exists on main')
     
     # update the issue title and create an issue branch
     title = f'New {issue["issue-type"].capitalize()} - {acronym}'
+    branch = title.replace(' ','_').lower()
+    
     git.update_issue_title(title)
-    git.newbranch(title)
+    git.newbranch(branch)
     
     # activity
     activity = issue['mip-/-activity-id-(registered)'] 
@@ -146,9 +149,9 @@ def run(issue,packet):
     author = os.environ.get('OVERRIDE-AUTHOR')
     
     # git.commit-override-author(acronym,issue["issue-type"])
-    git.commit_one(outfile,author,comment=f'New entry {acronym} in {issue["issue-type"]} files.' ,branch=title)
+    git.commit_one(outfile,author,comment=f'New entry {acronym} in {issue["issue-type"]} files.' ,branch=branch)
 
-    git.newpull(title,author,json.dumps(issue,indent=4),title,os.environ['ISSUE_NUMBER'])
+    git.newpull(branch,author,json.dumps(issue,indent=4),title,os.environ['ISSUE_NUMBER'])
     
     
         
