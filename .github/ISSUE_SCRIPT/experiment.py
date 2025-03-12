@@ -39,7 +39,7 @@ def run(issue,packet):
         sys.exit('File already exists on main')
     
     # update the issue title and create an issue branch
-    title = f'New {issue["issue-type"].capitalize()} - {acronym}'
+    title = f'New {issue["issue-type"].capitalize()}:{acronym}'
     branch = title.replace(' ','_').lower()
     
     git.update_issue_title(title)
@@ -51,7 +51,7 @@ def run(issue,packet):
     if issue['mip-/-activity-id-(registered)'] == "Custom Activity: specify below":
         if issue['mip-/-activity-id-(unregistered)'] != "-No response-":
             
-            git.update_issue(f"### Custom Activity {issue['mip-/-activity-id-(unregistered)']} \n Please register this in both the [universal](https://github.com/WCRP-CMIP/WCRP-universe/issues/new?template=add_institution.yml) and current repo.)")
+            git.update_issue(f"### Custom Activity {issue['mip-/-activity-id-(unregistered)']} \n Please register this in both the [universal](https://github.com/WCRP-CMIP/WCRP-universe/issues/new?template=add_activity.yml) and current repo.Once this has been approved, edit the title of this issue with `-added` to rerun the checks.")
             
             print('check activity exists in universal and project?')
             
