@@ -114,8 +114,9 @@ def run(issue,packet):
         
     data = sorted_json(data)
 
-
-    git.update_issue(f"### Data content\n ```json\n{json.dumps(data,indent=4)}\n```")
+    # broken for now    
+    # git.update_issue(f"### Data content\n ```json\n{json.dumps(data,indent=4)}\n```")
+    git.update_summary(f"### Data content\n ```json\n{json.dumps(data,indent=4)}\n```")
     
     # write the data to a file
     
