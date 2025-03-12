@@ -115,7 +115,14 @@ def run(issue,packet):
     
     
 
+
+
     outfile = path+id+'.json'
+    
+    if os.path.exists(outfile):
+        git.close_issue(f'File {outfile} already exists, please check and correct. ')
+    
+    
     print('writing to',outfile)
     json.dump(data,open(outfile,'w'),indent=4)
     print('done')
