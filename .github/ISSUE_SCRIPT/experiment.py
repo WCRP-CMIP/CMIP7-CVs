@@ -20,7 +20,7 @@ prefix = rmap[git.url2io(git.url())]
 def run(issue,packet):
     # print('issue',issue)
     
-    git.update_summary(f"### Issue content\n ```json\n{json.dumps(issue,indent=4)}\n```")
+    git.update_issue(f"### Issue content\n ```json\n{json.dumps(issue,indent=4)}\n```")
     
     path = f'./src-data/{issue['issue-type']}/'
     
@@ -50,13 +50,13 @@ def run(issue,packet):
     if issue['mip-/-activity-id-(registered)'] == "Custom Activity: specify below":
         if issue['mip-/-activity-id-(unregistered)'] != "-No response-":
             
-            git.update_summary(f"### Custom Activity {issue['mip-/-activity-id-(unregistered)']} \n Please register this in both the [universal](https://github.com/WCRP-CMIP/WCRP-universe/issues/new?template=add_institution.yml) and current repo.)")
+            git.update_issue(f"### Custom Activity {issue['mip-/-activity-id-(unregistered)']} \n Please register this in both the [universal](https://github.com/WCRP-CMIP/WCRP-universe/issues/new?template=add_institution.yml) and current repo.)")
             
             print('check activity exists in universal and project?')
             
             activity = issue['mip-/-activity-id-(unregistered)']
         else:
-            git.update_summary(f"### Custom activity given, in addition to the selection of an existing one. Please correct! ")
+            git.update_issue(f"### Custom activity given, in addition to the selection of an existing one. Please correct! ")
             sys.exit('Incorrect activity specified')
         
     
@@ -115,7 +115,7 @@ def run(issue,packet):
     data = sorted_json(data)
 
 
-    git.update_summary(f"### Data content\n ```json\n{json.dumps(data,indent=4)}\n```")
+    git.update_issue(f"### Data content\n ```json\n{json.dumps(data,indent=4)}\n```")
     
     # write the data to a file
     
@@ -136,7 +136,7 @@ def run(issue,packet):
     print('done')
 
 
-    print(os.popen(f"less {outfile}").read())
+    # print(os.popen(f"less {outfile}").read())
     
     # git branch commit and push function
     
