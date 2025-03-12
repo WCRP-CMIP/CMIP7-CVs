@@ -16,26 +16,6 @@ prefix = rmap[git.url2io(git.url())]
 
 
 
-# {
-#    "experiment-id": "imaginary",
-#    "experiment-title": "none",
-#    "description": "some info here",
-#    "mip-/-activity-id-(registered)": "Custom Activity: specify below",
-#    "mip-/-activity-id-(unregistered)": "superman",
-#    "parent-experiment": "Custom Parent: specify below",
-#    "custom-parent-experiment": "-No response-",
-#    "sub-experiment": "\"none\"",
-#    "priority-tier": "3",
-#    "source-type-codes-for-required-model-components": "ISM, CHEM",
-#    "source-type-codes-for-additional-allowed-model-components": "ISM, AOGCM",
-#    "start-date": "1900",
-#    "branch-date": "9000",
-#    "(minimum)-number-of-years": "0",
-#    "issue-type": "experiment",
-#    "issue-kind": "new"
-# }
-
-
 
 def run(issue,packet):
     # print('issue',issue)
@@ -48,7 +28,7 @@ def run(issue,packet):
     id = acronym.lower()
     
     # update the issue title and create an issue branch
-    title = f'{issue["issue-type"].capitalize()}-{acronym}'
+    title = f'New {issue["issue-type"].capitalize()} - {acronym}'
     git.update_issue_title(title)
     git.newbranch(title)
     
@@ -77,7 +57,7 @@ def run(issue,packet):
     if issue['parent-experiment'] == "Custom Parent: specify below":
         if issue['custom-parent-experiment'] != "-No response-":
             
-            git.update_summary(f"### Custom Parent {issue['custom-parent-experiment']} \n Please the parent experiment as well.")
+            git.update_summary(f"### Custom Parent {issue['custom-parent-experiment']} \n Please register the parent experiment.")
             
             parent = issue['custom-parent-experiment']
         
@@ -131,6 +111,7 @@ def run(issue,packet):
     
     
     # tests
+    tests.run_checks(tests.experiment.experiment_model,data)
     
     
 
