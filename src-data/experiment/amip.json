@@ -8,8 +8,13 @@
     "activity": [
         "cmip"
     ],
-    "description": "DECK: AMIP",
-    "model_realms": [
+    "description": "DECK: AMIP \n AMIP (Atmospheric Model Intercomparison Project) experiment with prescribed SSTs and sea ice",
+    "tier": 0,
+    "end": -999,
+    "min-number-yrs-per-sim": -999,
+    "start": -999,
+    "label": "amip",
+    "model-realms": [
         {
             "id": "agcm",
             "is_required": true
@@ -27,20 +32,14 @@
             "is_required": false
         }
     ],
-    "parent_activity": [
+    "parent-activity": [
         "none"
     ],
-    "parent_experiment": [
+    "parent-experiment": [
         "none"
     ],
-    "sub_experiment": [
+    "sub-experiment": [
         "none"
     ],
-    "tier": 0,
-    "experiment_description": "AMIP (Atmospheric Model Intercomparison Project) experiment with prescribed SSTs and sea ice",
-    "end": -999,
-    "min-number-yrs-per-sim": -999,
-    "start": -999,
-    "label": "amip",
-    "long_label": "Describe amip in one sentence."
+    "long-label": "Describe amip in one sentence."
 }

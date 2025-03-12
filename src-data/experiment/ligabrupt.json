@@ -8,22 +8,21 @@
     "activity": [
         "pmip"
     ],
-    "description": "Last Interglacial abrupt change experiment",
-    "model_realms": [],
-    "parent_activity": [
-        "none"
-    ],
-    "parent_experiment": [
-        "none"
-    ],
-    "sub_experiment": [
-        "none"
-    ],
+    "description": "Last Interglacial abrupt change experiment \n Simulation of abrupt change during the Last Interglacial period",
     "tier": 0,
-    "experiment_description": "Simulation of abrupt change during the Last Interglacial period",
     "end": -999,
     "min-number-yrs-per-sim": -999,
     "start": -999,
     "label": "LIGabrupt",
-    "long_label": "Describe LIGabrupt in one sentence."
+    "model-realms": [],
+    "parent-activity": [
+        "none"
+    ],
+    "parent-experiment": [
+        "none"
+    ],
+    "sub-experiment": [
+        "none"
+    ],
+    "long-label": "Describe LIGabrupt in one sentence."
 }

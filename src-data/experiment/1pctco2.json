@@ -8,8 +8,13 @@
     "activity": [
         "cmip"
     ],
-    "description": "DECK: 1 percent per year CO2 increase",
-    "model_realms": [
+    "description": "DECK: 1 percent per year CO2 increase \n Increase CO2 concentration from pre-industrial level at 1% per year until quadrupling",
+    "tier": 0,
+    "end": -999,
+    "min-number-yrs-per-sim": -999,
+    "start": -999,
+    "label": "1pctCO2",
+    "model-realms": [
         {
             "id": "aogcm",
             "is_required": true
@@ -27,20 +32,14 @@
             "is_required": false
         }
     ],
-    "parent_activity": [
+    "parent-activity": [
         "none"
     ],
-    "parent_experiment": [
+    "parent-experiment": [
         "none"
     ],
-    "sub_experiment": [
+    "sub-experiment": [
         "none"
     ],
-    "tier": 0,
-    "experiment_description": "Increase CO2 concentration from pre-industrial level at 1% per year until quadrupling",
-    "end": -999,
-    "min-number-yrs-per-sim": -999,
-    "start": -999,
-    "label": "1pctCO2",
-    "long_label": "Describe 1pctCO2 in one sentence."
+    "long-label": "Describe 1pctCO2 in one sentence."
 }

@@ -9,7 +9,12 @@
         "damip"
     ],
     "description": "Historical simulation with natural forcing only",
-    "model_realms": [
+    "tier": 0,
+    "end": -999,
+    "min-number-yrs-per-sim": -999,
+    "start": -999,
+    "label": "hist-nat",
+    "model-realms": [
         {
             "id": "aogcm",
             "is_required": true
@@ -27,20 +32,14 @@
             "is_required": false
         }
     ],
-    "parent_activity": [
+    "parent-activity": [
         "none"
     ],
-    "parent_experiment": [
+    "parent-experiment": [
         "none"
     ],
-    "sub_experiment": [
+    "sub-experiment": [
         "none"
     ],
-    "tier": 0,
-    "experiment_description": "Historical simulation with natural forcing only",
-    "end": -999,
-    "min-number-yrs-per-sim": -999,
-    "start": -999,
-    "label": "hist-nat",
-    "long_label": "Describe hist-nat in one sentence."
+    "long-label": "Describe hist-nat in one sentence."
 }

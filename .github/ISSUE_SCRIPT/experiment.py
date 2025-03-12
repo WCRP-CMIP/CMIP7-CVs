@@ -10,7 +10,24 @@ from  cmipld.tests import jsonld as tests
 
 
 
-
+{
+   "experiment_id": "imaginary",
+   "experiment_title": "none",
+   "description": "some info here",
+   "mip_/_activity_id_(registered)": "Custom Activity: specify below",
+   "mip_/_activity_id_(unregistered)": "superman",
+   "parent_experiment": "Custom Parent: specify below",
+   "custom_parent_experiment": "_No response_",
+   "sub-experiment": "\"none\"",
+   "priority_tier": "3",
+   "source_type_codes_for_required_model_components": "ISM, CHEM",
+   "source_type_codes_for_additional_allowed_model_components": "ISM, AOGCM",
+   "start_date": "1900",
+   "branch_date": "9000",
+   "(minimum)_number_of_years": "0",
+   "issue_type": "experiment",
+   "issue_kind": "new"
+}
 
 
 
@@ -21,9 +38,9 @@ def run(issue,packet):
     
     path = f'./src-data/{issue['issue_type']}/'
     
-    # acronym = issue['acronym']
+    acronym = issue['experiment_id']
     
-    # title = f'{issue["issue_type"].capitalize()}_{acronym}'
+    title = f'{issue["issue_type"].capitalize()}_{acronym}'
     
     
 #    # This code snippet is performing several tasks related to processing an `issue` object. Here is a

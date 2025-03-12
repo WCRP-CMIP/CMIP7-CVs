@@ -8,8 +8,13 @@
     "activity": [
         "cmip"
     ],
-    "description": "DECK: pre-industrial control",
-    "model_realms": [
+    "description": "DECK: pre-industrial control \n Pre-industrial control simulation",
+    "tier": 0,
+    "end": -999,
+    "min-number-yrs-per-sim": -999,
+    "start": -999,
+    "label": "piControl",
+    "model-realms": [
         {
             "id": "aogcm",
             "is_required": true
@@ -27,20 +32,14 @@
             "is_required": false
         }
     ],
-    "parent_activity": [
+    "parent-activity": [
         "none"
     ],
-    "parent_experiment": [
+    "parent-experiment": [
         "none"
     ],
-    "sub_experiment": [
+    "sub-experiment": [
         "none"
     ],
-    "tier": 0,
-    "experiment_description": "Pre-industrial control simulation",
-    "end": -999,
-    "min-number-yrs-per-sim": -999,
-    "start": -999,
-    "label": "piControl",
-    "long_label": "Describe piControl in one sentence."
+    "long-label": "Describe piControl in one sentence."
 }
