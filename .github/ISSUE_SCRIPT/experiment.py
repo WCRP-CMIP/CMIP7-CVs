@@ -27,6 +27,13 @@ def run(issue,packet):
     acronym = issue['experiment-id']
     id = acronym.lower()
     
+    
+    outfile = path+id+'.json'
+    
+    # whilst we are on the main branch, check if the file exists
+    if os.path.exists(outfile):
+        git.close_issue(f'File {outfile} already exists, please check and correct. ')
+    
     # update the issue title and create an issue branch
     title = f'New {issue["issue-type"].capitalize()} - {acronym}'
     git.update_issue_title(title)
@@ -117,11 +124,7 @@ def run(issue,packet):
 
 
 
-    outfile = path+id+'.json'
-    
-    if os.path.exists(outfile):
-        git.close_issue(f'File {outfile} already exists, please check and correct. ')
-    
+
     
     print('writing to',outfile)
     json.dump(data,open(outfile,'w'),indent=4)
