@@ -122,7 +122,7 @@ def run(issue,packet):
     # tests
     tests.run_checks(tests.experiment.experiment_model,data)
     
-    
+    git.update_summary(f"### Content has no errors. \n```")
 
 
 
@@ -148,7 +148,7 @@ def run(issue,packet):
     # git.commit-override-author(acronym,issue["issue-type"])
     git.commit_one(outfile,author,comment=f'New entry {acronym} in {issue["issue-type"]} files.' ,branch=title)
 
-    git.newpull(title,author,json.dumps(issue,indent=4),title,os.environ['ISSUE-NUMBER'])
+    git.newpull(title,author,json.dumps(issue,indent=4),title,os.environ['ISSUE_NUMBER'])
     
     
         
