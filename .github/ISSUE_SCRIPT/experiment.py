@@ -20,7 +20,8 @@ prefix = rmap[git.url2io(git.url())]
 def run(issue,packet):
     # print('issue',issue)
     
-    git.update_issue(f"### Issue content\n ```json\n{json.dumps(issue,indent=4)}\n```")
+    # also breaks the issue updates for the same reason 
+    git.update_summary(f"### Issue content\n ```json\n{json.dumps(issue,indent=4)}\n```")
     
     path = f'./src-data/{issue['issue-type']}/'
     
