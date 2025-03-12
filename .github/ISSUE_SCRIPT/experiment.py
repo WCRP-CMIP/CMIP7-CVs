@@ -31,7 +31,9 @@ def run(issue,packet):
     outfile = path+id+'.json'
     
     # whilst we are on the main branch, check if the file exists
-    if os.path.exists(outfile):
+    # if os.path.exists(outfile):
+    mainfiles = git.getfilenames('main')
+    if outfile in mainfiles:
         git.close_issue(f'File {outfile} already exists, please check and correct. ')
     
     # update the issue title and create an issue branch
