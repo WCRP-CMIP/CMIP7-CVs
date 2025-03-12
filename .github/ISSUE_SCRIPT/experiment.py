@@ -39,7 +39,7 @@ def run(issue,packet):
         sys.exit('File already exists on main')
     
     # update the issue title and create an issue branch
-    title = f'New {issue["issue-type"].capitalize()}:{acronym}'
+    title = f'New {issue["issue-type"].capitalize()}  {acronym}'
     branch = title.replace(' ','_').lower()
     
     git.update_issue_title(title)
