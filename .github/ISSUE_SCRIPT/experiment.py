@@ -49,7 +49,7 @@ def run(issue,packet):
     git.update_summary(f"### Branch created: {branch}, {os.popen('git branch').read()}")
     
     gb = os.popen('git branch').read()
-    assert gb == branch, 'the branch is not the same (not created) "{gb}" != "{branch}"'
+    assert gb == branch, f'the branch is not the same (not created) "{gb}" != "{branch}"'
     
     
     # activity
