@@ -58,13 +58,13 @@ def run(issue,packet):
     if issue['mip-/-activity-id-(registered)'] == "Custom Activity: specify below":
         if issue['mip-/-activity-id-(unregistered)'] != "-No response-":
             
-            git.update_issue(f"### Custom Activity {issue['mip-/-activity-id-(unregistered)']} \n Please register this in both the [universal](https://github.com/WCRP-CMIP/WCRP-universe/issues/new?template=add_activity.yml) and current repo.Once this has been approved, edit the title of this issue with `-added` to rerun the checks.")
+            git.update_issue(f"### Custom Activity {issue['mip-/-activity-id-(unregistered)']} \n Please register this in both the [universal](https://github.com/WCRP-CMIP/WCRP-universe/issues/new?template=add_activity.yml) and current repo.Once this has been approved, edit the title of this issue with `-added` to rerun the checks.",err=False)
             
             print('check activity exists in universal and project?')
             
             activity = issue['mip-/-activity-id-(unregistered)']
         else:
-            git.update_issue(f"### Custom activity given, in addition to the selection of an existing one. Please correct! ")
+            git.update_issue(f"### Custom activity given, in addition to the selection of an existing one. Please correct! ",err=False)
             sys.exit('Incorrect activity specified')
         
     
@@ -77,12 +77,12 @@ def run(issue,packet):
     if issue['parent-experiment'] == "Custom Parent: specify below":
         if issue['custom-parent-experiment'] != "-No response-":
             
-            git.update_summary(f"### Custom Parent {issue['custom-parent-experiment']} \n Please register the parent experiment.")
+            git.update_issue(f"### Custom Parent {issue['custom-parent-experiment']} \n Please register the parent experiment.",err=False)
             
             parent = issue['custom-parent-experiment']
         
         else: 
-            git.update_summary(f"### Custom parent given, in addition to the selection of an existing one. Please correct! ")
+            git.update_issue(f"### Custom parent given, in addition to the selection of an existing one. Please correct! ")
             sys.exit('Incorrect parent experiment specified')
         
     # components
