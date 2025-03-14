@@ -44,11 +44,12 @@ def run(issue,packet):
     
     git.update_issue_title(title)
     git.newbranch(branch)
+    os.popen(f"git checkout {branch}")
     
     git.update_summary(f"### Branch created: {branch}, {os.popen('git branch').read()}")
     
-    
-    assert os.popen('git branch').read() == branch
+    gb = os.popen('git branch').read()
+    assert gb == branch, 'the branch is not the same (not created) "{gb}" != "{branch}"'
     
     
     # activity
