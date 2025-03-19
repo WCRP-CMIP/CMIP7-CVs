@@ -103,19 +103,19 @@
       "model-realms": [
         {
           "id": "aogcm",
-          "is_required": true
+          "is-required": true
         },
         {
           "id": "aer",
-          "is_required": false
+          "is-required": false
         },
         {
           "id": "chem",
-          "is_required": false
+          "is-required": false
         },
         {
           "id": "bgc",
-          "is_required": false
+          "is-required": false
         }
       ],
       "parent-activity": [
@@ -201,19 +201,19 @@
       "model-realms": [
         {
           "id": "aogcm",
-          "is_required": true
+          "is-required": true
         },
         {
           "id": "aer",
-          "is_required": false
+          "is-required": false
         },
         {
           "id": "chem",
-          "is_required": false
+          "is-required": false
         },
         {
           "id": "bgc",
-          "is_required": false
+          "is-required": false
         }
       ],
       "parent-activity": [
@@ -299,19 +299,19 @@
       "model-realms": [
         {
           "id": "agcm",
-          "is_required": true
+          "is-required": true
         },
         {
           "id": "aer",
-          "is_required": false
+          "is-required": false
         },
         {
           "id": "chem",
-          "is_required": false
+          "is-required": false
         },
         {
           "id": "bgc",
-          "is_required": false
+          "is-required": false
         }
       ],
       "parent-activity": [
@@ -397,19 +397,19 @@
       "model-realms": [
         {
           "id": "aogcm",
-          "is_required": true
+          "is-required": true
         },
         {
           "id": "bgc",
-          "is_required": true
+          "is-required": true
         },
         {
           "id": "aer",
-          "is_required": false
+          "is-required": false
         },
         {
           "id": "chem",
-          "is_required": false
+          "is-required": false
         }
       ],
       "parent-activity": [
@@ -441,19 +441,19 @@
       "model-realms": [
         {
           "id": "aogcm",
-          "is_required": true
+          "is-required": true
         },
         {
           "id": "bgc",
-          "is_required": true
+          "is-required": true
         },
         {
           "id": "aer",
-          "is_required": false
+          "is-required": false
         },
         {
           "id": "chem",
-          "is_required": false
+          "is-required": false
         }
       ],
       "parent-activity": [
@@ -474,7 +474,7 @@
         "cmip7"
       ],
       "activity": [
-        "ScenarioMIP"
+        "scenariomip"
       ],
       "description": "High emission scenario overshoot extension to explore potential high-end impacts",
       "tier": 0,
@@ -484,7 +484,7 @@
       "label": "esm-scen7-h-ext-os",
       "model-realms": [],
       "parent-activity": [
-        "ScenarioMIP"
+        "scenariomip"
       ],
       "parent-experiment": [
         "esm-scen7-h"
@@ -501,7 +501,7 @@
         "cmip7"
       ],
       "activity": [
-        "ScenarioMIP"
+        "scenariomip"
       ],
       "description": "High emission scenario extension to explore potential high-end impacts",
       "tier": 0,
@@ -511,7 +511,7 @@
       "label": "esm-scen7-h-ext",
       "model-realms": [],
       "parent-activity": [
-        "ScenarioMIP"
+        "scenariomip"
       ],
       "parent-experiment": [
         "esm-scen7-h"
@@ -528,7 +528,7 @@
         "cmip7"
       ],
       "activity": [
-        "ScenarioMIP"
+        "scenariomip"
       ],
       "description": "High emission scenario to explore potential high-end impacts",
       "tier": 0,
@@ -555,7 +555,7 @@
         "cmip7"
       ],
       "activity": [
-        "ScenarioMIP"
+        "scenariomip"
       ],
       "description": "Scenario extension consistent with staying likely below 2 degrees C",
       "tier": 0,
@@ -582,7 +582,7 @@
         "cmip7"
       ],
       "activity": [
-        "ScenarioMIP"
+        "scenariomip"
       ],
       "description": "Scenario consistent with staying likely below 2 degrees C",
       "tier": 0,
@@ -609,7 +609,7 @@
         "cmip7"
       ],
       "activity": [
-        "ScenarioMIP"
+        "scenariomip"
       ],
       "description": "Medium emission scenario extension consistent with current policies",
       "tier": 0,
@@ -636,7 +636,7 @@
         "cmip7"
       ],
       "activity": [
-        "ScenarioMIP"
+        "scenariomip"
       ],
       "description": "Medium emission scenario consistent with current policies",
       "tier": 0,
@@ -663,7 +663,7 @@
         "cmip7"
       ],
       "activity": [
-        "ScenarioMIP"
+        "scenariomip"
       ],
       "description": "Extension to scenario with delayed increase in mitigation effort, insufficient to meet Paris Agreement objectives",
       "tier": 0,
@@ -690,7 +690,7 @@
         "cmip7"
       ],
       "activity": [
-        "ScenarioMIP"
+        "scenariomip"
       ],
       "description": "Scenario with delayed increase in mitigation effort, insufficient to meet Paris Agreement objectives",
       "tier": 0,
@@ -717,7 +717,7 @@
         "cmip7"
       ],
       "activity": [
-        "ScenarioMIP"
+        "scenariomip"
       ],
       "description": "Extension to scenario with similar end-of-century temperature impact to VLLO, but with less aggressive near-term mitigation and large reliance on net negative emissions, resulting in a higher overshoot.",
       "tier": 0,
@@ -744,7 +744,7 @@
         "cmip7"
       ],
       "activity": [
-        "ScenarioMIP"
+        "scenariomip"
       ],
       "description": "Scenario with similar endof-century temperature impact to VLLO, but with less aggressive near-term mitigation and large reliance on net negative emissions, resulting in a higher overshoot.",
       "tier": 0,
@@ -771,7 +771,7 @@
         "cmip7"
       ],
       "activity": [
-        "ScenarioMIP"
+        "scenariomip"
       ],
       "description": "Extension to scenario consistent with limiting warming to 1.5 degree C by 2100 AD with limited overshoot (as low as plausible) of 1.5 degree C",
       "tier": 0,
@@ -798,7 +798,7 @@
         "cmip7"
       ],
       "activity": [
-        "ScenarioMIP"
+        "scenariomip"
       ],
       "description": "Scenario consistent with limiting warming to 1.5 degree C by 2100 AD with limited overshoot (as low as plausible) of 1.5 degree C",
       "tier": 0,
@@ -863,19 +863,19 @@
       "model-realms": [
         {
           "id": "aogcm",
-          "is_required": true
+          "is-required": true
         },
         {
           "id": "aer",
-          "is_required": false
+          "is-required": false
         },
         {
           "id": "chem",
-          "is_required": false
+          "is-required": false
         },
         {
           "id": "bgc",
-          "is_required": false
+          "is-required": false
         }
       ],
       "parent-activity": [
@@ -907,19 +907,19 @@
       "model-realms": [
         {
           "id": "aogcm",
-          "is_required": true
+          "is-required": true
         },
         {
           "id": "aer",
-          "is_required": false
+          "is-required": false
         },
         {
           "id": "chem",
-          "is_required": false
+          "is-required": false
         },
         {
           "id": "bgc",
-          "is_required": false
+          "is-required": false
         }
       ],
       "parent-activity": [
@@ -951,19 +951,19 @@
       "model-realms": [
         {
           "id": "aogcm",
-          "is_required": true
+          "is-required": true
         },
         {
           "id": "aer",
-          "is_required": false
+          "is-required": false
         },
         {
           "id": "chem",
-          "is_required": false
+          "is-required": false
         },
         {
           "id": "bgc",
-          "is_required": false
+          "is-required": false
         }
       ],
       "parent-activity": [
@@ -995,19 +995,19 @@
       "model-realms": [
         {
           "id": "aogcm",
-          "is_required": true
+          "is-required": true
         },
         {
           "id": "aer",
-          "is_required": false
+          "is-required": false
         },
         {
           "id": "chem",
-          "is_required": false
+          "is-required": false
         },
         {
           "id": "bgc",
-          "is_required": false
+          "is-required": false
         }
       ],
       "parent-activity": [
@@ -1066,19 +1066,19 @@
       "model-realms": [
         {
           "id": "aogcm",
-          "is_required": true
+          "is-required": true
         },
         {
           "id": "aer",
-          "is_required": false
+          "is-required": false
         },
         {
           "id": "chem",
-          "is_required": false
+          "is-required": false
         },
         {
           "id": "bgc",
-          "is_required": false
+          "is-required": false
         }
       ],
       "parent-activity": [
@@ -1199,33 +1199,6 @@
         "none"
       ],
       "long-label": "Describe piClim-4xCO2 in one sentence."
-    },
-    {
-      "id": "piclim-aer",
-      "type": [
-        "wcrp:experiment",
-        "cmip7"
-      ],
-      "activity": [
-        "rfmip"
-      ],
-      "description": "Effective radiative forcing by present-day aerosols",
-      "tier": 0,
-      "end": -999,
-      "min-number-yrs-per-sim": -999,
-      "start": -999,
-      "label": "piClim-aer",
-      "model-realms": [],
-      "parent-activity": [
-        "none"
-      ],
-      "parent-experiment": [
-        "none"
-      ],
-      "sub-experiment": [
-        "none"
-      ],
-      "long-label": "Describe piClim-aer in one sentence."
     },
     {
       "id": "piclim-anthro",
@@ -1515,19 +1488,19 @@
       "model-realms": [
         {
           "id": "aogcm",
-          "is_required": true
+          "is-required": true
         },
         {
           "id": "aer",
-          "is_required": false
+          "is-required": false
         },
         {
           "id": "chem",
-          "is_required": false
+          "is-required": false
         },
         {
           "id": "bgc",
-          "is_required": false
+          "is-required": false
         }
       ],
       "parent-activity": [
@@ -1548,7 +1521,7 @@
         "cmip7"
       ],
       "activity": [
-        "ScenarioMIP"
+        "scenariomip"
       ],
       "description": "High concentration driven emission scenario overshoot extension to explore potential high-end impacts",
       "tier": 0,
@@ -1558,7 +1531,7 @@
       "label": "scen7-hc-ext-os",
       "model-realms": [],
       "parent-activity": [
-        "ScenarioMIP"
+        "scenariomip"
       ],
       "parent-experiment": [
         "scen7-hc"
@@ -1575,7 +1548,7 @@
         "cmip7"
       ],
       "activity": [
-        "ScenarioMIP"
+        "scenariomip"
       ],
       "description": "High concentration driven emission scenario extension to explore potential high-end impacts",
       "tier": 0,
@@ -1585,7 +1558,7 @@
       "label": "scen7-hc-ext",
       "model-realms": [],
       "parent-activity": [
-        "ScenarioMIP"
+        "scenariomip"
       ],
       "parent-experiment": [
         "scen7-hc"
@@ -1602,7 +1575,7 @@
         "cmip7"
       ],
       "activity": [
-        "ScenarioMIP"
+        "scenariomip"
       ],
       "description": "High concentration driven emission scenario to explore potential high-end impacts",
       "tier": 0,
@@ -1629,7 +1602,7 @@
         "cmip7"
       ],
       "activity": [
-        "ScenarioMIP"
+        "scenariomip"
       ],
       "description": "Extension to concentration driven scenario consistent with staying likely below 2 degrees C",
       "tier": 0,
@@ -1639,7 +1612,7 @@
       "label": "scen7-lc-ext",
       "model-realms": [],
       "parent-activity": [
-        "ScenarioMIP"
+        "scenariomip"
       ],
       "parent-experiment": [
         "scen7-lc"
@@ -1656,7 +1629,7 @@
         "cmip7"
       ],
       "activity": [
-        "ScenarioMIP"
+        "scenariomip"
       ],
       "description": "Concentration driven scenario consistent with staying likely below 2 degrees C",
       "tier": 0,
@@ -1683,7 +1656,7 @@
         "cmip7"
       ],
       "activity": [
-        "ScenarioMIP"
+        "scenariomip"
       ],
       "description": "Medium concentration driven emission scenario extension consistent with current policies",
       "tier": 0,
@@ -1693,7 +1666,7 @@
       "label": "scen7-mc-ext",
       "model-realms": [],
       "parent-activity": [
-        "ScenarioMIP"
+        "scenariomip"
       ],
       "parent-experiment": [
         "scen7-mc"
@@ -1710,7 +1683,7 @@
         "cmip7"
       ],
       "activity": [
-        "ScenarioMIP"
+        "scenariomip"
       ],
       "description": "Medium concentration driven emission scenario consistent with current policies",
       "tier": 0,
@@ -1737,7 +1710,7 @@
         "cmip7"
       ],
       "activity": [
-        "ScenarioMIP"
+        "scenariomip"
       ],
       "description": "Extension to concentration driven scenario with delayed increase in mitigation effort, insufficient to meet Paris Agreement objectives",
       "tier": 0,
@@ -1747,7 +1720,7 @@
       "label": "scen7-mlc-ext",
       "model-realms": [],
       "parent-activity": [
-        "ScenarioMIP"
+        "scenariomip"
       ],
       "parent-experiment": [
         "scen7-mlc"
@@ -1764,7 +1737,7 @@
         "cmip7"
       ],
       "activity": [
-        "ScenarioMIP"
+        "scenariomip"
       ],
       "description": "Concentration driven scenario with delayed increase in mitigation effort, insufficient to meet Paris Agreement objectives",
       "tier": 0,
@@ -1791,7 +1764,7 @@
         "cmip7"
       ],
       "activity": [
-        "ScenarioMIP"
+        "scenariomip"
       ],
       "description": "Extension to Concentration driven scenario with similar end-of-century temperature impact to VLLO, but with less aggressive near-term mitigation and large reliance on net negative emissions, resulting in a higher overshoot.",
       "tier": 0,
@@ -1801,7 +1774,7 @@
       "label": "scen7-vlhoc-ext",
       "model-realms": [],
       "parent-activity": [
-        "ScenarioMIP"
+        "scenariomip"
       ],
       "parent-experiment": [
         "scen7-vlhoc"
@@ -1818,7 +1791,7 @@
         "cmip7"
       ],
       "activity": [
-        "ScenarioMIP"
+        "scenariomip"
       ],
       "description": "Concentration driven scenario with similar end-of-century temperature impact to VLLO, but with less aggressive near-term mitigation and large reliance on net negative emissions, resulting in a higher overshoot.",
       "tier": 0,
@@ -1845,7 +1818,7 @@
         "cmip7"
       ],
       "activity": [
-        "ScenarioMIP"
+        "scenariomip"
       ],
       "description": "Extension to Concentration driven scenario consistent with limiting warming to 1.5 degree C by 2100 AD with limited overshoot (as low as plausible) of 1.5 degree C",
       "tier": 0,
@@ -1855,7 +1828,7 @@
       "label": "scen7-vlloc-ext",
       "model-realms": [],
       "parent-activity": [
-        "ScenarioMIP"
+        "scenariomip"
       ],
       "parent-experiment": [
         "scen7-vlloc"
@@ -1872,7 +1845,7 @@
         "cmip7"
       ],
       "activity": [
-        "ScenarioMIP"
+        "scenariomip"
       ],
       "description": "Concentration driven scenario consistent with limiting warming to 1.5 degree C by 2100 AD with limited overshoot (as low as plausible) of 1.5 degree C",
       "tier": 0,
