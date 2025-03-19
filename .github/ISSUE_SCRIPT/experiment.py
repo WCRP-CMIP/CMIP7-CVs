@@ -111,7 +111,7 @@ def run(issue,packet):
             
             "model-realms": realms,
             "start-date": issue['start-date'],
-            "branch-date": issue['branch-date'],
+            # "branch-date": issue['branch-date'],
             "minimum-number-of-years": issue['(minimum)-number-of-years'],
 
             
