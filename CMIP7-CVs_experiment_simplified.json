@@ -1,12 +1,12 @@
 {
     "Header": {
         "file": "CMIP7-CVs_experiment_simplified.json",
-        "file_creation_date": "2025-03-19T16:45:35.013856",
+        "file_creation_date": "2025-03-19T18:36:27.668781",
         "version": "fatal: No names found, cannot describe anything.",
-        "checksum": "md5: bab8e6e22cca51519dedabaf3f234f1d",
+        "checksum": "md5: 8178cb4bde95bcfc88f7b49188b2ed5d",
         "repo_url": "https://github.com/WCRP-CMIP/CMIP7-CVs",
         "repo_prefix": "cmip7",
-        "last_commit": "047daa46b659a770cbc39119d6e53ea658784e66",
+        "last_commit": "b4a8ace3493763b82bf8ce71b124829d4a70fec5",
         "comment": "This is an automatically generated file. Do not edit."
     },
     "experiment_simplified": {
@@ -141,9 +141,6 @@
         },
         "piClim-VOC": {
             "description": "Perturbation from pre-industrial control using 1850 VOC emissions \n Pre-industrial climatological SSTs and sea ice extent, 1850 VOC emissions"
-        },
-        "piClim-aer": {
-            "description": "Effective radiative forcing by present-day aerosols"
         },
         "piClim-anthro": {
             "description": "DECK: effective radiative forcing by present day anthropogenic forcings \n Effective radiative forcing by present day anthropogenic forcings"
