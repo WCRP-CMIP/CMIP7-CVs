@@ -77,7 +77,7 @@ def run(issue,packet):
     if issue['parent-experiment'] == "Custom Parent: specify below":
         if issue['custom-parent-experiment'] != "-No response-":
             
-            git.update_issue(f"### Custom Parent {issue['custom-parent-experiment']} \n Please register the parent experiment.",err=False)
+            git.update_issue(f"### Custom Parent {issue['custom-parent-experiment']} \n Please register the parent experiment, if there is none, write none as per the form instructions.",err=False)
             
             parent = issue['custom-parent-experiment']
         
@@ -162,7 +162,7 @@ def run(issue,packet):
     
     # git.commit-override-author(acronym,issue["issue-type"])
     git.commit_one(outfile,author,comment=f'New entry {acronym} in {issue["issue-type"]} files.' ,branch=branch)
-
+    print('CREATING PULL\n',branch, author,title,os.environ['ISSUE_NUMBER'])
     git.newpull(branch,author,json.dumps(data,indent=4),title,os.environ['ISSUE_NUMBER'])
     
     
