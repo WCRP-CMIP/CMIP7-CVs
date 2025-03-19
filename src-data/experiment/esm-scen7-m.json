@@ -6,7 +6,7 @@
         "cmip7"
     ],
     "activity": [
-        "ScenarioMIP"
+        "scenariomip"
     ],
     "description": "Medium emission scenario consistent with current policies",
     "tier": 0,

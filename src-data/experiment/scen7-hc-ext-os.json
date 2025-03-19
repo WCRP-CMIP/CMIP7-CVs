@@ -6,7 +6,7 @@
         "cmip7"
     ],
     "activity": [
-        "ScenarioMIP"
+        "scenariomip"
     ],
     "description": "High concentration driven emission scenario overshoot extension to explore potential high-end impacts",
     "tier": 0,
@@ -16,7 +16,7 @@
     "label": "scen7-hc-ext-os",
     "model-realms": [],
     "parent-activity": [
-        "ScenarioMIP"
+        "scenariomip"
     ],
     "parent-experiment": [
         "scen7-hc"

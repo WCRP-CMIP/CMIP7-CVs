@@ -6,7 +6,7 @@
         "cmip7"
     ],
     "activity": [
-        "ScenarioMIP"
+        "scenariomip"
     ],
     "description": "High emission scenario extension to explore potential high-end impacts",
     "tier": 0,
@@ -16,7 +16,7 @@
     "label": "esm-scen7-h-ext",
     "model-realms": [],
     "parent-activity": [
-        "ScenarioMIP"
+        "scenariomip"
     ],
     "parent-experiment": [
         "esm-scen7-h"
