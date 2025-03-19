@@ -1,0 +1,28 @@
+{
+    "@context": "_context_",
+    "id": "scen7-hc-ext",
+    "type": [
+        "wcrp:experiment",
+        "cmip7"
+    ],
+    "activity": [
+        "scenariomip"
+    ],
+    "description": "High concentration driven emission scenario extension to explore potential high-end impacts",
+    "tier": 0,
+    "end": 2500,
+    "min-number-yrs-per-sim": 50,
+    "start": 2101,
+    "label": "scen7-hc-ext",
+    "model-realms": [],
+    "parent-activity": [
+        "scenariomip"
+    ],
+    "parent-experiment": [
+        "scen7-hc"
+    ],
+    "sub-experiment": [
+        "none"
+    ],
+    "long-label": "High, Concentration Driven Scenario Extension"
+}

@@ -1,0 +1,28 @@
+{
+    "@context": "_context_",
+    "id": "piclim-so2",
+    "type": [
+        "wcrp:experiment",
+        "cmip7"
+    ],
+    "activity": [
+        "aerchemmip"
+    ],
+    "description": "Perturbation from pre-industrial control using 1850 SO2 emissions \n Pre-industrial climatological SSTs and sea ice extent, 1850 SO2 emissions",
+    "tier": 0,
+    "end": -999,
+    "min-number-yrs-per-sim": -999,
+    "start": -999,
+    "label": "piClim-SO2",
+    "model-realms": [],
+    "parent-activity": [
+        "none"
+    ],
+    "parent-experiment": [
+        "none"
+    ],
+    "sub-experiment": [
+        "none"
+    ],
+    "long-label": "Describe piClim-SO2 in one sentence."
+}

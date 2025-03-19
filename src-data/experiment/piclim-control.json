@@ -1,0 +1,28 @@
+{
+    "@context": "_context_",
+    "id": "piclim-control",
+    "type": [
+        "wcrp:experiment",
+        "cmip7"
+    ],
+    "activity": [
+        "cmip"
+    ],
+    "description": "DECK: effective radiative forcing control \n Effective radiative forcing control simulation",
+    "tier": 0,
+    "end": -999,
+    "min-number-yrs-per-sim": -999,
+    "start": -999,
+    "label": "piClim-control",
+    "model-realms": [],
+    "parent-activity": [
+        "none"
+    ],
+    "parent-experiment": [
+        "none"
+    ],
+    "sub-experiment": [
+        "none"
+    ],
+    "long-label": "Describe piClim-control in one sentence."
+}

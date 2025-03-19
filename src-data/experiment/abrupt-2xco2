@@ -1,0 +1,28 @@
+{
+    "@context": "_context_",
+    "id": "abrupt-2xco2",
+    "type": [
+        "wcrp:experiment",
+        "cmip7"
+    ],
+    "activity": [
+        "cfmip"
+    ],
+    "description": "Abrupt doubling of CO2 \n Abrupt doubling of atmospheric CO2",
+    "tier": 0,
+    "end": -999,
+    "min-number-yrs-per-sim": -999,
+    "start": -999,
+    "label": "abrupt-2xCO2",
+    "model-realms": [],
+    "parent-activity": [
+        "none"
+    ],
+    "parent-experiment": [
+        "none"
+    ],
+    "sub-experiment": [
+        "none"
+    ],
+    "long-label": "Describe abrupt-2xCO2 in one sentence."
+}

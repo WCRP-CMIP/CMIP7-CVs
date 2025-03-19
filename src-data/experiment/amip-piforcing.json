@@ -1,0 +1,28 @@
+{
+    "@context": "_context_",
+    "id": "amip-piforcing",
+    "type": [
+        "wcrp:experiment",
+        "cmip7"
+    ],
+    "activity": [
+        "cfmip"
+    ],
+    "description": "AMIP experiment with pre-industrial forcing",
+    "tier": 0,
+    "end": -999,
+    "min-number-yrs-per-sim": -999,
+    "start": -999,
+    "label": "amip-piForcing",
+    "model-realms": [],
+    "parent-activity": [
+        "none"
+    ],
+    "parent-experiment": [
+        "none"
+    ],
+    "sub-experiment": [
+        "none"
+    ],
+    "long-label": "Describe amip-piForcing in one sentence."
+}

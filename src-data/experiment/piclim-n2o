@@ -1,0 +1,28 @@
+{
+    "@context": "_context_",
+    "id": "piclim-n2o",
+    "type": [
+        "wcrp:experiment",
+        "cmip7"
+    ],
+    "activity": [
+        "aerchemmip"
+    ],
+    "description": "Perturbation from pre-industrial control using 1850 N2O concentrations \n Pre-industrial climatological SSTs and sea ice extent, 1850 N2O concentrations",
+    "tier": 0,
+    "end": -999,
+    "min-number-yrs-per-sim": -999,
+    "start": -999,
+    "label": "piClim-N2O",
+    "model-realms": [],
+    "parent-activity": [
+        "none"
+    ],
+    "parent-experiment": [
+        "none"
+    ],
+    "sub-experiment": [
+        "none"
+    ],
+    "long-label": "Describe piClim-N2O in one sentence."
+}

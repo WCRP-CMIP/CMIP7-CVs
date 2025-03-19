@@ -1,0 +1,28 @@
+{
+    "@context": "_context_",
+    "id": "piclim-histall",
+    "type": [
+        "wcrp:experiment",
+        "cmip7"
+    ],
+    "activity": [
+        "rfmip"
+    ],
+    "description": "Effective radiative forcing by all historical forcing agents",
+    "tier": 0,
+    "end": -999,
+    "min-number-yrs-per-sim": -999,
+    "start": -999,
+    "label": "piClim-histall",
+    "model-realms": [],
+    "parent-activity": [
+        "none"
+    ],
+    "parent-experiment": [
+        "none"
+    ],
+    "sub-experiment": [
+        "none"
+    ],
+    "long-label": "Describe piClim-histall in one sentence."
+}
