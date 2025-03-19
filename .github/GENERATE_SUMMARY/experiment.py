@@ -21,4 +21,5 @@ def run(localhost,whoami,repopath,reponame):
         if old['Header']['checksum'] == summary['Header']['checksum']:
             return 'no update - file already exists'
     
-    cmipld.utils.io.wjsn(summary,location)
+    # cmipld.utils.io.wjsn(summary,location)
+    return location,me,summary
