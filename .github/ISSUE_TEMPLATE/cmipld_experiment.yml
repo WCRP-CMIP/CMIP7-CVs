@@ -289,8 +289,7 @@ body:
                 - For a set of DCPP “prediction” runs, enter all
                 dates of the first full forecast/hindcast year (e.g., 1960, 1970, 1980,
                 1990, 2000, 2010). 
-                - If there is no specific start date please leave this
-                field blank
+                - If there is no specific start date please enter the word "none"
         placeholder: 'e.g., 1850-01-01 or 1960,1970,1980'
     validations:
         required: false
