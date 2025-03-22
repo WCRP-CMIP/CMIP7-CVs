@@ -1,0 +1,38 @@
+{
+    "id": "highressst-p4kuni",
+    "type": [
+        "wcrp:experiment",
+        "cmip7"
+    ],
+    "activity": [
+        "HighResMIP2"
+    ],
+    "description": "Tier 3: highresSST-p4kuni  Conduct an experiment parallel to highresSST-present, using the same forcings but with SST uniformly increased by 4K globally (a uniform +4K SST perturbation)  For further details, please refer to: Roberts, M. J., Reed, K. A., Bao, Q., Barsugli, J. J., Camargo, S. J., Caron, L. P., \u2026 & Zhao, M. (2025). High-Resolution Model Intercomparison Project phase 2 (HighResMIP2) towards CMIP7. Geoscientific Model Development, 18, 1307\u20131332  [High-Resolution Model Intercomparison Project Phase 2 (HighResMIP2) towards CMIP7.pdf](https://github.com/user-attachments/files/19401949/High-Resolution.Model.Intercomparison.Project.Phase.2.HighResMIP2.towards.CMIP7.pdf)  Webpage: https://highresmip.org/experiments/experiment_cmip7/",
+    "label": "highresSST-p4kuni",
+    "long-label": "Idealised experiments for CMIP-comparable metrics - uniform +4K SST AMIP style",
+    "minimum-number-of-years": "43",
+    "model-realms": [
+        {
+            "id": "agcm",
+            "is-required": true
+        },
+        {
+            "id": "aer",
+            "is-required": false
+        },
+        {
+            "id": "bgc",
+            "is-required": false
+        },
+        {
+            "id": "chem",
+            "is-required": false
+        }
+    ],
+    "parent-experiment": [
+        "none"
+    ],
+    "start-date": "1980-01-01",
+    "sub-experiment": "none",
+    "tier": "3"
+}
