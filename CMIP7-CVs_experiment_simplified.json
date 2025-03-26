@@ -1,12 +1,12 @@
 {
     "Header": {
         "file": "CMIP7-CVs_experiment_simplified.json",
-        "file_creation_date": "2025-03-26T16:16:24.905082",
+        "file_creation_date": "2025-03-26T16:17:04.262335",
         "version": "fatal: No names found, cannot describe anything.",
-        "checksum": "md5: abced719e0fe481c1573731550ca372d",
+        "checksum": "md5: 2bb4f0799b7735d18139e0d22065dd86",
         "repo_url": "https://github.com/WCRP-CMIP/CMIP7-CVs",
         "repo_prefix": "cmip7",
-        "last_commit": "1bfb14c1ab6906acf4088cefa57fe1bcdc746590",
+        "last_commit": "45809c78e8714de4a18ae7ab6a19d730721ff8ec",
         "comment": "This is an automatically generated file. Do not edit."
     },
     "experiment_simplified": {
@@ -45,6 +45,9 @@
         },
         "amip": {
             "description": "DECK: AMIP \n AMIP (Atmospheric Model Intercomparison Project) experiment with prescribed SSTs and sea ice"
+        },
+        "amip-m4K": {
+            "description": "The configuration of the `amip-m4K` experiment will be the same as the Fast Track `amip-p4K` experiment, except that the sea surface temperatures are uniformly reduced by 4K rather than increased. This cooling should be applied to sea-ice-free grid boxes only. Sea ice and SSTs in grid boxes containing sea ice should remain the same as in the `amip` DECK experiment. In models which employ a fixed lower threshold near freezing for the SST used in the calculation of the surface fluxes, this should ideally also be reduced by 4K. This will support the investigation of inconsistent responses of clouds to a cooling versus a warming climate in a controlled way through comparison with the `amip-p4K` [(Ringer et al., 2023)](https://doi.org/10.1029/2023JD038861). This experiment also complements the `abrupt-0p5xCO2` experiment in that one can identify asymmetries in the warming/cooling response with and without interactions with the ocean.  Reference: [Webb et al., 2017](https://doi.org/10.5194/gmd)"
         },
         "amip-p4K": {
             "description": "The same as the `amip` DECK experiment, except that SSTs are subject to a uniform warming of 4K. This warming should be applied to the ice-free ocean surface only. Sea ice and SSTs in grid boxes containing sea ice remain the same as in the `amip` DECK experiment.  Reference: [Webb et al., 2017](https://doi.org/10.5194/gmd-10-359-2017)"
