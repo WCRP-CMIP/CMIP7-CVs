@@ -1,12 +1,12 @@
 {
     "Header": {
         "file": "CMIP7-CVs_experiment_simplified.json",
-        "file_creation_date": "2025-03-26T16:17:04.262335",
+        "file_creation_date": "2025-03-26T16:19:01.480029",
         "version": "fatal: No names found, cannot describe anything.",
-        "checksum": "md5: 2bb4f0799b7735d18139e0d22065dd86",
+        "checksum": "md5: 7d4f7596b5ccb05cc9c393669179a2e9",
         "repo_url": "https://github.com/WCRP-CMIP/CMIP7-CVs",
         "repo_prefix": "cmip7",
-        "last_commit": "45809c78e8714de4a18ae7ab6a19d730721ff8ec",
+        "last_commit": "5dc59abec426b88b1f8f7c641f3ca7d0ccf028ee",
         "comment": "This is an automatically generated file. Do not edit."
     },
     "experiment_simplified": {
@@ -51,6 +51,9 @@
         },
         "amip-p4K": {
             "description": "The same as the `amip` DECK experiment, except that SSTs are subject to a uniform warming of 4K. This warming should be applied to the ice-free ocean surface only. Sea ice and SSTs in grid boxes containing sea ice remain the same as in the `amip` DECK experiment.  Reference: [Webb et al., 2017](https://doi.org/10.5194/gmd-10-359-2017)"
+        },
+        "amip-p4K-SST-rad": {
+            "description": "Similar to `amip`, but SST is raised by 4K when calculating the upward longwave radiation from the sea surface using Planck function.  Reference: [Ogura et al., 2023](https://doi.org/10.1029/2023GL104786)"
         },
         "amip-piForcing": {
             "description": "Identical to the `amip` DECK experiment, but from 1870 to the present with constant pre-industrial forcing levels (anthropogenic and natural).  Reference: [Webb et al., 2017](https://doi.org/10.5194/gmd-10-359-2017)"
