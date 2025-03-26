@@ -1575,6 +1575,70 @@
       "long-label": "Describe LIGabrupt in one sentence."
     },
     {
+      "id": "piclim-2xbvoc",
+      "type": [
+        "wcrp:experiment",
+        "cmip7"
+      ],
+      "activity": [
+        "AerChemMIP"
+      ],
+      "description": "1. Detailed experiment configuration An atmosphere only configuration following piClim-control but with biogenic volatile organic compound emissions scaled by a factor of 2  2. Required model settings We encourage modelling centres to include as much atmospheric composition capability as possible. But, as a minimum, models should have tropospheric chemistry and interactive aerosols. And the experimental setup should be consistent with other AerChemMIP2 experiments, particularly piClim-control.  3. Experiment conditions  4. Links to relevant references Fiedler et al. (in prep.) AerChemMIP2 - Unraveling the role of reactive gases, aerosols, and land use for air quality and climate change in CMIP7  5. Similarities to CMIP6 experiments piClim–2xVOC  6. Forcing differences from parent experiment Doubled biogenic volatile organic compound emissions",
+      "label": "piClim-2xBVOC",
+      "long-label": "Pre-industrial climatology with doubled biogenic volatile organic carbon emissions",
+      "minimum-number-of-years": "30",
+      "model-realms": [
+        {
+          "id": "agcm",
+          "is-required": true
+        },
+        {
+          "id": "chem",
+          "is-required": true
+        }
+      ],
+      "parent-experiment": [
+        "piClim-control"
+      ],
+      "start-date": "none",
+      "sub-experiment": "none",
+      "tier": "2"
+    },
+    {
+      "id": "piclim-2xfire",
+      "type": [
+        "wcrp:experiment",
+        "cmip7"
+      ],
+      "activity": [
+        "AerChemMIP"
+      ],
+      "description": "1. Detailed experiment configuration An atmosphere only configuration following piClim-control but with emissions of all fire-derived gases and aerosols scaled by a factor of 2. Setup consistent with the fire parameterization in piClim-control experiments (e.g., NOx, BC, OC, CO, VOCs, CH4, DMS, SO2 or a subset of these for CHEM)  2. Required model settings We encourage modelling centres to include as much atmospheric composition capability as possible. As a minimum, models should have prescribed or interactive aerosols. And the experimental setup should be consistent with other AerChemMIP2 experiments, particularly piClim-control.   3. Experiment conditions  4. Links to relevant references Fiedler et al. (in prep.) AerChemMIP2 - Unraveling the role of reactive gases, aerosols, and land use for air quality and climate change in CMIP7  5. Similarities to CMIP6 experiments piClim–2xfire  6. Forcing differences from parent experiment Doubled fire emissions",
+      "label": "piClim-2xfire",
+      "long-label": "Pre-industrial climatology with doubled emissions of all fire-derived gases and aerosols",
+      "minimum-number-of-years": "30",
+      "model-realms": [
+        {
+          "id": "aer",
+          "is-required": true
+        },
+        {
+          "id": "agcm",
+          "is-required": true
+        },
+        {
+          "id": "chem",
+          "is-required": false
+        }
+      ],
+      "parent-experiment": [
+        "piClim-control"
+      ],
+      "start-date": "none",
+      "sub-experiment": "none",
+      "tier": "2"
+    },
+    {
       "id": "piclim-4xco2",
       "type": [
         "wcrp:experiment",
@@ -1850,6 +1914,40 @@
         "none"
       ],
       "long-label": "Describe piClim-N2O in one sentence."
+    },
+    {
+      "id": "piclim-nh3",
+      "type": [
+        "wcrp:experiment",
+        "cmip7"
+      ],
+      "activity": [
+        "AerChemMIP"
+      ],
+      "description": "1. Detailed experiment configuration An atmosphere only configuration following piClim but using present-day (2021) ammonia emissions  2. Required model settings We encourage modelling centres to include as much atmospheric composition capability as possible. As a minimum, models should have prescribed or interactive aerosols. And the experimental setup should be consistent with other AerChemMIP2 experiments, particularly piClim-control.  3. Experiment conditions  4. Links to relevant references Fiedler et al. (in prep.) AerChemMIP2 - Unraveling the role of reactive gases, aerosols, and land use for air quality and climate change in CMIP7  5. Similarities to CMIP6 experiments piClim-NH3  6. Forcing differences from parent experiment Present-day (2021) ammonia emissions",
+      "label": "piClim-NH3",
+      "long-label": "Pre-industrial climatology with present-day ammonia emissions",
+      "minimum-number-of-years": "30",
+      "model-realms": [
+        {
+          "id": "aer",
+          "is-required": true
+        },
+        {
+          "id": "agcm",
+          "is-required": true
+        },
+        {
+          "id": "chem",
+          "is-required": false
+        }
+      ],
+      "parent-experiment": [
+        "piClim-control"
+      ],
+      "start-date": "none",
+      "sub-experiment": "none",
+      "tier": "1"
     },
     {
       "id": "piclim-nox",
