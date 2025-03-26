@@ -1,12 +1,12 @@
 {
     "Header": {
         "file": "CMIP7-CVs_experiment_simplified.json",
-        "file_creation_date": "2025-03-26T16:13:06.148804",
+        "file_creation_date": "2025-03-26T16:14:22.074715",
         "version": "fatal: No names found, cannot describe anything.",
-        "checksum": "md5: 504010afeb1d6fdf5aebc74caadbe9ba",
+        "checksum": "md5: 16f9fbbce5ac5b89cbb087305e0a4962",
         "repo_url": "https://github.com/WCRP-CMIP/CMIP7-CVs",
         "repo_prefix": "cmip7",
-        "last_commit": "661d668ec0b69cb1325ed787ec8f978c43f78ec5",
+        "last_commit": "cbea82d8f89c2795874225c71d610a26ba783ad3",
         "comment": "This is an automatically generated file. Do not edit."
     },
     "experiment_simplified": {
@@ -47,7 +47,7 @@
             "description": "The same as the `amip` DECK experiment, except that SSTs are subject to a uniform warming of 4K. This warming should be applied to the ice-free ocean surface only. Sea ice and SSTs in grid boxes containing sea ice remain the same as in the `amip` DECK experiment.  Reference: [Webb et al., 2017](https://doi.org/10.5194/gmd-10-359-2017)"
         },
         "amip-piForcing": {
-            "description": "AMIP experiment with pre-industrial forcing"
+            "description": "Identical to the `amip` DECK experiment, but from 1870 to the present with constant pre-industrial forcing levels (anthropogenic and natural).  Reference: [Webb et al., 2017](https://doi.org/10.5194/gmd-10-359-2017)"
         },
         "esm-flat10-cdr": {
             "description": "10 years of carbon dioxide removal (CDR) following 10 years of constant atmospheric CO2"
