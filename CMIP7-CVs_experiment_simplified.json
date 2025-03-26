@@ -1,12 +1,12 @@
 {
     "Header": {
         "file": "CMIP7-CVs_experiment_simplified.json",
-        "file_creation_date": "2025-03-26T22:36:11.795681",
+        "file_creation_date": "2025-03-26T22:36:41.187921",
         "version": "fatal: No names found, cannot describe anything.",
-        "checksum": "md5: 94cda71fa613ac00f0a2bfa70d577700",
+        "checksum": "md5: 236097fae837b79f99d5ec7ed1b195c2",
         "repo_url": "https://github.com/WCRP-CMIP/CMIP7-CVs",
         "repo_prefix": "cmip7",
-        "last_commit": "a81d100bc35830b6470c3df5e4c0f4ca1ef18e73",
+        "last_commit": "f2f94b81644fff62389d974640aef7574fd4d16d",
         "comment": "This is an automatically generated file. Do not edit."
     },
     "experiment_simplified": {
@@ -162,6 +162,9 @@
         },
         "piClim-4xCO2": {
             "description": "DECK: effective radiative forcing by 4xCO2 \n Effective radiative forcing by 4xCO2"
+        },
+        "piClim-BC": {
+            "description": "1. Detailed experiment configuration An atmosphere only configuration following piClim-control but using present-day (2021) black carbon  2. Required model settings We encourage modelling centres to include as much atmospheric composition capability as possible. As a minimum, models should have prescribed or interactive aerosols. And the experimental setup should be consistent with other AerChemMIP2 experiments, particularly piClim-control.  3. Experiment conditions  4. Links to relevant references Fiedler et al. (in prep.) AerChemMIP2 - Unraveling the role of reactive gases, aerosols, and land use for air quality and climate change in CMIP7  5. Similarities to CMIP6 experiments Similar to piClim-BC in CMIP6  6. Forcing differences from parent experiment Present-day (2021) BC emissions"
         },
         "piClim-CH4": {
             "description": "Perturbation from pre-industrial control using 1850 methane concentrations \n Pre-industrial climatological SSTs and sea ice extent, 1850 methane concentrations"
