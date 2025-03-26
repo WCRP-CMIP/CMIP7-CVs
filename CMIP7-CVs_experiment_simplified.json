@@ -1,12 +1,12 @@
 {
     "Header": {
         "file": "CMIP7-CVs_experiment_simplified.json",
-        "file_creation_date": "2025-03-26T16:12:10.495873",
+        "file_creation_date": "2025-03-26T16:13:06.148804",
         "version": "fatal: No names found, cannot describe anything.",
-        "checksum": "md5: e13d6dfddbb07a23329863101b26c352",
+        "checksum": "md5: 504010afeb1d6fdf5aebc74caadbe9ba",
         "repo_url": "https://github.com/WCRP-CMIP/CMIP7-CVs",
         "repo_prefix": "cmip7",
-        "last_commit": "9e1346de1d27b5943363acc9a489b5b14e3a73c9",
+        "last_commit": "661d668ec0b69cb1325ed787ec8f978c43f78ec5",
         "comment": "This is an automatically generated file. Do not edit."
     },
     "experiment_simplified": {
@@ -43,8 +43,8 @@
         "amip": {
             "description": "DECK: AMIP \n AMIP (Atmospheric Model Intercomparison Project) experiment with prescribed SSTs and sea ice"
         },
-        "amip-p4k": {
-            "description": "AMIP experiment with uniform 4K SST increase"
+        "amip-p4K": {
+            "description": "The same as the `amip` DECK experiment, except that SSTs are subject to a uniform warming of 4K. This warming should be applied to the ice-free ocean surface only. Sea ice and SSTs in grid boxes containing sea ice remain the same as in the `amip` DECK experiment.  Reference: [Webb et al., 2017](https://doi.org/10.5194/gmd-10-359-2017)"
         },
         "amip-piForcing": {
             "description": "AMIP experiment with pre-industrial forcing"
