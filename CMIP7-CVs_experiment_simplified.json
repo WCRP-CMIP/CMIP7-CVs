@@ -1,12 +1,12 @@
 {
     "Header": {
         "file": "CMIP7-CVs_experiment_simplified.json",
-        "file_creation_date": "2025-03-26T16:19:01.480029",
+        "file_creation_date": "2025-03-26T16:19:36.143519",
         "version": "fatal: No names found, cannot describe anything.",
-        "checksum": "md5: 7d4f7596b5ccb05cc9c393669179a2e9",
+        "checksum": "md5: 82848d3098bada5426a7c06da8c0acc3",
         "repo_url": "https://github.com/WCRP-CMIP/CMIP7-CVs",
         "repo_prefix": "cmip7",
-        "last_commit": "5dc59abec426b88b1f8f7c641f3ca7d0ccf028ee",
+        "last_commit": "8210b559147f11fb0b438ca15af4a971c3907011",
         "comment": "This is an automatically generated file. Do not edit."
     },
     "experiment_simplified": {
@@ -54,6 +54,9 @@
         },
         "amip-p4K-SST-rad": {
             "description": "Similar to `amip`, but SST is raised by 4K when calculating the upward longwave radiation from the sea surface using Planck function.  Reference: [Ogura et al., 2023](https://doi.org/10.1029/2023GL104786)"
+        },
+        "amip-p4K-SST-turb": {
+            "description": "As `amip`, but with SSTs subject to a uniform warming of 4K only when calculating turbulent transport of the latent and sensible heat fluxes at the air-sea interface using bulk aerodynamic formulae.  Reference: [Ogura et al., 2023](https://doi.org/10.1029/2023GL104786)"
         },
         "amip-piForcing": {
             "description": "Identical to the `amip` DECK experiment, but from 1870 to the present with constant pre-industrial forcing levels (anthropogenic and natural).  Reference: [Webb et al., 2017](https://doi.org/10.5194/gmd-10-359-2017)"
