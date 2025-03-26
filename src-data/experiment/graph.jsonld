@@ -1641,25 +1641,36 @@
         "cmip7"
       ],
       "activity": [
-        "rfmip"
+        "RFMIP"
       ],
-      "description": "Effective radiative forcing by all historical forcing agents",
-      "tier": 0,
-      "end": -999,
-      "min-number-yrs-per-sim": -999,
-      "start": -999,
+      "description": "A simulation with *all* time-varying forcings (*both natural and anthropogenic*) following the historical and ScenarioMIP `scen7-mc` scenario. Greenhouse gases should be prescribed concentrations. Simulations are run atmosphere-only, with a 12-month repeating climatology of sea surface temperatures and sea-ice distributions taken from a climatology of at least 30 years of the same model's `piControl` run. Interactive vegetation, if present in the model, should be turned on. Experiment design is similar to CMIP6 `piClim-histall` experiment (Pincus et al. 2016) with the future scenario changed from `ssp245` to `scen7-mc`.  Pincus, R., Forster, P. M., and Stevens, B.: The Radiative Forcing Model Intercomparison Project (RFMIP): experimental protocol for CMIP6, Geosci. Model Dev., 9, 3447–3460, https://doi.org/10.5194/gmd-9-3447-2016, 2016.",
       "label": "piClim-histall",
-      "model-realms": [],
-      "parent-activity": [
-        "none"
+      "long-label": "historical and future transient effective radiative forcing from all forcers",
+      "minimum-number-of-years": "251",
+      "model-realms": [
+        {
+          "id": "agcm",
+          "is-required": true
+        },
+        {
+          "id": "aer",
+          "is-required": false
+        },
+        {
+          "id": "bgc",
+          "is-required": false
+        },
+        {
+          "id": "chem",
+          "is-required": false
+        }
       ],
       "parent-experiment": [
-        "none"
+        "piControl"
       ],
-      "sub-experiment": [
-        "none"
-      ],
-      "long-label": "Describe piClim-histall in one sentence."
+      "start-date": "1850-01-01",
+      "sub-experiment": "none",
+      "tier": "1"
     },
     {
       "id": "piclim-n2o",
