@@ -1,28 +1,30 @@
 {
-    "@context": "_context_",
     "id": "piclim-nox",
     "type": [
         "wcrp:experiment",
         "cmip7"
     ],
     "activity": [
-        "aerchemmip"
+        "AerChemMIP"
     ],
-    "description": "Perturbation from pre-industrial control using 1850 NOx emissions \n Pre-industrial climatological SSTs and sea ice extent, 1850 NOx emissions",
-    "tier": 0,
-    "end": -999,
-    "min-number-yrs-per-sim": -999,
-    "start": -999,
+    "description": "1. Detailed experiment configuration An atmosphere only configuration following piClim-control but using present-day (2021) NOx  2. Required model settings We encourage modelling centres to include as much atmospheric composition capability as possible. But, as a minimum, models should have tropospheric chemistry and interactive aerosols. And the experimental setup should be consistent with other AerChemMIP2 experiments, particularly piClim-control.  3. Experiment conditions  4. Links to relevant references Fiedler et al. (in prep.) AerChemMIP2 - Unraveling the role of reactive gases, aerosols, and land use for air quality and climate change in CMIP7  5. Similarities to CMIP6 experiments piClim-NOx  6. Forcing differences from parent experiment Present-day (2021) NOx",
     "label": "piClim-NOx",
-    "model-realms": [],
-    "parent-activity": [
-        "none"
+    "long-label": "Pre-industrial climatology with present-day nitrogen oxides (NOx)",
+    "minimum-number-of-years": "30",
+    "model-realms": [
+        {
+            "id": "agcm",
+            "is-required": true
+        },
+        {
+            "id": "chem",
+            "is-required": true
+        }
     ],
     "parent-experiment": [
-        "none"
+        "piClim-control"
     ],
-    "sub-experiment": [
-        "none"
-    ],
-    "long-label": "Describe piClim-NOx in one sentence."
+    "start-date": "none",
+    "sub-experiment": "none",
+    "tier": "1"
 }
