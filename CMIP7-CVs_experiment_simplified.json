@@ -1,12 +1,12 @@
 {
     "Header": {
         "file": "CMIP7-CVs_experiment_simplified.json",
-        "file_creation_date": "2025-03-26T16:24:25.738359",
+        "file_creation_date": "2025-03-26T16:25:44.663141",
         "version": "fatal: No names found, cannot describe anything.",
-        "checksum": "md5: a837c476db7edaf5a2d4a1d9e2f0bfc0",
+        "checksum": "md5: 53dc41af224a78f1577107bea162038b",
         "repo_url": "https://github.com/WCRP-CMIP/CMIP7-CVs",
         "repo_prefix": "cmip7",
-        "last_commit": "e28de910ccec945da91c506e6163972f4be8b8be",
+        "last_commit": "4ae70bad3921de762ec589c9690a83e4fed2d169",
         "comment": "This is an automatically generated file. Do not edit."
     },
     "experiment_simplified": {
@@ -36,6 +36,9 @@
         },
         "abrupt-0p5xCO2": {
             "description": "Identical to the `piControl` DECK experiment but with a step change to 0.5xCO2 concentration from its pre-industrial value, held constant for the duration of the run.  Reference: [Webb et al., 2017](https://doi.org/10.5194/gmd-10-359-2017)"
+        },
+        "abrupt-127k": {
+            "description": "Suggested experiment description for the last column of https://wcrp-cmip.github.io/CMIP6_CVs/docs/CMIP6_experiment_id.html:  Conceptually similar to abrupt-4xCO2 DECK experiment, except that orbital forcing and greenhouse gas conditions are abruptly changed from those of piControl, that also serves as an initial state, to their configuration of 127,000 years ago, with high boreal spring to autumn insolation leading to low sea-ice in the Arctic.  More information regarding points 1-6, it must still be decided which parts of this information are included in any databases or documents:  1. AOGCM initialized from a spun-up piControl with constant-in-time forcing of orbital parameters and greenhouse gas concentrations indicative of 127,000 years before present 2. as piControl, but specifying orbital configuration (eccentricity, obliquity, length of perihelion) and greenhouse gas concentrations as per PMIP4 lig127k (Otto-Bliesner et al., 2017; also refer to Sime et al. in prep.); use of components AER, CHEM, BGC is allowed, yet it must be ensured that relevant greenhouse gas concentrations in the atmosphere stay constant at the specified values throughout the simulation 3. orbital configuration (eccentricity, obliquity, length of perihelion) and greenhouse gas concentrations changed with respect to piControl 4. Otto-Bliesner et al. (2017), https://gmd.copernicus.org/articles/10/3979/2017/; Guarino et al (2020), https://www.nature.com/articles/s41558-020-0865-2; Sime et al. (2023), https://cp.copernicus.org/articles/19/883/2023/ 5. piControl (but with differences in top of the atmosphere insolation and greenhouse gas concentrations); abrupt-4xCO2 (but with differences in the type of boundary conditions/forcing changed at initialisation) 6. orbital configuration (eccentricity, obliquity, length of perihelion) and greenhouse gas concentrations"
         },
         "abrupt-2xCO2": {
             "description": "Identical to the `piControl` DECK experiment but with a step change to 2xCO2 concentration from its pre-industrial value, held constant for the duration of the run.  Reference: [Webb et al., 2017](https://doi.org/10.5194/gmd-10-359-2017)"
