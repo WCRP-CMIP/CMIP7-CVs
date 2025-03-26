@@ -89,8 +89,12 @@ def run(issue,packet):
     realms = []
     for mr in issue['source-type-codes-for-required-model-components'].split(', '):
         realms.append({'id':mr.lower(),'is-required':True})
-    for mr in issue['source-type-codes-for-additional-allowed-model-components'].split(', '):
-        realms.append({'id':mr.lower(),'is-required':False})
+    for ma in issue['source-type-codes-for-additional-allowed-model-components'].split(', '):
+        if ma != "_No response_":
+            realms.append({'id':ma.lower(),'is-required':False})
+    
+    if issue['start-date'] == "_No response_":
+        issue['start-date'] = 'none'
     
     
     
