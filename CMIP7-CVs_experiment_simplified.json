@@ -1,12 +1,12 @@
 {
     "Header": {
         "file": "CMIP7-CVs_experiment_simplified.json",
-        "file_creation_date": "2025-03-26T16:15:40.784298",
+        "file_creation_date": "2025-03-26T16:16:24.905082",
         "version": "fatal: No names found, cannot describe anything.",
-        "checksum": "md5: e97eda67885e134a7f4b5d371f7701f4",
+        "checksum": "md5: abced719e0fe481c1573731550ca372d",
         "repo_url": "https://github.com/WCRP-CMIP/CMIP7-CVs",
         "repo_prefix": "cmip7",
-        "last_commit": "f138ad6702178c0a637ec35129fc5d44dec08563",
+        "last_commit": "1bfb14c1ab6906acf4088cefa57fe1bcdc746590",
         "comment": "This is an automatically generated file. Do not edit."
     },
     "experiment_simplified": {
@@ -33,6 +33,9 @@
         },
         "abrupt-0p5CO2": {
             "description": "Abrupt halving of CO2 \n Abrupt halving of atmospheric CO2"
+        },
+        "abrupt-0p5xCO2": {
+            "description": "Identical to the `piControl` DECK experiment but with a step change to 0.5xCO2 concentration from its pre-industrial value, held constant for the duration of the run.  Reference: [Webb et al., 2017](https://doi.org/10.5194/gmd-10-359-2017)"
         },
         "abrupt-2xCO2": {
             "description": "Identical to the `piControl` DECK experiment but with a step change to 2xCO2 concentration from its pre-industrial value, held constant for the duration of the run.  Reference: [Webb et al., 2017](https://doi.org/10.5194/gmd-10-359-2017)"
