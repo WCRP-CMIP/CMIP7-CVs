@@ -1,12 +1,12 @@
 {
     "Header": {
         "file": "CMIP7-CVs_experiment_simplified.json",
-        "file_creation_date": "2025-03-26T16:19:36.143519",
+        "file_creation_date": "2025-03-26T16:20:26.186292",
         "version": "fatal: No names found, cannot describe anything.",
-        "checksum": "md5: 82848d3098bada5426a7c06da8c0acc3",
+        "checksum": "md5: d4241479112fb37fb347b6b04350c3f5",
         "repo_url": "https://github.com/WCRP-CMIP/CMIP7-CVs",
         "repo_prefix": "cmip7",
-        "last_commit": "8210b559147f11fb0b438ca15af4a971c3907011",
+        "last_commit": "f3440e147d3e6aee2320936b0f8cc8e458c5d462",
         "comment": "This is an automatically generated file. Do not edit."
     },
     "experiment_simplified": {
@@ -14,7 +14,7 @@
             "description": "DECK: 1 percent per year CO2 increase \n Increase CO2 concentration from pre-industrial level at 1% per year until quadrupling"
         },
         "1pctCO2-bgc": {
-            "description": "Biogeochemically-coupled version of 1 percent per year CO2 increase experiment"
+            "description": "1pctCO2-bgc is retained from CMIP6.  It is a simulation which branches from piControl with a 1% per year increase in CO2 concentration from pre-industrial levels, with the CO2 \u201cbiogeochemically-coupled\u201d. This means that only the model\u2019s carbon cycle components (both land and ocean) respond to the increase in CO2, whereas the model\u2019s radiation code uses a constant, preindustrial concentration of CO2.  The 1pctCO2 DECK simulation is required for comparison. This experiment is designed to isolate carbon-concentration and carbon climate elements of the global carbon feedbacks. It will also enable calibration of climate emulators.  See Jones et al 2016: https://gmd.copernicus.org/articles/9/2853/2016/ , especially section 3.2.3  Example of use/analysis is Arora et al. 2020: https://bg.copernicus.org/articles/17/4173/2020/"
         },
         "1pctCO2-rad": {
             "description": "Radiatively-coupled version of 1 percent per year CO2 increase experiment"
