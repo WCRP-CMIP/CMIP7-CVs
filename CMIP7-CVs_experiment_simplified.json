@@ -1,12 +1,12 @@
 {
     "Header": {
         "file": "CMIP7-CVs_experiment_simplified.json",
-        "file_creation_date": "2025-03-26T16:23:35.507925",
+        "file_creation_date": "2025-03-26T16:24:25.738359",
         "version": "fatal: No names found, cannot describe anything.",
-        "checksum": "md5: 114b93c27a3d684f54bee05951514f68",
+        "checksum": "md5: a837c476db7edaf5a2d4a1d9e2f0bfc0",
         "repo_url": "https://github.com/WCRP-CMIP/CMIP7-CVs",
         "repo_prefix": "cmip7",
-        "last_commit": "f04704100edaa6c67e1b59430168a9177b2f7980",
+        "last_commit": "e28de910ccec945da91c506e6163972f4be8b8be",
         "comment": "This is an automatically generated file. Do not edit."
     },
     "experiment_simplified": {
@@ -213,6 +213,9 @@
         },
         "scen7-vlloc-ext": {
             "description": "Extension to Concentration driven scenario consistent with limiting warming to 1.5 degree C by 2100 AD with limited overshoot (as low as plausible) of 1.5 degree C"
+        },
+        "spinup-1950": {
+            "description": "This experiment is designed to provide a multidecadal spinup for coupled model simulations. Its final output will serve as initial conditions for the control-1950, hist-1950, and highres-4xCO2 scenarios. The setup follows the same design as HighResMIP1, typically run for 50 years starting from the initial conditions.  For solar and ozone forcing, we suggest using an 11-year climatology centered on 1950 to average the solar cycle. For greenhouse gases (GHG), concentrations can be set to 1950 values as defined in CMIP. A 10-year mean around 1950 (e.g., 1946\u20131955 or 1950\u20131959) is recommended for aerosols and volcanic forcing.  For further details, please refer to: Roberts et al. (2025). High-Resolution Model Intercomparison Project phase 2 (HighResMIP2) towards CMIP7. Geoscientific Model Development, 18, 1307\u20131332."
         }
     }
 }
