@@ -1,12 +1,12 @@
 {
     "Header": {
         "file": "CMIP7-CVs_experiment_simplified.json",
-        "file_creation_date": "2025-03-27T15:08:46.133989",
+        "file_creation_date": "2025-03-27T15:10:33.229454",
         "version": "fatal: No names found, cannot describe anything.",
-        "checksum": "md5: 4e53055c1c9a51d069f55dea00fdfcb0",
+        "checksum": "md5: 81ed94e6ca0ced1af6977b3c6ea5d4e4",
         "repo_url": "https://github.com/WCRP-CMIP/CMIP7-CVs",
         "repo_prefix": "cmip7",
-        "last_commit": "6fa218a54698f708d50e3baf364f4b2b78541c2c",
+        "last_commit": "bb750b1fc6eb2dc6a7438cf1648f0e3788bf4f58",
         "comment": "This is an automatically generated file. Do not edit."
     },
     "experiment_simplified": {
@@ -128,10 +128,10 @@
             "description": "Starting from the end of the spinup-1950 simulation, Use time-varying forcings from CMIP7 or CMIP6  For further details, please refer to: Roberts, M. J., Reed, K. A., Bao, Q., Barsugli, J. J., Camargo, S. J., Caron, L. P., \u2026 & Zhao, M. (2025). High-Resolution Model Intercomparison Project phase 2 (HighResMIP2) towards CMIP7. Geoscientific Model Development, 18, 1307\u20131332  [High-Resolution Model Intercomparison Project Phase 2 (HighResMIP2) towards CMIP7.pdf](https://github.com/user-attachments/files/19400815/High-Resolution.Model.Intercomparison.Project.Phase.2.HighResMIP2.towards.CMIP7.pdf)  Webpage: https://highresmip.org/experiments/experiment_cmip7/"
         },
         "hist-GHG": {
-            "description": "Historical simulation with greenhouse gas forcing only"
+            "description": "1.  As the historical simulation but with only the greenhouse gas forcing following that of historical out to 2021 (and the medium scenario from 2022 to 2035) and all other forcings held at pre-industrial levels. 2. As the historical simulation but with alterations to the forcings. 3. 1850 to 2035 coupled simulations with greenhouse gas forcing from the historical followed by medium scenario and all other forcings held fixed at pre-industrial control values.  Stratospheric and tropospheric ozone should be held constant at piControl levels. 4.  https://doi.org/10.5194/egusphere-2024-4086 5. Similar to hist-GHG from CMIP6 but sratospheric and tropospheric ozone should be held fixed. 6. Time evolving greenhouse gases from historical and then medium scenario and other forcings as in the piControl."
         },
         "hist-aer": {
-            "description": "Historical simulation with aerosol forcing only"
+            "description": "1. As historical but with only time evolving historical aerosols out to 2021 and then Medium scenario aerosols between 2021 and 2035.  This includes changes in suphur dioxide, black carbon, organic carbon, ammonia, NOx and VOCs, from biomass burning, industrial emissions, and other sources.  Other forcings held at piControl levels. 2. Coupled simulations initialized from the piControl and run to 2021 under historical aerosol emissions and thereafter to 2035 using the medium scenario with other forcings held fixed at piControl levels. 3. Coupled simulations initialized from the piControl and run to 2021 under historical aerosol emissions and thereafter to 2035 using the medium scenario with other forcings held fixed at piControl levels. 4. https://doi.org/10.5194/egusphere-2024-4086 5. As CMIP6 hist-aer. 6. Time evolving historical and then medium scenario aerosol forcings while all other forcings are held at piControl levels."
         },
         "hist-nat": {
             "description": "Historical simulation with natural forcing only"
@@ -186,6 +186,9 @@
         },
         "piClim-OC": {
             "description": "1. Detailed experiment configuration An atmosphere only configuration following piClim but using present-day (2021) organic carbon emissions (only)  2. Required model settings We encourage modelling centres to include as much atmospheric composition capability as possible. As a minimum, models should have prescribed or interactive aerosols. And the experimental setup should be consistent with other AerChemMIP2 experiments, particularly piClim-control.   3. Experiment conditions  4. Links to relevant references Fiedler et al. (in prep.) AerChemMIP2 - Unraveling the role of reactive gases, aerosols, and land use for air quality and climate change in CMIP7  5. Similarities to CMIP6 experiments piClim-OC  6. Forcing differences from parent experiment Present-day (2021) OC emissions"
+        },
+        "piClim-ODS": {
+            "description": "1. Detailed experiment configuration An atmosphere only configuration following piClim-control but using present-day (2021) ozone depleting substances (ODSs)  2. Required model settings We encourage modelling centres to include as much atmospheric composition capability as possible. But, as a minimum, models should have stratospheric chemistry. And the experimental setup should be consistent with other AerChemMIP2 experiments, particularly piClim-control.   3. Experiment conditions  4. Links to relevant references Fiedler et al. (in prep.) AerChemMIP2 - Unraveling the role of reactive gases, aerosols, and land use for air quality and climate change in CMIP7  5. Similarities to CMIP6 experiments piClim-HC  6. Forcing differences from parent experiment Present-day (2021) ozone depleting substances"
         },
         "piClim-SO2": {
             "description": "Perturbation from pre-industrial control using 1850 SO2 emissions \n Pre-industrial climatological SSTs and sea ice extent, 1850 SO2 emissions"
