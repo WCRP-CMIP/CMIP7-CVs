@@ -1253,42 +1253,24 @@
         "cmip7"
       ],
       "activity": [
-        "damip"
+        "DAMIP"
       ],
-      "description": "Historical simulation with aerosol forcing only",
-      "tier": 0,
-      "end": -999,
-      "min-number-yrs-per-sim": -999,
-      "start": -999,
+      "description": "1. As historical but with only time evolving historical aerosols out to 2021 and then Medium scenario aerosols between 2021 and 2035.  This includes changes in suphur dioxide, black carbon, organic carbon, ammonia, NOx and VOCs, from biomass burning, industrial emissions, and other sources.  Other forcings held at piControl levels. 2. Coupled simulations initialized from the piControl and run to 2021 under historical aerosol emissions and thereafter to 2035 using the medium scenario with other forcings held fixed at piControl levels. 3. Coupled simulations initialized from the piControl and run to 2021 under historical aerosol emissions and thereafter to 2035 using the medium scenario with other forcings held fixed at piControl levels. 4. https://doi.org/10.5194/egusphere-2024-4086 5. As CMIP6 hist-aer. 6. Time evolving historical and then medium scenario aerosol forcings while all other forcings are held at piControl levels.",
       "label": "hist-aer",
+      "long-label": "hist-aer",
+      "minimum-number-of-years": "186",
       "model-realms": [
         {
           "id": "aogcm",
           "is-required": true
-        },
-        {
-          "id": "aer",
-          "is-required": false
-        },
-        {
-          "id": "chem",
-          "is-required": false
-        },
-        {
-          "id": "bgc",
-          "is-required": false
         }
       ],
-      "parent-activity": [
-        "none"
-      ],
       "parent-experiment": [
-        "none"
+        "piControl"
       ],
-      "sub-experiment": [
-        "none"
-      ],
-      "long-label": "Describe hist-aer in one sentence."
+      "start-date": "1850-01-01",
+      "sub-experiment": "none",
+      "tier": "1"
     },
     {
       "id": "hist-ghg",
@@ -1297,42 +1279,24 @@
         "cmip7"
       ],
       "activity": [
-        "damip"
+        "DAMIP"
       ],
-      "description": "Historical simulation with greenhouse gas forcing only",
-      "tier": 0,
-      "end": -999,
-      "min-number-yrs-per-sim": -999,
-      "start": -999,
+      "description": "1.  As the historical simulation but with only the greenhouse gas forcing following that of historical out to 2021 (and the medium scenario from 2022 to 2035) and all other forcings held at pre-industrial levels. 2. As the historical simulation but with alterations to the forcings. 3. 1850 to 2035 coupled simulations with greenhouse gas forcing from the historical followed by medium scenario and all other forcings held fixed at pre-industrial control values.  Stratospheric and tropospheric ozone should be held constant at piControl levels. 4.  https://doi.org/10.5194/egusphere-2024-4086 5. Similar to hist-GHG from CMIP6 but sratospheric and tropospheric ozone should be held fixed. 6. Time evolving greenhouse gases from historical and then medium scenario and other forcings as in the piControl.",
       "label": "hist-GHG",
+      "long-label": "Historical simulation with time evolving greenhouse gas forcing only and all other forcings at pre-industrial levels.",
+      "minimum-number-of-years": "186",
       "model-realms": [
         {
           "id": "aogcm",
           "is-required": true
-        },
-        {
-          "id": "aer",
-          "is-required": false
-        },
-        {
-          "id": "chem",
-          "is-required": false
-        },
-        {
-          "id": "bgc",
-          "is-required": false
         }
       ],
-      "parent-activity": [
-        "none"
-      ],
       "parent-experiment": [
-        "none"
+        "piControl"
       ],
-      "sub-experiment": [
-        "none"
-      ],
-      "long-label": "Describe hist-GHG in one sentence."
+      "start-date": "1850-01-01",
+      "sub-experiment": "none",
+      "tier": "1"
     },
     {
       "id": "hist-nat",
@@ -2142,6 +2106,36 @@
         {
           "id": "chem",
           "is-required": false
+        }
+      ],
+      "parent-experiment": [
+        "piClim-control"
+      ],
+      "start-date": "none",
+      "sub-experiment": "none",
+      "tier": "1"
+    },
+    {
+      "id": "piclim-ods",
+      "type": [
+        "wcrp:experiment",
+        "cmip7"
+      ],
+      "activity": [
+        "AerChemMIP"
+      ],
+      "description": "1. Detailed experiment configuration An atmosphere only configuration following piClim-control but using present-day (2021) ozone depleting substances (ODSs)  2. Required model settings We encourage modelling centres to include as much atmospheric composition capability as possible. But, as a minimum, models should have stratospheric chemistry. And the experimental setup should be consistent with other AerChemMIP2 experiments, particularly piClim-control.   3. Experiment conditions  4. Links to relevant references Fiedler et al. (in prep.) AerChemMIP2 - Unraveling the role of reactive gases, aerosols, and land use for air quality and climate change in CMIP7  5. Similarities to CMIP6 experiments piClim-HC  6. Forcing differences from parent experiment Present-day (2021) ozone depleting substances",
+      "label": "piClim-ODS",
+      "long-label": "Pre-industrial climatology with present-day ozone depleting substances",
+      "minimum-number-of-years": "30",
+      "model-realms": [
+        {
+          "id": "agcm",
+          "is-required": true
+        },
+        {
+          "id": "chem",
+          "is-required": true
         }
       ],
       "parent-experiment": [
