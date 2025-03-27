@@ -1,0 +1,28 @@
+{
+    "@context": "_context_",
+    "id": "esm-flat10-zec",
+    "type": [
+        "wcrp:experiment",
+        "cmip7"
+    ],
+    "activity": [
+        "c4mip"
+    ],
+    "description": "Zero Emissions Commitment (ZEC) experiment following 10 years of constant atmospheric CO2",
+    "tier": 0,
+    "end": -999,
+    "min-number-yrs-per-sim": -999,
+    "start": -999,
+    "label": "esm-flat10-zec",
+    "model-realms": [],
+    "parent-activity": [
+        "none"
+    ],
+    "parent-experiment": [
+        "none"
+    ],
+    "sub-experiment": [
+        "none"
+    ],
+    "long-label": "Describe esm-flat10-zec in one sentence."
+}

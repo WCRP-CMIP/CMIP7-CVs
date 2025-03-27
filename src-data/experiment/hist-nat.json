@@ -1,0 +1,45 @@
+{
+    "@context": "_context_",
+    "id": "hist-nat",
+    "type": [
+        "wcrp:experiment",
+        "cmip7"
+    ],
+    "activity": [
+        "damip"
+    ],
+    "description": "Historical simulation with natural forcing only",
+    "tier": 0,
+    "end": -999,
+    "min-number-yrs-per-sim": -999,
+    "start": -999,
+    "label": "hist-nat",
+    "model-realms": [
+        {
+            "id": "aogcm",
+            "is-required": true
+        },
+        {
+            "id": "aer",
+            "is-required": false
+        },
+        {
+            "id": "chem",
+            "is-required": false
+        },
+        {
+            "id": "bgc",
+            "is-required": false
+        }
+    ],
+    "parent-activity": [
+        "none"
+    ],
+    "parent-experiment": [
+        "none"
+    ],
+    "sub-experiment": [
+        "none"
+    ],
+    "long-label": "Describe hist-nat in one sentence."
+}

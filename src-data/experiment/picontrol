@@ -1,0 +1,45 @@
+{
+    "@context": "_context_",
+    "id": "picontrol",
+    "type": [
+        "wcrp:experiment",
+        "cmip7"
+    ],
+    "activity": [
+        "cmip"
+    ],
+    "description": "DECK: pre-industrial control \n Pre-industrial control simulation",
+    "tier": 0,
+    "end": -999,
+    "min-number-yrs-per-sim": -999,
+    "start": -999,
+    "label": "piControl",
+    "model-realms": [
+        {
+            "id": "aogcm",
+            "is-required": true
+        },
+        {
+            "id": "aer",
+            "is-required": false
+        },
+        {
+            "id": "chem",
+            "is-required": false
+        },
+        {
+            "id": "bgc",
+            "is-required": false
+        }
+    ],
+    "parent-activity": [
+        "none"
+    ],
+    "parent-experiment": [
+        "none"
+    ],
+    "sub-experiment": [
+        "none"
+    ],
+    "long-label": "Describe piControl in one sentence."
+}

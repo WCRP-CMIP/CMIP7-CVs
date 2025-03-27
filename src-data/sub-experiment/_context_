@@ -1,0 +1,13 @@
+{
+    "@context": [
+        "../_context_",
+        {
+            "@base": "https://wcrp-cmip.github.io/CMIP7-CVs/sub-experiment/",
+            "@vocab": "https://wcrp-cmip.github.io/CMIP7-CVs/sub-experiment/"
+        }
+    ],
+    "@embed": "@always",
+    "@type": [
+        "cmip7"
+    ]
+}

@@ -1,0 +1,28 @@
+{
+    "@context": "_context_",
+    "id": "1pctco2-rad",
+    "type": [
+        "wcrp:experiment",
+        "cmip7"
+    ],
+    "activity": [
+        "c4mip"
+    ],
+    "description": "Radiatively-coupled version of 1 percent per year CO2 increase experiment",
+    "tier": 0,
+    "end": -999,
+    "min-number-yrs-per-sim": -999,
+    "start": -999,
+    "label": "1pctCO2-rad",
+    "model-realms": [],
+    "parent-activity": [
+        "none"
+    ],
+    "parent-experiment": [
+        "none"
+    ],
+    "sub-experiment": [
+        "none"
+    ],
+    "long-label": "Describe 1pctCO2-rad in one sentence."
+}

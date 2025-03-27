@@ -1,0 +1,28 @@
+{
+    "@context": "_context_",
+    "id": "abrupt-0p5co2",
+    "type": [
+        "wcrp:experiment",
+        "cmip7"
+    ],
+    "activity": [
+        "cfmip"
+    ],
+    "description": "Abrupt halving of CO2 \n Abrupt halving of atmospheric CO2",
+    "tier": 0,
+    "end": -999,
+    "min-number-yrs-per-sim": -999,
+    "start": -999,
+    "label": "abrupt-0p5CO2",
+    "model-realms": [],
+    "parent-activity": [
+        "none"
+    ],
+    "parent-experiment": [
+        "none"
+    ],
+    "sub-experiment": [
+        "none"
+    ],
+    "long-label": "Describe abrupt-0p5CO2 in one sentence."
+}
