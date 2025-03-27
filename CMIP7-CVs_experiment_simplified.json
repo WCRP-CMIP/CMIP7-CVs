@@ -1,12 +1,12 @@
 {
     "Header": {
         "file": "CMIP7-CVs_experiment_simplified.json",
-        "file_creation_date": "2025-03-27T15:10:45.882316",
+        "file_creation_date": "2025-03-27T15:11:42.971332",
         "version": "fatal: No names found, cannot describe anything.",
-        "checksum": "md5: 81ed94e6ca0ced1af6977b3c6ea5d4e4",
+        "checksum": "md5: 2f5f2e8fe4110fdc1929b0b95a557ae5",
         "repo_url": "https://github.com/WCRP-CMIP/CMIP7-CVs",
         "repo_prefix": "cmip7",
-        "last_commit": "2d1d99e51baca3ce5f5aa916b96b2f5fb14d86dc",
+        "last_commit": "7e0cbb29479d2965627e8678317492405ffcd64c",
         "comment": "This is an automatically generated file. Do not edit."
     },
     "experiment_simplified": {
@@ -46,6 +46,9 @@
         "abrupt-4xCO2": {
             "description": "DECK: abrupt quadrupling of CO2 \n Abrupt increase in CO2 concentration from pre-industrial level to quadrupling"
         },
+        "abrupt-4xCO2-1950": {
+            "description": "A coupled experiment with abrupt 4xCO2 forcing, starting from the end of the spinup-1950 simulation, enforces an instantaneous 4xCO2 increase  References: Roberts, M. J., Reed, K. A., Bao, Q., Barsugli, J. J., Camargo, S. J., Caron, L. P., \u2026 & Zhao, M. (2025). High-Resolution Model Intercomparison Project Phase 2 (HighResMIP2) towards CMIP7. Geoscientific Model Development, 18, 1307\u20131332  [High-Resolution Model Intercomparison Project Phase 2 (HighResMIP2) towards CMIP7.pdf](https://github.com/user-attachments/files/19402163/High-Resolution.Model.Intercomparison.Project.Phase.2.HighResMIP2.towards.CMIP7.pdf)  Webpage: https://highresmip.org/experiments/experiment_cmip7/"
+        },
         "amip": {
             "description": "DECK: AMIP \n AMIP (Atmospheric Model Intercomparison Project) experiment with prescribed SSTs and sea ice"
         },
@@ -65,7 +68,7 @@
             "description": "Identical to the `amip` DECK experiment, but from 1870 to the present with constant pre-industrial forcing levels (anthropogenic and natural).  Reference: [Webb et al., 2017](https://doi.org/10.5194/gmd-10-359-2017)"
         },
         "control-1950": {
-            "description": "Start from the end of the spinup-1950 simulation, using constant 1950s forcings Simulate for at least 100 years, ideally 150 years  References: Roberts, M. J., Reed, K. A., Bao, Q., Barsugli, J. J., Camargo, S. J., Caron, L. P., \u2026 & Zhao, M. (2025). High-Resolution Model Intercomparison Project Phase 2 (HighResMIP2) towards CMIP7. Geoscientific Model Development, 18, 1307\u20131332  [High-Resolution Model Intercomparison Project Phase 2 (HighResMIP2) towards CMIP7.pdf](https://github.com/user-attachments/files/19393788/High-Resolution.Model.Intercomparison.Project.Phase.2.HighResMIP2.towards.CMIP7.pdf)  Webpage: https://highresmip.org/experiments/experiment_cmip7/"
+            "description": "Start from the end of the spinup-1950 simulation, using constant 1950s forcings. Simulate for at least 100 years, ideally 150 years.  References: Roberts, M. J., Reed, K. A., Bao, Q., Barsugli, J. J., Camargo, S. J., Caron, L. P., \u2026 & Zhao, M. (2025). High-Resolution Model Intercomparison Project Phase 2 (HighResMIP2) towards CMIP7. Geoscientific Model Development, 18, 1307\u20131332 [High-Resolution Model Intercomparison Project Phase 2 (HighResMIP2) towards CMIP7.pdf](https://github.com/user-attachments/files/19393590/High-Resolution.Model.Intercomparison.Project.Phase.2.HighResMIP2.towards.CMIP7.pdf) Webpage: https://highresmip.org/experiments/experiment_cmip7/"
         },
         "esm-flat10": {
             "description": "esm-flat10 is newly introduced for CMIP7 as an emissions-driven idealised experiment to quantify sensitivity of the earth system to CO2 emissions. It requires fully-coupled AOGCM and BGC models with carbon cycle \u201cemissions-driven\u201d  The esm-flat10 experiment branches from a stable esm-piControl simulation, with a constant annual prescribed anthropogenic flux of carbon of 10PgC/year into the atmosphere, with globally homogenous emissions for initial (minimum) period, 0-150 years. Longer runs - 300 years \u2013 are recommended.  It serves as an emissions-driven experiment to diagnose the Transient Climate Response to cumulative Emissions (TCRE), which is the warming from pre-industrial levels observed after the emission of 1000PgC in a transient scenario.  Used with the partner experiments esm-flat10-zec and esm-flat10-cdr it forms a vital part of assessment of TCRE, ZEC and reversibility. In particular these experiments make assessment of ZEC easier than CMIP6 because: the experiment is emissions-driven from the outset and does not require a change in configuration at the branch point and the branch point is common across all models.  more details and analysis can be found here: https://egusphere.copernicus.org/preprints/2023/egusphere-2023-2127/ https://egusphere.copernicus.org/preprints/2024/egusphere-2024-3356/"
