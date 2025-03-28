@@ -1,0 +1,38 @@
+{
+    "id": "esm-up2p0",
+    "type": [
+        "wcrp:experiment",
+        "cmip7"
+    ],
+    "activity": [
+        "TIPMIP"
+    ],
+    "description": "1. Detailed experiment configuration 2. Required model settings 3. Experiment conditions 4. Links to relevant references 5. Similarities to CMIP6 experiments 6. Forcing differences from parent experiment",
+    "label": "esm-up2p0",
+    "long-label": "Ramp up with constant CO2 emissions leading to 2\u00b0C/century warming",
+    "minimum-number-of-years": "200",
+    "model-realms": [
+        {
+            "id": "aogcm",
+            "is-required": true
+        },
+        {
+            "id": "bgc",
+            "is-required": true
+        },
+        {
+            "id": "aer",
+            "is-required": false
+        },
+        {
+            "id": "chem",
+            "is-required": false
+        }
+    ],
+    "parent-experiment": [
+        "esm-piControl"
+    ],
+    "start-date": "none",
+    "sub-experiment": "none",
+    "tier": "1"
+}
