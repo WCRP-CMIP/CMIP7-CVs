@@ -7,9 +7,9 @@
     "activity": [
         "HighResMIP2"
     ],
-    "description": "Conduct an atmosphere-only simulation for 1980\u20132022 using ESA CCI forcing for SST and sea-ice (daily, 0.05 degree, updated through 2023 currently)  References: Roberts, M. J., Reed, K. A., Bao, Q., Barsugli, J. J., Camargo, S. J., Caron, L. P., \u2026 & Zhao, M. (2025). High-Resolution Model Intercomparison Project Phase 2 (HighResMIP2) towards CMIP7. Geoscientific Model Development, 18, 1307\u20131332  [High-Resolution Model Intercomparison Project Phase 2 (HighResMIP2) towards CMIP7.pdf](https://github.com/user-attachments/files/19392615/High-Resolution.Model.Intercomparison.Project.Phase.2.HighResMIP2.towards.CMIP7.pdf)  Webpage: https://highresmip.org/experiments/experiment_cmip7/",
+    "description": "1. Experiment Configuration Conduct an atmosphere-only simulation similar to CMIP AMIP for the period 1980\u20132022 using high-resolution daily forcing  2. Model Settings Initial Conditions: Use ERA5 for atmosphere and land initial conditions on 1 January 1980. Spinup: Treat 1980\u20131981 as land surface spinup. Analyze 1982\u20132022. Forcing Interpolation: Interpolate daily mean fields (no diurnal cycle) to the model grid.  3. Forcing Data Use 0.05\u00b0 ESA CCI SST v3.0 and OSI SAF sea ice concentration instead of the 1/4\u00b0 HadISST.2.2.0 dataset.  4. Key Differences from CMIP6 HighResMIP SST Forcing: Upgraded to 0.05\u00b0 ESA CCI SST. Land Spinup: 2 years recommended; alternative methods allowed if documented.  For details, see: Roberts et al. (2025). High-Resolution Model Intercomparison Project phase 2 (HighResMIP2) towards CMIP7. Geoscientific Model Development, 18, 1307\u20131332",
     "label": "highresSST-present",
-    "long-label": "Atmosphere-only historic",
+    "long-label": "AMIP historic",
     "minimum-number-of-years": "43",
     "model-realms": [
         {
