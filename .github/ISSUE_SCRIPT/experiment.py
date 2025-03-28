@@ -164,6 +164,7 @@ def run(issue,packet):
     else:
         author = git.issue_author(os.environ['ISSUE_NUMBER'])
 
+    print('Author',author)
     
     
     # git.commit-override-author(acronym,issue["issue-type"])
