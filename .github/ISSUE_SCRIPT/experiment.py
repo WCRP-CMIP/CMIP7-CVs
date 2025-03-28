@@ -107,7 +107,7 @@ def run(issue,packet):
             "long-label": issue['experiment-title'],
             "description": issue['description'],
             
-            "activity": [activity],
+            "activity": [activity.lower()],
             "parent-experiment": [parent],
             "sub-experiment": issue['sub-experiment'],
             
