@@ -160,6 +160,7 @@ def run(issue,packet):
     
     if 'submitter' in issue:  # override the current author
         author = issue['submitter']
+        author = {'name':author,'login':f"{author}@users.noreply.github.com"}
     else:
         author = git.issue_author(os.environ['ISSUE_NUMBER'])
 
