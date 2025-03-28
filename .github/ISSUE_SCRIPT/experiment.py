@@ -168,6 +168,7 @@ def run(issue,packet):
     # git.commit-override-author(acronym,issue["issue-type"])
     git.commit_one(outfile,author,comment=f'New entry {acronym} in {issue["issue-type"]} files.' ,branch=branch)
     print('CREATING PULL\n',branch, author,title,os.environ['ISSUE_NUMBER'])
+    
     git.newpull(branch,author,json.dumps(data,indent=4),title,os.environ['ISSUE_NUMBER'])
     
     
