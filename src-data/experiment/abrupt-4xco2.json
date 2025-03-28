@@ -6,12 +6,12 @@
         "cmip7"
     ],
     "activity": [
-        "cmip"
+        "CMIP"
     ],
     "description": "DECK: abrupt quadrupling of CO2 \n Abrupt increase in CO2 concentration from pre-industrial level to quadrupling",
     "tier": 0,
     "end": -999,
-    "min-number-yrs-per-sim": -999,
+    "min-number-yrs-per-sim": 150,
     "start": -999,
     "label": "abrupt-4xCO2",
     "model-realms": [
@@ -33,13 +33,13 @@
         }
     ],
     "parent-activity": [
-        "none"
+        "CMIP"
     ],
     "parent-experiment": [
-        "none"
+        "piControl"
     ],
     "sub-experiment": [
         "none"
     ],
-    "long-label": "Describe abrupt-4xCO2 in one sentence."
+    "long-label": "CO2 prescribed to 4 times preindustrial"
 }
