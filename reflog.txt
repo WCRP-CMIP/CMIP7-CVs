@@ -820,9 +820,9 @@ a6b0c69 HEAD@{814}: rebase (pick): Automated Content Update
 5afdfc3 HEAD@{819}: rebase (pick): development
 8fa8720 HEAD@{820}: rebase (pick): Delete src-data/experiment/imaginary-1.json
 7730dd1 HEAD@{821}: rebase (pick): Automated Content Update
-7fce984 HEAD@{822}: rebase (pick): Delete CMIP7_CVs_experiment.json
+7fce984 HEAD@{822}: rebase (pick): Delete CMIP7-CVs_experiment.json
 8188e4e HEAD@{823}: rebase (pick): Automated Content Update
-522137c HEAD@{824}: rebase (pick): Delete CMIP7_CVs_experiment_simplified.json
+522137c HEAD@{824}: rebase (pick): Delete CMIP7-CVs_experiment_simplified.json
 fb43807 HEAD@{825}: rebase (pick): Automated Content Update
 f9b4d25 HEAD@{826}: rebase (pick): development
 6ef8ae7 HEAD@{827}: rebase (pick): New entry imaginary-1 in experiment files.
@@ -1155,4 +1155,4 @@ cabf7d3 HEAD@{1150}: pull (pick): adding scritps to allow it to join the univers
 69a333b HEAD@{1154}: reset: moving to 69a333b6368b40c3146e1818b826e42a4458fc94
 47efb5d HEAD@{1155}: commit: correcting type
 c3f10b9 HEAD@{1156}: commit: Adding CMIP7 AR7 Fast Track (tier 0) activities and experiments.
-69a333b HEAD@{1157}: clone: from https://github.com/WCRP-CMIP/CMIP7_CVs.git
+69a333b HEAD@{1157}: clone: from https://github.com/WCRP-CMIP/CMIP7-CVs.git

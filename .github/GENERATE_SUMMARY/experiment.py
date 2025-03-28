@@ -1,6 +1,7 @@
 import cmipld
 from cmipld.utils.ldparse import *
 from cmipld.utils.checksum import version
+import os 
 
 me = __file__.split('/')[-1].replace('.py','')
 
@@ -17,7 +18,7 @@ def run(localhost,whoami,repopath,reponame):
     summary = version(summary, me, location.split("/")[-1])
     
     if os.path.exists(location):
-        old = cmipld.utils.io.rjson(location)
+        old = cmipld.utils.io.jr(location)
         if old['Header']['checksum'] == summary['Header']['checksum']:
             return 'no update - file already exists'
     
