@@ -107,12 +107,12 @@
         "cmip7"
       ],
       "activity": [
-        "cmip"
+        "CMIP"
       ],
       "description": "DECK: 1 percent per year CO2 increase \n Increase CO2 concentration from pre-industrial level at 1% per year until quadrupling",
       "tier": 0,
       "end": -999,
-      "min-number-yrs-per-sim": -999,
+      "min-number-yrs-per-sim": 150,
       "start": -999,
       "label": "1pctCO2",
       "model-realms": [
@@ -134,15 +134,15 @@
         }
       ],
       "parent-activity": [
-        "none"
+        "CMIP"
       ],
       "parent-experiment": [
-        "none"
+        "piControl"
       ],
       "sub-experiment": [
         "none"
       ],
-      "long-label": "Describe 1pctCO2 in one sentence."
+      "long-label": "CO2 prescribed to increase at 1% per year"
     },
     {
       "id": "abrupt-0p5co2",
@@ -332,12 +332,12 @@
         "cmip7"
       ],
       "activity": [
-        "cmip"
+        "CMIP"
       ],
       "description": "DECK: abrupt quadrupling of CO2 \n Abrupt increase in CO2 concentration from pre-industrial level to quadrupling",
       "tier": 0,
       "end": -999,
-      "min-number-yrs-per-sim": -999,
+      "min-number-yrs-per-sim": 150,
       "start": -999,
       "label": "abrupt-4xCO2",
       "model-realms": [
@@ -359,15 +359,15 @@
         }
       ],
       "parent-activity": [
-        "none"
+        "CMIP"
       ],
       "parent-experiment": [
-        "none"
+        "piControl"
       ],
       "sub-experiment": [
         "none"
       ],
-      "long-label": "Describe abrupt-4xCO2 in one sentence."
+      "long-label": "CO2 prescribed to 4 times preindustrial"
     },
     {
       "id": "amip-m4k",
@@ -571,13 +571,13 @@
         "cmip7"
       ],
       "activity": [
-        "cmip"
+        "CMIP"
       ],
       "description": "DECK: AMIP \n AMIP (Atmospheric Model Intercomparison Project) experiment with prescribed SSTs and sea ice",
       "tier": 0,
-      "end": -999,
-      "min-number-yrs-per-sim": -999,
-      "start": -999,
+      "end": 2021,
+      "min-number-yrs-per-sim": 43,
+      "start": 1979,
       "label": "amip",
       "model-realms": [
         {
@@ -680,25 +680,40 @@
         "cmip7"
       ],
       "activity": [
-        "c4mip"
+        "C4MIP"
       ],
-      "description": "Zero Emissions Commitment (ZEC) experiment following 10 years of constant atmospheric CO2",
-      "tier": 0,
-      "end": -999,
-      "min-number-yrs-per-sim": -999,
-      "start": -999,
+      "description": "esm-flat10-zec is newly introduced for CMIP7 as an emissions-driven idealised experiment to quantify sensitivity of the earth system to CO2 emissions.  It requires fully-coupled AOGCM and BGC models with carbon cycle “emissions-driven”  The esm-flat10-zec experiment branches from year 100 of the esm-flat10 simulation, but with CO2 emissions set to zero for initial (minimum) period of 200 years. Longer runs are useful.  It serves as an emissions-driven experiment to diagnose the Zero Emissions Commitment (ZEC), which is the continued warming (or cooling) following a sudden cessation of CO2 emissions.  Used with the partner experiments esm-flat10 and esm-flat10-cdr it forms a vital part of assessment of TCRE, ZEC and reversibility. In particular these experiments make assessment of ZEC easier than CMIP6 because: the experiment is emissions-driven from the outset and does not require a change in configuration at the branch point and the branch point is common across all models.  more details and analysis can be found here: https://egusphere.copernicus.org/preprints/2023/egusphere-2023-2127/ https://egusphere.copernicus.org/preprints/2024/egusphere-2024-3356/  this experiment is an evolution of the ZECMIP simulations from CMIP6: https://gmd.copernicus.org/articles/12/4375/2019/ , https://bg.copernicus.org/articles/17/2987/2020/",
       "label": "esm-flat10-zec",
-      "model-realms": [],
-      "parent-activity": [
-        "none"
+      "long-label": "zero-emissions commitment CO2 experiment",
+      "minimum-number-of-years": "200",
+      "model-realms": [
+        {
+          "id": "aogcm",
+          "is-required": true
+        },
+        {
+          "id": "bgc",
+          "is-required": true
+        },
+        {
+          "id": "aer",
+          "is-required": false
+        },
+        {
+          "id": "chem",
+          "is-required": false
+        },
+        {
+          "id": "ism",
+          "is-required": false
+        }
       ],
       "parent-experiment": [
-        "none"
+        "esm-flat10"
       ],
-      "sub-experiment": [
-        "none"
-      ],
-      "long-label": "Describe esm-flat10-zec in one sentence."
+      "start-date": "none",
+      "sub-experiment": "none",
+      "tier": "1"
     },
     {
       "id": "esm-flat10",
@@ -749,13 +764,13 @@
         "cmip7"
       ],
       "activity": [
-        "cmip"
+        "CMIP"
       ],
       "description": "DECK: Earth System Model historical simulation \n Historical simulation with Earth System Models",
       "tier": 0,
-      "end": -999,
-      "min-number-yrs-per-sim": -999,
-      "start": -999,
+      "end": 2021,
+      "min-number-yrs-per-sim": 172,
+      "start": 1850,
       "label": "esm-hist",
       "model-realms": [
         {
@@ -776,15 +791,15 @@
         }
       ],
       "parent-activity": [
-        "none"
+        "CMIP"
       ],
       "parent-experiment": [
-        "none"
+        "esm-piControl"
       ],
       "sub-experiment": [
         "none"
       ],
-      "long-label": "Describe esm-hist in one sentence."
+      "long-label": "Simulation of the recent past (emissions driven)"
     },
     {
       "id": "esm-picontrol",
@@ -793,12 +808,12 @@
         "cmip7"
       ],
       "activity": [
-        "cmip"
+        "CMIP"
       ],
       "description": "DECK: pre-industrial control simulation with Earth System Models \n Pre-industrial control run for Earth System Models",
       "tier": 0,
       "end": -999,
-      "min-number-yrs-per-sim": -999,
+      "min-number-yrs-per-sim": 400,
       "start": -999,
       "label": "esm-piControl",
       "model-realms": [
@@ -828,7 +843,7 @@
       "sub-experiment": [
         "none"
       ],
-      "long-label": "Describe esm-piControl in one sentence."
+      "long-label": "Coupled atmosphere-ocean preindustrial control (emissions driven)"
     },
     {
       "id": "esm-scen7-h-ext-os",
@@ -1209,6 +1224,82 @@
       "long-label": "Describe G7-15K-SAI in one sentence."
     },
     {
+      "id": "highressst-p4k-pat",
+      "type": [
+        "wcrp:experiment",
+        "cmip7"
+      ],
+      "activity": [
+        "HighResMIP2"
+      ],
+      "description": "Conduct forced atmosphere simulations at patterned warming level +4K over 2003–2022, parallel to highresSST-present, with patterned SST and sea ice changes. (Three ensembles are desired per warming level)  References: Roberts, M. J., Reed, K. A., Bao, Q., Barsugli, J. J., Camargo, S. J., Caron, L. P., … & Zhao, M. (2025). High-Resolution Model Intercomparison Project Phase 2 (HighResMIP2) towards CMIP7. Geoscientific Model Development, 18, 1307–1332  [High-Resolution Model Intercomparison Project Phase 2 (HighResMIP2) towards CMIP7.pdf](https://github.com/user-attachments/files/19402345/High-Resolution.Model.Intercomparison.Project.Phase.2.HighResMIP2.towards.CMIP7.pdf)  Webpage: https://highresmip.org/experiments/experiment_cmip7/",
+      "label": "highresSST-p4K-pat",
+      "long-label": "Atmosphere-only warming levels - highresSST-p4K-pat (patterned)",
+      "minimum-number-of-years": "20",
+      "model-realms": [
+        {
+          "id": "agcm",
+          "is-required": true
+        },
+        {
+          "id": "aer",
+          "is-required": false
+        },
+        {
+          "id": "bgc",
+          "is-required": false
+        },
+        {
+          "id": "chem",
+          "is-required": false
+        }
+      ],
+      "parent-experiment": [
+        "none"
+      ],
+      "start-date": "2003-01-01",
+      "sub-experiment": "none",
+      "tier": "3"
+    },
+    {
+      "id": "highressst-p4k-uni",
+      "type": [
+        "wcrp:experiment",
+        "cmip7"
+      ],
+      "activity": [
+        "HighResMIP2"
+      ],
+      "description": "A one-year, atmosphere-only experiment with prescribed SSTs and sea ice, including a uniform **+4K SST perturbation**  The preferred period is 1 March 2020–28 February 2021.  References: Roberts, M. J., Reed, K. A., Bao, Q., Barsugli, J. J., Camargo, S. J., Caron, L. P., … & Zhao, M. (2025). High-Resolution Model Intercomparison Project Phase 2 (HighResMIP2) towards CMIP7. Geoscientific Model Development, 18, 1307–1332  [High-Resolution Model Intercomparison Project Phase 2 (HighResMIP2) towards CMIP7.pdf](https://github.com/user-attachments/files/19402610/High-Resolution.Model.Intercomparison.Project.Phase.2.HighResMIP2.towards.CMIP7.pdf)  Webpage: https://highresmip.org/experiments/experiment_cmip7/",
+      "label": "highresSST-p4k-uni",
+      "long-label": "Atmosphere-only 1-year experiment (add uniform +4K to SSTs)",
+      "minimum-number-of-years": "1",
+      "model-realms": [
+        {
+          "id": "agcm",
+          "is-required": true
+        },
+        {
+          "id": "aer",
+          "is-required": false
+        },
+        {
+          "id": "bgc",
+          "is-required": false
+        },
+        {
+          "id": "chem",
+          "is-required": false
+        }
+      ],
+      "parent-experiment": [
+        "none"
+      ],
+      "start-date": "2020-03-01",
+      "sub-experiment": "none",
+      "tier": "3"
+    },
+    {
       "id": "highressst-present",
       "type": [
         "wcrp:experiment",
@@ -1343,42 +1434,24 @@
         "cmip7"
       ],
       "activity": [
-        "damip"
+        "DAMIP"
       ],
-      "description": "Historical simulation with natural forcing only",
-      "tier": 0,
-      "end": -999,
-      "min-number-yrs-per-sim": -999,
-      "start": -999,
+      "description": "1. Experiment performed as the historical experiment but only with time evolving solar and volcanic forcings and pre-industrial forcings used for all other forcings.  Use historical solar and volcanic forcings out to  2021 and the medium scenario solar and volcanic forcings thereafter. 2. As historical but with modified forcings. 3. Historical conditions for solar and volcanic forcings, pre-industrial conditions for everything else. 4. https://doi.org/10.5194/egusphere-2024-4086 5. Similar to hist-nat from CMIP6 but differs in the specification of ozone.  In contrast to CMIP6, no time evolving ozone is prescribed in this experiment. 6. solar irradiance and stratospheric aerosol forcing are as in historical (or medium scenario after 2021), other forcings are as in piControl.",
       "label": "hist-nat",
+      "long-label": "Natural-only historical simulations (solar irradiance, stratospheric aerosol)",
+      "minimum-number-of-years": "186",
       "model-realms": [
         {
           "id": "aogcm",
           "is-required": true
-        },
-        {
-          "id": "aer",
-          "is-required": false
-        },
-        {
-          "id": "chem",
-          "is-required": false
-        },
-        {
-          "id": "bgc",
-          "is-required": false
         }
       ],
-      "parent-activity": [
-        "none"
-      ],
       "parent-experiment": [
-        "none"
+        "piControl"
       ],
-      "sub-experiment": [
-        "none"
-      ],
-      "long-label": "Describe hist-nat in one sentence."
+      "start-date": "1850-01-01",
+      "sub-experiment": "none",
+      "tier": "1"
     },
     {
       "id": "hist-piaer",
@@ -1458,13 +1531,13 @@
         "cmip7"
       ],
       "activity": [
-        "cmip"
+        "CMIP"
       ],
       "description": "DECK: historical \n Simulation of the recent past",
       "tier": 0,
-      "end": -999,
-      "min-number-yrs-per-sim": -999,
-      "start": -999,
+      "end": 2021,
+      "min-number-yrs-per-sim": 172,
+      "start": 1850,
       "label": "historical",
       "model-realms": [
         {
@@ -1485,15 +1558,15 @@
         }
       ],
       "parent-activity": [
-        "none"
+        "CMIP"
       ],
       "parent-experiment": [
-        "none"
+        "piControl"
       ],
       "sub-experiment": [
         "none"
       ],
-      "long-label": "Describe historical in one sentence."
+      "long-label": "Simulation of the recent past (concentration driven)"
     },
     {
       "id": "initialised-prediction-2025-2036",
@@ -1597,6 +1670,40 @@
         {
           "id": "chem",
           "is-required": true
+        }
+      ],
+      "parent-experiment": [
+        "piClim-control"
+      ],
+      "start-date": "none",
+      "sub-experiment": "none",
+      "tier": "2"
+    },
+    {
+      "id": "piclim-2xdmsppmoa",
+      "type": [
+        "wcrp:experiment",
+        "cmip7"
+      ],
+      "activity": [
+        "AerChemMIP"
+      ],
+      "description": "1. Detailed experiment configuration An atmosphere only configuration following piClim-control but with emissions of primary marine organic compounds and dimethyl sulphide scaled by a factor of 2  2. Required model settings We encourage modelling centres to include as much atmospheric composition capability as possible. As a minimum, models should have prescribed or interactive aerosols. And the experimental setup should be consistent with other AerChemMIP2 experiments, particularly piClim-control.  3. Experiment conditions  4. Links to relevant references Fiedler et al. (in prep.) AerChemMIP2 - Unraveling the role of reactive gases, aerosols, and land use for air quality and climate change in CMIP7  5. Similarities to CMIP6 experiments Modification of piClim-2xDMS to include 2xPMOA  6. Forcing differences from parent experiment Doubled primary marine organic carbon aerosol and dimethyl sulphide emissions",
+      "label": "piClim-2xDMSpPMOA",
+      "long-label": "Pre-industrial climatology with doubled emissions of primary marine organic compounds and dimethyl sulphide",
+      "minimum-number-of-years": "30",
+      "model-realms": [
+        {
+          "id": "aer",
+          "is-required": true
+        },
+        {
+          "id": "agcm",
+          "is-required": true
+        },
+        {
+          "id": "chem",
+          "is-required": false
         }
       ],
       "parent-experiment": [
@@ -1715,25 +1822,25 @@
         "cmip7"
       ],
       "activity": [
-        "cmip"
+        "CMIP"
       ],
       "description": "DECK: effective radiative forcing by 4xCO2 \n Effective radiative forcing by 4xCO2",
       "tier": 0,
       "end": -999,
-      "min-number-yrs-per-sim": -999,
+      "min-number-yrs-per-sim": 30,
       "start": -999,
       "label": "piClim-4xCO2",
       "model-realms": [],
       "parent-activity": [
-        "none"
+        "CMIP"
       ],
       "parent-experiment": [
-        "none"
+        "piControl"
       ],
       "sub-experiment": [
         "none"
       ],
-      "long-label": "Describe piClim-4xCO2 in one sentence."
+      "long-label": "As piClim-control except CO2 concentrations set to 4 times preindustrial"
     },
     {
       "id": "piclim-aer",
@@ -1781,25 +1888,25 @@
         "cmip7"
       ],
       "activity": [
-        "cmip"
+        "CMIP"
       ],
       "description": "DECK: effective radiative forcing by present day anthropogenic forcings \n Effective radiative forcing by present day anthropogenic forcings",
       "tier": 0,
       "end": -999,
-      "min-number-yrs-per-sim": -999,
+      "min-number-yrs-per-sim": 30,
       "start": -999,
       "label": "piClim-anthro",
       "model-realms": [],
       "parent-activity": [
-        "none"
+        "CMIP"
       ],
       "parent-experiment": [
-        "none"
+        "piControl"
       ],
       "sub-experiment": [
         "none"
       ],
-      "long-label": "Describe piClim-anthro in one sentence."
+      "long-label": "As piClim-control except present-day anthropogenic forcing"
     },
     {
       "id": "piclim-bc",
@@ -1872,25 +1979,25 @@
         "cmip7"
       ],
       "activity": [
-        "cmip"
+        "CMIP"
       ],
       "description": "DECK: effective radiative forcing control \n Effective radiative forcing control simulation",
       "tier": 0,
       "end": -999,
-      "min-number-yrs-per-sim": -999,
+      "min-number-yrs-per-sim": 30,
       "start": -999,
       "label": "piClim-control",
       "model-realms": [],
       "parent-activity": [
-        "none"
+        "CMIP"
       ],
       "parent-experiment": [
-        "none"
+        "piControl"
       ],
       "sub-experiment": [
         "none"
       ],
-      "long-label": "Describe piClim-control in one sentence."
+      "long-label": "Preindustrial conditions including SST and SIC prescribed"
     },
     {
       "id": "piclim-hc",
@@ -2190,25 +2297,32 @@
         "cmip7"
       ],
       "activity": [
-        "aerchemmip"
+        "AerChemMIP"
       ],
-      "description": "Perturbation from pre-industrial control using 1850 SO2 emissions \n Pre-industrial climatological SSTs and sea ice extent, 1850 SO2 emissions",
-      "tier": 0,
-      "end": -999,
-      "min-number-yrs-per-sim": -999,
-      "start": -999,
+      "description": "1. Detailed experiment configuration An atmosphere only configuration following piClim-control but using present-day (2021) sulphur dioxide (only)  2. Required model settings We encourage modelling centres to include as much atmospheric composition capability as possible. As a minimum, models should have prescribed or interactive aerosols. And the experimental setup should be consistent with other AerChemMIP2 experiments, particularly piClim-control.  3. Experiment conditions  4. Links to relevant references Fiedler et al. (in prep.) AerChemMIP2 - Unraveling the role of reactive gases, aerosols, and land use for air quality and climate change in CMIP7  5. Similarities to CMIP6 experiments piClim-SO2  6. Forcing differences from parent experiment Present-day (2021) sulphur dioxide emissions",
       "label": "piClim-SO2",
-      "model-realms": [],
-      "parent-activity": [
-        "none"
+      "long-label": "Pre-industrial climatology with present-day sulphur dioxide",
+      "minimum-number-of-years": "30",
+      "model-realms": [
+        {
+          "id": "aer",
+          "is-required": true
+        },
+        {
+          "id": "agcm",
+          "is-required": true
+        },
+        {
+          "id": "chem",
+          "is-required": false
+        }
       ],
       "parent-experiment": [
-        "none"
+        "piClim-control"
       ],
-      "sub-experiment": [
-        "none"
-      ],
-      "long-label": "Describe piClim-SO2 in one sentence."
+      "start-date": "none",
+      "sub-experiment": "none",
+      "tier": "1"
     },
     {
       "id": "piclim-voc",
@@ -2244,12 +2358,12 @@
         "cmip7"
       ],
       "activity": [
-        "cmip"
+        "CMIP"
       ],
       "description": "DECK: pre-industrial control \n Pre-industrial control simulation",
       "tier": 0,
       "end": -999,
-      "min-number-yrs-per-sim": -999,
+      "min-number-yrs-per-sim": 400,
       "start": -999,
       "label": "piControl",
       "model-realms": [
@@ -2279,7 +2393,7 @@
       "sub-experiment": [
         "none"
       ],
-      "long-label": "Describe piControl in one sentence."
+      "long-label": "Coupled atmosphere-ocea preindustrial control run (concentration driven)"
     },
     {
       "id": "scen7-hc-ext-os",

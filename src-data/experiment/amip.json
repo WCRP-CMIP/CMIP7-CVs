@@ -6,13 +6,13 @@
         "cmip7"
     ],
     "activity": [
-        "cmip"
+        "CMIP"
     ],
     "description": "DECK: AMIP \n AMIP (Atmospheric Model Intercomparison Project) experiment with prescribed SSTs and sea ice",
     "tier": 0,
-    "end": -999,
-    "min-number-yrs-per-sim": -999,
-    "start": -999,
+    "end": 2021,
+    "min-number-yrs-per-sim": 43,
+    "start": 1979,
     "label": "amip",
     "model-realms": [
         {

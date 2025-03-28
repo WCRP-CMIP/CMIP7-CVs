@@ -6,23 +6,23 @@
         "cmip7"
     ],
     "activity": [
-        "cmip"
+        "CMIP"
     ],
     "description": "DECK: effective radiative forcing by 4xCO2 \n Effective radiative forcing by 4xCO2",
     "tier": 0,
     "end": -999,
-    "min-number-yrs-per-sim": -999,
+    "min-number-yrs-per-sim": 30,
     "start": -999,
     "label": "piClim-4xCO2",
     "model-realms": [],
     "parent-activity": [
-        "none"
+        "CMIP"
     ],
     "parent-experiment": [
-        "none"
+        "piControl"
     ],
     "sub-experiment": [
         "none"
     ],
-    "long-label": "Describe piClim-4xCO2 in one sentence."
+    "long-label": "As piClim-control except CO2 concentrations set to 4 times preindustrial"
 }

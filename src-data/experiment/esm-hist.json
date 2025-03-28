@@ -6,13 +6,13 @@
         "cmip7"
     ],
     "activity": [
-        "cmip"
+        "CMIP"
     ],
     "description": "DECK: Earth System Model historical simulation \n Historical simulation with Earth System Models",
     "tier": 0,
-    "end": -999,
-    "min-number-yrs-per-sim": -999,
-    "start": -999,
+    "end": 2021,
+    "min-number-yrs-per-sim": 172,
+    "start": 1850,
     "label": "esm-hist",
     "model-realms": [
         {
@@ -33,13 +33,13 @@
         }
     ],
     "parent-activity": [
-        "none"
+        "CMIP"
     ],
     "parent-experiment": [
-        "none"
+        "esm-piControl"
     ],
     "sub-experiment": [
         "none"
     ],
-    "long-label": "Describe esm-hist in one sentence."
+    "long-label": "Simulation of the recent past (emissions driven)"
 }

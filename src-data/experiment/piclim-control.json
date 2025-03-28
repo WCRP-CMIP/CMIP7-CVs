@@ -6,23 +6,23 @@
         "cmip7"
     ],
     "activity": [
-        "cmip"
+        "CMIP"
     ],
     "description": "DECK: effective radiative forcing control \n Effective radiative forcing control simulation",
     "tier": 0,
     "end": -999,
-    "min-number-yrs-per-sim": -999,
+    "min-number-yrs-per-sim": 30,
     "start": -999,
     "label": "piClim-control",
     "model-realms": [],
     "parent-activity": [
-        "none"
+        "CMIP"
     ],
     "parent-experiment": [
-        "none"
+        "piControl"
     ],
     "sub-experiment": [
         "none"
     ],
-    "long-label": "Describe piClim-control in one sentence."
+    "long-label": "Preindustrial conditions including SST and SIC prescribed"
 }
