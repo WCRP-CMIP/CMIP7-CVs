@@ -158,11 +158,12 @@ def run(issue,packet):
     
     # if we are happy, and have gotten this far: 
     
-    if 'submitter' in issue: 
-        # override the current author
-        os.environ['OVERRIDE-AUTHOR'] = issue['submitter']
+    if 'submitter' in issue:  # override the current author
+        author = issue['submitter']
+    else:
+        author = git.issue_author(os.environ['ISSUE_NUMBER'])
+
     
-    author = os.environ.get('OVERRIDE-AUTHOR')
     
     # git.commit-override-author(acronym,issue["issue-type"])
     git.commit_one(outfile,author,comment=f'New entry {acronym} in {issue["issue-type"]} files.' ,branch=branch)
