@@ -15,9 +15,6 @@
     "start": 2022,
     "label": "esm-scen7-h",
     "model-realms": [],
-    "parent-activity": [
-        "CMIP"
-    ],
     "parent-experiment": [
         "esm-hist"
     ],

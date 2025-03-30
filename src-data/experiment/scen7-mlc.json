@@ -15,9 +15,6 @@
     "start": 2022,
     "label": "scen7-mlc",
     "model-realms": [],
-    "parent-activity": [
-        "CMIP"
-    ],
     "parent-experiment": [
         "historical"
     ],

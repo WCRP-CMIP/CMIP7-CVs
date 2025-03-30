@@ -15,9 +15,6 @@
     "start": 2101,
     "label": "esm-scen7-ml-ext",
     "model-realms": [],
-    "parent-activity": [
-        "CMIP"
-    ],
     "parent-experiment": [
         "esm-scen7-ml"
     ],

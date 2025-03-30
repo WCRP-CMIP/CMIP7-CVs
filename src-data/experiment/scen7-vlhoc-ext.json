@@ -15,9 +15,6 @@
     "start": 2101,
     "label": "scen7-vlhoc-ext",
     "model-realms": [],
-    "parent-activity": [
-        "scenariomip"
-    ],
     "parent-experiment": [
         "scen7-vlhoc"
     ],

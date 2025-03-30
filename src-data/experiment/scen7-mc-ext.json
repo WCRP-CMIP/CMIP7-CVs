@@ -15,9 +15,6 @@
     "start": 2101,
     "label": "scen7-mc-ext",
     "model-realms": [],
-    "parent-activity": [
-        "scenariomip"
-    ],
     "parent-experiment": [
         "scen7-mc"
     ],

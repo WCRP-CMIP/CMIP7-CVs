@@ -15,9 +15,6 @@
     "start": -999,
     "label": "abrupt-0p5CO2",
     "model-realms": [],
-    "parent-activity": [
-        "none"
-    ],
     "parent-experiment": [
         "none"
     ],

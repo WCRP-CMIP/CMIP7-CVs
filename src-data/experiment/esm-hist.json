@@ -32,9 +32,6 @@
             "is-required": false
         }
     ],
-    "parent-activity": [
-        "CMIP"
-    ],
     "parent-experiment": [
         "esm-picontrol"
     ],

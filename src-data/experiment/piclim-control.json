@@ -15,9 +15,6 @@
     "start": -999,
     "label": "piClim-control",
     "model-realms": [],
-    "parent-activity": [
-        "CMIP"
-    ],
     "parent-experiment": [
         "picontrol"
     ],

@@ -15,9 +15,6 @@
     "start": -999,
     "label": "SSPX-SLCF",
     "model-realms": [],
-    "parent-activity": [
-        "none"
-    ],
     "parent-experiment": [
         "none"
     ],

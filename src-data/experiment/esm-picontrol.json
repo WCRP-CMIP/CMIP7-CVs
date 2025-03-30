@@ -32,9 +32,6 @@
             "is-required": false
         }
     ],
-    "parent-activity": [
-        "none"
-    ],
     "parent-experiment": [
         "none"
     ],
