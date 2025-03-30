@@ -1,5 +1,5 @@
 {
-    "id": "abrupt-2xco2",
+    "id": "abrupt-0p5xco2",
     "type": [
         "wcrp:experiment",
         "cmip7"
@@ -8,9 +8,9 @@
         "cfmip"
     ],
     "branch-date": "none",
-    "description": "Identical to the `piControl` DECK experiment but with a step change to 2xCO2 concentration from its pre-industrial value, held constant for the duration of the run.  Reference: [Webb et al., 2017](https://doi.org/10.5194/gmd-10-359-2017)",
-    "label": "abrupt-2xCO2",
-    "long-label": "Abrupt doubling of CO2",
+    "description": "Identical to the `piControl` DECK experiment but with a step change to 0.5xCO2 concentration from its pre-industrial value, held constant for the duration of the run.  Reference: [Webb et al., 2017](https://doi.org/10.5194/gmd-10-359-2017)",
+    "label": "abrupt-0p5xCO2",
+    "long-label": "Abrupt halving of CO2",
     "minimum-number-of-years": "300",
     "model-realms": [
         {
