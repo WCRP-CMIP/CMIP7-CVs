@@ -1,5 +1,5 @@
 {
-    "id": "amip-piforcing",
+    "id": "abrupt-2xco2",
     "type": [
         "wcrp:experiment",
         "cmip7"
@@ -8,13 +8,13 @@
         "cfmip"
     ],
     "branch-date": "none",
-    "description": "Identical to the `amip` DECK experiment, but from 1870 to the present with constant pre-industrial forcing levels (anthropogenic and natural).  Reference: [Webb et al., 2017](https://doi.org/10.5194/gmd-10-359-2017)",
-    "label": "amip-piForcing",
-    "long-label": "AMIP experiment with pre-industrial forcing",
-    "minimum-number-of-years": "153",
+    "description": "Identical to the `piControl` DECK experiment but with a step change to 2xCO2 concentration from its pre-industrial value, held constant for the duration of the run.  Reference: [Webb et al., 2017](https://doi.org/10.5194/gmd-10-359-2017)",
+    "label": "abrupt-2xCO2",
+    "long-label": "Abrupt doubling of CO2",
+    "minimum-number-of-years": "300",
     "model-realms": [
         {
-            "id": "agcm",
+            "id": "aogcm",
             "is-required": true
         },
         {
@@ -31,8 +31,8 @@
         }
     ],
     "parent-experiment": [
-        "none"
+        "picontrol"
     ],
-    "start-date": "1870-01-01",
+    "start-date": "_No response_",
     "tier": "1"
 }
