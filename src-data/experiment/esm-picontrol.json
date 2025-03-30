@@ -6,7 +6,7 @@
         "cmip7"
     ],
     "activity": [
-        "CMIP"
+        "cmip"
     ],
     "description": "DECK: pre-industrial control simulation with Earth System Models \n Pre-industrial control run for Earth System Models",
     "tier": 0,
@@ -36,9 +36,6 @@
         "none"
     ],
     "parent-experiment": [
-        "none"
-    ],
-    "sub-experiment": [
         "none"
     ],
     "long-label": "Coupled atmosphere-ocean preindustrial control (emissions driven)"

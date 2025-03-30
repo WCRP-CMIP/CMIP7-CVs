@@ -5,7 +5,7 @@
         "cmip7"
     ],
     "activity": [
-        "CFMIP"
+        "cfmip"
     ],
     "branch-date": "none",
     "description": "Similar to `amip`, but SST is raised by 4K when calculating the upward longwave radiation from the sea surface using Planck function.  Reference: [Ogura et al., 2023](https://doi.org/10.1029/2023GL104786)",
@@ -34,6 +34,5 @@
         "none"
     ],
     "start-date": "1979-01-01",
-    "sub-experiment": "none",
     "tier": "2"
 }

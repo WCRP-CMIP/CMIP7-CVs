@@ -6,7 +6,7 @@
         "cmip7"
     ],
     "activity": [
-        "CMIP"
+        "cmip"
     ],
     "description": "DECK: 1 percent per year CO2 increase \n Increase CO2 concentration from pre-industrial level at 1% per year until quadrupling",
     "tier": 0,
@@ -36,10 +36,7 @@
         "CMIP"
     ],
     "parent-experiment": [
-        "piControl"
-    ],
-    "sub-experiment": [
-        "none"
+        "picontrol"
     ],
     "long-label": "CO2 prescribed to increase at 1% per year"
 }

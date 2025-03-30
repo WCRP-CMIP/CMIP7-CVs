@@ -21,8 +21,5 @@
     "parent-experiment": [
         "scen7-hc"
     ],
-    "sub-experiment": [
-        "none"
-    ],
     "long-label": "High, Concentration Driven Scenario Overshoot Extension"
 }

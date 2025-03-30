@@ -21,8 +21,5 @@
     "parent-experiment": [
         "esm-scen7-h"
     ],
-    "sub-experiment": [
-        "none"
-    ],
     "long-label": "High Scenario Extension"
 }

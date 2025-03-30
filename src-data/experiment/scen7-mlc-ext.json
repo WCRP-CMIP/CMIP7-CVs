@@ -21,8 +21,5 @@
     "parent-experiment": [
         "scen7-mlc"
     ],
-    "sub-experiment": [
-        "none"
-    ],
     "long-label": "Medium, Concentration Driven Scenario Extension"
 }

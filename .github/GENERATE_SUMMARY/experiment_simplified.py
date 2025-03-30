@@ -9,11 +9,13 @@ def run(localhost,whoami,repopath,reponame):
     url = f'{localhost}/{whoami}/experiment/graph.jsonld'
     ctx = f'{localhost}/{whoami}/experiment/_context_'
     
-    data = cmipld.jsonld.frame(url,ctx)["@graph"]
+    frame = {"@context": ctx, "@type": "wcrp:experiment"}
+    
+    data = cmipld.jsonld.frame(url,frame)["@graph"]
     
     summary = name_extract(data)
     
-    summary = {k:key_extract(v,['long_label','description']) for k,v in summary.items()}
+    summary = {k:key_extract(v,['long-label','description']) for k,v in summary.items()}
     
     location = f'{repopath}/{reponame}_{me}.json'
     summary = version(summary, me, location.split("/")[-1])

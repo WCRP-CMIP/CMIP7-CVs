@@ -6,7 +6,7 @@
         "cmip7"
     ],
     "activity": [
-        "CMIP"
+        "cmip"
     ],
     "description": "DECK: historical \n Simulation of the recent past",
     "tier": 0,
@@ -36,10 +36,7 @@
         "CMIP"
     ],
     "parent-experiment": [
-        "piControl"
-    ],
-    "sub-experiment": [
-        "none"
+        "picontrol"
     ],
     "long-label": "Simulation of the recent past (concentration driven)"
 }

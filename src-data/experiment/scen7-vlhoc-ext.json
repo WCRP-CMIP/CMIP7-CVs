@@ -21,8 +21,5 @@
     "parent-experiment": [
         "scen7-vlhoc"
     ],
-    "sub-experiment": [
-        "none"
-    ],
     "long-label": "Very Low Concentration Driven Scenario Extension after High Overshoot"
 }

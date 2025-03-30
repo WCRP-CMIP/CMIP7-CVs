@@ -5,7 +5,7 @@
         "cmip7"
     ],
     "activity": [
-        "CFMIP"
+        "cfmip"
     ],
     "branch-date": "none",
     "description": "Identical to the `amip` DECK experiment, but from 1870 to the present with constant pre-industrial forcing levels (anthropogenic and natural).  Reference: [Webb et al., 2017](https://doi.org/10.5194/gmd-10-359-2017)",
@@ -34,6 +34,5 @@
         "none"
     ],
     "start-date": "1870-01-01",
-    "sub-experiment": "none",
     "tier": "1"
 }

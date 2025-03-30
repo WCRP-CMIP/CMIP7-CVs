@@ -22,9 +22,8 @@
         }
     ],
     "parent-experiment": [
-        "piClim-control"
+        "piclim-control"
     ],
     "start-date": "none",
-    "sub-experiment": "none",
     "tier": "2"
 }

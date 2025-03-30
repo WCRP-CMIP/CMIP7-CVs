@@ -5,7 +5,7 @@
         "cmip7"
     ],
     "activity": [
-        "C4MIP"
+        "c4mip"
     ],
     "description": "1pctCO2-bgc is retained from CMIP6.  It is a simulation which branches from piControl with a 1% per year increase in CO2 concentration from pre-industrial levels, with the CO2 \u201cbiogeochemically-coupled\u201d. This means that only the model\u2019s carbon cycle components (both land and ocean) respond to the increase in CO2, whereas the model\u2019s radiation code uses a constant, preindustrial concentration of CO2.  The 1pctCO2 DECK simulation is required for comparison. This experiment is designed to isolate carbon-concentration and carbon climate elements of the global carbon feedbacks. It will also enable calibration of climate emulators.  See Jones et al 2016: https://gmd.copernicus.org/articles/9/2853/2016/ , especially section 3.2.3  Example of use/analysis is Arora et al. 2020: https://bg.copernicus.org/articles/17/4173/2020/",
     "label": "1pctCO2-bgc",
@@ -34,9 +34,8 @@
         }
     ],
     "parent-experiment": [
-        "piControl"
+        "picontrol"
     ],
     "start-date": "none",
-    "sub-experiment": "none",
     "tier": "1"
 }

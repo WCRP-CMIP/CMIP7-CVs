@@ -5,7 +5,7 @@
         "cmip7"
     ],
     "activity": [
-        "HighResMIP2"
+        "highresmip2"
     ],
     "description": "Conduct forced atmosphere simulations at patterned warming level +4K over 2003\u20132022, parallel to highresSST-present, with patterned SST and sea ice changes. (Three ensembles are desired per warming level)  References: Roberts, M. J., Reed, K. A., Bao, Q., Barsugli, J. J., Camargo, S. J., Caron, L. P., \u2026 & Zhao, M. (2025). High-Resolution Model Intercomparison Project Phase 2 (HighResMIP2) towards CMIP7. Geoscientific Model Development, 18, 1307\u20131332  [High-Resolution Model Intercomparison Project Phase 2 (HighResMIP2) towards CMIP7.pdf](https://github.com/user-attachments/files/19402345/High-Resolution.Model.Intercomparison.Project.Phase.2.HighResMIP2.towards.CMIP7.pdf)  Webpage: https://highresmip.org/experiments/experiment_cmip7/",
     "label": "highresSST-p4K-pat",
@@ -33,6 +33,5 @@
         "none"
     ],
     "start-date": "2003-01-01",
-    "sub-experiment": "none",
     "tier": "3"
 }

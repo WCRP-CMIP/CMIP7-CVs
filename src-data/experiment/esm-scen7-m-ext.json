@@ -21,8 +21,5 @@
     "parent-experiment": [
         "esm-scen7-m"
     ],
-    "sub-experiment": [
-        "none"
-    ],
     "long-label": "Medium Scenario Extension"
 }

@@ -6,7 +6,7 @@
         "cmip7"
     ],
     "activity": [
-        "CMIP"
+        "cmip"
     ],
     "description": "DECK: abrupt quadrupling of CO2 \n Abrupt increase in CO2 concentration from pre-industrial level to quadrupling",
     "tier": 0,
@@ -36,10 +36,7 @@
         "CMIP"
     ],
     "parent-experiment": [
-        "piControl"
-    ],
-    "sub-experiment": [
-        "none"
+        "picontrol"
     ],
     "long-label": "CO2 prescribed to 4 times preindustrial"
 }

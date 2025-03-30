@@ -6,7 +6,7 @@
         "cmip7"
     ],
     "activity": [
-        "CMIP"
+        "cmip"
     ],
     "description": "DECK: Earth System Model historical simulation \n Historical simulation with Earth System Models",
     "tier": 0,
@@ -36,10 +36,7 @@
         "CMIP"
     ],
     "parent-experiment": [
-        "esm-piControl"
-    ],
-    "sub-experiment": [
-        "none"
+        "esm-picontrol"
     ],
     "long-label": "Simulation of the recent past (emissions driven)"
 }

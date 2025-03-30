@@ -6,7 +6,7 @@
         "cmip7"
     ],
     "activity": [
-        "CMIP"
+        "cmip"
     ],
     "description": "DECK: effective radiative forcing by present day anthropogenic forcings \n Effective radiative forcing by present day anthropogenic forcings",
     "tier": 0,
@@ -19,10 +19,7 @@
         "CMIP"
     ],
     "parent-experiment": [
-        "piControl"
-    ],
-    "sub-experiment": [
-        "none"
+        "picontrol"
     ],
     "long-label": "As piClim-control except present-day anthropogenic forcing"
 }

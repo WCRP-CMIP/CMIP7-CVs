@@ -6,7 +6,7 @@
         "cmip7"
     ],
     "activity": [
-        "CMIP"
+        "cmip"
     ],
     "description": "DECK: effective radiative forcing control \n Effective radiative forcing control simulation",
     "tier": 0,
@@ -19,10 +19,7 @@
         "CMIP"
     ],
     "parent-experiment": [
-        "piControl"
-    ],
-    "sub-experiment": [
-        "none"
+        "picontrol"
     ],
     "long-label": "Preindustrial conditions including SST and SIC prescribed"
 }
