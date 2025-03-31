@@ -18,5 +18,6 @@
     "parent-experiment": [
         "esm-hist"
     ],
-    "long-label": "Medium Scenario"
+    "long-label": "Medium Scenario",
+    "start-date": "none"
 }

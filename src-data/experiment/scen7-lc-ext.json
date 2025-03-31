@@ -18,5 +18,6 @@
     "parent-experiment": [
         "scen7-lc"
     ],
-    "long-label": "Low, Concentration Driven Scenario Extension"
+    "long-label": "Low, Concentration Driven Scenario Extension",
+    "start-date": "none"
 }

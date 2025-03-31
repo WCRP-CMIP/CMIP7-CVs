@@ -18,5 +18,6 @@
     "parent-experiment": [
         "picontrol"
     ],
-    "long-label": "As piClim-control except CO2 concentrations set to 4 times preindustrial"
+    "long-label": "As piClim-control except CO2 concentrations set to 4 times preindustrial",
+    "start-date": "none"
 }

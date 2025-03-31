@@ -18,5 +18,6 @@
     "parent-experiment": [
         "esm-scen7-vllo"
     ],
-    "long-label": "Very Low Scenario with Limited Overshoot Extension"
+    "long-label": "Very Low Scenario with Limited Overshoot Extension",
+    "start-date": "none"
 }

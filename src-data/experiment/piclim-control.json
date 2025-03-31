@@ -18,5 +18,6 @@
     "parent-experiment": [
         "picontrol"
     ],
-    "long-label": "Preindustrial conditions including SST and SIC prescribed"
+    "long-label": "Preindustrial conditions including SST and SIC prescribed",
+    "start-date": "none"
 }

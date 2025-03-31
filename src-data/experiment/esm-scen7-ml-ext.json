@@ -18,5 +18,6 @@
     "parent-experiment": [
         "esm-scen7-ml"
     ],
-    "long-label": "Medium Low Scenario Extension"
+    "long-label": "Medium Low Scenario Extension",
+    "start-date": "none"
 }

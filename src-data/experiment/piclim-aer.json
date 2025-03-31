@@ -33,6 +33,6 @@
     "parent-experiment": [
         "picontrol"
     ],
-    "start-date": "_No response_",
+    "start-date": "none",
     "tier": "1"
 }

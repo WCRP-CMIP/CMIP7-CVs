@@ -18,5 +18,6 @@
     "parent-experiment": [
         "none"
     ],
-    "long-label": "Describe 1pctCO2-rad in one sentence."
+    "long-label": "Describe 1pctCO2-rad in one sentence.",
+    "start-date": "none"
 }

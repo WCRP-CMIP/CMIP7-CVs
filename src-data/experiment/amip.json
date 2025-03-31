@@ -35,5 +35,6 @@
     "parent-experiment": [
         "none"
     ],
-    "long-label": "Describe amip in one sentence."
+    "long-label": "Describe amip in one sentence.",
+    "start-date": "none"
 }
