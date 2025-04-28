@@ -1,0 +1,17 @@
+{
+    "@context": "_context_",
+    "id": "drs-list",
+    "type": [
+        "wcrp:project",
+        "cmip7",
+        "wcrp:drs"
+    ],
+    "drs": {
+        "directory-path-example": "",
+        "directory-path-sub-experiment-example": "C",
+        "directory-path-template": "",
+        "filename-example": "",
+        "filename-sub-experiment-example": "",
+        "filename-template": ""
+    }
+}

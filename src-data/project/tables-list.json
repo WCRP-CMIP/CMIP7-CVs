@@ -1,0 +1,13 @@
+{
+    "@context": [
+        "_context_"
+    ],
+    "id": "tables-list",
+    "type": [
+        "wcrp:project",
+        "cmip7",
+        "wcrp:tables"
+    ],
+    "tables": [
+    ]
+}
