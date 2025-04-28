@@ -105,7 +105,7 @@ def run(issue,packet):
             "type": [f'wcrp:{issue['issue-type']}',prefix],
             "label": acronym,    
             "long-label": issue['experiment-title'],
-            "description": issue['description'],
+            "description": issue['description'].replace("'", "\\'"),
             
             "activity": [activity.lower()],
             "parent-experiment": [parent],

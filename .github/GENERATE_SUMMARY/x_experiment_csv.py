@@ -11,7 +11,9 @@ def run(localhost,whoami,repopath,reponame):
     
     frame = {"@context": ctx, "@type": "wcrp:experiment"}
     
-    data = cmipld.get(url)["@graph"]
+    data = cmipld.get(url,depth=2)["@graph"]
+    
+    
     
     
     location = f'{repopath}/{reponame}_experiment_list.csv'
