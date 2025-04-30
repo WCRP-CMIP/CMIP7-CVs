@@ -45,7 +45,8 @@ jobs:
     - name: Generate summaries
       id: gen-summary
       run: |
-        python .github/GENERATE_SUMMARY/__main__.py
+        # python .github/GENERATE_SUMMARY/__main__.py
+        generate_summary .github/GENERATE_SUMMARY/
 
 
     # - name: Run Update Scripts
