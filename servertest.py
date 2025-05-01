@@ -25,6 +25,6 @@ import json
 from cmipld.utils import extract
 
 
-ld = extract.get('cmip7:experiment/1pctco2',depth=2)
+ld = extract.get('cmip7:experiment/graph.jsonld',depth=3,compact=False)
 
 print(json.dumps(ld,indent=4))
