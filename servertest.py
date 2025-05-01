@@ -15,11 +15,16 @@ localhost = localserver.start_server(8084)
 # we need not to get this, we just call it the same as the repo
 
 # cmipld.jsonld.expand('cmip7:_context_',)
-import requests
-rq = requests.get('cmip7:_context_')
-print(rq.json())
-# LD server should provide the redirect paths 
+# import requests
+# rq = requests.get('cmip7:_context_')
+# print(rq.json())
+# # LD server should provide the redirect paths 
+
+import json
+
+from cmipld.utils import extract
 
 
-ld = cmipld.jsonld.expand('universal:activity/lesfmip',)
-print(ld)
+ld = extract.get('cmip7:experiment/1pctco2',depth=2)
+
+print(json.dumps(ld,indent=4))
