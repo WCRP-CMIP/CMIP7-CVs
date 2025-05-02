@@ -7,7 +7,7 @@
     "activity": [
         "tipmip"
     ],
-    "description": "1. Detailed experiment configuration 2. Required model settings 3. Experiment conditions 4. Links to relevant references 5. Similarities to CMIP6 experiments 6. Forcing differences from parent experiment",
+    "description": "Ramp-up experiment with a constant warming rate of 2 degree C per century.",
     "label": "esm-up2p0",
     "long-label": "Ramp up with constant CO2 emissions leading to 2 degree C/century warming",
     "minimum-number-of-years": "200",
