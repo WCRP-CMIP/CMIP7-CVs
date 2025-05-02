@@ -25,5 +25,6 @@
         "piclim-control"
     ],
     "start-date": "none",
-    "tier": "1"
+    "tier": "1",
+    "@context": "_context_"
 }
