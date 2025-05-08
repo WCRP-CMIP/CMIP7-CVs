@@ -1,6 +1,6 @@
 {
     "@context": "_context_",
-    "id": "g7-15k-sai",
+    "id": "g7-1p5k-sai",
     "type": [
         "wcrp:experiment",
         "cmip7"
@@ -13,11 +13,11 @@
     "end": -999,
     "min-number-yrs-per-sim": -999,
     "start": -999,
-    "label": "G7-15K-SAI",
+    "label": "G7-1p5K-SAI",
     "model-realms": [],
     "parent-experiment": [
         "none"
     ],
-    "long-label": "Describe G7-15K-SAI in one sentence.",
+    "long-label": "G7-1.5K-SAI",
     "start-date": "none"
 }
