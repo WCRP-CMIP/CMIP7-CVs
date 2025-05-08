@@ -13,7 +13,7 @@
     "end": -999,
     "min-number-yrs-per-sim": -999,
     "start": -999,
-    "label": "G7-15K-SAI",
+    "label": "G7-1p5K-SAI",
     "model-realms": [],
     "parent-experiment": [
         "none"
