@@ -5,7 +5,7 @@ projects: ["CVs Task Team Timeline"]
 labels:
     - delta
     - experiment
-milestone: ["Review"]
+    - Review
 body:
 
 -   type: markdown
