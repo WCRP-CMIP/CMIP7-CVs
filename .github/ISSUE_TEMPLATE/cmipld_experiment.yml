@@ -1,9 +1,11 @@
 name: 'Add/Modify: Experiment'
 description: 'Type: experiment'
 title: 'Add/Modify: Experiment: <Type experiment name here>'
+projects: ["CVs Task Team Timeline"]
 labels:
     - delta
     - experiment
+milestone: ["Review"]
 body:
 
 -   type: markdown
