@@ -2,8 +2,6 @@ name: 'Add/Modify: Experiment'
 description: 'Type: experiment'
 title: 'Add/Modify: Experiment: <Type experiment name here>'
 projects: ["WCRP-CMIP/4"]  # Updated to link to org project 4
-milestones:
-  - "Review"  
 labels:
     - delta
     - experiment
