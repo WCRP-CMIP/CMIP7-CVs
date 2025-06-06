@@ -353,6 +353,17 @@ body:
     validations:
         required: true
 
+-   id: milestone
+    type: dropdown
+    attributes:
+        label: "For:"
+        #   description: "This is pre-set and cannot be changed."
+        options:
+            - "Review"
+        default: 0
+    validations:
+        required: true
+
 -   id: issue_kind
     type: dropdown
     attributes:
