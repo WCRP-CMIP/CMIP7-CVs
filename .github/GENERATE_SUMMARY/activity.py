@@ -1,52 +1,42 @@
 import cmipld
 from cmipld.utils.ldparse import *
 from cmipld.utils.checksum import version
+from cmipld.utils.logging.unique import UniqueLogger
+log = UniqueLogger()
 import os 
 
 me = __file__.split('/')[-1].replace('.py','')
 
-def run(localhost,whoami,repopath,reponame):
+def run(whoami,path,name,**kwargs):
     import requests
 
-    url = f'{localhost}/{whoami}/project/{me}-list.json'
-    print(localhost)
-    print(f'url: {url}')
-    
-    
-    # os.system(f'curl -v {url} --insecure')
-    # input('press enter to continue')
-    
-    
-    
-    # print(requests.get(url,verify=False).text)
-    # # # ctx = f'{localhost}/{whoami}/project/_context_'
-    
-    
-    
-    input('press enter to continue')
+    url = f'{whoami}:project/{me}-list.json'
+    # log.debug(f'url: {url}')
     
     data = cmipld.get(url,depth=2)
+
     
-    # data = cmipld.jsonld.expand(url)
+    summary = name_entry(data[me])
     
-    import json
-    # print(json.dumps(data,indent=4))
+        
+    print('\n\n',type(data),summary)
     
-    # data = cmipld.processor.loader(url,{})
-    print(json.dumps(data,indent=4))
+    # ,fields = ['description','url'])
     
-    print('-----')
-    # summary = name_extract(data)
+    location = f'{path}/{name}_{me}.json'
     
-    location = f'{repopath}/{reponame}_{me}.json'
-    print('location',location)
+    
     # summary = version(summary, me, location.split("/")[-1])
     
     # if os.path.exists(location):
     #     old = cmipld.utils.io.jr(location)
     #     if old['Header']['checksum'] == summary['Header']['checksum']:
-    #         return 'no update - file already exists'
+    #         return log.error('no update - file already exists')
+        
+    print('old',location)
+    log.debug(f'Writing to {location}')
+    # cmipld.utils.io.wj(summary,location)
     
-    # # cmipld.utils.io.wjsn(summary,location)
-    return location,me,data
-# summary
+    return location,me,summary
+    
+    # print(json.dumps(summary,indent=4))
