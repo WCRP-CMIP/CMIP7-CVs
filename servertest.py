@@ -11,20 +11,24 @@ whoami = cmipld.reverse_mapping()[io_url]
 localserver = LD_server( copy=[[ldpath, whoami]], override='y')
 localhost = localserver.start_server(8084)
 
+from cmipld.utils.server_tools.loader import Loader
+loader = Loader(tries=3)
 
-# we need not to get this, we just call it the same as the repo
+url = 'cmip7:experiment/graph.jsonld'
+url = 'https://wcrp-cmip.github.io/CMIP7-CVs/experiment/esm-scen7-h.json'
+# url = 'https://wcrp-cmip.github.io/CMIP7-CVs/experiment/abrupt-127k.json'
+print(cmipld.jsonld.expand(url))
+cmipld.view(url)
+# cmipld.utils.display_depends(url, prefix=True, relative=True)
 
-# cmipld.jsonld.expand('cmip7:_context_',)
-# import requests
-# rq = requests.get('cmip7:_context_')
-# print(rq.json())
-# # LD server should provide the redirect paths 
+import json,requests
+# print(json.dumps(requests.get(url).json(), indent=2))
 
-import json
-
-from cmipld.utils import extract
+# print(cmipld.utils.depends(url, prefix=False, relative=True))
 
 
-ld = extract.get('cmip7:experiment/graph.jsonld',depth=3,compact=False)
 
-print(json.dumps(ld,indent=4))
+# cmipld.utils.view(url, compact=True, depth=2)
+# print('done')
+
+
