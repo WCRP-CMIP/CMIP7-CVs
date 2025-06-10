@@ -40,12 +40,9 @@ jobs:
         # frames: "$PWD/compiled/graph_data.json"
 
 
-
-
     - name: Generate summaries
       id: gen-summary
       run: |
-        # python .github/GENERATE_SUMMARY/__main__.py
         generate_summary .github/GENERATE_SUMMARY/
 
 
