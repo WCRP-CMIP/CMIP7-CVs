@@ -13,7 +13,7 @@ jobs:
       
     steps:
 
-    - name: Get a list of directories with updated files
+    - name: install cmipld
       id: install-cmipld
       uses: WCRP-CMIP/CMIPLD/actions/cmipld@main
     
