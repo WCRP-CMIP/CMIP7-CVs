@@ -1,12 +1,12 @@
 {
     "Header": {
         "file": "CMIP7-CVs_experiment_simplified.json",
-        "file_creation_date": "2025-04-28T13:37:53.612783",
+        "file_creation_date": "2025-05-08T17:47:56.537013",
         "version": "fatal: No names found, cannot describe anything.",
-        "checksum": "md5: 1875d77e05c38b43551e663fa767aeca",
+        "checksum": "md5: bcb27ec695a0dcf1146c38887ff9de40",
         "repo_url": "https://github.com/WCRP-CMIP/CMIP7-CVs",
         "repo_prefix": "cmip7",
-        "last_commit": "7ce2e7fc5eb158380719bc19e98e63a30e5f49c6",
+        "last_commit": "bbdf13458b5ef4c374303cf76eec1b43976f94b6",
         "comment": "This is an automatically generated file. Do not edit."
     },
     "experiment_simplified": {
@@ -47,7 +47,7 @@
             "long-label": "Abrupt halving of CO2"
         },
         "abrupt-127k": {
-            "description": "Suggested experiment description for the last column of https://wcrp-cmip.github.io/CMIP6_CVs/docs/CMIP6_experiment_id.html:  Conceptually similar to abrupt-4xCO2 DECK experiment, except that orbital forcing and greenhouse gas conditions are abruptly changed from those of piControl, that also serves as an initial state, to their configuration of 127,000 years ago, with high boreal spring to autumn insolation leading to low sea-ice in the Arctic.  More information regarding points 1-6, it must still be decided which parts of this information are included in any databases or documents:  1. AOGCM initialized from a spun-up piControl with constant-in-time forcing of orbital parameters and greenhouse gas concentrations indicative of 127,000 years before present 2. as piControl, but specifying orbital configuration (eccentricity, obliquity, length of perihelion) and greenhouse gas concentrations as per PMIP4 lig127k (Otto-Bliesner et al., 2017; also refer to Sime et al. in prep.); use of components AER, CHEM, BGC is allowed, yet it must be ensured that relevant greenhouse gas concentrations in the atmosphere stay constant at the specified values throughout the simulation 3. orbital configuration (eccentricity, obliquity, length of perihelion) and greenhouse gas concentrations changed with respect to piControl 4. Otto-Bliesner et al. (2017), https://gmd.copernicus.org/articles/10/3979/2017/; Guarino et al (2020), https://www.nature.com/articles/s41558-020-0865-2; Sime et al. (2023), https://cp.copernicus.org/articles/19/883/2023/ 5. piControl (but with differences in top of the atmosphere insolation and greenhouse gas concentrations); abrupt-4xCO2 (but with differences in the type of boundary conditions/forcing changed at initialisation) 6. orbital configuration (eccentricity, obliquity, length of perihelion) and greenhouse gas concentrations",
+            "description": "Conceptually similar to abrupt-4xCO2 DECK experiment, except that orbital forcing (eccentricity, obliquity, length of perihelion) and greenhouse gas concentrations as per PMIP4 lig127k (Otto-Bliesner et al., 2017; also refer to Sime et al. in prep.) are abruptly changed from those of piControl, that also serves as an initial state, to their configuration of 127,000 years ago, with high boreal spring to autumn insolation leading to low sea-ice in the Arctic. AOGCM initialized from a spun-up piControl with constant-in-time forcing of orbital parameters and greenhouse gas concentrations indicative of 127,000 years before present; use of components AER, CHEM, BGC is allowed, yet it must be ensured that relevant greenhouse gas concentrations in the atmosphere stay constant at the specified values throughout the simulation; relevant references: Otto-Bliesner et al. (2017), https://gmd.copernicus.org/articles/10/3979/2017/; Guarino et al (2020), https://www.nature.com/articles/s41558-020-0865-2; Sime et al. (2023), https://cp.copernicus.org/articles/19/883/2023/",
             "long-label": "abrupt imposure of the orbit and greenhouse gases of 127 ka before present"
         },
         "abrupt-2xCO2": {
@@ -162,6 +162,10 @@
             "description": "Extension to scenario consistent with limiting warming to 1.5 degree C by 2100 AD with limited overshoot (as low as plausible) of 1.5 degree C",
             "long-label": "Very Low Scenario with Limited Overshoot Extension"
         },
+        "highres-yr2020": {
+            "description": "A one-year, atmosphere-only historical experiment with prescribed SSTs and sea ice (likely 2020 to link with DYAMOND2), designed to link with other communities. The preferred period is 1 March 2020\u201328 February 2021.  References: Roberts, M. J., Reed, K. A., Bao, Q., Barsugli, J. J., Camargo, S. J., Caron, L. P., \u2026 & Zhao, M. (2025). High-Resolution Model Intercomparison Project Phase 2 (HighResMIP2) towards CMIP7. Geoscientific Model Development, 18, 1307\u20131332  [High-Resolution Model Intercomparison Project Phase 2 (HighResMIP2) towards CMIP7.pdf](https://github.com/user-attachments/files/19402345/High-Resolution.Model.Intercomparison.Project.Phase.2.HighResMIP2.towards.CMIP7.pdf)  Webpage: https://highresmip.org/experiments/experiment_cmip7/",
+            "long-label": "HighResMIP2"
+        },
         "highresSST-p4K-pat": {
             "description": "Conduct forced atmosphere simulations at patterned warming level +4K over 2003\u20132022, parallel to highresSST-present, with patterned SST and sea ice changes. (Three ensembles are desired per warming level)  References: Roberts, M. J., Reed, K. A., Bao, Q., Barsugli, J. J., Camargo, S. J., Caron, L. P., \u2026 & Zhao, M. (2025). High-Resolution Model Intercomparison Project Phase 2 (HighResMIP2) towards CMIP7. Geoscientific Model Development, 18, 1307\u20131332  [High-Resolution Model Intercomparison Project Phase 2 (HighResMIP2) towards CMIP7.pdf](https://github.com/user-attachments/files/19402345/High-Resolution.Model.Intercomparison.Project.Phase.2.HighResMIP2.towards.CMIP7.pdf)  Webpage: https://highresmip.org/experiments/experiment_cmip7/",
             "long-label": "Atmosphere-only warming levels - highresSST-p4K-pat (patterned)"
@@ -213,6 +217,10 @@
         "piClim-2xDMSpPMOA": {
             "description": "1. Detailed experiment configuration An atmosphere only configuration following piClim-control but with emissions of primary marine organic compounds and dimethyl sulphide scaled by a factor of 2  2. Required model settings We encourage modelling centres to include as much atmospheric composition capability as possible. As a minimum, models should have prescribed or interactive aerosols. And the experimental setup should be consistent with other AerChemMIP2 experiments, particularly piClim-control.  3. Experiment conditions  4. Links to relevant references Fiedler et al. (in prep.) AerChemMIP2 - Unraveling the role of reactive gases, aerosols, and land use for air quality and climate change in CMIP7  5. Similarities to CMIP6 experiments Modification of piClim-2xDMS to include 2xPMOA  6. Forcing differences from parent experiment Doubled primary marine organic carbon aerosol and dimethyl sulphide emissions",
             "long-label": "Pre-industrial climatology with doubled emissions of primary marine organic compounds and dimethyl sulphide"
+        },
+        "piClim-2xWet": {
+            "description": "1. Detailed experiment configuration An atmosphere only configuration following piClim-control but with wetland methane emissions scaled by a factor of 2  2. Required model settings We encourage modelling centres to include as much atmospheric composition capability as possible. But, as a minimum, models should have tropospheric chemistry. And the experimental setup should be consistent with other AerChemMIP2 experiments, particularly piClim-control.  3. Experiment conditions  4. Links to relevant references Fiedler et al. (in prep.) AerChemMIP2 - Unraveling the role of reactive gases, aerosols, and land use for air quality and climate change in CMIP7  5. Similarities to CMIP6 experiments Following piClim-2xX experimental setup  6. Forcing differences from parent experiment Doubled wetland methane emissions",
+            "long-label": "Pre-industrial climatology with doubled wetland emissions of methane"
         },
         "piClim-2xdust": {
             "description": "1. Detailed experiment configuration An atmosphere only configuration following piClim-control but with mineral dust emissions scaled by a factor of 2  2. Required model settings We encourage modelling centres to include as much atmospheric composition capability as possible. As a minimum, models should have prescribed or interactive aerosols. And the experimental setup should be consistent with other AerChemMIP2 experiments, particularly piClim-control.   3. Experiment conditions  4. Links to relevant references Fiedler et al. (in prep.) AerChemMIP2 - Unraveling the role of reactive gases, aerosols, and land use for air quality and climate change in CMIP7  5. Similarities to CMIP6 experiments piClim\u20132xdust  6. Forcing differences from parent experiment Doubled mineral dust emissions",

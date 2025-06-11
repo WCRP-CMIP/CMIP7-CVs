@@ -20,7 +20,7 @@ jobs:
 
     # - name: Ensure the JSON-LD files are functional
     #   id: check-graph
-    #   uses: WCRP-CMIP/CMIP-LD/actions/check-graph@main
+    #   uses: WCRP-CMIP/CMIPLD/actions/check-graph@main
 
   
       - name: Setup Node.js

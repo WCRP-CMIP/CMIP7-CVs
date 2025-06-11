@@ -4,10 +4,10 @@ from cmipld.utils.checksum import version
 
 me = __file__.split('/')[-1].replace('.py','')
 
-def run(localhost,whoami,repopath,reponame):
+def run(whoami,path,name,io,**kwargs):
 
-    url = f'{localhost}/{whoami}/experiment/graph.jsonld'
-    ctx = f'{localhost}/{whoami}/experiment/_context_'
+    url = f'{io}experiment/graph.jsonld'
+    ctx = f'{io}experiment/_context_'
     
     frame = {"@context": ctx, "@type": "wcrp:experiment"}
     
@@ -17,6 +17,8 @@ def run(localhost,whoami,repopath,reponame):
     
     summary = {k:key_extract(v,['long-label','description']) for k,v in summary.items()}
     
-    location = f'{repopath}/{reponame}_{me}.json'
-    summary = version(summary, me, location.split("/")[-1])
-    cmipld.utils.io.wjsn(summary,location)
+    location = f'{path}/{name}_{me}.json'
+    # summary = version(summary, me, location.split("/")[-1])
+    # cmipld.utils.io.wjsn(summary,location)
+    
+    return location,me,summary

@@ -15,7 +15,7 @@ jobs:
 
     - name: Get a list of directories with updated files
       id: install-cmipld
-      uses: WCRP-CMIP/CMIP-LD/actions/cmipld@main
+      uses: WCRP-CMIP/CMIPLD/actions/cmipld@main
     
     - name: Checkout Code
       uses: actions/checkout@v4
@@ -28,30 +28,29 @@ jobs:
 
     - name: Get a list of directories with updated files
       id: updated-dirs
-      uses: WCRP-CMIP/CMIP-LD/actions/updated-dirs@main
+      uses: WCRP-CMIP/CMIPLD/actions/updated-dirs@main
       with:
         filter_dir: "src-data"
 
     - name: Group JSONLD files
       id: group-jsonld
-      uses: WCRP-CMIP/CMIP-LD/actions/process_jsonld@main
+      uses: WCRP-CMIP/CMIPLD/actions/process_jsonld@main
       with:
         dirs: ${{ env.updated_dirs }}
         # frames: "$PWD/compiled/graph_data.json"
 
 
+    - name: Generate summaries
+      id: gen-summary
+      run: |
+        generate_summary .github/GENERATE_SUMMARY/
 
-
-    # - name: Generate summaries
-    #   id: gen-summary
-    #   run: |
-    #     python .github/GENERATE_SUMMARY/__main__.py
 
 
     # - name: Run Update Scripts
     #   if: ${{ env.updated_dirs }}
     #   id: run-all-files
-    #   uses: WCRP-CMIP/CMIP-LD/actions/run-all-files@main
+    #   uses: WCRP-CMIP/CMIPLD/actions/run-all-files@main
     #   with:
     #     directory: "$PWD/JSONLD/scripts"
     #     script: python
@@ -67,7 +66,7 @@ jobs:
     #     fi
   
     - name: Commit All
-      uses: WCRP-CMIP/CMIP-LD/actions/commit-all@main
+      uses: WCRP-CMIP/CMIPLD/actions/commit-all@main
       with:
         message: "Automated Content Update"
   
@@ -77,7 +76,7 @@ jobs:
 
     - name: Publish
       if: github.ref_name == 'main'
-      uses: WCRP-CMIP/CMIP-LD/actions/publish2pages@main
+      uses: WCRP-CMIP/CMIPLD/actions/publish2pages@main
       with:
         api_key: ${{ secrets.API_KEY }}
         github_token: ${{ secrets.GITHUB_TOKEN }}
