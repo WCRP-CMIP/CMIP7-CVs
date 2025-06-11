@@ -7,24 +7,20 @@ import os
 
 me = __file__.split('/')[-1].replace('.py','')
 
-def run(whoami,path,name,**kwargs):
-    import requests
+def run(whoami,path,name,url,io):
 
-    url = f'{whoami}:project/{me}-list.json'
-    # log.debug(f'url: {url}')
-    
-    data = cmipld.get(url,depth=2)
 
+    qurl = f'{io}/project/graph.jsonld'
+    # ctx = f'{localhost}/{whoami}/project/_context_'
     
+    data = cmipld.get(qurl,depth=2)["@graph"]
+  
     summary = name_entry(data[me])
     
-        
-    print('\n\n',type(data),summary)
-    
-    # ,fields = ['description','url'])
-    
+
     location = f'{path}/{name}_{me}.json'
-    
+    # summary = version(summary, me, location.split("/")[-1])
+
     
     # summary = version(summary, me, location.split("/")[-1])
     

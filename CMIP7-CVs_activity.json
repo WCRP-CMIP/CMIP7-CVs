@@ -1,6 +1,7 @@
 {
     "Header": {
         "file": "CMIP7-CVs_activity.json",
+<<<<<<< HEAD
         "file_creation_date": "2025-05-08T17:50:26.548089",
         "version": "fatal: No names found, cannot describe anything.",
         "checksum": "md5: 61c98415701a16a8b4362a91dacf4bad",
@@ -21,5 +22,27 @@
         "PMIP": "PMIP focuses on past climate variability, with experiments like LIGabrupt.",
         "RFMIP": "RFMIP assesses the radiative forcing of climate change with experiments such as piClim-aer, piClim-histaer, and piClim-histall.",
         "ScenarioMIP": "ScenarioMIP focuses on future climate projections based on different socio-economic pathways, including High, Medium, and Very Low scenarios."
+=======
+        "file_creation_date": "2025-06-11T12:15:05.832217",
+        "version": "fatal: No names found, cannot describe anything.",
+        "checksum": "md5: 2a69deecbaac169a150a12fdb14b7bdf",
+        "repo_url": "https://github.com/WCRP-CMIP/CMIP7-CVs",
+        "repo_prefix": "cmip7",
+        "last_commit": "27f986ead32fab4ff91b11b749713da897245c12",
+        "comment": "This is an automatically generated file. Do not edit."
+    },
+    "activity": {
+        "Header": {
+            "file": "CMIP7-CVs_activity.json",
+            "file_creation_date": "2025-06-11T12:15:05.703043",
+            "version": "fatal: No names found, cannot describe anything.",
+            "checksum": "md5: 99914b932bd37a50b983c5e7c90ae93b",
+            "repo_url": "https://github.com/WCRP-CMIP/CMIP7-CVs",
+            "repo_prefix": "cmip7",
+            "last_commit": "27f986ead32fab4ff91b11b749713da897245c12",
+            "comment": "This is an automatically generated file. Do not edit."
+        },
+        "activity": {}
+>>>>>>> a4dc065 (experiment readme created)
     }
 }
