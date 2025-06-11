@@ -22,4 +22,4 @@ jobs:
     steps:
       - name: Run the parser on a new issue
         id: new-issue-action
-        uses: WCRP-CMIP/CMIP-LD/actions/new-issue@main
+        uses: WCRP-CMIP/CMIPLD/actions/new-issue@main
