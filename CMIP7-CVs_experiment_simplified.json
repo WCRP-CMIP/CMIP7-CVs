@@ -1,0 +1,366 @@
+{
+    "Header": {
+        "file": "CMIP7-CVs_experiment_simplified.json",
+        "file_creation_date": "2025-06-12T11:18:00.640668",
+        "version": "fatal: No names found, cannot describe anything.",
+        "checksum": "md5: bcb27ec695a0dcf1146c38887ff9de40",
+        "repo_url": "https://github.com/WCRP-CMIP/CMIP7-CVs",
+        "repo_prefix": "cmip7",
+        "last_commit": "1176b2ee0f2dca54dd60e8b5029bb07f0ecbe36c",
+        "comment": "This is an automatically generated file. Do not edit."
+    },
+    "experiment_simplified": {
+        "1pctCO2": {
+            "description": "DECK: 1 percent per year CO2 increase \n Increase CO2 concentration from pre-industrial level at 1% per year until quadrupling",
+            "long-label": "CO2 prescribed to increase at 1% per year"
+        },
+        "1pctCO2-bgc": {
+            "description": "1pctCO2-bgc is retained from CMIP6.  It is a simulation which branches from piControl with a 1% per year increase in CO2 concentration from pre-industrial levels, with the CO2 \u201cbiogeochemically-coupled\u201d. This means that only the model\u2019s carbon cycle components (both land and ocean) respond to the increase in CO2, whereas the model\u2019s radiation code uses a constant, preindustrial concentration of CO2.  The 1pctCO2 DECK simulation is required for comparison. This experiment is designed to isolate carbon-concentration and carbon climate elements of the global carbon feedbacks. It will also enable calibration of climate emulators.  See Jones et al 2016: https://gmd.copernicus.org/articles/9/2853/2016/ , especially section 3.2.3  Example of use/analysis is Arora et al. 2020: https://bg.copernicus.org/articles/17/4173/2020/",
+            "long-label": "biogeochemically-coupled version of 1 percent per year increasing CO2 experiment"
+        },
+        "1pctCO2-rad": {
+            "description": "Radiatively-coupled version of 1 percent per year CO2 increase experiment",
+            "long-label": "Describe 1pctCO2-rad in one sentence."
+        },
+        "G7-15K-SAI": {
+            "description": "Stratospheric aerosol injection to reduce warming to 1.5K \n Stratospheric aerosol injection to reduce warming to 1.5K above pre-industrial levels",
+            "long-label": "Describe G7-15K-SAI in one sentence."
+        },
+        "Initialised-prediction-2025-2036": {
+            "description": "Initialised prediction for 2025-2036 \n Decadal climate prediction project initialised forecast for 2025-2036",
+            "long-label": "Describe Initialised-prediction-2025-2036 in one sentence."
+        },
+        "LIGabrupt": {
+            "description": "Last Interglacial abrupt change experiment \n Simulation of abrupt change during the Last Interglacial period",
+            "long-label": "Describe LIGabrupt in one sentence."
+        },
+        "SSPX-SLCF": {
+            "description": "Future scenario with specified SLCF emissions \n Future scenario simulation with specified short-lived climate forcer emissions",
+            "long-label": "Describe SSPX-SLCF in one sentence."
+        },
+        "abrupt-0p5CO2": {
+            "description": "Abrupt halving of CO2 \n Abrupt halving of atmospheric CO2",
+            "long-label": "Describe abrupt-0p5CO2 in one sentence."
+        },
+        "abrupt-0p5xCO2": {
+            "description": "Identical to the `piControl` DECK experiment but with a step change to 0.5xCO2 concentration from its pre-industrial value, held constant for the duration of the run.  Reference: [Webb et al., 2017](https://doi.org/10.5194/gmd-10-359-2017)",
+            "long-label": "Abrupt halving of CO2"
+        },
+        "abrupt-127k": {
+            "description": "Conceptually similar to abrupt-4xCO2 DECK experiment, except that orbital forcing (eccentricity, obliquity, length of perihelion) and greenhouse gas concentrations as per PMIP4 lig127k (Otto-Bliesner et al., 2017; also refer to Sime et al. in prep.) are abruptly changed from those of piControl, that also serves as an initial state, to their configuration of 127,000 years ago, with high boreal spring to autumn insolation leading to low sea-ice in the Arctic. AOGCM initialized from a spun-up piControl with constant-in-time forcing of orbital parameters and greenhouse gas concentrations indicative of 127,000 years before present; use of components AER, CHEM, BGC is allowed, yet it must be ensured that relevant greenhouse gas concentrations in the atmosphere stay constant at the specified values throughout the simulation; relevant references: Otto-Bliesner et al. (2017), https://gmd.copernicus.org/articles/10/3979/2017/; Guarino et al (2020), https://www.nature.com/articles/s41558-020-0865-2; Sime et al. (2023), https://cp.copernicus.org/articles/19/883/2023/",
+            "long-label": "abrupt imposure of the orbit and greenhouse gases of 127 ka before present"
+        },
+        "abrupt-2xCO2": {
+            "description": "Identical to the `piControl` DECK experiment but with a step change to 2xCO2 concentration from its pre-industrial value, held constant for the duration of the run.  Reference: [Webb et al., 2017](https://doi.org/10.5194/gmd-10-359-2017)",
+            "long-label": "Abrupt doubling of CO2"
+        },
+        "abrupt-4xCO2": {
+            "description": "DECK: abrupt quadrupling of CO2 \n Abrupt increase in CO2 concentration from pre-industrial level to quadrupling",
+            "long-label": "CO2 prescribed to 4 times preindustrial"
+        },
+        "abrupt-4xCO2-1950": {
+            "description": "A coupled experiment with abrupt 4xCO2 forcing, starting from the end of the spinup-1950 simulation, enforces an instantaneous 4xCO2 increase  References: Roberts, M. J., Reed, K. A., Bao, Q., Barsugli, J. J., Camargo, S. J., Caron, L. P., \u2026 & Zhao, M. (2025). High-Resolution Model Intercomparison Project Phase 2 (HighResMIP2) towards CMIP7. Geoscientific Model Development, 18, 1307\u20131332  [High-Resolution Model Intercomparison Project Phase 2 (HighResMIP2) towards CMIP7.pdf](https://github.com/user-attachments/files/19402163/High-Resolution.Model.Intercomparison.Project.Phase.2.HighResMIP2.towards.CMIP7.pdf)  Webpage: https://highresmip.org/experiments/experiment_cmip7/",
+            "long-label": "Idealised experiments for CMIP-comparable metrics - abrupt 4xCO2 starting form the end of spinup-1950"
+        },
+        "amip": {
+            "description": "DECK: AMIP \n AMIP (Atmospheric Model Intercomparison Project) experiment with prescribed SSTs and sea ice",
+            "long-label": "Describe amip in one sentence."
+        },
+        "amip-m4K": {
+            "description": "The configuration of the `amip-m4K` experiment will be the same as the Fast Track `amip-p4K` experiment, except that the sea surface temperatures are uniformly reduced by 4K rather than increased. This cooling should be applied to sea-ice-free grid boxes only. Sea ice and SSTs in grid boxes containing sea ice should remain the same as in the `amip` DECK experiment. In models which employ a fixed lower threshold near freezing for the SST used in the calculation of the surface fluxes, this should ideally also be reduced by 4K. This will support the investigation of inconsistent responses of clouds to a cooling versus a warming climate in a controlled way through comparison with the `amip-p4K` [(Ringer et al., 2023)](https://doi.org/10.1029/2023JD038861). This experiment also complements the `abrupt-0p5xCO2` experiment in that one can identify asymmetries in the warming/cooling response with and without interactions with the ocean.  Reference: [Webb et al., 2017](https://doi.org/10.5194/gmd)",
+            "long-label": "AMIP experiment with uniform 4K SST decrease"
+        },
+        "amip-p4K": {
+            "description": "The same as the `amip` DECK experiment, except that SSTs are subject to a uniform warming of 4K. This warming should be applied to the ice-free ocean surface only. Sea ice and SSTs in grid boxes containing sea ice remain the same as in the `amip` DECK experiment.  Reference: [Webb et al., 2017](https://doi.org/10.5194/gmd-10-359-2017)",
+            "long-label": "AMIP experiment with uniform 4K SST increase"
+        },
+        "amip-p4K-SST-rad": {
+            "description": "Similar to `amip`, but SST is raised by 4K when calculating the upward longwave radiation from the sea surface using Planck function.  Reference: [Ogura et al., 2023](https://doi.org/10.1029/2023GL104786)",
+            "long-label": "AMIP experiment with uniform 4K increase in the SST input to radiation"
+        },
+        "amip-p4K-SST-turb": {
+            "description": "As `amip`, but with SSTs subject to a uniform warming of 4K only when calculating turbulent transport of the latent and sensible heat fluxes at the air-sea interface using bulk aerodynamic formulae.  Reference: [Ogura et al., 2023](https://doi.org/10.1029/2023GL104786)",
+            "long-label": "AMIP experiment with uniform 4K increase in the SST input to surface turbulent fluxes"
+        },
+        "amip-piForcing": {
+            "description": "Identical to the `amip` DECK experiment, but from 1870 to the present with constant pre-industrial forcing levels (anthropogenic and natural).  Reference: [Webb et al., 2017](https://doi.org/10.5194/gmd-10-359-2017)",
+            "long-label": "AMIP experiment with pre-industrial forcing"
+        },
+        "control-1950": {
+            "description": "Start from the end of the spinup-1950 simulation, using constant 1950s forcings. Simulate for at least 100 years, ideally 150 years.  References: Roberts, M. J., Reed, K. A., Bao, Q., Barsugli, J. J., Camargo, S. J., Caron, L. P., \u2026 & Zhao, M. (2025). High-Resolution Model Intercomparison Project Phase 2 (HighResMIP2) towards CMIP7. Geoscientific Model Development, 18, 1307\u20131332 [High-Resolution Model Intercomparison Project Phase 2 (HighResMIP2) towards CMIP7.pdf](https://github.com/user-attachments/files/19393590/High-Resolution.Model.Intercomparison.Project.Phase.2.HighResMIP2.towards.CMIP7.pdf) Webpage: https://highresmip.org/experiments/experiment_cmip7/",
+            "long-label": "Coupled control-1950"
+        },
+        "esm-flat10": {
+            "description": "esm-flat10 is newly introduced for CMIP7 as an emissions-driven idealised experiment to quantify sensitivity of the earth system to CO2 emissions. It requires fully-coupled AOGCM and BGC models with carbon cycle \u201cemissions-driven\u201d  The esm-flat10 experiment branches from a stable esm-piControl simulation, with a constant annual prescribed anthropogenic flux of carbon of 10PgC/year into the atmosphere, with globally homogenous emissions for initial (minimum) period, 0-150 years. Longer runs - 300 years \u2013 are recommended.  It serves as an emissions-driven experiment to diagnose the Transient Climate Response to cumulative Emissions (TCRE), which is the warming from pre-industrial levels observed after the emission of 1000PgC in a transient scenario.  Used with the partner experiments esm-flat10-zec and esm-flat10-cdr it forms a vital part of assessment of TCRE, ZEC and reversibility. In particular these experiments make assessment of ZEC easier than CMIP6 because: the experiment is emissions-driven from the outset and does not require a change in configuration at the branch point and the branch point is common across all models.  more details and analysis can be found here: https://egusphere.copernicus.org/preprints/2023/egusphere-2023-2127/ https://egusphere.copernicus.org/preprints/2024/egusphere-2024-3356/",
+            "long-label": "10 PgC/yr constant CO2 emissions experiment"
+        },
+        "esm-flat10-cdr": {
+            "description": "10 years of carbon dioxide removal (CDR) following 10 years of constant atmospheric CO2",
+            "long-label": "Describe esm-flat10-cdr in one sentence."
+        },
+        "esm-flat10-zec": {
+            "description": "esm-flat10-zec is newly introduced for CMIP7 as an emissions-driven idealised experiment to quantify sensitivity of the earth system to CO2 emissions.  It requires fully-coupled AOGCM and BGC models with carbon cycle \u201cemissions-driven\u201d  The esm-flat10-zec experiment branches from year 100 of the esm-flat10 simulation, but with CO2 emissions set to zero for initial (minimum) period of 200 years. Longer runs are useful.  It serves as an emissions-driven experiment to diagnose the Zero Emissions Commitment (ZEC), which is the continued warming (or cooling) following a sudden cessation of CO2 emissions.  Used with the partner experiments esm-flat10 and esm-flat10-cdr it forms a vital part of assessment of TCRE, ZEC and reversibility. In particular these experiments make assessment of ZEC easier than CMIP6 because: the experiment is emissions-driven from the outset and does not require a change in configuration at the branch point and the branch point is common across all models.  more details and analysis can be found here: https://egusphere.copernicus.org/preprints/2023/egusphere-2023-2127/ https://egusphere.copernicus.org/preprints/2024/egusphere-2024-3356/  this experiment is an evolution of the ZECMIP simulations from CMIP6: https://gmd.copernicus.org/articles/12/4375/2019/ , https://bg.copernicus.org/articles/17/2987/2020/",
+            "long-label": "zero-emissions commitment CO2 experiment"
+        },
+        "esm-hist": {
+            "description": "DECK: Earth System Model historical simulation \n Historical simulation with Earth System Models",
+            "long-label": "Simulation of the recent past (emissions driven)"
+        },
+        "esm-piControl": {
+            "description": "DECK: pre-industrial control simulation with Earth System Models \n Pre-industrial control run for Earth System Models",
+            "long-label": "Coupled atmosphere-ocean preindustrial control (emissions driven)"
+        },
+        "esm-scen7-h": {
+            "description": "High emission scenario to explore potential high-end impacts",
+            "long-label": "High Scenario"
+        },
+        "esm-scen7-h-ext": {
+            "description": "High emission scenario extension to explore potential high-end impacts",
+            "long-label": "High Scenario Extension"
+        },
+        "esm-scen7-h-ext-os": {
+            "description": "High emission scenario overshoot extension to explore potential high-end impacts",
+            "long-label": "High Scenario Overshoot Extension"
+        },
+        "esm-scen7-l": {
+            "description": "Scenario consistent with staying likely below 2 degrees C",
+            "long-label": "Low Scenario"
+        },
+        "esm-scen7-l-ext": {
+            "description": "Scenario extension consistent with staying likely below 2 degrees C",
+            "long-label": "Low Scenario Extension"
+        },
+        "esm-scen7-m": {
+            "description": "Medium emission scenario consistent with current policies",
+            "long-label": "Medium Scenario"
+        },
+        "esm-scen7-m-ext": {
+            "description": "Medium emission scenario extension consistent with current policies",
+            "long-label": "Medium Scenario Extension"
+        },
+        "esm-scen7-ml": {
+            "description": "Scenario with delayed increase in mitigation effort, insufficient to meet Paris Agreement objectives",
+            "long-label": "Medium-Low Scenario"
+        },
+        "esm-scen7-ml-ext": {
+            "description": "Extension to scenario with delayed increase in mitigation effort, insufficient to meet Paris Agreement objectives",
+            "long-label": "Medium Low Scenario Extension"
+        },
+        "esm-scen7-vlho": {
+            "description": "Scenario with similar endof-century temperature impact to VLLO, but with less aggressive near-term mitigation and large reliance on net negative emissions, resulting in a higher overshoot.",
+            "long-label": "Very Low Scenario after High Overshoot"
+        },
+        "esm-scen7-vlho-ext": {
+            "description": "Extension to scenario with similar end-of-century temperature impact to VLLO, but with less aggressive near-term mitigation and large reliance on net negative emissions, resulting in a higher overshoot.",
+            "long-label": "Very Low Scenario with Limited Overshoot Extension"
+        },
+        "esm-scen7-vllo": {
+            "description": "Scenario consistent with limiting warming to 1.5 degree C by 2100 AD with limited overshoot (as low as plausible) of 1.5 degree C",
+            "long-label": "Very Low Scenario with Limited Overshoot"
+        },
+        "esm-scen7-vllo-ext": {
+            "description": "Extension to scenario consistent with limiting warming to 1.5 degree C by 2100 AD with limited overshoot (as low as plausible) of 1.5 degree C",
+            "long-label": "Very Low Scenario with Limited Overshoot Extension"
+        },
+        "highres-yr2020": {
+            "description": "A one-year, atmosphere-only historical experiment with prescribed SSTs and sea ice (likely 2020 to link with DYAMOND2), designed to link with other communities. The preferred period is 1 March 2020\u201328 February 2021.  References: Roberts, M. J., Reed, K. A., Bao, Q., Barsugli, J. J., Camargo, S. J., Caron, L. P., \u2026 & Zhao, M. (2025). High-Resolution Model Intercomparison Project Phase 2 (HighResMIP2) towards CMIP7. Geoscientific Model Development, 18, 1307\u20131332  [High-Resolution Model Intercomparison Project Phase 2 (HighResMIP2) towards CMIP7.pdf](https://github.com/user-attachments/files/19402345/High-Resolution.Model.Intercomparison.Project.Phase.2.HighResMIP2.towards.CMIP7.pdf)  Webpage: https://highresmip.org/experiments/experiment_cmip7/",
+            "long-label": "HighResMIP2"
+        },
+        "highresSST-p4K-pat": {
+            "description": "Conduct forced atmosphere simulations at patterned warming level +4K over 2003\u20132022, parallel to highresSST-present, with patterned SST and sea ice changes. (Three ensembles are desired per warming level)  References: Roberts, M. J., Reed, K. A., Bao, Q., Barsugli, J. J., Camargo, S. J., Caron, L. P., \u2026 & Zhao, M. (2025). High-Resolution Model Intercomparison Project Phase 2 (HighResMIP2) towards CMIP7. Geoscientific Model Development, 18, 1307\u20131332  [High-Resolution Model Intercomparison Project Phase 2 (HighResMIP2) towards CMIP7.pdf](https://github.com/user-attachments/files/19402345/High-Resolution.Model.Intercomparison.Project.Phase.2.HighResMIP2.towards.CMIP7.pdf)  Webpage: https://highresmip.org/experiments/experiment_cmip7/",
+            "long-label": "Atmosphere-only warming levels - highresSST-p4K-pat (patterned)"
+        },
+        "highresSST-p4k-uni": {
+            "description": "A one-year, atmosphere-only experiment with prescribed SSTs and sea ice, including a uniform **+4K SST perturbation**  The preferred period is 1 March 2020\u201328 February 2021.  References: Roberts, M. J., Reed, K. A., Bao, Q., Barsugli, J. J., Camargo, S. J., Caron, L. P., \u2026 & Zhao, M. (2025). High-Resolution Model Intercomparison Project Phase 2 (HighResMIP2) towards CMIP7. Geoscientific Model Development, 18, 1307\u20131332  [High-Resolution Model Intercomparison Project Phase 2 (HighResMIP2) towards CMIP7.pdf](https://github.com/user-attachments/files/19402610/High-Resolution.Model.Intercomparison.Project.Phase.2.HighResMIP2.towards.CMIP7.pdf)  Webpage: https://highresmip.org/experiments/experiment_cmip7/",
+            "long-label": "Atmosphere-only 1-year experiment (add uniform +4K to SSTs)"
+        },
+        "highresSST-present": {
+            "description": "Conduct an atmosphere-only simulation for 1980\u20132022 using ESA CCI forcing for SST and sea-ice (daily, 0.05 degree, updated through 2023 currently)  References: Roberts, M. J., Reed, K. A., Bao, Q., Barsugli, J. J., Camargo, S. J., Caron, L. P., \u2026 & Zhao, M. (2025). High-Resolution Model Intercomparison Project Phase 2 (HighResMIP2) towards CMIP7. Geoscientific Model Development, 18, 1307\u20131332  [High-Resolution Model Intercomparison Project Phase 2 (HighResMIP2) towards CMIP7.pdf](https://github.com/user-attachments/files/19392615/High-Resolution.Model.Intercomparison.Project.Phase.2.HighResMIP2.towards.CMIP7.pdf)  Webpage: https://highresmip.org/experiments/experiment_cmip7/",
+            "long-label": "Atmosphere-only historic"
+        },
+        "hist-1950": {
+            "description": "Starting from the end of the spinup-1950 simulation, Use time-varying forcings from CMIP7 or CMIP6  For further details, please refer to: Roberts, M. J., Reed, K. A., Bao, Q., Barsugli, J. J., Camargo, S. J., Caron, L. P., \u2026 & Zhao, M. (2025). High-Resolution Model Intercomparison Project phase 2 (HighResMIP2) towards CMIP7. Geoscientific Model Development, 18, 1307\u20131332  [High-Resolution Model Intercomparison Project Phase 2 (HighResMIP2) towards CMIP7.pdf](https://github.com/user-attachments/files/19400815/High-Resolution.Model.Intercomparison.Project.Phase.2.HighResMIP2.towards.CMIP7.pdf)  Webpage: https://highresmip.org/experiments/experiment_cmip7/",
+            "long-label": "Coupled hist-1950"
+        },
+        "hist-GHG": {
+            "description": "1.  As the historical simulation but with only the greenhouse gas forcing following that of historical out to 2021 (and the medium scenario from 2022 to 2035) and all other forcings held at pre-industrial levels. 2. As the historical simulation but with alterations to the forcings. 3. 1850 to 2035 coupled simulations with greenhouse gas forcing from the historical followed by medium scenario and all other forcings held fixed at pre-industrial control values.  Stratospheric and tropospheric ozone should be held constant at piControl levels. 4.  https://doi.org/10.5194/egusphere-2024-4086 5. Similar to hist-GHG from CMIP6 but sratospheric and tropospheric ozone should be held fixed. 6. Time evolving greenhouse gases from historical and then medium scenario and other forcings as in the piControl.",
+            "long-label": "Historical simulation with time evolving greenhouse gas forcing only and all other forcings at pre-industrial levels."
+        },
+        "hist-aer": {
+            "description": "1. As historical but with only time evolving historical aerosols out to 2021 and then Medium scenario aerosols between 2021 and 2035.  This includes changes in suphur dioxide, black carbon, organic carbon, ammonia, NOx and VOCs, from biomass burning, industrial emissions, and other sources.  Other forcings held at piControl levels. 2. Coupled simulations initialized from the piControl and run to 2021 under historical aerosol emissions and thereafter to 2035 using the medium scenario with other forcings held fixed at piControl levels. 3. Coupled simulations initialized from the piControl and run to 2021 under historical aerosol emissions and thereafter to 2035 using the medium scenario with other forcings held fixed at piControl levels. 4. https://doi.org/10.5194/egusphere-2024-4086 5. As CMIP6 hist-aer. 6. Time evolving historical and then medium scenario aerosol forcings while all other forcings are held at piControl levels.",
+            "long-label": "hist-aer"
+        },
+        "hist-nat": {
+            "description": "1. Experiment performed as the historical experiment but only with time evolving solar and volcanic forcings and pre-industrial forcings used for all other forcings.  Use historical solar and volcanic forcings out to  2021 and the medium scenario solar and volcanic forcings thereafter. 2. As historical but with modified forcings. 3. Historical conditions for solar and volcanic forcings, pre-industrial conditions for everything else. 4. https://doi.org/10.5194/egusphere-2024-4086 5. Similar to hist-nat from CMIP6 but differs in the specification of ozone.  In contrast to CMIP6, no time evolving ozone is prescribed in this experiment. 6. solar irradiance and stratospheric aerosol forcing are as in historical (or medium scenario after 2021), other forcings are as in piControl.",
+            "long-label": "Natural-only historical simulations (solar irradiance, stratospheric aerosol)"
+        },
+        "hist-piAer": {
+            "description": "Historical simulation with pre-industrial aerosols \n Historical simulation but with pre-industrial aerosol emissions",
+            "long-label": "Describe hist-piAer in one sentence."
+        },
+        "hist-piSLCF": {
+            "description": "Historical simulation with pre-industrial short-lived climate forcers \n Historical simulation but with pre-industrial short-lived climate forcer emissions",
+            "long-label": "Describe hist-piSLCF in one sentence."
+        },
+        "historical": {
+            "description": "DECK: historical \n Simulation of the recent past",
+            "long-label": "Simulation of the recent past (concentration driven)"
+        },
+        "land-hist": {
+            "description": "Land-only simulation of the historical period",
+            "long-label": "Describe land-hist in one sentence."
+        },
+        "piClim-2xBVOC": {
+            "description": "1. Detailed experiment configuration An atmosphere only configuration following piClim-control but with biogenic volatile organic compound emissions scaled by a factor of 2  2. Required model settings We encourage modelling centres to include as much atmospheric composition capability as possible. But, as a minimum, models should have tropospheric chemistry and interactive aerosols. And the experimental setup should be consistent with other AerChemMIP2 experiments, particularly piClim-control.  3. Experiment conditions  4. Links to relevant references Fiedler et al. (in prep.) AerChemMIP2 - Unraveling the role of reactive gases, aerosols, and land use for air quality and climate change in CMIP7  5. Similarities to CMIP6 experiments piClim\u20132xVOC  6. Forcing differences from parent experiment Doubled biogenic volatile organic compound emissions",
+            "long-label": "Pre-industrial climatology with doubled biogenic volatile organic carbon emissions"
+        },
+        "piClim-2xDMSpPMOA": {
+            "description": "1. Detailed experiment configuration An atmosphere only configuration following piClim-control but with emissions of primary marine organic compounds and dimethyl sulphide scaled by a factor of 2  2. Required model settings We encourage modelling centres to include as much atmospheric composition capability as possible. As a minimum, models should have prescribed or interactive aerosols. And the experimental setup should be consistent with other AerChemMIP2 experiments, particularly piClim-control.  3. Experiment conditions  4. Links to relevant references Fiedler et al. (in prep.) AerChemMIP2 - Unraveling the role of reactive gases, aerosols, and land use for air quality and climate change in CMIP7  5. Similarities to CMIP6 experiments Modification of piClim-2xDMS to include 2xPMOA  6. Forcing differences from parent experiment Doubled primary marine organic carbon aerosol and dimethyl sulphide emissions",
+            "long-label": "Pre-industrial climatology with doubled emissions of primary marine organic compounds and dimethyl sulphide"
+        },
+        "piClim-2xWet": {
+            "description": "1. Detailed experiment configuration An atmosphere only configuration following piClim-control but with wetland methane emissions scaled by a factor of 2  2. Required model settings We encourage modelling centres to include as much atmospheric composition capability as possible. But, as a minimum, models should have tropospheric chemistry. And the experimental setup should be consistent with other AerChemMIP2 experiments, particularly piClim-control.  3. Experiment conditions  4. Links to relevant references Fiedler et al. (in prep.) AerChemMIP2 - Unraveling the role of reactive gases, aerosols, and land use for air quality and climate change in CMIP7  5. Similarities to CMIP6 experiments Following piClim-2xX experimental setup  6. Forcing differences from parent experiment Doubled wetland methane emissions",
+            "long-label": "Pre-industrial climatology with doubled wetland emissions of methane"
+        },
+        "piClim-2xdust": {
+            "description": "1. Detailed experiment configuration An atmosphere only configuration following piClim-control but with mineral dust emissions scaled by a factor of 2  2. Required model settings We encourage modelling centres to include as much atmospheric composition capability as possible. As a minimum, models should have prescribed or interactive aerosols. And the experimental setup should be consistent with other AerChemMIP2 experiments, particularly piClim-control.   3. Experiment conditions  4. Links to relevant references Fiedler et al. (in prep.) AerChemMIP2 - Unraveling the role of reactive gases, aerosols, and land use for air quality and climate change in CMIP7  5. Similarities to CMIP6 experiments piClim\u20132xdust  6. Forcing differences from parent experiment Doubled mineral dust emissions",
+            "long-label": "Pre-industrial climatology with doubled mineral dust emissions"
+        },
+        "piClim-2xfire": {
+            "description": "1. Detailed experiment configuration An atmosphere only configuration following piClim-control but with emissions of all fire-derived gases and aerosols scaled by a factor of 2. Setup consistent with the fire parameterization in piClim-control experiments (e.g., NOx, BC, OC, CO, VOCs, CH4, DMS, SO2 or a subset of these for CHEM)  2. Required model settings We encourage modelling centres to include as much atmospheric composition capability as possible. As a minimum, models should have prescribed or interactive aerosols. And the experimental setup should be consistent with other AerChemMIP2 experiments, particularly piClim-control.   3. Experiment conditions  4. Links to relevant references Fiedler et al. (in prep.) AerChemMIP2 - Unraveling the role of reactive gases, aerosols, and land use for air quality and climate change in CMIP7  5. Similarities to CMIP6 experiments piClim\u20132xfire  6. Forcing differences from parent experiment Doubled fire emissions",
+            "long-label": "Pre-industrial climatology with doubled emissions of all fire-derived gases and aerosols"
+        },
+        "piClim-2xss": {
+            "description": "1. Detailed experiment configuration An atmosphere only configuration following piClim but with sea-salt emissions scaled by a factor of 2  2. Required model settings We encourage modelling centres to include as much atmospheric composition capability as possible. As a minimum, models should have prescribed or interactive aerosols. And the experimental setup should be consistent with other AerChemMIP2 experiments, particularly piClim-control.   3. Experiment conditions  4. Links to relevant references Fiedler et al. (in prep.) AerChemMIP2 - Unraveling the role of reactive gases, aerosols, and land use for air quality and climate change in CMIP7  5. Similarities to CMIP6 experiments piClim\u20132xss  6. Forcing differences from parent experiment Doubled sea-salt emissions",
+            "long-label": "Pre-industrial climatology with doubled sea-salt emissions"
+        },
+        "piClim-4xCO2": {
+            "description": "DECK: effective radiative forcing by 4xCO2 \n Effective radiative forcing by 4xCO2",
+            "long-label": "As piClim-control except CO2 concentrations set to 4 times preindustrial"
+        },
+        "piClim-BC": {
+            "description": "1. Detailed experiment configuration An atmosphere only configuration following piClim-control but using present-day (2021) black carbon  2. Required model settings We encourage modelling centres to include as much atmospheric composition capability as possible. As a minimum, models should have prescribed or interactive aerosols. And the experimental setup should be consistent with other AerChemMIP2 experiments, particularly piClim-control.  3. Experiment conditions  4. Links to relevant references Fiedler et al. (in prep.) AerChemMIP2 - Unraveling the role of reactive gases, aerosols, and land use for air quality and climate change in CMIP7  5. Similarities to CMIP6 experiments Similar to piClim-BC in CMIP6  6. Forcing differences from parent experiment Present-day (2021) BC emissions",
+            "long-label": "Pre-industrial climatology with present-day emissions of black carbon"
+        },
+        "piClim-CH4": {
+            "description": "1. Detailed experiment configuration An atmosphere only configuration following piClim but using present-day (2021) methane emissions (or concentrations)  2. Required model settings We encourage modelling centres to include as much atmospheric composition capability as possible. But, as a minimum, models should have tropospheric chemistry and interactive aerosols. And the experimental setup should be consistent with other AerChemMIP2 experiments, particularly piClim-control. For methane, use year-2021 values in both the radiation scheme and the chemistry scheme.   3. Experiment conditions  4. Links to relevant references Fiedler et al. (in prep.) AerChemMIP2 - Unraveling the role of reactive gases, aerosols, and land use for air quality and climate change in CMIP7  5. Similarities to CMIP6 experiments piClim-CH4  6. Forcing differences from parent experiment Present-day (2021) methane",
+            "long-label": "Pre-industrial climatology with present-day methane"
+        },
+        "piClim-HC": {
+            "description": "Perturbation from pre-industrial control using 1850 halocarbon concentrations \n Pre-industrial climatological SSTs and sea ice extent, 1850 halocarbon concentrations",
+            "long-label": "Describe piClim-HC in one sentence."
+        },
+        "piClim-N2O": {
+            "description": "1. Detailed experiment configuration An atmosphere only configuration following piClim-control but using present-day (2021) N2O  2. Required model settings We encourage modelling centres to include as much atmospheric composition capability as possible. But, as a minimum, models should have stratospheric chemistry. And the experimental setup should be consistent with other AerChemMIP2 experiments, particularly piClim-control.   3. Experiment conditions  4. Links to relevant references Fiedler et al. (in prep.) AerChemMIP2 - Unraveling the role of reactive gases, aerosols, and land use for air quality and climate change in CMIP7  5. Similarities to CMIP6 experiments piClim-N2O  6. Forcing differences from parent experiment Present-day (2021) N2O",
+            "long-label": "Pre-industrial climatology with present-day nitrous oxide"
+        },
+        "piClim-NH3": {
+            "description": "1. Detailed experiment configuration An atmosphere only configuration following piClim but using present-day (2021) ammonia emissions  2. Required model settings We encourage modelling centres to include as much atmospheric composition capability as possible. As a minimum, models should have prescribed or interactive aerosols. And the experimental setup should be consistent with other AerChemMIP2 experiments, particularly piClim-control.  3. Experiment conditions  4. Links to relevant references Fiedler et al. (in prep.) AerChemMIP2 - Unraveling the role of reactive gases, aerosols, and land use for air quality and climate change in CMIP7  5. Similarities to CMIP6 experiments piClim-NH3  6. Forcing differences from parent experiment Present-day (2021) ammonia emissions",
+            "long-label": "Pre-industrial climatology with present-day ammonia emissions"
+        },
+        "piClim-NOx": {
+            "description": "1. Detailed experiment configuration An atmosphere only configuration following piClim-control but using present-day (2021) NOx  2. Required model settings We encourage modelling centres to include as much atmospheric composition capability as possible. But, as a minimum, models should have tropospheric chemistry and interactive aerosols. And the experimental setup should be consistent with other AerChemMIP2 experiments, particularly piClim-control.  3. Experiment conditions  4. Links to relevant references Fiedler et al. (in prep.) AerChemMIP2 - Unraveling the role of reactive gases, aerosols, and land use for air quality and climate change in CMIP7  5. Similarities to CMIP6 experiments piClim-NOx  6. Forcing differences from parent experiment Present-day (2021) NOx",
+            "long-label": "Pre-industrial climatology with present-day nitrogen oxides (NOx)"
+        },
+        "piClim-O3": {
+            "description": "1. Detailed experiment configuration An atmosphere only configuration following piClim-control but using present-day (2021) tropospheric ozone precursors  2. Required model settings We encourage modelling centres to include as much atmospheric composition capability as possible. But, as a minimum, models should have tropospheric chemistry and interactive aerosols. And the experimental setup should be consistent with other AerChemMIP2 experiments, particularly piClim-control. For methane, use year-1850 values in the radiation scheme (2021 values in the chemistry scheme).  3. Experiment conditions  4. Links to relevant references Fiedler et al. (in prep.) AerChemMIP2 - Unraveling the role of reactive gases, aerosols, and land use for air quality and climate change in CMIP7  5. Similarities to CMIP6 experiments None  6. Forcing differences from parent experiment Present-day (2021) tropospheric ozone precursors",
+            "long-label": "Pre-industrial climatology with present-day tropospheric ozone precursors"
+        },
+        "piClim-OC": {
+            "description": "1. Detailed experiment configuration An atmosphere only configuration following piClim but using present-day (2021) organic carbon emissions (only)  2. Required model settings We encourage modelling centres to include as much atmospheric composition capability as possible. As a minimum, models should have prescribed or interactive aerosols. And the experimental setup should be consistent with other AerChemMIP2 experiments, particularly piClim-control.   3. Experiment conditions  4. Links to relevant references Fiedler et al. (in prep.) AerChemMIP2 - Unraveling the role of reactive gases, aerosols, and land use for air quality and climate change in CMIP7  5. Similarities to CMIP6 experiments piClim-OC  6. Forcing differences from parent experiment Present-day (2021) OC emissions",
+            "long-label": "Pre-industrial climatology with present-day organic carbon emissions"
+        },
+        "piClim-ODS": {
+            "description": "1. Detailed experiment configuration An atmosphere only configuration following piClim-control but using present-day (2021) ozone depleting substances (ODSs)  2. Required model settings We encourage modelling centres to include as much atmospheric composition capability as possible. But, as a minimum, models should have stratospheric chemistry. And the experimental setup should be consistent with other AerChemMIP2 experiments, particularly piClim-control.   3. Experiment conditions  4. Links to relevant references Fiedler et al. (in prep.) AerChemMIP2 - Unraveling the role of reactive gases, aerosols, and land use for air quality and climate change in CMIP7  5. Similarities to CMIP6 experiments piClim-HC  6. Forcing differences from parent experiment Present-day (2021) ozone depleting substances",
+            "long-label": "Pre-industrial climatology with present-day ozone depleting substances"
+        },
+        "piClim-SO2": {
+            "description": "1. Detailed experiment configuration An atmosphere only configuration following piClim-control but using present-day (2021) sulphur dioxide (only)  2. Required model settings We encourage modelling centres to include as much atmospheric composition capability as possible. As a minimum, models should have prescribed or interactive aerosols. And the experimental setup should be consistent with other AerChemMIP2 experiments, particularly piClim-control.  3. Experiment conditions  4. Links to relevant references Fiedler et al. (in prep.) AerChemMIP2 - Unraveling the role of reactive gases, aerosols, and land use for air quality and climate change in CMIP7  5. Similarities to CMIP6 experiments piClim-SO2  6. Forcing differences from parent experiment Present-day (2021) sulphur dioxide emissions",
+            "long-label": "Pre-industrial climatology with present-day sulphur dioxide"
+        },
+        "piClim-VOC": {
+            "description": "Perturbation from pre-industrial control using 1850 VOC emissions \n Pre-industrial climatological SSTs and sea ice extent, 1850 VOC emissions",
+            "long-label": "Describe piClim-VOC in one sentence."
+        },
+        "piClim-aer": {
+            "description": "A time-slice simulation with present-day aerosol emissions and all other atmospheric components at pre-industrial values. Other than aerosols, model configuration should be identical to the `piClim-control` run in DECK. Simulations are run atmosphere-only, with a 12-month repeating climatology of sea surface temperatures and sea-ice distributions taken from a climatology of at least 30 years of the same model's `piControl` run. Interactive vegetation, if present in the model, should be turned on. Experiment design is identical to CMIP6 `piClim-aer` experiment. Note that the CMIP6 RFMIP reference publication (Pincus et al. 2016) referred to `piClim-aerO3` with present-day aerosols and ozone, but was replaced in favour of `piClim-aer` (Smith et al. 2020).  Pincus, R., Forster, P. M., and Stevens, B.: The Radiative Forcing Model Intercomparison Project (RFMIP): experimental protocol for CMIP6, Geosci. Model Dev., 9, 3447\u20133460, https://doi.org/10.5194/gmd-9-3447-2016, 2016.  Smith, C. J., Kramer, R. J., Myhre, G., Alterskj\u00e6r, K., Collins, W., Sima, A., Boucher, O., Dufresne, J.-L., Nabat, P., Michou, M., Yukimoto, S., Cole, J., Paynter, D., Shiogama, H., O'Connor, F. M., Robertson, E., Wiltshire, A., Andrews, T., Hannay, C., Miller, R., Nazarenko, L., Kirkev\u00e5g, A., Olivi\u00e9, D., Fiedler, S., Lewinschal, A., Mackallah, C., Dix, M., Pincus, R., and Forster, P. M.: Effective radiative forcing and adjustments in CMIP6 models, Atmos. Chem. Phys., 20, 9591\u20139618, https://doi.org/10.5194/acp-20-9591-2020, 2020.",
+            "long-label": "Effective radiative forcing by present-day aerosols"
+        },
+        "piClim-anthro": {
+            "description": "DECK: effective radiative forcing by present day anthropogenic forcings \n Effective radiative forcing by present day anthropogenic forcings",
+            "long-label": "As piClim-control except present-day anthropogenic forcing"
+        },
+        "piClim-control": {
+            "description": "DECK: effective radiative forcing control \n Effective radiative forcing control simulation",
+            "long-label": "Preindustrial conditions including SST and SIC prescribed"
+        },
+        "piClim-histaer": {
+            "description": "A simulation with time-varying aerosol emissions following the `historical` and ScenarioMIP `scen7-mc` scenario, and all other atmospheric components at pre-industrial values. Other than aerosols and the fact that this is a time-varying rather than time-slice experiment, model configuration should be identical to the `piClim-control` run in DECK. Simulations are run atmosphere-only, with a 12-month repeating climatology of sea surface temperatures and sea-ice distributions taken from a climatology of at least 30 years of the same model's `piControl` run. Interactive vegetation, if present in the model, should be turned on. Experiment design is similar to CMIP6 `piClim-histaer` experiment with the future scenario changed from `ssp245` to `scen7-mc`. Note that the CMIP6 RFMIP reference publication (Pincus et al. 2016) referred to `piClim-histaerO3` with time-varying aerosols and ozone, but was replaced in favour of `piClim-histaer` (Smith et al. 2021).  Pincus, R., Forster, P. M., and Stevens, B.: The Radiative Forcing Model Intercomparison Project (RFMIP): experimental protocol for CMIP6, Geosci. Model Dev., 9, 3447\u20133460, https://doi.org/10.5194/gmd-9-3447-2016, 2016.  Smith, C. J., Harris, G. R., Palmer, M. D., Bellouin, N., Collins, W., Myhre, G., et al. (2021). Energy budget constraints on the time history of aerosol forcing and climate sensitivity. Journal of Geophysical Research: Atmospheres, 126, e2020JD033622. https://doi.org/10.1029/2020JD033622",
+            "long-label": "historical and future transient effective radiative forcing from aerosols"
+        },
+        "piClim-histall": {
+            "description": "A simulation with *all* time-varying forcings (*both natural and anthropogenic*) following the historical and ScenarioMIP `scen7-mc` scenario. Greenhouse gases should be prescribed concentrations. Simulations are run atmosphere-only, with a 12-month repeating climatology of sea surface temperatures and sea-ice distributions taken from a climatology of at least 30 years of the same model's `piControl` run. Interactive vegetation, if present in the model, should be turned on. Experiment design is similar to CMIP6 `piClim-histall` experiment (Pincus et al. 2016) with the future scenario changed from `ssp245` to `scen7-mc`.  Pincus, R., Forster, P. M., and Stevens, B.: The Radiative Forcing Model Intercomparison Project (RFMIP): experimental protocol for CMIP6, Geosci. Model Dev., 9, 3447\u20133460, https://doi.org/10.5194/gmd-9-3447-2016, 2016.",
+            "long-label": "historical and future transient effective radiative forcing from all forcers"
+        },
+        "piControl": {
+            "description": "DECK: pre-industrial control \n Pre-industrial control simulation",
+            "long-label": "Coupled atmosphere-ocea preindustrial control run (concentration driven)"
+        },
+        "scen7-hc": {
+            "description": "High concentration driven emission scenario to explore potential high-end impacts",
+            "long-label": "High, Concentration Driven Scenario"
+        },
+        "scen7-hc-ext": {
+            "description": "High concentration driven emission scenario extension to explore potential high-end impacts",
+            "long-label": "High, Concentration Driven Scenario Extension"
+        },
+        "scen7-hc-ext-os": {
+            "description": "High concentration driven emission scenario overshoot extension to explore potential high-end impacts",
+            "long-label": "High, Concentration Driven Scenario Overshoot Extension"
+        },
+        "scen7-lc": {
+            "description": "Concentration driven scenario consistent with staying likely below 2 degrees C",
+            "long-label": "Low, Concentration Driven Scenario"
+        },
+        "scen7-lc-ext": {
+            "description": "Extension to concentration driven scenario consistent with staying likely below 2 degrees C",
+            "long-label": "Low, Concentration Driven Scenario Extension"
+        },
+        "scen7-mc": {
+            "description": "Medium concentration driven emission scenario consistent with current policies",
+            "long-label": "Medium, Concentration Driven Scenario"
+        },
+        "scen7-mc-ext": {
+            "description": "Medium concentration driven emission scenario extension consistent with current policies",
+            "long-label": "Medium, Concentration Driven Scenario Extension"
+        },
+        "scen7-mlc": {
+            "description": "Concentration driven scenario with delayed increase in mitigation effort, insufficient to meet Paris Agreement objectives",
+            "long-label": "Medium, Concentration Driven Scenario"
+        },
+        "scen7-mlc-ext": {
+            "description": "Extension to concentration driven scenario with delayed increase in mitigation effort, insufficient to meet Paris Agreement objectives",
+            "long-label": "Medium, Concentration Driven Scenario Extension"
+        },
+        "scen7-vlhoc": {
+            "description": "Concentration driven scenario with similar end-of-century temperature impact to VLLO, but with less aggressive near-term mitigation and large reliance on net negative emissions, resulting in a higher overshoot.",
+            "long-label": "Very Low Concentration Driven Scenario after High Overshoot"
+        },
+        "scen7-vlhoc-ext": {
+            "description": "Extension to Concentration driven scenario with similar end-of-century temperature impact to VLLO, but with less aggressive near-term mitigation and large reliance on net negative emissions, resulting in a higher overshoot.",
+            "long-label": "Very Low Concentration Driven Scenario Extension after High Overshoot"
+        },
+        "scen7-vlloc": {
+            "description": "Concentration driven scenario consistent with limiting warming to 1.5 degree C by 2100 AD with limited overshoot (as low as plausible) of 1.5 degree C",
+            "long-label": "Very Low Concentration Driven Scenario with Limited Overshoot"
+        },
+        "scen7-vlloc-ext": {
+            "description": "Extension to Concentration driven scenario consistent with limiting warming to 1.5 degree C by 2100 AD with limited overshoot (as low as plausible) of 1.5 degree C",
+            "long-label": "Very Low, Concentration Driven Scenario Extension with Limited Overshoot"
+        },
+        "spinup-1950": {
+            "description": "This experiment is designed to provide a multidecadal spinup for coupled model simulations. Its final output will serve as initial conditions for the control-1950, hist-1950, and highres-4xCO2 scenarios. The setup follows the same design as HighResMIP1, typically run for 50 years starting from the initial conditions.  For solar and ozone forcing, we suggest using an 11-year climatology centered on 1950 to average the solar cycle. For greenhouse gases (GHG), concentrations can be set to 1950 values as defined in CMIP. A 10-year mean around 1950 (e.g., 1946\u20131955 or 1950\u20131959) is recommended for aerosols and volcanic forcing.  For further details, please refer to: Roberts et al. (2025). High-Resolution Model Intercomparison Project phase 2 (HighResMIP2) towards CMIP7. Geoscientific Model Development, 18, 1307\u20131332.",
+            "long-label": "Coupled control spinup-1950"
+        }
+    }
+}
