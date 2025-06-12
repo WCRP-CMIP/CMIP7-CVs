@@ -76,7 +76,8 @@ jobs:
     - name: Push PR
       uses: WCRP-CMIP/CMIPLD/actions/pushpr@main
       with:
-        message: "Automated Content Update"
+          message: "Automated JSONLD update"
+          token: ${{ secrets.GITHUB_TOKEN }}
 
     - name: Publish
       if: github.ref_name == 'main'
