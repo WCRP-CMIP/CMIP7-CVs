@@ -70,9 +70,13 @@ jobs:
       with:
         message: "Automated Content Update"
   
-    - name: Push Changes
-      run: |
-        git push 
+    # - name: Push Changes
+    #   run: |
+    #     git push 
+    - name: Push PR
+      uses: WCRP-CMIP/CMIPLD/actions/pushpr@main
+      with:
+        message: "Automated Content Update"
 
     - name: Publish
       if: github.ref_name == 'main'
