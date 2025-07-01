@@ -1,7 +1,7 @@
 name: 'General Issue'
 description: 'Report a general issue, bug, or request'
 title: 'Issue: <Brief description here>'
-projects: ["WCRP-CMIP/13"]  # Adjust this number to match the WCRP-universe CVs project ID
+projects: ["WCRP-CMIP/4"]  # WCRP-universe CVs project
 labels:
     - cmip7
     - general
