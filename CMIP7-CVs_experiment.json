@@ -1,12 +1,20 @@
 {
     "Header": {
         "file": "CMIP7-CVs_experiment.json",
+<<<<<<< HEAD
         "file_creation_date": "2025-06-12T11:37:14.049678",
+=======
+        "file_creation_date": "2025-06-11T13:43:34.904434",
+>>>>>>> 9dd9579 (issue templates)
         "version": "fatal: No names found, cannot describe anything.",
         "checksum": "md5: b828394a3c75438953880af396219954",
         "repo_url": "https://github.com/WCRP-CMIP/CMIP7-CVs",
         "repo_prefix": "cmip7",
+<<<<<<< HEAD
         "last_commit": "7ae9416fc01d90a2a2fe7fa8918523516bcf1e32",
+=======
+        "last_commit": "bef3369d89fc153733c34cbb164e5eec829fdb8f",
+>>>>>>> 9dd9579 (issue templates)
         "comment": "This is an automatically generated file. Do not edit."
     },
     "experiment": {
