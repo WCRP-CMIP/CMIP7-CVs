@@ -6,7 +6,7 @@ import sys
 import json,os
 from cmipld.utils import git
 from  cmipld.tests import jsonld as tests
-from cmipld.utils.json import sorted_json
+from cmipld.utils.jsontools import sorted_json, validate_and_fix_json, sort_json_keys
 from collections import OrderedDict
 
 from cmipld import reverse_mapping
@@ -126,7 +126,7 @@ def run(issue,packet):
     #     data['branch-date'] = 'none'
     
     
-        
+    # Sort JSON keys according to the standard ordering
     data = sorted_json(data)
 
     # broken for now    
@@ -143,14 +143,36 @@ def run(issue,packet):
     
     git.update_summary(f"### Content has no errors. \n```")
 
-
-
-
+    # Validate and fix the JSON structure before writing
+    try:
+        # Validate the JSON structure
+        validated_data = validate_and_fix_json(data)
+        
+        # Sort the JSON keys again after validation
+        validated_data = sort_json_keys(validated_data)
+        
+        git.update_summary(f"### JSON validation successful\n")
+    except Exception as e:
+        git.update_issue(f"### JSON validation error: {str(e)}", err=True)
+        sys.exit(f'JSON validation failed: {str(e)}')
     
     print('writing to',outfile)
-    json.dump(data,open(outfile,'w'),indent=4)
+    
+    # Write the validated and sorted JSON to file
+    with open(outfile, 'w') as f:
+        json.dump(validated_data, f, indent=4, ensure_ascii=False)
+    
     print('done')
 
+    # Verify the written file can be read back correctly
+    try:
+        with open(outfile, 'r') as f:
+            verification_data = json.load(f)
+        git.update_summary(f"### File verification successful - JSON is valid\n")
+    except json.JSONDecodeError as e:
+        git.update_issue(f"### File verification failed: {str(e)}", err=True)
+        os.remove(outfile)  # Remove the corrupted file
+        sys.exit(f'Written file verification failed: {str(e)}')
 
     # print(os.popen(f"less {outfile}").read())
     
@@ -171,7 +193,7 @@ def run(issue,packet):
     git.commit_one(outfile,author,comment=f'New entry {acronym} in {issue["issue-type"]} files.' ,branch=branch)
     print('CREATING PULL\n',branch, author,title,os.environ['ISSUE_NUMBER'])
     
-    git.newpull(branch,author,json.dumps(data,indent=4),title,os.environ['ISSUE_NUMBER'])
+    git.newpull(branch,author,json.dumps(validated_data,indent=4),title,os.environ['ISSUE_NUMBER'])
     
     
         
