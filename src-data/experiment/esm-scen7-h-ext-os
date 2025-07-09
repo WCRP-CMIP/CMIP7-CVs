@@ -1,0 +1,23 @@
+{
+    "@context": "_context_",
+    "id": "esm-scen7-h-ext-os",
+    "type": [
+        "wcrp:experiment",
+        "cmip7"
+    ],
+    "activity": [
+        "scenariomip"
+    ],
+    "description": "High emission scenario overshoot extension to explore potential high-end impacts",
+    "tier": 0,
+    "end": 2500,
+    "min-number-yrs-per-sim": 50,
+    "start": 2101,
+    "label": "esm-scen7-h-ext-os",
+    "model-realms": [],
+    "parent-experiment": [
+        "esm-scen7-h"
+    ],
+    "long-label": "High Scenario Overshoot Extension",
+    "start-date": "none"
+}

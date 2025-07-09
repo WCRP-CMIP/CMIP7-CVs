@@ -1,0 +1,12 @@
+{
+    "@context": ["_context_"],
+    "id": "product-list",
+    "type": [
+        "wcrp:project",
+        "cmip7",
+        "wcrp:product"
+    ],
+    "product": {"id":
+        "model-output"
+    }
+}

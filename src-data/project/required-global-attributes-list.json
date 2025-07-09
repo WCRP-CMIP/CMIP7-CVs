@@ -1,0 +1,12 @@
+{
+    "@context": "_context_",
+    "id": "required-global-attributes-list",
+    "type": [
+        "cmip7",
+        "wcrp:project",
+        "wcrp:required",
+        "wcrp:required_global_attributes"
+    ],
+    "required_global_attributes": [
+    ]
+}
