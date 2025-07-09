@@ -61,8 +61,12 @@ def run(issue, packet):
             git.update_issue("### Custom activity specified along with an existing one. Please correct!", err=False)
             sys.exit('Incorrect activity specified')
             
+            
+    # sanitize activity name
+    activity = activity.strip().lower().replace(' ', '-').replace('_', '-')        
     # ensure activity is in the list
-    assert activity in alist, f"Activity {activity} is not registered in the WCRP universe. Please register it first."
+    if activity not in alist:
+        git.update_issue(f"Activity {activity} is not registered in the WCRP universe. Please register it first.", err=True)
     
     # also check if it is in the list of activities, otherwise add it. 
     aclist = f'./src-data/project/{activity}.json'
