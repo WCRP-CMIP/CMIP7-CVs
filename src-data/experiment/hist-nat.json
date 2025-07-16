@@ -1,0 +1,27 @@
+{
+    "id": "hist-nat",
+    "validation-key": "hist-nat",
+    "ui-label": "Natural-only historical simulations (solar irradiance, stratospheric aerosol)",
+    "description": "1. Experiment performed as the historical experiment but only with time evolving solar and volcanic forcings and pre-industrial forcings used for all other forcings.  Use historical solar and volcanic forcings out to  2021 and the medium scenario solar and volcanic forcings thereafter. 2. As historical but with modified forcings. 3. Historical conditions for solar and volcanic forcings, pre-industrial conditions for everything else. 4. https://doi.org/10.5194/egusphere-2024-4086 5. Similar to hist-nat from CMIP6 but differs in the specification of ozone.  In contrast to CMIP6, no time evolving ozone is prescribed in this experiment. 6. solar irradiance and stratospheric aerosol forcing are as in historical (or medium scenario after 2021), other forcings are as in piControl.",
+    "activity": [
+        "damip"
+    ],
+    "alias": [],
+    "minimum-number-of-years": "186",
+    "model-realms": [
+        {
+            "id": "aogcm",
+            "is-required": true
+        }
+    ],
+    "parent-experiment": [
+        "picontrol"
+    ],
+    "start-date": "1850-01-01",
+    "tier": "1",
+    "@context": "_context_",
+    "type": [
+        "wcrp:experiment",
+        "cmip7"
+    ]
+}

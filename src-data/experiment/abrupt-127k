@@ -1,0 +1,39 @@
+{
+    "id": "abrupt-127k",
+    "validation-key": "abrupt-127k",
+    "ui-label": "abrupt imposure of the orbit and greenhouse gases of 127 ka before present",
+    "description": "Conceptually similar to abrupt-4xCO2 DECK experiment, except that orbital forcing (eccentricity, obliquity, length of perihelion) and greenhouse gas concentrations as per PMIP4 lig127k (Otto-Bliesner et al., 2017; also refer to Sime et al. in prep.) are abruptly changed from those of piControl, that also serves as an initial state, to their configuration of 127,000 years ago, with high boreal spring to autumn insolation leading to low sea-ice in the Arctic. AOGCM initialized from a spun-up piControl with constant-in-time forcing of orbital parameters and greenhouse gas concentrations indicative of 127,000 years before present; use of components AER, CHEM, BGC is allowed, yet it must be ensured that relevant greenhouse gas concentrations in the atmosphere stay constant at the specified values throughout the simulation; relevant references: Otto-Bliesner et al. (2017), https://gmd.copernicus.org/articles/10/3979/2017/; Guarino et al (2020), https://www.nature.com/articles/s41558-020-0865-2; Sime et al. (2023), https://cp.copernicus.org/articles/19/883/2023/",
+    "activity": [
+        "pmip"
+    ],
+    "alias": [],
+    "minimum-number-of-years": "100",
+    "model-realms": [
+        {
+            "id": "aogcm",
+            "is-required": true
+        },
+        {
+            "id": "aer",
+            "is-required": false
+        },
+        {
+            "id": "bgc",
+            "is-required": false
+        },
+        {
+            "id": "chem",
+            "is-required": false
+        }
+    ],
+    "parent-experiment": [
+        "picontrol"
+    ],
+    "start-date": "none",
+    "tier": "1",
+    "@context": "_context_",
+    "type": [
+        "wcrp:experiment",
+        "cmip7"
+    ]
+}

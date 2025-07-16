@@ -1,0 +1,40 @@
+{
+    "id": "amip-m4k",
+    "validation-key": "amip-m4K",
+    "ui-label": "AMIP experiment with uniform 4K SST decrease",
+    "description": "The configuration of the `amip-m4K` experiment will be the same as the Fast Track `amip-p4K` experiment, except that the sea surface temperatures are uniformly reduced by 4K rather than increased. This cooling should be applied to sea-ice-free grid boxes only. Sea ice and SSTs in grid boxes containing sea ice should remain the same as in the `amip` DECK experiment. In models which employ a fixed lower threshold near freezing for the SST used in the calculation of the surface fluxes, this should ideally also be reduced by 4K. This will support the investigation of inconsistent responses of clouds to a cooling versus a warming climate in a controlled way through comparison with the `amip-p4K` [(Ringer et al., 2023)](https://doi.org/10.1029/2023JD038861). This experiment also complements the `abrupt-0p5xCO2` experiment in that one can identify asymmetries in the warming/cooling response with and without interactions with the ocean.  Reference: [Webb et al., 2017](https://doi.org/10.5194/gmd)",
+    "activity": [
+        "cfmip"
+    ],
+    "alias": [],
+    "branch-date": "none",
+    "minimum-number-of-years": "44",
+    "model-realms": [
+        {
+            "id": "agcm",
+            "is-required": true
+        },
+        {
+            "id": "aer",
+            "is-required": false
+        },
+        {
+            "id": "bgc",
+            "is-required": false
+        },
+        {
+            "id": "chem",
+            "is-required": false
+        }
+    ],
+    "parent-experiment": [
+        "none"
+    ],
+    "start-date": "1979-01-01",
+    "tier": "2",
+    "@context": "_context_",
+    "type": [
+        "wcrp:experiment",
+        "cmip7"
+    ]
+}

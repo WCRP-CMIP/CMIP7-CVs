@@ -1,0 +1,40 @@
+{
+    "id": "abrupt-2xco2",
+    "validation-key": "abrupt-2xCO2",
+    "ui-label": "Abrupt doubling of CO2",
+    "description": "Identical to the `piControl` DECK experiment but with a step change to 2xCO2 concentration from its pre-industrial value, held constant for the duration of the run.  Reference: [Webb et al., 2017](https://doi.org/10.5194/gmd-10-359-2017)",
+    "activity": [
+        "cfmip"
+    ],
+    "alias": [],
+    "branch-date": "none",
+    "minimum-number-of-years": "300",
+    "model-realms": [
+        {
+            "id": "aogcm",
+            "is-required": true
+        },
+        {
+            "id": "aer",
+            "is-required": false
+        },
+        {
+            "id": "bgc",
+            "is-required": false
+        },
+        {
+            "id": "chem",
+            "is-required": false
+        }
+    ],
+    "parent-experiment": [
+        "picontrol"
+    ],
+    "start-date": "none",
+    "tier": "1",
+    "@context": "_context_",
+    "type": [
+        "wcrp:experiment",
+        "cmip7"
+    ]
+}

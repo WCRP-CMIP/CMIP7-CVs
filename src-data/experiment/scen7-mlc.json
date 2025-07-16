@@ -1,0 +1,24 @@
+{
+    "id": "scen7-mlc",
+    "validation-key": "scen7-mlc",
+    "ui-label": "Medium, Concentration Driven Scenario",
+    "description": "Concentration driven scenario with delayed increase in mitigation effort, insufficient to meet Paris Agreement objectives",
+    "activity": [
+        "scenariomip"
+    ],
+    "alias": [],
+    "end": 2100,
+    "min-number-yrs-per-sim": 79,
+    "model-realms": [],
+    "parent-experiment": [
+        "historical"
+    ],
+    "start": 2022,
+    "start-date": "none",
+    "tier": 0,
+    "@context": "_context_",
+    "type": [
+        "wcrp:experiment",
+        "cmip7"
+    ]
+}

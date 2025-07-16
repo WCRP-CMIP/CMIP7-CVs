@@ -1,0 +1,20 @@
+{
+    "id": "drs-list",
+    "validation-key": "",
+    "ui-label": "",
+    "description": "",
+    "drs": {
+        "directory-path-example": "",
+        "directory-path-sub-experiment-example": "C",
+        "directory-path-template": "",
+        "filename-example": "",
+        "filename-sub-experiment-example": "",
+        "filename-template": ""
+    },
+    "@context": "_context_",
+    "type": [
+        "wcrp:project",
+        "cmip7",
+        "wcrp:drs"
+    ]
+}

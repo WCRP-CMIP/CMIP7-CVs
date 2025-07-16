@@ -1,0 +1,24 @@
+{
+    "id": "scen7-hc",
+    "validation-key": "scen7-hc",
+    "ui-label": "High, Concentration Driven Scenario",
+    "description": "High concentration driven emission scenario to explore potential high-end impacts",
+    "activity": [
+        "scenariomip"
+    ],
+    "alias": [],
+    "end": 2100,
+    "min-number-yrs-per-sim": 79,
+    "model-realms": [],
+    "parent-experiment": [
+        "historical"
+    ],
+    "start": 2022,
+    "start-date": "none",
+    "tier": 0,
+    "@context": "_context_",
+    "type": [
+        "wcrp:experiment",
+        "cmip7"
+    ]
+}

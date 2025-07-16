@@ -1,0 +1,31 @@
+{
+    "id": "piclim-n2o",
+    "validation-key": "piClim-N2O",
+    "ui-label": "Pre-industrial climatology with present-day nitrous oxide",
+    "description": "1. Detailed experiment configuration An atmosphere only configuration following piClim-control but using present-day (2021) N2O  2. Required model settings We encourage modelling centres to include as much atmospheric composition capability as possible. But, as a minimum, models should have stratospheric chemistry. And the experimental setup should be consistent with other AerChemMIP2 experiments, particularly piClim-control.   3. Experiment conditions  4. Links to relevant references Fiedler et al. (in prep.) AerChemMIP2 - Unraveling the role of reactive gases, aerosols, and land use for air quality and climate change in CMIP7  5. Similarities to CMIP6 experiments piClim-N2O  6. Forcing differences from parent experiment Present-day (2021) N2O",
+    "activity": [
+        "aerchemmip"
+    ],
+    "alias": [],
+    "minimum-number-of-years": "30",
+    "model-realms": [
+        {
+            "id": "agcm",
+            "is-required": true
+        },
+        {
+            "id": "chem",
+            "is-required": true
+        }
+    ],
+    "parent-experiment": [
+        "piclim-control"
+    ],
+    "start-date": "none",
+    "tier": "1",
+    "@context": "_context_",
+    "type": [
+        "wcrp:experiment",
+        "cmip7"
+    ]
+}

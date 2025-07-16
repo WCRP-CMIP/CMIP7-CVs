@@ -1,0 +1,31 @@
+{
+    "id": "piclim-2xbvoc",
+    "validation-key": "piClim-2xBVOC",
+    "ui-label": "Pre-industrial climatology with doubled biogenic volatile organic carbon emissions",
+    "description": "1. Detailed experiment configuration An atmosphere only configuration following piClim-control but with biogenic volatile organic compound emissions scaled by a factor of 2  2. Required model settings We encourage modelling centres to include as much atmospheric composition capability as possible. But, as a minimum, models should have tropospheric chemistry and interactive aerosols. And the experimental setup should be consistent with other AerChemMIP2 experiments, particularly piClim-control.  3. Experiment conditions  4. Links to relevant references Fiedler et al. (in prep.) AerChemMIP2 - Unraveling the role of reactive gases, aerosols, and land use for air quality and climate change in CMIP7  5. Similarities to CMIP6 experiments piClim–2xVOC  6. Forcing differences from parent experiment Doubled biogenic volatile organic compound emissions",
+    "activity": [
+        "aerchemmip"
+    ],
+    "alias": [],
+    "minimum-number-of-years": "30",
+    "model-realms": [
+        {
+            "id": "agcm",
+            "is-required": true
+        },
+        {
+            "id": "chem",
+            "is-required": true
+        }
+    ],
+    "parent-experiment": [
+        "piclim-control"
+    ],
+    "start-date": "none",
+    "tier": "2",
+    "@context": "_context_",
+    "type": [
+        "wcrp:experiment",
+        "cmip7"
+    ]
+}

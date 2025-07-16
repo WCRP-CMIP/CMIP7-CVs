@@ -1,0 +1,28 @@
+{
+    "id": "activity-list",
+    "validation-key": "",
+    "ui-label": "",
+    "description": "",
+    "activity": [
+        "aerchemmip",
+        "c4mip",
+        "cfmip",
+        "cmip",
+        "damip",
+        "dcpp",
+        "geomip",
+        "highresmip2",
+        "lmip",
+        "pmip",
+        "rfmip",
+        "scenariomip"
+    ],
+    "@context": [
+        "_context_"
+    ],
+    "type": [
+        "wcrp:project",
+        "cmip7",
+        "wcrp:activity"
+    ]
+}
