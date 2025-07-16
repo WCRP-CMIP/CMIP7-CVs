@@ -1,23 +1,23 @@
 {
-  "@context": "_context_",
-  "activity": [
-    "scenariomip"
-  ],
-  "description": "Medium concentration driven emission scenario consistent with current policies",
-  "end": 2100,
-  "id": "scen7-mc",
-  "validation-key": "scen7-mc",
-  "ui-label": "Medium, Concentration Driven Scenario",
-  "min-number-yrs-per-sim": 79,
-  "model-realms": [],
-  "parent-experiment": [
-    "historical"
-  ],
-  "start": 2022,
-  "start-date": "none",
-  "tier": 0,
-  "type": [
-    "wcrp:experiment",
-    "cmip7"
-  ]
+    "id": "scen7-mc",
+    "validation-key": "scen7-mc",
+    "ui-label": "Medium, Concentration Driven Scenario",
+    "description": "Medium concentration driven emission scenario consistent with current policies",
+    "activity": [
+        "scenariomip"
+    ],
+    "end": 2100,
+    "min-number-yrs-per-sim": 79,
+    "model-realms": [],
+    "parent-experiment": [
+        "historical"
+    ],
+    "start": 2022,
+    "start-date": "none",
+    "tier": 0,
+    "@context": "_context_",
+    "type": [
+        "wcrp:experiment",
+        "cmip7"
+    ]
 }
