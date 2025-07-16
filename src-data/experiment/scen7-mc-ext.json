@@ -6,6 +6,7 @@
     "activity": [
         "scenariomip"
     ],
+    "alias": [],
     "end": 2500,
     "min-number-yrs-per-sim": 50,
     "model-realms": [],
