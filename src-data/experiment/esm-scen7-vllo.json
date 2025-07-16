@@ -1,23 +1,23 @@
 {
-    "@context": "_context_",
-    "id": "esm-scen7-vllo",
-    "type": [
-        "wcrp:experiment",
-        "cmip7"
-    ],
-    "activity": [
-        "scenariomip"
-    ],
-    "description": "Scenario consistent with limiting warming to 1.5 degree C by 2100 AD with limited overshoot (as low as plausible) of 1.5 degree C",
-    "tier": 0,
-    "end": 2100,
-    "min-number-yrs-per-sim": 79,
-    "start": 2022,
-    "label": "esm-scen7-vllo",
-    "model-realms": [],
-    "parent-experiment": [
-        "esm-hist"
-    ],
-    "long-label": "Very Low Scenario with Limited Overshoot",
-    "start-date": "none"
+  "@context": "_context_",
+  "activity": [
+    "scenariomip"
+  ],
+  "description": "Scenario consistent with limiting warming to 1.5 degree C by 2100 AD with limited overshoot (as low as plausible) of 1.5 degree C",
+  "end": 2100,
+  "id": "esm-scen7-vllo",
+  "validation-key": "esm-scen7-vllo",
+  "ui-label": "Very Low Scenario with Limited Overshoot",
+  "min-number-yrs-per-sim": 79,
+  "model-realms": [],
+  "parent-experiment": [
+    "esm-hist"
+  ],
+  "start": 2022,
+  "start-date": "none",
+  "tier": 0,
+  "type": [
+    "wcrp:experiment",
+    "cmip7"
+  ]
 }

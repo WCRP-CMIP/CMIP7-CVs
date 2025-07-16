@@ -1,23 +1,23 @@
 {
-    "@context": "_context_",
-    "id": "scen7-lc-ext",
-    "type": [
-        "wcrp:experiment",
-        "cmip7"
-    ],
-    "activity": [
-        "scenariomip"
-    ],
-    "description": "Extension to concentration driven scenario consistent with staying likely below 2 degrees C",
-    "tier": 0,
-    "end": 2500,
-    "min-number-yrs-per-sim": 50,
-    "start": 2101,
-    "label": "scen7-lc-ext",
-    "model-realms": [],
-    "parent-experiment": [
-        "scen7-lc"
-    ],
-    "long-label": "Low, Concentration Driven Scenario Extension",
-    "start-date": "none"
+  "@context": "_context_",
+  "activity": [
+    "scenariomip"
+  ],
+  "description": "Extension to concentration driven scenario consistent with staying likely below 2 degrees C",
+  "end": 2500,
+  "id": "scen7-lc-ext",
+  "validation-key": "scen7-lc-ext",
+  "ui-label": "Low, Concentration Driven Scenario Extension",
+  "min-number-yrs-per-sim": 50,
+  "model-realms": [],
+  "parent-experiment": [
+    "scen7-lc"
+  ],
+  "start": 2101,
+  "start-date": "none",
+  "tier": 0,
+  "type": [
+    "wcrp:experiment",
+    "cmip7"
+  ]
 }

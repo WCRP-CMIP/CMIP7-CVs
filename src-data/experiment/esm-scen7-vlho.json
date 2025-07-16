@@ -1,23 +1,23 @@
 {
-    "@context": "_context_",
-    "id": "esm-scen7-vlho",
-    "type": [
-        "wcrp:experiment",
-        "cmip7"
-    ],
-    "activity": [
-        "scenariomip"
-    ],
-    "description": "Scenario with similar endof-century temperature impact to VLLO, but with less aggressive near-term mitigation and large reliance on net negative emissions, resulting in a higher overshoot.",
-    "tier": 0,
-    "end": 2100,
-    "min-number-yrs-per-sim": 79,
-    "start": 2022,
-    "label": "esm-scen7-vlho",
-    "model-realms": [],
-    "parent-experiment": [
-        "esm-hist"
-    ],
-    "long-label": "Very Low Scenario after High Overshoot",
-    "start-date": "none"
+  "@context": "_context_",
+  "activity": [
+    "scenariomip"
+  ],
+  "description": "Scenario with similar endof-century temperature impact to VLLO, but with less aggressive near-term mitigation and large reliance on net negative emissions, resulting in a higher overshoot.",
+  "end": 2100,
+  "id": "esm-scen7-vlho",
+  "validation-key": "esm-scen7-vlho",
+  "ui-label": "Very Low Scenario after High Overshoot",
+  "min-number-yrs-per-sim": 79,
+  "model-realms": [],
+  "parent-experiment": [
+    "esm-hist"
+  ],
+  "start": 2022,
+  "start-date": "none",
+  "tier": 0,
+  "type": [
+    "wcrp:experiment",
+    "cmip7"
+  ]
 }

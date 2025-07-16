@@ -1,40 +1,40 @@
 {
-    "@context": "_context_",
-    "id": "historical",
-    "type": [
-        "wcrp:experiment",
-        "cmip7"
-    ],
-    "activity": [
-        "cmip"
-    ],
-    "description": "DECK: historical \n Simulation of the recent past",
-    "tier": 0,
-    "end": 2021,
-    "min-number-yrs-per-sim": 172,
-    "start": 1850,
-    "label": "historical",
-    "model-realms": [
-        {
-            "id": "aogcm",
-            "is-required": true
-        },
-        {
-            "id": "aer",
-            "is-required": false
-        },
-        {
-            "id": "chem",
-            "is-required": false
-        },
-        {
-            "id": "bgc",
-            "is-required": false
-        }
-    ],
-    "parent-experiment": [
-        "picontrol"
-    ],
-    "long-label": "Simulation of the recent past (concentration driven)",
-    "start-date": "none"
+  "@context": "_context_",
+  "activity": [
+    "cmip"
+  ],
+  "description": "DECK: historical \n Simulation of the recent past",
+  "end": 2021,
+  "id": "historical",
+  "validation-key": "historical",
+  "ui-label": "Simulation of the recent past (concentration driven)",
+  "min-number-yrs-per-sim": 172,
+  "model-realms": [
+    {
+      "id": "aogcm",
+      "is-required": true
+    },
+    {
+      "id": "aer",
+      "is-required": false
+    },
+    {
+      "id": "chem",
+      "is-required": false
+    },
+    {
+      "id": "bgc",
+      "is-required": false
+    }
+  ],
+  "parent-experiment": [
+    "picontrol"
+  ],
+  "start": 1850,
+  "start-date": "none",
+  "tier": 0,
+  "type": [
+    "wcrp:experiment",
+    "cmip7"
+  ]
 }

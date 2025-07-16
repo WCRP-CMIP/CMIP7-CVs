@@ -1,13 +1,12 @@
 {
-    "@context": [
-        "_context_"
-    ],
-    "id": "tables-list",
-    "type": [
-        "wcrp:project",
-        "cmip7",
-        "wcrp:tables"
-    ],
-    "tables": [
-    ]
+  "@context": [
+    "_context_"
+  ],
+  "id": "tables-list",
+  "tables": [],
+  "type": [
+    "wcrp:project",
+    "cmip7",
+    "wcrp:tables"
+  ]
 }

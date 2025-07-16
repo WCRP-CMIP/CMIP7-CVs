@@ -1,23 +1,23 @@
 {
-    "@context": "_context_",
-    "id": "esm-scen7-l",
-    "type": [
-        "wcrp:experiment",
-        "cmip7"
-    ],
-    "activity": [
-        "scenariomip"
-    ],
-    "description": "Scenario consistent with staying likely below 2 degrees C",
-    "tier": 0,
-    "end": 2100,
-    "min-number-yrs-per-sim": 79,
-    "start": 2022,
-    "label": "esm-scen7-l",
-    "model-realms": [],
-    "parent-experiment": [
-        "esm-hist"
-    ],
-    "long-label": "Low Scenario",
-    "start-date": "none"
+  "@context": "_context_",
+  "activity": [
+    "scenariomip"
+  ],
+  "description": "Scenario consistent with staying likely below 2 degrees C",
+  "end": 2100,
+  "id": "esm-scen7-l",
+  "validation-key": "esm-scen7-l",
+  "ui-label": "Low Scenario",
+  "min-number-yrs-per-sim": 79,
+  "model-realms": [],
+  "parent-experiment": [
+    "esm-hist"
+  ],
+  "start": 2022,
+  "start-date": "none",
+  "tier": 0,
+  "type": [
+    "wcrp:experiment",
+    "cmip7"
+  ]
 }

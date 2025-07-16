@@ -1,23 +1,23 @@
 {
-    "@context": "_context_",
-    "id": "scen7-mlc-ext",
-    "type": [
-        "wcrp:experiment",
-        "cmip7"
-    ],
-    "activity": [
-        "scenariomip"
-    ],
-    "description": "Extension to concentration driven scenario with delayed increase in mitigation effort, insufficient to meet Paris Agreement objectives",
-    "tier": 0,
-    "end": 2500,
-    "min-number-yrs-per-sim": 50,
-    "start": 2101,
-    "label": "scen7-mlc-ext",
-    "model-realms": [],
-    "parent-experiment": [
-        "scen7-mlc"
-    ],
-    "long-label": "Medium, Concentration Driven Scenario Extension",
-    "start-date": "none"
+  "@context": "_context_",
+  "activity": [
+    "scenariomip"
+  ],
+  "description": "Extension to concentration driven scenario with delayed increase in mitigation effort, insufficient to meet Paris Agreement objectives",
+  "end": 2500,
+  "id": "scen7-mlc-ext",
+  "validation-key": "scen7-mlc-ext",
+  "ui-label": "Medium, Concentration Driven Scenario Extension",
+  "min-number-yrs-per-sim": 50,
+  "model-realms": [],
+  "parent-experiment": [
+    "scen7-mlc"
+  ],
+  "start": 2101,
+  "start-date": "none",
+  "tier": 0,
+  "type": [
+    "wcrp:experiment",
+    "cmip7"
+  ]
 }

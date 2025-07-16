@@ -1,23 +1,23 @@
 {
-    "@context": "_context_",
-    "id": "scen7-vlhoc-ext",
-    "type": [
-        "wcrp:experiment",
-        "cmip7"
-    ],
-    "activity": [
-        "scenariomip"
-    ],
-    "description": "Extension to Concentration driven scenario with similar end-of-century temperature impact to VLLO, but with less aggressive near-term mitigation and large reliance on net negative emissions, resulting in a higher overshoot.",
-    "tier": 0,
-    "end": 2500,
-    "min-number-yrs-per-sim": 50,
-    "start": 2101,
-    "label": "scen7-vlhoc-ext",
-    "model-realms": [],
-    "parent-experiment": [
-        "scen7-vlhoc"
-    ],
-    "long-label": "Very Low Concentration Driven Scenario Extension after High Overshoot",
-    "start-date": "none"
+  "@context": "_context_",
+  "activity": [
+    "scenariomip"
+  ],
+  "description": "Extension to Concentration driven scenario with similar end-of-century temperature impact to VLLO, but with less aggressive near-term mitigation and large reliance on net negative emissions, resulting in a higher overshoot.",
+  "end": 2500,
+  "id": "scen7-vlhoc-ext",
+  "validation-key": "scen7-vlhoc-ext",
+  "ui-label": "Very Low Concentration Driven Scenario Extension after High Overshoot",
+  "min-number-yrs-per-sim": 50,
+  "model-realms": [],
+  "parent-experiment": [
+    "scen7-vlhoc"
+  ],
+  "start": 2101,
+  "start-date": "none",
+  "tier": 0,
+  "type": [
+    "wcrp:experiment",
+    "cmip7"
+  ]
 }

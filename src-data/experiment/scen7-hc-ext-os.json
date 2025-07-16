@@ -1,23 +1,23 @@
 {
-    "@context": "_context_",
-    "id": "scen7-hc-ext-os",
-    "type": [
-        "wcrp:experiment",
-        "cmip7"
-    ],
-    "activity": [
-        "scenariomip"
-    ],
-    "description": "High concentration driven emission scenario overshoot extension to explore potential high-end impacts",
-    "tier": 0,
-    "end": 2500,
-    "min-number-yrs-per-sim": 50,
-    "start": 2101,
-    "label": "scen7-hc-ext-os",
-    "model-realms": [],
-    "parent-experiment": [
-        "scen7-hc"
-    ],
-    "long-label": "High, Concentration Driven Scenario Overshoot Extension",
-    "start-date": "none"
+  "@context": "_context_",
+  "activity": [
+    "scenariomip"
+  ],
+  "description": "High concentration driven emission scenario overshoot extension to explore potential high-end impacts",
+  "end": 2500,
+  "id": "scen7-hc-ext-os",
+  "validation-key": "scen7-hc-ext-os",
+  "ui-label": "High, Concentration Driven Scenario Overshoot Extension",
+  "min-number-yrs-per-sim": 50,
+  "model-realms": [],
+  "parent-experiment": [
+    "scen7-hc"
+  ],
+  "start": 2101,
+  "start-date": "none",
+  "tier": 0,
+  "type": [
+    "wcrp:experiment",
+    "cmip7"
+  ]
 }

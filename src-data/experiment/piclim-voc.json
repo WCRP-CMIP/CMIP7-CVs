@@ -1,23 +1,23 @@
 {
-    "@context": "_context_",
-    "id": "piclim-voc",
-    "type": [
-        "wcrp:experiment",
-        "cmip7"
-    ],
-    "activity": [
-        "aerchemmip"
-    ],
-    "description": "Perturbation from pre-industrial control using 1850 VOC emissions \n Pre-industrial climatological SSTs and sea ice extent, 1850 VOC emissions",
-    "tier": 0,
-    "end": -999,
-    "min-number-yrs-per-sim": -999,
-    "start": -999,
-    "label": "piClim-VOC",
-    "model-realms": [],
-    "parent-experiment": [
-        "none"
-    ],
-    "long-label": "Describe piClim-VOC in one sentence.",
-    "start-date": "none"
+  "@context": "_context_",
+  "activity": [
+    "aerchemmip"
+  ],
+  "description": "Perturbation from pre-industrial control using 1850 VOC emissions \n Pre-industrial climatological SSTs and sea ice extent, 1850 VOC emissions",
+  "end": -999,
+  "id": "piclim-voc",
+  "validation-key": "piClim-VOC",
+  "ui-label": "Describe piClim-VOC in one sentence.",
+  "min-number-yrs-per-sim": -999,
+  "model-realms": [],
+  "parent-experiment": [
+    "none"
+  ],
+  "start": -999,
+  "start-date": "none",
+  "tier": 0,
+  "type": [
+    "wcrp:experiment",
+    "cmip7"
+  ]
 }
