@@ -6,6 +6,7 @@
     "activity": [
         "cmip"
     ],
+    "alias": [],
     "end": 2021,
     "min-number-yrs-per-sim": 172,
     "model-realms": [
