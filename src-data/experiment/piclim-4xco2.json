@@ -1,23 +1,23 @@
 {
-  "@context": "_context_",
-  "activity": [
-    "cmip"
-  ],
-  "description": "DECK: effective radiative forcing by 4xCO2 \n Effective radiative forcing by 4xCO2",
-  "end": -999,
-  "id": "piclim-4xco2",
-  "validation-key": "piClim-4xCO2",
-  "ui-label": "As piClim-control except CO2 concentrations set to 4 times preindustrial",
-  "min-number-yrs-per-sim": 30,
-  "model-realms": [],
-  "parent-experiment": [
-    "picontrol"
-  ],
-  "start": -999,
-  "start-date": "none",
-  "tier": 0,
-  "type": [
-    "wcrp:experiment",
-    "cmip7"
-  ]
+    "id": "piclim-4xco2",
+    "validation-key": "piClim-4xCO2",
+    "ui-label": "As piClim-control except CO2 concentrations set to 4 times preindustrial",
+    "description": "DECK: effective radiative forcing by 4xCO2 \n Effective radiative forcing by 4xCO2",
+    "activity": [
+        "cmip"
+    ],
+    "end": -999,
+    "min-number-yrs-per-sim": 30,
+    "model-realms": [],
+    "parent-experiment": [
+        "picontrol"
+    ],
+    "start": -999,
+    "start-date": "none",
+    "tier": 0,
+    "@context": "_context_",
+    "type": [
+        "wcrp:experiment",
+        "cmip7"
+    ]
 }
