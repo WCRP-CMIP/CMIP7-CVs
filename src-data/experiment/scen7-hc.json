@@ -1,23 +1,23 @@
 {
-  "@context": "_context_",
-  "activity": [
-    "scenariomip"
-  ],
-  "description": "High concentration driven emission scenario to explore potential high-end impacts",
-  "end": 2100,
-  "id": "scen7-hc",
-  "validation-key": "scen7-hc",
-  "ui-label": "High, Concentration Driven Scenario",
-  "min-number-yrs-per-sim": 79,
-  "model-realms": [],
-  "parent-experiment": [
-    "historical"
-  ],
-  "start": 2022,
-  "start-date": "none",
-  "tier": 0,
-  "type": [
-    "wcrp:experiment",
-    "cmip7"
-  ]
+    "id": "scen7-hc",
+    "validation-key": "scen7-hc",
+    "ui-label": "High, Concentration Driven Scenario",
+    "description": "High concentration driven emission scenario to explore potential high-end impacts",
+    "activity": [
+        "scenariomip"
+    ],
+    "end": 2100,
+    "min-number-yrs-per-sim": 79,
+    "model-realms": [],
+    "parent-experiment": [
+        "historical"
+    ],
+    "start": 2022,
+    "start-date": "none",
+    "tier": 0,
+    "@context": "_context_",
+    "type": [
+        "wcrp:experiment",
+        "cmip7"
+    ]
 }
