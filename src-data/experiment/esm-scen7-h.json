@@ -1,23 +1,23 @@
 {
-  "@context": "_context_",
-  "activity": [
-    "scenariomip"
-  ],
-  "description": "High emission scenario to explore potential high-end impacts",
-  "end": 2100,
-  "id": "esm-scen7-h",
-  "validation-key": "esm-scen7-h",
-  "ui-label": "High Scenario",
-  "min-number-yrs-per-sim": 79,
-  "model-realms": [],
-  "parent-experiment": [
-    "esm-hist"
-  ],
-  "start": 2022,
-  "start-date": "none",
-  "tier": 0,
-  "type": [
-    "wcrp:experiment",
-    "cmip7"
-  ]
+    "id": "esm-scen7-h",
+    "validation-key": "esm-scen7-h",
+    "ui-label": "High Scenario",
+    "description": "High emission scenario to explore potential high-end impacts",
+    "activity": [
+        "scenariomip"
+    ],
+    "end": 2100,
+    "min-number-yrs-per-sim": 79,
+    "model-realms": [],
+    "parent-experiment": [
+        "esm-hist"
+    ],
+    "start": 2022,
+    "start-date": "none",
+    "tier": 0,
+    "@context": "_context_",
+    "type": [
+        "wcrp:experiment",
+        "cmip7"
+    ]
 }
