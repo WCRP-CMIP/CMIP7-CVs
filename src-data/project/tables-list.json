@@ -1,12 +1,15 @@
 {
-  "@context": [
-    "_context_"
-  ],
-  "id": "tables-list",
-  "tables": [],
-  "type": [
-    "wcrp:project",
-    "cmip7",
-    "wcrp:tables"
-  ]
+    "id": "tables-list",
+    "validation-key": "",
+    "ui-label": "",
+    "description": "",
+    "tables": [],
+    "@context": [
+        "_context_"
+    ],
+    "type": [
+        "wcrp:project",
+        "cmip7",
+        "wcrp:tables"
+    ]
 }
