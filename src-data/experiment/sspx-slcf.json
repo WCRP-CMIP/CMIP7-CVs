@@ -1,23 +1,24 @@
 {
-    "@context": "_context_",
     "id": "sspx-slcf",
-    "type": [
-        "wcrp:experiment",
-        "cmip7"
-    ],
+    "validation-key": "SSPX-SLCF",
+    "ui-label": "Describe SSPX-SLCF in one sentence.",
+    "description": "Future scenario with specified SLCF emissions \n Future scenario simulation with specified short-lived climate forcer emissions",
     "activity": [
         "aerchemmip"
     ],
-    "description": "Future scenario with specified SLCF emissions \n Future scenario simulation with specified short-lived climate forcer emissions",
-    "tier": 0,
+    "alias": [],
     "end": -999,
     "min-number-yrs-per-sim": -999,
-    "start": -999,
-    "label": "SSPX-SLCF",
     "model-realms": [],
     "parent-experiment": [
         "none"
     ],
-    "long-label": "Describe SSPX-SLCF in one sentence.",
-    "start-date": "none"
+    "start": -999,
+    "start-date": "none",
+    "tier": 0,
+    "@context": "_context_",
+    "type": [
+        "wcrp:experiment",
+        "cmip7"
+    ]
 }

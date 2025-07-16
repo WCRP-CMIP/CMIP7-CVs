@@ -1,23 +1,24 @@
 {
-    "@context": "_context_",
     "id": "esm-scen7-l-ext",
-    "type": [
-        "wcrp:experiment",
-        "cmip7"
-    ],
+    "validation-key": "esm-scen7-l-ext",
+    "ui-label": "Low Scenario Extension",
+    "description": "Scenario extension consistent with staying likely below 2 degrees C",
     "activity": [
         "scenariomip"
     ],
-    "description": "Scenario extension consistent with staying likely below 2 degrees C",
-    "tier": 0,
+    "alias": [],
     "end": 2500,
     "min-number-yrs-per-sim": 50,
-    "start": 2101,
-    "label": "esm-scen7-l-ext",
     "model-realms": [],
     "parent-experiment": [
         "esm-scen7-l"
     ],
-    "long-label": "Low Scenario Extension",
-    "start-date": "none"
+    "start": 2101,
+    "start-date": "none",
+    "tier": 0,
+    "@context": "_context_",
+    "type": [
+        "wcrp:experiment",
+        "cmip7"
+    ]
 }

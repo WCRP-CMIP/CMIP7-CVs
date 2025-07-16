@@ -1,23 +1,24 @@
 {
-    "@context": "_context_",
     "id": "g7-1p5k-sai",
-    "type": [
-        "wcrp:experiment",
-        "cmip7"
-    ],
+    "validation-key": "G7-1p5K-SAI",
+    "ui-label": "G7-1.5K-SAI",
+    "description": "Stratospheric aerosol injection to reduce warming to 1.5K \n Stratospheric aerosol injection to reduce warming to 1.5K above pre-industrial levels",
     "activity": [
         "geomip"
     ],
-    "description": "Stratospheric aerosol injection to reduce warming to 1.5K \n Stratospheric aerosol injection to reduce warming to 1.5K above pre-industrial levels",
-    "tier": 0,
+    "alias": [],
     "end": -999,
     "min-number-yrs-per-sim": -999,
-    "start": -999,
-    "label": "G7-1p5K-SAI",
     "model-realms": [],
     "parent-experiment": [
         "none"
     ],
-    "long-label": "G7-1.5K-SAI",
-    "start-date": "none"
+    "start": -999,
+    "start-date": "none",
+    "tier": 0,
+    "@context": "_context_",
+    "type": [
+        "wcrp:experiment",
+        "cmip7"
+    ]
 }

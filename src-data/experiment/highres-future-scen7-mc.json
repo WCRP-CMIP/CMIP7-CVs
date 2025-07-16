@@ -1,15 +1,12 @@
 {
     "id": "highres-future-scen7-mc",
-    "type": [
-        "wcrp:experiment",
-        "cmip7"
-    ],
+    "validation-key": "highres-future-scen7-mc",
+    "ui-label": "Coupled future medium scenario",
+    "description": "HighResMIP2 Tier 2: highres-future-scen7-mc  Conduct coupled future projection simulations (present-2100) initialized from the end of the hist-1950 simulation, using scenario forcing. scen7-mc is the CMIP7 scenario (medium is recommended)  For further details, please refer to: Roberts, M. J., Reed, K. A., Bao, Q., Barsugli, J. J., Camargo, S. J., Caron, L. P., … & Zhao, M. (2025). High-Resolution Model Intercomparison Project phase 2 (HighResMIP2) towards CMIP7. Geoscientific Model Development, 18, 1307–1332  [High-Resolution Model Intercomparison Project Phase 2 (HighResMIP2) towards CMIP7.pdf](https://github.com/user-attachments/files/19401230/High-Resolution.Model.Intercomparison.Project.Phase.2.HighResMIP2.towards.CMIP7.pdf)  Webpage: https://highresmip.org/experiments/experiment_cmip7/",
     "activity": [
         "HighResMIP2"
     ],
-    "description": "HighResMIP2 Tier 2: highres-future-scen7-mc  Conduct coupled future projection simulations (present-2100) initialized from the end of the hist-1950 simulation, using scenario forcing. scen7-mc is the CMIP7 scenario (medium is recommended)  For further details, please refer to: Roberts, M. J., Reed, K. A., Bao, Q., Barsugli, J. J., Camargo, S. J., Caron, L. P., \u2026 & Zhao, M. (2025). High-Resolution Model Intercomparison Project phase 2 (HighResMIP2) towards CMIP7. Geoscientific Model Development, 18, 1307\u20131332  [High-Resolution Model Intercomparison Project Phase 2 (HighResMIP2) towards CMIP7.pdf](https://github.com/user-attachments/files/19401230/High-Resolution.Model.Intercomparison.Project.Phase.2.HighResMIP2.towards.CMIP7.pdf)  Webpage: https://highresmip.org/experiments/experiment_cmip7/",
-    "label": "highres-future-scen7-mc",
-    "long-label": "Coupled future medium scenario",
+    "alias": [],
     "minimum-number-of-years": "78",
     "model-realms": [
         {
@@ -35,5 +32,9 @@
     "start-date": "1950-01-01",
     "sub-experiment": "none",
     "tier": "2",
-    "@context": "_context_"
+    "@context": "_context_",
+    "type": [
+        "wcrp:experiment",
+        "cmip7"
+    ]
 }

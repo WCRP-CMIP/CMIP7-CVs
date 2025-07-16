@@ -1,19 +1,14 @@
 {
-    "@context": "_context_",
     "id": "historical",
-    "type": [
-        "wcrp:experiment",
-        "cmip7"
-    ],
+    "validation-key": "historical",
+    "ui-label": "Simulation of the recent past (concentration driven)",
+    "description": "DECK: historical \n Simulation of the recent past",
     "activity": [
         "cmip"
     ],
-    "description": "DECK: historical \n Simulation of the recent past",
-    "tier": 0,
+    "alias": [],
     "end": 2021,
     "min-number-yrs-per-sim": 172,
-    "start": 1850,
-    "label": "historical",
     "model-realms": [
         {
             "id": "aogcm",
@@ -35,6 +30,12 @@
     "parent-experiment": [
         "picontrol"
     ],
-    "long-label": "Simulation of the recent past (concentration driven)",
-    "start-date": "none"
+    "start": 1850,
+    "start-date": "none",
+    "tier": 0,
+    "@context": "_context_",
+    "type": [
+        "wcrp:experiment",
+        "cmip7"
+    ]
 }

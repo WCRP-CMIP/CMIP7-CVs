@@ -1,10 +1,13 @@
 {
-    "@context": "_context_",
     "id": "repo-list",
+    "validation-key": "",
+    "ui-label": "",
+    "description": "",
+    "repo": "https://github.com/WCRP-CMIP/CMIP6Plus_CVs",
+    "@context": "_context_",
     "type": [
         "wcrp:project",
         "cmip7",
         "wcrp:repo"
-    ],
-    "repo": "https://github.com/WCRP-CMIP/CMIP6Plus_CVs"
+    ]
 }

@@ -1,23 +1,24 @@
 {
-    "@context": "_context_",
     "id": "esm-scen7-h-ext",
-    "type": [
-        "wcrp:experiment",
-        "cmip7"
-    ],
+    "validation-key": "esm-scen7-h-ext",
+    "ui-label": "High Scenario Extension",
+    "description": "High emission scenario extension to explore potential high-end impacts",
     "activity": [
         "scenariomip"
     ],
-    "description": "High emission scenario extension to explore potential high-end impacts",
-    "tier": 0,
+    "alias": [],
     "end": 2500,
     "min-number-yrs-per-sim": 50,
-    "start": 2101,
-    "label": "esm-scen7-h-ext",
     "model-realms": [],
     "parent-experiment": [
         "esm-scen7-h"
     ],
-    "long-label": "High Scenario Extension",
-    "start-date": "none"
+    "start": 2101,
+    "start-date": "none",
+    "tier": 0,
+    "@context": "_context_",
+    "type": [
+        "wcrp:experiment",
+        "cmip7"
+    ]
 }

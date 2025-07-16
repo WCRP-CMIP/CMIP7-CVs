@@ -1,10 +1,15 @@
 {
-    "@context": "_context_",
     "id": "mip-era-list",
+    "validation-key": "",
+    "ui-label": "",
+    "description": "",
+    "mip_era": {
+        "id": "cmip7"
+    },
+    "@context": "_context_",
     "type": [
         "wcrp:project",
         "cmip7",
         "wcrp:mip_era"
-    ],
-    "mip_era": {"id":"cmip7"}
+    ]
 }

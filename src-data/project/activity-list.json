@@ -1,13 +1,8 @@
 {
-    "@context": [
-        "_context_"
-    ],
     "id": "activity-list",
-    "type": [
-        "wcrp:project",
-        "cmip7",
-        "wcrp:activity"
-    ],
+    "validation-key": "",
+    "ui-label": "",
+    "description": "",
     "activity": [
         "aerchemmip",
         "c4mip",
@@ -21,5 +16,13 @@
         "pmip",
         "rfmip",
         "scenariomip"
-]
+    ],
+    "@context": [
+        "_context_"
+    ],
+    "type": [
+        "wcrp:project",
+        "cmip7",
+        "wcrp:activity"
+    ]
 }

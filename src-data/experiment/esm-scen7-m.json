@@ -1,23 +1,24 @@
 {
-    "@context": "_context_",
     "id": "esm-scen7-m",
-    "type": [
-        "wcrp:experiment",
-        "cmip7"
-    ],
+    "validation-key": "esm-scen7-m",
+    "ui-label": "Medium Scenario",
+    "description": "Medium emission scenario consistent with current policies",
     "activity": [
         "scenariomip"
     ],
-    "description": "Medium emission scenario consistent with current policies",
-    "tier": 0,
+    "alias": [],
     "end": 2100,
     "min-number-yrs-per-sim": 79,
-    "start": 2022,
-    "label": "esm-scen7-m",
     "model-realms": [],
     "parent-experiment": [
         "esm-hist"
     ],
-    "long-label": "Medium Scenario",
-    "start-date": "none"
+    "start": 2022,
+    "start-date": "none",
+    "tier": 0,
+    "@context": "_context_",
+    "type": [
+        "wcrp:experiment",
+        "cmip7"
+    ]
 }

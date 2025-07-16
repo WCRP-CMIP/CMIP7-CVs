@@ -1,23 +1,24 @@
 {
-    "@context": "_context_",
     "id": "piclim-hc",
-    "type": [
-        "wcrp:experiment",
-        "cmip7"
-    ],
+    "validation-key": "piClim-HC",
+    "ui-label": "Describe piClim-HC in one sentence.",
+    "description": "Perturbation from pre-industrial control using 1850 halocarbon concentrations \n Pre-industrial climatological SSTs and sea ice extent, 1850 halocarbon concentrations",
     "activity": [
         "aerchemmip"
     ],
-    "description": "Perturbation from pre-industrial control using 1850 halocarbon concentrations \n Pre-industrial climatological SSTs and sea ice extent, 1850 halocarbon concentrations",
-    "tier": 0,
+    "alias": [],
     "end": -999,
     "min-number-yrs-per-sim": -999,
-    "start": -999,
-    "label": "piClim-HC",
     "model-realms": [],
     "parent-experiment": [
         "none"
     ],
-    "long-label": "Describe piClim-HC in one sentence.",
-    "start-date": "none"
+    "start": -999,
+    "start-date": "none",
+    "tier": 0,
+    "@context": "_context_",
+    "type": [
+        "wcrp:experiment",
+        "cmip7"
+    ]
 }
