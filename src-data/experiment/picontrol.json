@@ -1,40 +1,40 @@
 {
-  "@context": "_context_",
-  "activity": [
-    "cmip"
-  ],
-  "description": "DECK: pre-industrial control \n Pre-industrial control simulation",
-  "end": -999,
-  "id": "picontrol",
-  "validation-key": "piControl",
-  "ui-label": "Coupled atmosphere-ocea preindustrial control run (concentration driven)",
-  "min-number-yrs-per-sim": 400,
-  "model-realms": [
-    {
-      "id": "aogcm",
-      "is-required": true
-    },
-    {
-      "id": "aer",
-      "is-required": false
-    },
-    {
-      "id": "chem",
-      "is-required": false
-    },
-    {
-      "id": "bgc",
-      "is-required": false
-    }
-  ],
-  "parent-experiment": [
-    "none"
-  ],
-  "start": -999,
-  "start-date": "none",
-  "tier": 0,
-  "type": [
-    "wcrp:experiment",
-    "cmip7"
-  ]
+    "id": "picontrol",
+    "validation-key": "piControl",
+    "ui-label": "Coupled atmosphere-ocea preindustrial control run (concentration driven)",
+    "description": "DECK: pre-industrial control \n Pre-industrial control simulation",
+    "activity": [
+        "cmip"
+    ],
+    "end": -999,
+    "min-number-yrs-per-sim": 400,
+    "model-realms": [
+        {
+            "id": "aogcm",
+            "is-required": true
+        },
+        {
+            "id": "aer",
+            "is-required": false
+        },
+        {
+            "id": "chem",
+            "is-required": false
+        },
+        {
+            "id": "bgc",
+            "is-required": false
+        }
+    ],
+    "parent-experiment": [
+        "none"
+    ],
+    "start": -999,
+    "start-date": "none",
+    "tier": 0,
+    "@context": "_context_",
+    "type": [
+        "wcrp:experiment",
+        "cmip7"
+    ]
 }
