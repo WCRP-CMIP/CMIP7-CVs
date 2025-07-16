@@ -1,23 +1,23 @@
 {
-  "@context": "_context_",
-  "activity": [
-    "pmip"
-  ],
-  "description": "Last Interglacial abrupt change experiment \n Simulation of abrupt change during the Last Interglacial period",
-  "end": -999,
-  "id": "ligabrupt",
-  "validation-key": "LIGabrupt",
-  "ui-label": "Describe LIGabrupt in one sentence.",
-  "min-number-yrs-per-sim": -999,
-  "model-realms": [],
-  "parent-experiment": [
-    "none"
-  ],
-  "start": -999,
-  "start-date": "none",
-  "tier": 0,
-  "type": [
-    "wcrp:experiment",
-    "cmip7"
-  ]
+    "id": "ligabrupt",
+    "validation-key": "LIGabrupt",
+    "ui-label": "Describe LIGabrupt in one sentence.",
+    "description": "Last Interglacial abrupt change experiment \n Simulation of abrupt change during the Last Interglacial period",
+    "activity": [
+        "pmip"
+    ],
+    "end": -999,
+    "min-number-yrs-per-sim": -999,
+    "model-realms": [],
+    "parent-experiment": [
+        "none"
+    ],
+    "start": -999,
+    "start-date": "none",
+    "tier": 0,
+    "@context": "_context_",
+    "type": [
+        "wcrp:experiment",
+        "cmip7"
+    ]
 }
