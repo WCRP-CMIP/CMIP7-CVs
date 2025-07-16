@@ -39,6 +39,10 @@
   },
   "@graph": [
     {
+      "id": "activity-list",
+      "validation-key": "",
+      "ui-label": "",
+      "description": "",
       "activity": [
         "aerchemmip",
         "c4mip",
@@ -53,7 +57,6 @@
         "rfmip",
         "scenariomip"
       ],
-      "id": "activity-list",
       "type": [
         "wcrp:project",
         "cmip7",
@@ -61,6 +64,10 @@
       ]
     },
     {
+      "id": "drs-list",
+      "validation-key": "",
+      "ui-label": "",
+      "description": "",
       "drs": {
         "directory-path-example": "",
         "directory-path-sub-experiment-example": "C",
@@ -69,7 +76,6 @@
         "filename-sub-experiment-example": "",
         "filename-template": ""
       },
-      "id": "drs-list",
       "type": [
         "wcrp:project",
         "cmip7",
@@ -78,6 +84,9 @@
     },
     {
       "id": "index-list",
+      "validation-key": "",
+      "ui-label": "",
+      "description": "",
       "index": {
         "conventions": [
           "^CF-1.7 CMIP-6.[0-2,5]\\( UGRID-1.0\\)\\{0,\\}$"
@@ -106,6 +115,9 @@
     },
     {
       "id": "license-list",
+      "validation-key": "",
+      "ui-label": "",
+      "description": "",
       "license": [
         {
           "id": "cc-by-4.0",
@@ -120,6 +132,9 @@
     },
     {
       "id": "mip-era-list",
+      "validation-key": "",
+      "ui-label": "",
+      "description": "",
       "mip_era": {
         "id": "cmip7"
       },
@@ -131,6 +146,9 @@
     },
     {
       "id": "nominal-resolution-list",
+      "validation-key": "",
+      "ui-label": "",
+      "description": "",
       "nominal_resolution": [
         "0.5km",
         "1km",
@@ -156,6 +174,9 @@
     },
     {
       "id": "product-list",
+      "validation-key": "",
+      "ui-label": "",
+      "description": "",
       "product": {
         "id": "model-output"
       },
@@ -167,6 +188,9 @@
     },
     {
       "id": "repo-list",
+      "validation-key": "",
+      "ui-label": "",
+      "description": "",
       "repo": "https://github.com/WCRP-CMIP/CMIP6Plus_CVs",
       "type": [
         "wcrp:project",
@@ -176,6 +200,9 @@
     },
     {
       "id": "required-global-attributes-list",
+      "validation-key": "",
+      "ui-label": "",
+      "description": "",
       "required_global_attributes": [],
       "type": [
         "cmip7",
@@ -186,6 +213,9 @@
     },
     {
       "id": "tables-list",
+      "validation-key": "",
+      "ui-label": "",
+      "description": "",
       "tables": [],
       "type": [
         "wcrp:project",
@@ -195,6 +225,9 @@
     },
     {
       "id": "tracking-id-list",
+      "validation-key": "",
+      "ui-label": "",
+      "description": "",
       "tracking_id": [
         ""
       ],
