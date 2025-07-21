@@ -14,9 +14,6 @@
     "parent-experiment": {
       "@type": "@id"
     },
-    "sub-experiment": {
-      "@type": "@id"
-    },
     "activity": {
       "@type": "@id",
       "@context": "https://wcrp-cmip.github.io/WCRP-universe/activity/_context_"
@@ -109,7 +106,6 @@
         "piControl"
       ],
       "start-date": "none",
-      "sub-experiment": "none",
       "tier": "1",
       "type": [
         "wcrp:experiment",
@@ -682,7 +678,6 @@
         "none"
       ],
       "start-date": "2026",
-      "sub-experiment": "none",
       "tier": "1",
       "type": [
         "wcrp:experiment",
@@ -725,7 +720,6 @@
         "esm-flat10"
       ],
       "start-date": "none",
-      "sub-experiment": "none",
       "tier": "1",
       "type": [
         "wcrp:experiment",
@@ -924,7 +918,6 @@
         "esm-hist"
       ],
       "start-date": "2022",
-      "sub-experiment": "none",
       "tier": "1",
       "type": [
         "wcrp:experiment",
@@ -959,7 +952,6 @@
         "esm-hist"
       ],
       "start-date": "none",
-      "sub-experiment": "none",
       "tier": "1",
       "type": [
         "wcrp:experiment",
@@ -1197,7 +1189,6 @@
         "esm-hist"
       ],
       "start-date": "none",
-      "sub-experiment": "none",
       "tier": "1",
       "type": [
         "wcrp:experiment",
@@ -1232,7 +1223,6 @@
         "esm-hist"
       ],
       "start-date": "2022",
-      "sub-experiment": "none",
       "tier": "1",
       "type": [
         "wcrp:experiment",
@@ -1363,7 +1353,6 @@
         "esm-up2p0"
       ],
       "start-date": "none",
-      "sub-experiment": "none",
       "tier": "1",
       "type": [
         "wcrp:experiment",
@@ -1402,7 +1391,6 @@
         "esm-piControl"
       ],
       "start-date": "none",
-      "sub-experiment": "none",
       "tier": "1",
       "type": [
         "wcrp:experiment",
@@ -1464,7 +1452,6 @@
         "none"
       ],
       "start-date": "1950-01-01",
-      "sub-experiment": "none",
       "tier": "2",
       "type": [
         "wcrp:experiment",
@@ -1541,7 +1528,6 @@
         "none"
       ],
       "start-date": "2003-01-01",
-      "sub-experiment": "none",
       "tier": "3",
       "type": [
         "wcrp:experiment",
@@ -1780,7 +1766,6 @@
         "historical"
       ],
       "start-date": "1901-01-01",
-      "sub-experiment": "none",
       "tier": "2",
       "type": [
         "wcrp:experiment",
@@ -1845,7 +1830,6 @@
         "esm-piControl"
       ],
       "start-date": "1850-01-01",
-      "sub-experiment": "none",
       "tier": "2",
       "type": [
         "wcrp:experiment",
@@ -1880,7 +1864,6 @@
         "historical"
       ],
       "start-date": "1901-01-01",
-      "sub-experiment": "none",
       "tier": "2",
       "type": [
         "wcrp:experiment",
@@ -1915,7 +1898,6 @@
         "piControl"
       ],
       "start-date": "1850",
-      "sub-experiment": "_No response_",
       "tier": "1",
       "type": [
         "wcrp:experiment",
@@ -1950,7 +1932,6 @@
         "historical"
       ],
       "start-date": "none",
-      "sub-experiment": "none",
       "tier": "1",
       "type": [
         "wcrp:experiment",
@@ -2067,7 +2048,6 @@
         "none"
       ],
       "start-date": "1850",
-      "sub-experiment": "none",
       "tier": "1",
       "type": [
         "wcrp:experiment",
@@ -2406,7 +2386,6 @@
         "piClim-control"
       ],
       "start-date": "none",
-      "sub-experiment": "none",
       "tier": "1",
       "type": [
         "wcrp:experiment",
@@ -2815,7 +2794,6 @@
         "piClim-control"
       ],
       "start-date": "none",
-      "sub-experiment": "none",
       "tier": "2",
       "type": [
         "wcrp:experiment",
@@ -2947,7 +2925,6 @@
         "historical"
       ],
       "start-date": "2022",
-      "sub-experiment": "none",
       "tier": "1",
       "type": [
         "wcrp:experiment",
@@ -2982,7 +2959,6 @@
         "historical"
       ],
       "start-date": "2022",
-      "sub-experiment": "none",
       "tier": "1",
       "type": [
         "wcrp:experiment",
@@ -3220,7 +3196,6 @@
         "historical"
       ],
       "start-date": "none",
-      "sub-experiment": "none",
       "tier": "1",
       "type": [
         "wcrp:experiment",
@@ -3255,7 +3230,6 @@
         "historical"
       ],
       "start-date": "2022",
-      "sub-experiment": "none",
       "tier": "1",
       "type": [
         "wcrp:experiment",
