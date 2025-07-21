@@ -1,0 +1,35 @@
+{
+    "id": "scen7-vlhoc-aq",
+    "validation-key": "scen7-vlhoc-AQ",
+    "ui-label": "Future scenario scen7-vlho with high aerosol and tropospheric non-methane ozone precursor emissions",
+    "description": "1. Detailed experiment configuration Future scenario scen7-vlhoc with higher aerosol and tropospheric non-methane ozone precursor emissions  2. Required model settings We encourage modelling centres to include as much atmospheric composition capability as possible. But, as a minimum, models should have tropospheric chemistry and interactive aerosols. And the experimental setup should be consistent with other scenario experiments.  3. Experiment conditions  4. Links to relevant references Fiedler et al. (in prep.) AerChemMIP2 - Unraveling the role of reactive gases, aerosols, and land use for air quality and climate change in CMIP7  5. Similarities to CMIP6 experiments none  6. Forcing differences from parent experiment Increased aerosol and ozone precursor emissions compared to parent.",
+    "activity": [
+        "aerchemmip"
+    ],
+    "alias": [],
+    "minimum-number-of-years": "104",
+    "model-realms": [
+        {
+            "id": "aer",
+            "is-required": true
+        },
+        {
+            "id": "aogcm",
+            "is-required": true
+        },
+        {
+            "id": "chem",
+            "is-required": true
+        }
+    ],
+    "parent-experiment": [
+        "historical"
+    ],
+    "start-date": "2022",
+    "tier": "1",
+    "@context": "_context_",
+    "type": [
+        "wcrp:experiment",
+        "cmip7"
+    ]
+}

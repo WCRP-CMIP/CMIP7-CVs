@@ -1,0 +1,24 @@
+{
+    "id": "esm-scen7-ml",
+    "validation-key": "esm-scen7-ml",
+    "ui-label": "Medium-Low Scenario",
+    "description": "Scenario with delayed increase in mitigation effort, insufficient to meet Paris Agreement objectives",
+    "activity": [
+        "scenariomip"
+    ],
+    "alias": [],
+    "end": 2100,
+    "min-number-yrs-per-sim": 79,
+    "model-realms": [],
+    "parent-experiment": [
+        "esm-hist"
+    ],
+    "start": 2022,
+    "start-date": "none",
+    "tier": 0,
+    "@context": "_context_",
+    "type": [
+        "wcrp:experiment",
+        "cmip7"
+    ]
+}

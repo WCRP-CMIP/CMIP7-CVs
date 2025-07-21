@@ -1,0 +1,39 @@
+{
+    "id": "hist-nofire",
+    "validation-key": "hist-noFire",
+    "ui-label": "no fires occur globally",
+    "description": "This experiment is similar to the esm-hist experiment in DECK, but it features no fire globally throughout the historical period and is initialized from a no-fire spin-up.",
+    "activity": [
+        "firemip"
+    ],
+    "alias": [],
+    "minimum-number-of-years": "172",
+    "model-realms": [
+        {
+            "id": "aogcm",
+            "is-required": true
+        },
+        {
+            "id": "bgc",
+            "is-required": true
+        },
+        {
+            "id": "aer",
+            "is-required": true
+        },
+        {
+            "id": "chem",
+            "is-required": false
+        }
+    ],
+    "parent-experiment": [
+        "esm-piControl"
+    ],
+    "start-date": "1850-01-01",
+    "tier": "2",
+    "@context": "_context_",
+    "type": [
+        "wcrp:experiment",
+        "cmip7"
+    ]
+}

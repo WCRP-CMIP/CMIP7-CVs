@@ -1,0 +1,41 @@
+{
+    "id": "esm-hist",
+    "validation-key": "esm-hist",
+    "ui-label": "Simulation of the recent past (emissions driven)",
+    "description": "DECK: Earth System Model historical simulation \n Historical simulation with Earth System Models",
+    "activity": [
+        "cmip"
+    ],
+    "alias": [],
+    "end": 2021,
+    "min-number-yrs-per-sim": 172,
+    "model-realms": [
+        {
+            "id": "aogcm",
+            "is-required": true
+        },
+        {
+            "id": "bgc",
+            "is-required": true
+        },
+        {
+            "id": "aer",
+            "is-required": false
+        },
+        {
+            "id": "chem",
+            "is-required": false
+        }
+    ],
+    "parent-experiment": [
+        "esm-picontrol"
+    ],
+    "start": 1850,
+    "start-date": "none",
+    "tier": 0,
+    "@context": "_context_",
+    "type": [
+        "wcrp:experiment",
+        "cmip7"
+    ]
+}

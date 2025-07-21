@@ -1,0 +1,31 @@
+{
+    "id": "scen7-vlhoc-aer",
+    "validation-key": "scen7-vlhoc-Aer",
+    "ui-label": "Future scenario scen7-vlhoc with high aerosol emissions",
+    "description": "1. Detailed experiment configuration Future scenario scen7-vlhoc with higher aerosol emissions  2 . Required model settings We encourage modelling centres to include as much atmospheric composition capability as possible. As a minimum, models should have prescribed or interactive aerosols. And the experimental setup should be consistent with other scenario experiments.  3. Experiment conditions  4. Links to relevant references Fiedler et al. (in prep.) AerChemMIP2 - Unraveling the role of reactive gases, aerosols, and land use for air quality and climate change in CMIP7  5. Similarities to CMIP6 experiments None  6. Forcing differences from parent experiment Increased aerosol emissions compared to parent.",
+    "activity": [
+        "aerchemmip"
+    ],
+    "alias": [],
+    "minimum-number-of-years": "104",
+    "model-realms": [
+        {
+            "id": "aer",
+            "is-required": true
+        },
+        {
+            "id": "aogcm",
+            "is-required": true
+        }
+    ],
+    "parent-experiment": [
+        "historical"
+    ],
+    "start-date": "none",
+    "tier": "1",
+    "@context": "_context_",
+    "type": [
+        "wcrp:experiment",
+        "cmip7"
+    ]
+}

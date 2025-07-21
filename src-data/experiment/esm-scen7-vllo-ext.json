@@ -1,0 +1,24 @@
+{
+    "id": "esm-scen7-vllo-ext",
+    "validation-key": "esm-scen7-vllo-ext",
+    "ui-label": "Very Low Scenario with Limited Overshoot Extension",
+    "description": "Extension to scenario consistent with limiting warming to 1.5 degree C by 2100 AD with limited overshoot (as low as plausible) of 1.5 degree C",
+    "activity": [
+        "scenariomip"
+    ],
+    "alias": [],
+    "end": 2500,
+    "min-number-yrs-per-sim": 50,
+    "model-realms": [],
+    "parent-experiment": [
+        "esm-scen7-vllo"
+    ],
+    "start": 2101,
+    "start-date": "none",
+    "tier": 0,
+    "@context": "_context_",
+    "type": [
+        "wcrp:experiment",
+        "cmip7"
+    ]
+}

@@ -1,0 +1,14 @@
+{
+    "id": "required-global-attributes-list",
+    "validation-key": "",
+    "ui-label": "",
+    "description": "",
+    "required_global_attributes": [],
+    "@context": "_context_",
+    "type": [
+        "cmip7",
+        "wcrp:project",
+        "wcrp:required",
+        "wcrp:required_global_attributes"
+    ]
+}

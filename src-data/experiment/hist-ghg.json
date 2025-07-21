@@ -1,0 +1,27 @@
+{
+    "id": "hist-ghg",
+    "validation-key": "hist-GHG",
+    "ui-label": "Historical simulation with time evolving greenhouse gas forcing only and all other forcings at pre-industrial levels.",
+    "description": "1.  As the historical simulation but with only the greenhouse gas forcing following that of historical out to 2021 (and the medium scenario from 2022 to 2035) and all other forcings held at pre-industrial levels. 2. As the historical simulation but with alterations to the forcings. 3. 1850 to 2035 coupled simulations with greenhouse gas forcing from the historical followed by medium scenario and all other forcings held fixed at pre-industrial control values.  Stratospheric and tropospheric ozone should be held constant at piControl levels. 4.  https://doi.org/10.5194/egusphere-2024-4086 5. Similar to hist-GHG from CMIP6 but sratospheric and tropospheric ozone should be held fixed. 6. Time evolving greenhouse gases from historical and then medium scenario and other forcings as in the piControl.",
+    "activity": [
+        "damip"
+    ],
+    "alias": [],
+    "minimum-number-of-years": "186",
+    "model-realms": [
+        {
+            "id": "aogcm",
+            "is-required": true
+        }
+    ],
+    "parent-experiment": [
+        "picontrol"
+    ],
+    "start-date": "1850-01-01",
+    "tier": "1",
+    "@context": "_context_",
+    "type": [
+        "wcrp:experiment",
+        "cmip7"
+    ]
+}

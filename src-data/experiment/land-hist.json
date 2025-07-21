@@ -1,0 +1,31 @@
+{
+    "id": "land-hist",
+    "validation-key": "land-hist",
+    "ui-label": "Historical land-only simulation",
+    "description": "This is a land-only historical simulation from 1850 to 2022.  The land model configuration should be identical to that used in the DECK and CMIP7 coupled historical simulation.  The forcing dataset to be used is [CRUJRA](https://catalogue.ceda.ac.uk/uuid/863a47a6d8414b6982e1396c69a9efe8/), which is also used in the TRENDY project for the Global Carbon Project.  The experimental design is the same as for CMIP6 and is fully described in Section 3.1 of Van den Hurk et al. (2016).  Van den Hurk, B., H. Kim, G. Krinner, S.I. Seneviratne, C. Derksen, T. Oki, H. Douville, J. Colin, A. Ducharne, F. Cheruy, M. Puma, Y. Wada, W. Li, B. Jia, A. Alessandri, D. Lawrence, G.P. Weedon, R. Ellis, S. Hagemann, J. Mao, M.G. Flanner, M. Zampieri, and R. Law, 2016. The Land Surface, Snow and Soil moisture Model Intercomparison Project - aims, setup, and expected outcome. GMD, 9, doi.org/10.5194/gmd-9-2809-2016.",
+    "activity": [
+        "lmip"
+    ],
+    "alias": [],
+    "minimum-number-of-years": "172",
+    "model-realms": [
+        {
+            "id": "land",
+            "is-required": true
+        },
+        {
+            "id": "bgc",
+            "is-required": false
+        }
+    ],
+    "parent-experiment": [
+        "none"
+    ],
+    "start-date": "1850",
+    "tier": "1",
+    "@context": "_context_",
+    "type": [
+        "wcrp:experiment",
+        "cmip7"
+    ]
+}

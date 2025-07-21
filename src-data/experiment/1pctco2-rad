@@ -1,0 +1,43 @@
+{
+    "id": "1pctco2-rad",
+    "validation-key": "1pctCO2-rad",
+    "ui-label": "radiatively-coupled version of 1 percent per year increasing CO2 experiment",
+    "description": "1pctCO2-rad is retained from CMIP6.  It is a simulation which branches from piControl with a 1% per year increase in CO2 concentration from pre-industrial levels, with the CO2 “radiatively-coupled”. This means that only the model’s radiation code responds to the increase in CO2, whereas the model’s carbon cycle components (both land and ocean) use a constant, preindustrial concentration of CO2.  The 1pctCO2 DECK simulation is required for comparison. This experiment is designed to isolate carbon-concentration and carbon climate elements of the global carbon feedbacks. It will also enable calibration of climate emulators.  See Jones et al 2016: https://gmd.copernicus.org/articles/9/2853/2016/ , especially section 3.2.3 Example of use/analysis is Arora et al. 2020: https://bg.copernicus.org/articles/17/4173/2020/",
+    "activity": [
+        "c4mip"
+    ],
+    "alias": [],
+    "minimum-number-of-years": "150",
+    "model-realms": [
+        {
+            "id": "aogcm",
+            "is-required": true
+        },
+        {
+            "id": "bgc",
+            "is-required": true
+        },
+        {
+            "id": "aer",
+            "is-required": false
+        },
+        {
+            "id": "chem",
+            "is-required": false
+        },
+        {
+            "id": "ism",
+            "is-required": false
+        }
+    ],
+    "parent-experiment": [
+        "piControl"
+    ],
+    "start-date": "none",
+    "tier": "1",
+    "@context": "_context_",
+    "type": [
+        "wcrp:experiment",
+        "cmip7"
+    ]
+}
