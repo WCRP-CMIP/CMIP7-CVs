@@ -120,6 +120,7 @@ def run(issue, packet):
         "tier": issue['priority-tier'],
         "model-realms": realms,
         "start-date": issue['start-date'],
+        "alias": [],
         "minimum-number-of-years": issue['(minimum)-number-of-years'],
     }
 
