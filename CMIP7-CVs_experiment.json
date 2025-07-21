@@ -1,12 +1,12 @@
 {
     "Header": {
         "file": "CMIP7-CVs_experiment.json",
-        "file_creation_date": "2025-07-16T23:24:15.870352",
+        "file_creation_date": "2025-07-21T10:58:33.463836",
         "version": "fatal: No names found, cannot describe anything.",
-        "checksum": "md5: 30cff24ef936de071cd09f89a53f1685",
+        "checksum": "md5: ed01bb551c88b41e9abd7617c1583e35",
         "repo_url": "https://github.com/WCRP-CMIP/CMIP7-CVs",
         "repo_prefix": "cmip7",
-        "last_commit": "1ce080ca50b7ae270b26f55a84bcbc249c147292",
+        "last_commit": "0a2ccbac2d65baeb6aebf5c24b8eeafb897b6ab8",
         "comment": "This is an automatically generated file. Do not edit."
     },
     "experiment": {
@@ -3369,7 +3369,6 @@
                 ],
                 "parent-experiment": "cmip7:experiment/esm-piControl",
                 "start-date": "none",
-                "sub-experiment": "cmip7:experiment/none",
                 "tier": "1",
                 "ui-label": "Ramp up with constant CO2 emissions leading to 2 degree C/century warming",
                 "validation-key": "esm-up2p0"
