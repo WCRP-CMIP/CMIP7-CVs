@@ -26,7 +26,6 @@
         "esm-hist"
     ],
     "start-date": "none",
-    "sub-experiment": "none",
     "tier": "1",
     "@context": "_context_",
     "type": [

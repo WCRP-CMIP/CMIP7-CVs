@@ -26,7 +26,6 @@
         "historical"
     ],
     "start-date": "1901-01-01",
-    "sub-experiment": "none",
     "tier": "2",
     "@context": "_context_",
     "type": [
