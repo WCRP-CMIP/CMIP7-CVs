@@ -1,12 +1,9 @@
 {
   "@context": [
     {
-      "@base": "https://wcrp-cmip.github.io/CMIP7-CVs/experiment/",
-      "@vocab": "https://wcrp-cmip.github.io/CMIP7-CVs/experiment/",
-      "parent-experiment": {
-        "@type": "@id"
-      },
-     
+      "@base": "https://wcrp-cmip.github.io/CMIP7-CVs/",
+      "@vocab": "https://wcrp-cmip.github.io/CMIP7-CVs/"
+    }
   ],
   "@embed": "@always",
   "@type": [
