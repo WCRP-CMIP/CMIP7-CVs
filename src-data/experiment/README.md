@@ -26,9 +26,7 @@
 ## 🔗 External Links and Dependencies
 
 
-### Context-based External Mappings
-
-*Based on @context analysis*
+### Contexts for External Mappings
 
 - **`activity`** → `@type: @id`
   - Context: [https://wcrp-cmip.github.io/WCRP-universe/activity/\_context\_](https://wcrp-cmip.github.io/WCRP-universe/activity/_context_)
@@ -43,15 +41,6 @@
   - Source: `WCRP-universe/activity/_context_`
 
 
-### Repository Breakdown
-
-- **Organisation:** `WCRP-universe`
-  - **Repository:** `activity`
-
-- **Organisation:** `WCRP-universe`
-  - **Repository:** `source-type`
-
-
 </section>
 
 <section id="depends">
@@ -62,12 +51,11 @@
 **experiment** depends on **2 external vocabularies**  
 **Path:** `universal:activity → universal:source-type`
 
-
-### Detailed Dependencies
 The following external vocabularies are required to fully describe the data:
 
-- [**universal**](https://wcrp-cmip.github.io/WCRP-universe/): [activity](https://wcrp-cmip.github.io/WCRP-universe/activity/)
-- [**universal**](https://wcrp-cmip.github.io/WCRP-universe/): [source-type](https://wcrp-cmip.github.io/WCRP-universe/source-type/)
+
+- `activity` → universal:activity [link](https://wcrp-cmip.github.io/WCRP-universe/activity/)
+- `source-type` → universal:source-type [link](https://wcrp-cmip.github.io/WCRP-universe/source-type/)
 
 </section>
 
@@ -116,8 +104,15 @@ The following external vocabularies are required to fully describe the data:
 ## Usage
 
 ### Online Viewer 
+#### Direct
 To view a file in a browser use the content link with `.json` appended. 
 eg. https://github.com/wcrp-cmip/CMIP7-CVs//tree/main/src-data/experiment/1pctco2-bgc.json
+
+#### cmipld.js
+[Warning: this is still in development]
+
+https://wcrp-cmip.github.io/CMIPLD/viewer/index.html?uri=cmip7%253Aexperiment/1pctco2-bgc
+
 
 ### Getting a File
 
