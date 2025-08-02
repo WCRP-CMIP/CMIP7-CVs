@@ -33,8 +33,8 @@
 The following external vocabularies are required to fully describe the data:
 
 
-- `activity` → universal:activity [link](https://wcrp-cmip.github.io/WCRP-universe/activity/)
-- `source-type` → universal:source-type [link](https://wcrp-cmip.github.io/WCRP-universe/source-type/)
+- `activity → universal:activity` [link](https://wcrp-cmip.github.io/WCRP-universe/activity/)
+- `source-type → universal:source-type` [link](https://wcrp-cmip.github.io/WCRP-universe/source-type/)
 
 
 ### Contexts of External Mappings
