@@ -58,37 +58,37 @@ The following external vocabularies are required to fully describe the data:
 ## Content Schema
 
 - **`id`** (**str**) 
-  __No description in pydantic model (see esgvoc)__
+  _No description in pydantic model (see esgvoc)_
 - **`description`** (**str**) 
-  __No description in pydantic model (see esgvoc)__
+  _No description in pydantic model (see esgvoc)_
 - **`activity`** (**list**) 
-  __No description in pydantic model (see esgvoc)__
+  _No description in pydantic model (see esgvoc)_
 - **`additional_allowed_model_components`** (**list**) 
-  __No description in pydantic model (see esgvoc)__
+  _No description in pydantic model (see esgvoc)_
 - **`drs_name`** (**str**) 
-  __No description in pydantic model (see esgvoc)__
+  _No description in pydantic model (see esgvoc)_
 - **`end_year`** (**int | None**) 
-  __No description in pydantic model (see esgvoc)__
+  _No description in pydantic model (see esgvoc)_
 - **`experiment`** (**str**) 
-  __No description in pydantic model (see esgvoc)__
+  _No description in pydantic model (see esgvoc)_
 - **`experiment_id`** (**str**) 
-  __No description in pydantic model (see esgvoc)__
+  _No description in pydantic model (see esgvoc)_
 - **`min_number_yrs_per_sim`** (**int | None**) 
-  __No description in pydantic model (see esgvoc)__
+  _No description in pydantic model (see esgvoc)_
 - **`parent_activity_id`** (**list[str] | None**) 
-  __No description in pydantic model (see esgvoc)__
+  _No description in pydantic model (see esgvoc)_
 - **`parent_experiment_id`** (**list[str] | None**) 
-  __No description in pydantic model (see esgvoc)__
+  _No description in pydantic model (see esgvoc)_
 - **`required_model_components`** (**list[str] | None**) 
-  __No description in pydantic model (see esgvoc)__
+  _No description in pydantic model (see esgvoc)_
 - **`start_year`** (**int | None**) 
-  __No description in pydantic model (see esgvoc)__
+  _No description in pydantic model (see esgvoc)_
 - **`sub_experiment_id`** (**list[str] | None**) 
-  __No description in pydantic model (see esgvoc)__
+  _No description in pydantic model (see esgvoc)_
 - **`tier`** (**int | None**) 
-  __No description in pydantic model (see esgvoc)__
+  _No description in pydantic model (see esgvoc)_
 - **`type`** (**str**) 
-  __No description in pydantic model (see esgvoc)__
+  _No description in pydantic model (see esgvoc)_
 
 
 </section>   
