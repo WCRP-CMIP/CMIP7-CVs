@@ -26,7 +26,7 @@ The experiments CV defines the set of standardized climate model experiments, sp
 ## 🔗 Links and Dependencies
 
 
-## External Dependencies
+### External Dependencies
 **experiment** depends on **2 external vocabularies**  
 **Path:** `universal:activity → universal:source-type`
 
