@@ -58,37 +58,37 @@ The following external vocabularies are required to fully describe the data:
 ## Content Schema
 
 - **`id`** (**str**) 
-  __ No description in pydantic model (see esgvoc) __
+  __No description in pydantic model (see esgvoc)__
 - **`description`** (**str**) 
-  __ No description in pydantic model (see esgvoc) __
+  __No description in pydantic model (see esgvoc)__
 - **`activity`** (**list**) 
-  __ No description in pydantic model (see esgvoc) __
+  __No description in pydantic model (see esgvoc)__
 - **`additional_allowed_model_components`** (**list**) 
-  __ No description in pydantic model (see esgvoc) __
+  __No description in pydantic model (see esgvoc)__
 - **`drs_name`** (**str**) 
-  __ No description in pydantic model (see esgvoc) __
+  __No description in pydantic model (see esgvoc)__
 - **`end_year`** (**int | None**) 
-  __ No description in pydantic model (see esgvoc) __
+  __No description in pydantic model (see esgvoc)__
 - **`experiment`** (**str**) 
-  __ No description in pydantic model (see esgvoc) __
+  __No description in pydantic model (see esgvoc)__
 - **`experiment_id`** (**str**) 
-  __ No description in pydantic model (see esgvoc) __
+  __No description in pydantic model (see esgvoc)__
 - **`min_number_yrs_per_sim`** (**int | None**) 
-  __ No description in pydantic model (see esgvoc) __
+  __No description in pydantic model (see esgvoc)__
 - **`parent_activity_id`** (**list[str] | None**) 
-  __ No description in pydantic model (see esgvoc) __
+  __No description in pydantic model (see esgvoc)__
 - **`parent_experiment_id`** (**list[str] | None**) 
-  __ No description in pydantic model (see esgvoc) __
+  __No description in pydantic model (see esgvoc)__
 - **`required_model_components`** (**list[str] | None**) 
-  __ No description in pydantic model (see esgvoc) __
+  __No description in pydantic model (see esgvoc)__
 - **`start_year`** (**int | None**) 
-  __ No description in pydantic model (see esgvoc) __
+  __No description in pydantic model (see esgvoc)__
 - **`sub_experiment_id`** (**list[str] | None**) 
-  __ No description in pydantic model (see esgvoc) __
+  __No description in pydantic model (see esgvoc)__
 - **`tier`** (**int | None**) 
-  __ No description in pydantic model (see esgvoc) __
+  __No description in pydantic model (see esgvoc)__
 - **`type`** (**str**) 
-  __ No description in pydantic model (see esgvoc) __
+  __No description in pydantic model (see esgvoc)__
 
 
 </section>   
