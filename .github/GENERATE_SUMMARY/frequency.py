@@ -1,29 +1,17 @@
 import cmipld
-from cmipld.utils.ldparse import *
-from cmipld.utils.checksum import version
-import os 
+from cmipld.utils.ldparse import name_entry
 
 me = __file__.split('/')[-1].replace('.py','')
+print(me)
 
-def run(io,whoami,path,name,**kwargs):
+def run(io, whoami, path, name, **kwargs):
+    
+    
+    print(cmipld.jsonld.expand(f"{io}/project/{me}-list.json"))
+    
+    data = cmipld.get(f"{io}/project/{me}-list.json", depth=2)[me]
+    print(data)
 
-    qurl = f'{io}/project/graph.jsonld'
-    
-    data = cmipld.get(qurl,depth=2)["@graph"]
-  
-    # Find the frequency-list entry in the graph
-    frequency_entry = None
-    for item in data:
-        if item.get('id') == 'frequency-list':
-            frequency_entry = item
-            break
-    
-    if not frequency_entry:
-        print('frequency-list not found in project data')
-        return None
-    
-    summary = name_entry(frequency_entry)
-    
-    location = f'{path}/{name}_{me}.json'
-    
-    return location,me,summary
+    if not data: return None
+    return f"{path}/{name}_{me}.json", me, data
+# name_entry(data)

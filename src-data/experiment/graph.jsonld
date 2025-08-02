@@ -2,6 +2,14 @@
   "@context": {
   "@base": "https://wcrp-cmip.github.io/CMIP7-CVs/experiment/",
   "@vocab": "https://wcrp-cmip.github.io/CMIP7-CVs/experiment/",
+  "entries": "@none",
+  "id": "@id",
+  "type": "@type",
+  "cf": "https://wcrp-cmip.github.io/CF/",
+  "cmip6plus": "https://wcrp-cmip.github.io/CMIP6Plus_CVs/",
+  "cmip7": "https://wcrp-cmip.github.io/CMIP7-CVs/",
+  "universal": "https://wcrp-cmip.github.io/WCRP-universe/",
+  "vr": "https://wcrp-cmip.github.io/Variable-Registry/",
   "parent-experiment": {
     "@type": "@id"
   },
@@ -288,7 +296,7 @@
   "ui-label": "Idealised experiments for CMIP-comparable metrics - abrupt 4xCO2 starting form the end of spinup-1950",
   "description": "A coupled experiment with abrupt 4xCO2 forcing, starting from the end of the spinup-1950 simulation, enforces an instantaneous 4xCO2 increase  References: Roberts, M. J., Reed, K. A., Bao, Q., Barsugli, J. J., Camargo, S. J., Caron, L. P., … & Zhao, M. (2025). High-Resolution Model Intercomparison Project Phase 2 (HighResMIP2) towards CMIP7. Geoscientific Model Development, 18, 1307–1332  [High-Resolution Model Intercomparison Project Phase 2 (HighResMIP2) towards CMIP7.pdf](https://github.com/user-attachments/files/19402163/High-Resolution.Model.Intercomparison.Project.Phase.2.HighResMIP2.towards.CMIP7.pdf)  Webpage: https://highresmip.org/experiments/experiment_cmip7/",
   "activity": [
-    "highresmip2"
+    "highresmip"
   ],
   "alias": [],
   "minimum-number-of-years": "30",
@@ -601,7 +609,7 @@
   "ui-label": "Coupled control-1950",
   "description": "Start from the end of the spinup-1950 simulation, using constant 1950s forcings. Simulate for at least 100 years, ideally 150 years.  References: Roberts, M. J., Reed, K. A., Bao, Q., Barsugli, J. J., Camargo, S. J., Caron, L. P., … & Zhao, M. (2025). High-Resolution Model Intercomparison Project Phase 2 (HighResMIP2) towards CMIP7. Geoscientific Model Development, 18, 1307–1332 [High-Resolution Model Intercomparison Project Phase 2 (HighResMIP2) towards CMIP7.pdf](https://github.com/user-attachments/files/19393590/High-Resolution.Model.Intercomparison.Project.Phase.2.HighResMIP2.towards.CMIP7.pdf) Webpage: https://highresmip.org/experiments/experiment_cmip7/",
   "activity": [
-    "highresmip2"
+    "highresmip"
   ],
   "alias": [],
   "minimum-number-of-years": "100",
@@ -1417,7 +1425,7 @@
   "ui-label": "Coupled future medium scenario",
   "description": "HighResMIP2 Tier 2: highres-future-scen7-mc  Conduct coupled future projection simulations (present-2100) initialized from the end of the hist-1950 simulation, using scenario forcing. scen7-mc is the CMIP7 scenario (medium is recommended)  For further details, please refer to: Roberts, M. J., Reed, K. A., Bao, Q., Barsugli, J. J., Camargo, S. J., Caron, L. P., … & Zhao, M. (2025). High-Resolution Model Intercomparison Project phase 2 (HighResMIP2) towards CMIP7. Geoscientific Model Development, 18, 1307–1332  [High-Resolution Model Intercomparison Project Phase 2 (HighResMIP2) towards CMIP7.pdf](https://github.com/user-attachments/files/19401230/High-Resolution.Model.Intercomparison.Project.Phase.2.HighResMIP2.towards.CMIP7.pdf)  Webpage: https://highresmip.org/experiments/experiment_cmip7/",
   "activity": [
-    "HighResMIP2"
+    "highresmip"
   ],
   "alias": [],
   "minimum-number-of-years": "78",
@@ -1455,7 +1463,7 @@
   "ui-label": "HighResMIP2",
   "description": "A one-year, atmosphere-only historical experiment with prescribed SSTs and sea ice (likely 2020 to link with DYAMOND2), designed to link with other communities. The preferred period is 1 March 2020–28 February 2021.  References: Roberts, M. J., Reed, K. A., Bao, Q., Barsugli, J. J., Camargo, S. J., Caron, L. P., … & Zhao, M. (2025). High-Resolution Model Intercomparison Project Phase 2 (HighResMIP2) towards CMIP7. Geoscientific Model Development, 18, 1307–1332  [High-Resolution Model Intercomparison Project Phase 2 (HighResMIP2) towards CMIP7.pdf](https://github.com/user-attachments/files/19402345/High-Resolution.Model.Intercomparison.Project.Phase.2.HighResMIP2.towards.CMIP7.pdf)  Webpage: https://highresmip.org/experiments/experiment_cmip7/",
   "activity": [
-    "highresmip2"
+    "highresmip"
   ],
   "alias": [],
   "minimum-number-of-years": "1",
@@ -1531,7 +1539,7 @@
   "ui-label": "Atmosphere-only warming levels - highresSST-p4K-pat (patterned)",
   "description": "Conduct forced atmosphere simulations at patterned warming level +4K over 2003–2022, parallel to highresSST-present, with patterned SST and sea ice changes. (Three ensembles are desired per warming level)  References: Roberts, M. J., Reed, K. A., Bao, Q., Barsugli, J. J., Camargo, S. J., Caron, L. P., … & Zhao, M. (2025). High-Resolution Model Intercomparison Project Phase 2 (HighResMIP2) towards CMIP7. Geoscientific Model Development, 18, 1307–1332  [High-Resolution Model Intercomparison Project Phase 2 (HighResMIP2) towards CMIP7.pdf](https://github.com/user-attachments/files/19402345/High-Resolution.Model.Intercomparison.Project.Phase.2.HighResMIP2.towards.CMIP7.pdf)  Webpage: https://highresmip.org/experiments/experiment_cmip7/",
   "activity": [
-    "highresmip2"
+    "highresmip"
   ],
   "alias": [],
   "minimum-number-of-years": "20",
@@ -1569,7 +1577,7 @@
   "ui-label": "Atmosphere-only 1-year experiment (add uniform +4K to SSTs)",
   "description": "A one-year, atmosphere-only experiment with prescribed SSTs and sea ice, including a uniform **+4K SST perturbation**  The preferred period is 1 March 2020–28 February 2021.  References: Roberts, M. J., Reed, K. A., Bao, Q., Barsugli, J. J., Camargo, S. J., Caron, L. P., … & Zhao, M. (2025). High-Resolution Model Intercomparison Project Phase 2 (HighResMIP2) towards CMIP7. Geoscientific Model Development, 18, 1307–1332  [High-Resolution Model Intercomparison Project Phase 2 (HighResMIP2) towards CMIP7.pdf](https://github.com/user-attachments/files/19402610/High-Resolution.Model.Intercomparison.Project.Phase.2.HighResMIP2.towards.CMIP7.pdf)  Webpage: https://highresmip.org/experiments/experiment_cmip7/",
   "activity": [
-    "highresmip2"
+    "highresmip"
   ],
   "alias": [],
   "minimum-number-of-years": "1",
@@ -1607,7 +1615,7 @@
   "ui-label": "AMIP historic",
   "description": "1. Experiment Configuration Conduct an atmosphere-only simulation similar to CMIP AMIP for the period 1980–2022 using high-resolution daily forcing  2. Model Settings Initial Conditions: Use ERA5 for atmosphere and land initial conditions on 1 January 1980. Spinup: Treat 1980–1981 as land surface spinup. Analyze 1982–2022. Forcing Interpolation: Interpolate daily mean fields (no diurnal cycle) to the model grid.  3. Forcing Data Use 0.05° ESA CCI SST v3.0 and OSI SAF sea ice concentration instead of the 1/4° HadISST.2.2.0 dataset.  4. Key Differences from CMIP6 HighResMIP SST Forcing: Upgraded to 0.05° ESA CCI SST. Land Spinup: 2 years recommended; alternative methods allowed if documented.  For details, see: Roberts et al. (2025). High-Resolution Model Intercomparison Project phase 2 (HighResMIP2) towards CMIP7. Geoscientific Model Development, 18, 1307–1332",
   "activity": [
-    "highresmip2"
+    "highresmip"
   ],
   "alias": [],
   "minimum-number-of-years": "43",
@@ -1645,7 +1653,7 @@
   "ui-label": "Coupled hist-1950",
   "description": "Starting from the end of the spinup-1950 simulation, Use time-varying forcings from CMIP7 or CMIP6  For further details, please refer to: Roberts, M. J., Reed, K. A., Bao, Q., Barsugli, J. J., Camargo, S. J., Caron, L. P., … & Zhao, M. (2025). High-Resolution Model Intercomparison Project phase 2 (HighResMIP2) towards CMIP7. Geoscientific Model Development, 18, 1307–1332  [High-Resolution Model Intercomparison Project Phase 2 (HighResMIP2) towards CMIP7.pdf](https://github.com/user-attachments/files/19400815/High-Resolution.Model.Intercomparison.Project.Phase.2.HighResMIP2.towards.CMIP7.pdf)  Webpage: https://highresmip.org/experiments/experiment_cmip7/",
   "activity": [
-    "highresmip2"
+    "highresmip"
   ],
   "alias": [],
   "minimum-number-of-years": "73",
@@ -3325,7 +3333,7 @@
   "ui-label": "Coupled control spinup-1950",
   "description": "This experiment is designed to provide a multidecadal spinup for coupled model simulations. Its final output will serve as initial conditions for the control-1950, hist-1950, and highres-4xCO2 scenarios. The setup follows the same design as HighResMIP1, typically run for 50 years starting from the initial conditions.  For solar and ozone forcing, we suggest using an 11-year climatology centered on 1950 to average the solar cycle. For greenhouse gases (GHG), concentrations can be set to 1950 values as defined in CMIP. A 10-year mean around 1950 (e.g., 1946–1955 or 1950–1959) is recommended for aerosols and volcanic forcing.  For further details, please refer to: Roberts et al. (2025). High-Resolution Model Intercomparison Project phase 2 (HighResMIP2) towards CMIP7. Geoscientific Model Development, 18, 1307–1332.",
   "activity": [
-    "highresmip2"
+    "highresmip"
   ],
   "alias": [],
   "minimum-number-of-years": "50",

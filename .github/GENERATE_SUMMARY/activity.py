@@ -1,29 +1,10 @@
 import cmipld
-from cmipld.utils.ldparse import *
-from cmipld.utils.checksum import version
-import os 
+from cmipld.utils.ldparse import name_entry
 
 me = __file__.split('/')[-1].replace('.py','')
 
-def run(io,whoami,path,name,**kwargs):
+def run(io, whoami, path, name, **kwargs):
+    data = cmipld.get(f"{io}/project/{me}-list.json", depth=1).get(me)
 
-    qurl = f'{io}/project/graph.jsonld'
-    
-    data = cmipld.get(qurl,depth=2)["@graph"]
-  
-    # Find the activity-list entry in the graph
-    activity_entry = None
-    for item in data:
-        if item.get('id') == 'activity-list':
-            activity_entry = item
-            break
-    
-    if not activity_entry:
-        print('activity-list not found in project data')
-        return None
-    
-    summary = name_entry(activity_entry)
-    
-    location = f'{path}/{name}_{me}.json'
-    
-    return location,me,summary
+    if not data: return None
+    return f"{path}/{name}_{me}.json", me, name_entry(data)

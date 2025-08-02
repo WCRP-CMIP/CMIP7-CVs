@@ -1,24 +1,12 @@
 import cmipld
-from cmipld.utils.ldparse import *
-from cmipld.utils.checksum import version
+from cmipld.utils.ldparse import name_extract, key_extract, name_entry
 
 me = __file__.split('/')[-1].replace('.py','')
 
-def run(whoami,path,name,io,**kwargs):
-
-    url = f'{io}experiment/graph.jsonld'
-    ctx = f'{io}experiment/_context_'
+def run(io, whoami, path, name, **kwargs):
+    data = cmipld.get(f"{io}/experiment/graph.jsonld", depth=1)["@graph"]
+    full = name_extract(data)
+    # summary = {k: key_extract(v, ['ui-label', 'description']) for k, v in full.items()}
+    summary = name_entry(data, 'ui-label')
     
-    frame = {"@context": ctx, "@type": "wcrp:experiment"}
-    
-    data = cmipld.jsonld.frame(url,frame)["@graph"]
-    
-    summary = name_extract(data)
-    
-    summary = {k:key_extract(v,['long-label','description']) for k,v in summary.items()}
-    
-    location = f'{path}/{name}_{me}.json'
-    # summary = version(summary, me, location.split("/")[-1])
-    # cmipld.utils.io.wjsn(summary,location)
-    
-    return location,me,summary
+    return f"{path}/{name}_{me}.json", me, summary

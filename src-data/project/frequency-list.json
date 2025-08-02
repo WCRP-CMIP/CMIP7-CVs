@@ -1,8 +1,8 @@
 {
     "id": "frequency-list",
-    "validation-key": "",
-    "ui-label": "",
-    "description": "",
+    "validation-key": "cmip7-frequency",
+    "ui-label": "CMIP7 Permissable Frequencies",
+    "description": "The complete list of frequencies used in CMIP7",
     "frequency": [
         "1hr",
         "1hrcm",
