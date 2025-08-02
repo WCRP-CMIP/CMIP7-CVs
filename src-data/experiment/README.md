@@ -2,7 +2,7 @@
 
 <section id="description">
 
-# Experiment  (universal)
+# Experiment  (cmip7)
 
 ## Description
 
@@ -37,9 +37,7 @@ The following external vocabularies are required to fully describe the data:
 - `source-type` → universal:source-type [link](https://wcrp-cmip.github.io/WCRP-universe/source-type/)
 
 
-### Context-based External Mappings
-
-*Based on @context analysis*
+### Contexts of External Mappings
 
 - **`activity`** → `@type: @id`
   - Context: [https://wcrp-cmip.github.io/WCRP-universe/activity/\_context\_](https://wcrp-cmip.github.io/WCRP-universe/activity/_context_)
@@ -61,37 +59,37 @@ The following external vocabularies are required to fully describe the data:
 ## Content Schema
 
 - **`id`** (**str**) 
-  << No description in pydantic model (see esgvoc) >>
+  __ No description in pydantic model (see esgvoc) __
 - **`description`** (**str**) 
-  << No description in pydantic model (see esgvoc) >>
+  __ No description in pydantic model (see esgvoc) __
 - **`activity`** (**list**) 
-  << No description in pydantic model (see esgvoc) >>
+  __ No description in pydantic model (see esgvoc) __
 - **`additional_allowed_model_components`** (**list**) 
-  << No description in pydantic model (see esgvoc) >>
+  __ No description in pydantic model (see esgvoc) __
 - **`drs_name`** (**str**) 
-  << No description in pydantic model (see esgvoc) >>
+  __ No description in pydantic model (see esgvoc) __
 - **`end_year`** (**int | None**) 
-  << No description in pydantic model (see esgvoc) >>
+  __ No description in pydantic model (see esgvoc) __
 - **`experiment`** (**str**) 
-  << No description in pydantic model (see esgvoc) >>
+  __ No description in pydantic model (see esgvoc) __
 - **`experiment_id`** (**str**) 
-  << No description in pydantic model (see esgvoc) >>
+  __ No description in pydantic model (see esgvoc) __
 - **`min_number_yrs_per_sim`** (**int | None**) 
-  << No description in pydantic model (see esgvoc) >>
+  __ No description in pydantic model (see esgvoc) __
 - **`parent_activity_id`** (**list[str] | None**) 
-  << No description in pydantic model (see esgvoc) >>
+  __ No description in pydantic model (see esgvoc) __
 - **`parent_experiment_id`** (**list[str] | None**) 
-  << No description in pydantic model (see esgvoc) >>
+  __ No description in pydantic model (see esgvoc) __
 - **`required_model_components`** (**list[str] | None**) 
-  << No description in pydantic model (see esgvoc) >>
+  __ No description in pydantic model (see esgvoc) __
 - **`start_year`** (**int | None**) 
-  << No description in pydantic model (see esgvoc) >>
+  __ No description in pydantic model (see esgvoc) __
 - **`sub_experiment_id`** (**list[str] | None**) 
-  << No description in pydantic model (see esgvoc) >>
+  __ No description in pydantic model (see esgvoc) __
 - **`tier`** (**int | None**) 
-  << No description in pydantic model (see esgvoc) >>
+  __ No description in pydantic model (see esgvoc) __
 - **`type`** (**str**) 
-  << No description in pydantic model (see esgvoc) >>
+  __ No description in pydantic model (see esgvoc) __
 
 
 </section>   
@@ -102,12 +100,12 @@ The following external vocabularies are required to fully describe the data:
 
 ### Online Viewer 
 #### Direct
-To view a file in a browser use the content link with `.json` appended. 
-eg. https://github.com/wcrp-cmip/CMIP7-CVs//tree/main/src-data/experiment/1pctco2-bgc.json
+To view a file in a browser use the content link with `.json` appended.
 
-#### cmipld.js
-[Warning: this is still in development]
+For example: `https://github.com/wcrp-cmip/CMIP7-CVs//tree/main/src-data/experiment/1pctco2-bgc.json`
 
+
+#### Use cmipld.js [in development]
 https://wcrp-cmip.github.io/CMIPLD/viewer/index.html?uri=cmip7%253Aexperiment/1pctco2-bgc
 
 
