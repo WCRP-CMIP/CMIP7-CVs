@@ -62,7 +62,7 @@ body:
         description: |
             The MIP / activity owning the experiment
             
-            Please select a parent from the list below. 
+            Please select a parent from the list below. Note: phases are not considered separate activies.
         options:
             - "Custom Activity: specify below"
             - AerChemMIP
@@ -75,6 +75,7 @@ body:
             - PMIP
             - RFMIP
             - ScenarioMIP
+            - HighResMIP
         
     validations:
         required: true

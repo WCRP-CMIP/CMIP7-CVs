@@ -11,18 +11,18 @@ def run(io,whoami,path,name,**kwargs):
     
     data = cmipld.get(qurl,depth=2)["@graph"]
   
-    # Find the activity-list entry in the graph
-    activity_entry = None
+    # Find the required-global-attributes-list entry in the graph
+    attributes_entry = None
     for item in data:
-        if item.get('id') == 'activity-list':
-            activity_entry = item
+        if item.get('id') == 'required-global-attributes-list':
+            attributes_entry = item
             break
     
-    if not activity_entry:
-        print('activity-list not found in project data')
+    if not attributes_entry:
+        print('required-global-attributes-list not found in project data')
         return None
     
-    summary = name_entry(activity_entry)
+    summary = name_entry(attributes_entry)
     
     location = f'{path}/{name}_{me}.json'
     

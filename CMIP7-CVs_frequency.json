@@ -1,0 +1,94 @@
+{
+    "Header": {
+        "file": "CMIP7-CVs_frequency.json",
+        "file_creation_date": "2025-08-02T00:00:00.000000",
+        "version": "1.0.0",
+        "checksum": "md5: generated",
+        "repo_url": "https://github.com/WCRP-CMIP/CMIP7-CVs",
+        "repo_prefix": "cmip7",
+        "last_commit": "generated",
+        "comment": "This is an automatically generated file. Do not edit."
+    },
+    "frequency": {
+        "1hr": {
+            "validation-key": "1hr",
+            "ui-label": "1 Hourly Frequency",
+            "description": "sampled hourly"
+        },
+        "1hrcm": {
+            "validation-key": "1hrCM",
+            "ui-label": "1 Hour Climatology Monthly",
+            "description": "monthly-mean diurnal cycle resolving each day into 1-hour means"
+        },
+        "1hrpt": {
+            "validation-key": "1hrPt",
+            "ui-label": "1 Hour Point",
+            "description": "sampled hourly, at specified time point within an hour"
+        },
+        "3hr": {
+            "validation-key": "3hr",
+            "ui-label": "3 Hourly Frequency",
+            "description": "3 hourly mean samples"
+        },
+        "3hrpt": {
+            "validation-key": "3hrPt",
+            "ui-label": "3 Hour Point",
+            "description": "sampled 3 hourly, at specified time point within the time period"
+        },
+        "6hr": {
+            "validation-key": "6hr",
+            "ui-label": "6 Hourly Frequency",
+            "description": "6 hourly mean samples"
+        },
+        "6hrpt": {
+            "validation-key": "6hrPt",
+            "ui-label": "6 Hour Point",
+            "description": "sampled 6 hourly, at specified time point within the time period"
+        },
+        "day": {
+            "validation-key": "day",
+            "ui-label": "Daily Frequency",
+            "description": "daily mean samples"
+        },
+        "dec": {
+            "validation-key": "dec",
+            "ui-label": "Decadal Frequency",
+            "description": "decadal mean samples"
+        },
+        "fx": {
+            "validation-key": "fx",
+            "ui-label": "Fixed Frequency",
+            "description": "fixed (time invariant) field"
+        },
+        "mon": {
+            "validation-key": "mon",
+            "ui-label": "Monthly Frequency",
+            "description": "monthly mean samples"
+        },
+        "monc": {
+            "validation-key": "monC",
+            "ui-label": "Monthly Climatology",
+            "description": "monthly climatology computed from monthly mean samples"
+        },
+        "monpt": {
+            "validation-key": "monPt",
+            "ui-label": "Monthly Point",
+            "description": "sampled monthly, at specified time point within the time period"
+        },
+        "subhrpt": {
+            "validation-key": "subhrPt",
+            "ui-label": "Sub-Hourly Point",
+            "description": "sampled sub-hourly, at specified time point within an hour"
+        },
+        "yr": {
+            "validation-key": "yr",
+            "ui-label": "Yearly Frequency",
+            "description": "annual mean samples"
+        },
+        "yrpt": {
+            "validation-key": "yrPt",
+            "ui-label": "Yearly Point",
+            "description": "sampled yearly, at specified time point within the time period"
+        }
+    }
+}

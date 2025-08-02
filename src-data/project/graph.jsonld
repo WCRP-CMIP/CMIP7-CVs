@@ -35,6 +35,10 @@
     "tables": {
       "@type": "@id",
       "@context": "https://wcrp-cmip.github.io/MIP-variables/tables/_context_"
+    },
+    "frequency": {
+      "@type": "@id",
+      "@context": "https://wcrp-cmip.github.io/WCRP-universe/frequency/_context_"
     }
   },
   "@graph": [
@@ -221,6 +225,35 @@
         "wcrp:project",
         "cmip7",
         "wcrp:tables"
+      ]
+    },
+    {
+      "id": "frequency-list",
+      "validation-key": "",
+      "ui-label": "",
+      "description": "",
+      "frequency": [
+        "1hr",
+        "1hrcm",
+        "1hrpt",
+        "3hr",
+        "3hrpt",
+        "6hr",
+        "6hrpt",
+        "day",
+        "dec",
+        "fx",
+        "mon",
+        "monc",
+        "monpt",
+        "subhrpt",
+        "yr",
+        "yrpt"
+      ],
+      "type": [
+        "wcrp:project",
+        "cmip7",
+        "wcrp:frequency"
       ]
     },
     {
