@@ -3,7 +3,7 @@
     "validation-key": "",
     "ui-label": "",
     "description": "",
-    "nominal_resolution": [
+    "nominal-resolution": [
         "0.5km",
         "1km",
         "10km",
