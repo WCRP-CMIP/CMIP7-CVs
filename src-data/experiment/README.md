@@ -37,9 +37,7 @@ The following external vocabularies are required to fully describe the data:
 - `source-type` → universal:source-type [link](https://wcrp-cmip.github.io/WCRP-universe/source-type/)
 
 
-### Context-based External Mappings
-
-*Based on @context analysis*
+### Contexts of External Mappings
 
 - **`activity`** → `@type: @id`
   - Context: [https://wcrp-cmip.github.io/WCRP-universe/activity/\_context\_](https://wcrp-cmip.github.io/WCRP-universe/activity/_context_)
@@ -107,7 +105,7 @@ To view a file in a browser use the content link with `.json` appended.
 For example: `https://github.com/wcrp-cmip/CMIP7-CVs//tree/main/src-data/experiment/1pctco2-bgc.json`
 
 #### Use cmipld.js [in development]
-https://wcrp-cmip.github.io/CMIPLD/viewer/index.html?uri=cmip7%253Aexperiment/1pctco2-bgc
+[View self resolving files here](https://wcrp-cmip.github.io/CMIPLD/viewer/index.html?uri=cmip7%253Aexperiment/1pctco2-bgc)
 
 ### Getting a File
 
