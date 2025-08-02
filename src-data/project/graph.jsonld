@@ -8,33 +8,33 @@
     "cf": "https://wcrp-cmip.github.io/CF/",
     "cmip6plus": "https://wcrp-cmip.github.io/CMIP6Plus_CVs/",
     "cmip7": "https://wcrp-cmip.github.io/CMIP7-CVs/",
-    "obs4mips": "https://wolfiex.github.io/obs4MIPs-cmor-tables-ld/",
     "universal": "https://wcrp-cmip.github.io/WCRP-universe/",
-    "variables": "https://wcrp-cmip.github.io/MIP-variables/",
+    "vr": "https://wcrp-cmip.github.io/Variable-Registry/",
     "activity": {
       "@type": "@id",
       "@context": "https://wcrp-cmip.github.io/WCRP-universe/activity/_context_"
+    },
+    "frequency": {
+      "@type": "@id",
+      "@container": "@list",
+      "@context": "https://wcrp-cmip.github.io/WCRP-universe/frequency/_context_"
     },
     "license": {
       "@type": "@id",
       "@container": "@set",
       "@context": "https://wcrp-cmip.github.io/WCRP-universe/license/_context_"
     },
-    "mip_era": {
+    "mip-era": {
       "@type": "@id",
       "@context": "https://wcrp-cmip.github.io/WCRP-universe/mip/_context_"
     },
-    "native_nominal_resolution": {
+    "native-nominal-resolution": {
       "@type": "@id",
       "@context": "https://wcrp-cmip.github.io/WCRP-universe/resolution/_context_"
     },
     "product": {
       "@type": "@id",
       "@context": "https://wcrp-cmip.github.io/WCRP-universe/product/_context_"
-    },
-    "tables": {
-      "@type": "@id",
-      "@context": "https://wcrp-cmip.github.io/MIP-variables/tables/_context_"
     }
   },
   "@graph": [
@@ -80,6 +80,35 @@
         "wcrp:project",
         "cmip7",
         "wcrp:drs"
+      ]
+    },
+    {
+      "id": "frequency-list",
+      "validation-key": "cmip7-frequency",
+      "ui-label": "CMIP7 Permissable Frequencies",
+      "description": "The complete list of frequencies used in CMIP7",
+      "frequency": [
+        "1hr",
+        "1hrcm",
+        "1hrpt",
+        "3hr",
+        "3hrpt",
+        "6hr",
+        "6hrpt",
+        "day",
+        "dec",
+        "fx",
+        "mon",
+        "monc",
+        "monpt",
+        "subhrpt",
+        "yr",
+        "yrpt"
+      ],
+      "type": [
+        "wcrp:project",
+        "cmip7",
+        "wcrp:frequency"
       ]
     },
     {
@@ -149,7 +178,7 @@
       "validation-key": "",
       "ui-label": "",
       "description": "",
-      "nominal_resolution": [
+      "nominal-resolution": [
         "0.5km",
         "1km",
         "10km",
