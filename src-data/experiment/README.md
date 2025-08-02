@@ -5,7 +5,7 @@
 # Experiment  (cmip7)
 
 ## Description
-
+The experiments CV defines the set of standardized climate model experiments, specifying what each experiment is intended to explore—such as historical trends, future scenarios, or idealized conditions—so that results from different models can be meaningfully compared and combined.
 
 </section>
 
