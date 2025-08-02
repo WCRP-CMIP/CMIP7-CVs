@@ -23,10 +23,23 @@
 </section>
 <section id="links">
 
-## 🔗 External Links and Dependencies
+## 🔗 Links and Dependencies
 
 
-### Contexts for External Mappings
+## External Dependencies
+**experiment** depends on **2 external vocabularies**  
+**Path:** `universal:activity → universal:source-type`
+
+The following external vocabularies are required to fully describe the data:
+
+
+- `activity` → universal:activity [link](https://wcrp-cmip.github.io/WCRP-universe/activity/)
+- `source-type` → universal:source-type [link](https://wcrp-cmip.github.io/WCRP-universe/source-type/)
+
+
+### Context-based External Mappings
+
+*Based on @context analysis*
 
 - **`activity`** → `@type: @id`
   - Context: [https://wcrp-cmip.github.io/WCRP-universe/activity/\_context\_](https://wcrp-cmip.github.io/WCRP-universe/activity/_context_)
@@ -40,22 +53,6 @@
   - Context: [https://wcrp-cmip.github.io/WCRP-universe/activity/\_context\_](https://wcrp-cmip.github.io/WCRP-universe/activity/_context_)
   - Source: `WCRP-universe/activity/_context_`
 
-
-</section>
-
-<section id="depends">
-
-## External Dependencies
-
-### 🧭 Dependency Navigation
-**experiment** depends on **2 external vocabularies**  
-**Path:** `universal:activity → universal:source-type`
-
-The following external vocabularies are required to fully describe the data:
-
-
-- `activity` → universal:activity [link](https://wcrp-cmip.github.io/WCRP-universe/activity/)
-- `source-type` → universal:source-type [link](https://wcrp-cmip.github.io/WCRP-universe/source-type/)
 
 </section>
 
