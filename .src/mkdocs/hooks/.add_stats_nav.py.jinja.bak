@@ -1,0 +1,33 @@
+"""
+Hook to add repository statistics to navigation if enabled.
+This runs after the main navigation is generated.
+"""
+
+def on_nav(nav, config, files):
+    """Add stats page to navigation if generate_repo_stats is enabled."""
+    
+    # Check if stats generation is enabled (this would be set in mkdocs.yml or environment)
+    if config.get('extra', {}).get('generate_repo_stats', True):
+        # Check if stats/index.md exists
+        stats_file = None
+        for file in files:
+            if file.src_path == 'stats/index.md':
+                stats_file = file
+                break
+        
+        if stats_file:
+            # Add Repository Statistics as a top-level item
+            from mkdocs.structure.nav import Section, Link
+            
+            # Create a link to the stats page
+            stats_link = Link("Repository Statistics", stats_file)
+            
+            # Add it to the navigation
+            if hasattr(nav, 'pages'):
+                nav.pages.append(stats_link)
+            elif isinstance(nav, list):
+                nav.append(stats_link)
+            
+            print("✅ Added Repository Statistics to navigation")
+    
+    return nav

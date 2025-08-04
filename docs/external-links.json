@@ -1,0 +1,39 @@
+{
+  "external_links": [
+    {
+      "title": "CMIP Panel",
+      "url": "https://www.wcrp-climate.org/wgcm-cmip",
+      "category": null
+    },
+    {
+      "title": "CMIP Data Request", 
+      "url": "https://clipc-services.ceda.ac.uk/dreq/index.html",
+      "category": "CMIP Resources"
+    },
+    {
+      "title": "CMIP Documentation",
+      "url": "https://pcmdi.llnl.gov/CMIP6/",
+      "category": "CMIP Resources"
+    },
+    {
+      "title": "ESGF Data Portal",
+      "url": "https://esgf-node.llnl.gov/search/cmip6/",
+      "category": "Data Portals"
+    },
+    {
+      "title": "CEDA Archive",
+      "url": "https://archive.ceda.ac.uk/",
+      "category": "Data Portals"
+    },
+    {
+      "title": "CF Conventions",
+      "url": "https://cfconventions.org/",
+      "category": "Standards"
+    },
+    {
+      "title": "GitHub Repository",
+      "url": "https://github.com/WCRP-CMIP/CMIP7-CVs",
+      "category": "Development"
+    }
+  ]
+}
