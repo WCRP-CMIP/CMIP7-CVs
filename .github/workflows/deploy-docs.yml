@@ -1,0 +1,61 @@
+name: Deploy Documentation on Production or Docs Update
+
+on:
+  push:
+    branches: [ production ]
+  push:
+    branches: [ main ]
+    paths:
+      - 'docs/**'
+      - '.src/mkdocs/**'
+  workflow_dispatch:
+    inputs:
+      force_deploy:
+        description: 'Force deployment even if no changes'
+        required: false
+        default: false
+        type: boolean
+
+jobs:
+  deploy-docs:
+    runs-on: ubuntu-latest
+    
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0  # Fetch full history for git worktree
+
+      - name: Determine deployment strategy
+        id: strategy
+        run: |
+          if [ "${{ github.ref_name }}" == "production" ]; then
+            echo "strategy=production-branch" >> $GITHUB_OUTPUT
+            echo "📦 Triggered by push to production branch"
+          elif [ "${{ github.ref_name }}" == "main" ]; then
+            echo "strategy=docs-update" >> $GITHUB_OUTPUT
+            echo "📁 Triggered by docs folder update on main branch"
+          else
+            echo "strategy=manual" >> $GITHUB_OUTPUT
+            echo "🖱️ Manual deployment trigger"
+          fi
+
+      - name: Build and Deploy MkDocs to Production
+        uses: WCRP-CMIP/CMIP7-CVs/actions/mkdocs@main
+        with:
+          source_branch: ${{ github.ref_name }}
+          target_branch: 'production'
+          config_file: '.src/mkdocs/mkdocs.yml'
+          docs_dir: 'docs'
+
+      - name: Deployment notification
+        run: |
+          echo "## 🚀 Documentation Deployment" >> $GITHUB_STEP_SUMMARY
+          echo "- **Trigger**: ${{ steps.strategy.outputs.strategy }}" >> $GITHUB_STEP_SUMMARY
+          echo "- **Source branch**: \`${{ github.ref_name }}\`" >> $GITHUB_STEP_SUMMARY
+          echo "- **Target branch**: \`production\`" >> $GITHUB_STEP_SUMMARY
+          echo "- **Status**: ✅ Deployment completed" >> $GITHUB_STEP_SUMMARY
+          echo "" >> $GITHUB_STEP_SUMMARY
+          echo "### 🌐 Access Documentation" >> $GITHUB_STEP_SUMMARY
+          echo "- **GitHub Pages**: Available at your configured Pages URL" >> $GITHUB_STEP_SUMMARY
+          echo "- **Production branch**: Check \`production\` branch for deployed files" >> $GITHUB_STEP_SUMMARY

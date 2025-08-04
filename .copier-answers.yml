@@ -1,0 +1,17 @@
+_src_path: /Users/daniel.ellis/WIPwork/CMIP-LD/copier/mkdocs
+_commit: HEAD
+_timestamp: '2025-08-04T23:31:10.793224'
+_auto_generated: true
+_script_version: '2.1'
+project_name: CMIP7 CVs Documentation
+repo_name: CMIP7-CVs
+author_name: Daniel Ellis
+author_email: daniel.ellis@ext.esa.int
+github_username: WCRP-CMIP
+site_url: https://WCRP-CMIP.github.io/CMIP7-CVs/
+repo_url: https://github.com/WCRP-CMIP/CMIP7-CVs
+json_data_folder: json_data
+description: Documentation for CMIP7 CVs
+header_color: blue-grey
+generate_static_files: true
+static_files_folder: static_output
