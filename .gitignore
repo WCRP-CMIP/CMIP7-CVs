@@ -144,6 +144,10 @@ venv.bak/
 # mkdocs documentation
 /site
 
+# MkDocs build output
+.src/mkdocs/site/
+.src/mkdocs/build/
+
 # mypy
 .mypy_cache/
 .dmypy.json

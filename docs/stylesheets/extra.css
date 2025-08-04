@@ -285,32 +285,80 @@
   border-color: var(--md-primary-fg-color--light);
 }
 
-/* Fullscreen functionality */
-.fullscreen-wrapper {
-  position: relative;
-  display: inline-block;
-  width: 100%;
+/* Minimize/Maximize functionality - UNIVERSAL BUTTONS ON ALL PAGES */
+.minimize-maximize-btn {
+  position: absolute !important;
+  top: 0.5rem !important;
+  right: 0.5rem !important;
+  background: var(--md-primary-fg-color, #1976d2) !important;
+  color: white !important;
+  border: none !important;
+  border-radius: 0.25rem !important;
+  width: 2rem !important;
+  height: 2rem !important;
+  font-size: 1rem !important;
+  cursor: pointer !important;
+  z-index: 100 !important;
+  transition: all 0.2s ease !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2) !important;
 }
 
-.fullscreen-btn {
-  position: absolute;
-  top: 0.5rem;
-  right: 0.5rem;
-  background: var(--md-primary-fg-color);
-  color: white;
-  border: none;
-  border-radius: 0.25rem;
-  width: 2rem;
-  height: 2rem;
-  font-size: 1rem;
-  cursor: pointer;
-  z-index: 10;
-  transition: all 0.2s ease;
+/* Page maximize button - make it more prominent */
+.minimize-maximize-btn.page-maximize-btn {
+  top: 1rem !important;
+  right: 1rem !important;
+  width: 2.5rem !important;
+  height: 2.5rem !important;
+  z-index: 200 !important;
+  background: var(--md-primary-fg-color, #1976d2) !important;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3) !important;
 }
 
-.fullscreen-btn:hover {
-  background: var(--md-primary-fg-color--dark);
-  transform: scale(1.1);
+/* Header maximize button positioning */
+.minimize-maximize-btn.header-maximize-btn {
+  top: 0.25rem !important;
+  right: 0.25rem !important;
+  width: 1.8rem !important;
+  height: 1.8rem !important;
+  z-index: 1100 !important;
+}
+
+/* Sidebar maximize button positioning */
+.minimize-maximize-btn.sidebar-maximize-btn {
+  top: 0.5rem !important;
+  right: 0.5rem !important;
+  z-index: 300 !important;
+}
+
+/* Table maximize buttons */
+.minimize-maximize-btn.table-maximize-btn {
+  z-index: 50 !important;
+}
+
+.minimize-maximize-btn:hover {
+  background: var(--md-primary-fg-color--dark, #1565c0) !important;
+  transform: scale(1.1) !important;
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.4) !important;
+}
+
+.minimize-maximize-btn svg {
+  width: 16px !important;
+  height: 16px !important;
+  fill: currentColor !important;
+}
+
+/* Ensure elements with buttons have relative positioning */
+.md-content,
+.md-header,
+.md-sidebar--primary,
+table,
+.network-container,
+.treemap-container,
+.interactive-demo {
+  position: relative !important;
 }
 
 .fullscreen-active {
@@ -382,7 +430,7 @@
   font-size: 0.9rem;
 }
 
-.fullscreen-active .fullscreen-btn {
+.fullscreen-active .minimize-maximize-btn {
   position: fixed;
   top: 1rem;
   right: 1rem;
@@ -441,8 +489,8 @@
   margin: 1rem 0;
 }
 
-/* Floating expand icon */
-.floating-expand-btn {
+/* Floating minimize/maximize button */
+.floating-minimize-maximize-btn {
   position: fixed;
   bottom: 20px;
   right: 20px;
@@ -462,24 +510,34 @@
   justify-content: center;
 }
 
-.floating-expand-btn:hover {
+.floating-minimize-maximize-btn:hover {
   background: var(--md-primary-fg-color--dark);
   transform: scale(1.1);
   box-shadow: 0 6px 20px rgba(0, 0, 0, 0.4);
 }
 
-.floating-expand-btn:active {
+.floating-minimize-maximize-btn:active {
   transform: scale(0.95);
 }
 
+.floating-minimize-maximize-btn svg {
+  width: 20px;
+  height: 20px;
+  fill: currentColor;
+}
+
 /* Hide floating button in fullscreen mode */
-.fullscreen-mode .floating-expand-btn {
-  display: none !important;
+.fullscreen-mode .floating-minimize-maximize-btn {
+  opacity: 0.8;
+}
+
+.fullscreen-mode .floating-minimize-maximize-btn:hover {
+  opacity: 1;
 }
 
 /* Hide floating button on mobile to avoid interfering with nav */
 @media screen and (max-width: 768px) {
-  .floating-expand-btn {
+  .floating-minimize-maximize-btn {
     display: none;
   }
 }
@@ -503,7 +561,8 @@
     color: var(--md-default-fg-color--light);
   }
   
-  .fullscreen-btn,
+  .minimize-maximize-btn,
+  .floating-minimize-maximize-btn,
   .table-controls {
     display: none !important;
   }

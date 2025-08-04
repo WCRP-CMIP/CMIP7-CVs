@@ -1,11 +1,25 @@
 /**
  * Embed.js - Fullscreen and interactive functionality for MkDocs
+ * 
+ * USAGE:
+ * 1. Add ?embed=true to any page URL for embed mode
+ * 2. Add ?fullscreen=true for fullscreen mode
+ * 3. Click fullscreen buttons on tables/content
+ * 4. Use F11 or ESC keyboard shortcuts
+ * 
+ * EXAMPLES:
+ * - https://example.github.io/repo/?embed=true
+ * - https://example.github.io/repo/page/?fullscreen=true
  */
 
 document.addEventListener('DOMContentLoaded', function() {
+    console.log('Embed.js v2 loaded and initializing...');
+    
     // Check for embed parameter in URL
     const urlParams = new URLSearchParams(window.location.search);
     const embedMode = urlParams.get('embed') === 'true' || urlParams.get('fullscreen') === 'true';
+    
+    console.log('Embed mode:', embedMode);
     
     // Add fullscreen functionality to tables and other elements
     addFullscreenButtons();
@@ -26,6 +40,8 @@ document.addEventListener('DOMContentLoaded', function() {
  * Auto-enter embed mode for the main content area
  */
 function autoEnterEmbedMode() {
+    console.log('Activating auto embed mode...');
+    
     // Target the .md-content area specifically for embed mode
     let targetElement = document.querySelector('.md-content');
     
@@ -46,7 +62,7 @@ function autoEnterEmbedMode() {
             // Add fullscreen button
             const button = document.createElement('button');
             button.className = 'fullscreen-btn';
-            button.innerHTML = '⛷';
+            button.innerHTML = '⨂'; // Exit fullscreen symbol
             button.title = 'Exit Fullscreen (ESC)';
             button.addEventListener('click', () => toggleFullscreen(wrapper));
             wrapper.appendChild(button);
@@ -73,11 +89,13 @@ function addFullscreenButtons() {
     // Target tables and other elements that should have fullscreen capability
     const targets = document.querySelectorAll('table, .network-container, .treemap-container, .interactive-demo');
     
+    console.log('Adding fullscreen buttons to', targets.length, 'elements');
+    
     targets.forEach(element => {
         // Create fullscreen button
         const button = document.createElement('button');
         button.className = 'fullscreen-btn';
-        button.innerHTML = '⛶';
+        button.innerHTML = '⤢'; // Using Unicode fullscreen symbol
         button.title = 'Toggle Fullscreen (F11)';
         button.setAttribute('aria-label', 'Toggle fullscreen');
         
@@ -113,13 +131,14 @@ function toggleFullscreen(element) {
  * Enter fullscreen mode
  */
 function enterFullscreen(element) {
+    console.log('Entering fullscreen mode');
     element.classList.add('fullscreen-active');
     document.body.classList.add('fullscreen-mode');
     
     // Update button text
     const button = element.querySelector('.fullscreen-btn');
     if (button) {
-        button.innerHTML = '⛷';
+        button.innerHTML = '⨂'; // Exit fullscreen symbol
         button.title = 'Exit Fullscreen (ESC)';
     }
     
@@ -132,13 +151,14 @@ function enterFullscreen(element) {
  * Exit fullscreen mode
  */
 function exitFullscreen(element) {
+    console.log('Exiting fullscreen mode');
     element.classList.remove('fullscreen-active');
     document.body.classList.remove('fullscreen-mode');
     
     // Update button text
     const button = element.querySelector('.fullscreen-btn');
     if (button) {
-        button.innerHTML = '⛶';
+        button.innerHTML = '⤢'; // Fullscreen symbol
         button.title = 'Toggle Fullscreen (F11)';
     }
     
@@ -176,7 +196,18 @@ function addKeyboardShortcuts() {
 function enhanceTables() {
     const tables = document.querySelectorAll('table');
     
+    console.log('Enhancing', tables.length, 'tables');
+    
     tables.forEach(table => {
+        // Skip tables inside details elements
+        const parentDetails = table.closest('details');
+        if (parentDetails) {
+            console.log('Skipping table inside details element');
+            makeTableResponsive(table);
+            addTableSorting(table);
+            return;
+        }
+        
         // Add table controls
         addTableControls(table);
         
@@ -321,7 +352,7 @@ function makeFullscreen(selector) {
         if (!wrapper.querySelector('.fullscreen-btn')) {
             const button = document.createElement('button');
             button.className = 'fullscreen-btn';
-            button.innerHTML = '⛶';
+            button.innerHTML = '⤢'; // Fullscreen symbol
             button.title = 'Toggle Fullscreen';
             button.addEventListener('click', () => toggleFullscreen(wrapper));
             wrapper.appendChild(button);

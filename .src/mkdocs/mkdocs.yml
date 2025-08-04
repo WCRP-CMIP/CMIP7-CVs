@@ -48,11 +48,11 @@ plugins:
       offline: true
   - gen-files:
       scripts:
-        - scripts/copy_static_assets.py  # Copy JavaScript and CSS files
-        - scripts/process_src_data_robust.py  # Robust path checking version
-        - scripts/process_json_summaries.py  # Process JSON files for data summaries
+        - hooks/copy_static_assets.py  # Copy JavaScript and CSS files
+        - hooks/process_src_data_robust.py  # Robust path checking version
+        - hooks/process_json_summaries.py  # Process JSON files for data summaries
 
-        - scripts/generate_repo_stats.py  # Generate simple repository statistics
+        - hooks/generate_repo_stats.py  # Generate simple repository statistics
 
   - literate-nav:
       nav_file: SUMMARY.md

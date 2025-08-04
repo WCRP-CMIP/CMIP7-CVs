@@ -1,105 +1,173 @@
 /**
- * Embed.js - Clean embed functionality for MkDocs
+ * Embed.js - Fullscreen and interactive functionality for MkDocs
  */
 
 document.addEventListener('DOMContentLoaded', function() {
-    console.log('Embed.js loaded and initializing...');
-    
     // Check for embed parameter in URL
     const urlParams = new URLSearchParams(window.location.search);
-    const embedMode = urlParams.get('embed') === 'true';
+    const embedMode = urlParams.get('embed') === 'true' || urlParams.get('fullscreen') === 'true';
     
-    console.log('Embed mode:', embedMode);
+    // Add fullscreen functionality to tables and other elements
+    addFullscreenButtons();
+    
+    // Add keyboard shortcuts
+    addKeyboardShortcuts();
     
     // Add table enhancements
     enhanceTables();
     
-    // Add floating expand icon (only on non-embed pages)
-    if (!embedMode) {
-        addFloatingExpandIcon();
-    }
-    
-    // Auto-enter embed mode if parameter is present
+    // Auto-enter fullscreen mode if embed parameter is present
     if (embedMode) {
-        console.log('Activating embed mode...');
-        activateEmbedMode();
+        autoEnterEmbedMode();
     }
 });
 
 /**
- * Add a floating expand icon for easy access to embed mode
+ * Auto-enter embed mode for the main content area
  */
-function addFloatingExpandIcon() {
-    // Create floating button
-    const floatingBtn = document.createElement('button');
-    floatingBtn.className = 'floating-expand-btn';
-    floatingBtn.innerHTML = '⤢'; // Diagonal arrows
-    floatingBtn.title = 'Open in embed view';
-    floatingBtn.setAttribute('aria-label', 'Open in embed view');
+function autoEnterEmbedMode() {
+    // Target the .md-content area specifically for embed mode
+    let targetElement = document.querySelector('.md-content');
     
-    // Add click handler to redirect to embed=true
-    floatingBtn.addEventListener('click', function() {
-        const currentUrl = new URL(window.location.href);
-        // Clear any hash/fragment
-        currentUrl.hash = '';
-        // Add embed parameter
-        currentUrl.searchParams.set('embed', 'true');
-        window.location.href = currentUrl.toString();
-    });
-    
-    // Add to page
-    document.body.appendChild(floatingBtn);
-    
-    console.log('Floating expand icon added');
-}
-
-/**
- * Activate embed mode by applying the CSS class
- */
-function activateEmbedMode() {
-    // Add embed mode class to body
-    document.body.classList.add('embed-mode');
-    
-    // Debug: Log the DOM structure
-    console.log('DOM structure analysis:');
-    console.log('- .md-container:', document.querySelector('.md-container'));
-    console.log('- .md-main:', document.querySelector('.md-main'));
-    console.log('- .md-content:', document.querySelector('.md-content'));
-    console.log('- .md-content__inner:', document.querySelector('.md-content__inner'));
-    console.log('- .md-typeset:', document.querySelector('.md-typeset'));
-    
-    // Check all direct children of .md-main
-    const mdMain = document.querySelector('.md-main');
-    if (mdMain) {
-        console.log('.md-main children:', Array.from(mdMain.children).map(el => el.className));
+    if (!targetElement) {
+        // Fallback to table or other content
+        targetElement = document.querySelector('table, .md-content__inner, .md-typeset, main');
     }
     
-    // Add a simple close button
-    addEmbedCloseButton();
-    
-    console.log('Embed mode activated successfully');
+    if (targetElement) {
+        // Create wrapper if needed
+        let wrapper = targetElement.closest('.fullscreen-wrapper');
+        if (!wrapper) {
+            wrapper = document.createElement('div');
+            wrapper.className = 'fullscreen-wrapper';
+            targetElement.parentNode.insertBefore(wrapper, targetElement);
+            wrapper.appendChild(targetElement);
+            
+            // Add fullscreen button
+            const button = document.createElement('button');
+            button.className = 'fullscreen-btn';
+            button.innerHTML = '⛷';
+            button.title = 'Exit Fullscreen (ESC)';
+            button.addEventListener('click', () => toggleFullscreen(wrapper));
+            wrapper.appendChild(button);
+        }
+        
+        // Enter fullscreen immediately
+        enterFullscreen(wrapper);
+        
+        // Also hide browser chrome if possible (requires user gesture)
+        setTimeout(() => {
+            if (document.documentElement.requestFullscreen) {
+                document.documentElement.requestFullscreen().catch(() => {
+                    // Ignore errors - not all browsers support this or it requires user gesture
+                });
+            }
+        }, 500);
+    }
 }
 
 /**
- * Add a close button to exit embed mode
+ * Add fullscreen buttons to tables and other content
  */
-function addEmbedCloseButton() {
-    const closeBtn = document.createElement('button');
-    closeBtn.className = 'embed-close-btn';
-    closeBtn.innerHTML = '✕';
-    closeBtn.title = 'Exit embed view';
-    closeBtn.setAttribute('aria-label', 'Exit embed view');
+function addFullscreenButtons() {
+    // Target tables and other elements that should have fullscreen capability
+    const targets = document.querySelectorAll('table, .network-container, .treemap-container, .interactive-demo');
     
-    // Add click handler to remove embed parameter
-    closeBtn.addEventListener('click', function() {
-        const url = new URL(window.location);
-        url.searchParams.delete('embed');
-        // Keep any existing hash
-        window.location.href = url.toString();
+    targets.forEach(element => {
+        // Create fullscreen button
+        const button = document.createElement('button');
+        button.className = 'fullscreen-btn';
+        button.innerHTML = '⛶';
+        button.title = 'Toggle Fullscreen (F11)';
+        button.setAttribute('aria-label', 'Toggle fullscreen');
+        
+        // Create wrapper if needed
+        let wrapper = element.parentElement;
+        if (!wrapper.classList.contains('fullscreen-wrapper')) {
+            wrapper = document.createElement('div');
+            wrapper.className = 'fullscreen-wrapper';
+            element.parentNode.insertBefore(wrapper, element);
+            wrapper.appendChild(element);
+        }
+        
+        // Add button to wrapper
+        wrapper.appendChild(button);
+        
+        // Add click handler
+        button.addEventListener('click', () => toggleFullscreen(wrapper));
     });
+}
+
+/**
+ * Toggle fullscreen mode for an element
+ */
+function toggleFullscreen(element) {
+    if (element.classList.contains('fullscreen-active')) {
+        exitFullscreen(element);
+    } else {
+        enterFullscreen(element);
+    }
+}
+
+/**
+ * Enter fullscreen mode
+ */
+function enterFullscreen(element) {
+    element.classList.add('fullscreen-active');
+    document.body.classList.add('fullscreen-mode');
     
-    // Add to page
-    document.body.appendChild(closeBtn);
+    // Update button text
+    const button = element.querySelector('.fullscreen-btn');
+    if (button) {
+        button.innerHTML = '⛷';
+        button.title = 'Exit Fullscreen (ESC)';
+    }
+    
+    // Focus the element for keyboard navigation
+    element.setAttribute('tabindex', '-1');
+    element.focus();
+}
+
+/**
+ * Exit fullscreen mode
+ */
+function exitFullscreen(element) {
+    element.classList.remove('fullscreen-active');
+    document.body.classList.remove('fullscreen-mode');
+    
+    // Update button text
+    const button = element.querySelector('.fullscreen-btn');
+    if (button) {
+        button.innerHTML = '⛶';
+        button.title = 'Toggle Fullscreen (F11)';
+    }
+    
+    element.removeAttribute('tabindex');
+}
+
+/**
+ * Add keyboard shortcuts
+ */
+function addKeyboardShortcuts() {
+    document.addEventListener('keydown', function(e) {
+        // ESC to exit fullscreen
+        if (e.key === 'Escape') {
+            const fullscreenElement = document.querySelector('.fullscreen-active');
+            if (fullscreenElement) {
+                exitFullscreen(fullscreenElement);
+                e.preventDefault();
+            }
+        }
+        
+        // F11 to toggle fullscreen on focused element
+        if (e.key === 'F11') {
+            const focusedWrapper = document.activeElement.closest('.fullscreen-wrapper');
+            if (focusedWrapper) {
+                toggleFullscreen(focusedWrapper);
+                e.preventDefault();
+            }
+        }
+    });
 }
 
 /**
@@ -108,20 +176,8 @@ function addEmbedCloseButton() {
 function enhanceTables() {
     const tables = document.querySelectorAll('table');
     
-    console.log('Enhancing', tables.length, 'tables');
-    
     tables.forEach(table => {
-        // Skip tables that are inside details elements (like version info)
-        const parentDetails = table.closest('details');
-        if (parentDetails) {
-            console.log('Skipping table inside details element - no search needed');
-            // Still make it responsive and sortable, just no search
-            makeTableResponsive(table);
-            addTableSorting(table);
-            return;
-        }
-        
-        // Add table controls (includes search)
+        // Add table controls
         addTableControls(table);
         
         // Make tables responsive
@@ -136,6 +192,9 @@ function enhanceTables() {
  * Add controls to tables
  */
 function addTableControls(table) {
+    const wrapper = table.closest('.fullscreen-wrapper');
+    if (!wrapper) return;
+    
     // Create controls container
     const controls = document.createElement('div');
     controls.className = 'table-controls';
@@ -149,9 +208,7 @@ function addTableControls(table) {
     searchInput.addEventListener('input', () => filterTable(table, searchInput.value));
     
     controls.appendChild(searchInput);
-    
-    // Insert controls before the table
-    table.parentNode.insertBefore(controls, table);
+    wrapper.insertBefore(controls, table);
 }
 
 /**
@@ -245,7 +302,38 @@ function filterTable(table, searchTerm) {
     });
 }
 
+/**
+ * Utility function to make any element fullscreen
+ */
+function makeFullscreen(selector) {
+    const element = document.querySelector(selector);
+    if (element) {
+        // Create wrapper if needed
+        let wrapper = element.parentElement;
+        if (!wrapper.classList.contains('fullscreen-wrapper')) {
+            wrapper = document.createElement('div');
+            wrapper.className = 'fullscreen-wrapper';
+            element.parentNode.insertBefore(wrapper, element);
+            wrapper.appendChild(element);
+        }
+        
+        // Add fullscreen button if not present
+        if (!wrapper.querySelector('.fullscreen-btn')) {
+            const button = document.createElement('button');
+            button.className = 'fullscreen-btn';
+            button.innerHTML = '⛶';
+            button.title = 'Toggle Fullscreen';
+            button.addEventListener('click', () => toggleFullscreen(wrapper));
+            wrapper.appendChild(button);
+        }
+    }
+}
+
 // Export functions for external use
 window.embedUtils = {
-    activateEmbedMode
+    makeFullscreen,
+    toggleFullscreen,
+    enterFullscreen,
+    exitFullscreen,
+    autoEnterEmbedMode
 };
