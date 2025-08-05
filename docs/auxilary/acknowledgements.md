@@ -1,4 +1,4 @@
-# Acknowlegements
+# Acknowledgements
 
 
 ## Repository Contributors
