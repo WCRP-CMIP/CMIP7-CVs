@@ -1,13 +1,9 @@
+
 name: Deploy Documentation on Production or Docs Update
 
 on:
   push:
     branches: [ production ]
-  push:
-    branches: [ main ]
-    paths:
-      - 'docs/**'
-      - '.src/mkdocs/**'
   workflow_dispatch:
     inputs:
       force_deploy:
@@ -59,3 +55,8 @@ jobs:
           echo "### 🌐 Access Documentation" >> $GITHUB_STEP_SUMMARY
           echo "- **GitHub Pages**: Available at your configured Pages URL" >> $GITHUB_STEP_SUMMARY
           echo "- **Production branch**: Check \`production\` branch for deployed files" >> $GITHUB_STEP_SUMMARY
+
+
+
+
+
