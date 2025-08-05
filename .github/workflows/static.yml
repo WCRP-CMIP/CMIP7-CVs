@@ -17,26 +17,7 @@ concurrency:
   cancel-in-progress: true
 
 jobs:
-  # Build MkDocs documentation
-  build-docs:
-    runs-on: ubuntu-latest
-    steps:
-      - name: Checkout
-        uses: actions/checkout@v4
-        with:
-          ref: 'production'
-      
-      - name: Build MkDocs
-        uses: WCRP-CMIP/CMIP-LD/actions/build-mkdocs@main
-        with:
-          build_dir: '.src/mkdocs/site'
-          config_file: '.src/mkdocs/mkdocs.yml'
-          python_version: '3.11'
-          artifact_name: 'mkdocs-build'
-
-  # Deploy to GitHub Pages
   deploy:
-    needs: build-docs
     environment:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
@@ -47,41 +28,22 @@ jobs:
         with:
           ref: production
 
-      - name: Download MkDocs build
-        uses: actions/download-artifact@v3
-        with:
-          name: mkdocs-build
-          path: mkdocs-site
-
       - name: Setup Pages
         uses: actions/configure-pages@v5
 
-      - name: Prepare deployment content
-        run: |
-          # Create deployment directory
-          mkdir -p deploy-content
-          
-          # Copy MkDocs build
-          if [ -d "mkdocs-site" ]; then
-            cp -r mkdocs-site/* deploy-content/
-            echo "✅ MkDocs documentation copied"
-          fi
-          
-          # Copy src-data (legacy content)
-          if [ -d "src-data" ]; then
-            mkdir -p deploy-content/data
-            cp -r src-data/* deploy-content/data/
-            echo "✅ Source data copied to /data"
-          fi
-          
-          # List deployment content
-          echo "📁 Deployment content:"
-          find deploy-content -type f | head -20
+    #   - name: Pre-check files
+    #     run: |
+    #       for file in src-data/*; do
+    #         if [ ! -f "$file" ]; then
+    #           echo "Error: $file does not exist."
+    #           exit 1
+    #         fi
+    #       done
 
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
-          path: 'deploy-content'
+          path: 'src-data'
           retention-days: 0
 
       - name: Deploy to GitHub Pages
