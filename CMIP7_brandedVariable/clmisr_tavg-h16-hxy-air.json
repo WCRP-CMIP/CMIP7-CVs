@@ -1,0 +1,30 @@
+{
+  "@context": "000_context.jsonld",
+  "id": "clmisr_tavg-h16-hxy-air",
+  "type": "known_branded_variable",
+  "drs_name": "clmisr_tavg-h16-hxy-air",
+  "cf_standard_name": "cloud_area_fraction_in_atmosphere_layer",
+  "cf_units": "%",
+  "cf_sn_status": "approved",
+  "variable_root_name": "clmisr",
+  "var_def_qualifier": "",
+  "branding_suffix_name": "tavg-h16-hxy-air",
+  "description": "MISR cloud area fraction\n",
+  "dimensions": [
+    "longitude",
+    "latitude",
+    "alt16",
+    "tau",
+    "time"
+  ],
+  "cell_methods": "area: time: mean where air",
+  "cell_measures": "area: areacella",
+  "history": ": registered",
+  "realm": "",
+  "temporal_label": "tavg",
+  "vertical_label": "h16",
+  "horizontal_label": "hxy",
+  "area_label": "air",
+  "bn_status": "accepted",
+  "positive_direction": ""
+}

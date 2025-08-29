@@ -1,0 +1,29 @@
+{
+  "@context": "000_context.jsonld",
+  "id": "ta7h_tpt-p7h-hxy-air",
+  "type": "known_branded_variable",
+  "drs_name": "ta7h_tpt-p7h-hxy-air",
+  "cf_standard_name": "air_temperature",
+  "cf_units": "K",
+  "cf_sn_status": "approved",
+  "variable_root_name": "ta7h",
+  "var_def_qualifier": "",
+  "branding_suffix_name": "tpt-p7h-hxy-air",
+  "description": "Extra levels - 925, 700, 600, 300, 50\n",
+  "dimensions": [
+    "longitude",
+    "latitude",
+    "plev7h",
+    "time1"
+  ],
+  "cell_methods": "area: mean where air time: point",
+  "cell_measures": "area: areacella",
+  "history": ": registered",
+  "realm": "",
+  "temporal_label": "tpt",
+  "vertical_label": "p7h",
+  "horizontal_label": "hxy",
+  "area_label": "air",
+  "bn_status": "accepted",
+  "positive_direction": ""
+}

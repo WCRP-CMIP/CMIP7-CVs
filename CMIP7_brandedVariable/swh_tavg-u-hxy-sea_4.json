@@ -1,0 +1,28 @@
+{
+  "@context": "000_context.jsonld",
+  "id": "swh_tavg-u-hxy-sea",
+  "type": "known_branded_variable",
+  "drs_name": "swh_tavg-u-hxy-sea",
+  "cf_standard_name": "sea_surface_wave_significant_height",
+  "cf_units": "m",
+  "cf_sn_status": "approved",
+  "variable_root_name": "swh",
+  "var_def_qualifier": "",
+  "branding_suffix_name": "tavg-u-hxy-sea",
+  "description": "Average height of the highest one-third of waves present in the sea state, incorporating both wind-sea and swell waves. This is a key parameter for describing wave energy and is derived from the wave spectrum using spectral moments. Specifically, this parameter is four times the square root of the integral over all directions and all frequencies of the two-dimensional wave spectrum.\n",
+  "dimensions": [
+    "longitude",
+    "latitude",
+    "time1"
+  ],
+  "cell_methods": "area: mean where sea time: mean",
+  "cell_measures": "area: areacello",
+  "history": ": registered",
+  "realm": "",
+  "temporal_label": "tavg",
+  "vertical_label": "u",
+  "horizontal_label": "hxy",
+  "area_label": "sea",
+  "bn_status": "accepted",
+  "positive_direction": ""
+}

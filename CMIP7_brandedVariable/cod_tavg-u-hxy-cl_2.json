@@ -1,0 +1,28 @@
+{
+  "@context": "000_context.jsonld",
+  "id": "cod_tavg-u-hxy-cl",
+  "type": "known_branded_variable",
+  "drs_name": "cod_tavg-u-hxy-cl",
+  "cf_standard_name": "atmosphere_optical_thickness_due_to_cloud",
+  "cf_units": "1",
+  "cf_sn_status": "approved",
+  "variable_root_name": "cod",
+  "var_def_qualifier": "",
+  "branding_suffix_name": "tavg-u-hxy-cl",
+  "description": "The optical thickness is the integral along the path of radiation of a volume scattering/absorption/attenuation coefficient. The radiative flux is reduced by a factor exp(-optical\\_thickness) on traversing the path. A coordinate variable of radiation\\_wavelength or radiation\\_frequency can be specified to indicate that the optical thickness applies at specific wavelengths or frequencies. The atmosphere optical thickness applies to radiation passing through the entire atmosphere. \"Cloud\" means the component of extinction owing to the presence of liquid or ice water particles. The specification of a physical process by the phrase due\\_to\\_process means that the quantity named is a  single term in a sum of terms which together compose the general quantity named by omitting the phrase.\n",
+  "dimensions": [
+    "longitude",
+    "latitude",
+    "time"
+  ],
+  "cell_methods": "area: time: mean",
+  "cell_measures": "area: areacella",
+  "history": ": registered",
+  "realm": "",
+  "temporal_label": "tavg",
+  "vertical_label": "u",
+  "horizontal_label": "hxy",
+  "area_label": "cl",
+  "bn_status": "accepted",
+  "positive_direction": ""
+}

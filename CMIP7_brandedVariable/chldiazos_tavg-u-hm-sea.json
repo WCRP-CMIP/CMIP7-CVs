@@ -1,0 +1,28 @@
+{
+  "@context": "000_context.jsonld",
+  "id": "chldiazos_tavg-u-hm-sea",
+  "type": "known_branded_variable",
+  "drs_name": "chldiazos_tavg-u-hm-sea",
+  "cf_standard_name": "mass_concentration_of_diazotrophic_phytoplankton_expressed_as_chlorophyll_in_sea_water",
+  "cf_units": "kg m-3",
+  "cf_sn_status": "approved",
+  "variable_root_name": "chldiazos",
+  "var_def_qualifier": "",
+  "branding_suffix_name": "tavg-u-hm-sea",
+  "description": "chlorophyll concentration from the diazotrophic phytoplankton component alone\n",
+  "dimensions": [
+    "longitude",
+    "latitude",
+    "time"
+  ],
+  "cell_methods": "area: mean where sea time: mean",
+  "cell_measures": "area: areacello",
+  "history": ": registered",
+  "realm": "",
+  "temporal_label": "tavg",
+  "vertical_label": "u",
+  "horizontal_label": "hm",
+  "area_label": "sea",
+  "bn_status": "accepted",
+  "positive_direction": ""
+}

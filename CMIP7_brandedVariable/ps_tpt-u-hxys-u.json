@@ -1,0 +1,27 @@
+{
+  "@context": "000_context.jsonld",
+  "id": "ps_tpt-u-hxys-u",
+  "type": "known_branded_variable",
+  "drs_name": "ps_tpt-u-hxys-u",
+  "cf_standard_name": "surface_air_pressure",
+  "cf_units": "Pa",
+  "cf_sn_status": "approved",
+  "variable_root_name": "ps",
+  "var_def_qualifier": "",
+  "branding_suffix_name": "tpt-u-hxys-u",
+  "description": "not, in general, the same as mean sea-level pressure\n",
+  "dimensions": [
+    "site",
+    "time1"
+  ],
+  "cell_methods": "area: point time: point",
+  "cell_measures": "",
+  "history": ": registered",
+  "realm": "",
+  "temporal_label": "tpt",
+  "vertical_label": "u",
+  "horizontal_label": "hxys",
+  "area_label": "u",
+  "bn_status": "accepted",
+  "positive_direction": ""
+}

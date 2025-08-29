@@ -1,0 +1,28 @@
+{
+  "@context": "000_context.jsonld",
+  "id": "wtd_tavg-u-hxy-lnd",
+  "type": "known_branded_variable",
+  "drs_name": "wtd_tavg-u-hxy-lnd",
+  "cf_standard_name": "water_table_depth",
+  "cf_units": "m",
+  "cf_sn_status": "approved",
+  "variable_root_name": "wtd",
+  "var_def_qualifier": "",
+  "branding_suffix_name": "tavg-u-hxy-lnd",
+  "description": "depth\\_of\\_soil\\_moisture\\_saturation\n",
+  "dimensions": [
+    "longitude",
+    "latitude",
+    "time"
+  ],
+  "cell_methods": "area: mean where land time: mean",
+  "cell_measures": "area: areacellr",
+  "history": ": registered",
+  "realm": "",
+  "temporal_label": "tavg",
+  "vertical_label": "u",
+  "horizontal_label": "hxy",
+  "area_label": "lnd",
+  "bn_status": "accepted",
+  "positive_direction": ""
+}

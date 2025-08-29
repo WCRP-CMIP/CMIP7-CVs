@@ -1,0 +1,28 @@
+{
+  "@context": "000_context.jsonld",
+  "id": "albc_tavg-u-hxy-veg",
+  "type": "known_branded_variable",
+  "drs_name": "albc_tavg-u-hxy-veg",
+  "cf_standard_name": "canopy_albedo",
+  "cf_units": "1",
+  "cf_sn_status": "approved",
+  "variable_root_name": "albc",
+  "var_def_qualifier": "",
+  "branding_suffix_name": "tavg-u-hxy-veg",
+  "description": "Canopy Albedo\n",
+  "dimensions": [
+    "longitude",
+    "latitude",
+    "time"
+  ],
+  "cell_methods": "area: mean where land time: mean",
+  "cell_measures": "area: areacella",
+  "history": ": registered",
+  "realm": "",
+  "temporal_label": "tavg",
+  "vertical_label": "u",
+  "horizontal_label": "hxy",
+  "area_label": "veg",
+  "bn_status": "accepted",
+  "positive_direction": ""
+}

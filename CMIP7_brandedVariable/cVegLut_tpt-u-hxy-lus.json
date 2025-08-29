@@ -1,0 +1,29 @@
+{
+  "@context": "000_context.jsonld",
+  "id": "cVegLut_tpt-u-hxy-lus",
+  "type": "known_branded_variable",
+  "drs_name": "cVegLut_tpt-u-hxy-lus",
+  "cf_standard_name": "vegetation_carbon_content",
+  "cf_units": "kg m-2",
+  "cf_sn_status": "approved",
+  "variable_root_name": "cVegLut",
+  "var_def_qualifier": "",
+  "branding_suffix_name": "tpt-u-hxy-lus",
+  "description": "end of year values (not annual mean)\n",
+  "dimensions": [
+    "longitude",
+    "latitude",
+    "landUse",
+    "time1"
+  ],
+  "cell_methods": "area: mean where sector time: point",
+  "cell_measures": "area: areacella",
+  "history": ": registered",
+  "realm": "",
+  "temporal_label": "tpt",
+  "vertical_label": "u",
+  "horizontal_label": "hxy",
+  "area_label": "lus",
+  "bn_status": "accepted",
+  "positive_direction": ""
+}

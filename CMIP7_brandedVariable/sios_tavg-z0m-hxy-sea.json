@@ -1,0 +1,28 @@
+{
+  "@context": "000_context.jsonld",
+  "id": "sios_tavg-z0m-hxy-sea",
+  "type": "known_branded_variable",
+  "drs_name": "sios_tavg-z0m-hxy-sea",
+  "cf_standard_name": "mole_concentration_of_dissolved_inorganic_silicon_in_sea_water",
+  "cf_units": "mol m-3",
+  "cf_sn_status": "approved",
+  "variable_root_name": "sios",
+  "var_def_qualifier": "",
+  "branding_suffix_name": "tavg-z0m-hxy-sea",
+  "description": "Mole concentration means number of moles per unit volume, also called \"molarity\", and is used in the construction \"mole\\_concentration\\_of\\_X\\_in\\_Y\", where X is a material constituent of Y. A chemical or biological species denoted by X may be described by a single term such as \"nitrogen\" or a phrase such as \"nox\\_expressed\\_as\\_nitrogen\". \"Dissolved inorganic silicon\" means the sum of all inorganic silicon in solution (including silicic acid and its first dissociated anion SiO(OH)3-).\n",
+  "dimensions": [
+    "longitude",
+    "latitude",
+    "time"
+  ],
+  "cell_methods": "area: mean where sea time: mean",
+  "cell_measures": "area: areacello",
+  "history": ": registered",
+  "realm": "",
+  "temporal_label": "tavg",
+  "vertical_label": "z0m",
+  "horizontal_label": "hxy",
+  "area_label": "sea",
+  "bn_status": "accepted",
+  "positive_direction": ""
+}

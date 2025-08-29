@@ -1,0 +1,28 @@
+{
+  "@context": "000_context.jsonld",
+  "id": "nbp_tavg-u-hxy-lnd",
+  "type": "known_branded_variable",
+  "drs_name": "nbp_tavg-u-hxy-lnd",
+  "cf_standard_name": "surface_net_downward_mass_flux_of_carbon_dioxide_expressed_as_carbon_due_to_all_land_processes",
+  "cf_units": "kg m-2 s-1",
+  "cf_sn_status": "approved",
+  "variable_root_name": "nbp",
+  "var_def_qualifier": "",
+  "branding_suffix_name": "tavg-u-hxy-lnd",
+  "description": "This is the net mass flux of carbon between land and atmosphere calculated as photosynthesis MINUS the sum of  plant and soil respiration, carbonfluxes  from fire, harvest, grazing  and land use change. Positive flux  is into the land.\n",
+  "dimensions": [
+    "longitude",
+    "latitude",
+    "time"
+  ],
+  "cell_methods": "area: mean where land time: mean",
+  "cell_measures": "area: areacella",
+  "history": ": registered",
+  "realm": "",
+  "temporal_label": "tavg",
+  "vertical_label": "u",
+  "horizontal_label": "hxy",
+  "area_label": "lnd",
+  "bn_status": "accepted",
+  "positive_direction": "down"
+}

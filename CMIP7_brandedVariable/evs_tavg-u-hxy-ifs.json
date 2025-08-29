@@ -1,0 +1,28 @@
+{
+  "@context": "000_context.jsonld",
+  "id": "evs_tavg-u-hxy-ifs",
+  "type": "known_branded_variable",
+  "drs_name": "evs_tavg-u-hxy-ifs",
+  "cf_standard_name": "water_evapotranspiration_flux",
+  "cf_units": "kg m-2 s-1",
+  "cf_sn_status": "approved",
+  "variable_root_name": "evs",
+  "var_def_qualifier": "",
+  "branding_suffix_name": "tavg-u-hxy-ifs",
+  "description": "computed as the total mass of water vapor evaporating from the ice-free portion of the ocean  divided by the area of the ocean portion of the grid cell.\n",
+  "dimensions": [
+    "longitude",
+    "latitude",
+    "time"
+  ],
+  "cell_methods": "area: mean where ice_free_sea over sea time: mean",
+  "cell_measures": "area: areacello",
+  "history": ": registered",
+  "realm": "",
+  "temporal_label": "tavg",
+  "vertical_label": "u",
+  "horizontal_label": "hxy",
+  "area_label": "ifs",
+  "bn_status": "accepted",
+  "positive_direction": ""
+}

@@ -1,0 +1,28 @@
+{
+  "@context": "000_context.jsonld",
+  "id": "mrroIs_tavg-u-hxy-is",
+  "type": "known_branded_variable",
+  "drs_name": "mrroIs_tavg-u-hxy-is",
+  "cf_standard_name": "runoff_flux",
+  "cf_units": "kg m-2 s-1",
+  "cf_sn_status": "approved",
+  "variable_root_name": "mrroIs",
+  "var_def_qualifier": "",
+  "branding_suffix_name": "tavg-u-hxy-is",
+  "description": "quantity averaged over ice\\_sheet (meaning grounded ice sheet and floating ice shelf) only, to avoid contamination from other surfaces (eg: permafrost)\n",
+  "dimensions": [
+    "longitude",
+    "latitude",
+    "time"
+  ],
+  "cell_methods": "area: time: mean where ice_sheet",
+  "cell_measures": "area: areacella",
+  "history": ": registered",
+  "realm": "",
+  "temporal_label": "tavg",
+  "vertical_label": "u",
+  "horizontal_label": "hxy",
+  "area_label": "is",
+  "bn_status": "accepted",
+  "positive_direction": ""
+}

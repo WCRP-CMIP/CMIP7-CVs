@@ -1,0 +1,29 @@
+{
+  "@context": "000_context.jsonld",
+  "id": "masscello_tavg-l-hxy-sea",
+  "type": "known_branded_variable",
+  "drs_name": "masscello_tavg-l-hxy-sea",
+  "cf_standard_name": "sea_water_mass_per_unit_area",
+  "cf_units": "kg m-2",
+  "cf_sn_status": "approved",
+  "variable_root_name": "masscello",
+  "var_def_qualifier": "",
+  "branding_suffix_name": "tavg-l-hxy-sea",
+  "description": "For Boussinesq models, report this diagnostic as Boussinesq reference density times grid celll volume.\n",
+  "dimensions": [
+    "longitude",
+    "latitude",
+    "olevel",
+    "time"
+  ],
+  "cell_methods": "area: mean where sea time: mean",
+  "cell_measures": "area: areacello volume: volcello",
+  "history": ": registered",
+  "realm": "",
+  "temporal_label": "tavg",
+  "vertical_label": "l",
+  "horizontal_label": "hxy",
+  "area_label": "sea",
+  "bn_status": "accepted",
+  "positive_direction": ""
+}

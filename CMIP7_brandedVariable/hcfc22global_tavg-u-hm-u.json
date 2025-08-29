@@ -1,0 +1,26 @@
+{
+  "@context": "000_context.jsonld",
+  "id": "hcfc22global_tavg-u-hm-u",
+  "type": "known_branded_variable",
+  "drs_name": "hcfc22global_tavg-u-hm-u",
+  "cf_standard_name": "mole_fraction_of_hcfc22_in_air",
+  "cf_units": "1E-12",
+  "cf_sn_status": "approved",
+  "variable_root_name": "hcfc22global",
+  "var_def_qualifier": "",
+  "branding_suffix_name": "tavg-u-hm-u",
+  "description": "Mole fraction is used in the construction mole\\_fraction\\_of\\_X\\_in\\_Y, where X is a material constituent of Y.  A chemical species denoted by X may be described by a single term such as 'nitrogen' or a phrase such as 'nox\\_expressed\\_as\\_nitrogen'. The chemical formula for HCFC22 is CHClF2.  The IUPAC name for HCFC22 is chloro-difluoro-methane.\n",
+  "dimensions": [
+    "time"
+  ],
+  "cell_methods": "height: area: time: mean (with all samples weighted by the number of moles of air in the sample)",
+  "cell_measures": "",
+  "history": ": registered",
+  "realm": "",
+  "temporal_label": "tavg",
+  "vertical_label": "u",
+  "horizontal_label": "hm",
+  "area_label": "u",
+  "bn_status": "accepted",
+  "positive_direction": ""
+}

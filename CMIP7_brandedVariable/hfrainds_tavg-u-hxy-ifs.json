@@ -1,0 +1,28 @@
+{
+  "@context": "000_context.jsonld",
+  "id": "hfrainds_tavg-u-hxy-ifs",
+  "type": "known_branded_variable",
+  "drs_name": "hfrainds_tavg-u-hxy-ifs",
+  "cf_standard_name": "temperature_flux_due_to_rainfall_expressed_as_heat_flux_into_sea_water",
+  "cf_units": "W m-2",
+  "cf_sn_status": "approved",
+  "variable_root_name": "hfrainds",
+  "var_def_qualifier": "",
+  "branding_suffix_name": "tavg-u-hxy-ifs",
+  "description": "This is defined as \"where ice\\_free\\_sea over sea\"; i.e., the total flux (considered here) entering the ice-free portion of the grid cell divided by the area of the ocean portion of the grid cell.  All such heat fluxes are computed based on Celsius scale.\n",
+  "dimensions": [
+    "longitude",
+    "latitude",
+    "time"
+  ],
+  "cell_methods": "area: time: mean where ice_free_sea over sea",
+  "cell_measures": "area: areacello",
+  "history": ": registered",
+  "realm": "",
+  "temporal_label": "tavg",
+  "vertical_label": "u",
+  "horizontal_label": "hxy",
+  "area_label": "ifs",
+  "bn_status": "accepted",
+  "positive_direction": "down"
+}

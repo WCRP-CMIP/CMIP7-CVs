@@ -1,0 +1,28 @@
+{
+  "@context": "000_context.jsonld",
+  "id": "netAtmosLandC13Flux_tavg-u-hxy-lnd",
+  "type": "known_branded_variable",
+  "drs_name": "netAtmosLandC13Flux_tavg-u-hxy-lnd",
+  "cf_standard_name": "surface_net_downward_mass_flux_of_carbon_dioxide_expressed_as_13C_due_to_all_land_processes",
+  "cf_units": "kg m-2 s-1",
+  "cf_sn_status": "approved",
+  "variable_root_name": "netAtmosLandC13Flux",
+  "var_def_qualifier": "",
+  "branding_suffix_name": "tavg-u-hxy-lnd",
+  "description": "Flux of carbon 31as carbon dioxide into the land. This flux should be reproducible by differencing the sum of all carbon pools (cVeg, cLitter, cSoil, and cProducts or equivalently cLand) from one time step to the next, except in the case of lateral transfer of carbon due to harvest, riverine transport of dissolved organic and/or inorganic carbon, or any other process (in which case the lateral\\_carbon\\_transfer\\_over\\_land term, see below, will be zero data).-\n",
+  "dimensions": [
+    "longitude",
+    "latitude",
+    "time"
+  ],
+  "cell_methods": "area: mean where land time: mean",
+  "cell_measures": "area: areacella",
+  "history": ": registered",
+  "realm": "",
+  "temporal_label": "tavg",
+  "vertical_label": "u",
+  "horizontal_label": "hxy",
+  "area_label": "lnd",
+  "bn_status": "accepted",
+  "positive_direction": "down"
+}

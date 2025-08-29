@@ -1,0 +1,29 @@
+{
+  "@context": "000_context.jsonld",
+  "id": "utendnogw_tavg-p19-hxy-air",
+  "type": "known_branded_variable",
+  "drs_name": "utendnogw_tavg-p19-hxy-air",
+  "cf_standard_name": "tendency_of_eastward_wind_due_to_nonorographic_gravity_wave_drag",
+  "cf_units": "m s-2",
+  "cf_sn_status": "approved",
+  "variable_root_name": "utendnogw",
+  "var_def_qualifier": "",
+  "branding_suffix_name": "tavg-p19-hxy-air",
+  "description": "Tendency of eastward wind induced by the parameterized non-orographic gravity wave drag\n",
+  "dimensions": [
+    "longitude",
+    "latitude",
+    "plev19",
+    "time"
+  ],
+  "cell_methods": "area: time: mean where air",
+  "cell_measures": "area: areacella",
+  "history": ": registered",
+  "realm": "",
+  "temporal_label": "tavg",
+  "vertical_label": "p19",
+  "horizontal_label": "hxy",
+  "area_label": "air",
+  "bn_status": "accepted",
+  "positive_direction": ""
+}

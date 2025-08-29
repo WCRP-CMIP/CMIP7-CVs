@@ -1,0 +1,28 @@
+{
+  "@context": "000_context.jsonld",
+  "id": "sidmassth_tavg-u-hxy-si",
+  "type": "known_branded_variable",
+  "drs_name": "sidmassth_tavg-u-hxy-si",
+  "cf_standard_name": "tendency_of_sea_ice_amount_due_to_sea_ice_thermodynamics",
+  "cf_units": "kg m-2 s-1",
+  "cf_sn_status": "approved",
+  "variable_root_name": "sidmassth",
+  "var_def_qualifier": "",
+  "branding_suffix_name": "tavg-u-hxy-si",
+  "description": "Total rate of change in sea-ice mass from thermodynamic processes divided by grid-cell area.\n",
+  "dimensions": [
+    "longitude",
+    "latitude",
+    "time"
+  ],
+  "cell_methods": "area: mean where sea time: mean",
+  "cell_measures": "area: areacello",
+  "history": ": registered",
+  "realm": "",
+  "temporal_label": "tavg",
+  "vertical_label": "u",
+  "horizontal_label": "hxy",
+  "area_label": "si",
+  "bn_status": "accepted",
+  "positive_direction": ""
+}

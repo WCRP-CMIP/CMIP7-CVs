@@ -1,0 +1,28 @@
+{
+  "@context": "000_context.jsonld",
+  "id": "cRoot_tavg-u-hxy-lnd",
+  "type": "known_branded_variable",
+  "drs_name": "cRoot_tavg-u-hxy-lnd",
+  "cf_standard_name": "root_mass_content_of_carbon",
+  "cf_units": "kg m-2",
+  "cf_sn_status": "approved",
+  "variable_root_name": "cRoot",
+  "var_def_qualifier": "",
+  "branding_suffix_name": "tavg-u-hxy-lnd",
+  "description": "including fine and coarse roots.\n",
+  "dimensions": [
+    "longitude",
+    "latitude",
+    "time"
+  ],
+  "cell_methods": "area: mean where land time: mean",
+  "cell_measures": "area: areacella",
+  "history": ": registered",
+  "realm": "",
+  "temporal_label": "tavg",
+  "vertical_label": "u",
+  "horizontal_label": "hxy",
+  "area_label": "lnd",
+  "bn_status": "accepted",
+  "positive_direction": ""
+}

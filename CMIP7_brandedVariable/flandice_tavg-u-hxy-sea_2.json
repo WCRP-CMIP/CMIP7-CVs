@@ -1,0 +1,28 @@
+{
+  "@context": "000_context.jsonld",
+  "id": "flandice_tavg-u-hxy-sea",
+  "type": "known_branded_variable",
+  "drs_name": "flandice_tavg-u-hxy-sea",
+  "cf_standard_name": "water_flux_into_sea_water_from_land_ice",
+  "cf_units": "kg m-2 s-1",
+  "cf_sn_status": "approved",
+  "variable_root_name": "flandice",
+  "var_def_qualifier": "",
+  "branding_suffix_name": "tavg-u-hxy-sea",
+  "description": "Computed as the water flux into the ocean due to land ice (runoff water from surface and base of land ice or melt from base of ice shelf or vertical ice front) into the ocean divided by the area ocean portion of the grid cell.\n",
+  "dimensions": [
+    "longitude",
+    "latitude",
+    "time"
+  ],
+  "cell_methods": "area: mean where sea time: mean",
+  "cell_measures": "area: areacello",
+  "history": ": registered",
+  "realm": "",
+  "temporal_label": "tavg",
+  "vertical_label": "u",
+  "horizontal_label": "hxy",
+  "area_label": "sea",
+  "bn_status": "accepted",
+  "positive_direction": ""
+}

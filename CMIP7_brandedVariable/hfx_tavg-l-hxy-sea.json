@@ -1,0 +1,29 @@
+{
+  "@context": "000_context.jsonld",
+  "id": "hfx_tavg-l-hxy-sea",
+  "type": "known_branded_variable",
+  "drs_name": "hfx_tavg-l-hxy-sea",
+  "cf_standard_name": "ocean_heat_x_transport",
+  "cf_units": "W",
+  "cf_sn_status": "approved",
+  "variable_root_name": "hfx",
+  "var_def_qualifier": "",
+  "branding_suffix_name": "tavg-l-hxy-sea",
+  "description": "Contains all contributions to 'x-ward' heat transport from resolved and parameterized processes. Use Celsius for temperature scale\n",
+  "dimensions": [
+    "longitude",
+    "latitude",
+    "olevel",
+    "time"
+  ],
+  "cell_methods": "area: mean where sea time: mean",
+  "cell_measures": "area: areacello volume: volcello",
+  "history": ": registered",
+  "realm": "",
+  "temporal_label": "tavg",
+  "vertical_label": "l",
+  "horizontal_label": "hxy",
+  "area_label": "sea",
+  "bn_status": "accepted",
+  "positive_direction": ""
+}

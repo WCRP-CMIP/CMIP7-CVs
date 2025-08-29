@@ -1,0 +1,28 @@
+{
+  "@context": "000_context.jsonld",
+  "id": "limfemisc_tavg-u-hxy-sea",
+  "type": "known_branded_variable",
+  "drs_name": "limfemisc_tavg-u-hxy-sea",
+  "cf_standard_name": "iron_growth_limitation_of_miscellaneous_phytoplankton",
+  "cf_units": "1",
+  "cf_sn_status": "approved",
+  "variable_root_name": "limfemisc",
+  "var_def_qualifier": "",
+  "branding_suffix_name": "tavg-u-hxy-sea",
+  "description": "Phytoplankton are algae that grow where there is sufficient light to support photosynthesis. \"Miscellaneous phytoplankton\" are all those phytoplankton that are not diatoms, diazotrophs, calcareous phytoplankton, picophytoplankton or other separately named components of the phytoplankton population. \"Iron growth limitation\" means the ratio of the growth rate of a species population in the environment (where there is a finite availability of iron) to the theoretical growth rate if there were no such limit on iron availability.\n",
+  "dimensions": [
+    "longitude",
+    "latitude",
+    "time"
+  ],
+  "cell_methods": "area: mean where sea time: mean",
+  "cell_measures": "area: areacello",
+  "history": ": registered",
+  "realm": "",
+  "temporal_label": "tavg",
+  "vertical_label": "u",
+  "horizontal_label": "hxy",
+  "area_label": "sea",
+  "bn_status": "accepted",
+  "positive_direction": ""
+}

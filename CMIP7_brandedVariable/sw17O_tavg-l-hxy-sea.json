@@ -1,0 +1,29 @@
+{
+  "@context": "000_context.jsonld",
+  "id": "sw17O_tavg-l-hxy-sea",
+  "type": "known_branded_variable",
+  "drs_name": "sw17O_tavg-l-hxy-sea",
+  "cf_standard_name": "isotope_ratio_of_17O_to_16O_in_sea_water_excluding_solutes_and_solids",
+  "cf_units": "1",
+  "cf_sn_status": "approved",
+  "variable_root_name": "sw17O",
+  "var_def_qualifier": "",
+  "branding_suffix_name": "tavg-l-hxy-sea",
+  "description": "Ratio of abundance of oxygen-17 (17O) atoms to oxygen-16 (16O) atoms in sea water\n",
+  "dimensions": [
+    "longitude",
+    "latitude",
+    "olevel",
+    "time"
+  ],
+  "cell_methods": "area: mean where sea time: mean",
+  "cell_measures": "area: areacello volume: volcello",
+  "history": ": registered",
+  "realm": "",
+  "temporal_label": "tavg",
+  "vertical_label": "l",
+  "horizontal_label": "hxy",
+  "area_label": "sea",
+  "bn_status": "accepted",
+  "positive_direction": ""
+}

@@ -1,0 +1,28 @@
+{
+  "@context": "000_context.jsonld",
+  "id": "snd_tavg-u-hxy-lnd",
+  "type": "known_branded_variable",
+  "drs_name": "snd_tavg-u-hxy-lnd",
+  "cf_standard_name": "surface_snow_thickness",
+  "cf_units": "m",
+  "cf_sn_status": "approved",
+  "variable_root_name": "snd",
+  "var_def_qualifier": "",
+  "branding_suffix_name": "tavg-u-hxy-lnd",
+  "description": "where land over land, this is computed as the mean thickness of snow in the land portion of the grid cell (averaging over the entire land portion, including the snow-free fraction).  Reported as 0.0 where the land fraction is 0.\n",
+  "dimensions": [
+    "longitude",
+    "latitude",
+    "time"
+  ],
+  "cell_methods": "area: mean where land time: mean",
+  "cell_measures": "area: areacella",
+  "history": ": registered",
+  "realm": "",
+  "temporal_label": "tavg",
+  "vertical_label": "u",
+  "horizontal_label": "hxy",
+  "area_label": "lnd",
+  "bn_status": "accepted",
+  "positive_direction": ""
+}

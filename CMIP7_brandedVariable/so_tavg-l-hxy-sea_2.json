@@ -1,0 +1,29 @@
+{
+  "@context": "000_context.jsonld",
+  "id": "so_tavg-l-hxy-sea",
+  "type": "known_branded_variable",
+  "drs_name": "so_tavg-l-hxy-sea",
+  "cf_standard_name": "sea_water_salinity",
+  "cf_units": "1E-03",
+  "cf_sn_status": "approved",
+  "variable_root_name": "so",
+  "var_def_qualifier": "",
+  "branding_suffix_name": "tavg-l-hxy-sea",
+  "description": "Sea water salinity is the salt content of sea water, often on the Practical Salinity Scale of 1978. However, the unqualified term 'salinity' is generic and does not necessarily imply any particular method of calculation.\n",
+  "dimensions": [
+    "longitude",
+    "latitude",
+    "olevel",
+    "time"
+  ],
+  "cell_methods": "area: mean where sea time: mean",
+  "cell_measures": "area: areacello volume: volcello",
+  "history": ": registered",
+  "realm": "",
+  "temporal_label": "tavg",
+  "vertical_label": "l",
+  "horizontal_label": "hxy",
+  "area_label": "sea",
+  "bn_status": "accepted",
+  "positive_direction": ""
+}

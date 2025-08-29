@@ -1,0 +1,29 @@
+{
+  "@context": "000_context.jsonld",
+  "id": "vos_tavg-u-hxy-sea",
+  "type": "known_branded_variable",
+  "drs_name": "vos_tavg-u-hxy-sea",
+  "cf_standard_name": "surface_sea_water_y_velocity",
+  "cf_units": "m s-1",
+  "cf_sn_status": "approved",
+  "variable_root_name": "vos",
+  "var_def_qualifier": "",
+  "branding_suffix_name": "tavg-u-hxy-sea",
+  "description": "Daily surface prognostic y-ward velocity component resolved by the model.\n",
+  "dimensions": [
+    "longitude",
+    "latitude",
+    "time",
+    "depth0m"
+  ],
+  "cell_methods": "area: mean where sea time: mean",
+  "cell_measures": "area: areacello",
+  "history": ": registered",
+  "realm": "",
+  "temporal_label": "tavg",
+  "vertical_label": "u",
+  "horizontal_label": "hxy",
+  "area_label": "sea",
+  "bn_status": "accepted",
+  "positive_direction": ""
+}

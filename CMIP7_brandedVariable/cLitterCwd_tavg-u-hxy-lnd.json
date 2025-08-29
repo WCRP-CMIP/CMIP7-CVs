@@ -1,0 +1,28 @@
+{
+  "@context": "000_context.jsonld",
+  "id": "cLitterCwd_tavg-u-hxy-lnd",
+  "type": "known_branded_variable",
+  "drs_name": "cLitterCwd_tavg-u-hxy-lnd",
+  "cf_standard_name": "wood_debris_mass_content_of_carbon",
+  "cf_units": "kg m-2",
+  "cf_sn_status": "approved",
+  "variable_root_name": "cLitterCwd",
+  "var_def_qualifier": "",
+  "branding_suffix_name": "tavg-u-hxy-lnd",
+  "description": "\"Content\" indicates a quantity per unit area. \"Wood debris\" means dead organic matter composed of coarse wood. It is distinct from fine litter. The precise distinction between \"fine\" and \"coarse\" is model dependent.\n",
+  "dimensions": [
+    "longitude",
+    "latitude",
+    "time"
+  ],
+  "cell_methods": "area: mean where land time: mean",
+  "cell_measures": "area: areacella",
+  "history": ": registered",
+  "realm": "",
+  "temporal_label": "tavg",
+  "vertical_label": "u",
+  "horizontal_label": "hxy",
+  "area_label": "lnd",
+  "bn_status": "accepted",
+  "positive_direction": ""
+}

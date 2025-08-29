@@ -1,0 +1,27 @@
+{
+  "@context": "000_context.jsonld",
+  "id": "mrsofc_ti-u-hxy-lnd",
+  "type": "known_branded_variable",
+  "drs_name": "mrsofc_ti-u-hxy-lnd",
+  "cf_standard_name": "soil_moisture_content_at_field_capacity",
+  "cf_units": "kg m-2",
+  "cf_sn_status": "approved",
+  "variable_root_name": "mrsofc",
+  "var_def_qualifier": "",
+  "branding_suffix_name": "ti-u-hxy-lnd",
+  "description": "reported \"where land\": divide the total water holding capacity of all the soil in the grid cell by the land area in the grid cell;  reported as \"missing\" where the land fraction is 0.\n",
+  "dimensions": [
+    "longitude",
+    "latitude"
+  ],
+  "cell_methods": "area: mean where land",
+  "cell_measures": "area: areacella",
+  "history": ": registered",
+  "realm": "",
+  "temporal_label": "ti",
+  "vertical_label": "u",
+  "horizontal_label": "hxy",
+  "area_label": "lnd",
+  "bn_status": "accepted",
+  "positive_direction": ""
+}

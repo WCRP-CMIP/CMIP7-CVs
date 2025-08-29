@@ -1,0 +1,28 @@
+{
+  "@context": "000_context.jsonld",
+  "id": "cLitter_tavg-u-hxy-lnd",
+  "type": "known_branded_variable",
+  "drs_name": "cLitter_tavg-u-hxy-lnd",
+  "cf_standard_name": "litter_mass_content_of_carbon",
+  "cf_units": "kg m-2",
+  "cf_sn_status": "approved",
+  "variable_root_name": "cLitter",
+  "var_def_qualifier": "",
+  "branding_suffix_name": "tavg-u-hxy-lnd",
+  "description": "\"Litter\" is dead plant material in or above the soil. It is distinct from coarse wood debris. The precise distinction between \"fine\" and \"coarse\" is model dependent. \"Content\" indicates a quantity per unit area. The sum of the quantities with standard names surface\\_litter\\_mass\\_content\\_of\\_carbon and subsurface\\_litter\\_mass\\_content\\_of\\_carbon has the standard name litter\\_mass\\_content\\_of\\_carbon.\n",
+  "dimensions": [
+    "longitude",
+    "latitude",
+    "time"
+  ],
+  "cell_methods": "area: mean where land time: mean",
+  "cell_measures": "area: areacella",
+  "history": ": registered",
+  "realm": "",
+  "temporal_label": "tavg",
+  "vertical_label": "u",
+  "horizontal_label": "hxy",
+  "area_label": "lnd",
+  "bn_status": "accepted",
+  "positive_direction": ""
+}

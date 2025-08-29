@@ -1,0 +1,28 @@
+{
+  "@context": "000_context.jsonld",
+  "id": "slthick_ti-l-hxy-lnd",
+  "type": "known_branded_variable",
+  "drs_name": "slthick_ti-l-hxy-lnd",
+  "cf_standard_name": "cell_thickness",
+  "cf_units": "m",
+  "cf_sn_status": "approved",
+  "variable_root_name": "slthick",
+  "var_def_qualifier": "",
+  "branding_suffix_name": "ti-l-hxy-lnd",
+  "description": "Thickness of Soil Layers\n",
+  "dimensions": [
+    "longitude",
+    "latitude",
+    "sdepth"
+  ],
+  "cell_methods": "area: mean where land",
+  "cell_measures": "area: areacella",
+  "history": ": registered",
+  "realm": "",
+  "temporal_label": "ti",
+  "vertical_label": "l",
+  "horizontal_label": "hxy",
+  "area_label": "lnd",
+  "bn_status": "accepted",
+  "positive_direction": ""
+}

@@ -1,0 +1,28 @@
+{
+  "@context": "000_context.jsonld",
+  "id": "sishearvel_tpt-u-hxy-si",
+  "type": "known_branded_variable",
+  "drs_name": "sishearvel_tpt-u-hxy-si",
+  "cf_standard_name": "maximum_over_coordinate_rotation_of_sea_ice_horizontal_shear_strain_rate",
+  "cf_units": "s-1",
+  "cf_sn_status": "approved",
+  "variable_root_name": "sishearvel",
+  "var_def_qualifier": "",
+  "branding_suffix_name": "tpt-u-hxy-si",
+  "description": "Maximum shear of sea-ice velocity field (second shear strain invariant). Requested as instantaneous value at the center of the month (i.e., first timestep of the 15th day of the month).\n",
+  "dimensions": [
+    "longitude",
+    "latitude",
+    "time1"
+  ],
+  "cell_methods": "area: mean where sea_ice (mask=siconc) time: point",
+  "cell_measures": "area: areacello",
+  "history": ": registered",
+  "realm": "",
+  "temporal_label": "tpt",
+  "vertical_label": "u",
+  "horizontal_label": "hxy",
+  "area_label": "si",
+  "bn_status": "accepted",
+  "positive_direction": ""
+}

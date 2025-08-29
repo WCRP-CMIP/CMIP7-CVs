@@ -1,0 +1,29 @@
+{
+  "@context": "000_context.jsonld",
+  "id": "hur700_tavg-700hPa-hxy-air",
+  "type": "known_branded_variable",
+  "drs_name": "hur700_tavg-700hPa-hxy-air",
+  "cf_standard_name": "relative_humidity",
+  "cf_units": "%",
+  "cf_sn_status": "approved",
+  "variable_root_name": "hur700",
+  "var_def_qualifier": "",
+  "branding_suffix_name": "tavg-700hPa-hxy-air",
+  "description": "Relative humidity at 700 hPa\n",
+  "dimensions": [
+    "longitude",
+    "latitude",
+    "time",
+    "p700"
+  ],
+  "cell_methods": "area: time: mean where air",
+  "cell_measures": "area: areacella",
+  "history": ": registered",
+  "realm": "",
+  "temporal_label": "tavg",
+  "vertical_label": "700hPa",
+  "horizontal_label": "hxy",
+  "area_label": "air",
+  "bn_status": "accepted",
+  "positive_direction": ""
+}

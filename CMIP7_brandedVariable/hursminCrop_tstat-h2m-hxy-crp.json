@@ -1,0 +1,29 @@
+{
+  "@context": "000_context.jsonld",
+  "id": "hursminCrop_tstat-h2m-hxy-crp",
+  "type": "known_branded_variable",
+  "drs_name": "hursminCrop_tstat-h2m-hxy-crp",
+  "cf_standard_name": "relative_humidity",
+  "cf_units": "%",
+  "cf_sn_status": "approved",
+  "variable_root_name": "hursminCrop",
+  "var_def_qualifier": "",
+  "branding_suffix_name": "tstat-h2m-hxy-crp",
+  "description": "The relative humidity with respect to liquid water for T> 0 C, and with respect to ice for T<0 C.\n",
+  "dimensions": [
+    "longitude",
+    "latitude",
+    "time1",
+    "height2m"
+  ],
+  "cell_methods": "area: mean where crops time: minimum within days time: mean over days",
+  "cell_measures": "area: areacella",
+  "history": ": registered",
+  "realm": "",
+  "temporal_label": "tstat",
+  "vertical_label": "h2m",
+  "horizontal_label": "hxy",
+  "area_label": "crp",
+  "bn_status": "accepted",
+  "positive_direction": ""
+}

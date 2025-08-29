@@ -1,0 +1,28 @@
+{
+  "@context": "000_context.jsonld",
+  "id": "fHarvestToAtmos_tavg-u-hxy-lnd",
+  "type": "known_branded_variable",
+  "drs_name": "fHarvestToAtmos_tavg-u-hxy-lnd",
+  "cf_standard_name": "surface_upward_mass_flux_of_carbon_dioxide_expressed_as_carbon_due_to_emission_from_crop_harvesting",
+  "cf_units": "kg m-2 s-1",
+  "cf_sn_status": "approved",
+  "variable_root_name": "fHarvestToAtmos",
+  "var_def_qualifier": "",
+  "branding_suffix_name": "tavg-u-hxy-lnd",
+  "description": "any harvested carbon that is assumed to decompose immediately into the atmosphere is reported here\n",
+  "dimensions": [
+    "longitude",
+    "latitude",
+    "time"
+  ],
+  "cell_methods": "area: mean where land time: mean",
+  "cell_measures": "area: areacella",
+  "history": ": registered",
+  "realm": "",
+  "temporal_label": "tavg",
+  "vertical_label": "u",
+  "horizontal_label": "hxy",
+  "area_label": "lnd",
+  "bn_status": "accepted",
+  "positive_direction": "up"
+}

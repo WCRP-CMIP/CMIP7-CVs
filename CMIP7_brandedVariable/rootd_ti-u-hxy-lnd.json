@@ -1,0 +1,27 @@
+{
+  "@context": "000_context.jsonld",
+  "id": "rootd_ti-u-hxy-lnd",
+  "type": "known_branded_variable",
+  "drs_name": "rootd_ti-u-hxy-lnd",
+  "cf_standard_name": "root_depth",
+  "cf_units": "m",
+  "cf_sn_status": "approved",
+  "variable_root_name": "rootd",
+  "var_def_qualifier": "",
+  "branding_suffix_name": "ti-u-hxy-lnd",
+  "description": "report the maximum soil depth reachable by plant roots (if defined in model), i.e., the maximum soil depth from which they can extract moisture; report as \"missing\" where the land fraction is 0.\n",
+  "dimensions": [
+    "longitude",
+    "latitude"
+  ],
+  "cell_methods": "area: mean where land",
+  "cell_measures": "area: areacella",
+  "history": ": registered",
+  "realm": "",
+  "temporal_label": "ti",
+  "vertical_label": "u",
+  "horizontal_label": "hxy",
+  "area_label": "lnd",
+  "bn_status": "accepted",
+  "positive_direction": ""
+}

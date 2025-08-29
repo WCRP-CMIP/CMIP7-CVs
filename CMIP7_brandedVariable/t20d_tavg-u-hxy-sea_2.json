@@ -1,0 +1,28 @@
+{
+  "@context": "000_context.jsonld",
+  "id": "t20d_tavg-u-hxy-sea",
+  "type": "known_branded_variable",
+  "drs_name": "t20d_tavg-u-hxy-sea",
+  "cf_standard_name": "depth_of_isosurface_of_sea_water_potential_temperature",
+  "cf_units": "m",
+  "cf_sn_status": "approved",
+  "variable_root_name": "t20d",
+  "var_def_qualifier": "",
+  "branding_suffix_name": "tavg-u-hxy-sea",
+  "description": "Daily 20C isotherm depth\n",
+  "dimensions": [
+    "longitude",
+    "latitude",
+    "time"
+  ],
+  "cell_methods": "area: mean where sea time: mean",
+  "cell_measures": "area: areacello",
+  "history": ": registered",
+  "realm": "",
+  "temporal_label": "tavg",
+  "vertical_label": "u",
+  "horizontal_label": "hxy",
+  "area_label": "sea",
+  "bn_status": "accepted",
+  "positive_direction": ""
+}

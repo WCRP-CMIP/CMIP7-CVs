@@ -1,0 +1,28 @@
+{
+  "@context": "000_context.jsonld",
+  "id": "gppShrub_tavg-u-hxy-shb",
+  "type": "known_branded_variable",
+  "drs_name": "gppShrub_tavg-u-hxy-shb",
+  "cf_standard_name": "gross_primary_productivity_of_biomass_expressed_as_carbon",
+  "cf_units": "kg m-2 s-1",
+  "cf_sn_status": "approved",
+  "variable_root_name": "gppShrub",
+  "var_def_qualifier": "",
+  "branding_suffix_name": "tavg-u-hxy-shb",
+  "description": "Total GPP of shrubs in the grid cell\n",
+  "dimensions": [
+    "longitude",
+    "latitude",
+    "time"
+  ],
+  "cell_methods": "area: time: mean where shrubs (mask=shrubFrac)",
+  "cell_measures": "area: areacella",
+  "history": ": registered",
+  "realm": "",
+  "temporal_label": "tavg",
+  "vertical_label": "u",
+  "horizontal_label": "hxy",
+  "area_label": "shb",
+  "bn_status": "accepted",
+  "positive_direction": ""
+}

@@ -1,0 +1,26 @@
+{
+  "@context": "000_context.jsonld",
+  "id": "lat_ti-u-hxys-u",
+  "type": "known_branded_variable",
+  "drs_name": "lat_ti-u-hxys-u",
+  "cf_standard_name": "latitude",
+  "cf_units": "degrees_north",
+  "cf_sn_status": "approved",
+  "variable_root_name": "lat",
+  "var_def_qualifier": "",
+  "branding_suffix_name": "ti-u-hxys-u",
+  "description": "Latitude is positive northward; its units of degree\\_north (or equivalent) indicate this explicitly. In a latitude-longitude system defined with respect to a rotated North Pole, the standard name of grid\\_latitude should be used instead of latitude. Grid latitude is positive in the grid-northward direction, but its units should be plain degree.\n",
+  "dimensions": [
+    "site"
+  ],
+  "cell_methods": "area: point",
+  "cell_measures": "",
+  "history": ": registered",
+  "realm": "",
+  "temporal_label": "ti",
+  "vertical_label": "u",
+  "horizontal_label": "hxys",
+  "area_label": "u",
+  "bn_status": "accepted",
+  "positive_direction": ""
+}

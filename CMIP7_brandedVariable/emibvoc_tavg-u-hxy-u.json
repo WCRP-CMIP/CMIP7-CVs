@@ -1,0 +1,28 @@
+{
+  "@context": "000_context.jsonld",
+  "id": "emibvoc_tavg-u-hxy-u",
+  "type": "known_branded_variable",
+  "drs_name": "emibvoc_tavg-u-hxy-u",
+  "cf_standard_name": "tendency_of_atmosphere_mass_content_of_biogenic_nmvoc_expressed_as_carbon_due_to_emission",
+  "cf_units": "kg m-2 s-1",
+  "cf_sn_status": "approved",
+  "variable_root_name": "emibvoc",
+  "var_def_qualifier": "",
+  "branding_suffix_name": "tavg-u-hxy-u",
+  "description": "Integrate 3D emission field vertically to 2d field.\\_If\\_ fixed molecular weight of NMVOC is not available in model, please provide in units of kilomole m-2 s-1 (i.e. kg m-2 s-1 as if model NMVOC had molecular weight of 1) and add a comment to your file.\n",
+  "dimensions": [
+    "longitude",
+    "latitude",
+    "time"
+  ],
+  "cell_methods": "area: time: mean",
+  "cell_measures": "area: areacella",
+  "history": ": registered",
+  "realm": "",
+  "temporal_label": "tavg",
+  "vertical_label": "u",
+  "horizontal_label": "hxy",
+  "area_label": "u",
+  "bn_status": "accepted",
+  "positive_direction": ""
+}

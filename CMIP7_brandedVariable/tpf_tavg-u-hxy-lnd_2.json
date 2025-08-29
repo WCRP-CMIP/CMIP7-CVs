@@ -1,0 +1,28 @@
+{
+  "@context": "000_context.jsonld",
+  "id": "tpf_tavg-u-hxy-lnd",
+  "type": "known_branded_variable",
+  "drs_name": "tpf_tavg-u-hxy-lnd",
+  "cf_standard_name": "permafrost_layer_thickness",
+  "cf_units": "m",
+  "cf_sn_status": "approved",
+  "variable_root_name": "tpf",
+  "var_def_qualifier": "",
+  "branding_suffix_name": "tavg-u-hxy-lnd",
+  "description": "permafrost\\_layer\\_thickness\n",
+  "dimensions": [
+    "longitude",
+    "latitude",
+    "time"
+  ],
+  "cell_methods": "area: mean where land time: mean",
+  "cell_measures": "area: areacella",
+  "history": ": registered",
+  "realm": "",
+  "temporal_label": "tavg",
+  "vertical_label": "u",
+  "horizontal_label": "hxy",
+  "area_label": "lnd",
+  "bn_status": "accepted",
+  "positive_direction": ""
+}

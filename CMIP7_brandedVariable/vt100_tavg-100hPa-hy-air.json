@@ -1,0 +1,28 @@
+{
+  "@context": "000_context.jsonld",
+  "id": "vt100_tavg-100hPa-hy-air",
+  "type": "known_branded_variable",
+  "drs_name": "vt100_tavg-100hPa-hy-air",
+  "cf_standard_name": "covariance_over_longitude_of_northward_wind_and_air_temperature",
+  "cf_units": "K m s-1",
+  "cf_sn_status": "approved",
+  "variable_root_name": "vt100",
+  "var_def_qualifier": "",
+  "branding_suffix_name": "tavg-100hPa-hy-air",
+  "description": "Zonally averaged eddy temperature flux at 100hPa as monthly means derived from daily (or higher frequency) fields.\n",
+  "dimensions": [
+    "latitude",
+    "time",
+    "p100"
+  ],
+  "cell_methods": "longitude: time: mean where air",
+  "cell_measures": "",
+  "history": ": registered",
+  "realm": "",
+  "temporal_label": "tavg",
+  "vertical_label": "100hPa",
+  "horizontal_label": "hy",
+  "area_label": "air",
+  "bn_status": "accepted",
+  "positive_direction": ""
+}

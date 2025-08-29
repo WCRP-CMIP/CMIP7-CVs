@@ -1,0 +1,28 @@
+{
+  "@context": "000_context.jsonld",
+  "id": "o2min_tavg-u-hxy-sea",
+  "type": "known_branded_variable",
+  "drs_name": "o2min_tavg-u-hxy-sea",
+  "cf_standard_name": "mole_concentration_of_dissolved_molecular_oxygen_in_sea_water_at_shallowest_local_minimum_in_vertical_profile",
+  "cf_units": "mol m-3",
+  "cf_sn_status": "approved",
+  "variable_root_name": "o2min",
+  "var_def_qualifier": "",
+  "branding_suffix_name": "tavg-u-hxy-sea",
+  "description": "mole concentration of oxygen at the local minimum in the concentration profile that occurs closest to the sea surface.\n",
+  "dimensions": [
+    "longitude",
+    "latitude",
+    "time"
+  ],
+  "cell_methods": "area: mean where sea time: mean",
+  "cell_measures": "area: areacello",
+  "history": ": registered",
+  "realm": "",
+  "temporal_label": "tavg",
+  "vertical_label": "u",
+  "horizontal_label": "hxy",
+  "area_label": "sea",
+  "bn_status": "accepted",
+  "positive_direction": ""
+}

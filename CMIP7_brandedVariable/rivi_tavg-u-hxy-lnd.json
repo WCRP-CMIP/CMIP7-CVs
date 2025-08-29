@@ -1,0 +1,28 @@
+{
+  "@context": "000_context.jsonld",
+  "id": "rivi_tavg-u-hxy-lnd",
+  "type": "known_branded_variable",
+  "drs_name": "rivi_tavg-u-hxy-lnd",
+  "cf_standard_name": "incoming_water_volume_transport_along_river_channel",
+  "cf_units": "m3 s-1",
+  "cf_sn_status": "approved",
+  "variable_root_name": "rivi",
+  "var_def_qualifier": "",
+  "branding_suffix_name": "tavg-u-hxy-lnd",
+  "description": "water\\_flux\\_to\\_downstream\n",
+  "dimensions": [
+    "longitude",
+    "latitude",
+    "time"
+  ],
+  "cell_methods": "area: mean where land time: mean",
+  "cell_measures": "area: areacellr",
+  "history": ": registered",
+  "realm": "",
+  "temporal_label": "tavg",
+  "vertical_label": "u",
+  "horizontal_label": "hxy",
+  "area_label": "lnd",
+  "bn_status": "accepted",
+  "positive_direction": ""
+}

@@ -1,0 +1,28 @@
+{
+  "@context": "000_context.jsonld",
+  "id": "tntrl_tavg-p39-hy-air",
+  "type": "known_branded_variable",
+  "drs_name": "tntrl_tavg-p39-hy-air",
+  "cf_standard_name": "tendency_of_air_temperature_due_to_longwave_heating",
+  "cf_units": "K s-1",
+  "cf_sn_status": "approved",
+  "variable_root_name": "tntrl",
+  "var_def_qualifier": "",
+  "branding_suffix_name": "tavg-p39-hy-air",
+  "description": "zonal mean; hence YZT\n",
+  "dimensions": [
+    "latitude",
+    "plev39",
+    "time"
+  ],
+  "cell_methods": "longitude: time: mean where air",
+  "cell_measures": "",
+  "history": ": registered",
+  "realm": "",
+  "temporal_label": "tavg",
+  "vertical_label": "p39",
+  "horizontal_label": "hy",
+  "area_label": "air",
+  "bn_status": "accepted",
+  "positive_direction": ""
+}

@@ -1,0 +1,29 @@
+{
+  "@context": "000_context.jsonld",
+  "id": "tasmaxCrop_tstat-h2m-hxy-crp",
+  "type": "known_branded_variable",
+  "drs_name": "tasmaxCrop_tstat-h2m-hxy-crp",
+  "cf_standard_name": "air_temperature",
+  "cf_units": "K",
+  "cf_sn_status": "approved",
+  "variable_root_name": "tasmaxCrop",
+  "var_def_qualifier": "",
+  "branding_suffix_name": "tstat-h2m-hxy-crp",
+  "description": "maximum near-surface (usually, 2 meter) air temperature (add cell\\_method attribute \"time: max\")\n",
+  "dimensions": [
+    "longitude",
+    "latitude",
+    "time",
+    "height2m"
+  ],
+  "cell_methods": "area: mean where crops time: maximum",
+  "cell_measures": "area: areacella",
+  "history": ": registered",
+  "realm": "",
+  "temporal_label": "tstat",
+  "vertical_label": "h2m",
+  "horizontal_label": "hxy",
+  "area_label": "crp",
+  "bn_status": "accepted",
+  "positive_direction": ""
+}

@@ -1,0 +1,28 @@
+{
+  "@context": "000_context.jsonld",
+  "id": "sisndmasssubl_tavg-u-hxy-si",
+  "type": "known_branded_variable",
+  "drs_name": "sisndmasssubl_tavg-u-hxy-si",
+  "cf_standard_name": "tendency_of_atmosphere_mass_content_of_water_vapor_due_to_sublimation_of_surface_snow_and_ice",
+  "cf_units": "kg m-2 s-1",
+  "cf_sn_status": "approved",
+  "variable_root_name": "sisndmasssubl",
+  "var_def_qualifier": "",
+  "branding_suffix_name": "tavg-u-hxy-si",
+  "description": "Rate of change of snow mass through sublimation divided by grid-cell area. If a model does not differentiate between the sublimation of snow and sea ice, we recommend to report all sublimation within sisndmasssubl as long as the ice is snow covered.\n",
+  "dimensions": [
+    "longitude",
+    "latitude",
+    "time"
+  ],
+  "cell_methods": "area: time: mean where sea_ice (mask=siconc)",
+  "cell_measures": "area: areacello",
+  "history": ": registered",
+  "realm": "",
+  "temporal_label": "tavg",
+  "vertical_label": "u",
+  "horizontal_label": "hxy",
+  "area_label": "si",
+  "bn_status": "accepted",
+  "positive_direction": ""
+}

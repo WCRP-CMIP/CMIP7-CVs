@@ -1,0 +1,28 @@
+{
+  "@context": "000_context.jsonld",
+  "id": "npp_tavg-u-hxy-lnd",
+  "type": "known_branded_variable",
+  "drs_name": "npp_tavg-u-hxy-lnd",
+  "cf_standard_name": "net_primary_productivity_of_biomass_expressed_as_carbon",
+  "cf_units": "kg m-2 s-1",
+  "cf_sn_status": "approved",
+  "variable_root_name": "npp",
+  "var_def_qualifier": "",
+  "branding_suffix_name": "tavg-u-hxy-lnd",
+  "description": "\"Production of carbon\" means the production of biomass expressed as the mass of carbon which it contains. Net primary production is the excess of gross primary production (rate of synthesis of biomass from inorganic precursors) by autotrophs (\"producers\"), for example, photosynthesis in plants or phytoplankton, over the rate at which the autotrophs themselves respire some of this biomass. \"Productivity\" means production per unit area. The phrase \"expressed\\_as\" is used in the construction A\\_expressed\\_as\\_B, where B is a chemical constituent of A. It means that the quantity indicated by the standard name is calculated solely with respect to the B contained in A, neglecting all other chemical constituents of A.\n",
+  "dimensions": [
+    "longitude",
+    "latitude",
+    "time"
+  ],
+  "cell_methods": "area: mean where land time: mean",
+  "cell_measures": "area: areacella",
+  "history": ": registered",
+  "realm": "",
+  "temporal_label": "tavg",
+  "vertical_label": "u",
+  "horizontal_label": "hxy",
+  "area_label": "lnd",
+  "bn_status": "accepted",
+  "positive_direction": "down"
+}

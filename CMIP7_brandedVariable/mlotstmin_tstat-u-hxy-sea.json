@@ -1,0 +1,29 @@
+{
+  "@context": "000_context.jsonld",
+  "id": "mlotstmin_tstat-u-hxy-sea",
+  "type": "known_branded_variable",
+  "drs_name": "mlotstmin_tstat-u-hxy-sea",
+  "cf_standard_name": "ocean_mixed_layer_thickness_defined_by_sigma_t",
+  "cf_units": "m",
+  "cf_sn_status": "approved",
+  "variable_root_name": "mlotstmin",
+  "var_def_qualifier": "",
+  "branding_suffix_name": "tstat-u-hxy-sea",
+  "description": "Sigma T is potential density referenced to ocean surface. Defined by Sigma T of 0.03 kg m-3 wrt to model level closest to 10 m depth.\n",
+  "dimensions": [
+    "longitude",
+    "latitude",
+    "time",
+    "deltasigt"
+  ],
+  "cell_methods": "area: mean where sea time: minimum",
+  "cell_measures": "area: areacello",
+  "history": ": registered",
+  "realm": "",
+  "temporal_label": "tstat",
+  "vertical_label": "u",
+  "horizontal_label": "hxy",
+  "area_label": "sea",
+  "bn_status": "accepted",
+  "positive_direction": ""
+}

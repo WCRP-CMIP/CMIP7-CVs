@@ -1,0 +1,28 @@
+{
+  "@context": "000_context.jsonld",
+  "id": "deptho_ti-u-hxy-sea",
+  "type": "known_branded_variable",
+  "drs_name": "deptho_ti-u-hxy-sea",
+  "cf_standard_name": "sea_floor_depth_below_geoid",
+  "cf_units": "m",
+  "cf_sn_status": "approved",
+  "variable_root_name": "deptho",
+  "var_def_qualifier": "",
+  "branding_suffix_name": "ti-u-hxy-sea",
+  "description": "Ocean bathymetry. Reported here is the sea floor depth for present day relative to z=0 geoid. Reported as missing for land grid cells.\n",
+  "dimensions": [
+    "longitude",
+    "latitude",
+    "depthseafloor"
+  ],
+  "cell_methods": "area: mean where sea",
+  "cell_measures": "area: areacello",
+  "history": ": registered",
+  "realm": "",
+  "temporal_label": "ti",
+  "vertical_label": "u",
+  "horizontal_label": "hxy",
+  "area_label": "sea",
+  "bn_status": "accepted",
+  "positive_direction": ""
+}

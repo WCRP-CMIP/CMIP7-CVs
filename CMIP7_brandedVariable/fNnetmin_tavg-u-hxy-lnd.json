@@ -1,0 +1,28 @@
+{
+  "@context": "000_context.jsonld",
+  "id": "fNnetmin_tavg-u-hxy-lnd",
+  "type": "known_branded_variable",
+  "drs_name": "fNnetmin_tavg-u-hxy-lnd",
+  "cf_standard_name": "mass_flux_of_nitrogen_compounds_expressed_as_nitrogen_out_of_litter_and_soil_due_to_immobilisation_and_remineralization",
+  "cf_units": "kg m-2 s-1",
+  "cf_sn_status": "approved",
+  "variable_root_name": "fNnetmin",
+  "var_def_qualifier": "",
+  "branding_suffix_name": "tavg-u-hxy-lnd",
+  "description": "Loss of soil nitrogen through remineralization and immobilisation. Remineralization is the degradation of organic matter into inorganic forms of carbon, nitrogen, phosphorus and other micronutrients, which consumes oxygen and releases energy. Immobilisation of nitrogen refers to retention of nitrogen by micro-organisms under certain conditions, making it unavailable for plants.\n",
+  "dimensions": [
+    "longitude",
+    "latitude",
+    "time"
+  ],
+  "cell_methods": "area: mean where land time: mean",
+  "cell_measures": "area: areacella",
+  "history": ": registered",
+  "realm": "",
+  "temporal_label": "tavg",
+  "vertical_label": "u",
+  "horizontal_label": "hxy",
+  "area_label": "lnd",
+  "bn_status": "accepted",
+  "positive_direction": ""
+}

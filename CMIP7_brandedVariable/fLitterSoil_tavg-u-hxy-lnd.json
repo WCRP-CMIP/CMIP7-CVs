@@ -1,0 +1,28 @@
+{
+  "@context": "000_context.jsonld",
+  "id": "fLitterSoil_tavg-u-hxy-lnd",
+  "type": "known_branded_variable",
+  "drs_name": "fLitterSoil_tavg-u-hxy-lnd",
+  "cf_standard_name": "carbon_mass_flux_into_soil_from_litter",
+  "cf_units": "kg m-2 s-1",
+  "cf_sn_status": "approved",
+  "variable_root_name": "fLitterSoil",
+  "var_def_qualifier": "",
+  "branding_suffix_name": "tavg-u-hxy-lnd",
+  "description": "Carbon mass flux per unit area into soil from litter (dead plant material in or above the soil).\n",
+  "dimensions": [
+    "longitude",
+    "latitude",
+    "time"
+  ],
+  "cell_methods": "area: mean where land time: mean",
+  "cell_measures": "area: areacella",
+  "history": ": registered",
+  "realm": "",
+  "temporal_label": "tavg",
+  "vertical_label": "u",
+  "horizontal_label": "hxy",
+  "area_label": "lnd",
+  "bn_status": "accepted",
+  "positive_direction": ""
+}

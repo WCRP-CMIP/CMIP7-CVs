@@ -1,0 +1,29 @@
+{
+  "@context": "000_context.jsonld",
+  "id": "osaltrmadvect_tavg-l-hxy-sea",
+  "type": "known_branded_variable",
+  "drs_name": "osaltrmadvect_tavg-l-hxy-sea",
+  "cf_standard_name": "tendency_of_sea_water_salinity_expressed_as_salt_content_due_to_residual_mean_advection",
+  "cf_units": "kg m-2 s-1",
+  "cf_sn_status": "approved",
+  "variable_root_name": "osaltrmadvect",
+  "var_def_qualifier": "",
+  "branding_suffix_name": "tavg-l-hxy-sea",
+  "description": "Tendency of salt content for a grid cell from residual mean  (sum of Eulerian mean + parameterized eddy-induced)  advection.\n",
+  "dimensions": [
+    "longitude",
+    "latitude",
+    "olevel",
+    "time"
+  ],
+  "cell_methods": "area: mean where sea time: mean",
+  "cell_measures": "area: areacello volume: volcello",
+  "history": ": registered",
+  "realm": "",
+  "temporal_label": "tavg",
+  "vertical_label": "l",
+  "horizontal_label": "hxy",
+  "area_label": "sea",
+  "bn_status": "accepted",
+  "positive_direction": ""
+}

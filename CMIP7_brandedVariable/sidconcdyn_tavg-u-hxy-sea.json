@@ -1,0 +1,28 @@
+{
+  "@context": "000_context.jsonld",
+  "id": "sidconcdyn_tavg-u-hxy-sea",
+  "type": "known_branded_variable",
+  "drs_name": "sidconcdyn_tavg-u-hxy-sea",
+  "cf_standard_name": "tendency_of_sea_ice_area_fraction_due_to_dynamics",
+  "cf_units": "s-1",
+  "cf_sn_status": "approved",
+  "variable_root_name": "sidconcdyn",
+  "var_def_qualifier": "",
+  "branding_suffix_name": "tavg-u-hxy-sea",
+  "description": "Total rate of change in sea-ice area fraction through dynamics-related processes (advection, divergence, etc.).\n",
+  "dimensions": [
+    "longitude",
+    "latitude",
+    "time"
+  ],
+  "cell_methods": "area: mean where sea time: mean",
+  "cell_measures": "area: areacello",
+  "history": ": registered",
+  "realm": "",
+  "temporal_label": "tavg",
+  "vertical_label": "u",
+  "horizontal_label": "hxy",
+  "area_label": "sea",
+  "bn_status": "accepted",
+  "positive_direction": ""
+}

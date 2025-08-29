@@ -1,0 +1,29 @@
+{
+  "@context": "000_context.jsonld",
+  "id": "thkcellvo_tavg-l-hxy-sea",
+  "type": "known_branded_variable",
+  "drs_name": "thkcellvo_tavg-l-hxy-sea",
+  "cf_standard_name": "cell_thickness",
+  "cf_units": "m",
+  "cf_sn_status": "approved",
+  "variable_root_name": "thkcellvo",
+  "var_def_qualifier": "",
+  "branding_suffix_name": "tavg-l-hxy-sea",
+  "description": "The time varying thickness of ocean cells centered at v-points (points for velocity in the y-direction). \"Thickness\" means the vertical extent of a layer. \"Cell\" refers to a model grid-cell.\n",
+  "dimensions": [
+    "longitude",
+    "latitude",
+    "olevel",
+    "time"
+  ],
+  "cell_methods": "area: mean where sea time: mean",
+  "cell_measures": "area: areacello volume: volcello",
+  "history": ": registered",
+  "realm": "",
+  "temporal_label": "tavg",
+  "vertical_label": "l",
+  "horizontal_label": "hxy",
+  "area_label": "sea",
+  "bn_status": "accepted",
+  "positive_direction": ""
+}

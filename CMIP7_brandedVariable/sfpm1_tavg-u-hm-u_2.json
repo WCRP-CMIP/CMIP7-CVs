@@ -1,0 +1,29 @@
+{
+  "@context": "000_context.jsonld",
+  "id": "sfpm1_tavg-u-hm-u",
+  "type": "known_branded_variable",
+  "drs_name": "sfpm1_tavg-u-hm-u",
+  "cf_standard_name": "mass_fraction_of_pm1_ambient_aerosol_particles_in_air",
+  "cf_units": "kg kg-1",
+  "cf_sn_status": "approved",
+  "variable_root_name": "sfpm1",
+  "var_def_qualifier": "",
+  "branding_suffix_name": "tavg-u-hm-u",
+  "description": "Daily mean PM1.0 mass mixing ratio in lowest model layer\n",
+  "dimensions": [
+    "longitude",
+    "latitude",
+    "time",
+    "lowerModelLayer"
+  ],
+  "cell_methods": "area: time: mean",
+  "cell_measures": "area: areacella",
+  "history": ": registered",
+  "realm": "",
+  "temporal_label": "tavg",
+  "vertical_label": "u",
+  "horizontal_label": "hm",
+  "area_label": "u",
+  "bn_status": "accepted",
+  "positive_direction": ""
+}

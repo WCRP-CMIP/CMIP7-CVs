@@ -1,0 +1,29 @@
+{
+  "@context": "000_context.jsonld",
+  "id": "od550aer_tavg-u-hxy-u",
+  "type": "known_branded_variable",
+  "drs_name": "od550aer_tavg-u-hxy-u",
+  "cf_standard_name": "atmosphere_optical_thickness_due_to_ambient_aerosol_particles",
+  "cf_units": "1",
+  "cf_sn_status": "approved",
+  "variable_root_name": "od550aer",
+  "var_def_qualifier": "",
+  "branding_suffix_name": "tavg-u-hxy-u",
+  "description": "AOD from ambient aerosols (i.e., includes aerosol water).  Does not include AOD from stratospheric aerosols if these are prescribed but includes other possible background aerosol types. Needs a comment attribute \"wavelength: 550 nm\"\n",
+  "dimensions": [
+    "longitude",
+    "latitude",
+    "time",
+    "lambda550nm"
+  ],
+  "cell_methods": "area: time: mean",
+  "cell_measures": "area: areacella",
+  "history": ": registered",
+  "realm": "",
+  "temporal_label": "tavg",
+  "vertical_label": "u",
+  "horizontal_label": "hxy",
+  "area_label": "u",
+  "bn_status": "accepted",
+  "positive_direction": ""
+}

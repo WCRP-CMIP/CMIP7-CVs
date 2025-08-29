@@ -1,0 +1,28 @@
+{
+  "@context": "000_context.jsonld",
+  "id": "rac13_tavg-u-hxy-lnd",
+  "type": "known_branded_variable",
+  "drs_name": "rac13_tavg-u-hxy-lnd",
+  "cf_standard_name": "surface_upward_mass_flux_of_carbon_dioxide_expressed_as_13C_due_to_plant_respiration",
+  "cf_units": "kg m-2 s-1",
+  "cf_sn_status": "approved",
+  "variable_root_name": "rac13",
+  "var_def_qualifier": "",
+  "branding_suffix_name": "tavg-u-hxy-lnd",
+  "description": "Flux of carbon-13 into the atmosphere due to plant respiration. Plant respiration is the sum of respiration by parts of plants both above and below the soil. It is assumed that all the respired carbon dioxide is emitted to the atmosphere. \n",
+  "dimensions": [
+    "longitude",
+    "latitude",
+    "time"
+  ],
+  "cell_methods": "area: mean where land time: mean",
+  "cell_measures": "area: areacella",
+  "history": ": registered",
+  "realm": "",
+  "temporal_label": "tavg",
+  "vertical_label": "u",
+  "horizontal_label": "hxy",
+  "area_label": "lnd",
+  "bn_status": "accepted",
+  "positive_direction": ""
+}

@@ -1,0 +1,28 @@
+{
+  "@context": "000_context.jsonld",
+  "id": "prw_tpt-u-hxy-u",
+  "type": "known_branded_variable",
+  "drs_name": "prw_tpt-u-hxy-u",
+  "cf_standard_name": "atmosphere_mass_content_of_water_vapor",
+  "cf_units": "kg m-2",
+  "cf_sn_status": "approved",
+  "variable_root_name": "prw",
+  "var_def_qualifier": "",
+  "branding_suffix_name": "tpt-u-hxy-u",
+  "description": "Vertically integrated mass of water vapour\n",
+  "dimensions": [
+    "longitude",
+    "latitude",
+    "time1"
+  ],
+  "cell_methods": "time: point",
+  "cell_measures": "area: areacella",
+  "history": ": registered",
+  "realm": "",
+  "temporal_label": "tpt",
+  "vertical_label": "u",
+  "horizontal_label": "hxy",
+  "area_label": "u",
+  "bn_status": "accepted",
+  "positive_direction": ""
+}

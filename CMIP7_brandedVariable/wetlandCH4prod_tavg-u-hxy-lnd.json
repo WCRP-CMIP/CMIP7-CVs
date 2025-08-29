@@ -1,0 +1,28 @@
+{
+  "@context": "000_context.jsonld",
+  "id": "wetlandCH4prod_tavg-u-hxy-lnd",
+  "type": "known_branded_variable",
+  "drs_name": "wetlandCH4prod_tavg-u-hxy-lnd",
+  "cf_standard_name": "surface_upward_mass_flux_of_methane_due_to_emission_from_wetland_biological_production",
+  "cf_units": "kg m-2 s-1",
+  "cf_sn_status": "approved",
+  "variable_root_name": "wetlandCH4prod",
+  "var_def_qualifier": "",
+  "branding_suffix_name": "tavg-u-hxy-lnd",
+  "description": "Biological emissions (methanogenesis) of methane (NH4) from wetlands (areas where water covers the soil, or is present either at or near the surface of the soil all year or for varying periods of time during the year, including during the growing season). \n",
+  "dimensions": [
+    "longitude",
+    "latitude",
+    "time"
+  ],
+  "cell_methods": "area: mean where land time: mean",
+  "cell_measures": "area: areacella",
+  "history": ": registered",
+  "realm": "",
+  "temporal_label": "tavg",
+  "vertical_label": "u",
+  "horizontal_label": "hxy",
+  "area_label": "lnd",
+  "bn_status": "accepted",
+  "positive_direction": ""
+}

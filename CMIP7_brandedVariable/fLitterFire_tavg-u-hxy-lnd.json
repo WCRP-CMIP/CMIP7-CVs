@@ -1,0 +1,28 @@
+{
+  "@context": "000_context.jsonld",
+  "id": "fLitterFire_tavg-u-hxy-lnd",
+  "type": "known_branded_variable",
+  "drs_name": "fLitterFire_tavg-u-hxy-lnd",
+  "cf_standard_name": "surface_upward_mass_flux_of_carbon_dioxide_expressed_as_carbon_due_to_emission_from_litter_in_fires",
+  "cf_units": "kg m-2 s-1",
+  "cf_sn_status": "approved",
+  "variable_root_name": "fLitterFire",
+  "var_def_qualifier": "",
+  "branding_suffix_name": "tavg-u-hxy-lnd",
+  "description": "Required for unambiguous separation of vegetation and soil + litter turnover times, since total fire flux draws from both sources\n",
+  "dimensions": [
+    "longitude",
+    "latitude",
+    "time"
+  ],
+  "cell_methods": "area: mean where land time: mean",
+  "cell_measures": "area: areacella",
+  "history": ": registered",
+  "realm": "",
+  "temporal_label": "tavg",
+  "vertical_label": "u",
+  "horizontal_label": "hxy",
+  "area_label": "lnd",
+  "bn_status": "accepted",
+  "positive_direction": ""
+}

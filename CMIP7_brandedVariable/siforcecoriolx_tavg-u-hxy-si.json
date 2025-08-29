@@ -1,0 +1,28 @@
+{
+  "@context": "000_context.jsonld",
+  "id": "siforcecoriolx_tavg-u-hxy-si",
+  "type": "known_branded_variable",
+  "drs_name": "siforcecoriolx_tavg-u-hxy-si",
+  "cf_standard_name": "sea_ice_x_force_per_unit_area_due_to_coriolis_effect",
+  "cf_units": "N m-2",
+  "cf_sn_status": "approved",
+  "variable_root_name": "siforcecoriolx",
+  "var_def_qualifier": "",
+  "branding_suffix_name": "tavg-u-hxy-si",
+  "description": "X-component of the force on sea ice caused by the Coriolis force divided by grid-cell area.\n",
+  "dimensions": [
+    "longitude",
+    "latitude",
+    "time"
+  ],
+  "cell_methods": "area: time: mean where sea_ice (mask=siconc)",
+  "cell_measures": "::MODEL",
+  "history": ": registered",
+  "realm": "",
+  "temporal_label": "tavg",
+  "vertical_label": "u",
+  "horizontal_label": "hxy",
+  "area_label": "si",
+  "bn_status": "accepted",
+  "positive_direction": ""
+}

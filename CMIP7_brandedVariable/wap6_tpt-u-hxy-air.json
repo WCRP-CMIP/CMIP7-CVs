@@ -1,0 +1,29 @@
+{
+  "@context": "000_context.jsonld",
+  "id": "wap6_tpt-u-hxy-air",
+  "type": "known_branded_variable",
+  "drs_name": "wap6_tpt-u-hxy-air",
+  "cf_standard_name": "lagrangian_tendency_of_air_pressure",
+  "cf_units": "Pa s-1",
+  "cf_sn_status": "approved",
+  "variable_root_name": "wap6",
+  "var_def_qualifier": "",
+  "branding_suffix_name": "tpt-u-hxy-air",
+  "description": "Omega (=dp/dt) on 6 pressure levels in the lower troposphere\n",
+  "dimensions": [
+    "longitude",
+    "latitude",
+    "plev6",
+    "time1"
+  ],
+  "cell_methods": "area: mean where air time: point",
+  "cell_measures": "area: areacella",
+  "history": ": registered",
+  "realm": "",
+  "temporal_label": "tpt",
+  "vertical_label": "u",
+  "horizontal_label": "hxy",
+  "area_label": "air",
+  "bn_status": "accepted",
+  "positive_direction": ""
+}

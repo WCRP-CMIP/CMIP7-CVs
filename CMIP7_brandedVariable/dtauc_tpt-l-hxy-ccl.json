@@ -1,0 +1,29 @@
+{
+  "@context": "000_context.jsonld",
+  "id": "dtauc_tpt-l-hxy-ccl",
+  "type": "known_branded_variable",
+  "drs_name": "dtauc_tpt-l-hxy-ccl",
+  "cf_standard_name": "atmosphere_optical_thickness_due_to_convective_cloud",
+  "cf_units": "1",
+  "cf_sn_status": "approved",
+  "variable_root_name": "dtauc",
+  "var_def_qualifier": "",
+  "branding_suffix_name": "tpt-l-hxy-ccl",
+  "description": "This is the in-cloud optical depth obtained by considering only the cloudy portion of the grid cell\n",
+  "dimensions": [
+    "longitude",
+    "latitude",
+    "alevel",
+    "time1"
+  ],
+  "cell_methods": "area: mean where convective_cloud time: point",
+  "cell_measures": "area: areacella",
+  "history": ": registered",
+  "realm": "",
+  "temporal_label": "tpt",
+  "vertical_label": "l",
+  "horizontal_label": "hxy",
+  "area_label": "ccl",
+  "bn_status": "accepted",
+  "positive_direction": ""
+}

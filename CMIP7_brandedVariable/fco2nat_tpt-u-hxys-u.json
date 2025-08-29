@@ -1,0 +1,27 @@
+{
+  "@context": "000_context.jsonld",
+  "id": "fco2nat_tpt-u-hxys-u",
+  "type": "known_branded_variable",
+  "drs_name": "fco2nat_tpt-u-hxys-u",
+  "cf_standard_name": "surface_upward_mass_flux_of_carbon_dioxide_expressed_as_carbon_due_to_emission_from_natural_sources",
+  "cf_units": "kg m-2 s-1",
+  "cf_sn_status": "approved",
+  "variable_root_name": "fco2nat",
+  "var_def_qualifier": "",
+  "branding_suffix_name": "tpt-u-hxys-u",
+  "description": "This is what the atmosphere sees (on its own grid).  This field should be equivalent to the combined natural fluxes of carbon (requested in the L\\_mon and O\\_mon tables) that account for natural exchanges between the atmosphere and land or ocean reservoirs (i.e., \"net ecosystem biospheric productivity\", for land, and \"air to sea CO2 flux\", for ocean.)\n",
+  "dimensions": [
+    "site",
+    "time1"
+  ],
+  "cell_methods": "area: point time: point",
+  "cell_measures": "",
+  "history": ": registered",
+  "realm": "",
+  "temporal_label": "tpt",
+  "vertical_label": "u",
+  "horizontal_label": "hxys",
+  "area_label": "u",
+  "bn_status": "accepted",
+  "positive_direction": ""
+}

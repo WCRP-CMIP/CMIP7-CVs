@@ -1,0 +1,28 @@
+{
+  "@context": "000_context.jsonld",
+  "id": "tnkebto_tavg-u-hxy-sea",
+  "type": "known_branded_variable",
+  "drs_name": "tnkebto_tavg-u-hxy-sea",
+  "cf_standard_name": "tendency_of_ocean_eddy_kinetic_energy_content_due_to_parameterized_eddy_advection",
+  "cf_units": "W m-2",
+  "cf_sn_status": "approved",
+  "variable_root_name": "tnkebto",
+  "var_def_qualifier": "",
+  "branding_suffix_name": "tavg-u-hxy-sea",
+  "description": "Depth integrated impacts on kinetic energy arising from parameterized eddy-induced advection. For CMIP5, this diagnostic was 3d, whereas the CMIP6 depth integrated diagnostic is sufficient for many purposes and reduces archive requirements.\n",
+  "dimensions": [
+    "longitude",
+    "latitude",
+    "time"
+  ],
+  "cell_methods": "area: mean where sea time: mean",
+  "cell_measures": "area: areacello",
+  "history": ": registered",
+  "realm": "",
+  "temporal_label": "tavg",
+  "vertical_label": "u",
+  "horizontal_label": "hxy",
+  "area_label": "sea",
+  "bn_status": "accepted",
+  "positive_direction": ""
+}

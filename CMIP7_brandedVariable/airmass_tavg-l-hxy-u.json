@@ -1,0 +1,29 @@
+{
+  "@context": "000_context.jsonld",
+  "id": "airmass_tavg-l-hxy-u",
+  "type": "known_branded_variable",
+  "drs_name": "airmass_tavg-l-hxy-u",
+  "cf_standard_name": "atmosphere_mass_of_air_per_unit_area",
+  "cf_units": "kg m-2",
+  "cf_sn_status": "approved",
+  "variable_root_name": "airmass",
+  "var_def_qualifier": "",
+  "branding_suffix_name": "tavg-l-hxy-u",
+  "description": "The mass of air in an atmospheric layer.\n",
+  "dimensions": [
+    "longitude",
+    "latitude",
+    "alevel",
+    "time"
+  ],
+  "cell_methods": "area: time: mean",
+  "cell_measures": "area: areacella",
+  "history": ": registered",
+  "realm": "",
+  "temporal_label": "tavg",
+  "vertical_label": "l",
+  "horizontal_label": "hxy",
+  "area_label": "u",
+  "bn_status": "accepted",
+  "positive_direction": ""
+}

@@ -1,0 +1,28 @@
+{
+  "@context": "000_context.jsonld",
+  "id": "zoocos_tavg-z0m-hxy-sea",
+  "type": "known_branded_variable",
+  "drs_name": "zoocos_tavg-z0m-hxy-sea",
+  "cf_standard_name": "mole_concentration_of_zooplankton_expressed_as_carbon_in_sea_water",
+  "cf_units": "mol m-3",
+  "cf_sn_status": "approved",
+  "variable_root_name": "zoocos",
+  "var_def_qualifier": "",
+  "branding_suffix_name": "tavg-z0m-hxy-sea",
+  "description": "sum of zooplankton carbon component concentrations\n",
+  "dimensions": [
+    "longitude",
+    "latitude",
+    "time"
+  ],
+  "cell_methods": "area: mean where sea time: mean",
+  "cell_measures": "area: areacello",
+  "history": ": registered",
+  "realm": "",
+  "temporal_label": "tavg",
+  "vertical_label": "z0m",
+  "horizontal_label": "hxy",
+  "area_label": "sea",
+  "bn_status": "accepted",
+  "positive_direction": ""
+}

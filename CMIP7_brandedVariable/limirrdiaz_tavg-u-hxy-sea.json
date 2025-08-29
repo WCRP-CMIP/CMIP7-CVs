@@ -1,0 +1,28 @@
+{
+  "@context": "000_context.jsonld",
+  "id": "limirrdiaz_tavg-u-hxy-sea",
+  "type": "known_branded_variable",
+  "drs_name": "limirrdiaz_tavg-u-hxy-sea",
+  "cf_standard_name": "growth_limitation_of_diazotrophic_phytoplankton_due_to_solar_irradiance",
+  "cf_units": "1",
+  "cf_sn_status": "approved",
+  "variable_root_name": "limirrdiaz",
+  "var_def_qualifier": "",
+  "branding_suffix_name": "tavg-u-hxy-sea",
+  "description": "Growth limitation of diazotrophs due to solar irradiance. \"Growth limitation due to solar irradiance\" means the ratio of the growth rate of a species population in the environment (where the amount of sunlight reaching a location may be limited) to the theoretical growth rate if there were no such limit on solar irradiance.\n",
+  "dimensions": [
+    "longitude",
+    "latitude",
+    "time"
+  ],
+  "cell_methods": "area: mean where sea time: mean",
+  "cell_measures": "area: areacello",
+  "history": ": registered",
+  "realm": "",
+  "temporal_label": "tavg",
+  "vertical_label": "u",
+  "horizontal_label": "hxy",
+  "area_label": "sea",
+  "bn_status": "accepted",
+  "positive_direction": ""
+}

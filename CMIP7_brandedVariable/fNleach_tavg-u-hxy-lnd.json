@@ -1,0 +1,28 @@
+{
+  "@context": "000_context.jsonld",
+  "id": "fNleach_tavg-u-hxy-lnd",
+  "type": "known_branded_variable",
+  "drs_name": "fNleach_tavg-u-hxy-lnd",
+  "cf_standard_name": "mass_flux_of_carbon_out_of_soil_due_to_leaching_and_runoff",
+  "cf_units": "kg m-2 s-1",
+  "cf_sn_status": "approved",
+  "variable_root_name": "fNleach",
+  "var_def_qualifier": "",
+  "branding_suffix_name": "tavg-u-hxy-lnd",
+  "description": "In accordance with common usage in geophysical disciplines, \"flux\" implies per unit area, called \"flux density\" in physics. The specification of a physical process by the phrase \"due\\_to\\_\" process means that the quantity named is a single term in a sum of terms which together compose the general quantity named by omitting the phrase. \"Leaching\" means the loss of water soluble chemical species from soil. Runoff is the liquid water which drains from land. If not specified, \"runoff\" refers to the sum of surface runoff and subsurface drainage.\n",
+  "dimensions": [
+    "longitude",
+    "latitude",
+    "time"
+  ],
+  "cell_methods": "area: mean where land time: mean",
+  "cell_measures": "area: areacella",
+  "history": ": registered",
+  "realm": "",
+  "temporal_label": "tavg",
+  "vertical_label": "u",
+  "horizontal_label": "hxy",
+  "area_label": "lnd",
+  "bn_status": "accepted",
+  "positive_direction": ""
+}

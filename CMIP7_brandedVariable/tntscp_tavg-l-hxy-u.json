@@ -1,0 +1,29 @@
+{
+  "@context": "000_context.jsonld",
+  "id": "tntscp_tavg-l-hxy-u",
+  "type": "known_branded_variable",
+  "drs_name": "tntscp_tavg-l-hxy-u",
+  "cf_standard_name": "tendency_of_air_temperature_due_to_stratiform_cloud_and_precipitation",
+  "cf_units": "K s-1",
+  "cf_sn_status": "approved",
+  "variable_root_name": "tntscp",
+  "var_def_qualifier": "",
+  "branding_suffix_name": "tavg-l-hxy-u",
+  "description": "The phrase \"tendency\\_of\\_X\" means derivative of X with respect to time. Air temperature is the bulk temperature of the air, not the surface (skin) temperature. The specification of a physical process by the phrase \"due\\_to\\_\" process means that the quantity named is a single term in a sum of terms which together compose the general quantity named by omitting the phrase. A variable with the standard name tendency\\_of\\_air\\_temperature\\_due\\_to\\_stratiform\\_cloud\\_and\\_precipitation should contain net latent heating effects of all processes which convert stratiform clouds and precipitation between water vapour, liquid or ice phases. In an atmosphere model, stratiform cloud is that produced by large-scale convergence (not the convection schemes).\n",
+  "dimensions": [
+    "longitude",
+    "latitude",
+    "alevel",
+    "time"
+  ],
+  "cell_methods": "area: time: mean",
+  "cell_measures": "area: areacella",
+  "history": ": registered",
+  "realm": "",
+  "temporal_label": "tavg",
+  "vertical_label": "l",
+  "horizontal_label": "hxy",
+  "area_label": "u",
+  "bn_status": "accepted",
+  "positive_direction": ""
+}

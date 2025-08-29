@@ -1,0 +1,29 @@
+{
+  "@context": "000_context.jsonld",
+  "id": "dpco2_tavg-u-hm-sea",
+  "type": "known_branded_variable",
+  "drs_name": "dpco2_tavg-u-hm-sea",
+  "cf_standard_name": "surface_carbon_dioxide_partial_pressure_difference_between_sea_water_and_air",
+  "cf_units": "Pa",
+  "cf_sn_status": "approved",
+  "variable_root_name": "dpco2",
+  "var_def_qualifier": "",
+  "branding_suffix_name": "tavg-u-hm-sea",
+  "description": "Difference in partial pressure of carbon dioxide between sea water and air.  The partial pressure of a dissolved gas in sea water is the partial pressure in air with which it would be in equilibrium. \n",
+  "dimensions": [
+    "longitude",
+    "latitude",
+    "time",
+    "depth0m"
+  ],
+  "cell_methods": "area: mean where sea time: mean",
+  "cell_measures": "area: areacello",
+  "history": ": registered",
+  "realm": "",
+  "temporal_label": "tavg",
+  "vertical_label": "u",
+  "horizontal_label": "hm",
+  "area_label": "sea",
+  "bn_status": "accepted",
+  "positive_direction": ""
+}
