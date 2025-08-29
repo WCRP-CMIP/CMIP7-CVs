@@ -1,0 +1,8 @@
+{
+    "@context": {
+        "id": "@id",
+        "type": "@type",
+        "@base": "https://espri-mod.github.io/mip-cmor-tables/initialisation_index/",
+        "initialization_index": "https://espri-mod.github.io/mip-cmor-tables/initialisation_index"
+    }
+}
