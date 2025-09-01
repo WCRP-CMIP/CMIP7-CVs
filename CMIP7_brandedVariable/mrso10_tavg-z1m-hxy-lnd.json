@@ -1,0 +1,5 @@
+{
+    "@context": "000_context.jsonld",
+    "id": "mrso10_tavg-z1m-hxy-lnd",
+    "type": "known_branded_variable"
+}

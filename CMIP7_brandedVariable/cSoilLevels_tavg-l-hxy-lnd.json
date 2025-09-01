@@ -1,0 +1,5 @@
+{
+    "@context": "000_context.jsonld",
+    "id": "cSoilLevels_tavg-l-hxy-lnd",
+    "type": "known_branded_variable"
+}

@@ -1,0 +1,5 @@
+{
+    "@context": "000_context.jsonld",
+    "id": "wap6_tpt-u-hxy-air",
+    "type": "known_branded_variable"
+}

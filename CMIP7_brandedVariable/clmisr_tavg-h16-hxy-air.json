@@ -1,0 +1,5 @@
+{
+    "@context": "000_context.jsonld",
+    "id": "clmisr_tavg-h16-hxy-air",
+    "type": "known_branded_variable"
+}

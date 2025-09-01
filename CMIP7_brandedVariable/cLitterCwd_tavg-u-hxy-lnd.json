@@ -1,0 +1,5 @@
+{
+    "@context": "000_context.jsonld",
+    "id": "cLitterCwd_tavg-u-hxy-lnd",
+    "type": "known_branded_variable"
+}
