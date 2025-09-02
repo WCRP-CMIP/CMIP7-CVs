@@ -1,5 +1,25 @@
 {
     "@context": "000_context.jsonld",
     "id": "abrupt-2xco2",
-    "type": "experiment"
+    "type": "experiment",
+    "additional_allowed_model_components": [
+        "aogcm",
+        "aer",
+        "bgc",
+        "chem"
+    ],
+    "description": "Identical to the `piControl` DECK experiment but with a step change to 2xCO2 concentration from its pre-industrial value, held constant for the duration of the run.  Reference: [Webb et al., 2017](https://doi.org/10.5194/gmd-10-359-2017)",
+    "end_year": null,
+    "experiment": "Abrupt doubling of CO2",
+    "min_number_yrs_per_sim": "300",
+    "parent_activity_id": [
+        "cmip"
+    ],
+    "parent_experiment_id": [
+        "picontrol"
+    ],
+    "required_model_components": [
+        "aogcm"
+    ],
+    "tier": "1"
 }

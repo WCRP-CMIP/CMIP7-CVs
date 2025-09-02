@@ -1,0 +1,18 @@
+{
+    "@context": "000_context.jsonld",
+    "id": "scen7-lc-ext",
+    "type": "experiment",
+    "additional_allowed_model_components": [],
+    "description": "Extension to concentration driven scenario consistent with staying likely below 2 degrees C",
+    "end_year": null,
+    "experiment": "Low, Concentration Driven Scenario Extension",
+    "min_number_yrs_per_sim": null,
+    "parent_activity_id": [
+        "scenariomip"
+    ],
+    "parent_experiment_id": [
+        "scen7-lc"
+    ],
+    "required_model_components": [],
+    "tier": 0
+}

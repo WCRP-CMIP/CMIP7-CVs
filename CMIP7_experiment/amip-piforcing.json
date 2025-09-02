@@ -1,5 +1,25 @@
 {
     "@context": "000_context.jsonld",
     "id": "amip-piforcing",
-    "type": "experiment"
+    "type": "experiment",
+    "additional_allowed_model_components": [
+        "agcm",
+        "aer",
+        "bgc",
+        "chem"
+    ],
+    "description": "Identical to the `amip` DECK experiment, but from 1870 to the present with constant pre-industrial forcing levels (anthropogenic and natural).  Reference: [Webb et al., 2017](https://doi.org/10.5194/gmd-10-359-2017)",
+    "end_year": 2022,
+    "experiment": "AMIP experiment with pre-industrial forcing",
+    "min_number_yrs_per_sim": "153",
+    "parent_activity_id": [
+        null
+    ],
+    "parent_experiment_id": [
+        null
+    ],
+    "required_model_components": [
+        "agcm"
+    ],
+    "tier": "1"
 }

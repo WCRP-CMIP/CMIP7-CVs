@@ -1,0 +1,27 @@
+{
+    "@context": "000_context.jsonld",
+    "id": "hist-nofire",
+    "type": "experiment",
+    "additional_allowed_model_components": [
+        "aogcm",
+        "bgc",
+        "aer",
+        "chem"
+    ],
+    "description": "This experiment is similar to the esm-hist experiment in DECK, but it features no fire globally throughout the historical period and is initialized from a no-fire spin-up.",
+    "end_year": 2021,
+    "experiment": "no fires occur globally",
+    "min_number_yrs_per_sim": "172",
+    "parent_activity_id": [
+        "cmip"
+    ],
+    "parent_experiment_id": [
+        "esm-picontrol"
+    ],
+    "required_model_components": [
+        "aogcm",
+        "bgc",
+        "aer"
+    ],
+    "tier": "2"
+}

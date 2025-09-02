@@ -1,5 +1,25 @@
 {
     "@context": "000_context.jsonld",
     "id": "1pctco2",
-    "type": "experiment"
+    "type": "experiment",
+    "additional_allowed_model_components": [
+        "aogcm",
+        "aer",
+        "chem",
+        "bgc"
+    ],
+    "description": "DECK: 1 percent per year CO2 increase \n Increase CO2 concentration from pre-industrial level at 1% per year until quadrupling",
+    "end_year": null,
+    "experiment": "CO2 prescribed to increase at 1% per year",
+    "min_number_yrs_per_sim": null,
+    "parent_activity_id": [
+        "cmip"
+    ],
+    "parent_experiment_id": [
+        "picontrol"
+    ],
+    "required_model_components": [
+        "aogcm"
+    ],
+    "tier": 0
 }

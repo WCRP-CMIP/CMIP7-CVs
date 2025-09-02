@@ -1,0 +1,26 @@
+{
+    "@context": "000_context.jsonld",
+    "id": "hist-noirr",
+    "type": "experiment",
+    "additional_allowed_model_components": [
+        "aogcm",
+        "land",
+        "bgc"
+    ],
+    "description": "1. switching off the irrigation in the experiment historical  3. This is only for model groups whose historical simulations do include irrigation.",
+    "end_year": 2022,
+    "experiment": "Historical simulations with irrigation switched off",
+    "min_number_yrs_per_sim": "122",
+    "parent_activity_id": [
+        "cmip"
+    ],
+    "parent_experiment_id": [
+        "historical"
+    ],
+    "required_model_components": [
+        "aogcm",
+        "land",
+        "bgc"
+    ],
+    "tier": "2"
+}

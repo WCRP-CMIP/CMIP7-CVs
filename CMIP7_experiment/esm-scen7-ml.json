@@ -1,0 +1,18 @@
+{
+    "@context": "000_context.jsonld",
+    "id": "esm-scen7-ml",
+    "type": "experiment",
+    "additional_allowed_model_components": [],
+    "description": "Scenario with delayed increase in mitigation effort, insufficient to meet Paris Agreement objectives",
+    "end_year": null,
+    "experiment": "Medium-Low Scenario",
+    "min_number_yrs_per_sim": null,
+    "parent_activity_id": [
+        "cmip"
+    ],
+    "parent_experiment_id": [
+        "esm-hist"
+    ],
+    "required_model_components": [],
+    "tier": 0
+}

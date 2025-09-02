@@ -1,5 +1,25 @@
 {
     "@context": "000_context.jsonld",
     "id": "historical",
-    "type": "experiment"
+    "type": "experiment",
+    "additional_allowed_model_components": [
+        "aogcm",
+        "aer",
+        "chem",
+        "bgc"
+    ],
+    "description": "DECK: historical \n Simulation of the recent past",
+    "end_year": null,
+    "experiment": "Simulation of the recent past (concentration driven)",
+    "min_number_yrs_per_sim": null,
+    "parent_activity_id": [
+        "cmip"
+    ],
+    "parent_experiment_id": [
+        "picontrol"
+    ],
+    "required_model_components": [
+        "aogcm"
+    ],
+    "tier": 0
 }

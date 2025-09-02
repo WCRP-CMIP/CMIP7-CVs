@@ -1,5 +1,18 @@
 {
     "@context": "000_context.jsonld",
     "id": "piclim-control",
-    "type": "experiment"
+    "type": "experiment",
+    "additional_allowed_model_components": [],
+    "description": "DECK: Effective radiative forcing control simulation",
+    "end_year": null,
+    "experiment": "Pre-industrial conditions, with sea surface temperature (SST/tos) and sea ice concentration (SIC/siconc) prescribed using an annually-repeating climatology from a 30-year or greater period from the piControl simulation of the host model",
+    "min_number_yrs_per_sim": null,
+    "parent_activity_id": [
+        "cmip"
+    ],
+    "parent_experiment_id": [
+        "picontrol"
+    ],
+    "required_model_components": [],
+    "tier": 0
 }

@@ -1,0 +1,18 @@
+{
+    "@context": "000_context.jsonld",
+    "id": "scen7-mlc-ext",
+    "type": "experiment",
+    "additional_allowed_model_components": [],
+    "description": "Extension to concentration driven scenario with delayed increase in mitigation effort, insufficient to meet Paris Agreement objectives",
+    "end_year": null,
+    "experiment": "Medium, Concentration Driven Scenario Extension",
+    "min_number_yrs_per_sim": null,
+    "parent_activity_id": [
+        "scenariomip"
+    ],
+    "parent_experiment_id": [
+        "scen7-mlc"
+    ],
+    "required_model_components": [],
+    "tier": 0
+}

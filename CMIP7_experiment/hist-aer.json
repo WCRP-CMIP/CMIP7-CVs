@@ -1,5 +1,22 @@
 {
     "@context": "000_context.jsonld",
     "id": "hist-aer",
-    "type": "experiment"
+    "type": "experiment",
+    "additional_allowed_model_components": [
+        "aogcm"
+    ],
+    "description": "1. As historical but with only time evolving historical aerosols out to 2021 and then Medium scenario aerosols between 2021 and 2035.  This includes changes in suphur dioxide, black carbon, organic carbon, ammonia, NOx and VOCs, from biomass burning, industrial emissions, and other sources.  Other forcings held at piControl levels. 2. Coupled simulations initialized from the piControl and run to 2021 under historical aerosol emissions and thereafter to 2035 using the medium scenario with other forcings held fixed at piControl levels. 3. Coupled simulations initialized from the piControl and run to 2021 under historical aerosol emissions and thereafter to 2035 using the medium scenario with other forcings held fixed at piControl levels. 4. https://doi.org/10.5194/egusphere-2024-4086 5. As CMIP6 hist-aer. 6. Time evolving historical and then medium scenario aerosol forcings while all other forcings are held at piControl levels.",
+    "end_year": 2035,
+    "experiment": "hist-aer",
+    "min_number_yrs_per_sim": "186",
+    "parent_activity_id": [
+        "cmip"
+    ],
+    "parent_experiment_id": [
+        "picontrol"
+    ],
+    "required_model_components": [
+        "aogcm"
+    ],
+    "tier": "1"
 }

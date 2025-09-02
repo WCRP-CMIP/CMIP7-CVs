@@ -1,0 +1,18 @@
+{
+    "@context": "000_context.jsonld",
+    "id": "scen7-mc",
+    "type": "experiment",
+    "additional_allowed_model_components": [],
+    "description": "Medium concentration driven emission scenario consistent with current policies",
+    "end_year": null,
+    "experiment": "Medium, Concentration Driven Scenario",
+    "min_number_yrs_per_sim": null,
+    "parent_activity_id": [
+        "cmip"
+    ],
+    "parent_experiment_id": [
+        "historical"
+    ],
+    "required_model_components": [],
+    "tier": 0
+}

@@ -1,5 +1,25 @@
 {
     "@context": "000_context.jsonld",
     "id": "abrupt-4xco2",
-    "type": "experiment"
+    "type": "experiment",
+    "additional_allowed_model_components": [
+        "aogcm",
+        "aer",
+        "chem",
+        "bgc"
+    ],
+    "description": "DECK: abrupt quadrupling of CO2 \n Abrupt increase in CO2 concentration from pre-industrial level to quadrupling",
+    "end_year": null,
+    "experiment": "CO2 prescribed to 4 times preindustrial",
+    "min_number_yrs_per_sim": null,
+    "parent_activity_id": [
+        "cmip"
+    ],
+    "parent_experiment_id": [
+        "picontrol"
+    ],
+    "required_model_components": [
+        "aogcm"
+    ],
+    "tier": 0
 }
