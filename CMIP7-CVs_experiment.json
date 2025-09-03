@@ -1401,7 +1401,7 @@
                 }
             ],
             "parent-experiment": "cmip7:experiment/picontrol",
-            "start-date": "none",
+            "start-date": "1850-01-01",
             "tier": 0,
             "ui-label": "Simulation of the recent past (concentration driven)",
             "validation-key": "historical"
