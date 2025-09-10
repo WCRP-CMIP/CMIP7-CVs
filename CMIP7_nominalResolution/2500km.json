@@ -1,5 +1,5 @@
 {
     "@context": "000_context.jsonld",
     "id": "2500km",
-    "type": "nominal_resolution"
+    "type": "resolution"
 }
