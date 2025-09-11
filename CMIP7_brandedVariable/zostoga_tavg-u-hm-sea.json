@@ -1,5 +1,5 @@
 {
     "@context": "000_context.jsonld",
-    "id": "zostoga_tavg-u-hm-sea",
+    "id": "zostoga_tavg-u-hm-sea.json",
     "type": "known_branded_variable"
 }

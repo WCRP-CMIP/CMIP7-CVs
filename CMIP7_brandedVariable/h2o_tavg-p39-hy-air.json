@@ -1,5 +1,5 @@
 {
     "@context": "000_context.jsonld",
-    "id": "h2o_tavg-p39-hy-air",
+    "id": "h2o_tavg-p39-hy-air.json",
     "type": "known_branded_variable"
 }

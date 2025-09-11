@@ -1,0 +1,5 @@
+{
+    "@context": "000_context.jsonld",
+    "id": "albisccp_tavg-u-hxy-cl.json",
+    "type": "known_branded_variable"
+}

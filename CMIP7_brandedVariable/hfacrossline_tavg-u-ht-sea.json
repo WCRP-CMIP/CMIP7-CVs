@@ -1,5 +1,5 @@
 {
     "@context": "000_context.jsonld",
-    "id": "hfacrossline_tavg-u-ht-sea",
+    "id": "hfacrossline_tavg-u-ht-sea.json",
     "type": "known_branded_variable"
 }

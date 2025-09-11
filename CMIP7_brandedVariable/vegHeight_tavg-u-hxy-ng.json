@@ -1,0 +1,5 @@
+{
+    "@context": "000_context.jsonld",
+    "id": "vegHeight_tavg-u-hxy-ng.json",
+    "type": "known_branded_variable"
+}

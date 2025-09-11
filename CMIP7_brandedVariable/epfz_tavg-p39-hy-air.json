@@ -1,5 +1,5 @@
 {
     "@context": "000_context.jsonld",
-    "id": "epfz_tavg-p39-hy-air",
+    "id": "epfz_tavg-p39-hy-air.json",
     "type": "known_branded_variable"
 }

@@ -1,0 +1,5 @@
+{
+    "@context": "000_context.jsonld",
+    "id": "snrefr_tavg-u-hxy-is.json",
+    "type": "known_branded_variable"
+}

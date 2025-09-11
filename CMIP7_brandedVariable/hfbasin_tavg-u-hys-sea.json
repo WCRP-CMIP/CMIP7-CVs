@@ -1,5 +1,5 @@
 {
     "@context": "000_context.jsonld",
-    "id": "hfbasin_tavg-u-hys-sea",
+    "id": "hfbasin_tavg-u-hys-sea.json",
     "type": "known_branded_variable"
 }

@@ -1,0 +1,5 @@
+{
+    "@context": "000_context.jsonld",
+    "id": "hur_tavg-700hPa-hxy-air.json",
+    "type": "known_branded_variable"
+}

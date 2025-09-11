@@ -1,5 +1,5 @@
 {
     "@context": "000_context.jsonld",
-    "id": "clcalipso_tavg-h40-hxy-air",
+    "id": "clcalipso_tavg-h40-hxy-air.json",
     "type": "known_branded_variable"
 }

@@ -1,0 +1,5 @@
+{
+    "@context": "000_context.jsonld",
+    "id": "phycalc_tavg-d0m-hxy-sea.json",
+    "type": "known_branded_variable"
+}

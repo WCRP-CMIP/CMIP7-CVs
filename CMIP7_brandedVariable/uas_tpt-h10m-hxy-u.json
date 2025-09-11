@@ -1,5 +1,5 @@
 {
     "@context": "000_context.jsonld",
-    "id": "uas_tpt-h10m-hxy-u",
+    "id": "uas_tpt-h10m-hxy-u.json",
     "type": "known_branded_variable"
 }

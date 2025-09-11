@@ -1,5 +1,5 @@
 {
     "@context": "000_context.jsonld",
-    "id": "sistrydtop_tavg-u-hxy-si",
+    "id": "sistrydtop_tavg-u-hxy-si.json",
     "type": "known_branded_variable"
 }

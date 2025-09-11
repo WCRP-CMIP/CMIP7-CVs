@@ -1,5 +1,0 @@
-{
-    "@context": "000_context.jsonld",
-    "id": "clhcalipso_tavg-220hPa-hxy-air",
-    "type": "known_branded_variable"
-}

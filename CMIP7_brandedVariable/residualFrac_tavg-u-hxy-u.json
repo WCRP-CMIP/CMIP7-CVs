@@ -1,5 +1,5 @@
 {
     "@context": "000_context.jsonld",
-    "id": "residualFrac_tavg-u-hxy-u",
+    "id": "residualFrac_tavg-u-hxy-u.json",
     "type": "known_branded_variable"
 }

@@ -1,0 +1,5 @@
+{
+    "@context": "000_context.jsonld",
+    "id": "mrsolLut_tavg-d10cm-hxy-multi.json",
+    "type": "known_branded_variable"
+}

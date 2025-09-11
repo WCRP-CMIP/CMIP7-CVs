@@ -1,5 +1,5 @@
 {
     "@context": "000_context.jsonld",
-    "id": "netAtmosLandCO2Flux_tavg-u-hxy-lnd",
+    "id": "netAtmosLandCO2Flux_tavg-u-hxy-lnd.json",
     "type": "known_branded_variable"
 }
