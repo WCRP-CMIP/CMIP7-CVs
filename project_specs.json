@@ -7,62 +7,57 @@
             "separator": "/",
             "parts": [
                 {
-                    "collection_id": "drs_specs",
+                    "collection_id": "CMIP7_drsSpecs",
                     "is_required": true,
                     "kind": "collection"
                 },
                 {
-                    "collection_id": "activity_id",
+                    "collection_id": "CMIP7_activity",
                     "is_required": true,
                     "kind": "collection"
                 },
                 {
-                    "collection_id": "institution_id",
+                    "collection_id": "CMIP7_institution",
                     "is_required": true,
                     "kind": "collection"
                 },
                 {
-                    "collection_id": "source_id",
+                    "collection_id": "CMIP7_source",
                     "is_required": true,
                     "kind": "collection"
                 },
                 {
-                    "collection_id": "experiment_id",
+                    "collection_id": "CMIP7_experiment",
                     "is_required": true,
                     "kind": "collection"
                 },
                 {
-                    "collection_id": "variant_label",
+                    "collection_id": "CMIP7_datasetVariant",
                     "is_required": true,
                     "kind": "collection"
                 },
                 {
-                    "collection_id": "region",
+                    "collection_id": "CMIP7_region",
                     "is_required": true,
                     "kind": "collection"
                 },
                 {
-                    "collection_id": "frequency",
+                    "collection_id": "CMIP7_reportingInterval",
                     "is_required": true,
                     "kind": "collection"
                 },
                 {
-                    "collection_id": "variable_id",
+                    "collection_id": "CMIP7_brandedVariable",
                     "is_required": true,
                     "kind": "collection"
                 },
                 {
-                    "collection_id": "branding_suffix",
+                    "collection_id": "CMIP7_gridLabel",
                     "is_required": true,
                     "kind": "collection"
                 },
                 {
-                    "collection_id": "grid_label",
-                    "is_required": true,
-                    "kind": "collection"
-                },
-                {
-                    "collection_id": "version",
+                    "collection_id": "CMIP7_version",
                     "is_required": true,
                     "kind": "collection"
                 }
@@ -77,47 +72,42 @@
             },
             "parts": [
                 {
-                    "collection_id": "variable_id",
+                    "collection_id": "CMIP7_brandedVariable",
                     "is_required": true,
                     "kind": "collection"
                 },
                 {
-                    "collection_id": "branding_suffix",
+                    "collection_id": "CMIP7_reportingInterval",
                     "is_required": true,
                     "kind": "collection"
                 },
                 {
-                    "collection_id": "frequency",
+                    "collection_id": "CMIP7_region",
                     "is_required": true,
                     "kind": "collection"
                 },
                 {
-                    "collection_id": "region",
+                    "collection_id": "CMIP7_gridLabel",
                     "is_required": true,
                     "kind": "collection"
                 },
                 {
-                    "collection_id": "grid_label",
+                    "collection_id": "CMIP7_source",
                     "is_required": true,
                     "kind": "collection"
                 },
                 {
-                    "collection_id": "source_id",
+                    "collection_id": "CMIP7_experiment",
                     "is_required": true,
                     "kind": "collection"
                 },
                 {
-                    "collection_id": "experiment_id",
+                    "collection_id": "CMIP7_datasetVariant",
                     "is_required": true,
                     "kind": "collection"
                 },
                 {
-                    "collection_id": "variant_label",
-                    "is_required": true,
-                    "kind": "collection"
-                },
-                {
-                    "collection_id": "time_range",
+                    "collection_id": "CMIP7_timeRange",
                     "is_required": false,
                     "kind": "collection"
                 }
@@ -128,57 +118,52 @@
             "separator": ".",
             "parts": [
                 {
-                    "collection_id": "drs_specs",
+                    "collection_id": "CMIP7_drsSpecs",
                     "is_required": true,
                     "kind": "collection"
                 },
                 {
-                    "collection_id": "activity_id",
+                    "collection_id": "CMIP7_activity",
                     "is_required": true,
                     "kind": "collection"
                 },
                 {
-                    "collection_id": "institution_id",
+                    "collection_id": "CMIP7_institution",
                     "is_required": true,
                     "kind": "collection"
                 },
                 {
-                    "collection_id": "source_id",
+                    "collection_id": "CMIP7_source",
                     "is_required": true,
                     "kind": "collection"
                 },
                 {
-                    "collection_id": "experiment_id",
+                    "collection_id": "CMIP7_experiment",
                     "is_required": true,
                     "kind": "collection"
                 },
                 {
-                    "collection_id": "variant_label",
+                    "collection_id": "CMIP7_datasetVariant",
                     "is_required": true,
                     "kind": "collection"
                 },
                 {
-                    "collection_id": "region",
+                    "collection_id": "CMIP7_region",
                     "is_required": true,
                     "kind": "collection"
                 },
                 {
-                    "collection_id": "frequency",
+                    "collection_id": "CMIP7_reportingInterval",
                     "is_required": true,
                     "kind": "collection"
                 },
                 {
-                    "collection_id": "variable_id",
+                    "collection_id": "CMIP7_brandedVariable",
                     "is_required": true,
                     "kind": "collection"
                 },
                 {
-                    "collection_id": "branding_suffix",
-                    "is_required": true,
-                    "kind": "collection"
-                },
-                {
-                    "collection_id": "grid_label",
+                    "collection_id": "CMIP7_gridLabel",
                     "is_required": true,
                     "kind": "collection"
                 }
@@ -189,10 +174,6 @@
         "specs": {
             "branded_variable": {
                 "source_collection": "CMIP7_brandedVariable",
-                "value_type": "string"
-            },
-            "branded_suffix": {
-                "source_collection": "CMIP7_brandingSuffix",
                 "value_type": "string"
             },
             "temporal_label": {
@@ -216,7 +197,7 @@
                 "value_type": "string"
             },
             "region": {
-                "source_collection": "CMIP7_dataRegion",
+                "source_collection": "CMIP7_region",
                 "value_type": "string"
             },
             "grid": {
@@ -255,7 +236,7 @@
                 "source_collection": "CMIP7_timeRange",
                 "value_type": "string"
             },
-            "nominal_resolution": {
+            "resolution": {
                 "source_collection": "CMIP7_nominalResolution",
                 "value_type": "string"
             },

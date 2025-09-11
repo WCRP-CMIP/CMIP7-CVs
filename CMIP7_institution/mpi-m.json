@@ -1,0 +1,6 @@
+{
+    "@context": "000_context.jsonld",
+    "id": "mpi-m",
+    "type": "organisation",
+    "description": "Max Planck Institute for Meteorology, Hamburg 20146, Germany"
+}
