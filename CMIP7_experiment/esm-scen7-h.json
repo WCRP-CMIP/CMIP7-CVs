@@ -2,17 +2,7 @@
     "@context": "000_context.jsonld",
     "id": "esm-scen7-h",
     "type": "experiment",
-    "additional_allowed_model_components": [],
-    "description": "High emission scenario to explore potential high-end impacts",
-    "end_year": null,
-    "experiment": "High Scenario",
-    "min_number_yrs_per_sim": null,
-    "parent_activity_id": [
-        "cmip"
-    ],
-    "parent_experiment_id": [
-        "esm-hist"
-    ],
-    "required_model_components": [],
-    "tier": 0
+    "activity": [
+        "scenariomip"
+    ]
 }

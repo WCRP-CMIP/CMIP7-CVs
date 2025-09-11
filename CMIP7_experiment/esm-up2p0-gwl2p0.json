@@ -3,24 +3,10 @@
     "id": "esm-up2p0-gwl2p0",
     "type": "experiment",
     "additional_allowed_model_components": [
-        "aogcm",
-        "bgc",
         "aer",
         "chem"
     ],
-    "description": "GWL=2 degree C experiment, branching off the ramp-up when GMSAT is 2 degree C warmer than pre-industrial.",
-    "end_year": null,
-    "experiment": "Zero-emission run starting at 2 degree C GWL",
-    "min_number_yrs_per_sim": "300",
-    "parent_activity_id": [
+    "activity": [
         "tipmip"
-    ],
-    "parent_experiment_id": [
-        "esm-up2p0"
-    ],
-    "required_model_components": [
-        "aogcm",
-        "bgc"
-    ],
-    "tier": "1"
+    ]
 }

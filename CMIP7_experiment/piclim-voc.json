@@ -2,17 +2,17 @@
     "@context": "000_context.jsonld",
     "id": "piclim-voc",
     "type": "experiment",
-    "additional_allowed_model_components": [],
-    "description": "Perturbation from pre-industrial control using 1850 VOC emissions \n Pre-industrial climatological SSTs and sea ice extent, 1850 VOC emissions",
-    "end_year": null,
-    "experiment": "Describe piClim-VOC in one sentence.",
     "min_number_yrs_per_sim": null,
-    "parent_activity_id": [
-        null
-    ],
+    "description": "Perturbation from pre-industrial control using 1850 VOC emissions \n Pre-industrial climatological SSTs and sea ice extent, 1850 VOC emissions",
     "parent_experiment_id": [
-        null
+        "no parent"
     ],
+    "experiment": "Describe piClim-VOC in one sentence.",
+    "additional_allowed_model_components": [],
+    "tier": 0,
     "required_model_components": [],
-    "tier": 0
+    "activity": [
+        "aerchemmip"
+    ],
+    "experiment_id": "piclim-voc"
 }

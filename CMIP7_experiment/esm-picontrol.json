@@ -2,25 +2,15 @@
     "@context": "000_context.jsonld",
     "id": "esm-picontrol",
     "type": "experiment",
-    "additional_allowed_model_components": [
-        "aogcm",
-        "bgc",
-        "aer",
-        "chem"
-    ],
-    "description": "DECK: pre-industrial control simulation with Earth System Models \n Pre-industrial control run for Earth System Models",
-    "end_year": null,
-    "experiment": "Coupled atmosphere-ocean preindustrial control (emissions driven)",
     "min_number_yrs_per_sim": null,
-    "parent_activity_id": [
-        null
-    ],
+    "description": "DECK: pre-industrial control simulation with Earth System Models \n Pre-industrial control run for Earth System Models",
     "parent_experiment_id": [
-        null
+        "no parent"
     ],
-    "required_model_components": [
-        "aogcm",
-        "bgc"
+    "experiment": "Coupled atmosphere-ocean preindustrial control (emissions driven)",
+    "tier": 0,
+    "activity": [
+        "cmip"
     ],
-    "tier": 0
+    "experiment_id": "esm-picontrol"
 }

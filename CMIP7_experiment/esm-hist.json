@@ -2,25 +2,13 @@
     "@context": "000_context.jsonld",
     "id": "esm-hist",
     "type": "experiment",
-    "additional_allowed_model_components": [
-        "aogcm",
-        "bgc",
-        "aer",
-        "chem"
-    ],
-    "description": "DECK: Earth System Model historical simulation \n Historical simulation with Earth System Models",
-    "end_year": null,
-    "experiment": "Simulation of the recent past (emissions driven)",
     "min_number_yrs_per_sim": null,
-    "parent_activity_id": [
+    "end_year": null,
+    "description": "DECK: Earth System Model historical simulation \n Historical simulation with Earth System Models",
+    "experiment": "Simulation of the recent past (emissions driven)",
+    "start_year": null,
+    "tier": 0,
+    "activity": [
         "cmip"
-    ],
-    "parent_experiment_id": [
-        "esm-picontrol"
-    ],
-    "required_model_components": [
-        "aogcm",
-        "bgc"
-    ],
-    "tier": 0
+    ]
 }

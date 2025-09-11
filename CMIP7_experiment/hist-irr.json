@@ -2,25 +2,10 @@
     "@context": "000_context.jsonld",
     "id": "hist-irr",
     "type": "experiment",
-    "additional_allowed_model_components": [
-        "aogcm",
-        "land",
-        "bgc"
-    ],
-    "description": "1. switching on the irrigation in the experiment historical 2. All irrigation-related parameters should be set as the model's default values. Other settings should be the same as the reference simulations (hist, scenario, amip). 3. This is only for model groups whose historical simulations do not include irrigation.",
-    "end_year": 2022,
-    "experiment": "Historical simulations with irrigation switched on",
-    "min_number_yrs_per_sim": "122",
-    "parent_activity_id": [
-        "cmip"
-    ],
-    "parent_experiment_id": [
-        "historical"
-    ],
-    "required_model_components": [
-        "aogcm",
-        "land",
-        "bgc"
-    ],
-    "tier": "2"
+    "end_year": null,
+    "start_year": "1901-01-01",
+    "additional_allowed_model_components": [],
+    "activity": [
+        "irrmip"
+    ]
 }

@@ -2,24 +2,13 @@
     "@context": "000_context.jsonld",
     "id": "amip",
     "type": "experiment",
-    "additional_allowed_model_components": [
-        "agcm",
-        "aer",
-        "chem",
-        "bgc"
-    ],
-    "description": "DECK: AMIP \n AMIP (Atmospheric Model Intercomparison Project) experiment with prescribed SSTs and sea ice",
-    "end_year": null,
-    "experiment": "Describe amip in one sentence.",
     "min_number_yrs_per_sim": null,
-    "parent_activity_id": [
-        null
-    ],
-    "parent_experiment_id": [
-        null
-    ],
-    "required_model_components": [
-        "agcm"
-    ],
-    "tier": 0
+    "end_year": null,
+    "description": "DECK: AMIP \n AMIP (Atmospheric Model Intercomparison Project) experiment with prescribed SSTs and sea ice",
+    "experiment": "Describe amip in one sentence.",
+    "start_year": null,
+    "tier": 0,
+    "activity": [
+        "cmip"
+    ]
 }

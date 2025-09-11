@@ -2,26 +2,18 @@
     "@context": "000_context.jsonld",
     "id": "1pctco2-rad",
     "type": "experiment",
+    "description": "1pctCO2-rad is retained from CMIP6.  It is a simulation which branches from piControl with a 1% per year increase in CO2 concentration from pre-industrial levels, with the CO2 \u201cradiatively-coupled\u201d. This means that only the model\u2019s radiation code responds to the increase in CO2, whereas the model\u2019s carbon cycle components (both land and ocean) use a constant, preindustrial concentration of CO2.  The 1pctCO2 DECK simulation is required for comparison. This experiment is designed to isolate carbon-concentration and carbon climate elements of the global carbon feedbacks. It will also enable calibration of climate emulators.  See Jones et al 2016: https://gmd.copernicus.org/articles/9/2853/2016/ , especially section 3.2.3 Example of use/analysis is Arora et al. 2020: https://bg.copernicus.org/articles/17/4173/2020/",
+    "parent_experiment_id": [
+        "piControl"
+    ],
     "additional_allowed_model_components": [
-        "aogcm",
-        "bgc",
         "aer",
         "chem",
         "ism"
     ],
-    "description": "1pctCO2-rad is retained from CMIP6.  It is a simulation which branches from piControl with a 1% per year increase in CO2 concentration from pre-industrial levels, with the CO2 \u201cradiatively-coupled\u201d. This means that only the model\u2019s radiation code responds to the increase in CO2, whereas the model\u2019s carbon cycle components (both land and ocean) use a constant, preindustrial concentration of CO2.  The 1pctCO2 DECK simulation is required for comparison. This experiment is designed to isolate carbon-concentration and carbon climate elements of the global carbon feedbacks. It will also enable calibration of climate emulators.  See Jones et al 2016: https://gmd.copernicus.org/articles/9/2853/2016/ , especially section 3.2.3 Example of use/analysis is Arora et al. 2020: https://bg.copernicus.org/articles/17/4173/2020/",
-    "end_year": null,
-    "experiment": "radiatively-coupled version of 1 percent per year increasing CO2 experiment",
-    "min_number_yrs_per_sim": "150",
-    "parent_activity_id": [
-        "cmip"
+    "tier": 1,
+    "activity": [
+        "c4mip"
     ],
-    "parent_experiment_id": [
-        "picontrol"
-    ],
-    "required_model_components": [
-        "aogcm",
-        "bgc"
-    ],
-    "tier": "1"
+    "experiment_id": "1pctco2-rad"
 }

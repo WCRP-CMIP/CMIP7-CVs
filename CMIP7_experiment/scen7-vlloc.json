@@ -2,17 +2,7 @@
     "@context": "000_context.jsonld",
     "id": "scen7-vlloc",
     "type": "experiment",
-    "additional_allowed_model_components": [],
-    "description": "Concentration driven scenario consistent with limiting warming to 1.5 degree C by 2100 AD with limited overshoot (as low as plausible) of 1.5 degree C",
-    "end_year": null,
-    "experiment": "Very Low Concentration Driven Scenario with Limited Overshoot",
-    "min_number_yrs_per_sim": null,
-    "parent_activity_id": [
-        "cmip"
-    ],
-    "parent_experiment_id": [
-        "historical"
-    ],
-    "required_model_components": [],
-    "tier": 0
+    "activity": [
+        "scenariomip"
+    ]
 }

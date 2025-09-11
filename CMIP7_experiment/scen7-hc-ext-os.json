@@ -2,17 +2,7 @@
     "@context": "000_context.jsonld",
     "id": "scen7-hc-ext-os",
     "type": "experiment",
-    "additional_allowed_model_components": [],
-    "description": "High concentration driven emission scenario overshoot extension to explore potential high-end impacts",
-    "end_year": null,
-    "experiment": "High, Concentration Driven Scenario Overshoot Extension",
-    "min_number_yrs_per_sim": null,
-    "parent_activity_id": [
+    "activity": [
         "scenariomip"
-    ],
-    "parent_experiment_id": [
-        "scen7-hc"
-    ],
-    "required_model_components": [],
-    "tier": 0
+    ]
 }

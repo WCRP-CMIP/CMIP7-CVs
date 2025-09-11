@@ -2,17 +2,8 @@
     "@context": "000_context.jsonld",
     "id": "hist-pislcf",
     "type": "experiment",
-    "additional_allowed_model_components": [],
-    "description": "Historical simulation with pre-industrial short-lived climate forcers \n Historical simulation but with pre-industrial short-lived climate forcer emissions",
-    "end_year": null,
-    "experiment": "Describe hist-piSLCF in one sentence.",
-    "min_number_yrs_per_sim": null,
-    "parent_activity_id": [
-        null
+    "activity": [
+        "aerchemmip"
     ],
-    "parent_experiment_id": [
-        null
-    ],
-    "required_model_components": [],
-    "tier": 0
+    "experiment_id": "hist-pislcf"
 }

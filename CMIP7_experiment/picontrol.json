@@ -2,24 +2,15 @@
     "@context": "000_context.jsonld",
     "id": "picontrol",
     "type": "experiment",
-    "additional_allowed_model_components": [
-        "aogcm",
-        "aer",
-        "chem",
-        "bgc"
-    ],
-    "description": "DECK: pre-industrial control \n Pre-industrial control simulation",
-    "end_year": null,
-    "experiment": "Coupled atmosphere-ocea preindustrial control run (concentration driven)",
     "min_number_yrs_per_sim": null,
-    "parent_activity_id": [
-        null
-    ],
+    "description": "DECK: pre-industrial control \n Pre-industrial control simulation",
     "parent_experiment_id": [
-        null
+        "no parent"
     ],
-    "required_model_components": [
-        "aogcm"
+    "experiment": "Coupled atmosphere-ocea preindustrial control run (concentration driven)",
+    "tier": 0,
+    "activity": [
+        "cmip"
     ],
-    "tier": 0
+    "experiment_id": "picontrol"
 }

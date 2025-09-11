@@ -2,25 +2,14 @@
     "@context": "000_context.jsonld",
     "id": "esm-up2p0",
     "type": "experiment",
+    "parent_experiment_id": [
+        "esm-piControl"
+    ],
     "additional_allowed_model_components": [
-        "aogcm",
-        "bgc",
         "aer",
         "chem"
     ],
-    "description": "Ramp-up experiment with a constant warming rate of 2 degree C per century.",
-    "end_year": null,
-    "experiment": "Ramp up with constant CO2 emissions leading to 2 degree C/century warming",
-    "min_number_yrs_per_sim": "200",
-    "parent_activity_id": [
-        "cmip"
-    ],
-    "parent_experiment_id": [
-        "esm-picontrol"
-    ],
-    "required_model_components": [
-        "aogcm",
-        "bgc"
-    ],
-    "tier": "1"
+    "activity": [
+        "tipmip"
+    ]
 }

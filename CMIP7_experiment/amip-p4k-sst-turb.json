@@ -2,24 +2,15 @@
     "@context": "000_context.jsonld",
     "id": "amip-p4k-sst-turb",
     "type": "experiment",
+    "end_year": null,
+    "start_year": "1979-01-01",
     "additional_allowed_model_components": [
-        "agcm",
         "aer",
         "bgc",
         "chem"
     ],
-    "description": "As `amip`, but with SSTs subject to a uniform warming of 4K only when calculating turbulent transport of the latent and sensible heat fluxes at the air-sea interface using bulk aerodynamic formulae.  Reference: [Ogura et al., 2023](https://doi.org/10.1029/2023GL104786)",
-    "end_year": 2022,
-    "experiment": "AMIP experiment with uniform 4K increase in the SST input to surface turbulent fluxes",
-    "min_number_yrs_per_sim": "44",
-    "parent_activity_id": [
-        null
+    "activity": [
+        "cfmip"
     ],
-    "parent_experiment_id": [
-        null
-    ],
-    "required_model_components": [
-        "agcm"
-    ],
-    "tier": "2"
+    "experiment_id": "amip-p4k-sst-turb"
 }

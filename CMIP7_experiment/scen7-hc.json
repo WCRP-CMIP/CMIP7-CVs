@@ -2,17 +2,7 @@
     "@context": "000_context.jsonld",
     "id": "scen7-hc",
     "type": "experiment",
-    "additional_allowed_model_components": [],
-    "description": "High concentration driven emission scenario to explore potential high-end impacts",
-    "end_year": null,
-    "experiment": "High, Concentration Driven Scenario",
-    "min_number_yrs_per_sim": null,
-    "parent_activity_id": [
-        "cmip"
-    ],
-    "parent_experiment_id": [
-        "historical"
-    ],
-    "required_model_components": [],
-    "tier": 0
+    "activity": [
+        "scenariomip"
+    ]
 }
