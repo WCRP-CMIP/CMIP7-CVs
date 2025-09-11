@@ -1,5 +1,5 @@
 {
     "@context": "000_context.jsonld",
-    "id": "grassFrac_tavg-u-hxy-u.json",
+    "id": "grassFrac_tavg-u-hxy-u",
     "type": "known_branded_variable"
 }

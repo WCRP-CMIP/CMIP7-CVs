@@ -1,5 +1,5 @@
 {
     "@context": "000_context.jsonld",
-    "id": "va_tpt-200hPa-hxy-u.json",
+    "id": "va_tpt-200hPa-hxy-u",
     "type": "known_branded_variable"
 }

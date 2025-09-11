@@ -1,5 +1,5 @@
 {
     "@context": "000_context.jsonld",
-    "id": "unknown05.json",
+    "id": "unknown05",
     "type": "known_branded_variable"
 }

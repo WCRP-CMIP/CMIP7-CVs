@@ -1,5 +1,5 @@
 {
     "@context": "000_context.jsonld",
-    "id": "tasLut_tavg-h2m-hxy-multi.json",
+    "id": "tasLut_tavg-h2m-hxy-multi",
     "type": "known_branded_variable"
 }

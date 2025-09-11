@@ -14,6 +14,7 @@ token = os.getenv("GITHUB_TOKEN")
 if token:
     headers["Authorization"] = f"token {token}"
 
+
 def list_files_in_folder(owner, repo, branch, folder):
     """
     Retourne la liste des chemins (remote) des fichiers .json sous `folder`.
@@ -38,6 +39,7 @@ def list_files_in_folder(owner, repo, branch, folder):
     ]
     return files
 
+
 if __name__ == "__main__":
     os.makedirs(out_root, exist_ok=True)
 
@@ -55,13 +57,17 @@ if __name__ == "__main__":
     # Avertir s'il y a des duplicates
     duplicates = {k: v for k, v in seen.items() if len(v) > 1}
     if duplicates:
-        print("Attention : plusieurs fichiers distants partagent le même nom (basename). "
-              "Ils écraseront potentiellement l'un l'autre si on écrit seulement le basename.")
+        print(
+            "Attention : plusieurs fichiers distants partagent le même nom (basename). "
+            "Ils écraseront potentiellement l'un l'autre si on écrit seulement le basename."
+        )
         for name, paths in duplicates.items():
             print(f"  {name}:")
             for p in paths:
                 print(f"    - {p}")
-        print("Si tu veux conserver la structure en sous-dossiers, dis-le et j'ajoute ça.\n")
+        print(
+            "Si tu veux conserver la structure en sous-dossiers, dis-le et j'ajoute ça.\n"
+        )
 
     for remote_path in remote_files:
         basename = os.path.basename(remote_path)
@@ -69,8 +75,8 @@ if __name__ == "__main__":
 
         data = {
             "@context": "000_context.jsonld",
-            "id": os.path.basename(remote_path),
-            "type": "known_branded_variable"
+            "id": os.path.basename(remote_path).split(".")[0],
+            "type": "known_branded_variable",
         }
 
         with open(cv_path, "w", encoding="utf-8") as f:

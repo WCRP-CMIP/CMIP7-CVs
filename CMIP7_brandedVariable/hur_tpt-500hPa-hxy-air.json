@@ -1,5 +1,5 @@
 {
     "@context": "000_context.jsonld",
-    "id": "hur_tpt-500hPa-hxy-air.json",
+    "id": "hur_tpt-500hPa-hxy-air",
     "type": "known_branded_variable"
 }

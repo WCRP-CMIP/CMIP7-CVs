@@ -1,5 +1,5 @@
 {
     "@context": "000_context.jsonld",
-    "id": "rsus_tavg-u-hxy-ifs.json",
+    "id": "rsus_tavg-u-hxy-ifs",
     "type": "known_branded_variable"
 }

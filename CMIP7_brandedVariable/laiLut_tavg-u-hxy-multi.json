@@ -1,5 +1,5 @@
 {
     "@context": "000_context.jsonld",
-    "id": "laiLut_tavg-u-hxy-multi.json",
+    "id": "laiLut_tavg-u-hxy-multi",
     "type": "known_branded_variable"
 }
