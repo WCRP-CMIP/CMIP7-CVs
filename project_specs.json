@@ -57,7 +57,7 @@
                     "kind": "collection"
                 },
                 {
-                    "collection_id": "CMIP7_version",
+                    "collection_id": "CMIP7_datasetVersion",
                     "is_required": true,
                     "kind": "collection"
                 }
