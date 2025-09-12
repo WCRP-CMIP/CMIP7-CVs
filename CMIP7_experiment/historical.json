@@ -1,14 +1,29 @@
 {
     "@context": "000_context.jsonld",
-    "id": "historical",
     "type": "experiment",
-    "min_number_yrs_per_sim": null,
-    "end_year": null,
-    "description": "DECK: historical \n Simulation of the recent past",
-    "experiment": "Simulation of the recent past (concentration driven)",
-    "start_year": null,
+    # Should this be the ID (lowercase) or the value which can be validated in e.g. DRS
+    # (in which case the name should probably be activity_id?)
+    "activity": "cmip",
+    "description": "DECK: historical - simulation of the recent past",
     "tier": 0,
-    "activity": [
-        "cmip"
-    ]
+    "id": "historical",
+    "experiment_id": "historical",
+    # Should these be the ID or the value which can be validated in the DRS?
+    "sub_experiment_id": [],
+    "experiment": "Simulation of the recent past (concentration-driven)",
+    # You can get these from the raw JSON
+    # (e.g. https://github.com/WCRP-CMIP/CMIP7-CVs/blob/main/src-data/experiment/historical.json),
+    # it's just a bit fiddly.
+    # Unclear to me whether these should be lowercase IDs
+    # or the actual value (which are all uppercase in CMOR at least,
+    # see https://github.com/PCMDI/cmor/blob/8f7ed1f32e22a24c186be625ff6407bda681e687/TestTables/CMIP7_CV.json#L46)
+    "required_model_components": ["aogcm"],
+    "additional_allowed_model_components": ["aer", "chem", "bgc"],
+    "start_year": 1850,
+    "end_year": 2021,
+    "min_number_yrs_per_sim": 172,
+    # Should this be the ID (lowercase) or the value which can be validated in e.g. DRS
+    "parent_activity_id": "CMIP",
+    # Should this be the ID (lowercase) or the value which can be validated in e.g. DRS
+    "parent_experiment_id": "piControl"
 }

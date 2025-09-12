@@ -1,16 +1,29 @@
 {
     "@context": "000_context.jsonld",
-    "id": "picontrol",
     "type": "experiment",
-    "min_number_yrs_per_sim": null,
-    "description": "DECK: pre-industrial control \n Pre-industrial control simulation",
-    "parent_experiment_id": [
-        "no parent"
-    ],
-    "experiment": "Coupled atmosphere-ocea preindustrial control run (concentration driven)",
+    # Should this be the ID (lowercase) or the value which can be validated in e.g. DRS
+    # (in which case the name should probably be activity_id?)
+    "activity": "cmip",
+    "description": "DECK: pre-industrial control - pre-industrial control simulation",
     "tier": 0,
-    "activity": [
-        "cmip"
-    ],
-    "experiment_id": "picontrol"
+    "id": "picontrol",
+    "experiment_id": "piControl",
+    # Should these be the ID or the value which can be validated in the DRS?
+    "sub_experiment_id": [],
+    "experiment": "Pre-industrial control run (concentration-driven)",
+    # You can get these from the raw JSON
+    # (e.g. https://github.com/WCRP-CMIP/CMIP7-CVs/blob/main/src-data/experiment/picontrol.json),
+    # it's just a bit fiddly.
+    # Unclear to me whether these should be lowercase IDs
+    # or the actual value (which are all uppercase in CMOR at least,
+    # see https://github.com/PCMDI/cmor/blob/8f7ed1f32e22a24c186be625ff6407bda681e687/TestTables/CMIP7_CV.json#L46)
+    "required_model_components": ["aogcm"],
+    "additional_allowed_model_components": ["aer", "chem", "bgc"],
+    "start_year": null,
+    "end_year": null,
+    "min_number_yrs_per_sim": 400,
+    # Should this be the ID (lowercase) or the value which can be validated in e.g. DRS
+    "parent_activity_id": null,
+    # Should this be the ID (lowercase) or the value which can be validated in e.g. DRS
+    "parent_experiment_id": null
 }
