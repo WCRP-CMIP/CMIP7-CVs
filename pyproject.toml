@@ -1,0 +1,15 @@
+[project]
+name = "cmip7-cvs"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+requires-python = ">=3.12"
+dependencies = [
+    "requests>=2.32.5",
+    "esgvoc",
+    "icecream>=2.1.7",
+    "jupyter-console>=6.6.3",
+    "devtools>=0.12.2",
+]
+[tool.uv.sources]
+esgvoc = { git = "https://github.com/ESGF/esgf-vocab.git", branch = "integration" }
