@@ -1,8 +1,0 @@
-{
-    "@context": "000_context.jsonld",
-    "id": "scen7-hc",
-    "type": "experiment",
-    "activity": [
-        "scenariomip"
-    ]
-}

@@ -1,9 +1,0 @@
-{
-    "@context": "000_context.jsonld",
-    "id": "ligabrupt",
-    "type": "experiment",
-    "activity": [
-        "pmip"
-    ],
-    "experiment_id": "ligabrupt"
-}

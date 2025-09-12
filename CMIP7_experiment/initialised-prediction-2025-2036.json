@@ -1,9 +1,0 @@
-{
-    "@context": "000_context.jsonld",
-    "id": "initialised-prediction-2025-2036",
-    "type": "experiment",
-    "activity": [
-        "dcpp"
-    ],
-    "experiment_id": "initialised-prediction-2025-2036"
-}
