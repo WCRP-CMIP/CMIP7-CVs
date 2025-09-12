@@ -2,7 +2,8 @@
     "@context": "000_context.jsonld",
     "type": "experiment",
     # Should this be the ID (lowercase) or the value which can be validated in e.g. DRS
-    # (in which case the name should probably be activity_id?)
+    # (in which case the name should probably be activity_id?)?
+    # As I understand it, this time around each experiment can only belong to one 'lead' activity
     "activity": "cmip",
     "description": "DECK: pre-industrial control - pre-industrial control simulation",
     "tier": 0,
