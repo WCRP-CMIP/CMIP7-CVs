@@ -264,8 +264,8 @@
                 "source_collection": "dateCreated",
                 "value_type": "string"
             },
-            "realization_index": {
-                "source_collection": "realization",
+            "realisation_index": {
+                "source_collection": "realisation",
                 "value_type": "string"
             },
             "initialisation_index": {
