@@ -37,7 +37,7 @@ jobs:
           fi
 
       - name: Build and Deploy MkDocs to Production
-        uses: WCRP-CMIP/CMIP7-CVs/actions/mkdocs@main
+        uses: WCRP-CMIP/CMIPLD/actions/mkdocs@main
         with:
           source_branch: ${{ github.ref_name }}
           target_branch: 'production'
