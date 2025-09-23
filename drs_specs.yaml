@@ -1,0 +1,85 @@
+# DIRECTORY DRS SPECIFICATIONS
+directory:
+  type: directory
+  regex: "^CMIP7/([A-Za-z0-9-]+/){8}v[0-9]{8}$"
+  separator: /
+  parts:
+    - source_collection: drsSpecs
+      is_required: true
+    - source_collection: activity
+      is_required: true
+    - source_collection: institution
+      is_required: true
+    - source_collection: source
+      is_required: true
+    - source_collection: experiment
+      is_required: true
+    - source_collection: datasetVariant
+      is_required: true
+    - source_collection: region
+      is_required: true
+    - source_collection: variable
+      is_required: true
+    - source_collection: branding_suffix
+      is_required: true
+    - source_collection: gridLabel
+      is_required: true
+    - source_collection: datasetVersion
+      is_required: true
+
+# FILE NAME DRS SPECIFICATIONS
+file_name:
+  type: file_name
+  regex: '^([A-Za-z0-9-]+_){5}[A-Za-z0-9-]+(?:_[0-9]{6}-[0-9]{6})?\.nc$'
+  separator: _
+  properties:
+    extension: nc
+    extension_separator: .
+  parts:
+    - source_collection: variable
+      is_required: true
+    - source_collection: branding_suffix
+      is_required: true
+    - source_collection: reportingInterval
+      is_required: true
+    - source_collection: region
+      is_required: true
+    - source_collection: gridLabel
+      is_required: true
+    - source_collection: source
+      is_required: true
+    - source_collection: experiment
+      is_required: true
+    - source_collection: datasetVariant
+      is_required: true
+    - source_collection: timeRange
+      is_required: false
+
+# DATASET ID DRS SPECIFICATIONS
+dataset_id:
+  type: dataset_id
+  regex: '^CMIP7(\\.[A-Za-z0-9-]+){10}$'
+  separator: .
+  parts:
+    - source_collection: drsSpecs
+      is_required: true
+    - source_collection: activity
+      is_required: true
+    - source_collection: institution
+      is_required: true
+    - source_collection: source
+      is_required: true
+    - source_collection: experiment
+      is_required: true
+    - source_collection: datasetVariant
+      is_required: true
+    - source_collection: region
+      is_required: true
+    - source_collection: variable
+      is_required: true
+    - source_collection: branding_suffix
+      is_required: true
+    - source_collection: gridLabel
+      is_required: true
+    - source_collection: datasetVersion
+      is_required: true
