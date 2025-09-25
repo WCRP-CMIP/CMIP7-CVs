@@ -1,12 +1,12 @@
 {
     "Header": {
         "file": "CMIP7-CVs_experiment.json",
-        "file_creation_date": "2025-09-25T14:10:06.921039",
+        "file_creation_date": "2025-09-25T14:46:05.411038",
         "version": "fatal: No names found, cannot describe anything.",
-        "checksum": "md5: 583d2d1743b1a87e9af8c972517188b5",
+        "checksum": "md5: c8746b33af37e808091d9f70d1e756e1",
         "repo_url": "https://github.com/WCRP-CMIP/CMIP7-CVs",
         "repo_prefix": "cmip7",
-        "last_commit": "731fd4c2439c9df9fb22f48183235fac5546c7ea",
+        "last_commit": "df5471d24ff45d12aa522a8b96bd750eb58be434",
         "comment": "This is an automatically generated file. Do not edit."
     },
     "experiment": {
@@ -693,102 +693,6 @@
             "ui-label": "Coupled atmosphere-ocean preindustrial control (emissions driven)",
             "validation-key": "esm-piControl"
         },
-        "esm-scen7-h-AQ": {
-            "activity": "universal:activity/aerchemmip",
-            "alias": [],
-            "description": "1. Detailed experiment configuration Future scenario esm-scen7-h with higher aerosol and tropospheric non-methane ozone precursor emissions  2. Required model settings We encourage modelling centres to include as much atmospheric composition capability as possible. But, as a minimum, models should have tropospheric chemistry and interactive aerosols. And the experimental setup should be consistent with other scenario experiments.   3. Experiment conditions  4. Links to relevant references Fiedler et al. (in prep.) AerChemMIP2 - Unraveling the role of reactive gases, aerosols, and land use for air quality and climate change in CMIP7   5. Similarities to CMIP6 experiments None  6. Forcing differences from parent experiment Increased aerosol and tropospheric non-methane ozone precursor emissions compared to parent.",
-            "minimum-number-of-years": "104",
-            "model-realms": [
-                {
-                    "id": "universal:source-type/aer",
-                    "is-required": true
-                },
-                {
-                    "id": "universal:source-type/aogcm",
-                    "is-required": true
-                },
-                {
-                    "id": "universal:source-type/chem",
-                    "is-required": true
-                }
-            ],
-            "parent-experiment": "cmip7:experiment/esm-hist",
-            "start-date": "none",
-            "tier": "1",
-            "ui-label": "Future scenario esm-scen7-h with high aerosol and tropospheric non-methane ozone precursor emissions",
-            "validation-key": "esm-scen7-h-AQ"
-        },
-        "esm-scen7-h-Aer": {
-            "activity": "universal:activity/aerchemmip",
-            "alias": [],
-            "description": "1. Detailed experiment configuration Future scenario esm-scen7-h with higher aerosol emissions  2. Required model settings We encourage modelling centres to include as much atmospheric composition capability as possible. As a minimum, models should have prescribed or interactive aerosols. And the experimental setup should be consistent with other scenario experiments.  3. Experiment conditions  4. Links to relevant references Fiedler et al. (in prep.) AerChemMIP2 - Unraveling the role of reactive gases, aerosols, and land use for air quality and climate change in CMIP7  5. Similarities to CMIP6 experiments None  6. Forcing differences from parent experiment Increased aerosol emissions compared to parent.",
-            "minimum-number-of-years": "104",
-            "model-realms": [
-                {
-                    "id": "universal:source-type/aer",
-                    "is-required": true
-                },
-                {
-                    "id": "universal:source-type/aogcm",
-                    "is-required": true
-                },
-                {
-                    "id": "universal:source-type/chem",
-                    "is-required": false
-                }
-            ],
-            "parent-experiment": "cmip7:experiment/esm-hist",
-            "start-date": "2022",
-            "tier": "1",
-            "ui-label": "Future scenario esm-scen7-h with high aerosol emissions",
-            "validation-key": "esm-scen7-h-Aer"
-        },
-        "esm-scen7-vlho-AQ": {
-            "activity": "universal:activity/aerchemmip",
-            "alias": [],
-            "description": "1. Detailed experiment configuration Future scenario esm-scen7-vlho with higher aerosol and tropospheric non-methane ozone precursor emissions  2. Required model settings We encourage modelling centres to include as much atmospheric composition capability as possible. But, as a minimum, models should have tropospheric chemistry and interactive aerosols. And the experimental setup should be consistent with other scenario experiments.  3. Experiment conditions  4. Links to relevant references Fiedler et al. (in prep.) AerChemMIP2 - Unraveling the role of reactive gases, aerosols, and land use for air quality and climate change in CMIP7  5. Similarities to CMIP6 experiments none  6. Forcing differences from parent experiment Increased aerosol and ozone precursor emissions compared to parent.",
-            "minimum-number-of-years": "104",
-            "model-realms": [
-                {
-                    "id": "universal:source-type/aer",
-                    "is-required": true
-                },
-                {
-                    "id": "universal:source-type/aogcm",
-                    "is-required": true
-                },
-                {
-                    "id": "universal:source-type/chem",
-                    "is-required": true
-                }
-            ],
-            "parent-experiment": "cmip7:experiment/esm-hist",
-            "start-date": "2022",
-            "tier": "1",
-            "ui-label": "Future scenario esm-scen7-vlho with high aerosol and tropospheric non-methane ozone precursor emissions",
-            "validation-key": "esm-scen7-vlho-AQ"
-        },
-        "esm-scen7-vlho-Aer": {
-            "activity": "universal:activity/aerchemmip",
-            "alias": [],
-            "description": "1. Detailed experiment configuration Future scenario esm-scen7-vlho with higher aerosol emissions  2. Required model settings We encourage modelling centres to include as much atmospheric composition capability as possible. As a minimum, models should have prescribed or interactive aerosols. And the experimental setup should be consistent with other scenario experiments.   3. Experiment conditions  4. Links to relevant references Fiedler et al. (in prep.) AerChemMIP2 - Unraveling the role of reactive gases, aerosols, and land use for air quality and climate change in CMIP7  5. Similarities to CMIP6 experiments None  6. Forcing differences from parent experiment Increased aerosol emissions compared to parent.",
-            "minimum-number-of-years": "104",
-            "model-realms": [
-                {
-                    "id": "universal:source-type/aer",
-                    "is-required": true
-                },
-                {
-                    "id": "universal:source-type/aogcm",
-                    "is-required": true
-                }
-            ],
-            "parent-experiment": "cmip7:experiment/esm-hist",
-            "start-date": "none",
-            "tier": "1",
-            "ui-label": "Future scenario esm-scen7-vlho  with high aerosol emissions",
-            "validation-key": "esm-scen7-vlho-Aer"
-        },
         "esm-up2p0": {
             "activity": "universal:activity/tipmip",
             "alias": [],
@@ -846,35 +750,6 @@
             "tier": "1",
             "ui-label": "Zero-emission run starting at 2 degree C GWL",
             "validation-key": "esm-up2p0-gwl2p0"
-        },
-        "highres-future-scen7-mc": {
-            "activity": "universal:activity/highresmip",
-            "alias": [],
-            "description": "HighResMIP2 Tier 2: highres-future-scen7-mc  Conduct coupled future projection simulations (present-2100) initialized from the end of the hist-1950 simulation, using scenario forcing. scen7-mc is the CMIP7 scenario (medium is recommended)  For further details, please refer to: Roberts, M. J., Reed, K. A., Bao, Q., Barsugli, J. J., Camargo, S. J., Caron, L. P., … & Zhao, M. (2025). High-Resolution Model Intercomparison Project phase 2 (HighResMIP2) towards CMIP7. Geoscientific Model Development, 18, 1307–1332  [High-Resolution Model Intercomparison Project Phase 2 (HighResMIP2) towards CMIP7.pdf](https://github.com/user-attachments/files/19401230/High-Resolution.Model.Intercomparison.Project.Phase.2.HighResMIP2.towards.CMIP7.pdf)  Webpage: https://highresmip.org/experiments/experiment_cmip7/",
-            "minimum-number-of-years": "78",
-            "model-realms": [
-                {
-                    "id": "universal:source-type/aogcm",
-                    "is-required": true
-                },
-                {
-                    "id": "universal:source-type/aer",
-                    "is-required": false
-                },
-                {
-                    "id": "universal:source-type/bgc",
-                    "is-required": false
-                },
-                {
-                    "id": "universal:source-type/chem",
-                    "is-required": false
-                }
-            ],
-            "parent-experiment": "cmip7:experiment/none",
-            "start-date": "1950-01-01",
-            "tier": "2",
-            "ui-label": "Coupled future medium scenario",
-            "validation-key": "highres-future-scen7-mc"
         },
         "highres-yr2020": {
             "activity": "universal:activity/highresmip",
@@ -1850,102 +1725,6 @@
             "tier": 0,
             "ui-label": "Coupled atmosphere-ocea preindustrial control run (concentration driven)",
             "validation-key": "piControl"
-        },
-        "scen7-hc-AQ": {
-            "activity": "universal:activity/aerchemmip",
-            "alias": [],
-            "description": "1. Detailed experiment configuration Future scenario scen7-hc with higher aerosol and tropospheric non-methane ozone precursor emissions  2. Required model settings We encourage modelling centres to include as much atmospheric composition capability as possible. But, as a minimum, models should have tropospheric chemistry and interactive aerosols. And the experimental setup should be consistent with other scenario experiments.  3.  Experiment conditions  4. Links to relevant references Fiedler et al. (in prep.) AerChemMIP2 - Unraveling the role of reactive gases, aerosols, and land use for air quality and climate change in CMIP7  5. Similarities to CMIP6 experiments None  6. Forcing differences from parent experiment Increased aerosol and tropospheric non-methane ozone precursor emissions compared to parent.",
-            "minimum-number-of-years": "104",
-            "model-realms": [
-                {
-                    "id": "universal:source-type/aer",
-                    "is-required": true
-                },
-                {
-                    "id": "universal:source-type/aogcm",
-                    "is-required": true
-                },
-                {
-                    "id": "universal:source-type/chem",
-                    "is-required": true
-                }
-            ],
-            "parent-experiment": "cmip7:experiment/historical",
-            "start-date": "2022",
-            "tier": "1",
-            "ui-label": "Future scenario scen7-hc with high aerosol and tropospheric non-methane ozone precursor emissions",
-            "validation-key": "scen7-hc-AQ"
-        },
-        "scen7-hc-Aer": {
-            "activity": "universal:activity/aerchemmip",
-            "alias": [],
-            "description": "1. Detailed experiment configuration Future scenario scen7-hc with higher aerosol emissions  2. Required model settings We encourage modelling centres to include as much atmospheric composition capability as possible. As a minimum, models should have prescribed or interactive aerosols. And the experimental setup should be consistent with other scenario experiments.  3. Experiment conditions  4. Links to relevant references Fiedler et al. (in prep.) AerChemMIP2 - Unraveling the role of reactive gases, aerosols, and land use for air quality and climate change in CMIP7  5. Similarities to CMIP6 experiments None  6. Forcing differences from parent experiment Increased aerosol emissions compared to parent.",
-            "minimum-number-of-years": "104",
-            "model-realms": [
-                {
-                    "id": "universal:source-type/aer",
-                    "is-required": true
-                },
-                {
-                    "id": "universal:source-type/aogcm",
-                    "is-required": true
-                },
-                {
-                    "id": "universal:source-type/chem",
-                    "is-required": false
-                }
-            ],
-            "parent-experiment": "cmip7:experiment/historical",
-            "start-date": "2022",
-            "tier": "1",
-            "ui-label": "Future scenario scen7-hc with high aerosol emissions",
-            "validation-key": "scen7-hc-Aer"
-        },
-        "scen7-vlhoc-AQ": {
-            "activity": "universal:activity/aerchemmip",
-            "alias": [],
-            "description": "1. Detailed experiment configuration Future scenario scen7-vlhoc with higher aerosol and tropospheric non-methane ozone precursor emissions  2. Required model settings We encourage modelling centres to include as much atmospheric composition capability as possible. But, as a minimum, models should have tropospheric chemistry and interactive aerosols. And the experimental setup should be consistent with other scenario experiments.  3. Experiment conditions  4. Links to relevant references Fiedler et al. (in prep.) AerChemMIP2 - Unraveling the role of reactive gases, aerosols, and land use for air quality and climate change in CMIP7  5. Similarities to CMIP6 experiments none  6. Forcing differences from parent experiment Increased aerosol and ozone precursor emissions compared to parent.",
-            "minimum-number-of-years": "104",
-            "model-realms": [
-                {
-                    "id": "universal:source-type/aer",
-                    "is-required": true
-                },
-                {
-                    "id": "universal:source-type/aogcm",
-                    "is-required": true
-                },
-                {
-                    "id": "universal:source-type/chem",
-                    "is-required": true
-                }
-            ],
-            "parent-experiment": "cmip7:experiment/historical",
-            "start-date": "2022",
-            "tier": "1",
-            "ui-label": "Future scenario scen7-vlho with high aerosol and tropospheric non-methane ozone precursor emissions",
-            "validation-key": "scen7-vlhoc-AQ"
-        },
-        "scen7-vlhoc-Aer": {
-            "activity": "universal:activity/aerchemmip",
-            "alias": [],
-            "description": "1. Detailed experiment configuration Future scenario scen7-vlhoc with higher aerosol emissions  2 . Required model settings We encourage modelling centres to include as much atmospheric composition capability as possible. As a minimum, models should have prescribed or interactive aerosols. And the experimental setup should be consistent with other scenario experiments.  3. Experiment conditions  4. Links to relevant references Fiedler et al. (in prep.) AerChemMIP2 - Unraveling the role of reactive gases, aerosols, and land use for air quality and climate change in CMIP7  5. Similarities to CMIP6 experiments None  6. Forcing differences from parent experiment Increased aerosol emissions compared to parent.",
-            "minimum-number-of-years": "104",
-            "model-realms": [
-                {
-                    "id": "universal:source-type/aer",
-                    "is-required": true
-                },
-                {
-                    "id": "universal:source-type/aogcm",
-                    "is-required": true
-                }
-            ],
-            "parent-experiment": "cmip7:experiment/historical",
-            "start-date": "none",
-            "tier": "1",
-            "ui-label": "Future scenario scen7-vlhoc with high aerosol emissions",
-            "validation-key": "scen7-vlhoc-Aer"
         },
         "spinup-1950": {
             "activity": "universal:activity/highresmip",

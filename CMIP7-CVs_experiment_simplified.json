@@ -1,12 +1,12 @@
 {
     "Header": {
         "file": "CMIP7-CVs_experiment_simplified.json",
-        "file_creation_date": "2025-09-25T14:10:05.366147",
+        "file_creation_date": "2025-09-25T14:46:02.504170",
         "version": "fatal: No names found, cannot describe anything.",
-        "checksum": "md5: 683a0f70e4a637fe374217bcc0a6e915",
+        "checksum": "md5: a6e739c3b96c1066533647076ff625ab",
         "repo_url": "https://github.com/WCRP-CMIP/CMIP7-CVs",
         "repo_prefix": "cmip7",
-        "last_commit": "731fd4c2439c9df9fb22f48183235fac5546c7ea",
+        "last_commit": "df5471d24ff45d12aa522a8b96bd750eb58be434",
         "comment": "This is an automatically generated file. Do not edit."
     },
     "experiment_simplified": {
@@ -36,13 +36,8 @@
         "esm-flat10-zec": "zero-emissions commitment CO2 experiment",
         "esm-hist": "Simulation of the recent past (emissions driven)",
         "esm-piControl": "Coupled atmosphere-ocean preindustrial control (emissions driven)",
-        "esm-scen7-h-AQ": "Future scenario esm-scen7-h with high aerosol and tropospheric non-methane ozone precursor emissions",
-        "esm-scen7-h-Aer": "Future scenario esm-scen7-h with high aerosol emissions",
-        "esm-scen7-vlho-AQ": "Future scenario esm-scen7-vlho with high aerosol and tropospheric non-methane ozone precursor emissions",
-        "esm-scen7-vlho-Aer": "Future scenario esm-scen7-vlho  with high aerosol emissions",
         "esm-up2p0": "Ramp up with constant CO2 emissions leading to 2 degree C/century warming",
         "esm-up2p0-gwl2p0": "Zero-emission run starting at 2 degree C GWL",
-        "highres-future-scen7-mc": "Coupled future medium scenario",
         "highres-yr2020": "HighResMIP2",
         "highresSST-p2K-pat": "Atmosphere-only warming levels - highresSST-p2K-pat (patterned)",
         "highresSST-p4K-pat": "Atmosphere-only warming levels - highresSST-p4K-pat (patterned)",
@@ -86,10 +81,6 @@
         "piClim-histall": "historical and future transient effective radiative forcing from all forcers",
         "piClim-p4K": "Pre-industrial climatology plus uniform 4k sea surface temperature",
         "piControl": "Coupled atmosphere-ocea preindustrial control run (concentration driven)",
-        "scen7-hc-AQ": "Future scenario scen7-hc with high aerosol and tropospheric non-methane ozone precursor emissions",
-        "scen7-hc-Aer": "Future scenario scen7-hc with high aerosol emissions",
-        "scen7-vlhoc-AQ": "Future scenario scen7-vlho with high aerosol and tropospheric non-methane ozone precursor emissions",
-        "scen7-vlhoc-Aer": "Future scenario scen7-vlhoc with high aerosol emissions",
         "spinup-1950": "Coupled control spinup-1950"
     }
 }
