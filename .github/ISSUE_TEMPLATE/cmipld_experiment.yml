@@ -99,17 +99,8 @@ body:
     attributes:
         label: Parent Experiment
         description: |
-            Select the experiment that provides initial conditions. Expected ScenarioMIP experiments are listed in the table below.
-            If the parent experiment id required is one of these scenarios please enter this text in the custom parent box below.
-            | Scenario | emissions driven | emissions driven extension | concentration driven | concentration driven extension |
-            | :--- | :---: | :---: | :---: | :---: | 
-            | high | `esm-scen7-h` | `esm-scen7-h-ext` | `scen7-hc` | `scen7-hc-ext` |
-            | high overshoot extensions  |   | `esm-scen7-h-ext-os` |  | `scen7-hc-ext-os` |
-            | medium | `esm-scen7-m` | `esm-scen7-m-ext` | `scen7-mc` | `scen7-mc-ext` |
-            | medium-low | `esm-scen7-ml` | `esm-scen7-ml-ext` | `scen7-mlc` | `scen7-mlc-ext` |
-            | low | `esm-scen7-l` | `esm-scen7-l-ext` | `scen7-lc` | `scen7-lc-ext` |
-            | very low, low overshoot | `esm-scen7-vllo` | `esm-scen7-vllo-ext` | `scen7-vlloc` | `scen7-vlloc-ext` |
-            | very low, high overshoot | `esm-scen7-vlho` | `esm-scen7-vlho-ext` | `scen7-vlhoc` | `scen7-vlhoc-ext` |
+            Select the experiment that provides initial conditions. 
+            Please note that scenarioMIP experiment names are under discussion and are likely to change
 
             Please select a parent from the list below. 
             
