@@ -1,12 +1,12 @@
 {
     "Header": {
         "file": "CMIP7-CVs_experiment.json",
-        "file_creation_date": "2025-08-02T17:27:30.067220",
+        "file_creation_date": "2025-09-25T14:10:06.921039",
         "version": "fatal: No names found, cannot describe anything.",
-        "checksum": "md5: 557a3d49ae8035eba15c00d72ce36dd2",
+        "checksum": "md5: 583d2d1743b1a87e9af8c972517188b5",
         "repo_url": "https://github.com/WCRP-CMIP/CMIP7-CVs",
         "repo_prefix": "cmip7",
-        "last_commit": "aace020a85b0faf0a1aa1a0ed46dcd45e8157902",
+        "last_commit": "731fd4c2439c9df9fb22f48183235fac5546c7ea",
         "comment": "This is an automatically generated file. Do not edit."
     },
     "experiment": {
@@ -693,17 +693,6 @@
             "ui-label": "Coupled atmosphere-ocean preindustrial control (emissions driven)",
             "validation-key": "esm-piControl"
         },
-        "esm-scen7-h": {
-            "activity": "universal:activity/scenariomip",
-            "alias": [],
-            "description": "High emission scenario to explore potential high-end impacts",
-            "model-realms": [],
-            "parent-experiment": "cmip7:experiment/esm-hist",
-            "start-date": "none",
-            "tier": 0,
-            "ui-label": "High Scenario",
-            "validation-key": "esm-scen7-h"
-        },
         "esm-scen7-h-AQ": {
             "activity": "universal:activity/aerchemmip",
             "alias": [],
@@ -754,105 +743,6 @@
             "ui-label": "Future scenario esm-scen7-h with high aerosol emissions",
             "validation-key": "esm-scen7-h-Aer"
         },
-        "esm-scen7-h-ext": {
-            "activity": "universal:activity/scenariomip",
-            "alias": [],
-            "description": "High emission scenario extension to explore potential high-end impacts",
-            "model-realms": [],
-            "parent-experiment": "cmip7:experiment/esm-scen7-h",
-            "start-date": "none",
-            "tier": 0,
-            "ui-label": "High Scenario Extension",
-            "validation-key": "esm-scen7-h-ext"
-        },
-        "esm-scen7-h-ext-os": {
-            "activity": "universal:activity/scenariomip",
-            "alias": [],
-            "description": "High emission scenario overshoot extension to explore potential high-end impacts",
-            "model-realms": [],
-            "parent-experiment": "cmip7:experiment/esm-scen7-h",
-            "start-date": "none",
-            "tier": 0,
-            "ui-label": "High Scenario Overshoot Extension",
-            "validation-key": "esm-scen7-h-ext-os"
-        },
-        "esm-scen7-l": {
-            "activity": "universal:activity/scenariomip",
-            "alias": [],
-            "description": "Scenario consistent with staying likely below 2 degrees C",
-            "model-realms": [],
-            "parent-experiment": "cmip7:experiment/esm-hist",
-            "start-date": "none",
-            "tier": 0,
-            "ui-label": "Low Scenario",
-            "validation-key": "esm-scen7-l"
-        },
-        "esm-scen7-l-ext": {
-            "activity": "universal:activity/scenariomip",
-            "alias": [],
-            "description": "Scenario extension consistent with staying likely below 2 degrees C",
-            "model-realms": [],
-            "parent-experiment": "cmip7:experiment/esm-scen7-l",
-            "start-date": "none",
-            "tier": 0,
-            "ui-label": "Low Scenario Extension",
-            "validation-key": "esm-scen7-l-ext"
-        },
-        "esm-scen7-m": {
-            "activity": "universal:activity/scenariomip",
-            "alias": [],
-            "description": "Medium emission scenario consistent with current policies",
-            "model-realms": [],
-            "parent-experiment": "cmip7:experiment/esm-hist",
-            "start-date": "none",
-            "tier": 0,
-            "ui-label": "Medium Scenario",
-            "validation-key": "esm-scen7-m"
-        },
-        "esm-scen7-m-ext": {
-            "activity": "universal:activity/scenariomip",
-            "alias": [],
-            "description": "Medium emission scenario extension consistent with current policies",
-            "model-realms": [],
-            "parent-experiment": "cmip7:experiment/esm-scen7-m",
-            "start-date": "none",
-            "tier": 0,
-            "ui-label": "Medium Scenario Extension",
-            "validation-key": "esm-scen7-m-ext"
-        },
-        "esm-scen7-ml": {
-            "activity": "universal:activity/scenariomip",
-            "alias": [],
-            "description": "Scenario with delayed increase in mitigation effort, insufficient to meet Paris Agreement objectives",
-            "model-realms": [],
-            "parent-experiment": "cmip7:experiment/esm-hist",
-            "start-date": "none",
-            "tier": 0,
-            "ui-label": "Medium-Low Scenario",
-            "validation-key": "esm-scen7-ml"
-        },
-        "esm-scen7-ml-ext": {
-            "activity": "universal:activity/scenariomip",
-            "alias": [],
-            "description": "Extension to scenario with delayed increase in mitigation effort, insufficient to meet Paris Agreement objectives",
-            "model-realms": [],
-            "parent-experiment": "cmip7:experiment/esm-scen7-ml",
-            "start-date": "none",
-            "tier": 0,
-            "ui-label": "Medium Low Scenario Extension",
-            "validation-key": "esm-scen7-ml-ext"
-        },
-        "esm-scen7-vlho": {
-            "activity": "universal:activity/scenariomip",
-            "alias": [],
-            "description": "Scenario with similar endof-century temperature impact to VLLO, but with less aggressive near-term mitigation and large reliance on net negative emissions, resulting in a higher overshoot.",
-            "model-realms": [],
-            "parent-experiment": "cmip7:experiment/esm-hist",
-            "start-date": "none",
-            "tier": 0,
-            "ui-label": "Very Low Scenario after High Overshoot",
-            "validation-key": "esm-scen7-vlho"
-        },
         "esm-scen7-vlho-AQ": {
             "activity": "universal:activity/aerchemmip",
             "alias": [],
@@ -898,39 +788,6 @@
             "tier": "1",
             "ui-label": "Future scenario esm-scen7-vlho  with high aerosol emissions",
             "validation-key": "esm-scen7-vlho-Aer"
-        },
-        "esm-scen7-vlho-ext": {
-            "activity": "universal:activity/scenariomip",
-            "alias": [],
-            "description": "Extension to scenario with similar end-of-century temperature impact to VLLO, but with less aggressive near-term mitigation and large reliance on net negative emissions, resulting in a higher overshoot.",
-            "model-realms": [],
-            "parent-experiment": "cmip7:experiment/esm-scen7-vlho",
-            "start-date": "none",
-            "tier": 0,
-            "ui-label": "Very Low Scenario with Limited Overshoot Extension",
-            "validation-key": "esm-scen7-vlho-ext"
-        },
-        "esm-scen7-vllo": {
-            "activity": "universal:activity/scenariomip",
-            "alias": [],
-            "description": "Scenario consistent with limiting warming to 1.5 degree C by 2100 AD with limited overshoot (as low as plausible) of 1.5 degree C",
-            "model-realms": [],
-            "parent-experiment": "cmip7:experiment/esm-hist",
-            "start-date": "none",
-            "tier": 0,
-            "ui-label": "Very Low Scenario with Limited Overshoot",
-            "validation-key": "esm-scen7-vllo"
-        },
-        "esm-scen7-vllo-ext": {
-            "activity": "universal:activity/scenariomip",
-            "alias": [],
-            "description": "Extension to scenario consistent with limiting warming to 1.5 degree C by 2100 AD with limited overshoot (as low as plausible) of 1.5 degree C",
-            "model-realms": [],
-            "parent-experiment": "cmip7:experiment/esm-scen7-vllo",
-            "start-date": "none",
-            "tier": 0,
-            "ui-label": "Very Low Scenario with Limited Overshoot Extension",
-            "validation-key": "esm-scen7-vllo-ext"
         },
         "esm-up2p0": {
             "activity": "universal:activity/tipmip",
@@ -1994,17 +1851,6 @@
             "ui-label": "Coupled atmosphere-ocea preindustrial control run (concentration driven)",
             "validation-key": "piControl"
         },
-        "scen7-hc": {
-            "activity": "universal:activity/scenariomip",
-            "alias": [],
-            "description": "High concentration driven emission scenario to explore potential high-end impacts",
-            "model-realms": [],
-            "parent-experiment": "cmip7:experiment/historical",
-            "start-date": "none",
-            "tier": 0,
-            "ui-label": "High, Concentration Driven Scenario",
-            "validation-key": "scen7-hc"
-        },
         "scen7-hc-AQ": {
             "activity": "universal:activity/aerchemmip",
             "alias": [],
@@ -2055,105 +1901,6 @@
             "ui-label": "Future scenario scen7-hc with high aerosol emissions",
             "validation-key": "scen7-hc-Aer"
         },
-        "scen7-hc-ext": {
-            "activity": "universal:activity/scenariomip",
-            "alias": [],
-            "description": "High concentration driven emission scenario extension to explore potential high-end impacts",
-            "model-realms": [],
-            "parent-experiment": "cmip7:experiment/scen7-hc",
-            "start-date": "none",
-            "tier": 0,
-            "ui-label": "High, Concentration Driven Scenario Extension",
-            "validation-key": "scen7-hc-ext"
-        },
-        "scen7-hc-ext-os": {
-            "activity": "universal:activity/scenariomip",
-            "alias": [],
-            "description": "High concentration driven emission scenario overshoot extension to explore potential high-end impacts",
-            "model-realms": [],
-            "parent-experiment": "cmip7:experiment/scen7-hc",
-            "start-date": "none",
-            "tier": 0,
-            "ui-label": "High, Concentration Driven Scenario Overshoot Extension",
-            "validation-key": "scen7-hc-ext-os"
-        },
-        "scen7-lc": {
-            "activity": "universal:activity/scenariomip",
-            "alias": [],
-            "description": "Concentration driven scenario consistent with staying likely below 2 degrees C",
-            "model-realms": [],
-            "parent-experiment": "cmip7:experiment/historical",
-            "start-date": "none",
-            "tier": 0,
-            "ui-label": "Low, Concentration Driven Scenario",
-            "validation-key": "scen7-lc"
-        },
-        "scen7-lc-ext": {
-            "activity": "universal:activity/scenariomip",
-            "alias": [],
-            "description": "Extension to concentration driven scenario consistent with staying likely below 2 degrees C",
-            "model-realms": [],
-            "parent-experiment": "cmip7:experiment/scen7-lc",
-            "start-date": "none",
-            "tier": 0,
-            "ui-label": "Low, Concentration Driven Scenario Extension",
-            "validation-key": "scen7-lc-ext"
-        },
-        "scen7-mc": {
-            "activity": "universal:activity/scenariomip",
-            "alias": [],
-            "description": "Medium concentration driven emission scenario consistent with current policies",
-            "model-realms": [],
-            "parent-experiment": "cmip7:experiment/historical",
-            "start-date": "none",
-            "tier": 0,
-            "ui-label": "Medium, Concentration Driven Scenario",
-            "validation-key": "scen7-mc"
-        },
-        "scen7-mc-ext": {
-            "activity": "universal:activity/scenariomip",
-            "alias": [],
-            "description": "Medium concentration driven emission scenario extension consistent with current policies",
-            "model-realms": [],
-            "parent-experiment": "cmip7:experiment/scen7-mc",
-            "start-date": "none",
-            "tier": 0,
-            "ui-label": "Medium, Concentration Driven Scenario Extension",
-            "validation-key": "scen7-mc-ext"
-        },
-        "scen7-mlc": {
-            "activity": "universal:activity/scenariomip",
-            "alias": [],
-            "description": "Concentration driven scenario with delayed increase in mitigation effort, insufficient to meet Paris Agreement objectives",
-            "model-realms": [],
-            "parent-experiment": "cmip7:experiment/historical",
-            "start-date": "none",
-            "tier": 0,
-            "ui-label": "Medium, Concentration Driven Scenario",
-            "validation-key": "scen7-mlc"
-        },
-        "scen7-mlc-ext": {
-            "activity": "universal:activity/scenariomip",
-            "alias": [],
-            "description": "Extension to concentration driven scenario with delayed increase in mitigation effort, insufficient to meet Paris Agreement objectives",
-            "model-realms": [],
-            "parent-experiment": "cmip7:experiment/scen7-mlc",
-            "start-date": "none",
-            "tier": 0,
-            "ui-label": "Medium, Concentration Driven Scenario Extension",
-            "validation-key": "scen7-mlc-ext"
-        },
-        "scen7-vlhoc": {
-            "activity": "universal:activity/scenariomip",
-            "alias": [],
-            "description": "Concentration driven scenario with similar end-of-century temperature impact to VLLO, but with less aggressive near-term mitigation and large reliance on net negative emissions, resulting in a higher overshoot.",
-            "model-realms": [],
-            "parent-experiment": "cmip7:experiment/historical",
-            "start-date": "none",
-            "tier": 0,
-            "ui-label": "Very Low Concentration Driven Scenario after High Overshoot",
-            "validation-key": "scen7-vlhoc"
-        },
         "scen7-vlhoc-AQ": {
             "activity": "universal:activity/aerchemmip",
             "alias": [],
@@ -2199,39 +1946,6 @@
             "tier": "1",
             "ui-label": "Future scenario scen7-vlhoc with high aerosol emissions",
             "validation-key": "scen7-vlhoc-Aer"
-        },
-        "scen7-vlhoc-ext": {
-            "activity": "universal:activity/scenariomip",
-            "alias": [],
-            "description": "Extension to Concentration driven scenario with similar end-of-century temperature impact to VLLO, but with less aggressive near-term mitigation and large reliance on net negative emissions, resulting in a higher overshoot.",
-            "model-realms": [],
-            "parent-experiment": "cmip7:experiment/scen7-vlhoc",
-            "start-date": "none",
-            "tier": 0,
-            "ui-label": "Very Low Concentration Driven Scenario Extension after High Overshoot",
-            "validation-key": "scen7-vlhoc-ext"
-        },
-        "scen7-vlloc": {
-            "activity": "universal:activity/scenariomip",
-            "alias": [],
-            "description": "Concentration driven scenario consistent with limiting warming to 1.5 degree C by 2100 AD with limited overshoot (as low as plausible) of 1.5 degree C",
-            "model-realms": [],
-            "parent-experiment": "cmip7:experiment/historical",
-            "start-date": "none",
-            "tier": 0,
-            "ui-label": "Very Low Concentration Driven Scenario with Limited Overshoot",
-            "validation-key": "scen7-vlloc"
-        },
-        "scen7-vlloc-ext": {
-            "activity": "universal:activity/scenariomip",
-            "alias": [],
-            "description": "Extension to Concentration driven scenario consistent with limiting warming to 1.5 degree C by 2100 AD with limited overshoot (as low as plausible) of 1.5 degree C",
-            "model-realms": [],
-            "parent-experiment": "cmip7:experiment/scen7-vlloc",
-            "start-date": "none",
-            "tier": 0,
-            "ui-label": "Very Low, Concentration Driven Scenario Extension with Limited Overshoot",
-            "validation-key": "scen7-vlloc-ext"
         },
         "spinup-1950": {
             "activity": "universal:activity/highresmip",
