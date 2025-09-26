@@ -1,0 +1,41 @@
+{
+    "id": "historical",
+    "validation-key": "historical",
+    "ui-label": "Simulation of the recent past (concentration driven)",
+    "description": "DECK: historical \n Simulation of the recent past",
+    "activity": [
+        "cmip"
+    ],
+    "alias": [],
+    "end": 2021,
+    "min-number-yrs-per-sim": 172,
+    "model-realms": [
+        {
+            "id": "aogcm",
+            "is-required": true
+        },
+        {
+            "id": "aer",
+            "is-required": false
+        },
+        {
+            "id": "chem",
+            "is-required": false
+        },
+        {
+            "id": "bgc",
+            "is-required": false
+        }
+    ],
+    "parent-experiment": [
+        "picontrol"
+    ],
+    "start": 1850,
+    "start-date": "none",
+    "tier": 0,
+    "@context": "_context_",
+    "type": [
+        "wcrp:experiment",
+        "cmip7"
+    ]
+}

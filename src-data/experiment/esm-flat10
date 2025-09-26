@@ -1,0 +1,43 @@
+{
+    "id": "esm-flat10",
+    "validation-key": "esm-flat10",
+    "ui-label": "10 PgC/yr constant CO2 emissions experiment",
+    "description": "esm-flat10 is newly introduced for CMIP7 as an emissions-driven idealised experiment to quantify sensitivity of the earth system to CO2 emissions. It requires fully-coupled AOGCM and BGC models with carbon cycle “emissions-driven”  The esm-flat10 experiment branches from a stable esm-piControl simulation, with a constant annual prescribed anthropogenic flux of carbon of 10PgC/year into the atmosphere, with globally homogenous emissions for initial (minimum) period, 0-150 years. Longer runs - 300 years – are recommended.  It serves as an emissions-driven experiment to diagnose the Transient Climate Response to cumulative Emissions (TCRE), which is the warming from pre-industrial levels observed after the emission of 1000PgC in a transient scenario.  Used with the partner experiments esm-flat10-zec and esm-flat10-cdr it forms a vital part of assessment of TCRE, ZEC and reversibility. In particular these experiments make assessment of ZEC easier than CMIP6 because: the experiment is emissions-driven from the outset and does not require a change in configuration at the branch point and the branch point is common across all models.  more details and analysis can be found here: https://egusphere.copernicus.org/preprints/2023/egusphere-2023-2127/ https://egusphere.copernicus.org/preprints/2024/egusphere-2024-3356/",
+    "activity": [
+        "c4mip"
+    ],
+    "alias": [],
+    "minimum-number-of-years": "150",
+    "model-realms": [
+        {
+            "id": "aogcm",
+            "is-required": true
+        },
+        {
+            "id": "bgc",
+            "is-required": true
+        },
+        {
+            "id": "aer",
+            "is-required": false
+        },
+        {
+            "id": "chem",
+            "is-required": false
+        },
+        {
+            "id": "ism",
+            "is-required": false
+        }
+    ],
+    "parent-experiment": [
+        "esm-picontrol"
+    ],
+    "start-date": "none",
+    "tier": "1",
+    "@context": "_context_",
+    "type": [
+        "wcrp:experiment",
+        "cmip7"
+    ]
+}

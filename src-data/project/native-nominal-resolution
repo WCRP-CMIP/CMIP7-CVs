@@ -1,0 +1,29 @@
+{
+    "id": "nominal-resolution",
+    "validation-key": "",
+    "ui-label": "",
+    "description": "",
+    "nominal-resolution": [
+        "0.5km",
+        "1km",
+        "10km",
+        "100km",
+        "1000km",
+        "10000km",
+        "1x1degree",
+        "2.5km",
+        "25km",
+        "250km",
+        "2500km",
+        "5km",
+        "50km",
+        "500km",
+        "5000km"
+    ],
+    "@context": "_context_",
+    "type": [
+        "cmip7",
+        "wcrp:project",
+        "wcrp:nominal_resolution"
+    ]
+}

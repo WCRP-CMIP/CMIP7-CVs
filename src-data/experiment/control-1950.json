@@ -1,0 +1,39 @@
+{
+    "id": "control-1950",
+    "validation-key": "control-1950",
+    "ui-label": "Coupled control-1950",
+    "description": "Start from the end of the spinup-1950 simulation, using constant 1950s forcings. Simulate for at least 100 years, ideally 150 years.  References: Roberts, M. J., Reed, K. A., Bao, Q., Barsugli, J. J., Camargo, S. J., Caron, L. P., … & Zhao, M. (2025). High-Resolution Model Intercomparison Project Phase 2 (HighResMIP2) towards CMIP7. Geoscientific Model Development, 18, 1307–1332 [High-Resolution Model Intercomparison Project Phase 2 (HighResMIP2) towards CMIP7.pdf](https://github.com/user-attachments/files/19393590/High-Resolution.Model.Intercomparison.Project.Phase.2.HighResMIP2.towards.CMIP7.pdf) Webpage: https://highresmip.org/experiments/experiment_cmip7/",
+    "activity": [
+        "highresmip"
+    ],
+    "alias": [],
+    "minimum-number-of-years": "100",
+    "model-realms": [
+        {
+            "id": "aogcm",
+            "is-required": true
+        },
+        {
+            "id": "aer",
+            "is-required": false
+        },
+        {
+            "id": "bgc",
+            "is-required": false
+        },
+        {
+            "id": "chem",
+            "is-required": false
+        }
+    ],
+    "parent-experiment": [
+        "spinup-1950"
+    ],
+    "start-date": "1950-01-01",
+    "tier": "1",
+    "@context": "_context_",
+    "type": [
+        "wcrp:experiment",
+        "cmip7"
+    ]
+}

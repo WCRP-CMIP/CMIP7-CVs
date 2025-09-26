@@ -1,0 +1,43 @@
+{
+    "id": "esm-flat10-zec",
+    "validation-key": "esm-flat10-zec",
+    "ui-label": "zero-emissions commitment CO2 experiment",
+    "description": "esm-flat10-zec is newly introduced for CMIP7 as an emissions-driven idealised experiment to quantify sensitivity of the earth system to CO2 emissions.  It requires fully-coupled AOGCM and BGC models with carbon cycle “emissions-driven”  The esm-flat10-zec experiment branches from year 100 of the esm-flat10 simulation, but with CO2 emissions set to zero for initial (minimum) period of 200 years. Longer runs are useful.  It serves as an emissions-driven experiment to diagnose the Zero Emissions Commitment (ZEC), which is the continued warming (or cooling) following a sudden cessation of CO2 emissions.  Used with the partner experiments esm-flat10 and esm-flat10-cdr it forms a vital part of assessment of TCRE, ZEC and reversibility. In particular these experiments make assessment of ZEC easier than CMIP6 because: the experiment is emissions-driven from the outset and does not require a change in configuration at the branch point and the branch point is common across all models.  more details and analysis can be found here: https://egusphere.copernicus.org/preprints/2023/egusphere-2023-2127/ https://egusphere.copernicus.org/preprints/2024/egusphere-2024-3356/  this experiment is an evolution of the ZECMIP simulations from CMIP6: https://gmd.copernicus.org/articles/12/4375/2019/ , https://bg.copernicus.org/articles/17/2987/2020/",
+    "activity": [
+        "c4mip"
+    ],
+    "alias": [],
+    "minimum-number-of-years": "200",
+    "model-realms": [
+        {
+            "id": "aogcm",
+            "is-required": true
+        },
+        {
+            "id": "bgc",
+            "is-required": true
+        },
+        {
+            "id": "aer",
+            "is-required": false
+        },
+        {
+            "id": "chem",
+            "is-required": false
+        },
+        {
+            "id": "ism",
+            "is-required": false
+        }
+    ],
+    "parent-experiment": [
+        "esm-flat10"
+    ],
+    "start-date": "none",
+    "tier": "1",
+    "@context": "_context_",
+    "type": [
+        "wcrp:experiment",
+        "cmip7"
+    ]
+}

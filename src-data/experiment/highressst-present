@@ -1,0 +1,39 @@
+{
+    "id": "highressst-present",
+    "validation-key": "highresSST-present",
+    "ui-label": "AMIP historic",
+    "description": "1. Experiment Configuration Conduct an atmosphere-only simulation similar to CMIP AMIP for the period 1980–2022 using high-resolution daily forcing  2. Model Settings Initial Conditions: Use ERA5 for atmosphere and land initial conditions on 1 January 1980. Spinup: Treat 1980–1981 as land surface spinup. Analyze 1982–2022. Forcing Interpolation: Interpolate daily mean fields (no diurnal cycle) to the model grid.  3. Forcing Data Use 0.05° ESA CCI SST v3.0 and OSI SAF sea ice concentration instead of the 1/4° HadISST.2.2.0 dataset.  4. Key Differences from CMIP6 HighResMIP SST Forcing: Upgraded to 0.05° ESA CCI SST. Land Spinup: 2 years recommended; alternative methods allowed if documented.  For details, see: Roberts et al. (2025). High-Resolution Model Intercomparison Project phase 2 (HighResMIP2) towards CMIP7. Geoscientific Model Development, 18, 1307–1332",
+    "activity": [
+        "highresmip"
+    ],
+    "alias": [],
+    "minimum-number-of-years": "43",
+    "model-realms": [
+        {
+            "id": "agcm",
+            "is-required": true
+        },
+        {
+            "id": "aer",
+            "is-required": false
+        },
+        {
+            "id": "bgc",
+            "is-required": false
+        },
+        {
+            "id": "chem",
+            "is-required": false
+        }
+    ],
+    "parent-experiment": [
+        "none"
+    ],
+    "start-date": "1980-01-01",
+    "tier": "1",
+    "@context": "_context_",
+    "type": [
+        "wcrp:experiment",
+        "cmip7"
+    ]
+}

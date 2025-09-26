@@ -1,0 +1,39 @@
+{
+    "id": "spinup-1950",
+    "validation-key": "spinup-1950",
+    "ui-label": "Coupled control spinup-1950",
+    "description": "This experiment is designed to provide a multidecadal spinup for coupled model simulations. Its final output will serve as initial conditions for the control-1950, hist-1950, and highres-4xCO2 scenarios. The setup follows the same design as HighResMIP1, typically run for 50 years starting from the initial conditions.  For solar and ozone forcing, we suggest using an 11-year climatology centered on 1950 to average the solar cycle. For greenhouse gases (GHG), concentrations can be set to 1950 values as defined in CMIP. A 10-year mean around 1950 (e.g., 1946–1955 or 1950–1959) is recommended for aerosols and volcanic forcing.  For further details, please refer to: Roberts et al. (2025). High-Resolution Model Intercomparison Project phase 2 (HighResMIP2) towards CMIP7. Geoscientific Model Development, 18, 1307–1332.",
+    "activity": [
+        "highresmip"
+    ],
+    "alias": [],
+    "minimum-number-of-years": "50",
+    "model-realms": [
+        {
+            "id": "aogcm",
+            "is-required": true
+        },
+        {
+            "id": "bgc",
+            "is-required": false
+        },
+        {
+            "id": "chem",
+            "is-required": false
+        },
+        {
+            "id": "aer",
+            "is-required": false
+        }
+    ],
+    "parent-experiment": [
+        "none"
+    ],
+    "start-date": "none",
+    "tier": "1",
+    "@context": "_context_",
+    "type": [
+        "wcrp:experiment",
+        "cmip7"
+    ]
+}

@@ -1,0 +1,39 @@
+{
+    "id": "abrupt-4xco2-1950",
+    "validation-key": "abrupt-4xCO2-1950",
+    "ui-label": "Idealised experiments for CMIP-comparable metrics - abrupt 4xCO2 starting form the end of spinup-1950",
+    "description": "A coupled experiment with abrupt 4xCO2 forcing, starting from the end of the spinup-1950 simulation, enforces an instantaneous 4xCO2 increase  References: Roberts, M. J., Reed, K. A., Bao, Q., Barsugli, J. J., Camargo, S. J., Caron, L. P., … & Zhao, M. (2025). High-Resolution Model Intercomparison Project Phase 2 (HighResMIP2) towards CMIP7. Geoscientific Model Development, 18, 1307–1332  [High-Resolution Model Intercomparison Project Phase 2 (HighResMIP2) towards CMIP7.pdf](https://github.com/user-attachments/files/19402163/High-Resolution.Model.Intercomparison.Project.Phase.2.HighResMIP2.towards.CMIP7.pdf)  Webpage: https://highresmip.org/experiments/experiment_cmip7/",
+    "activity": [
+        "highresmip"
+    ],
+    "alias": [],
+    "minimum-number-of-years": "30",
+    "model-realms": [
+        {
+            "id": "aogcm",
+            "is-required": true
+        },
+        {
+            "id": "aer",
+            "is-required": false
+        },
+        {
+            "id": "bgc",
+            "is-required": false
+        },
+        {
+            "id": "chem",
+            "is-required": false
+        }
+    ],
+    "parent-experiment": [
+        "none"
+    ],
+    "start-date": "1950-01-01",
+    "tier": "3",
+    "@context": "_context_",
+    "type": [
+        "wcrp:experiment",
+        "cmip7"
+    ]
+}

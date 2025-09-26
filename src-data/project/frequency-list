@@ -1,0 +1,32 @@
+{
+    "id": "frequency-list",
+    "validation-key": "cmip7-frequency",
+    "ui-label": "CMIP7 Permissible Frequencies",
+    "description": "The complete list of frequencies used in CMIP7",
+    "frequency": [
+        "1hr",
+        "1hrcm",
+        "1hrpt",
+        "3hr",
+        "3hrpt",
+        "6hr",
+        "6hrpt",
+        "day",
+        "dec",
+        "fx",
+        "mon",
+        "monc",
+        "monpt",
+        "subhrpt",
+        "yr",
+        "yrpt"
+    ],
+    "@context": [
+        "_context_"
+    ],
+    "type": [
+        "wcrp:project",
+        "cmip7",
+        "wcrp:frequency"
+    ]
+}

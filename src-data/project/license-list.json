@@ -1,0 +1,20 @@
+{
+    "id": "license-list",
+    "validation-key": "",
+    "ui-label": "",
+    "description": "",
+    "license": [
+        {
+            "id": "cc-by-4.0",
+            "regex": "^CMIP6Plus model data produced by .* is licensed under a Creative Commons .* License (https://creativecommons\\.org/.*)\\. *Consult https://pcmdi\\.llnl\\.gov/CMIP6Plus/TermsOfUse for terms of use governing CMIP6Plus output, including citation requirements and proper acknowledgment\\. *The data producers and data providers make no warranty, either express or implied, including, but not limited to, warranties of merchantability and fitness for a particular purpose\\. *All liabilities arising from the supply of the information (including any liability arising in negligence) are excluded to the fullest extent permitted by law\\.$"
+        }
+    ],
+    "@context": [
+        "_context_"
+    ],
+    "type": [
+        "wcrp:project",
+        "cmip7",
+        "wcrp:license"
+    ]
+}

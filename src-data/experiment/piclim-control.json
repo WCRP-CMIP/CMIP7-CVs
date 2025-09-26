@@ -1,0 +1,24 @@
+{
+    "id": "piclim-control",
+    "validation-key": "piClim-control",
+    "ui-label": "Pre-industrial conditions, with sea surface temperature (SST/tos) and sea ice concentration (SIC/siconc) prescribed using an annually-repeating climatology from a 30-year or greater period from the piControl simulation of the host model",
+    "description": "DECK: Effective radiative forcing control simulation",
+    "activity": [
+        "cmip"
+    ],
+    "alias": [],
+    "end": -999,
+    "min-number-yrs-per-sim": 30,
+    "model-realms": [],
+    "parent-experiment": [
+        "picontrol"
+    ],
+    "start": -999,
+    "start-date": "none",
+    "tier": 0,
+    "@context": "_context_",
+    "type": [
+        "wcrp:experiment",
+        "cmip7"
+    ]
+}

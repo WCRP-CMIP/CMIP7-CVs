@@ -1,0 +1,40 @@
+{
+    "id": "piclim-aer",
+    "validation-key": "piClim-aer",
+    "ui-label": "Effective radiative forcing by present-day aerosols",
+    "description": "A time-slice simulation with present-day aerosol emissions and all other atmospheric components at pre-industrial values. Other than aerosols, model configuration should be identical to the `piClim-control` run in DECK. Simulations are run atmosphere-only, with a 12-month repeating climatology of sea surface temperatures and sea-ice distributions taken from a climatology of at least 30 years of the same model's `piControl` run. Interactive vegetation, if present in the model, should be turned on. Experiment design is identical to CMIP6 `piClim-aer` experiment. Note that the CMIP6 RFMIP reference publication (Pincus et al. 2016) referred to `piClim-aerO3` with present-day aerosols and ozone, but was replaced in favour of `piClim-aer` (Smith et al. 2020).  Pincus, R., Forster, P. M., and Stevens, B.: The Radiative Forcing Model Intercomparison Project (RFMIP): experimental protocol for CMIP6, Geosci. Model Dev., 9, 3447–3460, https://doi.org/10.5194/gmd-9-3447-2016, 2016.  Smith, C. J., Kramer, R. J., Myhre, G., Alterskjær, K., Collins, W., Sima, A., Boucher, O., Dufresne, J.-L., Nabat, P., Michou, M., Yukimoto, S., Cole, J., Paynter, D., Shiogama, H., O'Connor, F. M., Robertson, E., Wiltshire, A., Andrews, T., Hannay, C., Miller, R., Nazarenko, L., Kirkevåg, A., Olivié, D., Fiedler, S., Lewinschal, A., Mackallah, C., Dix, M., Pincus, R., and Forster, P. M.: Effective radiative forcing and adjustments in CMIP6 models, Atmos. Chem. Phys., 20, 9591–9618, https://doi.org/10.5194/acp-20-9591-2020, 2020.",
+    "activity": [
+        "rfmip"
+    ],
+    "alias": [],
+    "branch-date": "none",
+    "minimum-number-of-years": "30",
+    "model-realms": [
+        {
+            "id": "agcm",
+            "is-required": true
+        },
+        {
+            "id": "aer",
+            "is-required": false
+        },
+        {
+            "id": "bgc",
+            "is-required": false
+        },
+        {
+            "id": "chem",
+            "is-required": false
+        }
+    ],
+    "parent-experiment": [
+        "picontrol"
+    ],
+    "start-date": "none",
+    "tier": "1",
+    "@context": "_context_",
+    "type": [
+        "wcrp:experiment",
+        "cmip7"
+    ]
+}

@@ -1,0 +1,39 @@
+{
+    "@context": [
+        "../_context_",
+        {
+            "@base": "https://wcrp-cmip.github.io/CMIP7-CVs/project/",
+            "@vocab": "https://wcrp-cmip.github.io/CMIP7-CVs/project/",
+            "activity": {
+                "@type": "@id",
+                "@context": "https://wcrp-cmip.github.io/WCRP-universe/activity/_context_"
+            },
+            "frequency": {
+                "@type": "@id",
+                "@container": "@list",
+                "@context": "https://wcrp-cmip.github.io/WCRP-universe/frequency/_context_"
+            },
+            "license": {
+                "@type": "@id",
+                "@container": "@set",
+                "@context": "https://wcrp-cmip.github.io/WCRP-universe/license/_context_"
+            },
+            "mip-era": {
+                "@type": "@id",
+                "@context": "https://wcrp-cmip.github.io/WCRP-universe/mip/_context_"
+            },
+            "native-nominal-resolution": {
+                "@type": "@id",
+                "@context": "https://wcrp-cmip.github.io/WCRP-universe/resolution/_context_"
+            },
+            "product": {
+                "@type": "@id",
+                "@context": "https://wcrp-cmip.github.io/WCRP-universe/product/_context_"
+            }
+        }
+    ],
+    "@embed": "@always",
+    "@type": [
+        "cmip7"
+    ]
+}

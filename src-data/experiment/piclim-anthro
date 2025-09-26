@@ -1,0 +1,24 @@
+{
+    "id": "piclim-anthro",
+    "validation-key": "piClim-anthro",
+    "ui-label": "As piClim-control except present-day anthropogenic forcing",
+    "description": "DECK: effective radiative forcing by present day anthropogenic forcings \n Effective radiative forcing by present day anthropogenic forcings",
+    "activity": [
+        "cmip"
+    ],
+    "alias": [],
+    "end": -999,
+    "min-number-yrs-per-sim": 30,
+    "model-realms": [],
+    "parent-experiment": [
+        "picontrol"
+    ],
+    "start": -999,
+    "start-date": "none",
+    "tier": 0,
+    "@context": "_context_",
+    "type": [
+        "wcrp:experiment",
+        "cmip7"
+    ]
+}

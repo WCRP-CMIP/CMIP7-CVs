@@ -1,0 +1,39 @@
+{
+    "id": "piclim-histaer",
+    "validation-key": "piClim-histaer",
+    "ui-label": "historical and future transient effective radiative forcing from aerosols",
+    "description": "A simulation with time-varying aerosol emissions following the `historical` and ScenarioMIP `scen7-mc` scenario, and all other atmospheric components at pre-industrial values. Other than aerosols and the fact that this is a time-varying rather than time-slice experiment, model configuration should be identical to the `piClim-control` run in DECK. Simulations are run atmosphere-only, with a 12-month repeating climatology of sea surface temperatures and sea-ice distributions taken from a climatology of at least 30 years of the same model's `piControl` run. Interactive vegetation, if present in the model, should be turned on. Experiment design is similar to CMIP6 `piClim-histaer` experiment with the future scenario changed from `ssp245` to `scen7-mc`. Note that the CMIP6 RFMIP reference publication (Pincus et al. 2016) referred to `piClim-histaerO3` with time-varying aerosols and ozone, but was replaced in favour of `piClim-histaer` (Smith et al. 2021).  Pincus, R., Forster, P. M., and Stevens, B.: The Radiative Forcing Model Intercomparison Project (RFMIP): experimental protocol for CMIP6, Geosci. Model Dev., 9, 3447–3460, https://doi.org/10.5194/gmd-9-3447-2016, 2016.  Smith, C. J., Harris, G. R., Palmer, M. D., Bellouin, N., Collins, W., Myhre, G., et al. (2021). Energy budget constraints on the time history of aerosol forcing and climate sensitivity. Journal of Geophysical Research: Atmospheres, 126, e2020JD033622. https://doi.org/10.1029/2020JD033622",
+    "activity": [
+        "rfmip"
+    ],
+    "alias": [],
+    "minimum-number-of-years": "251",
+    "model-realms": [
+        {
+            "id": "agcm",
+            "is-required": true
+        },
+        {
+            "id": "aer",
+            "is-required": false
+        },
+        {
+            "id": "bgc",
+            "is-required": false
+        },
+        {
+            "id": "chem",
+            "is-required": false
+        }
+    ],
+    "parent-experiment": [
+        "picontrol"
+    ],
+    "start-date": "1850-01-01",
+    "tier": "1",
+    "@context": "_context_",
+    "type": [
+        "wcrp:experiment",
+        "cmip7"
+    ]
+}

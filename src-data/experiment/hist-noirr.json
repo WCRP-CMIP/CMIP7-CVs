@@ -1,0 +1,35 @@
+{
+    "id": "hist-noirr",
+    "validation-key": "hist-noirr",
+    "ui-label": "Historical simulations with irrigation switched off",
+    "description": "1. switching off the irrigation in the experiment historical  3. This is only for model groups whose historical simulations do include irrigation.",
+    "activity": [
+        "IRRMIP"
+    ],
+    "alias": [],
+    "minimum-number-of-years": "122",
+    "model-realms": [
+        {
+            "id": "aogcm",
+            "is-required": true
+        },
+        {
+            "id": "land",
+            "is-required": true
+        },
+        {
+            "id": "bgc",
+            "is-required": true
+        }
+    ],
+    "parent-experiment": [
+        "historical"
+    ],
+    "start-date": "1901-01-01",
+    "tier": "2",
+    "@context": "_context_",
+    "type": [
+        "wcrp:experiment",
+        "cmip7"
+    ]
+}

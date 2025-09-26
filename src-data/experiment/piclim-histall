@@ -1,0 +1,39 @@
+{
+    "id": "piclim-histall",
+    "validation-key": "piClim-histall",
+    "ui-label": "historical and future transient effective radiative forcing from all forcers",
+    "description": "A simulation with *all* time-varying forcings (*both natural and anthropogenic*) following the historical and ScenarioMIP `scen7-mc` scenario. Greenhouse gases should be prescribed concentrations. Simulations are run atmosphere-only, with a 12-month repeating climatology of sea surface temperatures and sea-ice distributions taken from a climatology of at least 30 years of the same model's `piControl` run. Interactive vegetation, if present in the model, should be turned on. Experiment design is similar to CMIP6 `piClim-histall` experiment (Pincus et al. 2016) with the future scenario changed from `ssp245` to `scen7-mc`.  Pincus, R., Forster, P. M., and Stevens, B.: The Radiative Forcing Model Intercomparison Project (RFMIP): experimental protocol for CMIP6, Geosci. Model Dev., 9, 3447–3460, https://doi.org/10.5194/gmd-9-3447-2016, 2016.",
+    "activity": [
+        "rfmip"
+    ],
+    "alias": [],
+    "minimum-number-of-years": "251",
+    "model-realms": [
+        {
+            "id": "agcm",
+            "is-required": true
+        },
+        {
+            "id": "aer",
+            "is-required": false
+        },
+        {
+            "id": "bgc",
+            "is-required": false
+        },
+        {
+            "id": "chem",
+            "is-required": false
+        }
+    ],
+    "parent-experiment": [
+        "picontrol"
+    ],
+    "start-date": "1850-01-01",
+    "tier": "1",
+    "@context": "_context_",
+    "type": [
+        "wcrp:experiment",
+        "cmip7"
+    ]
+}

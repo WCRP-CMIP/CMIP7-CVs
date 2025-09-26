@@ -1,0 +1,15 @@
+{
+    "@context": {
+        "@base": "https://wcrp-cmip.github.io/CMIP7-CVs/",
+        "@vocab": "https://wcrp-cmip.github.io/CMIP7-CVs/",
+        "entries": "@none",
+        "id": "@id",
+        "type": "@type",
+        "cf": "https://wcrp-cmip.github.io/CF/",
+        "cmip6plus": "https://wcrp-cmip.github.io/CMIP6Plus_CVs/",
+        "cmip7": "https://wcrp-cmip.github.io/CMIP7-CVs/",
+        "universal": "https://wcrp-cmip.github.io/WCRP-universe/",
+        "vr": "https://wcrp-cmip.github.io/Variable-Registry/"
+    },
+    "@embed": "@always"
+}
