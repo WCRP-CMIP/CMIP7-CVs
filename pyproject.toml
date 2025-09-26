@@ -6,10 +6,10 @@ readme = "README.md"
 requires-python = ">=3.12"
 dependencies = [
     "requests>=2.32.5",
-    "esgvoc",
+    "esgvoc>=1.1.2",
     "icecream>=2.1.7",
     "jupyter-console>=6.6.3",
     "devtools>=0.12.2",
 ]
-[tool.uv.sources]
-esgvoc = { git = "https://github.com/ESGF/esgf-vocab.git", branch = "integration" }
+# [tool.uv.sources]
+# esgvoc = { git = "https://github.com/ESGF/esgf-vocab.git", branch = "integration" }
