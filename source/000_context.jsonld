@@ -2,7 +2,7 @@
     "@context": {
         "id": "@id",
         "type": "@type",
-        "@base": "https://espri-mod.github.io/mip-cmor-tables/source/",
-        "source": "https://espri-mod.github.io/mip-cmor-tables/source"
+        "@base": "https://espri-mod.github.io/mip-cmor-tables/model_new/",
+        "source": "https://espri-mod.github.io/mip-cmor-tables/model_new"
     }
 }
