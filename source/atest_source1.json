@@ -1,5 +1,5 @@
 {
   "@context": "000_context.jsonld",
-  "id": "model_new",
-  "type": "region"
+  "id": "atest_source1",
+  "type": "model_new"
 }
