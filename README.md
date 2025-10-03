@@ -42,3 +42,70 @@ This work is sponsored by the Regional and Global Model Analysis ([RGMA](https:/
     >
 </p>
 
+
+This repository contains the controlled vocabularies (CVs) for the CMIP7 project. It defines project-specific collections of terms used for organizing
+   and documenting CMIP7 climate simulation data.
+
+  ## Overview
+
+  CMIP7_CVs is a project-specific CV repository that works in conjunction with the https://github.com/WCRP-CMIP/WCRP-universe repository. While the
+  universe contains all possible terms with complete metadata, this repository contains collections that reference those terms by ID, selecting only the
+   terms relevant to CMIP7.
+
+  ## Key Concepts
+
+  - **WCRP-universe**: The canonical repository containing all possible terms with full metadata (experiments, institutions, models, variables, etc.)
+  - **CMIP7_CVs**: Project-specific collections that reference universe terms by ID, with optional project-specific overrides
+  - **Collections**: Folders containing JSON files that list term IDs from a specific data descriptor (e.g., activity/, experiment/, institution/)
+  - **Terms**: Individual JSON files representing a controlled vocabulary entry (e.g., experiment/historical.json)
+
+## Repository Structure
+
+  CMIP7_CVs/  
+  ├── project_specs.json       # DRS (Data Reference Syntax) and global attributes  
+  ├── project_specs.yaml        # Project metadata  
+  ├── activity/                 # Activity IDs (CMIP, ScenarioMIP, etc.)  
+  ├── experiment/               # Experiment definitions  
+  ├── institution/              # Institutions  
+  ├── source/                   # Climate models  
+  ├── brandedVariable/          # Variable names  
+  ├── reportingInterval/        # Temporal frequencies  
+  └── ...                       # Other collections  
+
+  Each collection folder contains:
+  - 000_context.jsonld: JSON-LD context for semantic web compatibility
+  - {term-id}.json: Individual term files that reference universe terms
+
+  ### How Terms Link to the Universe
+
+  Terms in CMIP7_CVs reference the universe using minimal JSON:
+```json
+  Example - CMIP7_CVs/activity/cmip.json:
+  {
+      "@context": "000_context.jsonld",
+      "id": "cmip",
+      "type": "activity"
+  }
+```
+  This references the full definition in WCRP-universe/activity/cmip.json:
+  ```json
+  {
+      "@context": "000_context.jsonld",
+      "type": "activity",
+      "id": "cmip",
+      "name": "CMIP",
+      "cmip_acronym": "CMIP",
+      "long_name": "CMIP DECK: 1pctCO2, abrupt4xCO2, amip, ...",
+      "url": "https://gmd.copernicus.org/articles/9/1937/2016/...",
+      "drs_name": "CMIP"
+  }
+```
+  Projects can override or add properties by including them in their term files.
+
+### Using with esgvoc
+
+  The https://github.com/ESGF/esgf-vocab provides a Python API and CLI to interact with these controlled vocabularies.
+
+ Documentation can be find : https://esgf.github.io/esgf-vocab/
+
+
