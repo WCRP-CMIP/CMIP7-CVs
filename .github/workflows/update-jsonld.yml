@@ -9,6 +9,7 @@ on:
 
 jobs:
   update-jsonld:
+    if: false
     runs-on: ubuntu-latest  # Specify the machine type
       
     steps:

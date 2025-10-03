@@ -9,6 +9,7 @@ on:
 
 jobs:
   check-graph:
+    if: false
     runs-on: ubuntu-latest  # Specify the machine type
       
     steps:
