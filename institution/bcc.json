@@ -1,0 +1,6 @@
+{
+    "@context": "000_context.jsonld",
+    "id": "bcc",
+    "type": "organisation",
+    "description": "Beijing Climate Center, Beijing 100081, China"
+}

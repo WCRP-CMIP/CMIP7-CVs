@@ -1,0 +1,15 @@
+{
+    "@context": "000_context.jsonld",
+    "id": "highres-yr2020",
+    "type": "experiment",
+    "end_year": null,
+    "start_year": "2020-03-01",
+    "additional_allowed_model_components": [
+        "aer",
+        "bgc",
+        "chem"
+    ],
+    "activity": [
+        "highresmip"
+    ]
+}

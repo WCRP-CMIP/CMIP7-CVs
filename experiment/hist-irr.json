@@ -1,0 +1,11 @@
+{
+    "@context": "000_context.jsonld",
+    "id": "hist-irr",
+    "type": "experiment",
+    "end_year": null,
+    "start_year": "1901-01-01",
+    "additional_allowed_model_components": [],
+    "activity": [
+        "irrmip"
+    ]
+}

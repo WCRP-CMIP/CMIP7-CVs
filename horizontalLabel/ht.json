@@ -1,0 +1,5 @@
+{
+    "@context": "000_context.jsonld",
+    "id": "ht",
+    "type": "horizontal_label"
+}

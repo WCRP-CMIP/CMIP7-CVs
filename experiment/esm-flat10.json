@@ -1,0 +1,13 @@
+{
+    "@context": "000_context.jsonld",
+    "id": "esm-flat10",
+    "type": "experiment",
+    "additional_allowed_model_components": [
+        "aer",
+        "chem",
+        "ism"
+    ],
+    "activity": [
+        "c4mip"
+    ]
+}

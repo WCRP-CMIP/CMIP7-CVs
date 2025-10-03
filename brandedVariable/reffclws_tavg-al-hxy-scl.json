@@ -1,0 +1,5 @@
+{
+    "@context": "000_context.jsonld",
+    "id": "reffclws_tavg-al-hxy-scl",
+    "type": "known_branded_variable"
+}

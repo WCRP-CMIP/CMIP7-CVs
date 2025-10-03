@@ -1,0 +1,5 @@
+{
+    "@context": "000_context.jsonld",
+    "id": "ho2_tavg-p39-hy-air",
+    "type": "known_branded_variable"
+}

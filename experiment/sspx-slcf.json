@@ -1,0 +1,9 @@
+{
+    "@context": "000_context.jsonld",
+    "id": "sspx-slcf",
+    "type": "experiment",
+    "activity": [
+        "aerchemmip"
+    ],
+    "experiment_id": "sspx-slcf"
+}

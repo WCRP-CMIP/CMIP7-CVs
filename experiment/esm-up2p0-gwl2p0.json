@@ -1,0 +1,12 @@
+{
+    "@context": "000_context.jsonld",
+    "id": "esm-up2p0-gwl2p0",
+    "type": "experiment",
+    "additional_allowed_model_components": [
+        "aer",
+        "chem"
+    ],
+    "activity": [
+        "tipmip"
+    ]
+}

@@ -1,0 +1,10 @@
+{
+    "@context": "000_context.jsonld",
+    "id": "piclim-ods",
+    "type": "experiment",
+    "additional_allowed_model_components": [],
+    "activity": [
+        "aerchemmip"
+    ],
+    "experiment_id": "piclim-ods"
+}

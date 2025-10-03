@@ -1,0 +1,9 @@
+{
+    "@context": "000_context.jsonld",
+    "id": "abrupt-0p5co2",
+    "type": "experiment",
+    "activity": [
+        "cfmip"
+    ],
+    "experiment_id": "abrupt-0p5co2"
+}
