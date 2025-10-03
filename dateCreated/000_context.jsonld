@@ -1,0 +1,13 @@
+{
+     
+      "@context": {
+      "@base":"https://espri-mod.github.io/mip-cmor-tables/creation_date/",
+      "@vocab": "http://schema.org/",
+      "id": "@id",
+      "type":"@type",
+      "name": {"@id": "https://schema.org/name"},
+      "description":{"@id":"https://schema.org/description"}
+      
+    }
+}
+

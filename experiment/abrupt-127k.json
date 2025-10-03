@@ -1,0 +1,13 @@
+{
+    "@context": "000_context.jsonld",
+    "id": "abrupt-127k",
+    "type": "experiment",
+    "additional_allowed_model_components": [
+        "aer",
+        "bgc",
+        "chem"
+    ],
+    "activity": [
+        "pmip"
+    ]
+}

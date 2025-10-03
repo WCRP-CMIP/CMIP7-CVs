@@ -14,6 +14,7 @@ on:
 
 jobs:
   deploy-docs:
+    if: false
     runs-on: ubuntu-latest
     
     steps:

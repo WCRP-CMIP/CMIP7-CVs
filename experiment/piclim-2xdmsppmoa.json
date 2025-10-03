@@ -1,0 +1,12 @@
+{
+    "@context": "000_context.jsonld",
+    "id": "piclim-2xdmsppmoa",
+    "type": "experiment",
+    "additional_allowed_model_components": [
+        "chem"
+    ],
+    "activity": [
+        "aerchemmip"
+    ],
+    "experiment_id": "piclim-2xdmsppmoa"
+}

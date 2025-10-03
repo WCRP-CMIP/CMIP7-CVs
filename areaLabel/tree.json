@@ -1,0 +1,5 @@
+{
+    "@context": "000_context.jsonld",
+    "id": "tree",
+    "type": "area_label"
+}
