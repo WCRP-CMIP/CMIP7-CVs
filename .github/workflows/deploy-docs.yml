@@ -3,7 +3,7 @@ name: Deploy Documentation on Production or Docs Update
 
 on:
   push:
-    branches: [ production ]
+    branches: [ main ]
   workflow_dispatch:
     inputs:
       force_deploy:
@@ -20,21 +20,16 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v4
         with:
-          fetch-depth: 0  # Fetch full history for git worktree
+          ref: production # Checkout the production branch
+          fetch-depth: 1  # Shallow fetch only
 
-      - name: Determine deployment strategy
-        id: strategy
-        run: |
-          if [ "${{ github.ref_name }}" == "production" ]; then
-            echo "strategy=production-branch" >> $GITHUB_OUTPUT
-            echo "📦 Triggered by push to production branch"
-          elif [ "${{ github.ref_name }}" == "main" ]; then
-            echo "strategy=docs-update" >> $GITHUB_OUTPUT
-            echo "📁 Triggered by docs folder update on main branch"
-          else
-            echo "strategy=manual" >> $GITHUB_OUTPUT
-            echo "🖱️ Manual deployment trigger"
-          fi
+      - name: Update docs folder from main branch
+        uses: WCRP-CMIP/CMIPLD/actions/fetch_branch_path@main
+        with:
+          branch: 'main'
+          path: 'docs/'
+
+
 
       - name: Build and Deploy MkDocs to Production
         uses: WCRP-CMIP/CMIPLD/actions/mkdocs@main

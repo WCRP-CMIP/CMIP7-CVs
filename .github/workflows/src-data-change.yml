@@ -1,0 +1,68 @@
+name: Sync JSON changes from src-data to production, and apply relevant documentation and summary updates
+
+on:
+  push:
+    branches:
+      - src-data
+    paths:
+      - '**/*.json'   # ✅ Trigger on any JSON file at any depth
+
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+
+    steps:
+      # Checkout production branch as the main workspace
+      - name: Checkout production branch
+        uses: actions/checkout@v4
+        with:
+          ref: production
+          fetch-depth: 0
+
+
+      #Changed folders    
+      
+
+      # Checkout src-data branch into a subfolder
+      - name: Checkout src-data branch into subfolder
+        uses: actions/checkout@v4
+        with:
+          ref: src-data
+          path: src-data
+          fetch-depth: 0
+
+      
+      - name: install cmipld
+        id: install-cmipld
+        uses: WCRP-CMIP/CMIPLD/actions/cmipld@main
+
+
+
+      #creating graph files should go here. 
+
+
+      - name: Generate summaries
+        id: gen-summary
+        run: |
+          generate_summary .github/GENERATE_SUMMARY/
+
+
+
+      - name: Commit All
+        uses: WCRP-CMIP/CMIPLD/actions/commit-all@main
+        with:
+          message: "Automated Content Update"
+      
+      - name: Push PR
+        uses: WCRP-CMIP/CMIPLD/actions/pushpr@main
+        with:
+            branch: "production"
+            message: "Automated JSONLD update"
+            token: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Publish
+        uses: WCRP-CMIP/CMIPLD/actions/publish2pages@main
+        with:
+          api_key: ${{ secrets.API_KEY }}
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          branch_name: ${{ github.ref_name }}
