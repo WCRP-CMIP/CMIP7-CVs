@@ -6,12 +6,13 @@ For information on what is in the CVs please visit the ESGVOC repository at: [in
 ### THIS REPOSITORY IS CURRENTLY UNDER ACTIVE DEVELOPMENT
 
 
-
-
 ## Branch Descriptions
-- `main`: This contains the documentation, version controlled. This is where we edit this. Actions and automations are also controlled from this branch. 
-- `src-data`: The JSONLD content used to link all the files. 
-- `production`: This is where the compiled documentation and JSONLD files live and the static pages site is hosted from. 
+
+- [`main`](https://github.com/WCRP-CMIP/CMIP7-CVs/tree/main): The landing page directing users to the relevant content.  
+- [`docs`](https://github.com/WCRP-CMIP/CMIP7-CVs/tree/docs): Contains the documentation and is version-controlled. This is the branch where documentation edits are made. Actions and automations (e.g., workflows that update docs or summaries) are also configured from this branch.  
+- [`src-data`](https://github.com/WCRP-CMIP/CMIP7-CVs/tree/src-data): Stores the JSONLD content used to link all files. Updates here trigger automated workflows that identify changed JSON files and update documentation or summaries accordingly.  
+- [`production`](https://github.com/WCRP-CMIP/CMIP7-CVs/tree/production): Hosts the compiled documentation and JSONLD files, as well as the static pages site. Updated automatically via workflows when changes in `src-data` or `docs` are processed.  
+
 
 - `dev_*`: Other branches used for updating things. 
 - `*`: all other branches are usually ones containing submissions to update the content. 
