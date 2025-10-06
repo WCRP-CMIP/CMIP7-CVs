@@ -1,0 +1,5 @@
+{
+    "@context": "000_context.jsonld",
+    "id": "tmin",
+    "type": "temporal_label"
+}

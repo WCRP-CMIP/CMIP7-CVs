@@ -1,0 +1,5 @@
+{
+    "@context": "000_context.jsonld",
+    "id": "mlotstmax_tmax-u-hxy-sea",
+    "type": "known_branded_variable"
+}

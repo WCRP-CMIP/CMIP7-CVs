@@ -1,0 +1,5 @@
+{
+    "@context": "000_context.jsonld",
+    "id": "gis",
+    "type": "area_label"
+}

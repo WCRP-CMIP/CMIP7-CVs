@@ -1,0 +1,16 @@
+{
+    "@context": "000_context.jsonld",
+    "id": "amip-p4k-sst-rad",
+    "type": "experiment",
+    "end_year": null,
+    "start_year": "1979-01-01",
+    "additional_allowed_model_components": [
+        "aer",
+        "bgc",
+        "chem"
+    ],
+    "activity": [
+        "cfmip"
+    ],
+    "experiment_id": "amip-p4k-sst-rad"
+}
