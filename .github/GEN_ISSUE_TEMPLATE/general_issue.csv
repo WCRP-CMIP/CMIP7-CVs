@@ -7,7 +7,6 @@ field_order,field_type,field_id,label,description,data_source,required,placehold
 6,textarea,expected_behavior,Expected/Desired Behavior,What should happen instead? What would you like to see?,none,false,The system should...,,
 7,textarea,steps_to_reproduce,Steps to Reproduce (for bugs),If reporting a bug provide step-by-step instructions to reproduce the issue.,none,false,"1. Go to...\n2. Click on...\n3. See error...",,
 8,textarea,possible_solution,Possible Solution,"If you have ideas on how to fix or implement this, please share them.",none,false,One possible approach could be...,,
-9,textarea,additional_context,Additional Context,"Add any other context, screenshots, error messages, or relevant information.\n\nYou can paste error logs, attach images, or provide links to related issues.",none,false,Any additional information...,,
 10,markdown,metadata_header,Metadata,## Metadata,none,false,,,
 11,dropdown,priority,Priority,How urgent is this issue?,priority_options,true,,list,2
 12,multi-select,help_needed,Help Needed,Do you need help with this issue?,help_needed_options,false,,list,
