@@ -1,10 +1,18 @@
 # CMIP7 Controlled Vocabularies
 Core Controlled Vocabularies (CVs) for use in CMIP7
 
-For information on what is in the CVs please visit the ESGVOC repository at: [insert link here]()
+[![Update Issue Templates](https://github.com/WCRP-CMIP/CMIP7-CVs/actions/workflows/issue-templates.yml/badge.svg)](https://github.com/WCRP-CMIP/CMIP7-CVs/actions/workflows/issue-templates.yml)
+
+-------
+
+> [!CAUTION]
+> For information on what is in the CVs please visit the ESGVOC repository at: [insert link here]()
+
+--------
 
 ### THIS REPOSITORY IS CURRENTLY UNDER ACTIVE DEVELOPMENT
 
+--------
 
 ## Branch Descriptions
 
