@@ -33,7 +33,7 @@ jobs:
         uses: WCRP-CMIP/CMIPLD/actions/cmipld@main
     
       - name: Run template generator
-        run: template_update
+        run: template_update --template-dir .github/GEN_ISSUE_TEMPLATE --output-dir .github/ISSUE_TEMPLATE
       
       - name: Check for changes
         id: check_changes

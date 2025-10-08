@@ -3,7 +3,7 @@ name: Deploy Documentation on Production or Docs Update
 
 on:
   push:
-    branches: [ main ]
+    branches: [ docs ]
   workflow_dispatch:
     inputs:
       force_deploy:
