@@ -37,6 +37,7 @@ jobs:
       - name: Run template generator
         working-directory: ${{ github.workspace }}
         run: template_update
+        continue-on-error: true
 
       - name: Check for changes
         id: check_changes

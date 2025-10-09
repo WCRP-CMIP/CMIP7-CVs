@@ -229,4 +229,3 @@ body:
 ## Automated workflow. 
 The workflow `issue-templates.yml` runs when the GEN_ISSUE_TEMPLATE folder is updates. 
 The workflow also has a cron trigger. 
- 
