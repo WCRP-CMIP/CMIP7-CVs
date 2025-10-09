@@ -34,7 +34,7 @@ jobs:
     
       - name: Run template generator
         working-directory: ${{ github.workspace }}
-        run: template_update --template-dir .github/GEN_ISSUE_TEMPLATE --output-dir .github/ISSUE_TEMPLATE
+        run: template_update --template-dir .github/GEN_ISSUE_TEMPLATE/ --output-dir .github/ISSUE_TEMPLATE/
       
       - name: Check for changes
         id: check_changes
