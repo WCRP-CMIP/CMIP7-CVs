@@ -1,0 +1,118 @@
+name: Start a Discussion
+description: Open a topic for discussion or request community input
+title: "Discussion: <Topic here>"
+labels: ['cmip7', 'discussion']
+body:
+  - type: markdown
+    attributes:
+      value: |
+        ## Discussion Topic
+        
+        Use this template to start a discussion, gather community input, or propose ideas for consideration.
+
+  - type: input
+    id: topic_summary
+    attributes:
+      label: Topic Summary
+      description: Provide a brief summary of what you'd like to discuss.
+      placeholder: "In one or two sentences, what is this discussion about?"
+    validations:
+      required: true
+
+  - type: textarea
+    id: background
+    attributes:
+      label: Background/Context
+      description: |
+        Provide background information to help others understand the discussion topic.
+        
+        Include:
+        - Why this discussion is needed
+        - Current situation or problem
+        - Any relevant history or previous discussions
+      placeholder: "Provide context for this discussion...\n\nWhy is this important now?\nWhat prompted this discussion?"
+    validations:
+      required: true
+
+  - type: textarea
+    id: main_points
+    attributes:
+      label: Main Discussion Points
+      description: |
+        What are the key points or questions you'd like the community to address?
+        
+        Use bullet points or numbered lists for clarity.
+      placeholder: "1. Should we consider...\n2. What are the implications of...\n3. How should we approach..."
+    validations:
+      required: true
+
+  - type: textarea
+    id: proposed_options
+    attributes:
+      label: Options/Proposals (if applicable)
+      description: If you have specific options or proposals to discuss list them here.
+      placeholder: "Option A: We could...\n- Pros:\n- Cons:\n\nOption B: Alternatively...\n- Pros:\n- Cons:"
+
+  - type: textarea
+    id: stakeholders
+    attributes:
+      label: Relevant Stakeholders
+      description: |
+        Who should be involved in this discussion?
+        
+        You can @mention specific people or teams, or describe groups that should provide input.
+      placeholder: "- Data providers\n- @username\n- Teams working on..."
+
+  - type: input
+    id: timeline
+    attributes:
+      label: Timeline/Urgency
+      description: Is there a deadline for this discussion? When do you need input by?
+      placeholder: "e.g., Need input by end of month, No specific deadline"
+
+  - type: textarea
+    id: desired_outcome
+    attributes:
+      label: Desired Outcome
+      description: |
+        What do you hope to achieve from this discussion?
+        
+        Examples:
+        - Consensus on approach
+        - List of requirements
+        - Decision on policy
+        - Community feedback
+      placeholder: "By the end of this discussion we should have..."
+    validations:
+      required: true
+
+  - type: textarea
+    id: related_resources
+    attributes:
+      label: Related Resources
+      description: Link to any relevant documents previous discussions or external resources.
+      placeholder: "- Related issue: #123\n- Previous discussion: [link]\n- Reference document: [link]"
+
+  - type: markdown
+    attributes:
+      value: |
+        ## How to Participate
+        
+        👋 **Everyone is welcome to contribute to this discussion!**
+        
+        Please:
+        - Keep comments constructive and on-topic
+        - Consider all perspectives
+        - Provide examples or evidence where helpful
+        - Be respectful of different viewpoints
+
+  - type: dropdown
+    id: participation_type
+    attributes:
+      multiple: true
+      label: Participation Needed
+      description: What kind of participation are you looking for?
+      options:
+        - "General comments and feedback"
+        - "Technical expertise"
+        - "Use case examples"
