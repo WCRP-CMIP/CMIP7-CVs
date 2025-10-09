@@ -45,12 +45,13 @@ jobs:
           if ! git diff --quiet .github/ISSUE_TEMPLATE/; then
             echo "changed=true" >> $GITHUB_OUTPUT
           fi
+        continue-on-error: true
       
       - name: Commit and push changes
         if: steps.check_changes.outputs.changed == 'true'
         run: |
           git config user.name "cmipld-actions[bot]"
           git config user.email "wolfiex@users.noreply.github.com"
-          git add .github/ISSUE_TEMPLATE/
+          git add .github/ISSUE_TEMPLATE/*
           git commit -m "auto-update issue templates from GEN_ISSUE_TEMPLATE"
           git push
