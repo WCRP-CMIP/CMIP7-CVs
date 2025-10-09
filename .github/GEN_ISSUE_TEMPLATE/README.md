@@ -225,3 +225,6 @@ body:
 1. **Create CSV file**: `.github/GEN_ISSUE_TEMPLATE/my_template.csv`
 2. **Create Python file**: `.github/GEN_ISSUE_TEMPLATE/my_template.py`
 3. **Run generator**: `template_generator` (as installed with cmipld)
+
+## Automated workflow. 
+The workflow `issue-templates.yml` runs when the GEN_ISSUE_TEMPLATE folder is updates. 
