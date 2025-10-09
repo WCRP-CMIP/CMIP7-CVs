@@ -33,20 +33,10 @@ jobs:
         uses: actions/setup-python@v5
         with:
           python-version: '3.11'
-      
-      - name: Debug path and directories
-        run: |
-          echo "Current directory: $(pwd)"
-          echo "Workspace: $GITHUB_WORKSPACE"
-          echo "Contents of workspace:"
-          ls -la .github
-          which template_update || echo "template_update not found in PATH"
-    
+
       - name: Run template generator
         working-directory: ${{ github.workspace }}
-
         run: template_update
-        # --template-dir .github/GEN_ISSUE_TEMPLATE --output-dir .github/ISSUE_TEMPLATE
 
       - name: Check for changes
         id: check_changes
