@@ -20,6 +20,12 @@ jobs:
     runs-on: ubuntu-latest
     
     steps:
+
+      - name: install cmipld
+        id: install-cmipld
+        uses: WCRP-CMIP/CMIPLD/actions/cmipld@main
+
+
       - name: Checkout repository
         uses: actions/checkout@v4
       
@@ -28,9 +34,13 @@ jobs:
         with:
           python-version: '3.11'
       
-      - name: install cmipld
-        id: install-cmipld
-        uses: WCRP-CMIP/CMIPLD/actions/cmipld@main
+      - name: Debug path and directories
+        run: |
+          echo "Current directory: $(pwd)"
+          echo "Workspace: $GITHUB_WORKSPACE"
+          echo "Contents of workspace:"
+          ls -la .github
+          which template_update || echo "template_update not found in PATH"
     
       - name: Run template generator
         working-directory: ${{ github.workspace }}
