@@ -28,7 +28,7 @@ esgvoc works by using an `esgvoc` branch in its source data repositories
 (we'll get to what those are in a minute).
 Each `esgvoc` branch contains the data esgvoc needs,
 in the format that esgvoc needs it.
-When you query data via `esgvoc` it 
+When you query data via `esgvoc` it
 (effectively, although it's smarter than this in practice)
 grabs the information from the `esgvoc` branch of all the repositories it needs to query,
 parses the information and serves it to you following esgvoc's defined API
@@ -37,18 +37,18 @@ parses the information and serves it to you following esgvoc's defined API
 ### Key nouns
 
 - **Data descriptor**: a known metadata category used in CMIP
-    - for example, 
-      "experimentDD" is the data descriptor 
+    - for example,
+      "experimentDD" is the data descriptor
       which defines the experiment to which a given dataset belongs,
-      "areaLabelDD" is the data descriptor 
+      "areaLabelDD" is the data descriptor
       which defines the area label given to a dataset
       and "productTypeDD" is the data descriptor
       which (loosely) describes what kind of product a given dataset is
       (e.g. model-based, observations, reanalysis).
 - **Term**: an individual entry in the CVs for a given data descriptor
-    - for example, the entry for the "experimentDD" data descriptor 
+    - for example, the entry for the "experimentDD" data descriptor
       which defines the `historical` experiment and its associated metadata
-- **Collection**: set of terms for a given data descriptor 
+- **Collection**: set of terms for a given data descriptor
   which are included in a given CMIP phase's CVs
 
 Note: the naming convention for how data descriptors appear in different places,
@@ -83,7 +83,7 @@ In future, we hope to return to 'normal' and just have `main`,
 but for now it's like this:
 
 - `main`: just this README
-    - deliberately zero content. 
+    - deliberately zero content.
       If you want to know about CVs,
       use [esgvoc](https://esgf.github.io/esgf-vocab/).
 - `esgvoc`: source data for esgvoc
@@ -110,20 +110,20 @@ Thanks to our contributors!
 ## Acknowledgement
 
 <!---Horribly out of date, but I guess not worth worrying about for now-->
-The repository content has been collected from many contributors representing the Coupled Model Intercomparison Project phase 7 (CMIP7), 
+The repository content has been collected from many contributors representing the Coupled Model Intercomparison Project phase 7 (CMIP7),
 including those from climate modeling groups and model intercomparison projects (MIPs) worldwide.
-The structure of content and tools required to maintain it 
-was developed by climate and computer scientists from the Program for Climate Model Diagnosis and Intercomparison ([PCMDI](https://pcmdi.llnl.gov/)) 
-at Lawrence Livermore National Laboratory ([LLNL](https://www.llnl.gov/)) 
-with assistance from colleagues at the [UK MetOffice](https://www.metoffice.gov.uk/), 
-UK Centre for Environmental Data Analysis ([CEDA](https://www.ceda.ac.uk/)), 
-the Deutsches Klimarechenzentrum ([DKRZ](https://www.dkrz.de/en/)) in Germany 
+The structure of content and tools required to maintain it
+was developed by climate and computer scientists from the Program for Climate Model Diagnosis and Intercomparison ([PCMDI](https://pcmdi.llnl.gov/))
+at Lawrence Livermore National Laboratory ([LLNL](https://www.llnl.gov/))
+with assistance from colleagues at the [UK MetOffice](https://www.metoffice.gov.uk/),
+UK Centre for Environmental Data Analysis ([CEDA](https://www.ceda.ac.uk/)),
+the Deutsches Klimarechenzentrum ([DKRZ](https://www.dkrz.de/en/)) in Germany
 and the members of the Infrastructure for the European Network for Earth System Modelling ([IS-ENES](https://is.enes.org/)) consortium.
 
-This work is sponsored by the Regional and Global Model Analysis ([RGMA](https://climatemodeling.science.energy.gov/program/regional-global-model-analysis)) 
-program of the Earth and Environmental Systems Sciences Division ([EESSD](https://science.osti.gov/ber/Research/eessd)) 
-in the Office of Biological and Environmental Research ([BER](https://science.osti.gov/ber)) within the Department of Energy's ([DOE](https://www.energy.gov/)) 
-Office of Science ([OS](https://science.osti.gov/)). 
+This work is sponsored by the Regional and Global Model Analysis ([RGMA](https://climatemodeling.science.energy.gov/program/regional-global-model-analysis))
+program of the Earth and Environmental Systems Sciences Division ([EESSD](https://science.osti.gov/ber/Research/eessd))
+in the Office of Biological and Environmental Research ([BER](https://science.osti.gov/ber)) within the Department of Energy's ([DOE](https://www.energy.gov/))
+Office of Science ([OS](https://science.osti.gov/)).
 The work at PCMDI is performed under the auspices of the U.S. Department of Energy by Lawrence Livermore National Laboratory under Contract DE-AC52-07NA27344.
 
 <p>
