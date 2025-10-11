@@ -97,6 +97,20 @@ but for now it's like this:
     - unless you are a developer, you shouldn't need to look at this.
       If you want to know about CVs,
       use [esgvoc](https://esgf.github.io/esgf-vocab/).
+- `src-data`: A pure JSONLD version of the content.
+  Can be accessed with [cmip-ld](https://github.com/WCRP-CMIP/CMIPLD).
+    - as a user, for now this view should not be considered a reliable source.
+      If you want to know about CVs,
+      use [esgvoc](https://esgf.github.io/esgf-vocab/).
+- `docs`: An experimental docs page basd on `src-data`.
+    - as a user, for now this view should not be considered a reliable source.
+      If you want to know about CVs,
+      use [esgvoc](https://esgf.github.io/esgf-vocab/).
+- `production`: An experimental branch that hosts compiled documentation and JSONLD files,
+   as well as a static pages site.
+    - as a user, for now this view should not be considered a reliable source.
+      If you want to know about CVs,
+      use [esgvoc](https://esgf.github.io/esgf-vocab/).
 
 All other branches can be ignored.
 They are being used by devs and are not intended to be long-lived.
