@@ -55,6 +55,8 @@ Note: the naming convention for how data descriptors appear in different places,
 e.e. whether they have the trailing DD, whether they are camelCase or snake_case,
 are still being ironed out so expect to see a few different variants of these in the short-term,
 not always with a clearly defined logic.
+To follow discussion on this issue,
+please see [esgvoc#56](https://github.com/ESGF/esgf-vocab/issues/56).
 
 ### Source repositories
 
