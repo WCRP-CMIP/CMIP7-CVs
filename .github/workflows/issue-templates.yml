@@ -53,5 +53,5 @@ jobs:
           git config user.name "cmipld-actions[bot]"
           git config user.email "wolfiex@users.noreply.github.com"
           git add .github/ISSUE_TEMPLATE/*
-          git commit -m "auto-update issue templates from GEN_ISSUE_TEMPLATE"
+          git diff --staged --quiet || git commit -m "auto-update issue templates from GEN_ISSUE_TEMPLATE"
           git push
