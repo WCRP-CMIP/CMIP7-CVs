@@ -1,0 +1,24 @@
+{
+    "id": "esm-scen7-l",
+    "validation-key": "esm-scen7-l",
+    "ui-label": "Low Scenario",
+    "description": "Scenario consistent with staying likely below 2 degrees C",
+    "activity": [
+        "scenariomip"
+    ],
+    "alias": [],
+    "end": 2100,
+    "min-number-yrs-per-sim": 79,
+    "model-realms": [],
+    "parent-experiment": [
+        "esm-hist"
+    ],
+    "start": 2022,
+    "start-date": "none",
+    "tier": 0,
+    "@context": "_context_",
+    "type": [
+        "wcrp:experiment",
+        "cmip7"
+    ]
+}

@@ -1,0 +1,24 @@
+{
+    "id": "esm-scen7-m-ext",
+    "validation-key": "esm-scen7-m-ext",
+    "ui-label": "Medium Scenario Extension",
+    "description": "Medium emission scenario extension consistent with current policies",
+    "activity": [
+        "scenariomip"
+    ],
+    "alias": [],
+    "end": 2500,
+    "min-number-yrs-per-sim": 50,
+    "model-realms": [],
+    "parent-experiment": [
+        "esm-scen7-m"
+    ],
+    "start": 2101,
+    "start-date": "none",
+    "tier": 0,
+    "@context": "_context_",
+    "type": [
+        "wcrp:experiment",
+        "cmip7"
+    ]
+}

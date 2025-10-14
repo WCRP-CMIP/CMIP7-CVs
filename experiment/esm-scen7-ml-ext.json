@@ -1,0 +1,24 @@
+{
+    "id": "esm-scen7-ml-ext",
+    "validation-key": "esm-scen7-ml-ext",
+    "ui-label": "Medium Low Scenario Extension",
+    "description": "Extension to scenario with delayed increase in mitigation effort, insufficient to meet Paris Agreement objectives",
+    "activity": [
+        "scenariomip"
+    ],
+    "alias": [],
+    "end": 2500,
+    "min-number-yrs-per-sim": 50,
+    "model-realms": [],
+    "parent-experiment": [
+        "esm-scen7-ml"
+    ],
+    "start": 2101,
+    "start-date": "none",
+    "tier": 0,
+    "@context": "_context_",
+    "type": [
+        "wcrp:experiment",
+        "cmip7"
+    ]
+}
