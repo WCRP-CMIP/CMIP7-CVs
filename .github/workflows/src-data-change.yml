@@ -27,10 +27,6 @@ jobs:
   sync:
     uses: WCRP-CMIP/CMIPLD/.github/workflows/graph.yml@main
     needs: clean
-    with:
-      branch: "src-data"
-      path: .
-      remove: false
 
   aggregate:
     runs-on: ubuntu-latest
