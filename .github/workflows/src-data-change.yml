@@ -45,7 +45,7 @@ jobs:
       - name: Create graph files (aggregates)
         id: update-jsonld
         run: |
-          update-jsonld
+          update_all
 
       # - name: Generate summaries
       #   id: gen-summary
