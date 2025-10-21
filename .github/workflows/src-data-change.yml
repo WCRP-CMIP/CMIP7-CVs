@@ -42,6 +42,12 @@ jobs:
           path: .
           remove: false
 
+      - name: Upload modified files
+        uses: actions/upload-artifact@v4
+        with:
+          name: synced-files
+          path: .
+
   graph:
     uses: WCRP-CMIP/CMIPLD/.github/workflows/graph.yml@main
     needs: sync
@@ -52,6 +58,11 @@ jobs:
       - sync
       - graph
     steps:
+
+      - name: Download synced files
+        uses: actions/download-artifact@v4
+        with:
+          name: synced-files
 
       - name: Configure Git and Commit Changes
         run: |
