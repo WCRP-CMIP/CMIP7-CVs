@@ -60,7 +60,7 @@ jobs:
           git add .
           git commit -m "Automated Content Update" || echo "No changes to commit"
 
-      - name: Push PRfind . -type d -not -path '*/.*' -maxdepth 1 | sed 's|^\./||' | grep -v '^$' | sort | jq -R -s -c 'split("\n")[:-1]'
+      - name: Push PR
         uses: WCRP-CMIP/CMIPLD/actions/pushpr@main
         with:
           branch: "production"
