@@ -13,7 +13,6 @@ on:
 jobs:
   sync:
     runs-on: ubuntu-latest
-
     steps:
       - name: Checkout production branch
         uses: actions/checkout@v4
@@ -24,40 +23,38 @@ jobs:
         run: |
           shopt -s extglob
           rm -rf !(docs|summaries|.git)
-          
-      # - name: Checkout src-data branch
-      #   uses: actions/checkout@v4
-      #   with:
-      #     ref: src-data
-      #     path: ./
 
-
-      - name: Restore path from remote action
+      - name: Restore path from src-data branch
         uses: WCRP-CMIP/CMIPLD/.github/workflows/graph.yml@main
         with:
           branch: "src-data"
           path: .
           remove: false
 
-      - name: Create aggregate jsonld files
+  aggregate:
+    runs-on: ubuntu-latest
+    needs: sync
+    steps:
+      - name: Checkout production branch
+        uses: actions/checkout@v4
+        with:
+          ref: production
+
+      - name: Create aggregate JSON-LD files
         uses: WCRP-CMIP/CMIPLD/actions/fetch_branch_path@main
 
+  commit:
+    runs-on: ubuntu-latest
+    needs:
+      - sync
+      - aggregate
+    steps:
+      - name: Checkout production branch
+        uses: actions/checkout@v4
+        with:
+          ref: production
 
-      # - name: Copy JSON and @context files from src-data to production
-      #   run: |
-      #     rsync -av --include='*/' --include='*.json' --include='@context' --exclude='*' ../src-data/ ./
-      #   working-directory: production
-
-      # Add your processing/build steps here, if needed
-
-
-      # - name: Generate summaries
-      #   id: gen-summary
-      #   run: |
-      #     generate_summary .github/GENERATE_SUMMARY/
-
-
-      - name: Commit All
+      - name: Configure Git and Commit Changes
         run: |
           git config user.name "cmipipo-actions[bot]"
           git config user.email "technical@wcrp-cmip.org"
@@ -67,16 +64,15 @@ jobs:
       - name: Push PR
         uses: WCRP-CMIP/CMIPLD/actions/pushpr@main
         with:
-            branch: "production"
-            message: "Automated JSONLD update"
-            token: ${{ secrets.GITHUB_TOKEN }}
+          branch: "production"
+          message: "Automated JSONLD update"
+          token: ${{ secrets.GITHUB_TOKEN }}
 
   publish-pages:
-    needs: sync
+    needs: commit
     uses: WCRP-CMIP/CMIPLD/.github/workflows/pages.yml@main
     with:
       branch: production
       force: true
     secrets:
-      # supply token from the caller repo's secrets (can be GITHUB_TOKEN or a PAT stored as a secret)
       token: ${{ secrets.GITHUB_TOKEN }}
