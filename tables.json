@@ -1,0 +1,20 @@
+{
+    "@context": [
+        "@context",
+        {
+            "@base": "https://wcrp-cmip.github.io/CMIP7-CVs/project/",
+            "@vocab": "https://wcrp-cmip.github.io/CMIP7-CVs/project/"
+        }
+    ],
+    "@id": "https://wcrp-cmip.github.io/CMIP7-CVs/project/tables",
+    "@type": [
+        "wcrp:project",
+        "cmip7:cmip7",
+        "wcrp:tables"
+    ],
+    "id": "tables",
+    "validation-key": "",
+    "ui-label": "",
+    "description": "",
+    "tables": []
+}

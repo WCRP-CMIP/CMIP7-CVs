@@ -1,0 +1,37 @@
+{
+    "@context": [
+        "@context",
+        {
+            "@base": "https://wcrp-cmip.github.io/CMIP7-CVs/project/",
+            "@vocab": "https://wcrp-cmip.github.io/CMIP7-CVs/project/",
+            "activity": {
+                "@type": "@id",
+                "@context": "https://wcrp-cmip.github.io/WCRP-universe/activity/@context"
+            }
+        }
+    ],
+    "@id": "https://wcrp-cmip.github.io/CMIP7-CVs/project/activity",
+    "@type": [
+        "wcrp:project",
+        "cmip7:cmip7",
+        "wcrp:activity"
+    ],
+    "id": "activity",
+    "validation-key": "",
+    "ui-label": "",
+    "description": "",
+    "activity": [
+        "aerchemmip",
+        "c4mip",
+        "cfmip",
+        "cmip",
+        "damip",
+        "dcpp",
+        "geomip",
+        "highresmip2",
+        "lmip",
+        "pmip",
+        "rfmip",
+        "scenariomip"
+    ]
+}

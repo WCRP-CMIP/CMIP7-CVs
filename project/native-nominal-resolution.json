@@ -20,7 +20,7 @@
         "500km",
         "5000km"
     ],
-    "@context": "_context_",
+    "@context": "@context",
     "type": [
         "cmip7",
         "wcrp:project",

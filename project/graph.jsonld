@@ -12,29 +12,29 @@
     "vr": "https://wcrp-cmip.github.io/Variable-Registry/",
     "activity": {
       "@type": "@id",
-      "@context": "https://wcrp-cmip.github.io/WCRP-universe/activity/_context_"
+      "@context": "https://wcrp-cmip.github.io/WCRP-universe/activity/@context"
     },
     "frequency": {
       "@type": "@id",
       "@container": "@list",
-      "@context": "https://wcrp-cmip.github.io/WCRP-universe/frequency/_context_"
+      "@context": "https://wcrp-cmip.github.io/WCRP-universe/frequency/@context"
     },
     "license": {
       "@type": "@id",
       "@container": "@set",
-      "@context": "https://wcrp-cmip.github.io/WCRP-universe/license/_context_"
+      "@context": "https://wcrp-cmip.github.io/WCRP-universe/license/@context"
     },
     "mip-era": {
       "@type": "@id",
-      "@context": "https://wcrp-cmip.github.io/WCRP-universe/mip/_context_"
+      "@context": "https://wcrp-cmip.github.io/WCRP-universe/mip/@context"
     },
     "native-nominal-resolution": {
       "@type": "@id",
-      "@context": "https://wcrp-cmip.github.io/WCRP-universe/resolution/_context_"
+      "@context": "https://wcrp-cmip.github.io/WCRP-universe/resolution/@context"
     },
     "product": {
       "@type": "@id",
-      "@context": "https://wcrp-cmip.github.io/WCRP-universe/product/_context_"
+      "@context": "https://wcrp-cmip.github.io/WCRP-universe/product/@context"
     }
   },
   "@graph": [

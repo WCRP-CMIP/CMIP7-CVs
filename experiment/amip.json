@@ -33,7 +33,7 @@
     "start": 1979,
     "start-date": "none",
     "tier": 0,
-    "@context": "_context_",
+    "@context": "@context",
     "type": [
         "wcrp:experiment",
         "cmip7"

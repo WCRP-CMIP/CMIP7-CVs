@@ -1,0 +1,27 @@
+{
+    "@context": [
+        "@context",
+        {
+            "@base": "https://wcrp-cmip.github.io/CMIP7-CVs/project/",
+            "@vocab": "https://wcrp-cmip.github.io/CMIP7-CVs/project/"
+        }
+    ],
+    "@id": "https://wcrp-cmip.github.io/CMIP7-CVs/project/drs",
+    "@type": [
+        "wcrp:project",
+        "cmip7:cmip7",
+        "wcrp:drs"
+    ],
+    "id": "drs",
+    "validation-key": "",
+    "ui-label": "",
+    "description": "",
+    "drs": {
+        "directory-path-example": "",
+        "directory-path-sub-experiment-example": "C",
+        "directory-path-template": "",
+        "filename-example": "",
+        "filename-sub-experiment-example": "",
+        "filename-template": ""
+    }
+}
