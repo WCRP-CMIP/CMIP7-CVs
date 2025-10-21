@@ -11,7 +11,7 @@ on:
   workflow_dispatch:
 
 jobs:
-  sync:
+  clean:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout production branch
@@ -24,12 +24,13 @@ jobs:
           shopt -s extglob
           rm -rf !(docs|summaries|.git)
 
-      - name: Restore path from src-data branch
-        uses: WCRP-CMIP/CMIPLD/.github/workflows/graph.yml@main
-        with:
-          branch: "src-data"
-          path: .
-          remove: false
+  sync:
+    uses: WCRP-CMIP/CMIPLD/.github/workflows/graph.yml@main
+    needs: clean
+    with:
+      branch: "src-data"
+      path: .
+      remove: false
 
   aggregate:
     runs-on: ubuntu-latest
