@@ -52,10 +52,6 @@ jobs:
       - sync
       - graph
     steps:
-      - name: Checkout production branch
-        uses: actions/checkout@v4
-        with:
-          ref: production
 
       - name: Configure Git and Commit Changes
         run: |
