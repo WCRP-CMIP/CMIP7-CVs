@@ -24,27 +24,28 @@ jobs:
           shopt -s extglob
           rm -rf !(docs|summaries|.git)
 
-  sync:
-    uses: WCRP-CMIP/CMIPLD/.github/workflows/graph.yml@main
-    needs: clean
 
-  aggregate:
+
+  sync:
     runs-on: ubuntu-latest
-    needs: sync
+    needs: clean
     steps:
       - name: Checkout production branch
         uses: actions/checkout@v4
         with:
           ref: production
 
-      - name: Create aggregate JSON-LD files
-        uses: WCRP-CMIP/CMIPLD/actions/fetch_branch_path@main
 
+
+  graph:
+    uses: WCRP-CMIP/CMIPLD/.github/workflows/graph.yml@main
+    needs: clean
+    
   commit:
     runs-on: ubuntu-latest
     needs:
       - sync
-      - aggregate
+      - graph
     steps:
       - name: Checkout production branch
         uses: actions/checkout@v4
