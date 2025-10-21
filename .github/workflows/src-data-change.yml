@@ -35,7 +35,12 @@ jobs:
         with:
           ref: production
 
-
+      - name: Restore path from remote action
+        uses: WCRP-CMIP/CMIPLD/actions/fetch_branch_path@main
+        with:
+          branch: "src-data"
+          path: .
+          remove: false
 
   graph:
     uses: WCRP-CMIP/CMIPLD/.github/workflows/graph.yml@main
