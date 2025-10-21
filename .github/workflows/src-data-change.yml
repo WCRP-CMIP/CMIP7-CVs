@@ -1,67 +1,66 @@
-name: Sync JSON changes from src-data to production, and apply relevant documentation and summary updates
+name: Sync JSON and @context changes from src-data to production, and apply relevant documentation and summary updates
 
 on:
   push:
     branches:
       - src-data
     paths:
-      - '**/*.json' # ✅ Trigger on any JSON file at any depth
+      - '**/*.json'
       - '**/@context'
+  workflow_dispatch:
 
 jobs:
   sync:
     runs-on: ubuntu-latest
 
     steps:
-      # Checkout production branch as the main workspace
+
+      - name: Install cmipld
+        id: install-cmipld
+        uses: WCRP-CMIP/CMIPLD/actions/cmipld@main
+        
+      # Checkout production branch
       - name: Checkout production branch
         uses: actions/checkout@v4
         with:
           ref: production
           fetch-depth: 0
 
+      # Clean everything except docs and summaries in production
+      - name: Remove everything except docs and summaries (production)
+        run: |
+          shopt -s extglob
+          rm -rf !("docs"|"summaries"|"."|"..")
 
-
-      # Checkout src-data branch into a subfolder
-      - name: Checkout src-data branch into subfolder
+      # Checkout src-data branch to temp directory
+      - name: Checkout src-data branch to temp
         uses: actions/checkout@v4
         with:
           ref: src-data
-          path: src-data
-          fetch-depth: 0
-
-      
-      - name: install cmipld
-        id: install-cmipld
-        uses: WCRP-CMIP/CMIPLD/actions/cmipld@main
+          path: temp-src
+          
 
 
-
-      # #creating graph files should go here. 
-
+      - name: Create graph files (aggregates)
+        id: update-jsonld
+        run: |
+          update-jsonld
 
       # - name: Generate summaries
       #   id: gen-summary
       #   run: |
       #     generate_summary .github/GENERATE_SUMMARY/
 
-
+          
 
       - name: Commit All
         uses: WCRP-CMIP/CMIPLD/actions/commit-all@main
         with:
           message: "Automated Content Update"
-      
+
       - name: Push PR
         uses: WCRP-CMIP/CMIPLD/actions/pushpr@main
         with:
-            branch: "production"
-            message: "Automated JSONLD update"
-            token: ${{ secrets.GITHUB_TOKEN }}
-
-      - name: Publish
-        uses: WCRP-CMIP/CMIPLD/actions/publish2pages@main
-        with:
-          api_key: ${{ secrets.API_KEY }}
-          github_token: ${{ secrets.GITHUB_TOKEN }}
-          branch_name: ${{ github.ref_name }}
+          branch: "production"
+          message: "Automated CI parsing and update"
+          token: ${{ secrets.GITHUB_TOKEN }}
