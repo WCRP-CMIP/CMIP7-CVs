@@ -16,9 +16,7 @@ jobs:
 
     steps:
 
-      - name: Install cmipld
-        id: install-cmipld
-        uses: WCRP-CMIP/CMIPLD/actions/cmipld@main
+
         
       # Checkout production branch
       - name: Checkout production branch
@@ -40,7 +38,9 @@ jobs:
           ref: src-data
           path: temp-src
           
-
+      - name: Install cmipld
+        id: install-cmipld
+        uses: WCRP-CMIP/CMIPLD/actions/cmipld@main
 
       - name: Create graph files (aggregates)
         id: update-jsonld
@@ -78,6 +78,7 @@ jobs:
 
   
   publish-pages:
+    needs: sync
     uses: WCRP-CMIP/CMIPLD/.github/workflows/pages.yml@main
     with:
       branch: production
