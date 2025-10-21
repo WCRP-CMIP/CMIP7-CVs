@@ -49,12 +49,18 @@ jobs:
         with:
           message: "Automated Content Update"
 
-      - name: Push PR
-        uses: WCRP-CMIP/CMIPLD/actions/pushpr@main
-        with:
-          branch: "production"
-          message: "Automated CI parsing and update"
-          token: ${{ secrets.GITHUB_TOKEN }}
+      # - name: Push PR
+      #   uses: WCRP-CMIP/CMIPLD/actions/pushpr@main
+      #   with:
+      #     branch: "production"
+      #     message: "Automated CI parsing and update"
+      #     token: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Push production branch with git
+        run: |
+          git config user.name "cmipipo-actions[bot]"
+          git config user.email "technical@wcrp-cmip.org"
+          git push origin production
 
   publish-pages:
     needs: sync
