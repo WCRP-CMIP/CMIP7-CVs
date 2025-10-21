@@ -1,4 +1,5 @@
-name: Sync JSON and @context changes from src-data to production, and apply relevant documentation and summary updates
+name: ∆ src-data
+description: Sync JSON and @context changes from src-data to production, and apply relevant documentation and summary updates
 
 on:
   push:
