@@ -66,4 +66,6 @@ jobs:
     with:
       branch: production
       force: true
-    secrets: inherit
+    secrets:
+      # supply token from the caller repo's secrets (can be GITHUB_TOKEN or a PAT stored as a secret)
+      token: ${{ secrets.GITHUB_TOKEN }}
