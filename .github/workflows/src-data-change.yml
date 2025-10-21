@@ -33,10 +33,11 @@ jobs:
 
 
       - name: Restore path from remote action
-        uses: WCRP-CMIP/CMIPLD/actions/fetch_branch_path@d3fa005788e5519d4a79219966c963213949f8b5
+        uses: WCRP-CMIP/CMIPLD/actions/fetch_branch_path@main
         with:
-          branch: "production"
+          branch: "src-data"
           path: .
+          remove: false
 
 
 
