@@ -25,11 +25,19 @@ jobs:
           shopt -s extglob
           rm -rf !(docs|summaries|.git)
           
-      - name: Checkout src-data branch
-        uses: actions/checkout@v4
+      # - name: Checkout src-data branch
+      #   uses: actions/checkout@v4
+      #   with:
+      #     ref: src-data
+      #     path: ./
+
+
+      - name: Restore path from remote action
+        uses: WCRP-CMIP/CMIPLD/actions/fetch_branch_path@d3fa005788e5519d4a79219966c963213949f8b5
         with:
-          ref: src-data
-          path: ./
+          branch: "production"
+          path: .
+
 
 
       # - name: Copy JSON and @context files from src-data to production
