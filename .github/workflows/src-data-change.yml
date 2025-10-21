@@ -21,9 +21,7 @@ jobs:
       # Checkout production branch
       - name: Checkout production branch
         uses: actions/checkout@v4
-        with:
-          ref: production
-          fetch-depth: 0
+
 
       # Clean everything except docs and summaries in production
       - name: Remove everything except docs and summaries (production)
@@ -42,10 +40,15 @@ jobs:
         id: install-cmipld
         uses: WCRP-CMIP/CMIPLD/actions/cmipld@main
 
-      - name: Create graph files (aggregates)
-        id: update-jsonld
-        run: |
-          update_all
+      # - name: Create graph files (aggregates)
+      #   id: update-jsonld
+      #   run: |
+      #     update_all
+      
+      - name: Create Graph.jsonld
+        uses: WCRP-CMIP/CMIPLD/.github/workflows/graph.yml@main
+
+
 
       # - name: Generate summaries
       #   id: gen-summary
