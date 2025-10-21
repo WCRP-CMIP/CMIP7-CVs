@@ -68,10 +68,20 @@ jobs:
 
 
             # Trigger (force) update of the Pages site via cmipld action
-      - name: publish/update Pages site
-        uses: WCRP-CMIP/CMIPLD/actions/pages.yml@main
-        with:
-          branch: production
-          force: true
-          secrets: inherit
-          token: ${{ secrets.GITHUB_TOKEN }}
+      # - name: publish/update Pages site
+      #   uses: WCRP-CMIP/CMIPLD/actions/pages.yml@main
+      #   with:
+      #     branch: production
+      #     force: true
+      #     secrets: inherit
+      #     token: ${{ secrets.GITHUB_TOKEN }}
+
+  
+  publish-pages:
+    uses: WCRP-CMIP/CMIPLD/.github/workflows/pages.yml@main
+    with:
+      branch: production
+      force: true
+    secrets:
+      token: ${{ secrets.GITHUB_TOKEN }}
+
