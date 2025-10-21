@@ -69,7 +69,7 @@ jobs:
 
             # Trigger (force) update of the Pages site via cmipld action
       - name: publish/update Pages site
-        uses: WCRP-CMIP/CMIPLD/actions/publish-pages@main
+        uses: WCRP-CMIP/CMIPLD/actions/pages@main
         with:
           branch: production
           force: true
