@@ -5,7 +5,8 @@ on:
     branches:
       - src-data
     paths:
-      - '**/*.json'   # ✅ Trigger on any JSON file at any depth
+      - '**/*.json' # ✅ Trigger on any JSON file at any depth
+      - '**/@context'
 
 jobs:
   sync:
@@ -20,8 +21,6 @@ jobs:
           fetch-depth: 0
 
 
-      #Changed folders    
-      
 
       # Checkout src-data branch into a subfolder
       - name: Checkout src-data branch into subfolder
@@ -38,13 +37,13 @@ jobs:
 
 
 
-      #creating graph files should go here. 
+      # #creating graph files should go here. 
 
 
-      - name: Generate summaries
-        id: gen-summary
-        run: |
-          generate_summary .github/GENERATE_SUMMARY/
+      # - name: Generate summaries
+      #   id: gen-summary
+      #   run: |
+      #     generate_summary .github/GENERATE_SUMMARY/
 
 
 
