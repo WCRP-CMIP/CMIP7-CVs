@@ -40,6 +40,10 @@ jobs:
       # Add your processing/build steps here, if needed
 
 
+      # - name: Generate summaries
+      #   id: gen-summary
+      #   run: |
+      #     generate_summary .github/GENERATE_SUMMARY/
 
 
       - name: Commit All
@@ -49,10 +53,12 @@ jobs:
           git add .
           git commit -m "Automated Content Update" || echo "No changes to commit"
 
-      - name: Push production branch with git
-        run: |
-          git push origin production
-        working-directory: production
+      - name: Push PR
+        uses: WCRP-CMIP/CMIPLD/actions/pushpr@main
+        with:
+            branch: "production"
+            message: "Automated JSONLD update"
+            token: ${{ secrets.GITHUB_TOKEN }}
 
   publish-pages:
     needs: sync
