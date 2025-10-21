@@ -64,3 +64,12 @@ jobs:
           branch: "production"
           message: "Automated CI parsing and update"
           token: ${{ secrets.GITHUB_TOKEN }}
+
+
+            # Trigger (force) update of the Pages site via cmipld action
+      - name: publish/update Pages site
+        uses: WCRP-CMIP/CMIPLD/actions/publish-pages@main
+        with:
+          branch: production
+          force: true
+          token: ${{ secrets.GITHUB_TOKEN }}
