@@ -15,13 +15,9 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-
-
-        
       # Checkout production branch
       - name: Checkout production branch
         uses: actions/checkout@v4
-
 
       # Clean everything except docs and summaries in production
       - name: Remove everything except docs and summaries (production)
@@ -35,27 +31,18 @@ jobs:
         with:
           ref: src-data
           path: temp-src
-          
+
+      - name: Copy new/updated JSON and @context files
+        run: |
+          rsync -av --exclude='docs' --exclude='summaries' temp-src/ .
+
       - name: Install cmipld
-        id: install-cmipld
         uses: WCRP-CMIP/CMIPLD/actions/cmipld@main
 
-      # - name: Create graph files (aggregates)
-      #   id: update-jsonld
+      # Example: Run your data processing script here, or call an action
+      # - name: Create Graph.jsonld
       #   run: |
-      #     update_all
-      
-      - name: Create Graph.jsonld
-        uses: WCRP-CMIP/CMIPLD/.github/workflows/graph.yml@main
-
-
-
-      # - name: Generate summaries
-      #   id: gen-summary
-      #   run: |
-      #     generate_summary .github/GENERATE_SUMMARY/
-
-          
+      #     ./scripts/create-graph-jsonld.sh
 
       - name: Commit All
         uses: WCRP-CMIP/CMIPLD/actions/commit-all@main
@@ -69,23 +56,10 @@ jobs:
           message: "Automated CI parsing and update"
           token: ${{ secrets.GITHUB_TOKEN }}
 
-
-            # Trigger (force) update of the Pages site via cmipld action
-      # - name: publish/update Pages site
-      #   uses: WCRP-CMIP/CMIPLD/actions/pages.yml@main
-      #   with:
-      #     branch: production
-      #     force: true
-      #     secrets: inherit
-      #     token: ${{ secrets.GITHUB_TOKEN }}
-
-  
   publish-pages:
     needs: sync
     uses: WCRP-CMIP/CMIPLD/.github/workflows/pages.yml@main
     with:
       branch: production
       force: true
-    secrets:
-      token: ${{ secrets.GITHUB_TOKEN }}
-
+    secrets: inherit
