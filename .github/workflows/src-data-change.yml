@@ -44,7 +44,7 @@ jobs:
 
   graph:
     uses: WCRP-CMIP/CMIPLD/.github/workflows/graph.yml@main
-    needs: clean
+    needs: sync
     
   commit:
     runs-on: ubuntu-latest
