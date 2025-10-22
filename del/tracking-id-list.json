@@ -1,15 +1,15 @@
 {
-    "id": "tracking-id-list",
-    "validation-key": "",
-    "ui-label": "",
-    "description": "",
-    "tracking_id": [
-        ""
-    ],
-    "@context": "@context",
-    "type": [
-        "wcrp:project",
-        "cmip7",
-        "wcrp:tracking-id"
-    ]
+  "id": "tracking-id-list",
+  "validation-key": "",
+  "ui-label": "",
+  "description": "",
+  "tracking_id": [
+    ""
+  ],
+  "@context": "@context",
+  "type": [
+    "wcrp:project",
+    "cmip7",
+    "wcrp:tracking-id"
+  ]
 }

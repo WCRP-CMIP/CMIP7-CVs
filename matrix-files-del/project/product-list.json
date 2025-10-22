@@ -1,17 +1,17 @@
 {
-    "id": "product-list",
-    "validation-key": "",
-    "ui-label": "",
-    "description": "",
-    "product": {
-        "id": "model-output"
-    },
-    "@context": [
-        "@context"
-    ],
-    "type": [
-        "wcrp:project",
-        "cmip7",
-        "wcrp:product"
-    ]
+  "id": "product-list",
+  "validation-key": "",
+  "ui-label": "",
+  "description": "",
+  "product": {
+    "id": "model-output"
+  },
+  "@context": [
+    "@context"
+  ],
+  "type": [
+    "wcrp:project",
+    "cmip7",
+    "wcrp:product"
+  ]
 }

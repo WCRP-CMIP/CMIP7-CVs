@@ -1,40 +1,39 @@
 {
-    "@context": [
-        "@context",
-        {
-            "@base": "https://wcrp-cmip.github.io/CMIP7-CVs/project/",
-            "@vocab": "https://wcrp-cmip.github.io/CMIP7-CVs/project/",
-            "native-nominal-resolution": {
-                "@type": "@id",
-                "@context": "https://wcrp-cmip.github.io/WCRP-universe/resolution/@context"
-            }
-        }
-    ],
-    "@id": "https://wcrp-cmip.github.io/CMIP7-CVs/project/native-nominal-resolution",
-    "@type": [
-        "wcrp:project",
-        "cmip7:cmip7",
-        "wcrp:nominal_resolution"
-    ],
-    "id": "native-nominal-resolution",
-    "validation-key": "",
-    "ui-label": "",
-    "description": "",
-    "nominal-resolution": [
-        "0.5km",
-        "1km",
-        "10km",
-        "100km",
-        "1000km",
-        "10000km",
-        "1x1degree",
-        "2.5km",
-        "25km",
-        "250km",
-        "2500km",
-        "5km",
-        "50km",
-        "500km",
-        "5000km"
-    ]
+  "@context": [
+    "@context",
+    {
+      "@base": "https://wcrp-cmip.github.io/CMIP7-CVs/project/",
+      "@vocab": "https://wcrp-cmip.github.io/CMIP7-CVs/project/",
+      "native-nominal-resolution": {
+        "@type": "@id",
+        "@context": "https://wcrp-cmip.github.io/WCRP-universe/resolution/@context"
+      }
+    }
+  ],
+  "@type": [
+    "wcrp:project",
+    "cmip7:cmip7",
+    "wcrp:nominal_resolution"
+  ],
+  "id": "native-nominal-resolution",
+  "validation-key": "",
+  "ui-label": "",
+  "description": "",
+  "nominal-resolution": [
+    "0.5km",
+    "1km",
+    "10km",
+    "100km",
+    "1000km",
+    "10000km",
+    "1x1degree",
+    "2.5km",
+    "25km",
+    "250km",
+    "2500km",
+    "5km",
+    "50km",
+    "500km",
+    "5000km"
+  ]
 }
