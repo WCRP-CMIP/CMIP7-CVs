@@ -11,29 +11,19 @@ on:
   workflow_dispatch:
 
 jobs:
-  clean:
+
+  sync:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout production branch
         uses: actions/checkout@v4
         with:
           ref: production
-
+      
       - name: Clean production except docs and summaries
         run: |
           shopt -s extglob
           rm -rf !(docs|summaries|.git)
-
-
-
-  sync:
-    runs-on: ubuntu-latest
-    needs: clean
-    steps:
-      - name: Checkout production branch
-        uses: actions/checkout@v4
-        with:
-          ref: production
 
       - name: Restore path from remote action
         uses: WCRP-CMIP/CMIPLD/actions/fetch_branch_path@main
