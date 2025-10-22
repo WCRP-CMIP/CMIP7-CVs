@@ -1,8 +1,0 @@
-{
-    "@context": "000_context.jsonld",
-    "id": "date",
-    "description": "form: YYYY-MM-DDTHH:MM:SSZ (e.g., “2010-03-23T05:56:23Z”)",
-    "type": "creation_date",
-    "regex": "^\\d{4}-\\d{2}-\\d{2}T\\d{2}:\\d{2}:\\d{2}Z$"
-}
-

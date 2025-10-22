@@ -1,9 +1,0 @@
-{
-    "@context": "000_context.jsonld",
-    "id": "g7-1p5k-sai",
-    "type": "experiment",
-    "activity": [
-        "geomip"
-    ],
-    "experiment_id": "g7-1p5k-sai"
-}

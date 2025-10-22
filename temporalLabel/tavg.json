@@ -1,5 +1,0 @@
-{
-    "@context": "000_context.jsonld",
-    "id": "tavg",
-    "type": "temporal_label"
-}

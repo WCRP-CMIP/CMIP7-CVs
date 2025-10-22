@@ -1,9 +1,0 @@
-{
-    "@context": "000_context.jsonld",
-    "id": "hist-pislcf",
-    "type": "experiment",
-    "activity": [
-        "aerchemmip"
-    ],
-    "experiment_id": "hist-pislcf"
-}
