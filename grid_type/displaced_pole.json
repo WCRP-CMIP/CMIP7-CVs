@@ -1,0 +1,5 @@
+{
+    "@context": "000_context.jsonld",
+    "id": "displaced_pole",
+    "type": "grid_type"
+}

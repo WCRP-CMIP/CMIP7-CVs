@@ -1,0 +1,5 @@
+{
+    "@context": "000_context.jsonld",
+    "id": "lambert_conformal_conic",
+    "type": "grid_mapping"
+}

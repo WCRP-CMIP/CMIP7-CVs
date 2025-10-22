@@ -1,0 +1,5 @@
+{
+    "@context": "000_context.jsonld",
+    "id": "arakawa_b",
+    "type": "grid_arrangement"
+}

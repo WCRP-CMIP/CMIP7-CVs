@@ -1,0 +1,5 @@
+{
+    "@context": "000_context.jsonld",
+    "id": "spectral_reduced_gaussian",
+    "type": "grid_type"
+}

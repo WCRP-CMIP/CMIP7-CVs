@@ -1,0 +1,5 @@
+{
+    "@context": "000_context.jsonld",
+    "id": "albers_conical_equal_area",
+    "type": "grid_mapping"
+}

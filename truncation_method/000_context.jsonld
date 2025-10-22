@@ -1,0 +1,8 @@
+{
+    "@context": {
+        "id": "@id",
+        "type": "@type",
+        "@base": "https://espri-mod.github.io/mip-cmor-tables/truncation_method/",
+        "truncation_method": "https://espri-mod.github.io/mip-cmor-tables/truncation_method"
+    }
+}

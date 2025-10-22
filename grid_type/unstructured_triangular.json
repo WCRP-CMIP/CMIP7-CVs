@@ -1,0 +1,5 @@
+{
+    "@context": "000_context.jsonld",
+    "id": "unstructured_triangular",
+    "type": "grid_type"
+}
