@@ -58,11 +58,17 @@ jobs:
       - sync
       - graph
     steps:
-
-      - name: Download synced files
+    
+      - name: Checkout production branch
+        uses: actions/checkout@v4
+        with:
+          ref: production
+          
+      - name: Download synced files artifact
         uses: actions/download-artifact@v4
         with:
           name: synced-files
+          path: .
 
       - name: Configure Git and Commit Changes
         run: |
