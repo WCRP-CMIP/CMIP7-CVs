@@ -1,0 +1,8 @@
+{
+    "@context": {
+        "id": "@id",
+        "type": "@type",
+        "@base": "https://espri-mod.github.io/mip-cmor-tables/mesh_location/",
+        "mesh_location": "https://espri-mod.github.io/mip-cmor-tables/mesh_location"
+    }
+}

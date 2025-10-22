@@ -1,0 +1,5 @@
+{
+    "@context": "000_context.jsonld",
+    "id": "unstructured_polygonal",
+    "type": "grid_type"
+}

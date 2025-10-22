@@ -1,0 +1,5 @@
+{
+    "@context": "000_context.jsonld",
+    "id": "cubed_sphere",
+    "type": "grid_type"
+}

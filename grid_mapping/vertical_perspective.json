@@ -1,0 +1,5 @@
+{
+    "@context": "000_context.jsonld",
+    "id": "vertical_perspective",
+    "type": "grid_mapping"
+}

@@ -1,0 +1,5 @@
+{
+    "@context": "000_context.jsonld",
+    "id": "azimuthal_equidistant",
+    "type": "grid_mapping"
+}

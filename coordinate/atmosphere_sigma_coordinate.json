@@ -1,0 +1,5 @@
+{
+    "@context": "000_context.jsonld",
+    "id": "atmosphere_sigma_coordinate",
+    "type": "coordinate"
+}

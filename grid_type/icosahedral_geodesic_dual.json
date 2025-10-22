@@ -1,0 +1,5 @@
+{
+    "@context": "000_context.jsonld",
+    "id": "icosahedral_geodesic_dual",
+    "type": "grid_type"
+}

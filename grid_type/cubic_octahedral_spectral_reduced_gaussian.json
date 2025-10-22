@@ -1,0 +1,5 @@
+{
+    "@context": "000_context.jsonld",
+    "id": "cubic_octahedral_spectral_reduced_gaussian",
+    "type": "grid_type"
+}
