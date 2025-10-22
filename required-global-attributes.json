@@ -1,21 +1,20 @@
 {
-    "@context": [
-        "@context",
-        {
-            "@base": "https://wcrp-cmip.github.io/CMIP7-CVs/project/",
-            "@vocab": "https://wcrp-cmip.github.io/CMIP7-CVs/project/"
-        }
-    ],
-    "@id": "https://wcrp-cmip.github.io/CMIP7-CVs/project/required-global-attributes",
-    "@type": [
-        "wcrp:project",
-        "cmip7:cmip7",
-        "wcrp:required",
-        "wcrp:required_global_attributes"
-    ],
-    "id": "required-global-attributes",
-    "validation-key": "",
-    "ui-label": "",
-    "description": "",
-    "required_global_attributes": []
+  "@context": [
+    "@context",
+    {
+      "@base": "https://wcrp-cmip.github.io/CMIP7-CVs/project/",
+      "@vocab": "https://wcrp-cmip.github.io/CMIP7-CVs/project/"
+    }
+  ],
+  "@type": [
+    "wcrp:project",
+    "cmip7:cmip7",
+    "wcrp:required",
+    "wcrp:required_global_attributes"
+  ],
+  "id": "required-global-attributes",
+  "validation-key": "",
+  "ui-label": "",
+  "description": "",
+  "required_global_attributes": []
 }

@@ -1,20 +1,19 @@
 {
-    "@context": [
-        "@context",
-        {
-            "@base": "https://wcrp-cmip.github.io/CMIP7-CVs/project/",
-            "@vocab": "https://wcrp-cmip.github.io/CMIP7-CVs/project/"
-        }
-    ],
-    "@id": "https://wcrp-cmip.github.io/CMIP7-CVs/project/repo",
-    "@type": [
-        "wcrp:project",
-        "cmip7:cmip7",
-        "wcrp:repo"
-    ],
-    "id": "repo",
-    "validation-key": "",
-    "ui-label": "",
-    "description": "",
-    "repo": "https://github.com/WCRP-CMIP/CMIP6Plus_CVs"
+  "@context": [
+    "@context",
+    {
+      "@base": "https://wcrp-cmip.github.io/CMIP7-CVs/project/",
+      "@vocab": "https://wcrp-cmip.github.io/CMIP7-CVs/project/"
+    }
+  ],
+  "@type": [
+    "wcrp:project",
+    "cmip7:cmip7",
+    "wcrp:repo"
+  ],
+  "id": "repo",
+  "validation-key": "",
+  "ui-label": "",
+  "description": "",
+  "repo": "https://github.com/WCRP-CMIP/CMIP6Plus_CVs"
 }
