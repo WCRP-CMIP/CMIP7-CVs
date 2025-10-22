@@ -13,7 +13,7 @@ from cmipld.utils.ldparse import *
 
 # Data for this template
 DATA = {
-    'activity': dict(cmipld.utils.ldparse.name_extract(cmipld.get('cmip7:project/activity-list.json')['activity'])),
+    'activity': dict(cmipld.utils.ldparse.name_extract(cmipld.get('cmip7:activity.json')['activity'])),
     
     'parent_experiment': {
         "Custom Parent: specify in 'Parent experiment other' field": {'id': 'custom-parent', 'validation-key': 'custom-parent'},
