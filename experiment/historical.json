@@ -2,13 +2,5 @@
     "@context": "000_context.jsonld",
     "id": "historical",
     "type": "experiment",
-    "min_number_yrs_per_sim": null,
-    "end_year": null,
-    "description": "DECK: historical \n Simulation of the recent past",
-    "experiment": "Simulation of the recent past (concentration driven)",
-    "start_year": null,
-    "tier": 0,
-    "activity": [
-        "cmip"
-    ]
+    "tier": 1
 }

@@ -1,0 +1,162 @@
+#!/bin/bash
+
+# Set the target directory
+DIR="$1"
+
+# Check if directory exists
+if [[ ! -d "$DIR" ]]; then
+    echo "Error: Directory $DIR does not exist." >&2
+    exit 1
+fi
+
+# Initialize the JSON-LD structure
+output_file="$DIR/graph.jsonld"
+context_file="$DIR/_context_"
+
+# Read main context
+if [[ ! -f "$context_file" ]]; then
+    echo "Error: Context file $context_file not found." >&2
+    exit 1
+fi
+
+echo "Processing context file: $context_file" >&2
+
+# Function to resolve context recursively
+resolve_context() {
+    local ctx_file="$1"
+    local base_dir="$2"
+    
+    if [[ ! -f "$ctx_file" ]]; then
+        echo "Warning: Context file $ctx_file not found." >&2
+        echo "{}"
+        return
+    fi
+    
+    # Get the @context array from the file
+    local context_array=$(jq '.["@context"]' "$ctx_file" 2>/dev/null)
+    
+    if [[ "$context_array" == "null" ]]; then
+        echo "Warning: No @context found in $ctx_file" >&2
+        echo "{}"
+        return
+    fi
+    
+    # If it's not an array, wrap it in an array
+    if [[ "$(echo "$context_array" | jq 'type')" != '"array"' ]]; then
+        context_array="[$context_array]"
+    fi
+    
+    # Initialize result as empty object
+    local merged_context="{}"
+    
+    # Process each item in the context array
+    local length=$(echo "$context_array" | jq 'length')
+    for (( i=0; i<$length; i++ )); do
+        local item=$(echo "$context_array" | jq ".[$i]")
+        local item_type=$(echo "$item" | jq -r 'type')
+        
+        if [[ "$item_type" == "string" ]]; then
+            # It's a reference to another context file
+            local ref=$(echo "$item" | jq -r '.')
+            
+            if [[ "$ref" == ../* ]]; then
+                # Relative path reference
+                local resolved_path="$base_dir/$ref"
+                echo "Resolving relative context: $ref -> $resolved_path" >&2
+                local resolved_ctx=$(resolve_context "$resolved_path" "$(dirname "$resolved_path")")
+                # Merge the resolved context
+                merged_context=$(echo "$merged_context $resolved_ctx" | jq -s '.[0] * .[1]')
+            elif [[ "$ref" == http* ]]; then
+                # URL reference - keep as is for now (could fetch if needed)
+                echo "Found URL reference: $ref (keeping as reference)" >&2
+                # For now, we'll just note it but not fetch
+            else
+                # Local file reference
+                local resolved_path="$base_dir/$ref"
+                echo "Resolving local context: $ref -> $resolved_path" >&2
+                local resolved_ctx=$(resolve_context "$resolved_path" "$(dirname "$resolved_path")")
+                merged_context=$(echo "$merged_context $resolved_ctx" | jq -s '.[0] * .[1]')
+            fi
+        elif [[ "$item_type" == "object" ]]; then
+            # It's an inline context object
+            echo "Merging inline context object" >&2
+            merged_context=$(echo "$merged_context $item" | jq -s '.[0] * .[1]')
+        fi
+    done
+    
+    echo "$merged_context"
+}
+
+# Resolve the complete context
+echo "Starting context resolution..." >&2
+final_context=$(resolve_context "$context_file" "$(dirname "$context_file")")
+
+# Validate that we have a valid context
+if [[ "$final_context" == "{}" ]] || [[ "$final_context" == "null" ]]; then
+    echo "Warning: Failed to resolve context properly. Using original context." >&2
+    final_context=$(jq '.["@context"]' "$context_file")
+    
+    # If original is an array, try to flatten it
+    if [[ "$(echo "$final_context" | jq 'type')" == '"array"' ]]; then
+        # Try to merge array elements that are objects
+        final_context=$(echo "$final_context" | jq 'reduce .[] as $item ({}; if ($item | type) == "object" then . * $item else . end)')
+    fi
+fi
+
+echo "Final context resolved. Building graph file..." >&2
+
+# Start building the JSON-LD file
+cat > "$output_file" << EOF
+{
+  "@context": $final_context,
+  "@graph": [
+EOF
+
+# Append all JSON-LD files in the directory to the graph
+first=true
+json_count=0
+
+for file in "$DIR"/*.json; do
+    # Skip if no json files found (when glob doesn't match)
+    [[ ! -f "$file" ]] && continue
+    
+    # Skip the context file (which might have .json extension in some cases)
+    [[ "$(basename "$file")" == "_context_" ]] && continue
+    [[ "$(basename "$file")" == "_context_.json" ]] && continue
+    
+    echo "Processing: $file" >&2
+    
+    # Remove @context from individual files and add to graph
+    content=$(jq 'del(.["@context"])' "$file" 2>/dev/null)
+    
+    if [[ $? -ne 0 ]] || [[ "$content" == "null" ]]; then
+        echo "Warning: Failed to parse $file, skipping" >&2
+        continue
+    fi
+    
+    if [[ "$first" == true ]]; then
+        echo "    $content" >> "$output_file"
+        first=false
+    else
+        echo "    ,$content" >> "$output_file"
+    fi
+    
+    ((json_count++))
+done
+
+# Close the JSON-LD structure
+cat >> "$output_file" << EOF
+  ]
+}
+EOF
+
+echo "Combined JSON-LD file created at $output_file" >&2
+echo "Processed $json_count JSON files" >&2
+
+# Validate the generated JSON
+if jq . "$output_file" >/dev/null 2>&1; then
+    echo "✓ Generated file is valid JSON" >&2
+else
+    echo "✗ Warning: Generated file is not valid JSON" >&2
+    exit 1
+fi

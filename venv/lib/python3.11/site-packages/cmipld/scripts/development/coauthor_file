@@ -1,0 +1,42 @@
+#!/bin/bash
+
+# Check for correct usage
+if [ "$#" -ne 2 ]; then
+    echo "Usage: $0 <file> <co-author-email>"
+    exit 1
+fi
+
+FILE="$1"
+COAUTHOR_EMAIL="$2"
+
+# Get the last commit hash that modified the file
+LAST_COMMIT=$(git log -n 1 --pretty=format:%H -- "$FILE")
+
+if [ -z "$LAST_COMMIT" ]; then
+    echo "No commits found for file: $FILE"
+    exit 1
+fi
+
+# Get the author's name from the email
+COAUTHOR_NAME=$(git log --format='%aN <%aE>' | grep "$COAUTHOR_EMAIL" | head -n 1 | sed -E 's/ <.*>//')
+
+if [ -z "$COAUTHOR_NAME" ]; then
+    echo "Error: Could not determine author name for email: $COAUTHOR_EMAIL"
+    exit 1
+fi
+
+# Start an interactive rebase to modify the commit
+git rebase -i "${LAST_COMMIT}^" <<EOF
+pick $LAST_COMMIT
+EOF
+
+# Amend the commit to add the co-author
+git commit --amend -m "$(git log -1 --pretty=%B)
+
+Co-authored-by: $COAUTHOR_NAME <$COAUTHOR_EMAIL>"
+
+# Continue the rebase process
+git rebase --continue
+
+# Push changes (force required)
+git push --force

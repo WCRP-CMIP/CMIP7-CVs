@@ -1,0 +1,62 @@
+#!/bin/bash
+# validjsonld - Validate JSON-LD files in directory
+#
+# Usage: validjsonld [directory]
+#
+# Description:
+#   Finds all .json and _context files in the specified directory (or current
+#   directory) and validates that they are valid JSON and contain @context.
+#
+# Arguments:
+#   directory    Directory to check (optional, defaults to current directory)
+#
+# Examples:
+#   validjsonld
+#   validjsonld src-data/experiment/
+#   validjsonld ../data/
+
+# Show help if requested
+if [[ "$1" == "-h" ]] || [[ "$1" == "--help" ]]; then
+    echo "validjsonld - Validate JSON-LD files in directory"
+    echo ""
+    echo "Usage: validjsonld [directory]"
+    echo ""
+    echo "Description:"
+    echo "  Finds all .json and _context files in the specified directory (or current"
+    echo "  directory) and validates that they are valid JSON and contain @context."
+    echo ""
+    echo "Arguments:"
+    echo "  directory    Directory to check (optional, defaults to current directory)"
+    echo ""
+    echo "Examples:"
+    echo "  validjsonld"
+    echo "  validjsonld src-data/experiment/"
+    echo "  validjsonld ../data/"
+    echo ""
+    echo "Requirements:"
+    echo "  - jq command-line JSON processor"
+    echo "  - find command"
+    echo "  - grep command"
+    exit 0
+fi
+
+# Set the directory to check, default to current directory if not provided
+DIR="${1:-.}"
+
+echo "Validating JSON-LD files in: $DIR" >&2
+
+# Find all .json and _context files in the directory (including nested directories)
+find "$DIR" -type f \( -name "*.json" -o -name "*_context" \) -exec sh -c '
+for file; do
+    # Check if the file is a valid JSON and contains "@context"
+    if ! jq . "$file" >/dev/null 2>&1; then
+        echo "Invalid JSON: $file"
+    elif ! grep -q "@context" "$file"; then
+        echo "Missing @context: $file"
+    else
+        echo "✓ Valid JSON-LD: $file"
+    fi
+done
+' _ {} +
+
+echo "JSON-LD validation complete." >&2

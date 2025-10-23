@@ -1,0 +1,14 @@
+#!/bin/bash
+
+# Set the directory to check, default to current directory if not provided
+DIR="${1:-.}"
+
+# Find all .json and _context files in the directory (including nested directories)
+find "$DIR" -type f \( -name "*.json" -o -name "*_context" \) -exec sh -c '
+for file; do
+    # Check if the file is a valid JSON and contains "@context"
+    if ! jq . "$file" >/dev/null 2>&1 || ! grep -q "@context" "$file"; then
+        echo "Invalid JSON-LD: $file"
+    fi
+done
+' _ {} +

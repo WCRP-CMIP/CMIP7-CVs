@@ -1,0 +1,23 @@
+{
+  "universal": {
+    "owner": "wcrp-cmip",
+    "repo": "WCRP-universe"
+  },
+
+  "cmip7": {
+    "owner": "wcrp-cmip",
+    "repo": "CMIP7-CVs"
+  },
+  "cf": {
+    "owner": "wcrp-cmip",
+    "repo": "CF"
+  },
+  "vr": {
+    "owner": "wcrp-cmip",
+    "repo": "Variable-Registry"
+  },
+  "cmip6plus": {
+    "owner": "wcrp-cmip",
+    "repo": "CMIP6Plus_CVs"
+  }
+}

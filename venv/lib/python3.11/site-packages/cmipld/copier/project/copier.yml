@@ -1,0 +1,59 @@
+# _hooks:
+#     pre_gen_project: "python pre_gen_project.py"
+# #   post_gen_project: "python post_gen_project.py"
+_exclude:
+    - pre_gen_project.py
+    - copier.yml
+
+language:
+    type: str
+    help: Which programming language do you use?
+    choices:
+        - python
+        - node
+
+# dependency_manager:
+#     type: str
+#     help: Which dependency manager do you use?
+#     choices: |
+#         {%- if language == "python" %}
+#         - poetry
+#         - pipenv
+#         {%- else %}
+#         - npm
+#         - yarn
+#         {%- endif %}
+
+# cho:
+#     type: list
+#     help: Which choices do you want?
+#     default: ['e','f']
+#     choices:
+#         - [a]
+
+        
+
+
+my_collection:
+    type: str
+    help: A collection of items
+    multiselect: true
+    choices: |
+        {%- for my_item in cho %}
+        - {{my_item}}
+        {%- endfor %}
+
+iac:
+    type: str
+    help: Which IaC tool do you use?
+    choices:
+        Terraform: tf
+        Cloud Formation:
+            value: cf
+            validator: "{% if not check(my_collection) %}Requires AWS{% endif %}"
+        Azure Resource Manager:
+            value: arm
+            validator: "{% if cloud != 'Azure' %}Requires Azure{% endif %}"
+        Deployment Manager:
+            value: dm
+            validator: "{% if cloud != 'GCP' %}Requires GCP{% endif %}"

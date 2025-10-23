@@ -1,0 +1,45 @@
+#!/bin/bash
+# rmbak - Remove .bak files recursively
+#
+# Usage: rmbak
+#
+# Description:
+#   Recursively finds and deletes all .bak files in the parent directory.
+#   Used for cleaning up backup files created during development.
+#
+# Examples:
+#   rmbak
+
+# Show help if requested
+if [[ "$1" == "-h" ]] || [[ "$1" == "--help" ]]; then
+    echo "rmbak - Remove .bak files recursively"
+    echo ""
+    echo "Usage: rmbak"
+    echo ""
+    echo "Description:"
+    echo "  Recursively finds and deletes all .bak files in the parent directory."
+    echo "  Used for cleaning up backup files created during development."
+    echo ""
+    echo "Examples:"
+    echo "  rmbak"
+    echo ""
+    echo "Warning:"
+    echo "  This command permanently deletes files. Make sure you don't need any .bak files."
+    echo ""
+    echo "Requirements:"
+    echo "  - find command"
+    exit 0
+fi
+
+echo "Removing .bak files in parent directory..." >&2
+
+# Count files before deletion
+bak_count=$(find .. -type f -name "*.bak" 2>/dev/null | wc -l)
+
+if [[ $bak_count -eq 0 ]]; then
+    echo "No .bak files found." >&2
+else
+    echo "Found $bak_count .bak files. Deleting..." >&2
+    find .. -type f -name "*.bak" -delete
+    echo "✓ Deleted $bak_count .bak files." >&2
+fi

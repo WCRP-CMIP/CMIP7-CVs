@@ -1,0 +1,45 @@
+#!/bin/bash
+# rmgraph - Remove graph.json files recursively
+#
+# Usage: rmgraph
+#
+# Description:
+#   Recursively finds and deletes all graph.json files in the parent directory.
+#   Used for cleaning up generated graph files during development.
+#
+# Examples:
+#   rmgraph
+
+# Show help if requested
+if [[ "$1" == "-h" ]] || [[ "$1" == "--help" ]]; then
+    echo "rmgraph - Remove graph.json files recursively"
+    echo ""
+    echo "Usage: rmgraph"
+    echo ""
+    echo "Description:"
+    echo "  Recursively finds and deletes all graph.json files in the parent directory."
+    echo "  Used for cleaning up generated graph files during development."
+    echo ""
+    echo "Examples:"
+    echo "  rmgraph"
+    echo ""
+    echo "Warning:"
+    echo "  This command permanently deletes generated graph files."
+    echo ""
+    echo "Requirements:"
+    echo "  - find command"
+    exit 0
+fi
+
+echo "Removing graph.json files in parent directory..." >&2
+
+# Count files before deletion  
+graph_count=$(find .. -type f -name "graph.json" 2>/dev/null | wc -l)
+
+if [[ $graph_count -eq 0 ]]; then
+    echo "No graph.json files found." >&2
+else
+    echo "Found $graph_count graph.json files. Deleting..." >&2
+    find .. -type f -name "graph.json" -delete
+    echo "✓ Deleted $graph_count graph.json files." >&2
+fi

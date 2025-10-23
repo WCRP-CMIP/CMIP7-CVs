@@ -1,0 +1,51 @@
+#!/bin/bash
+# dev - Quick git development workflow
+#
+# Usage: dev
+#
+# Description:
+#   Performs a quick development workflow: pull latest changes, add all files,
+#   commit with a generic 'development' message, and push to remote.
+#
+# Examples:
+#   dev
+
+# Show help if requested
+if [[ "$1" == "-h" ]] || [[ "$1" == "--help" ]]; then
+    echo "dev - Quick git development workflow"
+    echo ""
+    echo "Usage: dev"
+    echo ""
+    echo "Description:"
+    echo "  Performs a quick development workflow: pull latest changes, add all files,"
+    echo "  commit with a generic 'development' message, and push to remote."
+    echo ""
+    echo "Examples:"
+    echo "  dev"
+    echo ""
+    echo "Warning:"
+    echo "  This command makes automatic commits. Use with caution in production repositories."
+    echo ""
+    echo "Requirements:"
+    echo "  - git command"
+    echo "  - Must be in a git repository"
+    echo "  - Remote repository must be configured"
+    exit 0
+fi
+
+echo "Starting development workflow..." >&2
+
+echo "Pulling latest changes..." >&2
+git pull
+
+echo "Adding all changes..." >&2  
+git add -A
+
+echo "Committing with 'development' message..." >&2
+git commit -m 'development'
+
+echo "Pushing to remote..." >&2
+git push
+
+echo "Current directory: $(pwd)" >&2
+echo "Development workflow complete!" >&2

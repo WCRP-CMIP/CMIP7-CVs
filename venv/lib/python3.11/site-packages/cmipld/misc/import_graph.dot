@@ -1,0 +1,339 @@
+// CMIPLD Module Import Graph
+digraph {
+	rankdir=TB
+	compound=true concentrate=true overlap=false splines=true
+	"logging.unique" [color=red fillcolor="#fcbba1" shape=diamond style=filled]
+	"cmipld.utils.git" [color=darkgreen fillcolor="#a1d99b" shape=ellipse style=filled]
+	"cmipld.utils.ldparse" [color=darkgreen fillcolor="#a1d99b" shape=ellipse style=filled]
+	"cmipld.utils.git.__init__.py" [color=orange fillcolor="#fdd0a2" shape=rhombus style=filled]
+	"cmipld.utils.server_tools.server" [color=darkgreen fillcolor="#a1d99b" shape=ellipse style=filled]
+	"cmipld.__init__.py" [color=orange fillcolor="#fdd0a2" shape=rhombus style=filled]
+	tqdm [color=red fillcolor="#fcbba1" shape=diamond style=filled]
+	"cmipld.utils.git.projects.teams" [color=darkgreen fillcolor="#a1d99b" shape=ellipse style=filled]
+	"rich.traceback" [color=red fillcolor="#fcbba1" shape=diamond style=filled]
+	"cmipld.cvs.__init__.py" [color=orange fillcolor="#fdd0a2" shape=rhombus style=filled]
+	"cmipld.utils.urltools" [color=darkgreen fillcolor="#a1d99b" shape=ellipse style=filled]
+	"cmipld.utils.extract.links" [color=darkgreen fillcolor="#a1d99b" shape=ellipse style=filled]
+	"cmipld.generate.update_ctx" [color=darkgreen fillcolor="#a1d99b" shape=ellipse style=filled]
+	"cmipld.utils.extract.__init__.py" [color=orange fillcolor="#fdd0a2" shape=rhombus style=filled]
+	"cmipld.utils.git.projects.projects" [color=darkgreen fillcolor="#a1d99b" shape=ellipse style=filled]
+	"cmipld.cvs.cmip6plus" [color=darkgreen fillcolor="#a1d99b" shape=ellipse style=filled]
+	git [color=red fillcolor="#fcbba1" shape=diamond style=filled]
+	pprint [color=red fillcolor="#fcbba1" shape=diamond style=filled]
+	"cmipld.utils.io" [color=darkgreen fillcolor="#a1d99b" shape=ellipse style=filled]
+	"cmipld.tests.jsonld.organisation.ror" [color=darkgreen fillcolor="#a1d99b" shape=ellipse style=filled]
+	"cmipld.tests.jsonld.components.check_exists" [color=darkgreen fillcolor="#a1d99b" shape=ellipse style=filled]
+	"cmipld.utils.server_tools.offline" [color=darkgreen fillcolor="#a1d99b" shape=ellipse style=filled]
+	pathlib [color=red fillcolor="#fcbba1" shape=diamond style=filled]
+	datetime [color=red fillcolor="#fcbba1" shape=diamond style=filled]
+	"cmipld.utils.server_tools.monkeypatch_requests" [color=darkgreen fillcolor="#a1d99b" shape=ellipse style=filled]
+	"cmipld.gettest" [color=blue fillcolor="#c6dbef" shape=box style=filled]
+	rich [color=red fillcolor="#fcbba1" shape=diamond style=filled]
+	"requests.adapters" [color=red fillcolor="#fcbba1" shape=diamond style=filled]
+	"cmipld.utils.write06" [color=darkgreen fillcolor="#a1d99b" shape=ellipse style=filled]
+	"rich.syntax" [color=red fillcolor="#fcbba1" shape=diamond style=filled]
+	"cmipld.generate.__init__.py" [color=orange fillcolor="#fdd0a2" shape=rhombus style=filled]
+	cryptography [color=red fillcolor="#fcbba1" shape=diamond style=filled]
+	cmipld [color=red fillcolor="#fcbba1" shape=diamond style=filled]
+	"cmipld.utils.git.git_api" [color=darkgreen fillcolor="#a1d99b" shape=ellipse style=filled]
+	"cmipld.tests.jsonld.components.id" [color=darkgreen fillcolor="#a1d99b" shape=ellipse style=filled]
+	"cmipld.utils.git.git_repo_metadata" [color=darkgreen fillcolor="#a1d99b" shape=ellipse style=filled]
+	"cmipld.utils.git.git_branch_management" [color=darkgreen fillcolor="#a1d99b" shape=ellipse style=filled]
+	pyld [color=red fillcolor="#fcbba1" shape=diamond style=filled]
+	"cmipld.utils.git.manual.remove_automated_commits" [color=darkgreen fillcolor="#a1d99b" shape=ellipse style=filled]
+	typing [color=red fillcolor="#fcbba1" shape=diamond style=filled]
+	"cmipld.locations" [color=blue fillcolor="#c6dbef" shape=box style=filled]
+	"rich.table" [color=red fillcolor="#fcbba1" shape=diamond style=filled]
+	"cmipld.utils.server_tools.test_ssl_patches" [color=darkgreen fillcolor="#a1d99b" shape=ellipse style=filled]
+	jsonld [color=red fillcolor="#fcbba1" shape=diamond style=filled]
+	"cmipld.utils.server_tools.__init__.py" [color=orange fillcolor="#fdd0a2" shape=rhombus style=filled]
+	"cmipld.utils.logging.unique" [color=darkgreen fillcolor="#a1d99b" shape=ellipse style=filled]
+	threading [color=red fillcolor="#fcbba1" shape=diamond style=filled]
+	"pyld.jsonld" [color=red fillcolor="#fcbba1" shape=diamond style=filled]
+	"cmipld.utils.git.projects.__init__.py" [color=orange fillcolor="#fdd0a2" shape=rhombus style=filled]
+	"cryptography.hazmat.primitives" [color=red fillcolor="#fcbba1" shape=diamond style=filled]
+	"cmipld.utils.server_tools.server_patched" [color=darkgreen fillcolor="#a1d99b" shape=ellipse style=filled]
+	elasticsearch [color=red fillcolor="#fcbba1" shape=diamond style=filled]
+	"cmipld.tests.jsonld.organisation.__init__.py" [color=orange fillcolor="#fdd0a2" shape=rhombus style=filled]
+	"cmipld.graph" [color=blue fillcolor="#c6dbef" shape=box style=filled]
+	"cmipld.utils.jsontools" [color=darkgreen fillcolor="#a1d99b" shape=ellipse style=filled]
+	"cmipld.utils.git.git_pull_request" [color=darkgreen fillcolor="#a1d99b" shape=ellipse style=filled]
+	"cmipld.utils.server_tools.__main__" [color=darkgreen fillcolor="#a1d99b" shape=ellipse style=filled]
+	"cmipld.tests.cvs.conftest" [color=darkgreen fillcolor="#a1d99b" shape=ellipse style=filled]
+	"urllib.parse" [color=red fillcolor="#fcbba1" shape=diamond style=filled]
+	"cmipld.utils.server_tools.jsonld_ssl_debug" [color=darkgreen fillcolor="#a1d99b" shape=ellipse style=filled]
+	"rich.text" [color=red fillcolor="#fcbba1" shape=diamond style=filled]
+	"cmipld.utils.git.git_actions_management" [color=darkgreen fillcolor="#a1d99b" shape=ellipse style=filled]
+	"cmipld.generate.generate_summary" [color=darkgreen fillcolor="#a1d99b" shape=ellipse style=filled]
+	"cmipld.tests.__init__.py" [color=orange fillcolor="#fdd0a2" shape=rhombus style=filled]
+	"cmipld.utils.server_tools.monkeypatch_requests_patched" [color=darkgreen fillcolor="#a1d99b" shape=ellipse style=filled]
+	"cmipld.generate.new_issue" [color=darkgreen fillcolor="#a1d99b" shape=ellipse style=filled]
+	"cmipld.generate.update_all" [color=darkgreen fillcolor="#a1d99b" shape=ellipse style=filled]
+	"cmipld.utils.git.git_issues" [color=darkgreen fillcolor="#a1d99b" shape=ellipse style=filled]
+	pydantic [color=red fillcolor="#fcbba1" shape=diamond style=filled]
+	"cmipld.generate.create_readme" [color=darkgreen fillcolor="#a1d99b" shape=ellipse style=filled]
+	"cmipld.utils.git.gh_utils" [color=darkgreen fillcolor="#a1d99b" shape=ellipse style=filled]
+	"cmipld.tests.jsonld.components.type" [color=darkgreen fillcolor="#a1d99b" shape=ellipse style=filled]
+	"cmipld.tests.jsonld.components.__init__.py" [color=orange fillcolor="#fdd0a2" shape=rhombus style=filled]
+	"cmipld.utils.checksum" [color=darkgreen fillcolor="#a1d99b" shape=ellipse style=filled]
+	"os.path" [color=red fillcolor="#fcbba1" shape=diamond style=filled]
+	collections [color=red fillcolor="#fcbba1" shape=diamond style=filled]
+	"utils.logging.unique" [color=red fillcolor="#fcbba1" shape=diamond style=filled]
+	"cmipld.generate.elasticmipcvs" [color=darkgreen fillcolor="#a1d99b" shape=ellipse style=filled]
+	"cmipld.utils.__init__.py" [color=orange fillcolor="#fdd0a2" shape=rhombus style=filled]
+	"cmipld.utils.git.git_core" [color=darkgreen fillcolor="#a1d99b" shape=ellipse style=filled]
+	"cmipld.tests.cvs.cvfile_test" [color=darkgreen fillcolor="#a1d99b" shape=ellipse style=filled]
+	"cryptography.hazmat.primitives.asymmetric" [color=red fillcolor="#fcbba1" shape=diamond style=filled]
+	extract [color=red fillcolor="#fcbba1" shape=diamond style=filled]
+	"cmipld.version" [color=blue fillcolor="#c6dbef" shape=box style=filled]
+	"rich.panel" [color=red fillcolor="#fcbba1" shape=diamond style=filled]
+	"cmipld.utils.server_tools.offline_patched" [color=darkgreen fillcolor="#a1d99b" shape=ellipse style=filled]
+	"cmipld.utils.server_tools.pyld_requests" [color=darkgreen fillcolor="#a1d99b" shape=ellipse style=filled]
+	server_tools [color=red fillcolor="#fcbba1" shape=diamond style=filled]
+	"cmipld.cvs.generate" [color=darkgreen fillcolor="#a1d99b" shape=ellipse style=filled]
+	"cmipld.utils.logging.__init__.py" [color=orange fillcolor="#fdd0a2" shape=rhombus style=filled]
+	"cmipld.utils.git.git_commit_management" [color=darkgreen fillcolor="#a1d99b" shape=ellipse style=filled]
+	"cmipld.utils.git.projects.labels" [color=darkgreen fillcolor="#a1d99b" shape=ellipse style=filled]
+	dotenv [color=red fillcolor="#fcbba1" shape=diamond style=filled]
+	"esgvoc.api.data_descriptors" [color=red fillcolor="#fcbba1" shape=diamond style=filled]
+	"cmipld.utils.git.projects.milestones" [color=darkgreen fillcolor="#a1d99b" shape=ellipse style=filled]
+	copy [color=red fillcolor="#fcbba1" shape=diamond style=filled]
+	"rich.console" [color=red fillcolor="#fcbba1" shape=diamond style=filled]
+	urllib [color=red fillcolor="#fcbba1" shape=diamond style=filled]
+	"cmipld.utils.server_tools.loader" [color=darkgreen fillcolor="#a1d99b" shape=ellipse style=filled]
+	"cmipld.utils.git.release" [color=darkgreen fillcolor="#a1d99b" shape=ellipse style=filled]
+	"cmipld.utils.git.manual.rm_tag" [color=darkgreen fillcolor="#a1d99b" shape=ellipse style=filled]
+	"urllib3.util.retry" [color=red fillcolor="#fcbba1" shape=diamond style=filled]
+	"utils.server_tools.loader" [color=red fillcolor="#fcbba1" shape=diamond style=filled]
+	"cmipld.tests.jsonld.__init__.py" [color=orange fillcolor="#fdd0a2" shape=rhombus style=filled]
+	"cmipld.utils.git.actions" [color=darkgreen fillcolor="#a1d99b" shape=ellipse style=filled]
+	"cmipld.tests.jsonld.experiment.__init__.py" [color=orange fillcolor="#fdd0a2" shape=rhombus style=filled]
+	"cmipld.copier.__init__.py" [color=orange fillcolor="#fdd0a2" shape=rhombus style=filled]
+	"cmipld.utils.git.projects.utils" [color=darkgreen fillcolor="#a1d99b" shape=ellipse style=filled]
+	"cmipld.utils.logging.unique original" [color=darkgreen fillcolor="#a1d99b" shape=ellipse style=filled]
+	"cmipld.utils.git.tree" [color=darkgreen fillcolor="#a1d99b" shape=ellipse style=filled]
+	"cmipld.cvs.parse" [color=darkgreen fillcolor="#a1d99b" shape=ellipse style=filled]
+	"cryptography.x509.oid" [color=red fillcolor="#fcbba1" shape=diamond style=filled]
+	"generate.validate_json" [color=red fillcolor="#fcbba1" shape=diamond style=filled]
+	"cmipld.generate.validate_json" [color=darkgreen fillcolor="#a1d99b" shape=ellipse style=filled]
+	"cmipld.utils.git.repo_info" [color=darkgreen fillcolor="#a1d99b" shape=ellipse style=filled]
+	"cmipld.utils.extract.read" [color=darkgreen fillcolor="#a1d99b" shape=ellipse style=filled]
+	"cmipld.utils.classfn" [color=darkgreen fillcolor="#a1d99b" shape=ellipse style=filled]
+	"cmipld.tests.jsonld.components.description" [color=darkgreen fillcolor="#a1d99b" shape=ellipse style=filled]
+	"cmipld.utils.git.projects.issues" [color=darkgreen fillcolor="#a1d99b" shape=ellipse style=filled]
+	"utils.server_tools.monkeypatch_requests" [color=red fillcolor="#fcbba1" shape=diamond style=filled]
+	"cmipld.tests.inputs" [color=darkgreen fillcolor="#a1d99b" shape=ellipse style=filled]
+	"cmipld.tests.jsonld.components.stringcheck" [color=darkgreen fillcolor="#a1d99b" shape=ellipse style=filled]
+	components [color=red fillcolor="#fcbba1" shape=diamond style=filled]
+	"cmipld.utils.extract.frame_examples" [color=darkgreen fillcolor="#a1d99b" shape=ellipse style=filled]
+	"cmipld.tests.jsonld.components.date" [color=darkgreen fillcolor="#a1d99b" shape=ellipse style=filled]
+	"cmipld.utils" [color=blue fillcolor="#c6dbef" shape=box style=filled]
+	"concurrent.futures" [color=red fillcolor="#fcbba1" shape=diamond style=filled]
+	"cmipld.version" -> typing
+	"cmipld.__init__.py" -> "cmipld.locations"
+	"cmipld.__init__.py" -> "utils.server_tools.monkeypatch_requests"
+	"cmipld.__init__.py" -> "utils.server_tools.loader"
+	"cmipld.__init__.py" -> "cmipld.utils.git.projects.utils"
+	"cmipld.gettest" -> pprint
+	"cmipld.locations" -> pyld
+	"cmipld.locations" -> tqdm
+	"cmipld.tests.__init__.py" -> jsonld
+	"cmipld.utils.urltools" -> "urllib.parse"
+	"cmipld.utils.urltools" -> "os.path"
+	"cmipld.utils.checksum" -> copy
+	"cmipld.utils.checksum" -> collections
+	"cmipld.utils.checksum" -> git
+	"cmipld.utils.checksum" -> "cmipld.locations"
+	"cmipld.utils.ldparse" -> collections
+	"cmipld.utils.io" -> git
+	"cmipld.utils.__init__.py" -> "cmipld.utils.jsontools"
+	"cmipld.utils.__init__.py" -> "cmipld.utils.io"
+	"cmipld.utils.__init__.py" -> "cmipld.utils.write06"
+	"cmipld.utils.__init__.py" -> server_tools
+	"cmipld.utils.__init__.py" -> extract
+	"cmipld.utils.jsontools" -> collections
+	"cmipld.utils.jsontools" -> "generate.validate_json"
+	"cmipld.generate.generate_summary" -> collections
+	"cmipld.generate.generate_summary" -> "cmipld.utils.server_tools.offline"
+	"cmipld.generate.generate_summary" -> "cmipld.utils.checksum"
+	"cmipld.generate.generate_summary" -> "cmipld.utils.git.repo_info"
+	"cmipld.generate.generate_summary" -> "cmipld.utils.logging.unique"
+	"cmipld.generate.update_ctx" -> "cmipld.locations"
+	"cmipld.generate.update_ctx" -> "cmipld.utils.git.projects.utils"
+	"cmipld.generate.update_ctx" -> collections
+	"cmipld.generate.elasticmipcvs" -> cmipld
+	"cmipld.generate.elasticmipcvs" -> "cmipld.graph"
+	"cmipld.generate.elasticmipcvs" -> elasticsearch
+	"cmipld.generate.elasticmipcvs" -> dotenv
+	"cmipld.generate.create_readme" -> pathlib
+	"cmipld.generate.create_readme" -> collections
+	"cmipld.generate.create_readme" -> "esgvoc.api.data_descriptors"
+	"cmipld.generate.create_readme" -> "cmipld.utils.git"
+	"cmipld.generate.create_readme" -> cmipld
+	"cmipld.generate.validate_json" -> pathlib
+	"cmipld.generate.validate_json" -> typing
+	"cmipld.generate.validate_json" -> collections
+	"cmipld.generate.validate_json" -> "concurrent.futures"
+	"cmipld.generate.validate_json" -> threading
+	"cmipld.generate.validate_json" -> "utils.logging.unique"
+	"cmipld.generate.validate_json" -> tqdm
+	"cmipld.cvs.generate" -> cmipld
+	"cmipld.cvs.generate" -> "cmipld.utils.classfn"
+	"cmipld.cvs.generate" -> "cmipld.utils.git"
+	"cmipld.cvs.generate" -> collections
+	"cmipld.cvs.generate" -> "cmipld.cvs.parse"
+	"cmipld.cvs.generate" -> datetime
+	"cmipld.cvs.cmip6plus" -> "cmipld.utils.ldparse"
+	"cmipld.cvs.parse" -> collections
+	"cmipld.tests.jsonld.__init__.py" -> pydantic
+	"cmipld.tests.jsonld.__init__.py" -> "cmipld.utils"
+	"cmipld.tests.jsonld.__init__.py" -> "rich.console"
+	"cmipld.tests.jsonld.__init__.py" -> "rich.table"
+	"cmipld.utils.server_tools.server" -> "cmipld.utils.io"
+	"cmipld.utils.server_tools.server" -> rich
+	"cmipld.utils.server_tools.server" -> "rich.console"
+	"cmipld.utils.server_tools.server" -> "rich.text"
+	"cmipld.utils.server_tools.server" -> "cmipld.locations"
+	"cmipld.utils.server_tools.server" -> "cmipld.utils.server_tools.monkeypatch_requests_patched"
+	"cmipld.utils.server_tools.server" -> "logging.unique"
+	"cmipld.utils.server_tools.server" -> cryptography
+	"cmipld.utils.server_tools.server" -> "cryptography.x509.oid"
+	"cmipld.utils.server_tools.server" -> "cryptography.hazmat.primitives"
+	"cmipld.utils.server_tools.server" -> "cryptography.hazmat.primitives.asymmetric"
+	"cmipld.utils.server_tools.monkeypatch_requests" -> "requests.adapters"
+	"cmipld.utils.server_tools.monkeypatch_requests" -> "urllib.parse"
+	"cmipld.utils.server_tools.monkeypatch_requests" -> "rich.console"
+	"cmipld.utils.server_tools.monkeypatch_requests" -> "rich.table"
+	"cmipld.utils.server_tools.monkeypatch_requests" -> "rich.panel"
+	"cmipld.utils.server_tools.jsonld_ssl_debug" -> "urllib.parse"
+	"cmipld.utils.server_tools.jsonld_ssl_debug" -> typing
+	"cmipld.utils.server_tools.jsonld_ssl_debug" -> "requests.adapters"
+	"cmipld.utils.server_tools.jsonld_ssl_debug" -> "urllib3.util.retry"
+	"cmipld.utils.server_tools.offline" -> typing
+	"cmipld.utils.server_tools.offline" -> "cmipld.utils.server_tools.server"
+	"cmipld.utils.server_tools.offline" -> git
+	"cmipld.utils.server_tools.offline" -> "logging.unique"
+	"cmipld.utils.server_tools.offline" -> "cmipld.utils.server_tools.jsonld_ssl_debug"
+	"cmipld.utils.server_tools.server_patched" -> "cmipld.utils.io"
+	"cmipld.utils.server_tools.server_patched" -> rich
+	"cmipld.utils.server_tools.server_patched" -> "rich.console"
+	"cmipld.utils.server_tools.server_patched" -> "rich.text"
+	"cmipld.utils.server_tools.server_patched" -> "cmipld.locations"
+	"cmipld.utils.server_tools.server_patched" -> "cmipld.utils.server_tools.monkeypatch_requests"
+	"cmipld.utils.server_tools.server_patched" -> "logging.unique"
+	"cmipld.utils.server_tools.server_patched" -> cryptography
+	"cmipld.utils.server_tools.server_patched" -> "cryptography.x509.oid"
+	"cmipld.utils.server_tools.server_patched" -> "cryptography.hazmat.primitives"
+	"cmipld.utils.server_tools.server_patched" -> "cryptography.hazmat.primitives.asymmetric"
+	"cmipld.utils.server_tools.monkeypatch_requests_patched" -> "requests.adapters"
+	"cmipld.utils.server_tools.monkeypatch_requests_patched" -> "urllib.parse"
+	"cmipld.utils.server_tools.monkeypatch_requests_patched" -> "rich.console"
+	"cmipld.utils.server_tools.monkeypatch_requests_patched" -> "rich.table"
+	"cmipld.utils.server_tools.monkeypatch_requests_patched" -> "rich.panel"
+	"cmipld.utils.server_tools.loader" -> typing
+	"cmipld.utils.server_tools.loader" -> "cmipld.utils.urltools"
+	"cmipld.utils.server_tools.loader" -> pyld
+	"cmipld.utils.server_tools.loader" -> "cmipld.locations"
+	"cmipld.utils.server_tools.loader" -> "cmipld.utils.server_tools.pyld_requests"
+	"cmipld.utils.server_tools.loader" -> "logging.unique"
+	"cmipld.utils.server_tools.offline_patched" -> typing
+	"cmipld.utils.server_tools.offline_patched" -> "cmipld.utils.server_tools.server_patched"
+	"cmipld.utils.server_tools.offline_patched" -> git
+	"cmipld.utils.server_tools.offline_patched" -> "logging.unique"
+	"cmipld.utils.server_tools.pyld_requests" -> typing
+	"cmipld.utils.server_tools.pyld_requests" -> pyld
+	"cmipld.utils.server_tools.pyld_requests" -> "pyld.jsonld"
+	"cmipld.utils.server_tools.pyld_requests" -> "logging.unique"
+	"cmipld.utils.server_tools.pyld_requests" -> "cmipld.utils.urltools"
+	"cmipld.utils.server_tools.__main__" -> "cmipld.utils.server_tools.offline_patched"
+	"cmipld.utils.server_tools.test_ssl_patches" -> "cmipld.utils.server_tools.offline_patched"
+	"cmipld.utils.server_tools.test_ssl_patches" -> "cmipld.utils.server_tools.jsonld_ssl_debug"
+	"cmipld.utils.extract.__init__.py" -> "cmipld.utils.extract.read"
+	"cmipld.utils.extract.__init__.py" -> "cmipld.utils.extract.links"
+	"cmipld.utils.extract.links" -> pyld
+	"cmipld.utils.extract.links" -> "urllib.parse"
+	"cmipld.utils.extract.links" -> typing
+	"cmipld.utils.extract.links" -> "cmipld.locations"
+	"cmipld.utils.extract.links" -> "rich.console"
+	"cmipld.utils.extract.links" -> "rich.panel"
+	"cmipld.utils.extract.links" -> "rich.text"
+	"cmipld.utils.extract.read" -> pyld
+	"cmipld.utils.extract.read" -> "logging.unique"
+	"cmipld.utils.extract.read" -> "rich.console"
+	"cmipld.utils.extract.read" -> "rich.syntax"
+	"cmipld.utils.logging.unique" -> typing
+	"cmipld.utils.logging.unique" -> "rich.console"
+	"cmipld.utils.logging.unique" -> "rich.panel"
+	"cmipld.utils.logging.unique" -> "rich.traceback"
+	"cmipld.utils.logging.unique" -> rich
+	"cmipld.utils.logging.unique original" -> typing
+	"cmipld.utils.logging.unique original" -> "rich.console"
+	"cmipld.utils.logging.unique original" -> "rich.panel"
+	"cmipld.utils.logging.unique original" -> "rich.traceback"
+	"cmipld.utils.git.git_repo_metadata" -> "cmipld.utils.io"
+	"cmipld.utils.git.git_repo_metadata" -> "cmipld.utils.git.gh_utils"
+	"cmipld.utils.git.repo_info" -> "cmipld.utils.git.git_core"
+	"cmipld.utils.git.repo_info" -> "cmipld.utils.git.git_repo_metadata"
+	"cmipld.utils.git.repo_info" -> "cmipld.utils.jsontools"
+	"cmipld.utils.git.repo_info" -> rich
+	"cmipld.utils.git.repo_info" -> "rich.panel"
+	"cmipld.utils.git.repo_info" -> "rich.console"
+	"cmipld.utils.git.git_branch_management" -> "cmipld.utils.io"
+	"cmipld.utils.git.git_issues" -> "cmipld.utils.git.git_actions_management"
+	"cmipld.utils.git.git_issues" -> "cmipld.utils.io"
+	"cmipld.utils.git.git_pull_request" -> "cmipld.utils.io"
+	"cmipld.utils.git.actions" -> "cmipld.utils.io"
+	"cmipld.utils.git.actions" -> urllib
+	"cmipld.utils.git.__init__.py" -> "cmipld.utils.git.git_core"
+	"cmipld.utils.git.__init__.py" -> "cmipld.utils.git.git_branch_management"
+	"cmipld.utils.git.__init__.py" -> "cmipld.utils.git.git_commit_management"
+	"cmipld.utils.git.__init__.py" -> "cmipld.utils.git.git_issues"
+	"cmipld.utils.git.__init__.py" -> "cmipld.utils.git.git_actions_management"
+	"cmipld.utils.git.__init__.py" -> "cmipld.utils.git.git_pull_request"
+	"cmipld.utils.git.__init__.py" -> "cmipld.utils.git.git_repo_metadata"
+	"cmipld.utils.git.__init__.py" -> "cmipld.utils.git.git_api"
+	"cmipld.utils.git.__init__.py" -> "cmipld.utils.git.gh_utils"
+	"cmipld.utils.git.git_core" -> "cmipld.utils.git.git_repo_metadata"
+	"cmipld.utils.git.git_commit_management" -> "cmipld.utils.io"
+	"cmipld.tests.jsonld.components.description" -> pydantic
+	"cmipld.tests.jsonld.components.description" -> typing
+	"cmipld.tests.jsonld.components.id" -> pydantic
+	"cmipld.tests.jsonld.components.id" -> typing
+	"cmipld.tests.jsonld.components.id" -> "cmipld.tests.jsonld.components.stringcheck"
+	"cmipld.tests.jsonld.components.check_exists" -> pydantic
+	"cmipld.tests.jsonld.components.check_exists" -> typing
+	"cmipld.tests.jsonld.components.check_exists" -> datetime
+	"cmipld.tests.jsonld.components.__init__.py" -> "cmipld.tests.jsonld.components.id"
+	"cmipld.tests.jsonld.components.__init__.py" -> "cmipld.tests.jsonld.components.type"
+	"cmipld.tests.jsonld.components.__init__.py" -> "cmipld.tests.jsonld.components.date"
+	"cmipld.tests.jsonld.components.__init__.py" -> "cmipld.tests.jsonld.components.description"
+	"cmipld.tests.jsonld.components.__init__.py" -> "cmipld.tests.jsonld.components.stringcheck"
+	"cmipld.tests.jsonld.components.type" -> pydantic
+	"cmipld.tests.jsonld.components.type" -> typing
+	"cmipld.tests.jsonld.components.type" -> "cmipld.tests.jsonld.components.stringcheck"
+	"cmipld.tests.jsonld.components.date" -> pydantic
+	"cmipld.tests.jsonld.components.date" -> typing
+	"cmipld.tests.jsonld.components.date" -> datetime
+	"cmipld.tests.jsonld.organisation.__init__.py" -> pydantic
+	"cmipld.tests.jsonld.organisation.__init__.py" -> typing
+	"cmipld.tests.jsonld.organisation.__init__.py" -> "cmipld.tests.jsonld.organisation.ror"
+	"cmipld.tests.jsonld.organisation.__init__.py" -> components
+	"cmipld.tests.jsonld.organisation.ror" -> pydantic
+	"cmipld.tests.jsonld.experiment.__init__.py" -> pydantic
+	"cmipld.tests.jsonld.experiment.__init__.py" -> typing
+	"cmipld.tests.jsonld.experiment.__init__.py" -> cmipld
+	"cmipld.tests.jsonld.experiment.__init__.py" -> components
+	"cmipld.utils.git.projects.issues" -> "cmipld.utils.git.projects.utils"
+	"cmipld.utils.git.projects.issues" -> "cmipld.utils.git.projects.projects"
+	"cmipld.utils.git.projects.labels" -> "cmipld.utils.git.projects.utils"
+	"cmipld.utils.git.projects.milestones" -> "cmipld.utils.git.projects.utils"
+	"cmipld.utils.git.projects.teams" -> "cmipld.utils.git.projects.utils"
+	"cmipld.utils.git.projects.__init__.py" -> "cmipld.utils.git.projects.issues"
+	"cmipld.utils.git.projects.__init__.py" -> "cmipld.utils.git.projects.labels"
+	"cmipld.utils.git.projects.__init__.py" -> "cmipld.utils.git.projects.milestones"
+	"cmipld.utils.git.projects.__init__.py" -> "cmipld.utils.git.projects.projects"
+	"cmipld.utils.git.projects.__init__.py" -> "cmipld.utils.git.projects.teams"
+	"cmipld.utils.git.projects.__init__.py" -> "cmipld.utils.git.projects.utils"
+	"cmipld.utils.git.projects.utils" -> "cmipld.utils.git.gh_utils"
+	"cmipld.utils.git.projects.projects" -> "cmipld.utils.git.projects.utils"
+}

@@ -1,0 +1,95 @@
+#!/bin/bash
+# coauthor_file - Add co-author to git commit for specific file
+#
+# Usage: coauthor_file <file> <co-author-email>
+#
+# Description:
+#   Adds a co-author to the last git commit that modified the specified file.
+#   Uses interactive rebase to amend the commit message with co-author information.
+#
+# Arguments:
+#   file             File to find the last commit for
+#   co-author-email  Email address of the co-author to add
+#
+# Examples:
+#   coauthor_file src/main.py john@example.com
+#   coauthor_file README.md jane.doe@company.com
+
+# Show help if requested
+if [[ "$1" == "-h" ]] || [[ "$1" == "--help" ]] || [[ $# -ne 2 ]]; then
+    echo "coauthor_file - Add co-author to git commit for specific file"
+    echo ""
+    echo "Usage: coauthor_file <file> <co-author-email>"
+    echo ""
+    echo "Description:"
+    echo "  Adds a co-author to the last git commit that modified the specified file."
+    echo "  Uses interactive rebase to amend the commit message with co-author information."
+    echo ""
+    echo "Arguments:"
+    echo "  file             File to find the last commit for"
+    echo "  co-author-email  Email address of the co-author to add"
+    echo ""
+    echo "Examples:"
+    echo "  coauthor_file src/main.py john@example.com"
+    echo "  coauthor_file README.md jane.doe@company.com"
+    echo ""
+    echo "Warning:"
+    echo "  This command rewrites git history. Use with caution, especially on shared repositories."
+    echo ""
+    echo "Requirements:"
+    echo "  - git command"
+    echo "  - Must be in a git repository"
+    echo "  - File must exist in git history"
+    if [[ $# -ne 2 ]]; then
+        exit 1
+    fi
+    exit 0
+fi
+
+FILE="$1"
+COAUTHOR_EMAIL="$2"
+
+echo "Finding last commit for file: $FILE" >&2
+
+# Get the last commit hash that modified the file
+LAST_COMMIT=$(git log -n 1 --pretty=format:%H -- "$FILE")
+
+if [ -z "$LAST_COMMIT" ]; then
+    echo "Error: No commits found for file: $FILE" >&2
+    exit 1
+fi
+
+echo "Last commit: $LAST_COMMIT" >&2
+
+# Get the author's name from the email
+COAUTHOR_NAME=$(git log --format='%aN <%aE>' | grep "$COAUTHOR_EMAIL" | head -n 1 | sed -E 's/ <.*>//')
+
+if [ -z "$COAUTHOR_NAME" ]; then
+    echo "Error: Could not determine author name for email: $COAUTHOR_EMAIL" >&2
+    echo "Make sure the email address has been used in previous commits." >&2
+    exit 1
+fi
+
+echo "Co-author: $COAUTHOR_NAME <$COAUTHOR_EMAIL>" >&2
+
+# Start an interactive rebase to modify the commit
+echo "Starting interactive rebase..." >&2
+git rebase -i "${LAST_COMMIT}^" <<EOF
+pick $LAST_COMMIT
+EOF
+
+# Amend the commit to add the co-author
+echo "Adding co-author to commit..." >&2
+git commit --amend -m "$(git log -1 --pretty=%B)
+
+Co-authored-by: $COAUTHOR_NAME <$COAUTHOR_EMAIL>"
+
+# Continue the rebase process
+echo "Continuing rebase..." >&2
+git rebase --continue
+
+# Push changes (force required)
+echo "Force pushing changes..." >&2
+git push --force
+
+echo "✓ Co-author added successfully!" >&2

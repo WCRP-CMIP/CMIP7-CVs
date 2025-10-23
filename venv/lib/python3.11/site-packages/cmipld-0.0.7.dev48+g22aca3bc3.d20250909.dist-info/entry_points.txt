@@ -1,0 +1,9 @@
+[console_scripts]
+cmipld = cmipld.browse.__main__:main
+create_readme = cmipld.generate.create_readme:main
+generate_summary = cmipld.generate.generate_summary:main
+new_issue = cmipld.generate.new_issue:main
+update_all = cmipld.generate.update_all:main
+update_ctx = cmipld.generate.update_ctx:main
+update_readme = cmipld.generate.create_readme:main
+validate_json = cmipld.utils.validate_json:main

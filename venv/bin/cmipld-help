@@ -1,0 +1,70 @@
+#!/bin/bash
+# cmipld-help - Show help for all CMIP-LD commands
+#
+# Usage: cmipld-help [command]
+#
+# Description:
+#   Shows help information for all CMIP-LD commands or specific command details.
+
+if [[ "$1" == "-h" ]] || [[ "$1" == "--help" ]]; then
+    echo "cmipld-help - Show help for all CMIP-LD commands"
+    echo ""
+    echo "Usage: cmipld-help [command]"
+    echo ""
+    echo "Description:"
+    echo "  Shows help information for all CMIP-LD commands or specific command details."
+    echo ""
+    echo "Arguments:"
+    echo "  command    Specific command to get help for (optional)"
+    exit 0
+fi
+
+if [[ -n "$1" ]]; then
+    # Show help for specific command
+    command -v "$1" >/dev/null 2>&1 && "$1" --help || echo "Command '$1' not found."
+    exit 0
+fi
+
+echo "CMIP-LD Command Line Tools"
+echo "=========================="
+echo ""
+
+echo "Core Commands:"
+echo "  ld2graph         Create graph.jsonld from directory of JSON-LD files"
+echo "  cmipld           Main CMIP-LD browser interface"
+echo ""
+
+echo "Generation & Updates:"
+echo "  update_ctx       Update JSON-LD context files"
+echo "  update_all       Run full update process (contexts + graphs)"
+echo "  generate_summary Generate repository summary"
+echo "  update_readme    Update README files"
+echo "  create_readme    Create README files"
+echo ""
+
+echo "Validation:"
+echo "  validjsonld      Validate JSON-LD files in directory"
+echo "  validate_json    Validate JSON-LD files"
+echo ""
+
+echo "Development:"
+echo "  dev              Quick git development workflow"
+echo "  new_issue        Generate new GitHub issue"
+echo "  coauthor_file    Add co-author to git commit for specific file"
+echo ""
+
+echo "Cleanup:"
+echo "  rmbak            Remove .bak files recursively"
+echo "  rmgraph          Remove graph.json files recursively"
+echo ""
+
+echo "Usage:"
+echo "  <command> --help     Show detailed help for any command"
+echo "  cmipld-help <cmd>    Show help for specific command"
+echo ""
+
+echo "Examples:"
+echo "  ld2graph src-data/experiment/"
+echo "  validjsonld"
+echo "  update_all"
+echo "  dev"

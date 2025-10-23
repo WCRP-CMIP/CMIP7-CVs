@@ -1,0 +1,3 @@
+#!/bin/bash
+
+git pull ; git add -A ; git commit -m 'development' ; git push; echo "$pwd"

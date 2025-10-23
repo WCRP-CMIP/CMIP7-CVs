@@ -1,0 +1,210 @@
+#!/usr/bin/env python3
+"""
+Demonstration of Git co-author functionality for CMIP-LD
+"""
+
+import subprocess
+from pathlib import Path
+from typing import List, Optional
+
+
+def get_file_authors(file_path: Path, exclude_current: bool = True) -> List[str]:
+    """
+    Get all historic authors of a file.
+    
+    Args:
+        file_path: Path to the file
+        exclude_current: Whether to exclude the current commit author
+        
+    Returns:
+        List of author strings in "Name <email>" format
+    """
+    try:
+        # Get all authors with their email addresses
+        cmd = ['git', 'log', '--format=%an <%ae>', '--', str(file_path)]
+        result = subprocess.run(cmd, capture_output=True, text=True, cwd=file_path.parent)
+        
+        if result.returncode != 0:
+            print(f"Failed to get git history for {file_path}: {result.stderr}")
+            return []
+        
+        authors = result.stdout.strip().split('\n')
+        if not authors or authors == ['']:
+            return []
+        
+        # Remove duplicates while preserving order
+        seen = set()
+        unique_authors = []
+        for author in authors:
+            if author and author not in seen:
+                seen.add(author)
+                unique_authors.append(author)
+        
+        # If requested, exclude the current commit author
+        if exclude_current and unique_authors:
+            # Get current author email
+            cmd_current = ['git', 'log', '-1', '--format=%ae']
+            result_current = subprocess.run(cmd_current, capture_output=True, text=True, cwd=file_path.parent)
+            if result_current.returncode == 0:
+                current_email = result_current.stdout.strip()
+                unique_authors = [a for a in unique_authors if current_email not in a]
+        
+        return unique_authors
+        
+    except Exception as e:
+        print(f"Error getting git authors for {file_path}: {e}")
+        return []
+
+
+def format_coauthors(authors: List[str]) -> List[str]:
+    """Format authors as Git co-author lines."""
+    return [f"Co-authored-by: {author}" for author in authors]
+
+
+def create_commit_with_coauthors(files: List[Path], message: str) -> bool:
+    """
+    Create a commit with co-authors from the given files.
+    
+    Args:
+        files: List of file paths that were modified
+        message: Commit message
+        
+    Returns:
+        True if commit was created successfully
+    """
+    # Collect all unique authors from all files
+    all_authors = set()
+    for file_path in files:
+        authors = get_file_authors(file_path)
+        all_authors.update(authors)
+    
+    if not all_authors:
+        print("No co-authors found")
+        return False
+    
+    # Format co-authors
+    coauthor_lines = format_coauthors(sorted(all_authors))
+    
+    # Build full commit message
+    full_message = message + "\n\n" + "\n".join(coauthor_lines)
+    
+    try:
+        # Stage files
+        for file_path in files:
+            subprocess.run(['git', 'add', str(file_path)], check=True)
+        
+        # Create commit
+        subprocess.run(['git', 'commit', '-m', full_message], check=True)
+        
+        print(f"✅ Created commit with {len(coauthor_lines)} co-authors:")
+        for line in coauthor_lines:
+            print(f"   {line}")
+        
+        return True
+        
+    except subprocess.CalledProcessError as e:
+        print(f"❌ Failed to create commit: {e}")
+        return False
+
+
+def amend_commit_with_coauthors(file_path: Path) -> bool:
+    """
+    Amend the last commit to add co-authors from a file.
+    
+    Args:
+        file_path: Path to the file
+        
+    Returns:
+        True if commit was amended successfully
+    """
+    # Get original commit message
+    result = subprocess.run(
+        ['git', 'log', '-1', '--pretty=%B'],
+        capture_output=True,
+        text=True
+    )
+    
+    if result.returncode != 0:
+        print("Failed to get last commit message")
+        return False
+    
+    original_message = result.stdout.strip()
+    
+    # Get co-authors
+    authors = get_file_authors(file_path)
+    if not authors:
+        print("No co-authors found")
+        return False
+    
+    coauthor_lines = format_coauthors(authors)
+    
+    # Build new message
+    new_message = original_message + "\n\n" + "\n".join(coauthor_lines)
+    
+    try:
+        # Amend commit
+        subprocess.run(['git', 'commit', '--amend', '-m', new_message], check=True)
+        
+        print(f"✅ Amended commit with {len(coauthor_lines)} co-authors:")
+        for line in coauthor_lines:
+            print(f"   {line}")
+        
+        return True
+        
+    except subprocess.CalledProcessError as e:
+        print(f"❌ Failed to amend commit: {e}")
+        return False
+
+
+# Example usage
+if __name__ == "__main__":
+    import sys
+    
+    print("Git Co-author Demo for CMIP-LD")
+    print("=" * 40)
+    
+    if len(sys.argv) < 2:
+        print("Usage:")
+        print("  python git_coauthor_demo.py get <file>")
+        print("  python git_coauthor_demo.py commit <message> <file1> [file2...]")
+        print("  python git_coauthor_demo.py amend <file>")
+        sys.exit(1)
+    
+    command = sys.argv[1]
+    
+    if command == "get":
+        if len(sys.argv) < 3:
+            print("Please specify a file")
+            sys.exit(1)
+        
+        file_path = Path(sys.argv[2])
+        authors = get_file_authors(file_path)
+        
+        if authors:
+            print(f"Authors of {file_path.name}:")
+            for author in authors:
+                print(f"  - {author}")
+        else:
+            print(f"No authors found for {file_path.name}")
+    
+    elif command == "commit":
+        if len(sys.argv) < 4:
+            print("Please specify a message and at least one file")
+            sys.exit(1)
+        
+        message = sys.argv[2]
+        files = [Path(f) for f in sys.argv[3:]]
+        
+        create_commit_with_coauthors(files, message)
+    
+    elif command == "amend":
+        if len(sys.argv) < 3:
+            print("Please specify a file")
+            sys.exit(1)
+        
+        file_path = Path(sys.argv[2])
+        amend_commit_with_coauthors(file_path)
+    
+    else:
+        print(f"Unknown command: {command}")
+        sys.exit(1)
