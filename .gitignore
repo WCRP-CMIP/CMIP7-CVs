@@ -3,6 +3,7 @@
 .directory
 .Trashes
 thumbs.db
+*/*graph*.jsonld 
 
 # Byte-compiled / optimized / DLL files
 __pycache__/
