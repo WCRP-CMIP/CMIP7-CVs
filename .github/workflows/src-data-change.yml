@@ -1,95 +1,112 @@
-name: ∆ src-data
-description: Sync JSON and @context changes from src-data to production, applying relevant updates.
+name: JSONLD Graph Builder Workflow
 
 on:
-  push:
-    branches:
-      - src-data
-    paths:
-      - '**/*.json'
-      - '**/@context'
   workflow_dispatch:
+    inputs:
+      updated:
+        description: 'Only process updated directories?'
+        required: false
+        default: false
+        type: boolean
+
+  workflow_call:
+    inputs:
+      updated:
+        description: 'Only process updated directories?'
+        required: false
+        default: false
+        type: boolean
+
+permissions:
+  actions: write
+  contents: read
 
 jobs:
 
-  sync:
+  find-updated-directories:
+    if: ${{ inputs.updated == true }}
     runs-on: ubuntu-latest
+    outputs:
+      directories: ${{ steps.changed-files.outputs.all_changed_files }}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: tj-actions/changed-files@v40
+        id: changed-files
+        with:
+          dir_names: true
+          json: true
+          dir_names_exclude_current_dir: true
+      - run: echo "📂 Updated directories: ${{ steps.changed-files.outputs.all_changed_files }}" >> $GITHUB_STEP_SUMMARY
+
+  find-all-directories:
+    if: ${{ inputs.updated == false }}
+    runs-on: ubuntu-latest
+    outputs:
+      directories: ${{ steps.find-dirs.outputs.directories }}
+    steps:
+      - uses: actions/checkout@v4
+      - name: Find all subdirectories (excluding . and hidden dirs)
+        id: find-dirs
+        run: |
+          directories=$(find . -mindepth 1 -maxdepth 1 -type d -not -path '*/.*' \
+            | sed 's|^\./||' \
+            | sort \
+            | jq -R -s -c 'split("\n")[:-1]')
+          echo "directories=$directories" >> $GITHUB_OUTPUT
+          echo "📂 Subdirectories to process: $directories" >> $GITHUB_STEP_SUMMARY
+
+  set-directories:
+    runs-on: ubuntu-latest
+    needs: [find-updated-directories, find-all-directories]
+    outputs:
+      directories: ${{ steps.set.outputs.directories }}
+    steps:
+      - id: set
+        run: |
+          if [ "${{ inputs.updated }}" = "true" ]; then
+            echo "directories=${{ needs.find-updated-directories.outputs.directories }}" >> $GITHUB_OUTPUT
+          else
+            echo "directories=${{ needs.find-all-directories.outputs.directories }}" >> $GITHUB_OUTPUT
+          fi
+
+  process-directories:
+    needs: set-directories
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        directory: ${{ fromJson(needs.set-directories.outputs.directories) }}
+      fail-fast: false
+
     steps:
       - name: Checkout production branch
         uses: actions/checkout@v4
         with:
+          fetch-depth: 0
           ref: production
-      
-      - name: Clean production except docs and summaries
+
+      - name: Set GitHub Pages URL
         run: |
-          shopt -s extglob
-          rm -rf !(docs|summaries|.git)
+          echo "PAGES_URL=https://${{ github.repository_owner }}.github.io/${{ github.event.repository.name }}" >> $GITHUB_ENV
 
-      - name: Restore path from remote action
-        uses: WCRP-CMIP/CMIPLD/actions/fetch_branch_path@main
-        with:
-          branch: "src-data"
-          path: .
-          remove: false
+      - name: Process JSON-LD files in ${{ matrix.directory }}
+        run: |
+          cd "${{ matrix.directory }}"
+          curl -s https://wcrp-cmip.github.io/CMIPLD/bin/ld2graph | bash -s ../${{ matrix.directory }}
 
-      
+      - name: Install jsonld CLI
+        run: npm install -g git+https://github.com/digitalbazaar/jsonld-cli.git
+
+      - name: Validate JSON-LD from URL
+        run: jsonld lint "$PAGES_URL/${{ matrix.directory }}/graph.jsonld"
+
       - name: Commit and Push Changes
         uses: stefanzweifel/git-auto-commit-action@v4
         with:
-          commit_message: "Clean file upload from src-data"
+          commit_message: "Update JSON-LD graph in ${{ matrix.directory }}"
           branch: production
-          file_pattern: "*"
+          file_pattern: "${{ matrix.directory }}/graph*"
           author_name: "cmip-ipo"
           author_email: "actions@wcrp-cmip.org"
           commit_user_name: "cmip-ipo"
           commit_user_email: "actions@wcrp-cmip.org"
           push_options: "--force"
-
-
-
-
-  graph:
-    uses: WCRP-CMIP/CMIPLD/.github/workflows/graph.yml@main
-    needs: sync
-    
-  # commit:
-  #   runs-on: ubuntu-latest
-  #   needs:
-  #     - sync
-  #     # - graph
-  #   steps:
-    
-  #     - name: Checkout production branch
-  #       uses: actions/checkout@v4
-  #       with:
-  #         ref: production
-          
-  #     - name: Download synced files artifact
-  #       uses: actions/download-artifact@v4
-  #       with:
-  #         name: synced-files
-  #         path: .
-
-  #     - name: Configure Git and Commit Changes
-  #       run: |
-  #         git config user.name "cmipipo-actions[bot]"
-  #         git config user.email "technical@wcrp-cmip.org"
-  #         git add .
-  #         git commit -m "Automated Content Update" || echo "No changes to commit"
-
-  #     - name: Push PR
-  #       uses: WCRP-CMIP/CMIPLD/actions/pushpr@main
-  #       with:
-  #         branch: "production"
-  #         message: "Automated JSONLD update"
-  #         token: ${{ secrets.GITHUB_TOKEN }}
-
-  publish-pages:
-    needs: 
-      - graph
-    uses: WCRP-CMIP/CMIPLD/.github/workflows/pages.yml@main
-    with:
-      branch: production
-      force: true
-    secrets:
-      token: ${{ secrets.GITHUB_TOKEN }}
