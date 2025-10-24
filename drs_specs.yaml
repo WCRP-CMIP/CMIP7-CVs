@@ -8,7 +8,7 @@ directory:
       is_required: true
     - source_collection: activity
       is_required: true
-    - source_collection: institution
+    - source_collection: contributor
       is_required: true
     - source_collection: source
       is_required: true
@@ -65,7 +65,7 @@ dataset_id:
       is_required: true
     - source_collection: activity
       is_required: true
-    - source_collection: institution
+    - source_collection: contributor
       is_required: true
     - source_collection: source
       is_required: true
