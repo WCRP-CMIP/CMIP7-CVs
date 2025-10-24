@@ -1,0 +1,5 @@
+{
+    "@context": "000_context.jsonld",
+    "id": "mip-drs7",
+    "type": "drs_specs"
+}
