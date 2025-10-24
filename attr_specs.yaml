@@ -49,7 +49,7 @@
   field_name: activity_id
   is_required: true
   value_type: string
-- source_collection: drsSpecs
+- source_collection: drs_specs
   field_name: drs_specs
   is_required: true
   value_type: string
