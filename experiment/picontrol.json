@@ -3,5 +3,5 @@
     "id": "picontrol",
     "type": "experiment",
     "parent_mip_era": "cmip7",
-    "tier": 0
+    "tier": 1
 }
