@@ -1,6 +1,0 @@
-{
-    "@context": "000_context.jsonld",
-    "id": "nasa-gsfc",
-    "type": "organisation",
-    "description": "NASA Goddard Space Flight Center, Greenbelt, MD 20771, USA"
-}

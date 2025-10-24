@@ -1,6 +1,0 @@
-{
-    "@context": "000_context.jsonld",
-    "id": "cams",
-    "type": "organisation",
-    "description": "Chinese Academy of Meteorological Sciences, Beijing 100081, China"
-}
