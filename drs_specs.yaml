@@ -20,7 +20,7 @@ directory:
       is_required: true
     - source_collection: variable
       is_required: true
-    - source_collection: branding_suffix
+    - source_collection: branded_suffix
       is_required: true
     - source_collection: gridLabel
       is_required: true
@@ -38,7 +38,7 @@ file_name:
   parts:
     - source_collection: variable
       is_required: true
-    - source_collection: branding_suffix
+    - source_collection: branded_suffix
       is_required: true
     - source_collection: reportingInterval
       is_required: true
@@ -77,7 +77,7 @@ dataset_id:
       is_required: true
     - source_collection: variable
       is_required: true
-    - source_collection: branding_suffix
+    - source_collection: branded_suffix
       is_required: true
     - source_collection: gridLabel
       is_required: true
