@@ -3,6 +3,6 @@
         "id": "@id",
         "type": "@type",
         "@base": "https://espri-mod.github.io/mip-cmor-tables/drs_specs/",
-        "drs_specs": "https://espri-mod.github.io/mip-cmor-tables/drs_specs/"
+        "drs_specs": "https://espri-mod.github.io/mip-cmor-tables/drs_specs"
     }
 }
