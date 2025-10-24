@@ -1,0 +1,8 @@
+{
+    "@context": "000_context.jsonld",
+    "id": "picontrol-spinup",
+    "type": "experiment",
+    "parent_mip_era": "cmip7",
+    "tier": 0
+}
+
