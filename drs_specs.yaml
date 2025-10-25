@@ -56,7 +56,7 @@ file_name:
       is_required: true
     - source_collection: variant_label
       is_required: true
-    - source_collection: timeRange
+    - source_collection: time_range
       is_required: false
 
 # DATASET ID DRS SPECIFICATIONS
