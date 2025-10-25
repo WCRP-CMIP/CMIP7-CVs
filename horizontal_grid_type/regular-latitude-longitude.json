@@ -1,0 +1,5 @@
+{
+    "@context": "000_context.jsonld",
+    "id": "regular-latitude-longitude",
+    "type": "horizontal_grid_type"
+}
