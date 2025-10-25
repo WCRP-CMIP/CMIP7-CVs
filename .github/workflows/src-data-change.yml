@@ -1,6 +1,11 @@
 name: ∆ src-data
 description: Sync JSON and @context changes from src-data to production, applying relevant updates.
 
+# Grant the workflow permission to write repository contents (required to push commits)
+permissions:
+  contents: write
+  pages: write
+
 on:
   push:
     branches:
@@ -19,7 +24,8 @@ jobs:
         uses: actions/checkout@v4
         with:
           ref: production
-      
+          fetch-depth: 0
+
       - name: Clean production except docs and summaries
         run: |
           # Enable extended globs and include dotfiles in glob matches
@@ -42,9 +48,22 @@ jobs:
           path: .
           remove: false
 
+      # Debugging: show git status and what changes, so we can see why commit might be skipped
+      - name: Debug — show git status and changed files
+        run: |
+          git config --global --add safe.directory "$GITHUB_WORKSPACE" || true
+          echo "=== git status (porcelain) ==="
+          git status --porcelain --untracked-files=all || true
+          echo "=== changed files ==="
+          git --no-pager diff --name-only || true
+          echo "=== ls workspace ==="
+          ls -la || true
+
       - name: Commit and Push Changes
         uses: stefanzweifel/git-auto-commit-action@v4
         with:
+          # explicit token and branch to ensure pushing works
+          github_token: ${{ secrets.GITHUB_TOKEN }}
           commit_message: "Clean file upload from src-data"
           branch: production
           file_pattern: "**"
