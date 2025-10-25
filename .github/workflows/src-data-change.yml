@@ -22,8 +22,18 @@ jobs:
       
       - name: Clean production except docs and summaries
         run: |
-          shopt -s extglob
-          rm -rf !(docs|summaries|.git)
+          # Enable extended globs and include dotfiles in glob matches
+          shopt -s extglob dotglob
+
+          # List what will be removed (dry-run / for logging). Useful when testing the workflow.
+          echo ">>> Files and dirs that will be removed (everything except docs, summaries, .git, .github):"
+          ls -A | awk '{
+            if ($0 != "docs" && $0 != "summaries" && $0 != ".git" && $0 != ".github") print $0
+          }' || true
+
+          # Remove everything except the explicitly preserved items.
+          # Use -- to prevent filenames starting with - from being treated as options.
+          rm -rf -- !(docs|summaries|.git|.github)
 
       - name: Restore path from src-data branch
         uses: WCRP-CMIP/CMIPLD/actions/fetch_branch_path@main
@@ -37,9 +47,7 @@ jobs:
         with:
           commit_message: "Clean file upload from src-data"
           branch: production
-          file_pattern: "*"
-          author_name: "cmip-ipo"
-          author_email: "actions@wcrp-cmip.org"
+          file_pattern: "**"
           commit_user_name: "cmip-ipo"
           commit_user_email: "actions@wcrp-cmip.org"
           push_options: "--force"
