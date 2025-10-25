@@ -67,6 +67,8 @@ dataset_id:
   parts:
     - source_collection: drs_specs
       is_required: true
+    - source_collection: mip_era
+      is_required: true
     - source_collection: activity
       is_required: true
     - source_collection: contributor
@@ -78,6 +80,8 @@ dataset_id:
     - source_collection: variant_label
       is_required: true
     - source_collection: region
+      is_required: true
+    - source_collection: frequency
       is_required: true
     - source_collection: variable
       is_required: true
