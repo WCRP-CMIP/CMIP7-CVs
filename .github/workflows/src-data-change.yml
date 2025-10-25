@@ -1,7 +1,6 @@
 name: ∆ src-data
 description: Sync JSON and @context changes from src-data to production, applying relevant updates.
 
-# Grant the workflow permission to write repository contents (required to push commits)
 permissions:
   contents: write
   pages: write
@@ -19,26 +18,22 @@ jobs:
 
   sync:
     runs-on: ubuntu-latest
+
     steps:
       - name: Checkout production branch
         uses: actions/checkout@v4
         with:
           ref: production
           fetch-depth: 0
+          persist-credentials: true
 
       - name: Clean production except docs and summaries
         run: |
-          # Enable extended globs and include dotfiles in glob matches
           shopt -s extglob dotglob
-
-          # List what will be removed (dry-run / for logging). Useful when testing the workflow.
-          echo ">>> Files and dirs that will be removed (everything except docs, summaries, .git, .github):"
+          echo ">>> Files that will be removed (everything except docs, summaries, .git, .github):"
           ls -A | awk '{
             if ($0 != "docs" && $0 != "summaries" && $0 != ".git" && $0 != ".github") print $0
           }' || true
-
-          # Remove everything except the explicitly preserved items.
-          # Use -- to prevent filenames starting with - from being treated as options.
           rm -rf -- !(docs|summaries|.git|.github)
 
       - name: Restore path from src-data branch
@@ -48,7 +43,6 @@ jobs:
           path: .
           remove: false
 
-      # Debugging: show git status and what changes, so we can see why commit might be skipped
       - name: Debug — show git status and changed files
         run: |
           git config --global --add safe.directory "$GITHUB_WORKSPACE" || true
@@ -59,14 +53,25 @@ jobs:
           echo "=== ls workspace ==="
           ls -la || true
 
+      - name: Check for changes
+        id: check_changes
+        run: |
+          git add -A
+          if git diff --cached --quiet; then
+            echo "no_changes=true" >> $GITHUB_OUTPUT
+            echo "✅ No changes detected — skipping commit."
+          else
+            echo "no_changes=false" >> $GITHUB_OUTPUT
+            echo "🔄 Changes detected — will commit."
+          fi
+
       - name: Commit and Push Changes
+        if: steps.check_changes.outputs.no_changes == 'false'
         uses: stefanzweifel/git-auto-commit-action@v4
         with:
-          # explicit token and branch to ensure pushing works
           github_token: ${{ secrets.GITHUB_TOKEN }}
           commit_message: "Clean file upload from src-data"
           branch: production
-          file_pattern: "**"
           commit_user_name: "cmip-ipo"
           commit_user_email: "actions@wcrp-cmip.org"
           push_options: "--force"
