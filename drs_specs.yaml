@@ -1,6 +1,7 @@
 # DIRECTORY DRS SPECIFICATIONS
 directory:
   type: directory
+  # Needs updating?
   regex: "^CMIP7/([A-Za-z0-9-]+/){8}v[0-9]{8}$"
   separator: /
   parts:
@@ -34,6 +35,7 @@ directory:
 # FILE NAME DRS SPECIFICATIONS
 file_name:
   type: file_name
+  # Needs updating?
   regex: '^([A-Za-z0-9-]+_){5}[A-Za-z0-9-]+(?:_[0-9]{6}-[0-9]{6})?\.nc$'
   separator: _
   properties:
@@ -62,6 +64,7 @@ file_name:
 # DATASET ID DRS SPECIFICATIONS
 dataset_id:
   type: dataset_id
+  # Needs updating?
   regex: '^CMIP7(\\.[A-Za-z0-9-]+){10}$'
   separator: .
   parts:
