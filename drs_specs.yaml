@@ -24,7 +24,7 @@ directory:
       is_required: true
     - source_collection: gridLabel
       is_required: true
-    - source_collection: datasetVersion
+    - source_collection: directory_date
       is_required: true
 
 # FILE NAME DRS SPECIFICATIONS
@@ -81,5 +81,5 @@ dataset_id:
       is_required: true
     - source_collection: gridLabel
       is_required: true
-    - source_collection: datasetVersion
+    - source_collection: directory_date
       is_required: true
