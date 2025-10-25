@@ -14,7 +14,7 @@ directory:
       is_required: true
     - source_collection: experiment
       is_required: true
-    - source_collection: datasetVariant
+    - source_collection: variant_label
       is_required: true
     - source_collection: region
       is_required: true
@@ -50,7 +50,7 @@ file_name:
       is_required: true
     - source_collection: experiment
       is_required: true
-    - source_collection: datasetVariant
+    - source_collection: variant_label
       is_required: true
     - source_collection: timeRange
       is_required: false
@@ -71,7 +71,7 @@ dataset_id:
       is_required: true
     - source_collection: experiment
       is_required: true
-    - source_collection: datasetVariant
+    - source_collection: variant_label
       is_required: true
     - source_collection: region
       is_required: true
