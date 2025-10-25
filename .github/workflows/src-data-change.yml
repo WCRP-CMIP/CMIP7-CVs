@@ -9,14 +9,39 @@ on:
   push:
     branches:
       - src-data
-    paths:
-      - '**/*.json'
-      - '**/@context'
+    # Temporarily remove path restrictions to test if that's the issue
+    # paths:
+    #   - '**/*.json'
+    #   - '**/@context'
   workflow_dispatch:
+    inputs:
+      debug:
+        description: 'Enable debug output'
+        required: false
+        default: 'false'
+        type: boolean
 jobs:
   sync:
     runs-on: ubuntu-latest
     steps:
+      - name: Debug trigger information
+        run: |
+          echo "🔍 Workflow triggered!"
+          echo "Event: ${{ github.event_name }}"
+          echo "Ref: ${{ github.ref }}"
+          echo "Branch: ${{ github.ref_name }}"
+          echo "Repository: ${{ github.repository }}"
+          echo "Commit SHA: ${{ github.sha }}"
+          echo "Actor: ${{ github.actor }}"
+          
+          if [[ "${{ github.event_name }}" == "push" ]]; then
+            echo "=== Push event details ==="
+            echo "Before: ${{ github.event.before }}"
+            echo "After: ${{ github.event.after }}"
+            echo "Forced: ${{ github.event.forced }}"
+            echo "Compare URL: ${{ github.event.compare }}"
+          fi
+          
       - name: Checkout production branch
         uses: actions/checkout@v4
         with:
