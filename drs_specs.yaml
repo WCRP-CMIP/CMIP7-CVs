@@ -6,6 +6,8 @@ directory:
   parts:
     - source_collection: drs_specs
       is_required: true
+    - source_collection: mip_era
+      is_required: true
     - source_collection: activity
       is_required: true
     - source_collection: contributor
@@ -17,6 +19,8 @@ directory:
     - source_collection: variant_label
       is_required: true
     - source_collection: region
+      is_required: true
+    - source_collection: frequency
       is_required: true
     - source_collection: variable
       is_required: true
@@ -40,7 +44,7 @@ file_name:
       is_required: true
     - source_collection: branded_suffix
       is_required: true
-    - source_collection: reportingInterval
+    - source_collection: frequency
       is_required: true
     - source_collection: region
       is_required: true
