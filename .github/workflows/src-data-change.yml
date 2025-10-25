@@ -67,14 +67,14 @@ jobs:
 
       - name: Commit and Push Changes
         if: steps.check_changes.outputs.no_changes == 'false'
-        uses: stefanzweifel/git-auto-commit-action@v4
+        uses: EndBug/add-and-commit@v9
         with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
-          commit_message: "Clean file upload from src-data"
+          add: '.'
+          author_name: 'cmip-ipo'
+          author_email: 'actions@wcrp-cmip.org'
+          message: 'Clean file upload from src-data'
           branch: production
-          commit_user_name: "cmip-ipo"
-          commit_user_email: "actions@wcrp-cmip.org"
-          push_options: "--force"
+          push: true
 
   graph:
     uses: WCRP-CMIP/CMIPLD/.github/workflows/graph.yml@main
