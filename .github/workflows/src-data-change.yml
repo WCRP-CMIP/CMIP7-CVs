@@ -1,9 +1,11 @@
 name: ∆ src-data
 description: Sync JSON and @context changes from src-data to production, applying relevant updates.
+
 permissions:
   contents: write
   pages: write
   actions: write
+  id-token: write
 on:
   push:
     branches:
