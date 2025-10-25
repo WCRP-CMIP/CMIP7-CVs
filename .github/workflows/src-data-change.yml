@@ -1,6 +1,5 @@
 name: ∆ src-data
 description: Sync JSON and @context changes from src-data to production, applying relevant updates.
-
 permissions:
   contents: write
   pages: write
@@ -26,18 +25,35 @@ jobs:
           persist-credentials: true
       - name: Clean production except docs and summaries
         run: |
+          echo "=== Before cleaning ==="
+          ls -la || true
+          
+          # Enable extended globbing
           shopt -s extglob dotglob
+          
+          # Show what will be removed
           echo ">>> Files that will be removed (everything except docs, summaries, .git, .github):"
           ls -A | awk '{
             if ($0 != "docs" && $0 != "summaries" && $0 != ".git" && $0 != ".github") print $0
           }' || true
-          rm -rf -- !(docs|summaries|.git|.github)
+          
+          # Remove files (but keep docs, summaries, .git, .github)
+          rm -rf -- !(docs|summaries|.git|.github) || true
+          
+          echo "=== After cleaning ==="
+          ls -la || true
       - name: Restore path from src-data branch
         uses: WCRP-CMIP/CMIPLD/actions/fetch_branch_path@main
         with:
           branch: "src-data"
           path: .
           remove: false
+      - name: Verify restore operation
+        run: |
+          echo "=== Files after restore ==="
+          ls -la || true
+          echo "=== Checking git status after restore ==="
+          git status --porcelain || true
       - name: Debug — show git status and changed files
         run: |
           git config --global --add safe.directory "$GITHUB_WORKSPACE" || true
@@ -50,13 +66,32 @@ jobs:
       - name: Check for changes
         id: check_changes
         run: |
+          # Set git config for the runner
+          git config user.name "cmip-ipo"
+          git config user.email "actions@wcrp-cmip.org"
+          
+          # Check what files exist and their status
+          echo "=== All files in workspace ==="
+          find . -type f -not -path './.git/*' | sort || true
+          
+          # Add all files to staging
           git add -A
+          
+          # Show what's staged
+          echo "=== Staged changes ==="
+          git diff --cached --name-status || true
+          
+          # Check if there are any staged changes
           if git diff --cached --quiet; then
             echo "no_changes=true" >> $GITHUB_OUTPUT
             echo "✅ No changes detected — skipping commit."
+            echo "=== Checking if this is expected ==="
+            git log --oneline -5 || true
           else
             echo "no_changes=false" >> $GITHUB_OUTPUT
             echo "🔄 Changes detected — will commit."
+            echo "=== Summary of changes ==="
+            git diff --cached --stat || true
           fi
       - name: Commit and Push Changes
         if: steps.check_changes.outputs.no_changes == 'false'
