@@ -48,12 +48,30 @@ jobs:
           branch: "src-data"
           path: .
           remove: false
-      - name: Verify restore operation
+      - name: Verify restore operation and analyze differences
         run: |
           echo "=== Files after restore ==="
           ls -la || true
-          echo "=== Checking git status after restore ==="
+          
+          echo "=== Git status after restore ==="
           git status --porcelain || true
+          
+          echo "=== Comparing with src-data branch ==="
+          git fetch origin src-data
+          
+          echo "=== Files different between current state and src-data ==="
+          git diff --name-only HEAD origin/src-data || true
+          
+          echo "=== Detailed diff summary ==="
+          git diff --stat HEAD origin/src-data || true
+          
+          echo "=== Check if working directory has uncommitted changes ==="
+          git status --untracked-files=all || true
+          
+          echo "=== Force add all files including untracked ==="
+          git add -A
+          echo "=== Check staged changes ==="
+          git diff --cached --name-status || true
       - name: Debug — show git status and changed files
         run: |
           git config --global --add safe.directory "$GITHUB_WORKSPACE" || true
@@ -70,23 +88,48 @@ jobs:
           git config user.name "cmip-ipo"
           git config user.email "actions@wcrp-cmip.org"
           
+          # Ensure we're comparing against the right state
+          echo "=== Current branch and HEAD ==="
+          git branch -v
+          git log --oneline -1
+          
           # Check what files exist and their status
           echo "=== All files in workspace ==="
           find . -type f -not -path './.git/*' | sort || true
           
-          # Add all files to staging
+          # Reset any previous staging
+          git reset HEAD -- . || true
+          
+          # Add all files to staging (including untracked)
           git add -A
           
           # Show what's staged
           echo "=== Staged changes ==="
           git diff --cached --name-status || true
           
+          # Also check for any differences against origin/src-data
+          echo "=== Differences against src-data branch ==="
+          git fetch origin src-data || true
+          git diff --name-only HEAD origin/src-data || true
+          
           # Check if there are any staged changes
           if git diff --cached --quiet; then
             echo "no_changes=true" >> $GITHUB_OUTPUT
-            echo "✅ No changes detected — skipping commit."
-            echo "=== Checking if this is expected ==="
-            git log --oneline -5 || true
+            echo "✅ No staged changes detected"
+            
+            # But let's also check if there are differences against src-data
+            if git diff --quiet HEAD origin/src-data; then
+              echo "✅ Production and src-data are identical - this is expected"
+            else
+              echo "⚠️ Files differ from src-data but not staged - potential issue with custom action"
+              # Force stage the differences
+              git checkout origin/src-data -- . || true
+              git add -A
+              if ! git diff --cached --quiet; then
+                echo "🔄 Forced staging worked - changes now detected"
+                echo "no_changes=false" >> $GITHUB_OUTPUT
+              fi
+            fi
           else
             echo "no_changes=false" >> $GITHUB_OUTPUT
             echo "🔄 Changes detected — will commit."
