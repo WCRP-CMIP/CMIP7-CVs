@@ -18,6 +18,10 @@
   field_name: Conventions
   is_required: true
   value_type: string
+- source_collection: creation_date
+  field_name: creation_date
+  is_required: true
+  value_type: string
 - source_collection: data_specs_version
   field_name: data_specs_version
   is_required: true
@@ -101,10 +105,6 @@
   value_type: string
 - source_collection: license
   field_name: license_id
-  is_required: true
-  value_type: string
-- source_collection: dateCreated
-  field_name: creation_date
   is_required: true
   value_type: string
 - source_collection: realisation
