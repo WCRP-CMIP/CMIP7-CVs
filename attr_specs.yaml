@@ -6,21 +6,25 @@
   field_name: area_label
   is_required: true
   value_type: string
-# Old ordering below here
-- source_collection: brandedVariable
-  field_name: branded_variable
+- source_collection: branded_suffix
+  field_name: branding_suffix
   is_required: true
   value_type: string
-- source_collection: temporalLabel
+- source_collection: horizontal_label
+  field_name: horizontal_label
+  is_required: true
+  value_type: string
+- source_collection: temporal_label
   field_name: temporal_label
   is_required: true
   value_type: string
-- source_collection: verticalLabel
+- source_collection: vertical_label
   field_name: vertical_label
   is_required: true
   value_type: string
-- source_collection: horizontalLabel
-  field_name: horizontal_label
+# Old ordering below here
+- source_collection: brandedVariable
+  field_name: branded_variable
   is_required: true
   value_type: string
 - source_collection: reportingInterval
