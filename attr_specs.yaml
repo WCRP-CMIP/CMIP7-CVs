@@ -34,7 +34,7 @@
   field_name: horizontal_label
   is_required: true
   value_type: string
-- source_collection: initialization
+- source_collection: initialization_index
   field_name: initialization_index
   is_required: true
   value_type: string
@@ -46,11 +46,11 @@
   field_name: mip_era
   is_required: true
   value_type: string
-- source_collection: physics
+- source_collection: physics_index
   field_name: physics_index
   is_required: true
   value_type: string
-- source_collection: realization
+- source_collection: realization_index
   field_name: realization_index
   is_required: true
   value_type: string
