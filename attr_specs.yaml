@@ -40,6 +40,11 @@
   is_required: true
   value_type: string
 - source_collection: region
+  field_name: region
+  is_required: true
+  value_type: string
+- source_collection: realm
+  field_name: realm
   is_required: true
   value_type: string
 - source_collection: gridLabel
@@ -83,9 +88,11 @@
   is_required: true
   value_type: string
 - source_collection: realm
+  field_name: realm
   is_required: true
   value_type: string
 - source_collection: license
+  field_name: license_id
   is_required: true
   value_type: string
 - source_collection: dataConventions
