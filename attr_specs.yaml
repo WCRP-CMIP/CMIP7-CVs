@@ -26,6 +26,10 @@
   field_name: data_specs_version
   is_required: true
   value_type: string
+- source_collection: forcing_index
+  field_name: forcing_index
+  is_required: true
+  value_type: string
 - source_collection: horizontal_label
   field_name: horizontal_label
   is_required: true
@@ -117,10 +121,6 @@
   value_type: string
 - source_collection: physics
   field_name: physic_index
-  is_required: true
-  value_type: string
-- source_collection: forcing
-  field_name: forcing_index
   is_required: true
   value_type: string
 - source_collection: uniqueField
