@@ -10,6 +10,10 @@
   field_name: branding_suffix
   is_required: true
   value_type: string
+- source_collection: branded_variable
+  field_name: branded_variable
+  is_required: true
+  value_type: string
 - source_collection: data_specs_version
   field_name: data_specs_version
   is_required: true
@@ -31,10 +35,6 @@
   is_required: true
   value_type: string
 # Old ordering below here
-- source_collection: brandedVariable
-  field_name: branded_variable
-  is_required: true
-  value_type: string
 - source_collection: reportingInterval
   field_name: frequency
   is_required: true
