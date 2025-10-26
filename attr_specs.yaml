@@ -30,6 +30,10 @@
   field_name: temporal_label
   is_required: true
   value_type: string
+- source_collection: variable
+  field_name: variable_id
+  is_required: true
+  value_type: string
 - source_collection: vertical_label
   field_name: vertical_label
   is_required: true
