@@ -34,8 +34,24 @@
   field_name: horizontal_label
   is_required: true
   value_type: string
+- source_collection: initialization
+  field_name: initialization_index
+  is_required: true
+  value_type: string
+- source_collection: license
+  field_name: license_id
+  is_required: true
+  value_type: string
 - source_collection: mip_era
   field_name: mip_era
+  is_required: true
+  value_type: string
+- source_collection: physics
+  field_name: physics_index
+  is_required: true
+  value_type: string
+- source_collection: realization
+  field_name: realization_index
   is_required: true
   value_type: string
 - source_collection: temporal_label
@@ -105,22 +121,6 @@
   value_type: string
 - source_collection: realm
   field_name: realm
-  is_required: true
-  value_type: string
-- source_collection: license
-  field_name: license_id
-  is_required: true
-  value_type: string
-- source_collection: realisation
-  field_name: realisation_index
-  is_required: true
-  value_type: string
-- source_collection: initialization
-  field_name: initialisation_index
-  is_required: true
-  value_type: string
-- source_collection: physics
-  field_name: physic_index
   is_required: true
   value_type: string
 - source_collection: uniqueField
