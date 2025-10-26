@@ -10,6 +10,10 @@
   field_name: branding_suffix
   is_required: true
   value_type: string
+- source_collection: data_specs_version
+  field_name: data_specs_version
+  is_required: true
+  value_type: string
 - source_collection: horizontal_label
   field_name: horizontal_label
   is_required: true
@@ -106,9 +110,5 @@
   value_type: string
 - source_collection: uniqueField
   field_name: tracking_id
-  is_required: true
-  value_type: string
-- source_collection: datasetSpecs
-  field_name: data_specs_version
   is_required: true
   value_type: string
