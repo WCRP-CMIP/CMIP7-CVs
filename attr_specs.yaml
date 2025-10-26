@@ -1,3 +1,12 @@
+- source_collection: archive
+  field_name: archive_id
+  is_required: true
+  value_type: string
+- source_collection: area_label
+  field_name: area_label
+  is_required: true
+  value_type: string
+# Old ordering below here
 - source_collection: brandedVariable
   field_name: branded_variable
   is_required: true
@@ -12,10 +21,6 @@
   value_type: string
 - source_collection: horizontalLabel
   field_name: horizontal_label
-  is_required: true
-  value_type: string
-- source_collection: areaLabel
-  field_name: area_variable
   is_required: true
   value_type: string
 - source_collection: reportingInterval
@@ -69,10 +74,6 @@
   is_required: true
   value_type: string
 - source_collection: license
-  is_required: true
-  value_type: string
-- source_collection: archive
-  field_name: archive_id
   is_required: true
   value_type: string
 - source_collection: dataConventions
