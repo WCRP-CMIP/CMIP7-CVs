@@ -18,6 +18,10 @@
   field_name: horizontal_label
   is_required: true
   value_type: string
+- source_collection: mip_era
+  field_name: mip_era
+  is_required: true
+  value_type: string
 - source_collection: temporal_label
   field_name: temporal_label
   is_required: true
