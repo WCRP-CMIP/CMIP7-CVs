@@ -14,6 +14,10 @@
   field_name: branded_variable
   is_required: true
   value_type: string
+- source_collection: conventions
+  field_name: Conventions
+  is_required: true
+  value_type: string
 - source_collection: data_specs_version
   field_name: data_specs_version
   is_required: true
@@ -97,10 +101,6 @@
   value_type: string
 - source_collection: license
   field_name: license_id
-  is_required: true
-  value_type: string
-- source_collection: dataConventions
-  field_name: conventions
   is_required: true
   value_type: string
 - source_collection: dateCreated
