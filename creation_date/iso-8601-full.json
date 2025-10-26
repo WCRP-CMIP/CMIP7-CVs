@@ -1,0 +1,5 @@
+{
+    "@context": "000_context.jsonld",
+    "id": "iso-8601-full",
+    "type": "creation_date"
+}
