@@ -1,137 +1,126 @@
-- source_collection: archive
-  field_name: archive_id
+- field_name: activity_id
+  source_collection: activity
   is_required: true
   value_type: string
-- source_collection: area_label
-  field_name: area_label
+- field_name: area_label
+  source_collection: area_label
   is_required: true
   value_type: string
-- source_collection: branded_suffix
-  field_name: branding_suffix
+- field_name: branded_variable
+  source_collection: branded_variable
   is_required: true
   value_type: string
-- source_collection: branded_variable
-  field_name: branded_variable
+- field_name: branding_suffix
+  source_collection: branded_suffix
   is_required: true
   value_type: string
-- source_collection: conventions
-  field_name: Conventions
+- field_name: Conventions
+  source_collection: conventions
   is_required: true
   value_type: string
-- source_collection: creation_date
-  field_name: creation_date
+- field_name: creation_date
+  source_collection: creation_date
   is_required: true
   value_type: string
-- source_collection: data_specs_version
-  field_name: data_specs_version
+- field_name: data_specs_version
+  source_collection: data_specs_version
   is_required: true
   value_type: string
-- source_collection: forcing_index
-  field_name: forcing_index
+- field_name: drs_specs
+  source_collection: drs_specs
   is_required: true
   value_type: string
-- source_collection: frequency
-  field_name: frequency
+- field_name: experiment_id
+  source_collection: experiment
   is_required: true
   value_type: string
-- source_collection: grid
-  field_name: grid_label
+- field_name: forcing_index
+  source_collection: forcing_index
   is_required: true
   value_type: string
-- source_collection: horizontal_label
-  field_name: horizontal_label
+- field_name: frequency
+  source_collection: frequency
   is_required: true
   value_type: string
-- source_collection: initialization_index
-  field_name: initialization_index
+- field_name: grid_label
+  source_collection: grid
   is_required: true
   value_type: string
-- source_collection: contributor
-  field_name: institution_id
+- field_name: horizontal_label
+  source_collection: horizontal_label
   is_required: true
   value_type: string
-- source_collection: license
-  field_name: license_id
+- field_name: initialization_index
+  source_collection: initialization_index
   is_required: true
   value_type: string
-- source_collection: mip_era
-  field_name: mip_era
+- field_name: institution_id
+  source_collection: contributor
   is_required: true
   value_type: string
-- source_collection: nominal_resolution
-  field_name: nominal_resolution
+- field_name: license_id
+  source_collection: license
   is_required: true
   value_type: string
-- source_collection: physics_index
-  field_name: physics_index
+- field_name: mip_era
+  source_collection: mip_era
   is_required: true
   value_type: string
-- source_collection: product
-  field_name: product
+- field_name: nominal_resolution
+  source_collection: nominal_resolution
   is_required: true
   value_type: string
-- source_collection: realization_index
-  field_name: realization_index
+- field_name: physics_index
+  source_collection: physics_index
   is_required: true
   value_type: string
-- source_collection: realm
-  field_name: realm
+- field_name: product
+  source_collection: product
   is_required: true
   value_type: string
-- source_collection: region
-  field_name: region
+- field_name: realization_index
+  source_collection: realization_index
   is_required: true
   value_type: string
-- source_collection: temporal_label
-  field_name: temporal_label
+- field_name: realm
+  source_collection: realm
   is_required: true
   value_type: string
-- source_collection: tracking_id
-  field_name: tracking_id
+- field_name: region
+  source_collection: region
   is_required: true
   value_type: string
-- source_collection: variable
-  field_name: variable_id
+- field_name: source_id
+  source_collection: source
   is_required: true
   value_type: string
-- source_collection: variant_label
-  field_name: variant_label
+- field_name: temporal_label
+  source_collection: temporal_label
   is_required: true
   value_type: string
-- source_collection: vertical_label
-  field_name: vertical_label
+- field_name: tracking_id
+  source_collection: tracking_id
   is_required: true
   value_type: string
-# Old ordering below here
-- source_collection: realm
-  field_name: realm
+- field_name: variable_id
+  source_collection: variable
   is_required: true
   value_type: string
-- source_collection: source
-  field_name: source_id
+- field_name: variant_label
+  source_collection: variant_label
   is_required: true
   value_type: string
-- source_collection: experiment
-  field_name: experiment_id
+- field_name: vertical_label
+  source_collection: vertical_label
   is_required: true
   value_type: string
-- source_collection: hostCollection
-  field_name: host_collection
-  is_required: true
-  value_type: string
-- source_collection: activity
-  field_name: activity_id
-  is_required: true
-  value_type: string
-- source_collection: drs_specs
-  field_name: drs_specs
-  is_required: true
-  value_type: string
-- source_collection: datasetVersion
-  field_name: directory_date
-  is_required: true
-  value_type: string
-- source_collection: timeRange
-  field_name: time_range
-  is_required: true
-  value_type: string
+# TODO: optionall required
+# branch_time_in_child
+# branch_time_in_parent
+# external_variables
+# parent_activity_id
+# parent_experiment_id
+# parent_mip_era
+# parent_source_id
+# parent_time_units
+# parent_variant_label
