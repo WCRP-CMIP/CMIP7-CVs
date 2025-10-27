@@ -1,0 +1,13 @@
+NOTICE
+======
+
+Copyright 2025 WCRP-CMIP and contributors.
+
+This repository includes code and data files developed by the WCRP-CMIP community. Use of this software is subject to the terms in the LICENSE file at the root of this repository.
+
+Third-party components:
+- Any third-party components included in this repository are subject to their respective licenses; see source file headers and the LICENSE for details.
+
+For attribution, please cite the repository: WCRP-CMIP/CMIP7-CVs (https://github.com/WCRP-CMIP/CMIP7-CVs)
+
+Contact: Open an issue in this repository for questions or support.
