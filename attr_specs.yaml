@@ -74,8 +74,20 @@
   field_name: realization_index
   is_required: true
   value_type: string
+- source_collection: realm
+  field_name: realm
+  is_required: true
+  value_type: string
+- source_collection: region
+  field_name: region
+  is_required: true
+  value_type: string
 - source_collection: temporal_label
   field_name: temporal_label
+  is_required: true
+  value_type: string
+- source_collection: tracking_id
+  field_name: tracking_id
   is_required: true
   value_type: string
 - source_collection: variable
@@ -87,10 +99,6 @@
   is_required: true
   value_type: string
 # Old ordering below here
-- source_collection: region
-  field_name: region
-  is_required: true
-  value_type: string
 - source_collection: realm
   field_name: realm
   is_required: true
@@ -125,13 +133,5 @@
   value_type: string
 - source_collection: timeRange
   field_name: time_range
-  is_required: true
-  value_type: string
-- source_collection: realm
-  field_name: realm
-  is_required: true
-  value_type: string
-- source_collection: uniqueField
-  field_name: tracking_id
   is_required: true
   value_type: string
