@@ -123,7 +123,7 @@ They are being used by devs and are not intended to be long-lived.
 -------------------
 
 
-## JSON branch structure (use esgvoc for now)
+## JSON branch structure (ignore these and use esgvoc for now)
 
 | Required |  |
 |--------|-------------|
