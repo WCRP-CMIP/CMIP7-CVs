@@ -1,6 +1,6 @@
 {
     "@context": [
-        "../_context_",
+        "../@context",
         {
             "@base": "https://wcrp-cmip.github.io/CMIP7-CVs/@context/",
             "@vocab": "https://wcrp-cmip.github.io/CMIP7-CVs/@context/",
@@ -9,20 +9,21 @@
             },
             "activity": {
                 "@type": "@id",
-                "@context": "https://wcrp-cmip.github.io/WCRP-universe/activity/_context_"
+                "@context": "https://wcrp-cmip.github.io/WCRP-universe/activity/@context"
             },
             "model-realms": {
                 "@type": "@id",
-                "@context": "https://wcrp-cmip.github.io/WCRP-universe/source-type/_context_"
+                "@context": "https://wcrp-cmip.github.io/WCRP-universe/source-type/@context"
             },
             "parent-activity": {
                 "@type": "@id",
-                "@context": "https://wcrp-cmip.github.io/WCRP-universe/activity/_context_"
+                "@context": "https://wcrp-cmip.github.io/WCRP-universe/activity/@context"
             }
         }
     ],
     "@embed": "@always",
     "@type": [
+        "wcrp:experiment",
         "cmip7"
     ]
 }
