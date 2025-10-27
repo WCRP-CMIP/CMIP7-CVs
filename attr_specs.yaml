@@ -46,6 +46,10 @@
   field_name: initialization_index
   is_required: true
   value_type: string
+- source_collection: contributor
+  field_name: institution_id
+  is_required: true
+  value_type: string
 - source_collection: license
   field_name: license_id
   is_required: true
@@ -113,10 +117,6 @@
   value_type: string
 - source_collection: timeRange
   field_name: time_range
-  is_required: true
-  value_type: string
-- source_collection: institution
-  field_name: institution_id
   is_required: true
   value_type: string
 - source_collection: realm
