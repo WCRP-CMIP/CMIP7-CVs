@@ -1,0 +1,27 @@
+{
+    "id": "esm-s7h-nofirechange",
+    "validation-key": "esm-s7h-noFireChange",
+    "ui-label": "pending",
+    "description": "pending",
+    "activity": [
+        "firemip"
+    ],
+    "alias": [],
+    "minimum-number-of-years": 10,
+    "model-realms": [
+        {
+            "id": "pending",
+            "is-required": true
+        }
+    ],
+    "parent-experiment": [
+        "pending"
+    ],
+    "start-date": "pending",
+    "tier": "pending",
+    "@context": "@context",
+    "type": [
+        "wcrp:experiment",
+        "cmip7"
+    ]
+}
