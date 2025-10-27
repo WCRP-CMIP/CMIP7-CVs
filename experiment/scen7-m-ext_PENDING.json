@@ -1,0 +1,31 @@
+{
+    "id": "scen7-m-ext",
+    "validation-key": "scen7-m-ext",
+    "ui-label": "pending",
+    "description": "pending",
+    "activity": [
+        "scenarios",
+        "dynvar",
+        "ismip7",
+        "conc",
+        "scenarios"
+    ],
+    "alias": [],
+    "minimum-number-of-years": 50,
+    "model-realms": [
+        {
+            "id": "pending",
+            "is-required": true
+        }
+    ],
+    "parent-experiment": [
+        "pending"
+    ],
+    "start-date": "pending",
+    "tier": "pending",
+    "@context": "@context",
+    "type": [
+        "wcrp:experiment",
+        "cmip7"
+    ]
+}
