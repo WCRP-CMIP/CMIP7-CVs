@@ -66,6 +66,10 @@
   field_name: physics_index
   is_required: true
   value_type: string
+- source_collection: product
+  field_name: product
+  is_required: true
+  value_type: string
 - source_collection: realization_index
   field_name: realization_index
   is_required: true
