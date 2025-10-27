@@ -94,6 +94,10 @@
   field_name: variable_id
   is_required: true
   value_type: string
+- source_collection: variant_label
+  field_name: variant_label
+  is_required: true
+  value_type: string
 - source_collection: vertical_label
   field_name: vertical_label
   is_required: true
@@ -109,10 +113,6 @@
   value_type: string
 - source_collection: experiment
   field_name: experiment_id
-  is_required: true
-  value_type: string
-- source_collection: datasetVariant
-  field_name: variant_label
   is_required: true
   value_type: string
 - source_collection: hostCollection
