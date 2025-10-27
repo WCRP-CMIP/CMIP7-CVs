@@ -58,6 +58,10 @@
   field_name: mip_era
   is_required: true
   value_type: string
+- source_collection: nominal_resolution
+  field_name: nominal_resolution
+  is_required: true
+  value_type: string
 - source_collection: physics_index
   field_name: physics_index
   is_required: true
