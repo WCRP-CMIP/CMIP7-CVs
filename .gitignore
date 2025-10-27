@@ -1,0 +1,13 @@
+# Ignore everything by default
+*
+
+# But don't ignore these specific items
+!LICENSE*
+!README.md
+!.github/
+!.github/**
+!summaries/
+!summaries/**
+
+# Don't ignore .gitignore itself
+!.gitignore
