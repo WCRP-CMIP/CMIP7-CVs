@@ -114,7 +114,7 @@
   source_collection: vertical_label
   is_required: true
   value_type: string
-# TODO: optionall required
+# TODO: optional required (?)
 # branch_time_in_child
 # branch_time_in_parent
 # external_variables
