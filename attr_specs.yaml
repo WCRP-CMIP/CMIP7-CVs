@@ -34,6 +34,10 @@
   field_name: frequency
   is_required: true
   value_type: string
+- source_collection: grid
+  field_name: grid_label
+  is_required: true
+  value_type: string
 - source_collection: horizontal_label
   field_name: horizontal_label
   is_required: true
@@ -77,10 +81,6 @@
   value_type: string
 - source_collection: realm
   field_name: realm
-  is_required: true
-  value_type: string
-- source_collection: gridLabel
-  field_name: grid
   is_required: true
   value_type: string
 - source_collection: source
