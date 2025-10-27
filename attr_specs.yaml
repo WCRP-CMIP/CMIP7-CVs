@@ -30,6 +30,10 @@
   field_name: forcing_index
   is_required: true
   value_type: string
+- source_collection: frequency
+  field_name: frequency
+  is_required: true
+  value_type: string
 - source_collection: horizontal_label
   field_name: horizontal_label
   is_required: true
@@ -67,10 +71,6 @@
   is_required: true
   value_type: string
 # Old ordering below here
-- source_collection: reportingInterval
-  field_name: frequency
-  is_required: true
-  value_type: string
 - source_collection: region
   field_name: region
   is_required: true
