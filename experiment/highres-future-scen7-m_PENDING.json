@@ -1,27 +1,27 @@
 {
-    "id": "highres-future-scen7-m",
-    "validation-key": "highres-future-scen7-m",
-    "ui-label": "pending",
-    "description": "pending",
-    "activity": [
-        "highresmip2"
-    ],
-    "alias": [],
-    "minimum-number-of-years": 78,
-    "model-realms": [
-        {
-            "id": "pending",
-            "is-required": true
-        }
-    ],
-    "parent-experiment": [
-        "pending"
-    ],
-    "start-date": "pending",
-    "tier": "pending",
-    "@context": "@context",
-    "type": [
-        "wcrp:experiment",
-        "cmip7"
-    ]
+  "id": "highres-future-scen7-m",
+  "validation-key": "highres-future-scen7-m",
+  "ui-label": "pending",
+  "description": "pending",
+  "activity": [
+    "highresmip2"
+  ],
+  "alias": [],
+  "minimum-number-of-years": 78,
+  "model-realms": [
+    {
+      "id": "pending",
+      "is-required": true
+    }
+  ],
+  "parent-experiment": [
+    "pending"
+  ],
+  "start-date": "pending",
+  "tier": "pending",
+  "@context": "_context",
+  "type": [
+    "wcrp:experiment",
+    "cmip7"
+  ]
 }

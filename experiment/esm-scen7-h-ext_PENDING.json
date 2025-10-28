@@ -1,27 +1,27 @@
 {
-    "id": "esm-scen7-h-ext",
-    "validation-key": "esm-scen7-h-ext",
-    "ui-label": "pending",
-    "description": "pending",
-    "activity": [
-        "ismip7"
-    ],
-    "alias": [],
-    "minimum-number-of-years": 50,
-    "model-realms": [
-        {
-            "id": "pending",
-            "is-required": true
-        }
-    ],
-    "parent-experiment": [
-        "pending"
-    ],
-    "start-date": "pending",
-    "tier": "pending",
-    "@context": "@context",
-    "type": [
-        "wcrp:experiment",
-        "cmip7"
-    ]
+  "id": "esm-scen7-h-ext",
+  "validation-key": "esm-scen7-h-ext",
+  "ui-label": "pending",
+  "description": "pending",
+  "activity": [
+    "ismip7"
+  ],
+  "alias": [],
+  "minimum-number-of-years": 50,
+  "model-realms": [
+    {
+      "id": "pending",
+      "is-required": true
+    }
+  ],
+  "parent-experiment": [
+    "pending"
+  ],
+  "start-date": "pending",
+  "tier": "pending",
+  "@context": "_context",
+  "type": [
+    "wcrp:experiment",
+    "cmip7"
+  ]
 }

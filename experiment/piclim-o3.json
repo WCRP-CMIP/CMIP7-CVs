@@ -23,7 +23,7 @@
   ],
   "start-date": "none",
   "tier": "1",
-  "@context": "@context",
+  "@context": "_context",
   "type": [
     "wcrp:experiment",
     "cmip7"
