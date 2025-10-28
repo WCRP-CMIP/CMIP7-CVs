@@ -1,5 +1,5 @@
 {
-  "id": "piclim-hc",
+  "@id": "piclim-hc",
   "validation-key": "piClim-HC",
   "ui-label": "Describe piClim-HC in one sentence.",
   "description": "Perturbation from pre-industrial control using 1850 halocarbon concentrations \n Pre-industrial climatological SSTs and sea ice extent, 1850 halocarbon concentrations",

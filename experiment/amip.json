@@ -1,5 +1,5 @@
 {
-  "id": "amip",
+  "@id": "amip",
   "validation-key": "amip",
   "ui-label": "Describe amip in one sentence.",
   "description": "DECK: AMIP \n AMIP (Atmospheric Model Intercomparison Project) experiment with prescribed SSTs and sea ice",
@@ -12,19 +12,19 @@
   "min-number-yrs-per-sim": 43,
   "model-realms": [
     {
-      "id": "agcm",
+      "@id": "agcm",
       "is-required": true
     },
     {
-      "id": "aer",
+      "@id": "aer",
       "is-required": false
     },
     {
-      "id": "chem",
+      "@id": "chem",
       "is-required": false
     },
     {
-      "id": "bgc",
+      "@id": "bgc",
       "is-required": false
     }
   ],

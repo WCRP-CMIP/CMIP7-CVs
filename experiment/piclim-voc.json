@@ -1,5 +1,5 @@
 {
-  "id": "piclim-voc",
+  "@id": "piclim-voc",
   "validation-key": "piClim-VOC",
   "ui-label": "Describe piClim-VOC in one sentence.",
   "description": "Perturbation from pre-industrial control using 1850 VOC emissions \n Pre-industrial climatological SSTs and sea ice extent, 1850 VOC emissions",

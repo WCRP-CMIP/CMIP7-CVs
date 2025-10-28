@@ -15,7 +15,7 @@
     "cmip7:cmip7",
     "wcrp:activity"
   ],
-  "id": "activity",
+  "@id": "activity",
   "validation-key": "",
   "ui-label": "",
   "description": "",

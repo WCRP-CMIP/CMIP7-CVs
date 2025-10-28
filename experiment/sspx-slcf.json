@@ -1,5 +1,5 @@
 {
-  "id": "sspx-slcf",
+  "@id": "sspx-slcf",
   "validation-key": "SSPX-SLCF",
   "ui-label": "Describe SSPX-SLCF in one sentence.",
   "description": "Future scenario with specified SLCF emissions \n Future scenario simulation with specified short-lived climate forcer emissions",

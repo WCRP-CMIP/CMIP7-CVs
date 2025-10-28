@@ -11,7 +11,7 @@
     "cmip7:cmip7",
     "wcrp:tables"
   ],
-  "id": "tables",
+  "@id": "tables",
   "validation-key": "",
   "ui-label": "",
   "description": "",

@@ -1,5 +1,5 @@
 {
-  "id": "hist-irr",
+  "@id": "hist-irr",
   "validation-key": "hist-irr",
   "ui-label": "Historical simulations with irrigation switched on",
   "description": "1. switching on the irrigation in the experiment historical 2. All irrigation-related parameters should be set as the model's default values. Other settings should be the same as the reference simulations (hist, scenario, amip). 3. This is only for model groups whose historical simulations do not include irrigation.",
@@ -10,15 +10,15 @@
   "minimum-number-of-years": 122,
   "model-realms": [
     {
-      "id": "aogcm",
+      "@id": "aogcm",
       "is-required": true
     },
     {
-      "id": "land",
+      "@id": "land",
       "is-required": true
     },
     {
-      "id": "bgc",
+      "@id": "bgc",
       "is-required": true
     }
   ],

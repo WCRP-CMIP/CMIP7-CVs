@@ -1,5 +1,5 @@
 {
-  "id": "dcppa-assim",
+  "@id": "dcppa-assim",
   "validation-key": "dcppA-assim",
   "ui-label": "pending",
   "description": "pending",
@@ -10,7 +10,7 @@
   "minimum-number-of-years": 56,
   "model-realms": [
     {
-      "id": "pending",
+      "@id": "pending",
       "is-required": true
     }
   ],

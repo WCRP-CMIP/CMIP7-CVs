@@ -15,7 +15,7 @@
     "cmip7:cmip7",
     "wcrp:nominal_resolution"
   ],
-  "id": "native-nominal-resolution",
+  "@id": "native-nominal-resolution",
   "validation-key": "",
   "ui-label": "",
   "description": "",

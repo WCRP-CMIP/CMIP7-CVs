@@ -15,11 +15,11 @@
     "cmip7:cmip7",
     "wcrp:product"
   ],
-  "id": "product",
+  "@id": "product",
   "validation-key": "",
   "ui-label": "",
   "description": "",
   "product": {
-    "id": "model-output"
+    "@id": "model-output"
   }
 }

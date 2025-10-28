@@ -1,5 +1,5 @@
 {
-  "id": "historical",
+  "@id": "historical",
   "validation-key": "historical",
   "ui-label": "Simulation of the recent past (concentration driven)",
   "description": "DECK: historical \n Simulation of the recent past",
@@ -13,19 +13,19 @@
   "min-number-yrs-per-sim": 172,
   "model-realms": [
     {
-      "id": "aogcm",
+      "@id": "aogcm",
       "is-required": true
     },
     {
-      "id": "aer",
+      "@id": "aer",
       "is-required": false
     },
     {
-      "id": "chem",
+      "@id": "chem",
       "is-required": false
     },
     {
-      "id": "bgc",
+      "@id": "bgc",
       "is-required": false
     }
   ],

@@ -1,5 +1,5 @@
 {
-  "id": "ligabrupt",
+  "@id": "ligabrupt",
   "validation-key": "LIGabrupt",
   "ui-label": "Describe LIGabrupt in one sentence.",
   "description": "Last Interglacial abrupt change experiment \n Simulation of abrupt change during the Last Interglacial period",

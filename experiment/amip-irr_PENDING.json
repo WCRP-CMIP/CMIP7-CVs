@@ -1,5 +1,5 @@
 {
-  "id": "amip-irr",
+  "@id": "amip-irr",
   "validation-key": "amip-irr",
   "ui-label": "pending",
   "description": "pending",
@@ -10,7 +10,7 @@
   "minimum-number-of-years": 122,
   "model-realms": [
     {
-      "id": "pending",
+      "@id": "pending",
       "is-required": true
     }
   ],

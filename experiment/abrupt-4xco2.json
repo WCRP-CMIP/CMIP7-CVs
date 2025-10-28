@@ -1,5 +1,5 @@
 {
-  "id": "abrupt-4xco2",
+  "@id": "abrupt-4xco2",
   "validation-key": "abrupt-4xCO2",
   "ui-label": "CO2 prescribed to 4 times preindustrial",
   "description": "DECK: abrupt quadrupling of CO2 \n Abrupt increase in CO2 concentration from pre-industrial level to quadrupling",
@@ -12,19 +12,19 @@
   "min-number-yrs-per-sim": 150,
   "model-realms": [
     {
-      "id": "aogcm",
+      "@id": "aogcm",
       "is-required": true
     },
     {
-      "id": "aer",
+      "@id": "aer",
       "is-required": false
     },
     {
-      "id": "chem",
+      "@id": "chem",
       "is-required": false
     },
     {
-      "id": "bgc",
+      "@id": "bgc",
       "is-required": false
     }
   ],

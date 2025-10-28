@@ -1,5 +1,5 @@
 {
-  "id": "esm-scen7-ln",
+  "@id": "esm-scen7-ln",
   "validation-key": "esm-scen7-ln",
   "ui-label": "pending",
   "description": "pending",
@@ -10,7 +10,7 @@
   "minimum-number-of-years": 75,
   "model-realms": [
     {
-      "id": "pending",
+      "@id": "pending",
       "is-required": true
     }
   ],

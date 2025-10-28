@@ -15,11 +15,11 @@
     "cmip7:cmip7",
     "wcrp:mip_era"
   ],
-  "id": "mip-era",
+  "@id": "mip-era",
   "validation-key": "",
   "ui-label": "",
   "description": "",
   "mip_era": {
-    "id": "cmip7"
+    "@id": "cmip7"
   }
 }

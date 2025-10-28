@@ -1,5 +1,5 @@
 {
-  "id": "esm-up2p0-gwl2p0",
+  "@id": "esm-up2p0-gwl2p0",
   "validation-key": "esm-up2p0-gwl2p0",
   "ui-label": "Zero-emission run starting at 2 degree C GWL",
   "description": "GWL=2 degree C experiment, branching off the ramp-up when GMSAT is 2 degree C warmer than pre-industrial.",
@@ -10,19 +10,19 @@
   "minimum-number-of-years": "300",
   "model-realms": [
     {
-      "id": "aogcm",
+      "@id": "aogcm",
       "is-required": true
     },
     {
-      "id": "bgc",
+      "@id": "bgc",
       "is-required": true
     },
     {
-      "id": "aer",
+      "@id": "aer",
       "is-required": false
     },
     {
-      "id": "chem",
+      "@id": "chem",
       "is-required": false
     }
   ],

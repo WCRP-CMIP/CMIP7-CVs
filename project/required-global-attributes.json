@@ -12,7 +12,7 @@
     "wcrp:required",
     "wcrp:required_global_attributes"
   ],
-  "id": "required-global-attributes",
+  "@id": "required-global-attributes",
   "validation-key": "",
   "ui-label": "",
   "description": "",

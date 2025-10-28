@@ -11,7 +11,7 @@
     "cmip7:cmip7",
     "wcrp:drs"
   ],
-  "id": "drs",
+  "@id": "drs",
   "validation-key": "",
   "ui-label": "",
   "description": "",

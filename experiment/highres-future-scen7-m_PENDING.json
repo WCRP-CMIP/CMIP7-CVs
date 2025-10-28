@@ -1,5 +1,5 @@
 {
-  "id": "highres-future-scen7-m",
+  "@id": "highres-future-scen7-m",
   "validation-key": "highres-future-scen7-m",
   "ui-label": "pending",
   "description": "pending",
@@ -10,7 +10,7 @@
   "minimum-number-of-years": 78,
   "model-realms": [
     {
-      "id": "pending",
+      "@id": "pending",
       "is-required": true
     }
   ],

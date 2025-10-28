@@ -1,5 +1,5 @@
 {
-  "id": "amip-p4k-sst-rad",
+  "@id": "amip-p4k-sst-rad",
   "validation-key": "amip-p4K-SST-rad",
   "ui-label": "AMIP experiment with uniform 4K increase in the SST input to radiation",
   "description": "Similar to `amip`, but SST is raised by 4K when calculating the upward longwave radiation from the sea surface using Planck function.  Reference: [Ogura et al., 2023](https://doi.org/10.1029/2023GL104786)",
@@ -11,19 +11,19 @@
   "minimum-number-of-years": 44,
   "model-realms": [
     {
-      "id": "agcm",
+      "@id": "agcm",
       "is-required": true
     },
     {
-      "id": "aer",
+      "@id": "aer",
       "is-required": false
     },
     {
-      "id": "bgc",
+      "@id": "bgc",
       "is-required": false
     },
     {
-      "id": "chem",
+      "@id": "chem",
       "is-required": false
     }
   ],

@@ -1,5 +1,5 @@
 {
-  "id": "hist-pislcf",
+  "@id": "hist-pislcf",
   "validation-key": "hist-piSLCF",
   "ui-label": "Describe hist-piSLCF in one sentence.",
   "description": "Historical simulation with pre-industrial short-lived climate forcers \n Historical simulation but with pre-industrial short-lived climate forcer emissions",

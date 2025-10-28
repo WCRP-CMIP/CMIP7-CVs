@@ -11,7 +11,7 @@
     "cmip7:cmip7",
     "wcrp:index"
   ],
-  "id": "index",
+  "@id": "index",
   "validation-key": "",
   "ui-label": "",
   "description": "",

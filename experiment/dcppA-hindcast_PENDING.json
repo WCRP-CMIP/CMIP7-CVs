@@ -1,5 +1,5 @@
 {
-  "id": "dcppa-hindcast",
+  "@id": "dcppa-hindcast",
   "validation-key": "dcppA-hindcast",
   "ui-label": "pending",
   "description": "pending",
@@ -10,7 +10,7 @@
   "minimum-number-of-years": 5,
   "model-realms": [
     {
-      "id": "pending",
+      "@id": "pending",
       "is-required": true
     }
   ],

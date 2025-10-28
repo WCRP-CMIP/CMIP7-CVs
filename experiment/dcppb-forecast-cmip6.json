@@ -1,5 +1,5 @@
 {
-  "id": "dcppb-forecast-cmip6",
+  "@id": "dcppb-forecast-cmip6",
   "validation-key": "dcppB-forecast-cmip6",
   "ui-label": "forecast initialized from observations with forcing from ssp245",
   "description": "CMIP6 DCPP (Boer et al., 2016; www.geosci-model-dev.net/9/3751/2016/) experiments B1 (and B2.1, B2.2)--ongoing fully-coupled decadal forecasts initialized from observation-based states. First full forecast year follows start year (e.g., for 2025 initialization, first full forecast year is 2026). This AR7 FastTrack experiment is a real-time extension of CMIP6 DCPP component B, so a pre-requisite is completion of CMIP6 DCPP component A (experiment id: dcppA-hindcast). For participation in AR7, forecasts should be 10 years long with minimum of 10 ensemble members.",
@@ -12,23 +12,23 @@
   "minimum-number-of-years": 10,
   "model-realms": [
     {
-      "id": "aogcm",
+      "@id": "aogcm",
       "is-required": true
     },
     {
-      "id": "aer",
+      "@id": "aer",
       "is-required": false
     },
     {
-      "id": "bgc",
+      "@id": "bgc",
       "is-required": false
     },
     {
-      "id": "chem",
+      "@id": "chem",
       "is-required": false
     },
     {
-      "id": "ism",
+      "@id": "ism",
       "is-required": false
     }
   ],

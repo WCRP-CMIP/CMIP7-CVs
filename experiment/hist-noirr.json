@@ -1,5 +1,5 @@
 {
-  "id": "hist-noirr",
+  "@id": "hist-noirr",
   "validation-key": "hist-noirr",
   "ui-label": "Historical simulations with irrigation switched off",
   "description": "1. switching off the irrigation in the experiment historical  3. This is only for model groups whose historical simulations do include irrigation.",
@@ -10,15 +10,15 @@
   "minimum-number-of-years": 122,
   "model-realms": [
     {
-      "id": "aogcm",
+      "@id": "aogcm",
       "is-required": true
     },
     {
-      "id": "land",
+      "@id": "land",
       "is-required": true
     },
     {
-      "id": "bgc",
+      "@id": "bgc",
       "is-required": true
     }
   ],

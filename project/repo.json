@@ -11,7 +11,7 @@
     "cmip7:cmip7",
     "wcrp:repo"
   ],
-  "id": "repo",
+  "@id": "repo",
   "validation-key": "",
   "ui-label": "",
   "description": "",

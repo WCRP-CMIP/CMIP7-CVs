@@ -1,5 +1,5 @@
 {
-  "id": "esm-s7h-nofirechange",
+  "@id": "esm-s7h-nofirechange",
   "validation-key": "esm-s7h-noFireChange",
   "ui-label": "pending",
   "description": "pending",
@@ -10,7 +10,7 @@
   "minimum-number-of-years": 10,
   "model-realms": [
     {
-      "id": "pending",
+      "@id": "pending",
       "is-required": true
     }
   ],
