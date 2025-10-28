@@ -12,7 +12,7 @@ on:
     # Temporarily remove path restrictions to test if that's the issue
     # paths:
     #   - '**/*.json'
-    #   - '**/@context'
+    #   - '**/_context'
   workflow_dispatch:
     inputs:
       debug:
