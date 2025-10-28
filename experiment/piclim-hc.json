@@ -17,7 +17,7 @@
   "start-date": "none",
   "tier": 0,
   "@context": "_context",
-  "type": [
+  "@type": [
     "esgf:experiment",
     "cmip7"
   ]

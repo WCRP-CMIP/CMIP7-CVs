@@ -38,7 +38,7 @@
   "start-date": "2026",
   "tier": "1",
   "@context": "_context",
-  "type": [
+  "@type": [
     "esgf:experiment",
     "cmip7"
   ]

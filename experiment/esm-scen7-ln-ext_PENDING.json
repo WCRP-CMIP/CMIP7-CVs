@@ -18,7 +18,7 @@
   "start-date": "pending",
   "tier": "pending",
   "@context": "_context",
-  "type": [
+  "@type": [
     "esgf:experiment",
     "cmip7"
   ]

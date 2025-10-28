@@ -28,7 +28,7 @@
   "start-date": "1901-01-01",
   "tier": "2",
   "@context": "_context",
-  "type": [
+  "@type": [
     "esgf:experiment",
     "cmip7"
   ]
