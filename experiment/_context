@@ -4,15 +4,15 @@
         "@vocab": "https://esgf.github.io/esgf-vocab/api_documentation/data_descriptors.html#esgvoc.api.data_descriptors.Experiment",
         "activity": {
             "@context": "https://wcrp-cmip.github.io/WCRP-universe/activity/_context",
-            "@entries": "@id"
+            "@type": "@id"
         },
         "model-realms": {
             "@context": "https://wcrp-cmip.github.io/WCRP-universe/source-type/_context",
-            "@entries": "@id"
+            "@type": "@id"
         },
         "parent-activity": {
             "@context": "https://wcrp-cmip.github.io/WCRP-universe/activity/_context",
-            "@entries": "@id"
+            "@type": "@id"
         },
         "parent-experiment": {
             "@type": "@id"
