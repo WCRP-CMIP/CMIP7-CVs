@@ -4,13 +4,9 @@
     "ui-label": "Coupled atmosphere-ocean preindustrial control (emissions driven)",
     "description": "DECK: pre-industrial control simulation with Earth System Models \n Pre-industrial control run for Earth System Models",
     "activity": [
-        "deck",
-        "temperature",
-        "synoptic",
         "damip",
         "picontrol",
-        "pmip",
-        "dynvar"
+        "pmip"
     ],
     "alias": [],
     "end": -999,

@@ -1,0 +1,27 @@
+{
+    "id": "amip-noirr",
+    "validation-key": "amip-noirr",
+    "ui-label": "pending",
+    "description": "pending",
+    "activity": [
+        "irrmip"
+    ],
+    "alias": [],
+    "minimum-number-of-years": 122,
+    "model-realms": [
+        {
+            "id": "pending",
+            "is-required": true
+        }
+    ],
+    "parent-experiment": [
+        "pending"
+    ],
+    "start-date": "pending",
+    "tier": "pending",
+    "@context": "@context",
+    "type": [
+        "wcrp:experiment",
+        "cmip7"
+    ]
+}

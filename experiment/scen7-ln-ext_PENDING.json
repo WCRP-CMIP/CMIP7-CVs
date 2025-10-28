@@ -3,10 +3,7 @@
     "validation-key": "scen7-ln-ext",
     "ui-label": "pending",
     "description": "pending",
-    "activity": [
-        "scenarios",
-        "conc"
-    ],
+    "activity": [],
     "alias": [],
     "minimum-number-of-years": 50,
     "model-realms": [

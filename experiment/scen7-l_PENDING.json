@@ -4,9 +4,7 @@
     "ui-label": "pending",
     "description": "pending",
     "activity": [
-        "fast-track",
-        "scenarios",
-        "dynvar"
+        "fast-track"
     ],
     "alias": [],
     "minimum-number-of-years": 75,

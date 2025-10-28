@@ -4,8 +4,6 @@
     "ui-label": "pending",
     "description": "pending",
     "activity": [
-        "scenarios",
-        "dynvar",
         "ismip7"
     ],
     "alias": [],

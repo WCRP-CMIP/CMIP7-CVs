@@ -4,10 +4,7 @@
     "ui-label": "pending",
     "description": "pending",
     "activity": [
-        "scenarios",
-        "dynvar",
-        "ismip7",
-        "scenarios"
+        "ismip7"
     ],
     "alias": [],
     "minimum-number-of-years": 50,

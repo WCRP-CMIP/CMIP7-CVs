@@ -4,14 +4,8 @@
     "ui-label": "Simulation of the recent past (concentration driven)",
     "description": "DECK: historical \n Simulation of the recent past",
     "activity": [
-        "deck",
-        "historical",
-        "dynvar",
-        "temperature",
-        "synoptic",
         "damip",
         "pmip",
-        "impact",
         "firemip"
     ],
     "alias": [],
