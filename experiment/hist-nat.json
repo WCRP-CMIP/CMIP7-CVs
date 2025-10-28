@@ -23,7 +23,7 @@
   "tier": "1",
   "@context": "_context",
   "type": [
-    "wcrp:experiment",
+    "esgf:experiment",
     "cmip7"
   ]
 }
