@@ -22,7 +22,7 @@
   "tier": "pending",
   "@context": "_context",
   "type": [
-    "wcrp:experiment",
+    "esgf:experiment",
     "cmip7"
   ]
 }

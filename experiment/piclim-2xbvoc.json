@@ -25,7 +25,7 @@
   "tier": "2",
   "@context": "_context",
   "type": [
-    "wcrp:experiment",
+    "esgf:experiment",
     "cmip7"
   ]
 }

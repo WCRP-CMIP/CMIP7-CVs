@@ -36,7 +36,7 @@
   "tier": 0,
   "@context": "_context",
   "type": [
-    "wcrp:experiment",
+    "esgf:experiment",
     "cmip7"
   ],
   "minimum-number-of-years": 300

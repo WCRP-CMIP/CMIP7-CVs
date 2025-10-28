@@ -1,6 +1,6 @@
 {
   "@context": [
-    "@context",
+    "_context",
     {
       "@base": "https://wcrp-cmip.github.io/CMIP7-CVs/project/",
       "@vocab": "https://wcrp-cmip.github.io/CMIP7-CVs/project/"
