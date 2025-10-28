@@ -1,26 +1,21 @@
 {
-    "@context": [
-        {
-            "cmip7":"https://wcrp-cmip.github.io/CMIP7-CVs/",
-            "@base": "cmip7:experiment/",
-            "@vocab": "cmip7:experiment#",
-
- 	    "universal":"https://wcrp-cmip.github.io/WCRP-universe/",
-            "parent-experiment": {
-                "@type": "@id"
-            },
-            "activity": {
-                "@container": "@id",
-                "@context": "https://wcrp-cmip.github.io/WCRP-universe/activity/_context"
-            },
-            "model-realms": {
-                "@container": "@id",
-                "@context": "https://wcrp-cmip.github.io/WCRP-universe/source-type/_context"
-            },
-            "parent-activity": {
-                "@container": "@id",
-                "@context": "https://wcrp-cmip.github.io/WCRP-universe/activity/_context"
-            }
+    "@context": {
+        "@base": "https://wcrp-cmip.github.io/CMIP7-CVs/experiment/",
+        "@vocab": "https://esgf.github.io/esgf-vocab/api_documentation/data_descriptors.html#esgvoc.api.data_descriptors.Experiment",
+        "activity": {
+            "@context": "https://wcrp-cmip.github.io/WCRP-universe/activity/_context",
+            "@entries": "@id"
+        },
+        "model-realms": {
+            "@context": "https://wcrp-cmip.github.io/WCRP-universe/source-type/_context",
+            "@entries": "@id"
+        },
+        "parent-activity": {
+            "@context": "https://wcrp-cmip.github.io/WCRP-universe/activity/_context",
+            "@entries": "@id"
+        },
+        "parent-experiment": {
+            "@type": "@id"
         }
-    ]
+    }
 }
