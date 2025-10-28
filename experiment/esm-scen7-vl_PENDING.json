@@ -4,7 +4,6 @@
     "ui-label": "pending",
     "description": "pending",
     "activity": [
-        "scenarios",
         "fast-track"
     ],
     "alias": [],

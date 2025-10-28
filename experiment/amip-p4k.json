@@ -5,9 +5,6 @@
     "description": "The same as the `amip` DECK experiment, except that SSTs are subject to a uniform warming of 4K. This warming should be applied to the ice-free ocean surface only. Sea ice and SSTs in grid boxes containing sea ice remain the same as in the `amip` DECK experiment.  Reference: [Webb et al., 2017](https://doi.org/10.5194/gmd-10-359-2017)",
     "activity": [
         "fast-track",
-        "dynvar",
-        "temperature",
-        "synoptic",
         "damip",
         "fast-track",
         "cfmip"

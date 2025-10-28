@@ -4,16 +4,9 @@
     "ui-label": "Simulation of the recent past (emissions driven)",
     "description": "DECK: Earth System Model historical simulation \n Historical simulation with Earth System Models",
     "activity": [
-        "deck",
-        "historical",
-        "temperature",
-        "synoptic",
         "damip",
         "pmip",
-        "dynvar",
-        "impact",
-        "firemip",
-        "histirr histnoirr scenariosirr scenariosnoirr"
+        "firemip"
     ],
     "alias": [],
     "end": 2021,

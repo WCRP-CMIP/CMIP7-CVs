@@ -1,14 +1,10 @@
 {
     "id": "picontrol",
-    "validation-key": "piControl",
+    "validation-key": "picontrol",
     "ui-label": "Coupled atmosphere-ocea preindustrial control run (concentration driven)",
     "description": "DECK: pre-industrial control \n Pre-industrial control simulation",
     "activity": [
-        "deck",
-        "dynvar",
         "pmip",
-        "temperature",
-        "synoptic",
         "damip",
         "picontrol",
         "firemip"

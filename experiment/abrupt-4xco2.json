@@ -4,13 +4,8 @@
     "ui-label": "CO2 prescribed to 4 times preindustrial",
     "description": "DECK: abrupt quadrupling of CO2 \n Abrupt increase in CO2 concentration from pre-industrial level to quadrupling",
     "activity": [
-        "deck",
-        "dynvar",
         "pmip",
-        "temperature",
-        "synoptic",
-        "damip",
-        "deck"
+        "damip"
     ],
     "alias": [],
     "end": -999,

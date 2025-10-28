@@ -25,7 +25,7 @@
         }
     ],
     "parent-experiment": [
-        "piControl"
+        "picontrol"
     ],
     "start-date": "1850",
     "tier": "1",

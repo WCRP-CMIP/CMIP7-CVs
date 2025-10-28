@@ -4,11 +4,7 @@
     "ui-label": "G7-1.5K-SAI",
     "description": "Stratospheric aerosol injection to reduce warming to 1.5K \n Stratospheric aerosol injection to reduce warming to 1.5K above pre-industrial levels",
     "activity": [
-        "fast-track",
-        "dynvar",
-        "temperature",
-        "synoptic",
-        "impact"
+        "fast-track"
     ],
     "alias": [],
     "end": -999,

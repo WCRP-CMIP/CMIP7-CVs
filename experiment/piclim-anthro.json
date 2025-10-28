@@ -4,7 +4,6 @@
     "ui-label": "As piClim-control except present-day anthropogenic forcing",
     "description": "DECK: effective radiative forcing by present day anthropogenic forcings \n Effective radiative forcing by present day anthropogenic forcings",
     "activity": [
-        "deck",
         "damip",
         "firemip"
     ],
