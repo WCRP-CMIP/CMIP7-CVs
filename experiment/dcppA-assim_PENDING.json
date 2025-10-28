@@ -1,27 +1,27 @@
 {
-    "id": "dcppa-assim",
-    "validation-key": "dcppA-assim",
-    "ui-label": "pending",
-    "description": "pending",
-    "activity": [
-        "dcpp"
-    ],
-    "alias": [],
-    "minimum-number-of-years": 56,
-    "model-realms": [
-        {
-            "id": "pending",
-            "is-required": true
-        }
-    ],
-    "parent-experiment": [
-        "pending"
-    ],
-    "start-date": "pending",
-    "tier": "pending",
-    "@context": "@context",
-    "type": [
-        "wcrp:experiment",
-        "cmip7"
-    ]
+  "id": "dcppa-assim",
+  "validation-key": "dcppA-assim",
+  "ui-label": "pending",
+  "description": "pending",
+  "activity": [
+    "dcpp"
+  ],
+  "alias": [],
+  "minimum-number-of-years": 56,
+  "model-realms": [
+    {
+      "id": "pending",
+      "is-required": true
+    }
+  ],
+  "parent-experiment": [
+    "pending"
+  ],
+  "start-date": "pending",
+  "tier": "pending",
+  "@context": "_context",
+  "type": [
+    "wcrp:experiment",
+    "cmip7"
+  ]
 }

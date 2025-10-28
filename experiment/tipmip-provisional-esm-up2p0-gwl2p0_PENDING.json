@@ -1,27 +1,27 @@
 {
-    "id": "tipmip-provisional-esm-up2p0-gwl2p0",
-    "validation-key": "tipmip-provisional-esm-up2p0-gwl2p0",
-    "ui-label": "pending",
-    "description": "pending",
-    "activity": [
-        "tipmip"
-    ],
-    "alias": [],
-    "minimum-number-of-years": 300,
-    "model-realms": [
-        {
-            "id": "pending",
-            "is-required": true
-        }
-    ],
-    "parent-experiment": [
-        "pending"
-    ],
-    "start-date": "pending",
-    "tier": "pending",
-    "@context": "@context",
-    "type": [
-        "wcrp:experiment",
-        "cmip7"
-    ]
+  "id": "tipmip-provisional-esm-up2p0-gwl2p0",
+  "validation-key": "tipmip-provisional-esm-up2p0-gwl2p0",
+  "ui-label": "pending",
+  "description": "pending",
+  "activity": [
+    "tipmip"
+  ],
+  "alias": [],
+  "minimum-number-of-years": 300,
+  "model-realms": [
+    {
+      "id": "pending",
+      "is-required": true
+    }
+  ],
+  "parent-experiment": [
+    "pending"
+  ],
+  "start-date": "pending",
+  "tier": "pending",
+  "@context": "_context",
+  "type": [
+    "wcrp:experiment",
+    "cmip7"
+  ]
 }

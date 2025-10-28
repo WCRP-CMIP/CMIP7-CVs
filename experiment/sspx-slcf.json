@@ -16,7 +16,7 @@
   "start": -999,
   "start-date": "none",
   "tier": 0,
-  "@context": "@context",
+  "@context": "_context",
   "type": [
     "wcrp:experiment",
     "cmip7"
