@@ -12,8 +12,8 @@
     "wcrp:repo"
   ],
   "@id": "repo",
-  "validation-key": "",
-  "ui-label": "",
+  "validation_key": "",
+  "ui_label": "",
   "description": "",
   "repo": "https://github.com/WCRP-CMIP/CMIP6Plus_CVs"
 }

@@ -1,23 +1,23 @@
 {
   "@id": "amip-irr",
-  "validation-key": "amip-irr",
-  "ui-label": "pending",
+  "validation_key": "amip-irr",
+  "ui_label": "pending",
   "description": "pending",
   "activity": [
     "irrmip"
   ],
   "alias": [],
-  "minimum-number-of-years": 122,
-  "model-realms": [
+  "minimum_number_of_years": 122,
+  "model_realms": [
     {
       "@id": "pending",
-      "is-required": true
+      "is_required": true
     }
   ],
-  "parent-experiment": [
+  "parent_experiment": [
     "pending"
   ],
-  "start-date": "pending",
+  "start_date": "pending",
   "tier": "pending",
   "@context": "_context",
   "@type": [

@@ -4,7 +4,7 @@
     {
       "@base": "https://wcrp-cmip.github.io/CMIP7-CVs/project/",
       "@vocab": "https://wcrp-cmip.github.io/CMIP7-CVs/project/",
-      "mip-era": {
+      "mip_era": {
         "@type": "@id",
         "@context": "https://wcrp-cmip.github.io/WCRP-universe/mip/_context"
       }
@@ -16,8 +16,8 @@
     "wcrp:mip_era"
   ],
   "@id": "mip-era",
-  "validation-key": "",
-  "ui-label": "",
+  "validation_key": "",
+  "ui_label": "",
   "description": "",
   "mip_era": {
     "@id": "cmip7"

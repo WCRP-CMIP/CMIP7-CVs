@@ -1,23 +1,23 @@
 {
   "@id": "esm-s7h-nofirechange",
-  "validation-key": "esm-s7h-noFireChange",
-  "ui-label": "pending",
+  "validation_key": "esm-s7h-noFireChange",
+  "ui_label": "pending",
   "description": "pending",
   "activity": [
     "firemip"
   ],
   "alias": [],
-  "minimum-number-of-years": 10,
-  "model-realms": [
+  "minimum_number_of_years": 10,
+  "model_realms": [
     {
       "@id": "pending",
-      "is-required": true
+      "is_required": true
     }
   ],
-  "parent-experiment": [
+  "parent_experiment": [
     "pending"
   ],
-  "start-date": "pending",
+  "start_date": "pending",
   "tier": "pending",
   "@context": "_context",
   "@type": [

@@ -16,8 +16,8 @@
     "wcrp:product"
   ],
   "@id": "product",
-  "validation-key": "",
-  "ui-label": "",
+  "validation_key": "",
+  "ui_label": "",
   "description": "",
   "product": {
     "@id": "model-output"

@@ -1,23 +1,23 @@
 {
   "@id": "dcppb-forecast",
-  "validation-key": "dcppB-forecast",
-  "ui-label": "pending",
+  "validation_key": "dcppB-forecast",
+  "ui_label": "pending",
   "description": "pending",
   "activity": [
     "dcpp"
   ],
   "alias": [],
-  "minimum-number-of-years": 5,
-  "model-realms": [
+  "minimum_number_of_years": 5,
+  "model_realms": [
     {
       "@id": "pending",
-      "is-required": true
+      "is_required": true
     }
   ],
-  "parent-experiment": [
+  "parent_experiment": [
     "pending"
   ],
-  "start-date": "pending",
+  "start_date": "pending",
   "tier": "pending",
   "@context": "_context",
   "@type": [
