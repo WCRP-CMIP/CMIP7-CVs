@@ -1,0 +1,27 @@
+{
+    "validation-key": "dcppA-hindcast",
+    "ui-label": "pending",
+    "description": "pending",
+    "activity": [
+        "dcpp"
+    ],
+    "alias": [],
+    "minimum-number-of-years": 5,
+    "model-realms": [
+        {
+            "@id": "pending",
+            "is-required": true
+        }
+    ],
+    "parent-experiment": [
+        "pending"
+    ],
+    "start-date": "pending",
+    "tier": "pending",
+    "@context": "_context",
+    "@type": [
+        "esgf:experiment",
+        "cmip7"
+    ],
+    "@id": "dcppa-hindcast-pending"
+}
