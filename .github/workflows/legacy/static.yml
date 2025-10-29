@@ -1,0 +1,51 @@
+name: Deploy static content to Pages
+
+on:
+  workflow_dispatch:
+  # Uncomment to trigger on push to the production branch as well
+  # push:
+  #   branches: 
+  #     - "production"
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: "pages"
+  cancel-in-progress: true
+
+jobs:
+  deploy:
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          ref: production
+
+      - name: Setup Pages
+        uses: actions/configure-pages@v5
+
+    #   - name: Pre-check files
+    #     run: |
+    #       for file in src-data/*; do
+    #         if [ ! -f "$file" ]; then
+    #           echo "Error: $file does not exist."
+    #           exit 1
+    #         fi
+    #       done
+
+      - name: Upload artifact
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: 'src-data'
+          retention-days: 0
+
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4
