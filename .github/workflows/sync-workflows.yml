@@ -1,0 +1,60 @@
+name: → workflows
+
+on:
+  push:
+    branches:
+      - main
+    paths:
+      - '.github/workflows/**'
+      - '.github/CONTRIBUTING.md'
+
+permissions:
+  contents: write
+
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+    
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+          token: ${{ secrets.GITHUB_TOKEN }}
+      
+      - name: Configure Git
+        run: |
+          git config user.name "cmip-ipo"
+          git config user.email "actions@wcrp-cmip.org"
+      
+      - name: Sync to src-data branch
+        run: |
+          if git ls-remote --exit-code --heads origin src-data >/dev/null 2>&1; then
+            git fetch origin src-data
+            git checkout src-data
+            git checkout main -- .github/workflows/ .github/CONTRIBUTING.md
+            
+            if ! git diff --quiet; then
+              git add .github/workflows/ .github/CONTRIBUTING.md
+              git commit -m "Sync .github files from main"
+              git push origin src-data
+            fi
+            
+            git checkout main
+          fi
+      
+      - name: Sync to docs branch
+        run: |
+          if git ls-remote --exit-code --heads origin docs >/dev/null 2>&1; then
+            git fetch origin docs
+            git checkout docs
+            git checkout main -- .github/workflows/ .github/CONTRIBUTING.md
+            
+            if ! git diff --quiet; then
+              git add .github/workflows/ .github/CONTRIBUTING.md
+              git commit -m "Sync .github files from main"
+              git push origin docs
+            fi
+            
+            git checkout main
+          fi
