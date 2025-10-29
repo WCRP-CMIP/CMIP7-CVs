@@ -30,32 +30,21 @@ dataset_properties:
   - source_collection: frequency
     catalog_field_value_type: string
     is_required: true
-  - source_collection: further_info_url
-    catalog_field_value_type: string
-    is_required: true
-  - source_collection: grid_label
-    source_collection_key: description
-    catalog_field_name: grid
-    catalog_field_value_type: string
-    is_required: true
-  - source_collection: grid_label
+  # - source_collection: further_info_url
+  #   catalog_field_value_type: string
+  #   is_required: true
+  - source_collection: grid
+    # source_collection_key: description
     catalog_field_value_type: string
     is_required: true
   - source_collection: initialization_index
     catalog_field_value_type: integer
     is_required: true
-  - source_collection: institution_id
-    source_collection_key: description
-    catalog_field_name: institution
-    catalog_field_value_type: string
-    is_required: true
-  - source_collection: institution_id
+  - source_collection: contributor
+    # source_collection_key: description
     catalog_field_value_type: string
     is_required: true
   - source_collection: license
-    catalog_field_value_type: string
-    is_required: true
-  - source_collection: member_id
     catalog_field_value_type: string
     is_required: true
   - source_collection: nominal_resolution
@@ -85,20 +74,6 @@ dataset_properties:
   - source_collection: source_id
     catalog_field_value_type: string
     is_required: true
-  - source_collection: source_type
-    catalog_field_value_type: string_array
-    is_required: true
-  - source_collection: sub_experiment_id
-    source_collection_key: description
-    catalog_field_name: sub_experiment
-    catalog_field_value_type: string
-    is_required: true
-  - source_collection: sub_experiment_id
-    catalog_field_value_type: string
-    is_required: true
-  - source_collection: table_id
-    catalog_field_value_type: string
-    is_required: true
   - source_collection: variable_id
     source_collection_key: standard_name
     catalog_field_name: variable_cf_standard_name
@@ -120,8 +95,8 @@ dataset_properties:
   - source_collection: variant_label
     catalog_field_value_type: string
     is_required: true
-  - source_collection: version
-    source_collection_term: creationdatenb
+  - source_collection: directory_date
+    # source_collection_term: creationdatenb
     catalog_field_value_type: string
     is_required: true
 
