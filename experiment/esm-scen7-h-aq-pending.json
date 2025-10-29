@@ -1,28 +1,31 @@
 {
-  "validation_key": "esm-scen7-h-AQ",
-  "ui_label": "pending",
-  "description": "pending",
-  "activity": [
-    "fast-track",
-    "aerchemmip"
-  ],
-  "alias": [],
-  "minimum_number_of_years": 104,
-  "model_realms": [
-    {
-      "@id": "pending",
-      "is_required": true
-    }
-  ],
-  "parent_experiment": [
-    "pending"
-  ],
-  "start_date": "pending",
-  "tier": "pending",
-  "@context": "_context",
-  "@type": [
-    "esgf:experiment",
-    "cmip7"
-  ],
-  "@id": "esm-scen7-h-aq-pending"
+    "validation-key": "esm-scen7-h-aq-pending",
+    "ui-label": "",
+    "description": "pending",
+    "activity": [
+        "fast-track",
+        "aerchemmip"
+    ],
+    "alias": [],
+    "minimum_number_of_years": 104,
+    "model_realms": [
+        {
+            "@id": "pending",
+            "is_required": true
+        }
+    ],
+    "parent_experiment": [
+        "pending"
+    ],
+    "start_date": "pending",
+    "tier": "pending",
+    "ui_label": "pending",
+    "validation_key": "esm-scen7-h-AQ",
+    "@context": "_context",
+    "@type": [
+        "wcrp:experiment",
+        "esgvoc:Experiment",
+        "cmip7"
+    ],
+    "@id": "esm-scen7-h-aq-pending"
 }
