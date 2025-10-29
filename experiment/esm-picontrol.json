@@ -1,41 +1,47 @@
 {
-    "id": "esm-picontrol",
-    "validation-key": "esm-piControl",
-    "ui-label": "Coupled atmosphere-ocean preindustrial control (emissions driven)",
+    "validation-key": "esm-picontrol",
+    "ui-label": "",
     "description": "DECK: pre-industrial control simulation with Earth System Models \n Pre-industrial control run for Earth System Models",
     "activity": [
-        "cmip"
+        "damip",
+        "picontrol",
+        "pmip"
     ],
     "alias": [],
     "end": -999,
-    "min-number-yrs-per-sim": 400,
-    "model-realms": [
+    "min_number_yrs_per_sim": 400,
+    "minimum_number_of_years": 400,
+    "model_realms": [
         {
-            "id": "aogcm",
-            "is-required": true
+            "@id": "aogcm",
+            "is_required": true
         },
         {
-            "id": "bgc",
-            "is-required": true
+            "@id": "bgc",
+            "is_required": true
         },
         {
-            "id": "aer",
-            "is-required": false
+            "@id": "aer",
+            "is_required": false
         },
         {
-            "id": "chem",
-            "is-required": false
+            "@id": "chem",
+            "is_required": false
         }
     ],
-    "parent-experiment": [
+    "parent_experiment": [
         "none"
     ],
     "start": -999,
-    "start-date": "none",
+    "start_date": "none",
     "tier": 0,
-    "@context": "_context_",
-    "type": [
+    "ui_label": "Coupled atmosphere-ocean preindustrial control (emissions driven)",
+    "validation_key": "esm-piControl",
+    "@context": "_context",
+    "@type": [
         "wcrp:experiment",
+        "esgvoc:Experiment",
         "cmip7"
-    ]
+    ],
+    "@id": "esm-picontrol"
 }

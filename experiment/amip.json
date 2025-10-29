@@ -1,41 +1,46 @@
 {
-    "id": "amip",
     "validation-key": "amip",
-    "ui-label": "Describe amip in one sentence.",
+    "ui-label": "",
     "description": "DECK: AMIP \n AMIP (Atmospheric Model Intercomparison Project) experiment with prescribed SSTs and sea ice",
     "activity": [
-        "cmip"
+        "damip",
+        "cfmip"
     ],
     "alias": [],
     "end": 2021,
-    "min-number-yrs-per-sim": 43,
-    "model-realms": [
+    "min_number_yrs_per_sim": 43,
+    "minimum_number_of_years": 42,
+    "model_realms": [
         {
-            "id": "agcm",
-            "is-required": true
+            "@id": "agcm",
+            "is_required": true
         },
         {
-            "id": "aer",
-            "is-required": false
+            "@id": "aer",
+            "is_required": false
         },
         {
-            "id": "chem",
-            "is-required": false
+            "@id": "chem",
+            "is_required": false
         },
         {
-            "id": "bgc",
-            "is-required": false
+            "@id": "bgc",
+            "is_required": false
         }
     ],
-    "parent-experiment": [
+    "parent_experiment": [
         "none"
     ],
     "start": 1979,
-    "start-date": "none",
+    "start_date": "none",
     "tier": 0,
-    "@context": "_context_",
-    "type": [
+    "ui_label": "Describe amip in one sentence.",
+    "validation_key": "amip",
+    "@context": "_context",
+    "@type": [
         "wcrp:experiment",
+        "esgvoc:Experiment",
         "cmip7"
-    ]
+    ],
+    "@id": "amip"
 }

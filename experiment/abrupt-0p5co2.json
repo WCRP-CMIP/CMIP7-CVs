@@ -1,24 +1,30 @@
 {
-    "id": "abrupt-0p5co2",
-    "validation-key": "abrupt-0p5CO2",
-    "ui-label": "Describe abrupt-0p5CO2 in one sentence.",
+    "validation-key": "abrupt-0p5co2",
+    "ui-label": "",
     "description": "Abrupt halving of CO2 \n Abrupt halving of atmospheric CO2",
     "activity": [
-        "cfmip"
+        "fast-track",
+        "fast-track",
+        "pmip"
     ],
     "alias": [],
     "end": -999,
-    "min-number-yrs-per-sim": -999,
-    "model-realms": [],
-    "parent-experiment": [
+    "min_number_yrs_per_sim": -999,
+    "minimum_number_of_years": 300,
+    "model_realms": [],
+    "parent_experiment": [
         "none"
     ],
     "start": -999,
-    "start-date": "none",
+    "start_date": "none",
     "tier": 0,
-    "@context": "_context_",
-    "type": [
+    "ui_label": "Describe abrupt-0p5CO2 in one sentence.",
+    "validation_key": "abrupt-0p5CO2",
+    "@context": "_context",
+    "@type": [
         "wcrp:experiment",
+        "esgvoc:Experiment",
         "cmip7"
-    ]
+    ],
+    "@id": "abrupt-0p5co2"
 }

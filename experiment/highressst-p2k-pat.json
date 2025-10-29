@@ -1,39 +1,42 @@
 {
-    "id": "highressst-p2k-pat",
-    "validation-key": "highresSST-p2K-pat",
-    "ui-label": "Atmosphere-only warming levels - highresSST-p2K-pat (patterned)",
+    "validation-key": "highressst-p2k-pat",
+    "ui-label": "",
     "description": "Conduct forced atmosphere simulations at patterned warming level +2K over 2003–2022, parallel to highresSST-present, with patterned SST and sea ice changes. (Three ensembles are desired per warming level)  References: Roberts, M. J., Reed, K. A., Bao, Q., Barsugli, J. J., Camargo, S. J., Caron, L. P., … & Zhao, M. (2025). High-Resolution Model Intercomparison Project Phase 2 (HighResMIP2) towards CMIP7. Geoscientific Model Development, 18, 1307–1332  [High-Resolution Model Intercomparison Project Phase 2 (HighResMIP2) towards CMIP7.pdf](https://github.com/user-attachments/files/19402345/High-Resolution.Model.Intercomparison.Project.Phase.2.HighResMIP2.towards.CMIP7.pdf)  Webpage: https://highresmip.org/experiments/experiment_cmip7/",
     "activity": [
-        "HighResMIP2"
+        "highresmip2"
     ],
     "alias": [],
-    "minimum-number-of-years": "20",
-    "model-realms": [
+    "minimum_number_of_years": 20,
+    "model_realms": [
         {
-            "id": "agcm",
-            "is-required": true
+            "@id": "agcm",
+            "is_required": true
         },
         {
-            "id": "aer",
-            "is-required": false
+            "@id": "aer",
+            "is_required": false
         },
         {
-            "id": "bgc",
-            "is-required": false
+            "@id": "bgc",
+            "is_required": false
         },
         {
-            "id": "chem",
-            "is-required": false
+            "@id": "chem",
+            "is_required": false
         }
     ],
-    "parent-experiment": [
+    "parent_experiment": [
         "none"
     ],
-    "start-date": "2003-01-01",
+    "start_date": "2003-01-01",
     "tier": "3",
-    "@context": "_context_",
-    "type": [
+    "ui_label": "Atmosphere-only warming levels - highresSST-p2K-pat (patterned)",
+    "validation_key": "highresSST-p2K-pat",
+    "@context": "_context",
+    "@type": [
         "wcrp:experiment",
+        "esgvoc:Experiment",
         "cmip7"
-    ]
+    ],
+    "@id": "highressst-p2k-pat"
 }

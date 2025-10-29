@@ -1,41 +1,46 @@
 {
-    "id": "1pctco2",
-    "validation-key": "1pctCO2",
-    "ui-label": "CO2 prescribed to increase at 1% per year",
+    "validation-key": "1pctco2",
+    "ui-label": "",
     "description": "DECK: 1 percent per year CO2 increase \n Increase CO2 concentration from pre-industrial level at 1% per year until quadrupling",
     "activity": [
-        "cmip"
+        "damip",
+        "pmip"
     ],
     "alias": [],
     "end": -999,
-    "min-number-yrs-per-sim": 150,
-    "model-realms": [
+    "min_number_yrs_per_sim": 150,
+    "minimum_number_of_years": 150,
+    "model_realms": [
         {
-            "id": "aogcm",
-            "is-required": true
+            "@id": "aogcm",
+            "is_required": true
         },
         {
-            "id": "aer",
-            "is-required": false
+            "@id": "aer",
+            "is_required": false
         },
         {
-            "id": "chem",
-            "is-required": false
+            "@id": "chem",
+            "is_required": false
         },
         {
-            "id": "bgc",
-            "is-required": false
+            "@id": "bgc",
+            "is_required": false
         }
     ],
-    "parent-experiment": [
+    "parent_experiment": [
         "picontrol"
     ],
     "start": -999,
-    "start-date": "none",
+    "start_date": "none",
     "tier": 0,
-    "@context": "_context_",
-    "type": [
+    "ui_label": "CO2 prescribed to increase at 1% per year",
+    "validation_key": "1pctCO2",
+    "@context": "_context",
+    "@type": [
         "wcrp:experiment",
+        "esgvoc:Experiment",
         "cmip7"
-    ]
+    ],
+    "@id": "1pctco2"
 }

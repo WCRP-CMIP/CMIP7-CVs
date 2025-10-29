@@ -1,9 +1,8 @@
 {
-    "id": "nominal-resolution",
-    "validation-key": "",
+    "validation-key": "native-nominal-resolution",
     "ui-label": "",
     "description": "",
-    "nominal-resolution": [
+    "nominal_resolution": [
         "0.5km",
         "1km",
         "10km",
@@ -20,10 +19,32 @@
         "500km",
         "5000km"
     ],
-    "@context": "_context_",
-    "type": [
-        "cmip7",
+    "ui_label": "",
+    "validation_key": "",
+    "@context": [
+        "_context",
+        {
+            "@base": "https://wcrp-cmip.github.io/CMIP7-CVs/project/",
+            "@vocab": "https://wcrp-cmip.github.io/CMIP7-CVs/project/",
+            "native_nominal_resolution": {
+                "@type": "@id",
+                "@context": "https://wcrp-cmip.github.io/WCRP-universe/resolution/_context"
+            }
+        }
+    ],
+    "@type": [
         "wcrp:project",
-        "wcrp:nominal_resolution"
-    ]
+        "cmip7:cmip7",
+        [
+            "wcrp:project",
+            "esgvoc:Project",
+            "undefined"
+        ],
+        [
+            "wcrp:project",
+            "esgvoc:Project",
+            "undefined"
+        ]
+    ],
+    "@id": "native-nominal-resolution"
 }

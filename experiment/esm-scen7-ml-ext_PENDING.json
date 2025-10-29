@@ -1,0 +1,30 @@
+{
+    "validation-key": "esm-scen7-ml-ext-pending",
+    "ui-label": "",
+    "description": "pending",
+    "activity": [
+        "ismip7"
+    ],
+    "alias": [],
+    "minimum_number_of_years": 50,
+    "model_realms": [
+        {
+            "@id": "pending",
+            "is_required": true
+        }
+    ],
+    "parent_experiment": [
+        "pending"
+    ],
+    "start_date": "pending",
+    "tier": "pending",
+    "ui_label": "pending",
+    "validation_key": "esm-scen7-ml-ext",
+    "@context": "_context",
+    "@type": [
+        "wcrp:experiment",
+        "esgvoc:Experiment",
+        "cmip7"
+    ],
+    "@id": "esm-scen7-ml-ext-pending"
+}
