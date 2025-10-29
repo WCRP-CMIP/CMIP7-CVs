@@ -24,26 +24,14 @@
     },
     "ui_label": "",
     "validation_key": "",
-    "@context": [
-        "_context",
-        {
-            "@base": "https://wcrp-cmip.github.io/CMIP7-CVs/project/",
-            "@vocab": "https://wcrp-cmip.github.io/CMIP7-CVs/project/"
-        }
-    ],
+    "@context": {
+        "@base": "https://wcrp-cmip.github.io/CMIP7-CVs/project/",
+        "@vocab": "https://esgf.github.io/esgf-vocab/api_documentation/data_descriptors.html#esgvoc.api.data_descriptors.Index"
+    },
     "@type": [
-        "wcrp:project",
-        "cmip7:cmip7",
-        [
-            "wcrp:project",
-            "esgvoc:Project",
-            "undefined"
-        ],
-        [
-            "wcrp:project",
-            "esgvoc:Project",
-            "undefined"
-        ]
+        "wcrp:index",
+        "esgvoc:Index",
+        "cmip7"
     ],
     "@id": "index"
 }

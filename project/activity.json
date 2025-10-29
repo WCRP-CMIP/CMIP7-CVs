@@ -10,7 +10,7 @@
         "damip",
         "dcpp",
         "geomip",
-        "highresmip2",
+        "highresmip",
         "lmip",
         "pmip",
         "rfmip",
@@ -18,30 +18,18 @@
     ],
     "ui_label": "",
     "validation_key": "",
-    "@context": [
-        "_context",
-        {
-            "@base": "https://wcrp-cmip.github.io/CMIP7-CVs/project/",
-            "@vocab": "https://wcrp-cmip.github.io/CMIP7-CVs/project/",
-            "activity": {
-                "@type": "@id",
-                "@context": "https://wcrp-cmip.github.io/WCRP-universe/activity/_context"
-            }
+    "@context": {
+        "@base": "https://wcrp-cmip.github.io/CMIP7-CVs/project/",
+        "@vocab": "https://esgf.github.io/esgf-vocab/api_documentation/data_descriptors.html#esgvoc.api.data_descriptors.Activity",
+        "activity": {
+            "@context": "https://wcrp-cmip.github.io/WCRP-universe/activity/_context",
+            "@type": "@id"
         }
-    ],
+    },
     "@type": [
-        "wcrp:project",
-        "cmip7:cmip7",
-        [
-            "wcrp:project",
-            "esgvoc:Project",
-            "undefined"
-        ],
-        [
-            "wcrp:project",
-            "esgvoc:Project",
-            "undefined"
-        ]
+        "wcrp:activity",
+        "esgvoc:Activity",
+        "cmip7"
     ],
     "@id": "activity"
 }
