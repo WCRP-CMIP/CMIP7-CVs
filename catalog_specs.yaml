@@ -66,12 +66,12 @@ dataset_properties:
   - source_collection: realm
     catalog_field_value_type: string_array
     is_required: true
-  - source_collection: source_id
+  - source_collection: source
     source_collection_key: label_extended
-    catalog_field_name: source
+    # catalog_field_name: source
     catalog_field_value_type: string
     is_required: true
-  - source_collection: source_id
+  - source_collection: source
     catalog_field_value_type: string
     is_required: true
   - source_collection: variable_id
