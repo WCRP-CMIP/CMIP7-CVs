@@ -1,27 +1,30 @@
 {
-  "@id": "esm-s7h-nofirechange",
-  "validation_key": "esm-s7h-noFireChange",
-  "ui_label": "pending",
-  "description": "pending",
-  "activity": [
-    "firemip"
-  ],
-  "alias": [],
-  "minimum_number_of_years": 10,
-  "model_realms": [
-    {
-      "@id": "pending",
-      "is_required": true
-    }
-  ],
-  "parent_experiment": [
-    "pending"
-  ],
-  "start_date": "pending",
-  "tier": "pending",
-  "@context": "_context",
-  "@type": [
-    "esgf:experiment",
-    "cmip7"
-  ]
+    "validation-key": "esm-s7h-nofirechange-pending",
+    "ui-label": "",
+    "description": "pending",
+    "activity": [
+        "firemip"
+    ],
+    "alias": [],
+    "minimum_number_of_years": 10,
+    "model_realms": [
+        {
+            "@id": "pending",
+            "is_required": true
+        }
+    ],
+    "parent_experiment": [
+        "pending"
+    ],
+    "start_date": "pending",
+    "tier": "pending",
+    "ui_label": "pending",
+    "validation_key": "esm-s7h-noFireChange",
+    "@context": "_context",
+    "@type": [
+        "wcrp:experiment",
+        "esgvoc:Experiment",
+        "cmip7"
+    ],
+    "@id": "esm-s7h-nofirechange-pending"
 }

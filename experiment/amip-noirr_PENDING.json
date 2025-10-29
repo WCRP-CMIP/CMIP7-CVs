@@ -1,27 +1,30 @@
 {
-  "@id": "amip-noirr",
-  "validation_key": "amip-noirr",
-  "ui_label": "pending",
-  "description": "pending",
-  "activity": [
-    "irrmip"
-  ],
-  "alias": [],
-  "minimum_number_of_years": 122,
-  "model_realms": [
-    {
-      "@id": "pending",
-      "is_required": true
-    }
-  ],
-  "parent_experiment": [
-    "pending"
-  ],
-  "start_date": "pending",
-  "tier": "pending",
-  "@context": "_context",
-  "@type": [
-    "esgf:experiment",
-    "cmip7"
-  ]
+    "validation-key": "amip-noirr-pending",
+    "ui-label": "",
+    "description": "pending",
+    "activity": [
+        "irrmip"
+    ],
+    "alias": [],
+    "minimum_number_of_years": 122,
+    "model_realms": [
+        {
+            "@id": "pending",
+            "is_required": true
+        }
+    ],
+    "parent_experiment": [
+        "pending"
+    ],
+    "start_date": "pending",
+    "tier": "pending",
+    "ui_label": "pending",
+    "validation_key": "amip-noirr",
+    "@context": "_context",
+    "@type": [
+        "wcrp:experiment",
+        "esgvoc:Experiment",
+        "cmip7"
+    ],
+    "@id": "amip-noirr-pending"
 }
