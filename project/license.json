@@ -17,8 +17,8 @@
     "wcrp:license"
   ],
   "@id": "license",
-  "validation-key": "",
-  "ui-label": "",
+  "validation_key": "",
+  "ui_label": "",
   "description": "",
   "license": [
     {

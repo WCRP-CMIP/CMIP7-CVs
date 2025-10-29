@@ -1,39 +1,39 @@
 {
-    "validation-key": "esm-up2p0",
-    "ui-label": "Ramp up with constant CO2 emissions leading to 2 degree C/century warming",
-    "description": "Ramp-up experiment with a constant warming rate of 2 degree C per century.",
-    "activity": [
-        "tipmip"
-    ],
-    "alias": [],
-    "minimum-number-of-years": "200",
-    "model-realms": [
-        {
-            "@id": "aogcm",
-            "is-required": true
-        },
-        {
-            "@id": "bgc",
-            "is-required": true
-        },
-        {
-            "@id": "aer",
-            "is-required": false
-        },
-        {
-            "@id": "chem",
-            "is-required": false
-        }
-    ],
-    "parent-experiment": [
-        "esm-piControl"
-    ],
-    "start-date": "none",
-    "tier": "1",
-    "@context": "_context",
-    "@type": [
-        "esgf:experiment",
-        "cmip7"
-    ],
-    "@id": "esm-up2p0"
+  "validation_key": "esm-up2p0",
+  "ui_label": "Ramp up with constant CO2 emissions leading to 2 degree C/century warming",
+  "description": "Ramp-up experiment with a constant warming rate of 2 degree C per century.",
+  "activity": [
+    "tipmip"
+  ],
+  "alias": [],
+  "minimum_number_of_years": "200",
+  "model_realms": [
+    {
+      "@id": "aogcm",
+      "is_required": true
+    },
+    {
+      "@id": "bgc",
+      "is_required": true
+    },
+    {
+      "@id": "aer",
+      "is_required": false
+    },
+    {
+      "@id": "chem",
+      "is_required": false
+    }
+  ],
+  "parent_experiment": [
+    "esm-piControl"
+  ],
+  "start_date": "none",
+  "tier": "1",
+  "@context": "_context",
+  "@type": [
+    "esgf:experiment",
+    "cmip7"
+  ],
+  "@id": "esm-up2p0"
 }

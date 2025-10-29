@@ -1,0 +1,44 @@
+{
+    "validation-key": "esm-piControl",
+    "ui-label": "Coupled atmosphere-ocean preindustrial control (emissions driven)",
+    "description": "DECK: pre-industrial control simulation with Earth System Models \n Pre-industrial control run for Earth System Models",
+    "activity": [
+        "damip",
+        "picontrol",
+        "pmip"
+    ],
+    "alias": [],
+    "end": -999,
+    "min-number-yrs-per-sim": 400,
+    "minimum-number-of-years": 400,
+    "model-realms": [
+        {
+            "@id": "aogcm",
+            "is-required": true
+        },
+        {
+            "@id": "bgc",
+            "is-required": true
+        },
+        {
+            "@id": "aer",
+            "is-required": false
+        },
+        {
+            "@id": "chem",
+            "is-required": false
+        }
+    ],
+    "parent-experiment": [
+        "none"
+    ],
+    "start": -999,
+    "start-date": "none",
+    "tier": 0,
+    "@context": "_context",
+    "@type": [
+        "esgf:experiment",
+        "cmip7"
+    ],
+    "@id": "esm-picontrol"
+}

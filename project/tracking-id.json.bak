@@ -1,0 +1,21 @@
+{
+  "@context": [
+    "_context",
+    {
+      "@base": "https://wcrp-cmip.github.io/CMIP7-CVs/project/",
+      "@vocab": "https://wcrp-cmip.github.io/CMIP7-CVs/project/"
+    }
+  ],
+  "@type": [
+    "wcrp:project",
+    "cmip7:cmip7",
+    "wcrp:tracking-id"
+  ],
+  "@id": "tracking-id",
+  "validation-key": "",
+  "ui-label": "",
+  "description": "",
+  "tracking_id": [
+    ""
+  ]
+}

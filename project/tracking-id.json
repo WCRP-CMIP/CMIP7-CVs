@@ -12,8 +12,8 @@
     "wcrp:tracking-id"
   ],
   "@id": "tracking-id",
-  "validation-key": "",
-  "ui-label": "",
+  "validation_key": "",
+  "ui_label": "",
   "description": "",
   "tracking_id": [
     ""

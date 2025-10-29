@@ -16,8 +16,8 @@
     "wcrp:activity"
   ],
   "@id": "activity",
-  "validation-key": "",
-  "ui-label": "",
+  "validation_key": "",
+  "ui_label": "",
   "description": "",
   "activity": [
     "aerchemmip",

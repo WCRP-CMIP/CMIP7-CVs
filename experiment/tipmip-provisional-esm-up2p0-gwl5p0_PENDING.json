@@ -1,23 +1,23 @@
 {
   "@id": "tipmip-provisional-esm-up2p0-gwl5p0",
-  "validation-key": "tipmip-provisional-esm-up2p0-gwl5p0",
-  "ui-label": "pending",
+  "validation_key": "tipmip-provisional-esm-up2p0-gwl5p0",
+  "ui_label": "pending",
   "description": "pending",
   "activity": [
     "tipmip"
   ],
   "alias": [],
-  "minimum-number-of-years": 300,
-  "model-realms": [
+  "minimum_number_of_years": 300,
+  "model_realms": [
     {
       "@id": "pending",
-      "is-required": true
+      "is_required": true
     }
   ],
-  "parent-experiment": [
+  "parent_experiment": [
     "pending"
   ],
-  "start-date": "pending",
+  "start_date": "pending",
   "tier": "pending",
   "@context": "_context",
   "@type": [

@@ -12,15 +12,15 @@
     "wcrp:drs"
   ],
   "@id": "drs",
-  "validation-key": "",
-  "ui-label": "",
+  "validation_key": "",
+  "ui_label": "",
   "description": "",
   "drs": {
-    "directory-path-example": "",
-    "directory-path-sub-experiment-example": "C",
-    "directory-path-template": "",
-    "filename-example": "",
-    "filename-sub-experiment-example": "",
-    "filename-template": ""
+    "directory_path_example": "",
+    "directory_path_sub_experiment_example": "C",
+    "directory_path_template": "",
+    "filename_example": "",
+    "filename_sub_experiment_example": "",
+    "filename_template": ""
   }
 }

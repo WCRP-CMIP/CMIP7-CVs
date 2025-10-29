@@ -1,23 +1,23 @@
 {
   "@id": "esm-scen7-hl",
-  "validation-key": "esm-scen7-hl",
-  "ui-label": "pending",
+  "validation_key": "esm-scen7-hl",
+  "ui_label": "pending",
   "description": "pending",
   "activity": [
     "fast-track"
   ],
   "alias": [],
-  "minimum-number-of-years": 75,
-  "model-realms": [
+  "minimum_number_of_years": 75,
+  "model_realms": [
     {
       "@id": "pending",
-      "is-required": true
+      "is_required": true
     }
   ],
-  "parent-experiment": [
+  "parent_experiment": [
     "pending"
   ],
-  "start-date": "pending",
+  "start_date": "pending",
   "tier": "pending",
   "@context": "_context",
   "@type": [

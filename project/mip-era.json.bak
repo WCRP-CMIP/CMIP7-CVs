@@ -1,0 +1,25 @@
+{
+  "@context": [
+    "_context",
+    {
+      "@base": "https://wcrp-cmip.github.io/CMIP7-CVs/project/",
+      "@vocab": "https://wcrp-cmip.github.io/CMIP7-CVs/project/",
+      "mip-era": {
+        "@type": "@id",
+        "@context": "https://wcrp-cmip.github.io/WCRP-universe/mip/_context"
+      }
+    }
+  ],
+  "@type": [
+    "wcrp:project",
+    "cmip7:cmip7",
+    "wcrp:mip_era"
+  ],
+  "@id": "mip-era",
+  "validation-key": "",
+  "ui-label": "",
+  "description": "",
+  "mip_era": {
+    "@id": "cmip7"
+  }
+}

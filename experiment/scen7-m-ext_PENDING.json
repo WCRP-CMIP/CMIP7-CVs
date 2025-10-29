@@ -1,23 +1,23 @@
 {
   "@id": "scen7-m-ext",
-  "validation-key": "scen7-m-ext",
-  "ui-label": "pending",
+  "validation_key": "scen7-m-ext",
+  "ui_label": "pending",
   "description": "pending",
   "activity": [
     "ismip7"
   ],
   "alias": [],
-  "minimum-number-of-years": 50,
-  "model-realms": [
+  "minimum_number_of_years": 50,
+  "model_realms": [
     {
       "@id": "pending",
-      "is-required": true
+      "is_required": true
     }
   ],
-  "parent-experiment": [
+  "parent_experiment": [
     "pending"
   ],
-  "start-date": "pending",
+  "start_date": "pending",
   "tier": "pending",
   "@context": "_context",
   "@type": [

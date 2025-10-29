@@ -1,0 +1,27 @@
+{
+  "@id": "esm-scen7-ml",
+  "validation-key": "esm-scen7-ml",
+  "ui-label": "pending",
+  "description": "pending",
+  "activity": [
+    "fast-track"
+  ],
+  "alias": [],
+  "minimum-number-of-years": 75,
+  "model-realms": [
+    {
+      "@id": "pending",
+      "is-required": true
+    }
+  ],
+  "parent-experiment": [
+    "pending"
+  ],
+  "start-date": "pending",
+  "tier": "pending",
+  "@context": "_context",
+  "@type": [
+    "esgf:experiment",
+    "cmip7"
+  ]
+}
