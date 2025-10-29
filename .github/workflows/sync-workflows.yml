@@ -31,9 +31,16 @@ jobs:
       - name: Copy files from main
         run: |
           mkdir -p .github/workflows
-          git checkout main -- .github/workflows/
-          git cat-file -e main:.github/CONTRIBUTING.md 2>/dev/null && \
-            git checkout main -- .github/CONTRIBUTING.md || true
+
+          # Ensure remote main is available (works in detached HEAD)
+          git fetch origin main --depth=1 || true
+
+          # Copy workflows directory from remote main if present
+          git checkout origin/main -- .github/workflows/ || true
+          
+          # Copy CONTRIBUTING.md from remote main if present
+          git cat-file -e origin/main:.github/CONTRIBUTING.md 2>/dev/null && \
+            git checkout origin/main -- .github/CONTRIBUTING.md || true
       
       - name: Commit and push
         uses: EndBug/add-and-commit@v9
