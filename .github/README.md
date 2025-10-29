@@ -2,6 +2,7 @@
 Core Controlled Vocabularies (CVs) for use in CMIP7
 
 [![Update Issue Templates](https://github.com/WCRP-CMIP/CMIP7-CVs/actions/workflows/issue-templates.yml/badge.svg)](https://github.com/WCRP-CMIP/CMIP7-CVs/actions/workflows/issue-templates.yml) [![∆ src-data](https://github.com/WCRP-CMIP/CMIP7-CVs/actions/workflows/src-data-change.yml/badge.svg?branch=src-data)](https://github.com/WCRP-CMIP/CMIP7-CVs/actions/workflows/src-data-change.yml)
+[![→ workflows](https://github.com/WCRP-CMIP/CMIP7-CVs/actions/workflows/sync-workflows.yml/badge.svg)](https://github.com/WCRP-CMIP/CMIP7-CVs/actions/workflows/sync-workflows.yml)
 
 -------
 
