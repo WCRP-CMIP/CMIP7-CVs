@@ -5,6 +5,8 @@
 thumbs.db
 */*graph*.jsonld 
 
+.summary
+
 # Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[cod]

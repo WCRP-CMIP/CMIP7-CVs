@@ -6,15 +6,15 @@
             "@context": "https://wcrp-cmip.github.io/WCRP-universe/activity/_context",
             "@type": "@id"
         },
-        "model-realms": {
+        "model_realms": {
             "@context": "https://wcrp-cmip.github.io/WCRP-universe/source_type/_context",
             "@type": "@id"
         },
-        "parent-activity": {
+        "parent_activity": {
             "@context": "https://wcrp-cmip.github.io/WCRP-universe/activity/_context",
             "@type": "@id"
         },
-        "parent-experiment": {
+        "parent_experiment": {
             "@type": "@id"
         }
     }
