@@ -1,6 +1,6 @@
 {
-    "validation-key": "hist-noirr",
-    "ui-label": "",
+    "validation_key": "hist-noirr",
+    "ui_label": "Historical simulations with irrigation switched off",
     "description": "1. switching off the irrigation in the experiment historical  3. This is only for model groups whose historical simulations do include irrigation.",
     "activity": [
         "irrmip"
@@ -26,8 +26,6 @@
     ],
     "start_date": "1901-01-01",
     "tier": "2",
-    "ui_label": "Historical simulations with irrigation switched off",
-    "validation_key": "hist-noirr",
     "@context": "_context",
     "@type": [
         "wcrp:experiment",

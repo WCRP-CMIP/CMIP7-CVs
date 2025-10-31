@@ -1,6 +1,6 @@
 {
-    "validation-key": "historical",
-    "ui-label": "",
+    "validation_key": "historical",
+    "ui_label": "Simulation of the recent past (concentration driven)",
     "description": "DECK: historical \n Simulation of the recent past",
     "activity": [
         "damip",
@@ -35,8 +35,6 @@
     "start": 1850,
     "start_date": "none",
     "tier": 0,
-    "ui_label": "Simulation of the recent past (concentration driven)",
-    "validation_key": "historical",
     "@context": "_context",
     "@type": [
         "wcrp:experiment",

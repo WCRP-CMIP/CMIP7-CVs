@@ -1,6 +1,6 @@
 {
-    "validation-key": "initialised-prediction-2025-2036",
-    "ui-label": "",
+    "validation_key": "Initialised-prediction-2025-2036",
+    "ui_label": "Describe Initialised-prediction-2025-2036 in one sentence.",
     "description": "Initialised prediction for 2025-2036 \n Decadal climate prediction project initialised forecast for 2025-2036",
     "activity": [
         "dcpp"
@@ -15,8 +15,6 @@
     "start": -999,
     "start_date": "none",
     "tier": 0,
-    "ui_label": "Describe Initialised-prediction-2025-2036 in one sentence.",
-    "validation_key": "Initialised-prediction-2025-2036",
     "@context": "_context",
     "@type": [
         "wcrp:experiment",

@@ -1,6 +1,6 @@
 {
-    "validation-key": "amip",
-    "ui-label": "",
+    "validation_key": "amip",
+    "ui_label": "Describe amip in one sentence.",
     "description": "DECK: AMIP \n AMIP (Atmospheric Model Intercomparison Project) experiment with prescribed SSTs and sea ice",
     "activity": [
         "damip",
@@ -34,8 +34,6 @@
     "start": 1979,
     "start_date": "none",
     "tier": 0,
-    "ui_label": "Describe amip in one sentence.",
-    "validation_key": "amip",
     "@context": "_context",
     "@type": [
         "wcrp:experiment",

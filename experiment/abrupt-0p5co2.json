@@ -1,6 +1,6 @@
 {
-    "validation-key": "abrupt-0p5co2",
-    "ui-label": "",
+    "validation_key": "abrupt-0p5CO2",
+    "ui_label": "Describe abrupt-0p5CO2 in one sentence.",
     "description": "Abrupt halving of CO2 \n Abrupt halving of atmospheric CO2",
     "activity": [
         "fast-track",
@@ -18,8 +18,6 @@
     "start": -999,
     "start_date": "none",
     "tier": 0,
-    "ui_label": "Describe abrupt-0p5CO2 in one sentence.",
-    "validation_key": "abrupt-0p5CO2",
     "@context": "_context",
     "@type": [
         "wcrp:experiment",
