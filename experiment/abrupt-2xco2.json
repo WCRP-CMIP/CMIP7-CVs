@@ -1,6 +1,6 @@
 {
-    "validation-key": "abrupt-2xco2",
-    "ui-label": "",
+    "validation_key": "abrupt-2xCO2",
+    "ui_label": "Abrupt doubling of CO2",
     "description": "Identical to the `piControl` DECK experiment but with a step change to 2xCO2 concentration from its pre-industrial value, held constant for the duration of the run.  Reference: [Webb et al., 2017](https://doi.org/10.5194/gmd-10-359-2017)",
     "activity": [
         "fast-track",
@@ -33,8 +33,6 @@
     ],
     "start_date": "none",
     "tier": "1",
-    "ui_label": "Abrupt doubling of CO2",
-    "validation_key": "abrupt-2xCO2",
     "@context": "_context",
     "@type": [
         "wcrp:experiment",

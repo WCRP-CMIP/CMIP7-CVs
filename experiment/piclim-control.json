@@ -1,6 +1,6 @@
 {
-    "validation-key": "piclim-control",
-    "ui-label": "",
+    "validation_key": "piClim-control",
+    "ui_label": "Pre-industrial conditions, with sea surface temperature (SST/tos) and sea ice concentration (SIC/siconc) prescribed using an annually-repeating climatology from a 30-year or greater period from the piControl simulation of the host model",
     "description": "DECK: Effective radiative forcing control simulation",
     "activity": [
         "firemip"
@@ -16,8 +16,6 @@
     "start": -999,
     "start_date": "none",
     "tier": 0,
-    "ui_label": "Pre-industrial conditions, with sea surface temperature (SST/tos) and sea ice concentration (SIC/siconc) prescribed using an annually-repeating climatology from a 30-year or greater period from the piControl simulation of the host model",
-    "validation_key": "piClim-control",
     "@context": "_context",
     "@type": [
         "wcrp:experiment",

@@ -1,6 +1,6 @@
 {
-    "validation-key": "hist-piaer",
-    "ui-label": "",
+    "validation_key": "hist-piAer",
+    "ui_label": "Historical simulation with pre-industrial aerosol",
     "description": "1. Detailed experiment configuration Historical simulation with emissions of aerosol held at pre-industrial (1850) levels  2. Required model settings We encourage modelling centres to include as much atmospheric composition capability as possible. As a minimum, models should have prescribed or interactive aerosols. And the experimental setup should be consistent with other historical experiments.  3. Experiment conditions.  4. Links to relevant references Fiedler et al. (in prep.) AerChemMIP2 - Unraveling the role of reactive gases, aerosols, and land use for air quality and climate change in CMIP7  5. Similarities to CMIP6 experiments: hist-piAer  6. Forcing differences from parent experiment Aerosol and their precursor emissions fixed at year-1850 values.",
     "activity": [
         "fast-track",
@@ -28,8 +28,6 @@
     ],
     "start_date": "1850",
     "tier": "1",
-    "ui_label": "Historical simulation with pre-industrial aerosol",
-    "validation_key": "hist-piAer",
     "@context": "_context",
     "@type": [
         "wcrp:experiment",

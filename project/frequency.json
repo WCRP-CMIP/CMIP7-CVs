@@ -1,6 +1,6 @@
 {
-    "validation-key": "frequency",
-    "ui-label": "",
+    "validation_key": "cmip7-frequency",
+    "ui_label": "CMIP7 Permissible Frequencies",
     "description": "The complete list of frequencies used in CMIP7",
     "frequency": [
         "1hr",
@@ -20,8 +20,6 @@
         "yr",
         "yrpt"
     ],
-    "ui_label": "CMIP7 Permissible Frequencies",
-    "validation_key": "cmip7-frequency",
     "@context": {
         "@base": "https://wcrp-cmip.github.io/CMIP7-CVs/project/",
         "@vocab": "https://esgf.github.io/esgf-vocab/api_documentation/data_descriptors.html#esgvoc.api.data_descriptors.Frequency",

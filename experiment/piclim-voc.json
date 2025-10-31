@@ -1,6 +1,6 @@
 {
-    "validation-key": "piclim-voc",
-    "ui-label": "",
+    "validation_key": "piClim-VOC",
+    "ui_label": "Describe piClim-VOC in one sentence.",
     "description": "Perturbation from pre-industrial control using 1850 VOC emissions \n Pre-industrial climatological SSTs and sea ice extent, 1850 VOC emissions",
     "activity": [
         "aerchemmip"
@@ -15,8 +15,6 @@
     "start": -999,
     "start_date": "none",
     "tier": 0,
-    "ui_label": "Describe piClim-VOC in one sentence.",
-    "validation_key": "piClim-VOC",
     "@context": "_context",
     "@type": [
         "wcrp:experiment",

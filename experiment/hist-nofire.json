@@ -1,6 +1,6 @@
 {
-    "validation-key": "hist-nofire",
-    "ui-label": "",
+    "validation_key": "hist-noFire",
+    "ui_label": "no fires occur globally",
     "description": "This experiment is similar to the esm-hist experiment in DECK, but it features no fire globally throughout the historical period and is initialized from a no-fire spin-up.",
     "activity": [
         "firemip"
@@ -30,8 +30,6 @@
     ],
     "start_date": "1850-01-01",
     "tier": "2",
-    "ui_label": "no fires occur globally",
-    "validation_key": "hist-noFire",
     "@context": "_context",
     "@type": [
         "wcrp:experiment",

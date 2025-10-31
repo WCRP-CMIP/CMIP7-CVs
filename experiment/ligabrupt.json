@@ -1,6 +1,6 @@
 {
-    "validation-key": "ligabrupt",
-    "ui-label": "",
+    "validation_key": "LIGabrupt",
+    "ui_label": "Describe LIGabrupt in one sentence.",
     "description": "Last Interglacial abrupt change experiment \n Simulation of abrupt change during the Last Interglacial period",
     "activity": [
         "pmip"
@@ -15,8 +15,6 @@
     "start": -999,
     "start_date": "none",
     "tier": 0,
-    "ui_label": "Describe LIGabrupt in one sentence.",
-    "validation_key": "LIGabrupt",
     "@context": "_context",
     "@type": [
         "wcrp:experiment",

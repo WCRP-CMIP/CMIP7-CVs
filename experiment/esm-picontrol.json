@@ -1,6 +1,6 @@
 {
-    "validation-key": "esm-picontrol",
-    "ui-label": "",
+    "validation_key": "esm-piControl",
+    "ui_label": "Coupled atmosphere-ocean preindustrial control (emissions driven)",
     "description": "DECK: pre-industrial control simulation with Earth System Models \n Pre-industrial control run for Earth System Models",
     "activity": [
         "damip",
@@ -35,8 +35,6 @@
     "start": -999,
     "start_date": "none",
     "tier": 0,
-    "ui_label": "Coupled atmosphere-ocean preindustrial control (emissions driven)",
-    "validation_key": "esm-piControl",
     "@context": "_context",
     "@type": [
         "wcrp:experiment",

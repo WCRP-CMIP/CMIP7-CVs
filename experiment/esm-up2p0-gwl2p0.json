@@ -1,6 +1,6 @@
 {
-    "validation-key": "esm-up2p0-gwl2p0",
-    "ui-label": "",
+    "validation_key": "esm-up2p0-gwl2p0",
+    "ui_label": "Zero-emission run starting at 2 degree C GWL",
     "description": "GWL=2 degree C experiment, branching off the ramp-up when GMSAT is 2 degree C warmer than pre-industrial.",
     "activity": [
         "tipmip"
@@ -30,8 +30,6 @@
     ],
     "start_date": "none",
     "tier": "1",
-    "ui_label": "Zero-emission run starting at 2 degree C GWL",
-    "validation_key": "esm-up2p0-gwl2p0",
     "@context": "_context",
     "@type": [
         "wcrp:experiment",

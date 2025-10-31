@@ -1,10 +1,8 @@
 {
-    "validation-key": "tables",
-    "ui-label": "",
+    "validation_key": "tables",
+    "ui_label": "",
     "description": "",
     "tables": [],
-    "ui_label": "",
-    "validation_key": "",
     "@context": {
         "@base": "https://wcrp-cmip.github.io/CMIP7-CVs/project/",
         "@vocab": "https://esgf.github.io/esgf-vocab/api_documentation/data_descriptors.html#esgvoc.api.data_descriptors.Tables"

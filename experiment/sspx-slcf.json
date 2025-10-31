@@ -1,6 +1,6 @@
 {
-    "validation-key": "sspx-slcf",
-    "ui-label": "",
+    "validation_key": "SSPX-SLCF",
+    "ui_label": "Describe SSPX-SLCF in one sentence.",
     "description": "Future scenario with specified SLCF emissions \n Future scenario simulation with specified short-lived climate forcer emissions",
     "activity": [
         "aerchemmip"
@@ -15,8 +15,6 @@
     "start": -999,
     "start_date": "none",
     "tier": 0,
-    "ui_label": "Describe SSPX-SLCF in one sentence.",
-    "validation_key": "SSPX-SLCF",
     "@context": "_context",
     "@type": [
         "wcrp:experiment",

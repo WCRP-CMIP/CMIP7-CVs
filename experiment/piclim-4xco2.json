@@ -1,6 +1,6 @@
 {
-    "validation-key": "piclim-4xco2",
-    "ui-label": "",
+    "validation_key": "piClim-4xCO2",
+    "ui_label": "As piClim-control except CO2 concentrations set to 4 times preindustrial",
     "description": "DECK: effective radiative forcing by 4xCO2 \n Effective radiative forcing by 4xCO2",
     "activity": [
         "firemip"
@@ -16,8 +16,6 @@
     "start": -999,
     "start_date": "none",
     "tier": 0,
-    "ui_label": "As piClim-control except CO2 concentrations set to 4 times preindustrial",
-    "validation_key": "piClim-4xCO2",
     "@context": "_context",
     "@type": [
         "wcrp:experiment",

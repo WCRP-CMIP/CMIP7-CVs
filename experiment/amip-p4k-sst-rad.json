@@ -1,6 +1,6 @@
 {
-    "validation-key": "amip-p4k-sst-rad",
-    "ui-label": "",
+    "validation_key": "amip-p4K-SST-rad",
+    "ui_label": "AMIP experiment with uniform 4K increase in the SST input to radiation",
     "description": "Similar to `amip`, but SST is raised by 4K when calculating the upward longwave radiation from the sea surface using Planck function.  Reference: [Ogura et al., 2023](https://doi.org/10.1029/2023GL104786)",
     "activity": [
         "cfmip"
@@ -31,8 +31,6 @@
     ],
     "start_date": "1979-01-01",
     "tier": "2",
-    "ui_label": "AMIP experiment with uniform 4K increase in the SST input to radiation",
-    "validation_key": "amip-p4K-SST-rad",
     "@context": "_context",
     "@type": [
         "wcrp:experiment",

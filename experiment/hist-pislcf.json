@@ -1,6 +1,6 @@
 {
-    "validation-key": "hist-pislcf",
-    "ui-label": "",
+    "validation_key": "hist-piSLCF",
+    "ui_label": "Describe hist-piSLCF in one sentence.",
     "description": "Historical simulation with pre-industrial short-lived climate forcers \n Historical simulation but with pre-industrial short-lived climate forcer emissions",
     "activity": [
         "aerchemmip"
@@ -15,8 +15,6 @@
     "start": -999,
     "start_date": "none",
     "tier": 0,
-    "ui_label": "Describe hist-piSLCF in one sentence.",
-    "validation_key": "hist-piSLCF",
     "@context": "_context",
     "@type": [
         "wcrp:experiment",

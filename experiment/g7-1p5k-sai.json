@@ -1,6 +1,6 @@
 {
-    "validation-key": "g7-1p5k-sai",
-    "ui-label": "",
+    "validation_key": "G7-1p5K-SAI",
+    "ui_label": "G7-1.5K-SAI",
     "description": "Stratospheric aerosol injection to reduce warming to 1.5K \n Stratospheric aerosol injection to reduce warming to 1.5K above pre-industrial levels",
     "activity": [
         "fast-track"
@@ -16,8 +16,6 @@
     "start": -999,
     "start_date": "none",
     "tier": 0,
-    "ui_label": "G7-1.5K-SAI",
-    "validation_key": "G7-1p5K-SAI",
     "@context": "_context",
     "@type": [
         "wcrp:experiment",

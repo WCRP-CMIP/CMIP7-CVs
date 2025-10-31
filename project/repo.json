@@ -1,10 +1,8 @@
 {
-    "validation-key": "repo",
-    "ui-label": "",
+    "validation_key": "repo",
+    "ui_label": "",
     "description": "",
     "repo": "https://github.com/WCRP-CMIP/CMIP6Plus_CVs",
-    "ui_label": "",
-    "validation_key": "",
     "@context": {
         "@base": "https://wcrp-cmip.github.io/CMIP7-CVs/project/",
         "@vocab": "https://esgf.github.io/esgf-vocab/api_documentation/data_descriptors.html#esgvoc.api.data_descriptors.Repo"
