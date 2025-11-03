@@ -331,6 +331,7 @@ body:
       label: Issue Type
       description: This is pre-set and cannot be changed.
       options:
+        -experiment
       default: 0
     validations:
       required: true
