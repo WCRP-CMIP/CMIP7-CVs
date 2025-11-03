@@ -6,4 +6,8 @@ me = __file__.split('/')[-1].replace('.py','')
 def run(io, whoami, path, name, **kwargs):
     data = cmipld.get(f'cmip7:project/{me}.json', depth=2)[me]
     summary = name_entry(data)
-    return f"{path}/{name}_{me}_id.json", me, summary
+    
+    
+    # update the name to use the id field
+    me2 = me + '_id'
+    return f"{path}/{name}_{me2}.json", me2, summary
