@@ -1,0 +1,26 @@
+{
+    "Header": {
+        "file": "CMIP7-CVs_activity_id.json",
+        "file_creation_date": "2025-11-03T15:19:32.362799",
+        "version": "fatal: No names found, cannot describe anything.",
+        "checksum": "md5: c5c58f4e5d738779a8f73bb211c98419",
+        "repo_url": "https://github.com/WCRP-CMIP/CMIP7-CVs",
+        "repo_prefix": "cmip7",
+        "last_commit": "bcb8ee2a5f5be34cce4dc69ea6f48b03aed4bebc",
+        "comment": "This is an automatically generated file. Do not edit."
+    },
+    "activity_id": {
+        "AerChemMIP": "AerChemMIP experiments focus on the role of atmospheric chemistry and aerosols in climate, including piClim and hist-piSLCF simulations.",
+        "C4MIP": "C4MIP experiments focus on carbon cycle feedbacks and interactions, including 1pctCO2-bgc and esm-flat10-cdr experiments.",
+        "CFMIP": "CFMIP experiments focus on cloud feedbacks and their role in climate, including abrupt-0p5CO2 and amip-piForcing simulations.",
+        "CMIP": "CMIP DECK: 1pctCO2, abrupt-4xCO2, amip, esm-piControl, esm-historical, historical, and piControl experiments",
+        "DAMIP": "DAMIP focuses on detection and attribution of climate change, covering experiments like hist-aer and hist-nat.",
+        "DCPP": "DCPP focuses on decadal climate predictions and initialized experiments like prediction for 2025-2036.",
+        "GeoMIP": "GeoMIP explores the potential impacts and side-effects of geoengineering, including experiments like G7-1.5K-SAI.",
+        "HighResMIP": "",
+        "LMIP": "LMIP explores land-atmosphere interactions and processes, with experiments like land-hist.",
+        "PMIP": "PMIP focuses on past climate variability, with experiments like LIGabrupt.",
+        "RFMIP": "RFMIP assesses the radiative forcing of climate change with experiments such as piClim-aer, piClim-histaer, and piClim-histall.",
+        "ScenarioMIP": "ScenarioMIP focuses on future climate projections based on different socio-economic pathways, including High, Medium, and Very Low scenarios."
+    }
+}

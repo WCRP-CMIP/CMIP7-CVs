@@ -1,6 +1,13 @@
-import cmipld
+import cmipld,os
 from cmipld.utils.ldparse import cvjson_validation_key
 me = __file__.split('/')[-1].replace('.py','')
+
+
+print('RUN LD2GRAPH FIRST')
+graph = os.popen('ld2graph experiment').read()
+print(graph)
+
+
 
 
 def ld2cmip6(validation_key, ui_label, description, activity, 
@@ -41,5 +48,7 @@ def run(io, whoami, path, name, **kwargs):
         summary.update(ld2cmip6(**i))
         
     summary = dict(sorted(summary.items()))
-    
-    return f"{path}/{name}_{me}_id.json", me, summary
+        
+    # update the name to use the id field
+    me2 = me + '_id'
+    return f"{path}/{name}_{me2}.json", me2, summary
