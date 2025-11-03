@@ -1,13 +1,13 @@
-name: "Add/Modify: Experiment"
+name: "Add/Modify Experiment"
 description: "Type: experiment"
-title: "Add/Modify: Experiment: <Type experiment name here>"
+title: "Add/Modify Experiment: <Type experiment name here>"
 labels: ['delta', 'experiment', 'Review']
 body:
   - type: markdown
     attributes:
       value: |
         ####
-        ## Generic Experiment information
+        ## Generic Experiment Information
         
         Please fill in the information below.
 
@@ -30,7 +30,7 @@ body:
       description: |
         A short phrase that can help in interpreting the unique experiment IDs.
         
-        As examples, the CMIP6 titles are listed at https://wcrp-cmip.github.io/CMIP6_CVs/docs/CMIP6_experiment_id.html in the third column labeled experiments.
+        As examples, the CMIP6 titles are listed at https://wcrp-cmip.github.io/CMIP6_CVs/docs/CMIP6_experiment_id.html in the third column labeled 'experiments'.
       placeholder: "e.g., AMIP plus 4K sea surface temperature"
     validations:
       required: true
@@ -41,12 +41,12 @@ body:
       label: Description
       description: |
         Please provide:
-         >      1. Detailed experiment configuration
-         >      2. Required model settings
-         >      3. Experiment conditions
-         >      4. Links to relevant references
-         >      5. Similarities to CMIP6 experiments
-         >      6. Forcing differences from parent experiment
+         > 1. Detailed experiment configuration
+         > 2. Required model settings
+         > 3. Experiment conditions
+         > 4. Links to relevant references
+         > 5. Similarities to CMIP6 experiments
+         > 6. Forcing differences from parent experiment
       placeholder: "Describe the experiment configuration conditions and requirements..."
     validations:
       required: true
@@ -56,9 +56,9 @@ body:
     attributes:
       label: MIP / Activity ID (registered)
       description: |
-        The MIP / activity owning the experiment
+        The MIP / activity owning the experiment.
         
-        Please select a parent from the list below. Note: phases are not considered separate activies.
+        Please select a parent from the list below. Note: phases are not considered separate activities.
       options:
         - "AerChemMIP"
         - "C4MIP"
@@ -85,7 +85,7 @@ body:
     attributes:
       value: |
         ####
-        ## Parent information and Tier
+        ## Parent Information and Tier
 
   - type: dropdown
     id: parent_experiment
@@ -93,9 +93,7 @@ body:
       label: Parent Experiment
       description: |
         Select the experiment that provides initial conditions.
-        Please note that scenarioMIP experiment names are under discussion and are likely to change
-        
-        Please select a parent from the list below.
+        Please note that ScenarioMIP experiment names are under discussion and are likely to change.
       options:
         - "Custom Parent: specify in 'Parent experiment other' field"
         - "no-parent"
@@ -186,7 +184,7 @@ body:
     attributes:
       label: Sub-experiment
       description: |
-        The list of sub-excleperiment IDs where relevant. For most experiments this will be none
+        The list of sub-experiment IDs where relevant. For most experiments this will be none.
       placeholder: "e.g., none"
     validations:
       required: true
@@ -216,18 +214,16 @@ body:
         
         Select the required and optional model components for this experiment:
         
-            
-            
-            > * AER  : Aerosol treatment in an atmospheric model where concentrations are calculated based on emissions, transformation, and removal processes (rather than being prescribed or omitted entirely)
-            > * AGCM : Atmospheric general circulation model run with prescribed ocean surface conditions and usually a model of the land surface
-            > * AOGCM : Coupled atmosphere-ocean global climate model, additionally including explicit representation of at least the land and sea ice
-            > * BGC  : Biogeochemistry model component that at the very least accounts for carbon reservoirs and fluxes in the atmosphere, terrestrial biosphere, and ocean
-            > * CHEM : Chemistry treatment in an atmospheric model that calculates atmospheric oxidant concentrations (including at least ozone), rather than prescribing them
-            > * ISM  : Ice-sheet model that includes ice-flow
-            > * LAND : Land model run uncoupled from the atmosphere
-            > * OGCM : Ocean general circulation model run uncoupled from an AGCM but, usually including a sea-ice model
-            > * RAD  : Radiation component of an atmospheric model run offline
-            > * SLAB : Slab-ocean used with an AGCM in representing the atmosphere-ocean coupled system
+        > * AER  : Aerosol treatment in an atmospheric model where concentrations are calculated based on emissions, transformation, and removal processes (rather than being prescribed or omitted entirely)
+        > * AGCM : Atmospheric general circulation model run with prescribed ocean surface conditions and usually a model of the land surface
+        > * AOGCM : Coupled atmosphere-ocean global climate model, additionally including explicit representation of at least the land and sea ice
+        > * BGC  : Biogeochemistry model component that at the very least accounts for carbon reservoirs and fluxes in the atmosphere, terrestrial biosphere, and ocean
+        > * CHEM : Chemistry treatment in an atmospheric model that calculates atmospheric oxidant concentrations (including at least ozone), rather than prescribing them
+        > * ISM  : Ice-sheet model that includes ice-flow
+        > * LAND : Land model run uncoupled from the atmosphere
+        > * OGCM : Ocean general circulation model run uncoupled from an AGCM but usually including a sea-ice model
+        > * RAD  : Radiation component of an atmospheric model run offline
+        > * SLAB : Slab-ocean used with an AGCM in representing the atmosphere-ocean coupled system
 
   - type: dropdown
     id: required_model_realms
@@ -236,9 +232,7 @@ body:
       label: Source type codes for required model components
       description: |
         Components that must be included in models when running this experiment.
-        See note 15 in https://wcrp-cmip.github.io/WGCM_Infrastructure_Panel/Papers/CMIP6_global_attributes_filenames_CVs_v6.2.7.pdf for full descriptions
-        
-        * Select Multiple *
+        See note 15 in https://wcrp-cmip.github.io/WGCM_Infrastructure_Panel/Papers/CMIP6_global_attributes_filenames_CVs_v6.2.7.pdf for full descriptions.
       options:
         - "AER"
         - "AGCM"
@@ -262,9 +256,7 @@ body:
       label: Source type codes for additional allowed model components
       description: |
         Components that may be included in models when running this experiment in addition to the required components listed above.
-        See note 15 in https://wcrp-cmip.github.io/WGCM_Infrastructure_Panel/Papers/CMIP6_global_attributes_filenames_CVs_v6.2.7.pdf for full description
-        
-        * Select Multiple *
+        See note 15 in https://wcrp-cmip.github.io/WGCM_Infrastructure_Panel/Papers/CMIP6_global_attributes_filenames_CVs_v6.2.7.pdf for full description.
       options:
         - "AER"
         - "AGCM"
@@ -285,7 +277,7 @@ body:
     attributes:
       value: |
         ####
-        ## Experiment duration, start and end
+        ## Experiment Duration, Start and End
         Some additional information on the experiment
 
   - type: input
@@ -295,11 +287,11 @@ body:
       description: |
         For experiments initialized on a particular historical date, enter that date in the form YYYY-MM-DD.
         
-            If a set of sub-experiments are initialized at different times, list all the start times requested.
+        If a set of sub-experiments are initialized at different times, list all the start times requested.
         
-            - For example, for an historical simulation initialized at the beginning of 1850, enter 1850-01-01.
-            - For a set of DCPP prediction runs, enter all dates of the first full forecast/hindcast year (e.g., 1960, 1970, 1980, 1990, 2000, 2010).
-            - If there is no specific start date please enter the word none
+        - For example, for a historical simulation initialized at the beginning of 1850, enter 1850-01-01.
+        - For a set of DCPP prediction runs, enter all dates of the first full forecast/hindcast year (e.g., 1960,1970,1980,1990,2000,2010).
+        - If there is no specific start date, please enter the word 'none'.
       placeholder: "e.g., 1850-01-01 or 1960,1970,1980"
 
   - type: input
@@ -307,9 +299,9 @@ body:
     attributes:
       label: (Minimum) Number of Years
       description: |
-        For most experiments this will be the actual length of the desired simulation.
+        For most experiments, this will be the actual length of the desired simulation.
         
-        Calculation : (end_year - start_year + 1)
+        Calculation: (end_year - start_year + 1)
         - For example, 172 would be specified for a run initialized in 1850-01-01 and extending to 2022-01-01.
       placeholder: "e.g., 172"
     validations:
@@ -321,9 +313,8 @@ body:
         ####
         ## Issue Handling Metadata
         
-        The following options are only here such that the github actions know what to do with the information provided above.
-        
-        In almost all cases, these do not require to be changed.
+        The following options are mostly for GitHub Actions to handle submissions correctly.
+        In almost all cases, these do not require changes.
 
   - type: dropdown
     id: issue_category
@@ -331,7 +322,7 @@ body:
       label: Issue Type
       description: This is pre-set and cannot be changed.
       options:
-        -experiment
+        - "experiment"
       default: 0
     validations:
       required: true
@@ -340,7 +331,7 @@ body:
     id: issue_kind
     attributes:
       label: Issue Kind
-      description: Select whether this is a new submission or modification of existing entry.
+      description: Select whether this is a new submission or modification of an existing entry.
       options:
         - "new"
         - "modify"
