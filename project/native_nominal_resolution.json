@@ -2,7 +2,7 @@
     "validation_key": "native-nominal-resolution",
     "ui_label": "",
     "description": "",
-    "nominal_resolution": [
+    "native_nominal_resolution": [
         "0.5km",
         "1km",
         "10km",
