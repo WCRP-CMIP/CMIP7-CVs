@@ -1,0 +1,41 @@
+{
+  "validation_key": "1pctCO2",
+  "ui_label": "CO2 prescribed to increase at 1% per year",
+  "description": "DECK: 1 percent per year CO2 increase \n Increase CO2 concentration from pre-industrial level at 1% per year until quadrupling",
+  "activity": "CMIP",
+  "alias": [],
+  "end": -999,
+  "min_number_yrs_per_sim": 150,
+  "minimum_number_of_years": 150,
+  "model_realms": [
+    {
+      "@id": "aogcm",
+      "is_required": true
+    },
+    {
+      "@id": "aer",
+      "is_required": false
+    },
+    {
+      "@id": "chem",
+      "is_required": false
+    },
+    {
+      "@id": "bgc",
+      "is_required": false
+    }
+  ],
+  "parent_experiment": [
+    "picontrol"
+  ],
+  "start": -999,
+  "start_date": "none",
+  "tier": 0,
+  "@context": "_context",
+  "@type": [
+    "wcrp:experiment",
+    "esgvoc:Experiment",
+    "cmip7"
+  ],
+  "@id": "1pctco2"
+}
