@@ -1,44 +1,43 @@
 {
-    "validation_key": "amip-p4K",
-    "ui_label": "AMIP experiment with uniform 4K SST increase",
-    "description": "The same as the `amip` DECK experiment, except that SSTs are subject to a uniform warming of 4K. This warming should be applied to the ice-free ocean surface only. Sea ice and SSTs in grid boxes containing sea ice remain the same as in the `amip` DECK experiment.  Reference: [Webb et al., 2017](https://doi.org/10.5194/gmd-10-359-2017)",
-    "activity": [
-        "fast-track",
-        "damip",
-        "fast-track",
-        "cfmip"
-    ],
-    "alias": [],
-    "branch_date": "none",
-    "minimum_number_of_years": 36,
-    "model_realms": [
-        {
-            "@id": "agcm",
-            "is_required": true
-        },
-        {
-            "@id": "aer",
-            "is_required": false
-        },
-        {
-            "@id": "bgc",
-            "is_required": false
-        },
-        {
-            "@id": "chem",
-            "is_required": false
-        }
-    ],
-    "parent_experiment": [
-        "none"
-    ],
-    "start_date": "1979-01-01",
-    "tier": "1",
-    "@context": "_context",
-    "@type": [
-        "wcrp:experiment",
-        "esgvoc:Experiment",
-        "cmip7"
-    ],
-    "@id": "amip-p4k"
+  "validation_key": "amip-p4K",
+  "ui_label": "AMIP experiment with uniform 4K SST increase",
+  "description": "The same as the `amip` DECK experiment, except that SSTs are subject to a uniform warming of 4K. This warming should be applied to the ice-free ocean surface only. Sea ice and SSTs in grid boxes containing sea ice remain the same as in the `amip` DECK experiment.  Reference: [Webb et al., 2017](https://doi.org/10.5194/gmd-10-359-2017)",
+  "activity": [
+    "damip",
+    "cfmip"
+  ],
+  "alias": [],
+  "branch_date": "none",
+  "minimum_number_of_years": 36,
+  "model_realms": [
+    {
+      "@id": "agcm",
+      "is_required": true
+    },
+    {
+      "@id": "aer",
+      "is_required": false
+    },
+    {
+      "@id": "bgc",
+      "is_required": false
+    },
+    {
+      "@id": "chem",
+      "is_required": false
+    }
+  ],
+  "parent_experiment": [
+    "none"
+  ],
+  "start_date": "1979-01-01",
+  "tier": "1",
+  "@context": "_context",
+  "@type": [
+    "wcrp:experiment",
+    "esgvoc:Experiment",
+    "cmip7",
+    "cmip:fast-track"
+  ],
+  "@id": "amip-p4k"
 }
