@@ -3,7 +3,7 @@
   "ui_label": "CO2 prescribed to increase at 1% per year",
   "description": "DECK: 1 percent per year CO2 increase \n Increase CO2 concentration from pre-industrial level at 1% per year until quadrupling",
   "activity": [
-    "CMIP"
+    "cmip"
   ],
   "alias": [],
   "end": -999,

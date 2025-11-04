@@ -3,7 +3,7 @@
   "ui_label": "Coupled atmosphere-ocean preindustrial control (emissions driven)",
   "description": "DECK: pre-industrial control simulation with Earth System Models \n Pre-industrial control run for Earth System Models",
   "activity": [
-    "CMIP"
+    "cmip"
   ],
   "alias": [],
   "end": -999,

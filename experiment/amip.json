@@ -3,7 +3,7 @@
   "ui_label": "Describe amip in one sentence.",
   "description": "DECK: AMIP \n AMIP (Atmospheric Model Intercomparison Project) experiment with prescribed SSTs and sea ice",
   "activity": [
-    "CMIP"
+    "cmip"
   ],
   "alias": [],
   "end": 2021,

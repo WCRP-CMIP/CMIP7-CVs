@@ -2,7 +2,9 @@
   "validation_key": "scen7-ln",
   "ui_label": "pending",
   "description": "pending",
-  "activity": [],
+  "activity": [
+    "scenariomip"
+  ],
   "alias": [],
   "minimum_number_of_years": 75,
   "model_realms": [

@@ -3,7 +3,7 @@
   "ui_label": "As piClim-control except CO2 concentrations set to 4 times preindustrial",
   "description": "DECK: effective radiative forcing by 4xCO2 \n Effective radiative forcing by 4xCO2",
   "activity": [
-    "CMIP"
+    "cmip"
   ],
   "alias": [],
   "end": -999,

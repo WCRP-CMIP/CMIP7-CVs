@@ -3,7 +3,7 @@
   "ui_label": "Simulation of the recent past (concentration driven)",
   "description": "DECK: historical \n Simulation of the recent past",
   "activity": [
-    "CMIP"
+    "cmip"
   ],
   "alias": [],
   "end": 2021,
