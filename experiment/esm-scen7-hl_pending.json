@@ -2,7 +2,9 @@
   "validation_key": "esm-scen7-hl",
   "ui_label": "pending",
   "description": "pending",
-  "activity": [],
+  "activity": [
+    "scenariomip"
+  ],
   "alias": [],
   "minimum_number_of_years": 75,
   "model_realms": [

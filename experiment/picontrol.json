@@ -3,7 +3,7 @@
   "ui_label": "Coupled atmosphere-ocea preindustrial control run (concentration driven)",
   "description": "DECK: pre-industrial control \n Pre-industrial control simulation",
   "activity": [
-    "CMIP"
+    "cmip"
   ],
   "alias": [],
   "end": -999,
