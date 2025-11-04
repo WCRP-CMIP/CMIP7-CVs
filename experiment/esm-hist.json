@@ -2,7 +2,9 @@
   "validation_key": "esm-hist",
   "ui_label": "Simulation of the recent past (emissions driven)",
   "description": "DECK: Earth System Model historical simulation \n Historical simulation with Earth System Models",
-  "activity": "CMIP",
+  "activity": [
+    "CMIP"
+  ],
   "alias": [],
   "end": 2021,
   "min_number_yrs_per_sim": 172,

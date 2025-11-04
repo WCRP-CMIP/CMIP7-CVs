@@ -2,7 +2,9 @@
   "validation_key": "esm-piControl",
   "ui_label": "Coupled atmosphere-ocean preindustrial control (emissions driven)",
   "description": "DECK: pre-industrial control simulation with Earth System Models \n Pre-industrial control run for Earth System Models",
-  "activity": "CMIP",
+  "activity": [
+    "CMIP"
+  ],
   "alias": [],
   "end": -999,
   "min_number_yrs_per_sim": 400,

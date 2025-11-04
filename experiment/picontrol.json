@@ -2,7 +2,9 @@
   "validation_key": "picontrol",
   "ui_label": "Coupled atmosphere-ocea preindustrial control run (concentration driven)",
   "description": "DECK: pre-industrial control \n Pre-industrial control simulation",
-  "activity": "CMIP",
+  "activity": [
+    "CMIP"
+  ],
   "alias": [],
   "end": -999,
   "min_number_yrs_per_sim": 400,

@@ -2,7 +2,9 @@
   "validation_key": "piClim-4xCO2",
   "ui_label": "As piClim-control except CO2 concentrations set to 4 times preindustrial",
   "description": "DECK: effective radiative forcing by 4xCO2 \n Effective radiative forcing by 4xCO2",
-  "activity": "CMIP",
+  "activity": [
+    "CMIP"
+  ],
   "alias": [],
   "end": -999,
   "min_number_yrs_per_sim": 30,
