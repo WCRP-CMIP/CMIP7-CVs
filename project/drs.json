@@ -5,12 +5,12 @@
     "drs": {
         "directory_path_example": "",
         "directory_path_sub_experiment_example": "C",
-        "directory_path_template": "",
+        "directory_path_template": "<drs_specs>/<mip_era>/<activity_id>/<institution_id>/<source_id>/<experiment_id>/<variant_label>/<region>/<frequency>/<variable_id>/<branding_suffix>/<grid_label>/<version>",
         "filename_example": "",
-        "directory_path_template":"<drs_specs>/<mip_era>/<activity_id>/<institution_id>/<source_id>/<experiment_id>/<variant_label>/<region>/<frequency>/<variable_id>/<branding_suffix>/<grid_label>/<version>",
         "filename_template": "<variable_id><branding_suffix><frequency><region><grid_label><source_id><experiment_id><variant_label>",
-        "drs_specs":["MIP-DRS7"]
-            
+        "drs_specs": [
+            "MIP-DRS7"
+        ]
     },
     "@context": {
         "@base": "https://wcrp-cmip.github.io/CMIP7-CVs/project/",

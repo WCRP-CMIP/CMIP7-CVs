@@ -1,0 +1,22 @@
+{
+    "Header": {
+        "file": "CMIP7-CVs_realm.json",
+        "file_creation_date": "2025-11-05T14:20:46.882493",
+        "version": "fatal: No names found, cannot describe anything.",
+        "checksum": "md5: 3f81c1cfd2e386eba1f8f7e1673d3f9e",
+        "repo_url": "https://github.com/WCRP-CMIP/CMIP7-CVs",
+        "repo_prefix": "cmip7",
+        "last_commit": "a19738a01a0e988b7acc8e3ebce8e65448aee34a",
+        "comment": "This is an automatically generated file. Do not edit."
+    },
+    "realm": {
+        "aerosol": "Aerosol",
+        "atmos": "Atmosphere",
+        "atmosChem": "Atmospheric Chemistry",
+        "land": "Land Surface and Subsurface",
+        "landIce": "Land Ice",
+        "ocean": "Ocean",
+        "ocnBgchem": "Ocean Biogeochemistry",
+        "seaIce": "Sea Ice"
+    }
+}
