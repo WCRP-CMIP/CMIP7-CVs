@@ -1,0 +1,53 @@
+{
+    "validation_key": "vertical_label",
+    "ui_label": "CMIP7 Permissible Vertical Labels",
+    "description": "The complete list of vertical labels used in CMIP7 branding suffixes",
+    "vertical_label": [
+        "1000hPa",
+        "100hPa",
+        "10hPa",
+        "220hPa",
+        "500hPa",
+        "560hPa",
+        "700hPa",
+        "840hPa",
+        "850hPa",
+        "d0m",
+        "d100m",
+        "d10cm",
+        "d1m",
+        "d2000m",
+        "d300m",
+        "d700m",
+        "h100m",
+        "h10m",
+        "h16",
+        "h2m",
+        "h40",
+        "l",
+        "p19",
+        "p27",
+        "p3",
+        "p39",
+        "p4",
+        "p7c",
+        "p7h",
+        "p8",
+        "rho",
+        "u"
+    ],
+    "@context": {
+        "@base": "https://wcrp-cmip.github.io/CMIP7-CVs/project/",
+        "@vocab": "https://esgf.github.io/esgf-vocab/api_documentation/data_descriptors.html#esgvoc.api.data_descriptors.VerticalLabel",
+        "vertical_label": {
+            "@context": "https://github.com/WCRP-CMIP/Variable-Registry/vertical_label/_context",
+            "@container": "@set",
+            "@type": "@id"
+        }
+    },
+    "@type": [
+        "wcrp:vertical_label",
+        "cmip7"
+    ],
+    "@id": "vertical_label"
+}

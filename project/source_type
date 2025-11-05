@@ -1,0 +1,36 @@
+{
+    "validation_key": "source_type",
+    "ui_label": "CMIP7 Permissible Source Types",
+    "description": "The complete list of source types used in CMIP7",
+    "source_type": [
+        "aer",
+        "agcm",
+        "aogcm",
+        "bgc",
+        "chem",
+        "ism",
+        "land",
+        "ogcm",
+        "rad",
+        "slab",
+        "gridded_insitu",
+        "reanalysis",
+        "satellite_blended",
+        "satellite_retrieval"
+    ],
+    "@context": {
+        "@base": "https://wcrp-cmip.github.io/CMIP7-CVs/project/",
+        "@vocab": "https://esgf.github.io/esgf-vocab/api_documentation/data_descriptors.html#esgvoc.api.data_descriptors.SourceType",
+        "source_type": {
+            "@context": "https://wcrp-cmip.github.io/WCRP-universe/source_type/_context",
+            "@container": "@set",
+            "@type": "@id"
+        }
+    },
+    "@type": [
+        "wcrp:source_type",
+        "esgvoc:SourceType",
+        "cmip7"
+    ],
+    "@id": "source-type"
+}
