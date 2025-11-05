@@ -1,0 +1,34 @@
+{
+    "validation_key": "activity",
+    "ui_label": "ActivityCollection",
+    "description": "CMIP7 Permissible Activities",
+    "activity": [
+        "aerchemmip",
+        "c4mip",
+        "cfmip",
+        "cmip",
+        "damip",
+        "dcpp",
+        "geomip",
+        "highresmip",
+        "lmip",
+        "pmip",
+        "rfmip",
+        "scenariomip"
+    ],
+    "@context": {
+        "@base": "https://wcrp-cmip.github.io/CMIP7-CVs/project/",
+        "@vocab": "https://esgf.github.io/esgf-vocab/api_documentation/data_descriptors.html#esgvoc.api.data_descriptors.Activity",
+        "activity": {
+            "@context": "https://wcrp-cmip.github.io/WCRP-universe/activity/_context",
+            "@container": "@set",
+            "@type": "@id"
+        }
+    },
+    "@type": [
+        "wcrp:project",
+        "esgvoc:Project",
+        "cmip7"
+    ],
+    "@id": "activity"
+}
