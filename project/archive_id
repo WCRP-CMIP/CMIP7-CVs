@@ -1,0 +1,23 @@
+{
+    "validation_key": "archive_id",
+    "ui_label": "CMIP7 permitted archive ID",
+    "description": "",
+    "archive_id": {
+        "@id": "wcrp"
+    },
+    "@context": {
+        "@base": "https://wcrp-cmip.github.io/CMIP7-CVs/project/",
+        "@vocab": "https://esgf.github.io/esgf-vocab/api_documentation/data_descriptors.html#esgvoc.api.data_descriptors.ArchiveId/",
+        "mip_era": {
+            "@context": "https://wcrp-cmip.github.io/WCRP-universe/archive_id/_context",
+            "@container": "@set",
+            "@type": "@id"
+        }
+    },
+    "@type": [
+        "wcrp:archive_id",
+        "esgvoc:ArchiveId",
+        "cmip7"
+    ],
+    "@id": "archive_id"
+}
