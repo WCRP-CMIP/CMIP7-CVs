@@ -8,8 +8,8 @@
         "@vocab": "https://esgf.github.io/esgf-vocab/api_documentation/data_descriptors.html#esgvoc.api.data_descriptors.Tables"
     },
     "@type": [
-        "wcrp:tables",
-        "esgvoc:Tables",
+        "wcrp:project",
+        "esgvoc:Project",
         "cmip7"
     ],
     "@id": "tables"

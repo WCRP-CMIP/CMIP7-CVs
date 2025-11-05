@@ -1,7 +1,7 @@
 {
     "validation_key": "source_type",
-    "ui_label": "CMIP7 Permissible Source Types",
-    "description": "The complete list of source types used in CMIP7",
+    "ui_label": "SourceTypeCollection",
+    "description": "CMIP7 Permissible Source Types",
     "source_type": [
         "aer",
         "agcm",
@@ -28,9 +28,9 @@
         }
     },
     "@type": [
-        "wcrp:source_type",
-        "esgvoc:SourceType",
+        "wcrp:project",
+        "esgvoc:Project",
         "cmip7"
     ],
-    "@id": "source-type"
+    "@id": "source_type"
 }

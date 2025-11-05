@@ -6,4 +6,4 @@ me = __file__.split('/')[-1].replace('.py','')
 def run(io, whoami, path, name, **kwargs):
     data = cmipld.get(f'cmip7:project/{me}.json', depth=2)[me]
     summary = get_entry(data)
-    return f"{path}/{name}_{me}.json", me, summary
+    return f"{path}/{whoami}_{me}.json", me, summary

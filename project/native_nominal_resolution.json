@@ -1,7 +1,7 @@
 {
     "validation_key": "native_nominal_resolution",
-    "ui_label": "",
-    "description": "",
+    "ui_label": "NativeNominalResolutionCollection",
+    "description": "CMIP7 Permissible Native Nominal Resolutions",
     "native_nominal_resolution": [
         "0.5km",
         "1km",
@@ -29,9 +29,9 @@
         }
     },
     "@type": [
-        "wcrp:native_nominal_resolution",
-        "esgvoc:NativeNominalResolution",
+        "wcrp:project",
+        "esgvoc:Project",
         "cmip7"
     ],
-    "@id": "native-nominal-resolution"
+    "@id": "native_nominal_resolution"
 }

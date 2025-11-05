@@ -1,0 +1,20 @@
+{
+    "Header": {
+        "file": "cmip7_temporal_label.json",
+        "file_creation_date": "2025-11-05T15:09:43.693190",
+        "version": "fatal: No names found, cannot describe anything.",
+        "checksum": "md5: b15fe4f425320489009147566b7aa676",
+        "repo_url": "https://github.com/WCRP-CMIP/CMIP7-CVs",
+        "repo_prefix": "cmip7",
+        "last_commit": "c15a742a9429c3f831eab8a8ac1c030b859bc788",
+        "comment": "This is an automatically generated file. Do not edit."
+    },
+    "temporal_label": {
+        "tavg": "Time-averaged values calculated as the arithmetic mean over a specified time period. Commonly used for monthly, seasonal, or annual averages to represent typical conditions.",
+        "tclm": "Variables representing long-term annual cycle climatology, calculated as multi-year averages for each month or season. Shows typical seasonal patterns and annual variations in climate variables over extended time periods.",
+        "tclmdc": "Variables representing long-term diurnal cycle climatology, calculated as multi-year averages for each hour or time of day. Shows typical daily patterns and diurnal variations in climate variables over extended time periods.",
+        "ti": "Time-independent values that do not vary with time, such as fixed geographic coordinates, topography, land-sea masks, or other static boundary conditions and model parameters.",
+        "tpt": "Instantaneous values sampled at specific points in time, without temporal averaging. Represents snapshots of conditions at discrete time instances, often used for model output at specific time steps.",
+        "tsum": "Time-summed values representing the accumulation or total amount over a specified time period. Commonly used for precipitation totals, energy fluxes, or other cumulative quantities."
+    }
+}

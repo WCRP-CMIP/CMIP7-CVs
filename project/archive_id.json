@@ -1,7 +1,7 @@
 {
     "validation_key": "archive_id",
-    "ui_label": "CMIP7 permitted archive ID",
-    "description": "",
+    "ui_label": "ArchiveIdCollection",
+    "description": "CMIP7 Permissible Archive IDs",
     "archive_id": {
         "@id": "wcrp"
     },
@@ -15,9 +15,9 @@
         }
     },
     "@type": [
-        "wcrp:archive_id",
-        "esgvoc:ArchiveId",
+        "wcrp:project",
+        "esgvoc:Project",
         "cmip7"
     ],
-    "@id": "archive-id"
+    "@id": "archive_id"
 }

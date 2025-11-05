@@ -1,7 +1,7 @@
 {
     "validation_key": "frequency",
-    "ui_label": "CMIP7 Permissible Frequencies",
-    "description": "The complete list of frequencies used in CMIP7",
+    "ui_label": "FrequencyCollection",
+    "description": "CMIP7 Permissible Frequencies",
     "frequency": [
         "1hr",
         "1hrcm",
@@ -30,8 +30,8 @@
         }
     },
     "@type": [
-        "wcrp:frequency",
-        "esgvoc:Frequency",
+        "wcrp:project",
+        "esgvoc:Project",
         "cmip7"
     ],
     "@id": "frequency"

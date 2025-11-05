@@ -8,9 +8,9 @@
         "@vocab": "https://esgf.github.io/esgf-vocab/api_documentation/data_descriptors.html#esgvoc.api.data_descriptors.RequiredGlobalAttributes"
     },
     "@type": [
-        "wcrp:required-global-attributes",
-        "esgvoc:Required-global-attributes",
+        "wcrp:project",
+        "esgvoc:Project",
         "cmip7"
     ],
-    "@id": "required-global-attributes"
+    "@id": "required_global_attributes"
 }

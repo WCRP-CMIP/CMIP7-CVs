@@ -1,7 +1,7 @@
 {
     "validation_key": "realm",
-    "ui_label": "CMIP7 Permissible Realms",
-    "description": "The complete list of realms used in CMIP7",
+    "ui_label": "RealmCollection",
+    "description": "CMIP7 Permissible Realms",
     "realm": [
         "aerosol",
         "atmos",
@@ -22,8 +22,8 @@
         }
     },
     "@type": [
-        "wcrp:realm",
-        "esgvoc:Realm",
+        "wcrp:project",
+        "esgvoc:Project",
         "cmip7"
     ],
     "@id": "realm"
