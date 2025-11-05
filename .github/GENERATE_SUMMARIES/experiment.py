@@ -23,18 +23,18 @@ def ld2cmip6(validation_key, ui_label, description, activity,
 
     return {
         validation_key: {
-            "activity": cvjson_validation_key(activity),
+            "activity_id": cvjson_validation_key(activity),
             "additional_allowed_model_components": cvjson_validation_key(optional),
             "description": description,
-            "end": end,
+            # "end": end,
             "experiment": ui_label,
             "experiment_id": validation_key,
-            "min_number_yrs_per_sim": min_years,
+            # "min_number_yrs_per_sim": min_years,
             "parent_activity_id": cvjson_validation_key(parent_activity) if parent_activity else [],
             "parent_experiment_id": cvjson_validation_key(parent_experiment),
             "required_model_components":cvjson_validation_key(required),
-            "start": start,
-            "tier": tier
+            # "start": start,
+            # "tier": tier
         }
     }
     
