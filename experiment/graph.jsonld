@@ -28,7 +28,6 @@
   "ui_label": "biogeochemically-coupled version of 1 percent per year increasing CO2 experiment",
   "description": "1pctCO2-bgc is retained from CMIP6.  It is a simulation which branches from piControl with a 1% per year increase in CO2 concentration from pre-industrial levels, with the CO2 “biogeochemically-coupled”. This means that only the model’s carbon cycle components (both land and ocean) respond to the increase in CO2, whereas the model’s radiation code uses a constant, preindustrial concentration of CO2.  The 1pctCO2 DECK simulation is required for comparison. This experiment is designed to isolate carbon-concentration and carbon climate elements of the global carbon feedbacks. It will also enable calibration of climate emulators.  See Jones et al 2016: https://gmd.copernicus.org/articles/9/2853/2016/ , especially section 3.2.3  Example of use/analysis is Arora et al. 2020: https://bg.copernicus.org/articles/17/4173/2020/",
   "activity": [
-    "fast-track",
     "damip"
   ],
   "alias": [],
@@ -63,7 +62,8 @@
   "@type": [
     "wcrp:experiment",
     "esgvoc:Experiment",
-    "cmip7"
+    "cmip7",
+    "cmip:fast-track"
   ],
   "@id": "1pctco2-bgc"
 }
@@ -72,7 +72,6 @@
   "ui_label": "radiatively-coupled version of 1 percent per year increasing CO2 experiment",
   "description": "1pctCO2-rad is retained from CMIP6.  It is a simulation which branches from piControl with a 1% per year increase in CO2 concentration from pre-industrial levels, with the CO2 “radiatively-coupled”. This means that only the model’s radiation code responds to the increase in CO2, whereas the model’s carbon cycle components (both land and ocean) use a constant, preindustrial concentration of CO2.  The 1pctCO2 DECK simulation is required for comparison. This experiment is designed to isolate carbon-concentration and carbon climate elements of the global carbon feedbacks. It will also enable calibration of climate emulators.  See Jones et al 2016: https://gmd.copernicus.org/articles/9/2853/2016/ , especially section 3.2.3 Example of use/analysis is Arora et al. 2020: https://bg.copernicus.org/articles/17/4173/2020/",
   "activity": [
-    "fast-track",
     "damip"
   ],
   "alias": [],
@@ -107,7 +106,8 @@
   "@type": [
     "wcrp:experiment",
     "esgvoc:Experiment",
-    "cmip7"
+    "cmip7",
+    "cmip:fast-track"
   ],
   "@id": "1pctco2-rad"
 }
@@ -116,8 +116,7 @@
   "ui_label": "CO2 prescribed to increase at 1% per year",
   "description": "DECK: 1 percent per year CO2 increase \n Increase CO2 concentration from pre-industrial level at 1% per year until quadrupling",
   "activity": [
-    "damip",
-    "pmip"
+    "cmip"
   ],
   "alias": [],
   "end": -999,
@@ -159,8 +158,6 @@
   "ui_label": "Describe abrupt-0p5CO2 in one sentence.",
   "description": "Abrupt halving of CO2 \n Abrupt halving of atmospheric CO2",
   "activity": [
-    "fast-track",
-    "fast-track",
     "pmip"
   ],
   "alias": [],
@@ -177,7 +174,8 @@
   "@type": [
     "wcrp:experiment",
     "esgvoc:Experiment",
-    "cmip7"
+    "cmip7",
+    "cmip:fast-track"
   ],
   "@id": "abrupt-0p5co2"
 }
@@ -226,7 +224,6 @@
   "ui_label": "abrupt imposure of the orbit and greenhouse gases of 127 ka before present",
   "description": "Conceptually similar to abrupt-4xCO2 DECK experiment, except that orbital forcing (eccentricity, obliquity, length of perihelion) and greenhouse gas concentrations as per PMIP4 lig127k (Otto-Bliesner et al., 2017; also refer to Sime et al. in prep.) are abruptly changed from those of piControl, that also serves as an initial state, to their configuration of 127,000 years ago, with high boreal spring to autumn insolation leading to low sea-ice in the Arctic. AOGCM initialized from a spun-up piControl with constant-in-time forcing of orbital parameters and greenhouse gas concentrations indicative of 127,000 years before present; use of components AER, CHEM, BGC is allowed, yet it must be ensured that relevant greenhouse gas concentrations in the atmosphere stay constant at the specified values throughout the simulation; relevant references: Otto-Bliesner et al. (2017), https://gmd.copernicus.org/articles/10/3979/2017/; Guarino et al (2020), https://www.nature.com/articles/s41558-020-0865-2; Sime et al. (2023), https://cp.copernicus.org/articles/19/883/2023/",
   "activity": [
-    "fast-track",
     "pmip"
   ],
   "alias": [],
@@ -257,7 +254,8 @@
   "@type": [
     "wcrp:experiment",
     "esgvoc:Experiment",
-    "cmip7"
+    "cmip7",
+    "cmip:fast-track"
   ],
   "@id": "abrupt-127k"
 }
@@ -266,8 +264,6 @@
   "ui_label": "Abrupt doubling of CO2",
   "description": "Identical to the `piControl` DECK experiment but with a step change to 2xCO2 concentration from its pre-industrial value, held constant for the duration of the run.  Reference: [Webb et al., 2017](https://doi.org/10.5194/gmd-10-359-2017)",
   "activity": [
-    "fast-track",
-    "fast-track",
     "pmip"
   ],
   "alias": [],
@@ -299,7 +295,8 @@
   "@type": [
     "wcrp:experiment",
     "esgvoc:Experiment",
-    "cmip7"
+    "cmip7",
+    "cmip:fast-track"
   ],
   "@id": "abrupt-2xco2"
 }
@@ -347,8 +344,7 @@
   "ui_label": "CO2 prescribed to 4 times preindustrial",
   "description": "DECK: abrupt quadrupling of CO2 \n Abrupt increase in CO2 concentration from pre-industrial level to quadrupling",
   "activity": [
-    "pmip",
-    "damip"
+    "cmip"
   ],
   "alias": [],
   "end": -999,
@@ -564,9 +560,6 @@
   "ui_label": "AMIP experiment with uniform 4K SST increase",
   "description": "The same as the `amip` DECK experiment, except that SSTs are subject to a uniform warming of 4K. This warming should be applied to the ice-free ocean surface only. Sea ice and SSTs in grid boxes containing sea ice remain the same as in the `amip` DECK experiment.  Reference: [Webb et al., 2017](https://doi.org/10.5194/gmd-10-359-2017)",
   "activity": [
-    "fast-track",
-    "damip",
-    "fast-track",
     "cfmip"
   ],
   "alias": [],
@@ -598,7 +591,8 @@
   "@type": [
     "wcrp:experiment",
     "esgvoc:Experiment",
-    "cmip7"
+    "cmip7",
+    "cmip:fast-track"
   ],
   "@id": "amip-p4k"
 }
@@ -607,9 +601,7 @@
   "ui_label": "AMIP experiment with pre-industrial forcing",
   "description": "Identical to the `amip` DECK experiment, but from 1870 to the present with constant pre-industrial forcing levels (anthropogenic and natural).  Reference: [Webb et al., 2017](https://doi.org/10.5194/gmd-10-359-2017)",
   "activity": [
-    "fast-track",
-    "damip",
-    "fast-track"
+    "damip"
   ],
   "alias": [],
   "branch_date": "none",
@@ -640,7 +632,8 @@
   "@type": [
     "wcrp:experiment",
     "esgvoc:Experiment",
-    "cmip7"
+    "cmip7",
+    "cmip:fast-track"
   ],
   "@id": "amip-piforcing"
 }
@@ -649,8 +642,7 @@
   "ui_label": "Describe amip in one sentence.",
   "description": "DECK: AMIP \n AMIP (Atmospheric Model Intercomparison Project) experiment with prescribed SSTs and sea ice",
   "activity": [
-    "damip",
-    "cfmip"
+    "cmip"
   ],
   "alias": [],
   "end": 2021,
@@ -812,9 +804,7 @@
   "ui_label": "forecast initialized from observations with forcing from ssp245",
   "description": "CMIP6 DCPP (Boer et al., 2016; www.geosci-model-dev.net/9/3751/2016/) experiments B1 (and B2.1, B2.2)--ongoing fully-coupled decadal forecasts initialized from observation-based states. First full forecast year follows start year (e.g., for 2025 initialization, first full forecast year is 2026). This AR7 FastTrack experiment is a real-time extension of CMIP6 DCPP component B, so a pre-requisite is completion of CMIP6 DCPP component A (experiment id: dcppA-hindcast). For participation in AR7, forecasts should be 10 years long with minimum of 10 ensemble members.",
   "activity": [
-    "fast-track",
-    "damip",
-    "firemip"
+    "dcpp"
   ],
   "alias": [],
   "minimum_number_of_years": 10,
@@ -848,7 +838,8 @@
   "@type": [
     "wcrp:experiment",
     "esgvoc:Experiment",
-    "cmip7"
+    "cmip7",
+    "cmip:fast-track"
   ],
   "@id": "dcppb-forecast-cmip6"
 }
@@ -857,7 +848,7 @@
   "ui_label": "10 PgC/yr constant CO2 removal / negative emissions experiment",
   "description": "esm-flat10-cdr is newly introduced for CMIP7 as an emissions-driven idealised experiment to quantify sensitivity of the earth system to CO2 removal / negative emissions.  It requires fully-coupled AOGCM and BGC models with carbon cycle “emissions-driven”  The esm-flat10-cdr experiment branches from year 100 of the esm-flat10 simulation, but with CO2 emissions set to decline linearly to zero after 50 years, decrease further (becoming negative) over the next 50 years (reaching -10 PgC/yr) and then remain constant at -10 PgC/yr for a final 100 years.  It serves as an emissions-driven experiment to diagnose the reversibility of the Earth system due to carbon dioxide removal. By the end of the simulation the cumulative emissions over 300 years will be exactly zero – the same amount of CO2 has been removed as was added.  Used with the partner experiments esm-flat10 and esm-flat10-zec it forms a vital part of assessment of TCRE, ZEC and reversibility. In particular these experiments make assessment of ZEC easier than CMIP6 because: the experiment is emissions-driven from the outset and does not require a change in configuration at the branch point and the branch point is common across all models.  more details and analysis can be found here: https://egusphere.copernicus.org/preprints/2023/egusphere-2023-2127/ https://egusphere.copernicus.org/preprints/2024/egusphere-2024-3356/  this experiment is an evolution of the CDRMIP simulations from CMIP6: https://gmd.copernicus.org/articles/11/1133/2018/",
   "activity": [
-    "fast-track"
+    "c4mip"
   ],
   "alias": [],
   "minimum_number_of_years": 200,
@@ -891,7 +882,8 @@
   "@type": [
     "wcrp:experiment",
     "esgvoc:Experiment",
-    "cmip7"
+    "cmip7",
+    "cmip:fast-track"
   ],
   "@id": "esm-flat10-cdr"
 }
@@ -900,7 +892,7 @@
   "ui_label": "zero-emissions commitment CO2 experiment",
   "description": "esm-flat10-zec is newly introduced for CMIP7 as an emissions-driven idealised experiment to quantify sensitivity of the earth system to CO2 emissions.  It requires fully-coupled AOGCM and BGC models with carbon cycle “emissions-driven”  The esm-flat10-zec experiment branches from year 100 of the esm-flat10 simulation, but with CO2 emissions set to zero for initial (minimum) period of 200 years. Longer runs are useful.  It serves as an emissions-driven experiment to diagnose the Zero Emissions Commitment (ZEC), which is the continued warming (or cooling) following a sudden cessation of CO2 emissions.  Used with the partner experiments esm-flat10 and esm-flat10-cdr it forms a vital part of assessment of TCRE, ZEC and reversibility. In particular these experiments make assessment of ZEC easier than CMIP6 because: the experiment is emissions-driven from the outset and does not require a change in configuration at the branch point and the branch point is common across all models.  more details and analysis can be found here: https://egusphere.copernicus.org/preprints/2023/egusphere-2023-2127/ https://egusphere.copernicus.org/preprints/2024/egusphere-2024-3356/  this experiment is an evolution of the ZECMIP simulations from CMIP6: https://gmd.copernicus.org/articles/12/4375/2019/ , https://bg.copernicus.org/articles/17/2987/2020/",
   "activity": [
-    "fast-track"
+    "c4mip"
   ],
   "alias": [],
   "minimum_number_of_years": 200,
@@ -934,7 +926,8 @@
   "@type": [
     "wcrp:experiment",
     "esgvoc:Experiment",
-    "cmip7"
+    "cmip7",
+    "cmip:fast-track"
   ],
   "@id": "esm-flat10-zec"
 }
@@ -943,7 +936,7 @@
   "ui_label": "10 PgC/yr constant CO2 emissions experiment",
   "description": "esm-flat10 is newly introduced for CMIP7 as an emissions-driven idealised experiment to quantify sensitivity of the earth system to CO2 emissions. It requires fully-coupled AOGCM and BGC models with carbon cycle “emissions-driven”  The esm-flat10 experiment branches from a stable esm-piControl simulation, with a constant annual prescribed anthropogenic flux of carbon of 10PgC/year into the atmosphere, with globally homogenous emissions for initial (minimum) period, 0-150 years. Longer runs - 300 years – are recommended.  It serves as an emissions-driven experiment to diagnose the Transient Climate Response to cumulative Emissions (TCRE), which is the warming from pre-industrial levels observed after the emission of 1000PgC in a transient scenario.  Used with the partner experiments esm-flat10-zec and esm-flat10-cdr it forms a vital part of assessment of TCRE, ZEC and reversibility. In particular these experiments make assessment of ZEC easier than CMIP6 because: the experiment is emissions-driven from the outset and does not require a change in configuration at the branch point and the branch point is common across all models.  more details and analysis can be found here: https://egusphere.copernicus.org/preprints/2023/egusphere-2023-2127/ https://egusphere.copernicus.org/preprints/2024/egusphere-2024-3356/",
   "activity": [
-    "fast-track"
+    "c4mip"
   ],
   "alias": [],
   "minimum_number_of_years": 150,
@@ -977,7 +970,8 @@
   "@type": [
     "wcrp:experiment",
     "esgvoc:Experiment",
-    "cmip7"
+    "cmip7",
+    "cmip:fast-track"
   ],
   "@id": "esm-flat10"
 }
@@ -986,9 +980,7 @@
   "ui_label": "Simulation of the recent past (emissions driven)",
   "description": "DECK: Earth System Model historical simulation \n Historical simulation with Earth System Models",
   "activity": [
-    "damip",
-    "pmip",
-    "firemip"
+    "cmip"
   ],
   "alias": [],
   "end": 2021,
@@ -1030,9 +1022,7 @@
   "ui_label": "Coupled atmosphere-ocean preindustrial control (emissions driven)",
   "description": "DECK: pre-industrial control simulation with Earth System Models \n Pre-industrial control run for Earth System Models",
   "activity": [
-    "damip",
-    "picontrol",
-    "pmip"
+    "cmip"
   ],
   "alias": [],
   "end": -999,
@@ -1101,7 +1091,7 @@
   "ui_label": "pending",
   "description": "pending",
   "activity": [
-    "fast-track"
+    "scenariomip"
   ],
   "alias": [],
   "minimum_number_of_years": 75,
@@ -1119,7 +1109,8 @@
   "@type": [
     "wcrp:experiment",
     "esgvoc:Experiment",
-    "cmip7"
+    "cmip7",
+    "cmip:fast-track"
   ],
   "@id": "esm-scen7-h-pending"
 }
@@ -1128,7 +1119,6 @@
   "ui_label": "pending",
   "description": "pending",
   "activity": [
-    "fast-track",
     "aerchemmip"
   ],
   "alias": [],
@@ -1147,7 +1137,8 @@
   "@type": [
     "wcrp:experiment",
     "esgvoc:Experiment",
-    "cmip7"
+    "cmip7",
+    "cmip:fast-track"
   ],
   "@id": "esm-scen7-h-aer-pending"
 }
@@ -1156,7 +1147,6 @@
   "ui_label": "pending",
   "description": "pending",
   "activity": [
-    "fast-track",
     "aerchemmip"
   ],
   "alias": [],
@@ -1175,7 +1165,8 @@
   "@type": [
     "wcrp:experiment",
     "esgvoc:Experiment",
-    "cmip7"
+    "cmip7",
+    "cmip:fast-track"
   ],
   "@id": "esm-scen7-h-aq-pending"
 }
@@ -1211,7 +1202,7 @@
   "ui_label": "pending",
   "description": "pending",
   "activity": [
-    "fast-track"
+    "scenariomip"
   ],
   "alias": [],
   "minimum_number_of_years": 75,
@@ -1229,7 +1220,8 @@
   "@type": [
     "wcrp:experiment",
     "esgvoc:Experiment",
-    "cmip7"
+    "cmip7",
+    "cmip:fast-track"
   ],
   "@id": "esm-scen7-hl-pending"
 }
@@ -1265,7 +1257,7 @@
   "ui_label": "pending",
   "description": "pending",
   "activity": [
-    "fast-track"
+    "scenariomip"
   ],
   "alias": [],
   "minimum_number_of_years": 75,
@@ -1283,7 +1275,8 @@
   "@type": [
     "wcrp:experiment",
     "esgvoc:Experiment",
-    "cmip7"
+    "cmip7",
+    "cmip:fast-track"
   ],
   "@id": "esm-scen7-l-pending"
 }
@@ -1291,7 +1284,9 @@
   "validation_key": "esm-scen7-l-ext",
   "ui_label": "pending",
   "description": "pending",
-  "activity": [],
+  "activity": [
+    "scenariomip"
+  ],
   "alias": [],
   "minimum_number_of_years": 50,
   "model_realms": [
@@ -1317,7 +1312,7 @@
   "ui_label": "pending",
   "description": "pending",
   "activity": [
-    "fast-track"
+    "scenariomip"
   ],
   "alias": [],
   "minimum_number_of_years": 75,
@@ -1335,7 +1330,8 @@
   "@type": [
     "wcrp:experiment",
     "esgvoc:Experiment",
-    "cmip7"
+    "cmip7",
+    "cmip:fast-track"
   ],
   "@id": "esm-scen7-ln-pending"
 }
@@ -1343,7 +1339,9 @@
   "validation_key": "esm-scen7-ln-ext",
   "ui_label": "pending",
   "description": "pending",
-  "activity": [],
+  "activity": [
+    "scenariomip"
+  ],
   "alias": [],
   "minimum_number_of_years": 50,
   "model_realms": [
@@ -1369,7 +1367,7 @@
   "ui_label": "pending",
   "description": "pending",
   "activity": [
-    "fast-track"
+    "scenariomip"
   ],
   "alias": [],
   "minimum_number_of_years": 75,
@@ -1387,7 +1385,8 @@
   "@type": [
     "wcrp:experiment",
     "esgvoc:Experiment",
-    "cmip7"
+    "cmip7",
+    "cmip:fast-track"
   ],
   "@id": "esm-scen7-m-pending"
 }
@@ -1423,7 +1422,7 @@
   "ui_label": "pending",
   "description": "pending",
   "activity": [
-    "fast-track"
+    "scenariomip"
   ],
   "alias": [],
   "minimum_number_of_years": 75,
@@ -1441,7 +1440,8 @@
   "@type": [
     "wcrp:experiment",
     "esgvoc:Experiment",
-    "cmip7"
+    "cmip7",
+    "cmip:fast-track"
   ],
   "@id": "esm-scen7-ml-pending"
 }
@@ -1477,7 +1477,7 @@
   "ui_label": "pending",
   "description": "pending",
   "activity": [
-    "fast-track"
+    "scenariomip"
   ],
   "alias": [],
   "minimum_number_of_years": 75,
@@ -1495,7 +1495,8 @@
   "@type": [
     "wcrp:experiment",
     "esgvoc:Experiment",
-    "cmip7"
+    "cmip7",
+    "cmip:fast-track"
   ],
   "@id": "esm-scen7-vl-pending"
 }
@@ -1504,7 +1505,6 @@
   "ui_label": "pending",
   "description": "pending",
   "activity": [
-    "fast-track",
     "aerchemmip"
   ],
   "alias": [],
@@ -1523,7 +1523,8 @@
   "@type": [
     "wcrp:experiment",
     "esgvoc:Experiment",
-    "cmip7"
+    "cmip7",
+    "cmip:fast-track"
   ],
   "@id": "esm-scen7-vl-aer-pending"
 }
@@ -1532,7 +1533,6 @@
   "ui_label": "pending",
   "description": "pending",
   "activity": [
-    "fast-track",
     "aerchemmip"
   ],
   "alias": [],
@@ -1551,7 +1551,8 @@
   "@type": [
     "wcrp:experiment",
     "esgvoc:Experiment",
-    "cmip7"
+    "cmip7",
+    "cmip:fast-track"
   ],
   "@id": "esm-scen7-vl-aq-pending"
 }
@@ -1665,7 +1666,7 @@
   "ui_label": "G7-1.5K-SAI",
   "description": "Stratospheric aerosol injection to reduce warming to 1.5K \n Stratospheric aerosol injection to reduce warming to 1.5K above pre-industrial levels",
   "activity": [
-    "fast-track"
+    "geomip"
   ],
   "alias": [],
   "end": -999,
@@ -1681,7 +1682,8 @@
   "@type": [
     "wcrp:experiment",
     "esgvoc:Experiment",
-    "cmip7"
+    "cmip7",
+    "cmip:fast-track"
   ],
   "@id": "g7-1p5k-sai"
 }
@@ -1951,9 +1953,7 @@
   "ui_label": "hist-aer",
   "description": "1. As historical but with only time evolving historical aerosols out to 2021 and then Medium scenario aerosols between 2021 and 2035.  This includes changes in suphur dioxide, black carbon, organic carbon, ammonia, NOx and VOCs, from biomass burning, industrial emissions, and other sources.  Other forcings held at piControl levels. 2. Coupled simulations initialized from the piControl and run to 2021 under historical aerosol emissions and thereafter to 2035 using the medium scenario with other forcings held fixed at piControl levels. 3. Coupled simulations initialized from the piControl and run to 2021 under historical aerosol emissions and thereafter to 2035 using the medium scenario with other forcings held fixed at piControl levels. 4. https://doi.org/10.5194/egusphere-2024-4086 5. As CMIP6 hist-aer. 6. Time evolving historical and then medium scenario aerosol forcings while all other forcings are held at piControl levels.",
   "activity": [
-    "fast-track",
-    "damip",
-    "firemip"
+    "damip"
   ],
   "alias": [],
   "minimum_number_of_years": 186,
@@ -1971,7 +1971,8 @@
   "@type": [
     "wcrp:experiment",
     "esgvoc:Experiment",
-    "cmip7"
+    "cmip7",
+    "cmip:fast-track"
   ],
   "@id": "hist-aer"
 }
@@ -1980,9 +1981,7 @@
   "ui_label": "Historical simulation with time evolving greenhouse gas forcing only and all other forcings at pre-industrial levels.",
   "description": "1.  As the historical simulation but with only the greenhouse gas forcing following that of historical out to 2021 (and the medium scenario from 2022 to 2035) and all other forcings held at pre-industrial levels. 2. As the historical simulation but with alterations to the forcings. 3. 1850 to 2035 coupled simulations with greenhouse gas forcing from the historical followed by medium scenario and all other forcings held fixed at pre-industrial control values.  Stratospheric and tropospheric ozone should be held constant at piControl levels. 4.  https://doi.org/10.5194/egusphere-2024-4086 5. Similar to hist-GHG from CMIP6 but sratospheric and tropospheric ozone should be held fixed. 6. Time evolving greenhouse gases from historical and then medium scenario and other forcings as in the piControl.",
   "activity": [
-    "fast-track",
-    "damip",
-    "firemip"
+    "damip"
   ],
   "alias": [],
   "minimum_number_of_years": 186,
@@ -2000,7 +1999,8 @@
   "@type": [
     "wcrp:experiment",
     "esgvoc:Experiment",
-    "cmip7"
+    "cmip7",
+    "cmip:fast-track"
   ],
   "@id": "hist-ghg"
 }
@@ -2044,9 +2044,7 @@
   "ui_label": "Natural-only historical simulations (solar irradiance, stratospheric aerosol)",
   "description": "1. Experiment performed as the historical experiment but only with time evolving solar and volcanic forcings and pre-industrial forcings used for all other forcings.  Use historical solar and volcanic forcings out to  2021 and the medium scenario solar and volcanic forcings thereafter. 2. As historical but with modified forcings. 3. Historical conditions for solar and volcanic forcings, pre-industrial conditions for everything else. 4. https://doi.org/10.5194/egusphere-2024-4086 5. Similar to hist-nat from CMIP6 but differs in the specification of ozone.  In contrast to CMIP6, no time evolving ozone is prescribed in this experiment. 6. solar irradiance and stratospheric aerosol forcing are as in historical (or medium scenario after 2021), other forcings are as in piControl.",
   "activity": [
-    "fast-track",
-    "damip",
-    "firemip"
+    "damip"
   ],
   "alias": [],
   "minimum_number_of_years": 172,
@@ -2064,7 +2062,8 @@
   "@type": [
     "wcrp:experiment",
     "esgvoc:Experiment",
-    "cmip7"
+    "cmip7",
+    "cmip:fast-track"
   ],
   "@id": "hist-nat"
 }
@@ -2147,9 +2146,7 @@
   "ui_label": "Historical simulation with pre-industrial aerosol",
   "description": "1. Detailed experiment configuration Historical simulation with emissions of aerosol held at pre-industrial (1850) levels  2. Required model settings We encourage modelling centres to include as much atmospheric composition capability as possible. As a minimum, models should have prescribed or interactive aerosols. And the experimental setup should be consistent with other historical experiments.  3. Experiment conditions.  4. Links to relevant references Fiedler et al. (in prep.) AerChemMIP2 - Unraveling the role of reactive gases, aerosols, and land use for air quality and climate change in CMIP7  5. Similarities to CMIP6 experiments: hist-piAer  6. Forcing differences from parent experiment Aerosol and their precursor emissions fixed at year-1850 values.",
   "activity": [
-    "fast-track",
-    "aerchemmip",
-    "damip"
+    "aerchemmip"
   ],
   "alias": [],
   "minimum_number_of_years": 172,
@@ -2175,7 +2172,8 @@
   "@type": [
     "wcrp:experiment",
     "esgvoc:Experiment",
-    "cmip7"
+    "cmip7",
+    "cmip:fast-track"
   ],
   "@id": "hist-piaer"
 }
@@ -2184,9 +2182,7 @@
   "ui_label": "Historical simulation with pre-industrial aerosol and tropospheric non-methane ozone precursors",
   "description": "1. Detailed experiment configuration Historical simulation with emissions of aerosol and tropospheric non-methane ozone precursors held to pre-industrial (1850) levels  2. Required model settings We encourage modelling centres to include as much atmospheric composition capability as possible. But, as a minimum, models should have tropospheric chemistry and interactive aerosols. And the experimental setup should be consistent with other historical experiments.  3. Experiment conditions  4. Links to relevant references Fiedler et al. (in prep.) AerChemMIP2 - Unraveling the role of reactive gases, aerosols, and land use for air quality and climate change in CMIP7  5. Similarities to CMIP6 experiments hist-piNCTF  6. Forcing differences from parent experiment Aerosol, aerosol precursor and tropospheric non-methane ozone precursor emissions fixed at year-1850 values.",
   "activity": [
-    "fast-track",
-    "aerchemmip",
-    "damip"
+    "aerchemmip"
   ],
   "alias": [],
   "minimum_number_of_years": 172,
@@ -2212,7 +2208,8 @@
   "@type": [
     "wcrp:experiment",
     "esgvoc:Experiment",
-    "cmip7"
+    "cmip7",
+    "cmip:fast-track"
   ],
   "@id": "hist-piaq"
 }
@@ -2245,9 +2242,7 @@
   "ui_label": "Simulation of the recent past (concentration driven)",
   "description": "DECK: historical \n Simulation of the recent past",
   "activity": [
-    "damip",
-    "pmip",
-    "firemip"
+    "cmip"
   ],
   "alias": [],
   "end": 2021,
@@ -2313,9 +2308,7 @@
   "ui_label": "Historical land-only simulation",
   "description": "This is a land-only historical simulation from 1850 to 2022.  The land model configuration should be identical to that used in the DECK and CMIP7 coupled historical simulation.  The forcing dataset to be used is [CRUJRA](https://catalogue.ceda.ac.uk/uuid/863a47a6d8414b6982e1396c69a9efe8/), which is also used in the TRENDY project for the Global Carbon Project.  The experimental design is the same as for CMIP6 and is fully described in Section 3.1 of Van den Hurk et al. (2016).  Van den Hurk, B., H. Kim, G. Krinner, S.I. Seneviratne, C. Derksen, T. Oki, H. Douville, J. Colin, A. Ducharne, F. Cheruy, M. Puma, Y. Wada, W. Li, B. Jia, A. Alessandri, D. Lawrence, G.P. Weedon, R. Ellis, S. Hagemann, J. Mao, M.G. Flanner, M. Zampieri, and R. Law, 2016. The Land Surface, Snow and Soil moisture Model Intercomparison Project - aims, setup, and expected outcome. GMD, 9, doi.org/10.5194/gmd-9-2809-2016.",
   "activity": [
-    "fast-track",
-    "lmip",
-    "firemip"
+    "lmip"
   ],
   "alias": [],
   "minimum_number_of_years": 172,
@@ -2337,7 +2330,8 @@
   "@type": [
     "wcrp:experiment",
     "esgvoc:Experiment",
-    "cmip7"
+    "cmip7",
+    "cmip:fast-track"
   ],
   "@id": "land-hist"
 }
@@ -2572,7 +2566,7 @@
   "ui_label": "As piClim-control except CO2 concentrations set to 4 times preindustrial",
   "description": "DECK: effective radiative forcing by 4xCO2 \n Effective radiative forcing by 4xCO2",
   "activity": [
-    "firemip"
+    "cmip"
   ],
   "alias": [],
   "end": -999,
@@ -2597,7 +2591,6 @@
   "ui_label": "Effective radiative forcing by present-day aerosols",
   "description": "A time-slice simulation with present-day aerosol emissions and all other atmospheric components at pre-industrial values. Other than aerosols, model configuration should be identical to the `piClim-control` run in DECK. Simulations are run atmosphere-only, with a 12-month repeating climatology of sea surface temperatures and sea-ice distributions taken from a climatology of at least 30 years of the same model's `piControl` run. Interactive vegetation, if present in the model, should be turned on. Experiment design is identical to CMIP6 `piClim-aer` experiment. Note that the CMIP6 RFMIP reference publication (Pincus et al. 2016) referred to `piClim-aerO3` with present-day aerosols and ozone, but was replaced in favour of `piClim-aer` (Smith et al. 2020).  Pincus, R., Forster, P. M., and Stevens, B.: The Radiative Forcing Model Intercomparison Project (RFMIP): experimental protocol for CMIP6, Geosci. Model Dev., 9, 3447–3460, https://doi.org/10.5194/gmd-9-3447-2016, 2016.  Smith, C. J., Kramer, R. J., Myhre, G., Alterskjær, K., Collins, W., Sima, A., Boucher, O., Dufresne, J.-L., Nabat, P., Michou, M., Yukimoto, S., Cole, J., Paynter, D., Shiogama, H., O'Connor, F. M., Robertson, E., Wiltshire, A., Andrews, T., Hannay, C., Miller, R., Nazarenko, L., Kirkevåg, A., Olivié, D., Fiedler, S., Lewinschal, A., Mackallah, C., Dix, M., Pincus, R., and Forster, P. M.: Effective radiative forcing and adjustments in CMIP6 models, Atmos. Chem. Phys., 20, 9591–9618, https://doi.org/10.5194/acp-20-9591-2020, 2020.",
   "activity": [
-    "fast-track",
     "aerchemmip"
   ],
   "alias": [],
@@ -2629,7 +2622,8 @@
   "@type": [
     "wcrp:experiment",
     "esgvoc:Experiment",
-    "cmip7"
+    "cmip7",
+    "cmip:fast-track"
   ],
   "@id": "piclim-aer"
 }
@@ -2638,8 +2632,7 @@
   "ui_label": "As piClim-control except present-day anthropogenic forcing",
   "description": "DECK: effective radiative forcing by present day anthropogenic forcings \n Effective radiative forcing by present day anthropogenic forcings",
   "activity": [
-    "damip",
-    "firemip"
+    "cmip"
   ],
   "alias": [],
   "end": -999,
@@ -2734,7 +2727,6 @@
   "ui_label": "Pre-industrial climatology with present-day methane",
   "description": "1. Detailed experiment configuration An atmosphere only configuration following piClim but using present-day (2021) methane emissions (or concentrations)  2. Required model settings We encourage modelling centres to include as much atmospheric composition capability as possible. But, as a minimum, models should have tropospheric chemistry and interactive aerosols. And the experimental setup should be consistent with other AerChemMIP2 experiments, particularly piClim-control. For methane, use year-2021 values in both the radiation scheme and the chemistry scheme.   3. Experiment conditions  4. Links to relevant references Fiedler et al. (in prep.) AerChemMIP2 - Unraveling the role of reactive gases, aerosols, and land use for air quality and climate change in CMIP7  5. Similarities to CMIP6 experiments piClim-CH4  6. Forcing differences from parent experiment Present-day (2021) methane",
   "activity": [
-    "fast-track",
     "aerchemmip"
   ],
   "alias": [],
@@ -2757,7 +2749,8 @@
   "@type": [
     "wcrp:experiment",
     "esgvoc:Experiment",
-    "cmip7"
+    "cmip7",
+    "cmip:fast-track"
   ],
   "@id": "piclim-ch4"
 }
@@ -2766,7 +2759,7 @@
   "ui_label": "Pre-industrial conditions, with sea surface temperature (SST/tos) and sea ice concentration (SIC/siconc) prescribed using an annually-repeating climatology from a 30-year or greater period from the piControl simulation of the host model",
   "description": "DECK: Effective radiative forcing control simulation",
   "activity": [
-    "firemip"
+    "cmip"
   ],
   "alias": [],
   "end": -999,
@@ -2815,7 +2808,7 @@
   "ui_label": "historical and future transient effective radiative forcing from aerosols",
   "description": "A simulation with time-varying aerosol emissions following the `historical` and ScenarioMIP `scen7-mc` scenario, and all other atmospheric components at pre-industrial values. Other than aerosols and the fact that this is a time-varying rather than time-slice experiment, model configuration should be identical to the `piClim-control` run in DECK. Simulations are run atmosphere-only, with a 12-month repeating climatology of sea surface temperatures and sea-ice distributions taken from a climatology of at least 30 years of the same model's `piControl` run. Interactive vegetation, if present in the model, should be turned on. Experiment design is similar to CMIP6 `piClim-histaer` experiment with the future scenario changed from `ssp245` to `scen7-mc`. Note that the CMIP6 RFMIP reference publication (Pincus et al. 2016) referred to `piClim-histaerO3` with time-varying aerosols and ozone, but was replaced in favour of `piClim-histaer` (Smith et al. 2021).  Pincus, R., Forster, P. M., and Stevens, B.: The Radiative Forcing Model Intercomparison Project (RFMIP): experimental protocol for CMIP6, Geosci. Model Dev., 9, 3447–3460, https://doi.org/10.5194/gmd-9-3447-2016, 2016.  Smith, C. J., Harris, G. R., Palmer, M. D., Bellouin, N., Collins, W., Myhre, G., et al. (2021). Energy budget constraints on the time history of aerosol forcing and climate sensitivity. Journal of Geophysical Research: Atmospheres, 126, e2020JD033622. https://doi.org/10.1029/2020JD033622",
   "activity": [
-    "fast-track"
+    "rfmip"
   ],
   "alias": [],
   "minimum_number_of_years": 30,
@@ -2845,7 +2838,8 @@
   "@type": [
     "wcrp:experiment",
     "esgvoc:Experiment",
-    "cmip7"
+    "cmip7",
+    "cmip:fast-track"
   ],
   "@id": "piclim-histaer"
 }
@@ -2854,7 +2848,7 @@
   "ui_label": "historical and future transient effective radiative forcing from all forcers",
   "description": "A simulation with *all* time-varying forcings (*both natural and anthropogenic*) following the historical and ScenarioMIP `scen7-mc` scenario. Greenhouse gases should be prescribed concentrations. Simulations are run atmosphere-only, with a 12-month repeating climatology of sea surface temperatures and sea-ice distributions taken from a climatology of at least 30 years of the same model's `piControl` run. Interactive vegetation, if present in the model, should be turned on. Experiment design is similar to CMIP6 `piClim-histall` experiment (Pincus et al. 2016) with the future scenario changed from `ssp245` to `scen7-mc`.  Pincus, R., Forster, P. M., and Stevens, B.: The Radiative Forcing Model Intercomparison Project (RFMIP): experimental protocol for CMIP6, Geosci. Model Dev., 9, 3447–3460, https://doi.org/10.5194/gmd-9-3447-2016, 2016.",
   "activity": [
-    "fast-track"
+    "rfmip"
   ],
   "alias": [],
   "minimum_number_of_years": 30,
@@ -2884,7 +2878,8 @@
   "@type": [
     "wcrp:experiment",
     "esgvoc:Experiment",
-    "cmip7"
+    "cmip7",
+    "cmip:fast-track"
   ],
   "@id": "piclim-histall"
 }
@@ -2893,7 +2888,6 @@
   "ui_label": "Pre-industrial climatology with present-day nitrous oxide",
   "description": "1. Detailed experiment configuration An atmosphere only configuration following piClim-control but using present-day (2021) N2O  2. Required model settings We encourage modelling centres to include as much atmospheric composition capability as possible. But, as a minimum, models should have stratospheric chemistry. And the experimental setup should be consistent with other AerChemMIP2 experiments, particularly piClim-control.   3. Experiment conditions  4. Links to relevant references Fiedler et al. (in prep.) AerChemMIP2 - Unraveling the role of reactive gases, aerosols, and land use for air quality and climate change in CMIP7  5. Similarities to CMIP6 experiments piClim-N2O  6. Forcing differences from parent experiment Present-day (2021) N2O",
   "activity": [
-    "fast-track",
     "aerchemmip"
   ],
   "alias": [],
@@ -2916,7 +2910,8 @@
   "@type": [
     "wcrp:experiment",
     "esgvoc:Experiment",
-    "cmip7"
+    "cmip7",
+    "cmip:fast-track"
   ],
   "@id": "piclim-n2o"
 }
@@ -2960,7 +2955,6 @@
   "ui_label": "Pre-industrial climatology with present-day nitrogen oxides (NOx)",
   "description": "1. Detailed experiment configuration An atmosphere only configuration following piClim-control but using present-day (2021) NOx  2. Required model settings We encourage modelling centres to include as much atmospheric composition capability as possible. But, as a minimum, models should have tropospheric chemistry and interactive aerosols. And the experimental setup should be consistent with other AerChemMIP2 experiments, particularly piClim-control.  3. Experiment conditions  4. Links to relevant references Fiedler et al. (in prep.) AerChemMIP2 - Unraveling the role of reactive gases, aerosols, and land use for air quality and climate change in CMIP7  5. Similarities to CMIP6 experiments piClim-NOx  6. Forcing differences from parent experiment Present-day (2021) NOx",
   "activity": [
-    "fast-track",
     "aerchemmip"
   ],
   "alias": [],
@@ -2983,7 +2977,8 @@
   "@type": [
     "wcrp:experiment",
     "esgvoc:Experiment",
-    "cmip7"
+    "cmip7",
+    "cmip:fast-track"
   ],
   "@id": "piclim-nox"
 }
@@ -3058,7 +3053,6 @@
   "ui_label": "Pre-industrial climatology with present-day ozone depleting substances",
   "description": "1. Detailed experiment configuration An atmosphere only configuration following piClim-control but using present-day (2021) ozone depleting substances (ODSs)  2. Required model settings We encourage modelling centres to include as much atmospheric composition capability as possible. But, as a minimum, models should have stratospheric chemistry. And the experimental setup should be consistent with other AerChemMIP2 experiments, particularly piClim-control.   3. Experiment conditions  4. Links to relevant references Fiedler et al. (in prep.) AerChemMIP2 - Unraveling the role of reactive gases, aerosols, and land use for air quality and climate change in CMIP7  5. Similarities to CMIP6 experiments piClim-HC  6. Forcing differences from parent experiment Present-day (2021) ozone depleting substances",
   "activity": [
-    "fast-track",
     "aerchemmip"
   ],
   "alias": [],
@@ -3081,7 +3075,8 @@
   "@type": [
     "wcrp:experiment",
     "esgvoc:Experiment",
-    "cmip7"
+    "cmip7",
+    "cmip:fast-track"
   ],
   "@id": "piclim-ods"
 }
@@ -3125,7 +3120,6 @@
   "ui_label": "Pre-industrial climatology with present-day sulphur dioxide",
   "description": "1. Detailed experiment configuration An atmosphere only configuration following piClim-control but using present-day (2021) sulphur dioxide (only)  2. Required model settings We encourage modelling centres to include as much atmospheric composition capability as possible. As a minimum, models should have prescribed or interactive aerosols. And the experimental setup should be consistent with other AerChemMIP2 experiments, particularly piClim-control.  3. Experiment conditions  4. Links to relevant references Fiedler et al. (in prep.) AerChemMIP2 - Unraveling the role of reactive gases, aerosols, and land use for air quality and climate change in CMIP7  5. Similarities to CMIP6 experiments piClim-SO2  6. Forcing differences from parent experiment Present-day (2021) sulphur dioxide emissions",
   "activity": [
-    "fast-track",
     "aerchemmip"
   ],
   "alias": [],
@@ -3152,7 +3146,8 @@
   "@type": [
     "wcrp:experiment",
     "esgvoc:Experiment",
-    "cmip7"
+    "cmip7",
+    "cmip:fast-track"
   ],
   "@id": "piclim-so2"
 }
@@ -3185,10 +3180,7 @@
   "ui_label": "Coupled atmosphere-ocea preindustrial control run (concentration driven)",
   "description": "DECK: pre-industrial control \n Pre-industrial control simulation",
   "activity": [
-    "pmip",
-    "damip",
-    "picontrol",
-    "firemip"
+    "cmip"
   ],
   "alias": [],
   "end": -999,
@@ -3230,7 +3222,7 @@
   "ui_label": "pending",
   "description": "pending",
   "activity": [
-    "fast-track"
+    "scenariomip"
   ],
   "alias": [],
   "minimum_number_of_years": 75,
@@ -3248,7 +3240,8 @@
   "@type": [
     "wcrp:experiment",
     "esgvoc:Experiment",
-    "cmip7"
+    "cmip7",
+    "cmip:fast-track"
   ],
   "@id": "scen7-h-pending"
 }
@@ -3284,7 +3277,7 @@
   "ui_label": "pending",
   "description": "pending",
   "activity": [
-    "fast-track"
+    "scenariomip"
   ],
   "alias": [],
   "minimum_number_of_years": 75,
@@ -3302,7 +3295,8 @@
   "@type": [
     "wcrp:experiment",
     "esgvoc:Experiment",
-    "cmip7"
+    "cmip7",
+    "cmip:fast-track"
   ],
   "@id": "scen7-hl-pending"
 }
@@ -3338,7 +3332,7 @@
   "ui_label": "pending",
   "description": "pending",
   "activity": [
-    "fast-track"
+    "scenariomip"
   ],
   "alias": [],
   "minimum_number_of_years": 75,
@@ -3356,7 +3350,8 @@
   "@type": [
     "wcrp:experiment",
     "esgvoc:Experiment",
-    "cmip7"
+    "cmip7",
+    "cmip:fast-track"
   ],
   "@id": "scen7-l-pending"
 }
@@ -3364,7 +3359,9 @@
   "validation_key": "scen7-l-ext",
   "ui_label": "pending",
   "description": "pending",
-  "activity": [],
+  "activity": [
+    "scenariomip"
+  ],
   "alias": [],
   "minimum_number_of_years": 50,
   "model_realms": [
@@ -3390,7 +3387,7 @@
   "ui_label": "pending",
   "description": "pending",
   "activity": [
-    "fast-track"
+    "scenariomip"
   ],
   "alias": [],
   "minimum_number_of_years": 75,
@@ -3408,7 +3405,8 @@
   "@type": [
     "wcrp:experiment",
     "esgvoc:Experiment",
-    "cmip7"
+    "cmip7",
+    "cmip:fast-track"
   ],
   "@id": "scen7-ln-pending"
 }
@@ -3416,7 +3414,9 @@
   "validation_key": "scen7-ln-ext",
   "ui_label": "pending",
   "description": "pending",
-  "activity": [],
+  "activity": [
+    "scenariomip"
+  ],
   "alias": [],
   "minimum_number_of_years": 50,
   "model_realms": [
@@ -3442,7 +3442,7 @@
   "ui_label": "pending",
   "description": "pending",
   "activity": [
-    "fast-track"
+    "scenariomip"
   ],
   "alias": [],
   "minimum_number_of_years": 75,
@@ -3460,7 +3460,8 @@
   "@type": [
     "wcrp:experiment",
     "esgvoc:Experiment",
-    "cmip7"
+    "cmip7",
+    "cmip:fast-track"
   ],
   "@id": "scen7-m-pending"
 }
@@ -3496,7 +3497,7 @@
   "ui_label": "pending",
   "description": "pending",
   "activity": [
-    "fast-track"
+    "scenariomip"
   ],
   "alias": [],
   "minimum_number_of_years": 75,
@@ -3514,7 +3515,8 @@
   "@type": [
     "wcrp:experiment",
     "esgvoc:Experiment",
-    "cmip7"
+    "cmip7",
+    "cmip:fast-track"
   ],
   "@id": "scen7-ml-pending"
 }
@@ -3550,7 +3552,7 @@
   "ui_label": "pending",
   "description": "pending",
   "activity": [
-    "fast-track"
+    "scenariomip"
   ],
   "alias": [],
   "minimum_number_of_years": 75,
@@ -3568,7 +3570,8 @@
   "@type": [
     "wcrp:experiment",
     "esgvoc:Experiment",
-    "cmip7"
+    "cmip7",
+    "cmip:fast-track"
   ],
   "@id": "scen7-vl-pending"
 }
