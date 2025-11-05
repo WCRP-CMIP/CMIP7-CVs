@@ -1,0 +1,29 @@
+{
+    "validation_key": "temporal_label",
+    "ui_label": "CMIP7 Permissible Temporal Labels",
+    "description": "The complete list of temporal labels used in CMIP7 branding suffixes",
+    "temporal_label": [
+        "tavg",
+        "tclm",
+        "tclmdc",
+        "ti",
+        "tpt",
+        "tstat",
+        "tsum"
+    ],
+    "@context": {
+        "@base": "https://wcrp-cmip.github.io/CMIP7-CVs/project/",
+        "@vocab": "https://esgf.github.io/esgf-vocab/api_documentation/data_descriptors.html#esgvoc.api.data_descriptors.TemporalLabel",
+        "temporal_label": {
+            "@context": "https://github.com/WCRP-CMIP/Variable-Registry/temporal_label/_context",
+            "@container": "@set",
+            "@type": "@id"
+        }
+    },
+    "@type": [
+        "wcrp:temporal_label",
+        "esgvoc:TemporalLabel",
+        "cmip7"
+    ],
+    "@id": "temporal-label"
+}

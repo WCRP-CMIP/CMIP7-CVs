@@ -1,5 +1,5 @@
 {
-    "validation_key": "native-nominal-resolution",
+    "validation_key": "native_nominal_resolution",
     "ui_label": "",
     "description": "",
     "native_nominal_resolution": [

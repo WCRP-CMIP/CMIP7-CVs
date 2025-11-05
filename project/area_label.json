@@ -1,0 +1,25 @@
+{
+    "validation_key": "area_label",
+    "ui_label": "CMIP7 Permissible Area Labels",
+    "description": "The complete list of area labels used in CMIP7 branding suffixes",
+    "area_label": [
+        "air",
+        "lnd",
+        "u"
+    ],
+    "@context": {
+        "@base": "https://wcrp-cmip.github.io/CMIP7-CVs/project/",
+        "@vocab": "https://esgf.github.io/esgf-vocab/api_documentation/data_descriptors.html#esgvoc.api.data_descriptors.AreaLabel",
+        "area_label": {
+            "@context": "https://github.com/WCRP-CMIP/Variable-Registry/area_label/_context",
+            "@container": "@set",
+            "@type": "@id"
+        }
+    },
+    "@type": [
+        "wcrp:area_label",
+        "esgvoc:AreaLabel",
+        "cmip7"
+    ],
+    "@id": "area-label"
+}

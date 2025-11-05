@@ -1,19 +1,18 @@
 {
     "Header": {
         "file": "CMIP7-CVs_experiment_id.json",
-        "file_creation_date": "2025-11-04T17:00:16.649291",
+        "file_creation_date": "2025-11-05T14:20:31.362413",
         "version": "fatal: No names found, cannot describe anything.",
-        "checksum": "md5: 41dbddb71099183d5bab9f4b5f7fcc6e",
+        "checksum": "md5: 7322593ab70a5c7670d0964b59f84b8d",
         "repo_url": "https://github.com/WCRP-CMIP/CMIP7-CVs",
         "repo_prefix": "cmip7",
-        "last_commit": "83e3c3f63a43119d78e30c49c317573d70f0c33d",
+        "last_commit": "a19738a01a0e988b7acc8e3ebce8e65448aee34a",
         "comment": "This is an automatically generated file. Do not edit."
     },
     "experiment_id": {
         "1pctCO2": {
             "activity_id": [
-                "DAMIP",
-                "PMIP"
+                "CMIP"
             ],
             "additional_allowed_model_components": [
                 "AER",
@@ -33,7 +32,6 @@
         },
         "1pctCO2-bgc": {
             "activity_id": [
-                "fast-track",
                 "DAMIP"
             ],
             "additional_allowed_model_components": [
@@ -55,7 +53,6 @@
         },
         "1pctCO2-rad": {
             "activity_id": [
-                "fast-track",
                 "DAMIP"
             ],
             "additional_allowed_model_components": [
@@ -77,7 +74,7 @@
         },
         "G7-1p5K-SAI": {
             "activity_id": [
-                "fast-track"
+                "GeoMIP"
             ],
             "additional_allowed_model_components": [],
             "description": "Stratospheric aerosol injection to reduce warming to 1.5K \n Stratospheric aerosol injection to reduce warming to 1.5K above pre-industrial levels",
@@ -133,8 +130,6 @@
         },
         "abrupt-0p5CO2": {
             "activity_id": [
-                "fast-track",
-                "fast-track",
                 "PMIP"
             ],
             "additional_allowed_model_components": [],
@@ -169,7 +164,6 @@
         },
         "abrupt-127k": {
             "activity_id": [
-                "fast-track",
                 "PMIP"
             ],
             "additional_allowed_model_components": [
@@ -190,8 +184,6 @@
         },
         "abrupt-2xCO2": {
             "activity_id": [
-                "fast-track",
-                "fast-track",
                 "PMIP"
             ],
             "additional_allowed_model_components": [
@@ -212,8 +204,7 @@
         },
         "abrupt-4xCO2": {
             "activity_id": [
-                "PMIP",
-                "DAMIP"
+                "CMIP"
             ],
             "additional_allowed_model_components": [
                 "AER",
@@ -253,8 +244,7 @@
         },
         "amip": {
             "activity_id": [
-                "DAMIP",
-                "CFMIP"
+                "CMIP"
             ],
             "additional_allowed_model_components": [
                 "AER",
@@ -326,9 +316,6 @@
         },
         "amip-p4K": {
             "activity_id": [
-                "fast-track",
-                "DAMIP",
-                "fast-track",
                 "CFMIP"
             ],
             "additional_allowed_model_components": [
@@ -389,9 +376,7 @@
         },
         "amip-piForcing": {
             "activity_id": [
-                "fast-track",
-                "DAMIP",
-                "fast-track"
+                "DAMIP"
             ],
             "additional_allowed_model_components": [
                 "AER",
@@ -479,9 +464,7 @@
         },
         "dcppB-forecast-cmip6": {
             "activity_id": [
-                "fast-track",
-                "DAMIP",
-                "FireMIP"
+                "DCPP"
             ],
             "additional_allowed_model_components": [
                 "AER",
@@ -502,7 +485,7 @@
         },
         "esm-flat10": {
             "activity_id": [
-                "fast-track"
+                "C4MIP"
             ],
             "additional_allowed_model_components": [
                 "AER",
@@ -523,7 +506,7 @@
         },
         "esm-flat10-cdr": {
             "activity_id": [
-                "fast-track"
+                "C4MIP"
             ],
             "additional_allowed_model_components": [
                 "AER",
@@ -544,7 +527,7 @@
         },
         "esm-flat10-zec": {
             "activity_id": [
-                "fast-track"
+                "C4MIP"
             ],
             "additional_allowed_model_components": [
                 "AER",
@@ -565,9 +548,7 @@
         },
         "esm-hist": {
             "activity_id": [
-                "DAMIP",
-                "PMIP",
-                "FireMIP"
+                "CMIP"
             ],
             "additional_allowed_model_components": [
                 "AER",
@@ -587,9 +568,7 @@
         },
         "esm-piControl": {
             "activity_id": [
-                "DAMIP",
-                "picontrol",
-                "PMIP"
+                "CMIP"
             ],
             "additional_allowed_model_components": [
                 "AER",
@@ -625,7 +604,7 @@
         },
         "esm-scen7-h": {
             "activity_id": [
-                "fast-track"
+                "ScenarioMIP"
             ],
             "additional_allowed_model_components": [],
             "description": "pending",
@@ -641,7 +620,6 @@
         },
         "esm-scen7-h-AQ": {
             "activity_id": [
-                "fast-track",
                 "AerChemMIP"
             ],
             "additional_allowed_model_components": [],
@@ -658,7 +636,6 @@
         },
         "esm-scen7-h-Aer": {
             "activity_id": [
-                "fast-track",
                 "AerChemMIP"
             ],
             "additional_allowed_model_components": [],
@@ -691,7 +668,7 @@
         },
         "esm-scen7-hl": {
             "activity_id": [
-                "fast-track"
+                "ScenarioMIP"
             ],
             "additional_allowed_model_components": [],
             "description": "pending",
@@ -723,7 +700,7 @@
         },
         "esm-scen7-l": {
             "activity_id": [
-                "fast-track"
+                "ScenarioMIP"
             ],
             "additional_allowed_model_components": [],
             "description": "pending",
@@ -738,7 +715,9 @@
             ]
         },
         "esm-scen7-l-ext": {
-            "activity_id": [],
+            "activity_id": [
+                "ScenarioMIP"
+            ],
             "additional_allowed_model_components": [],
             "description": "pending",
             "experiment": "pending",
@@ -753,7 +732,7 @@
         },
         "esm-scen7-ln": {
             "activity_id": [
-                "fast-track"
+                "ScenarioMIP"
             ],
             "additional_allowed_model_components": [],
             "description": "pending",
@@ -768,7 +747,9 @@
             ]
         },
         "esm-scen7-ln-ext": {
-            "activity_id": [],
+            "activity_id": [
+                "ScenarioMIP"
+            ],
             "additional_allowed_model_components": [],
             "description": "pending",
             "experiment": "pending",
@@ -783,7 +764,7 @@
         },
         "esm-scen7-m": {
             "activity_id": [
-                "fast-track"
+                "ScenarioMIP"
             ],
             "additional_allowed_model_components": [],
             "description": "pending",
@@ -815,7 +796,7 @@
         },
         "esm-scen7-ml": {
             "activity_id": [
-                "fast-track"
+                "ScenarioMIP"
             ],
             "additional_allowed_model_components": [],
             "description": "pending",
@@ -847,7 +828,7 @@
         },
         "esm-scen7-vl": {
             "activity_id": [
-                "fast-track"
+                "ScenarioMIP"
             ],
             "additional_allowed_model_components": [],
             "description": "pending",
@@ -863,7 +844,6 @@
         },
         "esm-scen7-vl-AQ": {
             "activity_id": [
-                "fast-track",
                 "AerChemMIP"
             ],
             "additional_allowed_model_components": [],
@@ -880,7 +860,6 @@
         },
         "esm-scen7-vl-Aer": {
             "activity_id": [
-                "fast-track",
                 "AerChemMIP"
             ],
             "additional_allowed_model_components": [],
@@ -1089,9 +1068,7 @@
         },
         "hist-GHG": {
             "activity_id": [
-                "fast-track",
-                "DAMIP",
-                "FireMIP"
+                "DAMIP"
             ],
             "additional_allowed_model_components": [],
             "description": "1.  As the historical simulation but with only the greenhouse gas forcing following that of historical out to 2021 (and the medium scenario from 2022 to 2035) and all other forcings held at pre-industrial levels. 2. As the historical simulation but with alterations to the forcings. 3. 1850 to 2035 coupled simulations with greenhouse gas forcing from the historical followed by medium scenario and all other forcings held fixed at pre-industrial control values.  Stratospheric and tropospheric ozone should be held constant at piControl levels. 4.  https://doi.org/10.5194/egusphere-2024-4086 5. Similar to hist-GHG from CMIP6 but sratospheric and tropospheric ozone should be held fixed. 6. Time evolving greenhouse gases from historical and then medium scenario and other forcings as in the piControl.",
@@ -1107,9 +1084,7 @@
         },
         "hist-aer": {
             "activity_id": [
-                "fast-track",
-                "DAMIP",
-                "FireMIP"
+                "DAMIP"
             ],
             "additional_allowed_model_components": [],
             "description": "1. As historical but with only time evolving historical aerosols out to 2021 and then Medium scenario aerosols between 2021 and 2035.  This includes changes in suphur dioxide, black carbon, organic carbon, ammonia, NOx and VOCs, from biomass burning, industrial emissions, and other sources.  Other forcings held at piControl levels. 2. Coupled simulations initialized from the piControl and run to 2021 under historical aerosol emissions and thereafter to 2035 using the medium scenario with other forcings held fixed at piControl levels. 3. Coupled simulations initialized from the piControl and run to 2021 under historical aerosol emissions and thereafter to 2035 using the medium scenario with other forcings held fixed at piControl levels. 4. https://doi.org/10.5194/egusphere-2024-4086 5. As CMIP6 hist-aer. 6. Time evolving historical and then medium scenario aerosol forcings while all other forcings are held at piControl levels.",
@@ -1143,9 +1118,7 @@
         },
         "hist-nat": {
             "activity_id": [
-                "fast-track",
-                "DAMIP",
-                "FireMIP"
+                "DAMIP"
             ],
             "additional_allowed_model_components": [],
             "description": "1. Experiment performed as the historical experiment but only with time evolving solar and volcanic forcings and pre-industrial forcings used for all other forcings.  Use historical solar and volcanic forcings out to  2021 and the medium scenario solar and volcanic forcings thereafter. 2. As historical but with modified forcings. 3. Historical conditions for solar and volcanic forcings, pre-industrial conditions for everything else. 4. https://doi.org/10.5194/egusphere-2024-4086 5. Similar to hist-nat from CMIP6 but differs in the specification of ozone.  In contrast to CMIP6, no time evolving ozone is prescribed in this experiment. 6. solar irradiance and stratospheric aerosol forcing are as in historical (or medium scenario after 2021), other forcings are as in piControl.",
@@ -1199,9 +1172,7 @@
         },
         "hist-piAQ": {
             "activity_id": [
-                "fast-track",
-                "AerChemMIP",
-                "DAMIP"
+                "AerChemMIP"
             ],
             "additional_allowed_model_components": [],
             "description": "1. Detailed experiment configuration Historical simulation with emissions of aerosol and tropospheric non-methane ozone precursors held to pre-industrial (1850) levels  2. Required model settings We encourage modelling centres to include as much atmospheric composition capability as possible. But, as a minimum, models should have tropospheric chemistry and interactive aerosols. And the experimental setup should be consistent with other historical experiments.  3. Experiment conditions  4. Links to relevant references Fiedler et al. (in prep.) AerChemMIP2 - Unraveling the role of reactive gases, aerosols, and land use for air quality and climate change in CMIP7  5. Similarities to CMIP6 experiments hist-piNCTF  6. Forcing differences from parent experiment Aerosol, aerosol precursor and tropospheric non-methane ozone precursor emissions fixed at year-1850 values.",
@@ -1219,9 +1190,7 @@
         },
         "hist-piAer": {
             "activity_id": [
-                "fast-track",
-                "AerChemMIP",
-                "DAMIP"
+                "AerChemMIP"
             ],
             "additional_allowed_model_components": [
                 "CHEM"
@@ -1254,9 +1223,7 @@
         },
         "historical": {
             "activity_id": [
-                "DAMIP",
-                "PMIP",
-                "FireMIP"
+                "CMIP"
             ],
             "additional_allowed_model_components": [
                 "AER",
@@ -1276,9 +1243,7 @@
         },
         "land-hist": {
             "activity_id": [
-                "fast-track",
-                "LMIP",
-                "FireMIP"
+                "LMIP"
             ],
             "additional_allowed_model_components": [
                 "BGC"
@@ -1406,7 +1371,7 @@
         },
         "piClim-4xCO2": {
             "activity_id": [
-                "FireMIP"
+                "CMIP"
             ],
             "additional_allowed_model_components": [],
             "description": "DECK: effective radiative forcing by 4xCO2 \n Effective radiative forcing by 4xCO2",
@@ -1457,7 +1422,6 @@
         },
         "piClim-CH4": {
             "activity_id": [
-                "fast-track",
                 "AerChemMIP"
             ],
             "additional_allowed_model_components": [],
@@ -1489,7 +1453,6 @@
         },
         "piClim-N2O": {
             "activity_id": [
-                "fast-track",
                 "AerChemMIP"
             ],
             "additional_allowed_model_components": [],
@@ -1526,7 +1489,6 @@
         },
         "piClim-NOx": {
             "activity_id": [
-                "fast-track",
                 "AerChemMIP"
             ],
             "additional_allowed_model_components": [],
@@ -1580,7 +1542,6 @@
         },
         "piClim-ODS": {
             "activity_id": [
-                "fast-track",
                 "AerChemMIP"
             ],
             "additional_allowed_model_components": [],
@@ -1598,7 +1559,6 @@
         },
         "piClim-SO2": {
             "activity_id": [
-                "fast-track",
                 "AerChemMIP"
             ],
             "additional_allowed_model_components": [
@@ -1632,7 +1592,6 @@
         },
         "piClim-aer": {
             "activity_id": [
-                "fast-track",
                 "AerChemMIP"
             ],
             "additional_allowed_model_components": [
@@ -1653,8 +1612,7 @@
         },
         "piClim-anthro": {
             "activity_id": [
-                "DAMIP",
-                "FireMIP"
+                "CMIP"
             ],
             "additional_allowed_model_components": [],
             "description": "DECK: effective radiative forcing by present day anthropogenic forcings \n Effective radiative forcing by present day anthropogenic forcings",
@@ -1668,7 +1626,7 @@
         },
         "piClim-control": {
             "activity_id": [
-                "FireMIP"
+                "CMIP"
             ],
             "additional_allowed_model_components": [],
             "description": "DECK: Effective radiative forcing control simulation",
@@ -1682,7 +1640,7 @@
         },
         "piClim-histaer": {
             "activity_id": [
-                "fast-track"
+                "RFMIP"
             ],
             "additional_allowed_model_components": [
                 "AER",
@@ -1702,7 +1660,7 @@
         },
         "piClim-histall": {
             "activity_id": [
-                "fast-track"
+                "RFMIP"
             ],
             "additional_allowed_model_components": [
                 "AER",
@@ -1741,10 +1699,7 @@
         },
         "picontrol": {
             "activity_id": [
-                "PMIP",
-                "DAMIP",
-                "picontrol",
-                "FireMIP"
+                "CMIP"
             ],
             "additional_allowed_model_components": [
                 "AER",
@@ -1764,7 +1719,7 @@
         },
         "scen7-h": {
             "activity_id": [
-                "fast-track"
+                "ScenarioMIP"
             ],
             "additional_allowed_model_components": [],
             "description": "pending",
@@ -1796,7 +1751,7 @@
         },
         "scen7-hl": {
             "activity_id": [
-                "fast-track"
+                "ScenarioMIP"
             ],
             "additional_allowed_model_components": [],
             "description": "pending",
@@ -1828,7 +1783,7 @@
         },
         "scen7-l": {
             "activity_id": [
-                "fast-track"
+                "ScenarioMIP"
             ],
             "additional_allowed_model_components": [],
             "description": "pending",
@@ -1843,7 +1798,9 @@
             ]
         },
         "scen7-l-ext": {
-            "activity_id": [],
+            "activity_id": [
+                "ScenarioMIP"
+            ],
             "additional_allowed_model_components": [],
             "description": "pending",
             "experiment": "pending",
@@ -1858,7 +1815,7 @@
         },
         "scen7-ln": {
             "activity_id": [
-                "fast-track"
+                "ScenarioMIP"
             ],
             "additional_allowed_model_components": [],
             "description": "pending",
@@ -1873,7 +1830,9 @@
             ]
         },
         "scen7-ln-ext": {
-            "activity_id": [],
+            "activity_id": [
+                "ScenarioMIP"
+            ],
             "additional_allowed_model_components": [],
             "description": "pending",
             "experiment": "pending",
@@ -1888,7 +1847,7 @@
         },
         "scen7-m": {
             "activity_id": [
-                "fast-track"
+                "ScenarioMIP"
             ],
             "additional_allowed_model_components": [],
             "description": "pending",
@@ -1920,7 +1879,7 @@
         },
         "scen7-ml": {
             "activity_id": [
-                "fast-track"
+                "ScenarioMIP"
             ],
             "additional_allowed_model_components": [],
             "description": "pending",
@@ -1952,7 +1911,7 @@
         },
         "scen7-vl": {
             "activity_id": [
-                "fast-track"
+                "ScenarioMIP"
             ],
             "additional_allowed_model_components": [],
             "description": "pending",

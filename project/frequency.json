@@ -1,5 +1,5 @@
 {
-    "validation_key": "cmip7-frequency",
+    "validation_key": "frequency",
     "ui_label": "CMIP7 Permissible Frequencies",
     "description": "The complete list of frequencies used in CMIP7",
     "frequency": [
