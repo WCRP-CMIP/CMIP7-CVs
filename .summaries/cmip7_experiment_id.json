@@ -1,12 +1,12 @@
 {
     "Header": {
         "file": "cmip7_experiment_id.json",
-        "file_creation_date": "2025-11-05T14:57:00.846551",
+        "file_creation_date": "2025-11-05T15:30:27.931839",
         "version": "fatal: No names found, cannot describe anything.",
-        "checksum": "md5: 7322593ab70a5c7670d0964b59f84b8d",
+        "checksum": "md5: 2145d749214a8b9ec4c9b5b3ab3d5444",
         "repo_url": "https://github.com/WCRP-CMIP/CMIP7-CVs",
         "repo_prefix": "cmip7",
-        "last_commit": "c15a742a9429c3f831eab8a8ac1c030b859bc788",
+        "last_commit": "38b19e12a6aa1bf6a022d035848deb43f926799b",
         "comment": "This is an automatically generated file. Do not edit."
     },
     "experiment_id": {
@@ -932,7 +932,7 @@
         },
         "highres-future-scen7-m": {
             "activity_id": [
-                "highresmip2"
+                "HighResMIP"
             ],
             "additional_allowed_model_components": [],
             "description": "pending",
@@ -968,7 +968,7 @@
         },
         "highresSST-p2K-pat": {
             "activity_id": [
-                "highresmip2"
+                "HighResMIP"
             ],
             "additional_allowed_model_components": [
                 "AER",
@@ -988,7 +988,7 @@
         },
         "highresSST-p4K-pat": {
             "activity_id": [
-                "highresmip2"
+                "HighResMIP"
             ],
             "additional_allowed_model_components": [
                 "AER",
@@ -1048,7 +1048,7 @@
         },
         "hist-1950": {
             "activity_id": [
-                "highresmip2"
+                "HighResMIP"
             ],
             "additional_allowed_model_components": [
                 "AER",
