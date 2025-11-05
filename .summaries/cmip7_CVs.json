@@ -1,15 +1,15 @@
 {
     "Header": {
-        "file": "./",
-        "file_creation_date": "2025-11-04T17:01:51.903503",
+        "file": "cmip7_CVs.json",
+        "file_creation_date": "2025-11-05T15:27:03.362429",
         "version": "fatal: No names found, cannot describe anything.",
-        "checksum": "md5: c455d47d31ce7d5adf6ba92925d65f42",
+        "checksum": "md5: a635761c496d99eb57913cf90a43beef",
         "repo_url": "https://github.com/WCRP-CMIP/CMIP7-CVs",
         "repo_prefix": "cmip7",
-        "last_commit": "83e3c3f63a43119d78e30c49c317573d70f0c33d",
+        "last_commit": "38b19e12a6aa1bf6a022d035848deb43f926799b",
         "comment": "This is an automatically generated file. Do not edit."
     },
-    "CVs": {
+    "CV": {
         "activity_id": {
             "AerChemMIP": "AerChemMIP experiments focus on the role of atmospheric chemistry and aerosols in climate, including piClim and hist-piSLCF simulations.",
             "C4MIP": "C4MIP experiments focus on carbon cycle feedbacks and interactions, including 1pctCO2-bgc and esm-flat10-cdr experiments.",
@@ -24,11 +24,15 @@
             "RFMIP": "RFMIP assesses the radiative forcing of climate change with experiments such as piClim-aer, piClim-histaer, and piClim-histall.",
             "ScenarioMIP": "ScenarioMIP focuses on future climate projections based on different socio-economic pathways, including High, Medium, and Very Low scenarios."
         },
+        "area_label": {
+            "": "unmasked (no \"where\" directive included in the cell_methods)",
+            "air": "Variables calculated over atmospheric air regions, typically representing conditions in the atmosphere above the surface. Used for atmospheric composition, temperature, humidity, and other meteorological variables.",
+            "lnd": "Variables calculated over land surface areas, including soil, vegetation, and terrestrial ecosystems. Used for land surface temperature, soil moisture, vegetation indices, and other terrestrial variables."
+        },
         "experiment_id": {
             "1pctCO2": {
                 "activity_id": [
-                    "DAMIP",
-                    "PMIP"
+                    "CMIP"
                 ],
                 "additional_allowed_model_components": [
                     "AER",
@@ -48,7 +52,6 @@
             },
             "1pctCO2-bgc": {
                 "activity_id": [
-                    "fast-track",
                     "DAMIP"
                 ],
                 "additional_allowed_model_components": [
@@ -70,7 +73,6 @@
             },
             "1pctCO2-rad": {
                 "activity_id": [
-                    "fast-track",
                     "DAMIP"
                 ],
                 "additional_allowed_model_components": [
@@ -92,7 +94,7 @@
             },
             "G7-1p5K-SAI": {
                 "activity_id": [
-                    "fast-track"
+                    "GeoMIP"
                 ],
                 "additional_allowed_model_components": [],
                 "description": "Stratospheric aerosol injection to reduce warming to 1.5K \n Stratospheric aerosol injection to reduce warming to 1.5K above pre-industrial levels",
@@ -148,8 +150,6 @@
             },
             "abrupt-0p5CO2": {
                 "activity_id": [
-                    "fast-track",
-                    "fast-track",
                     "PMIP"
                 ],
                 "additional_allowed_model_components": [],
@@ -184,7 +184,6 @@
             },
             "abrupt-127k": {
                 "activity_id": [
-                    "fast-track",
                     "PMIP"
                 ],
                 "additional_allowed_model_components": [
@@ -205,8 +204,6 @@
             },
             "abrupt-2xCO2": {
                 "activity_id": [
-                    "fast-track",
-                    "fast-track",
                     "PMIP"
                 ],
                 "additional_allowed_model_components": [
@@ -227,8 +224,7 @@
             },
             "abrupt-4xCO2": {
                 "activity_id": [
-                    "PMIP",
-                    "DAMIP"
+                    "CMIP"
                 ],
                 "additional_allowed_model_components": [
                     "AER",
@@ -268,8 +264,7 @@
             },
             "amip": {
                 "activity_id": [
-                    "DAMIP",
-                    "CFMIP"
+                    "CMIP"
                 ],
                 "additional_allowed_model_components": [
                     "AER",
@@ -341,9 +336,6 @@
             },
             "amip-p4K": {
                 "activity_id": [
-                    "fast-track",
-                    "DAMIP",
-                    "fast-track",
                     "CFMIP"
                 ],
                 "additional_allowed_model_components": [
@@ -404,9 +396,7 @@
             },
             "amip-piForcing": {
                 "activity_id": [
-                    "fast-track",
-                    "DAMIP",
-                    "fast-track"
+                    "DAMIP"
                 ],
                 "additional_allowed_model_components": [
                     "AER",
@@ -494,9 +484,7 @@
             },
             "dcppB-forecast-cmip6": {
                 "activity_id": [
-                    "fast-track",
-                    "DAMIP",
-                    "FireMIP"
+                    "DCPP"
                 ],
                 "additional_allowed_model_components": [
                     "AER",
@@ -517,7 +505,7 @@
             },
             "esm-flat10": {
                 "activity_id": [
-                    "fast-track"
+                    "C4MIP"
                 ],
                 "additional_allowed_model_components": [
                     "AER",
@@ -538,7 +526,7 @@
             },
             "esm-flat10-cdr": {
                 "activity_id": [
-                    "fast-track"
+                    "C4MIP"
                 ],
                 "additional_allowed_model_components": [
                     "AER",
@@ -559,7 +547,7 @@
             },
             "esm-flat10-zec": {
                 "activity_id": [
-                    "fast-track"
+                    "C4MIP"
                 ],
                 "additional_allowed_model_components": [
                     "AER",
@@ -580,9 +568,7 @@
             },
             "esm-hist": {
                 "activity_id": [
-                    "DAMIP",
-                    "PMIP",
-                    "FireMIP"
+                    "CMIP"
                 ],
                 "additional_allowed_model_components": [
                     "AER",
@@ -602,9 +588,7 @@
             },
             "esm-piControl": {
                 "activity_id": [
-                    "DAMIP",
-                    "picontrol",
-                    "PMIP"
+                    "CMIP"
                 ],
                 "additional_allowed_model_components": [
                     "AER",
@@ -640,7 +624,7 @@
             },
             "esm-scen7-h": {
                 "activity_id": [
-                    "fast-track"
+                    "ScenarioMIP"
                 ],
                 "additional_allowed_model_components": [],
                 "description": "pending",
@@ -656,7 +640,6 @@
             },
             "esm-scen7-h-AQ": {
                 "activity_id": [
-                    "fast-track",
                     "AerChemMIP"
                 ],
                 "additional_allowed_model_components": [],
@@ -673,7 +656,6 @@
             },
             "esm-scen7-h-Aer": {
                 "activity_id": [
-                    "fast-track",
                     "AerChemMIP"
                 ],
                 "additional_allowed_model_components": [],
@@ -706,7 +688,7 @@
             },
             "esm-scen7-hl": {
                 "activity_id": [
-                    "fast-track"
+                    "ScenarioMIP"
                 ],
                 "additional_allowed_model_components": [],
                 "description": "pending",
@@ -738,7 +720,7 @@
             },
             "esm-scen7-l": {
                 "activity_id": [
-                    "fast-track"
+                    "ScenarioMIP"
                 ],
                 "additional_allowed_model_components": [],
                 "description": "pending",
@@ -753,7 +735,9 @@
                 ]
             },
             "esm-scen7-l-ext": {
-                "activity_id": [],
+                "activity_id": [
+                    "ScenarioMIP"
+                ],
                 "additional_allowed_model_components": [],
                 "description": "pending",
                 "experiment": "pending",
@@ -768,7 +752,7 @@
             },
             "esm-scen7-ln": {
                 "activity_id": [
-                    "fast-track"
+                    "ScenarioMIP"
                 ],
                 "additional_allowed_model_components": [],
                 "description": "pending",
@@ -783,7 +767,9 @@
                 ]
             },
             "esm-scen7-ln-ext": {
-                "activity_id": [],
+                "activity_id": [
+                    "ScenarioMIP"
+                ],
                 "additional_allowed_model_components": [],
                 "description": "pending",
                 "experiment": "pending",
@@ -798,7 +784,7 @@
             },
             "esm-scen7-m": {
                 "activity_id": [
-                    "fast-track"
+                    "ScenarioMIP"
                 ],
                 "additional_allowed_model_components": [],
                 "description": "pending",
@@ -830,7 +816,7 @@
             },
             "esm-scen7-ml": {
                 "activity_id": [
-                    "fast-track"
+                    "ScenarioMIP"
                 ],
                 "additional_allowed_model_components": [],
                 "description": "pending",
@@ -862,7 +848,7 @@
             },
             "esm-scen7-vl": {
                 "activity_id": [
-                    "fast-track"
+                    "ScenarioMIP"
                 ],
                 "additional_allowed_model_components": [],
                 "description": "pending",
@@ -878,7 +864,6 @@
             },
             "esm-scen7-vl-AQ": {
                 "activity_id": [
-                    "fast-track",
                     "AerChemMIP"
                 ],
                 "additional_allowed_model_components": [],
@@ -895,7 +880,6 @@
             },
             "esm-scen7-vl-Aer": {
                 "activity_id": [
-                    "fast-track",
                     "AerChemMIP"
                 ],
                 "additional_allowed_model_components": [],
@@ -1104,9 +1088,7 @@
             },
             "hist-GHG": {
                 "activity_id": [
-                    "fast-track",
-                    "DAMIP",
-                    "FireMIP"
+                    "DAMIP"
                 ],
                 "additional_allowed_model_components": [],
                 "description": "1.  As the historical simulation but with only the greenhouse gas forcing following that of historical out to 2021 (and the medium scenario from 2022 to 2035) and all other forcings held at pre-industrial levels. 2. As the historical simulation but with alterations to the forcings. 3. 1850 to 2035 coupled simulations with greenhouse gas forcing from the historical followed by medium scenario and all other forcings held fixed at pre-industrial control values.  Stratospheric and tropospheric ozone should be held constant at piControl levels. 4.  https://doi.org/10.5194/egusphere-2024-4086 5. Similar to hist-GHG from CMIP6 but sratospheric and tropospheric ozone should be held fixed. 6. Time evolving greenhouse gases from historical and then medium scenario and other forcings as in the piControl.",
@@ -1122,9 +1104,7 @@
             },
             "hist-aer": {
                 "activity_id": [
-                    "fast-track",
-                    "DAMIP",
-                    "FireMIP"
+                    "DAMIP"
                 ],
                 "additional_allowed_model_components": [],
                 "description": "1. As historical but with only time evolving historical aerosols out to 2021 and then Medium scenario aerosols between 2021 and 2035.  This includes changes in suphur dioxide, black carbon, organic carbon, ammonia, NOx and VOCs, from biomass burning, industrial emissions, and other sources.  Other forcings held at piControl levels. 2. Coupled simulations initialized from the piControl and run to 2021 under historical aerosol emissions and thereafter to 2035 using the medium scenario with other forcings held fixed at piControl levels. 3. Coupled simulations initialized from the piControl and run to 2021 under historical aerosol emissions and thereafter to 2035 using the medium scenario with other forcings held fixed at piControl levels. 4. https://doi.org/10.5194/egusphere-2024-4086 5. As CMIP6 hist-aer. 6. Time evolving historical and then medium scenario aerosol forcings while all other forcings are held at piControl levels.",
@@ -1158,9 +1138,7 @@
             },
             "hist-nat": {
                 "activity_id": [
-                    "fast-track",
-                    "DAMIP",
-                    "FireMIP"
+                    "DAMIP"
                 ],
                 "additional_allowed_model_components": [],
                 "description": "1. Experiment performed as the historical experiment but only with time evolving solar and volcanic forcings and pre-industrial forcings used for all other forcings.  Use historical solar and volcanic forcings out to  2021 and the medium scenario solar and volcanic forcings thereafter. 2. As historical but with modified forcings. 3. Historical conditions for solar and volcanic forcings, pre-industrial conditions for everything else. 4. https://doi.org/10.5194/egusphere-2024-4086 5. Similar to hist-nat from CMIP6 but differs in the specification of ozone.  In contrast to CMIP6, no time evolving ozone is prescribed in this experiment. 6. solar irradiance and stratospheric aerosol forcing are as in historical (or medium scenario after 2021), other forcings are as in piControl.",
@@ -1214,9 +1192,7 @@
             },
             "hist-piAQ": {
                 "activity_id": [
-                    "fast-track",
-                    "AerChemMIP",
-                    "DAMIP"
+                    "AerChemMIP"
                 ],
                 "additional_allowed_model_components": [],
                 "description": "1. Detailed experiment configuration Historical simulation with emissions of aerosol and tropospheric non-methane ozone precursors held to pre-industrial (1850) levels  2. Required model settings We encourage modelling centres to include as much atmospheric composition capability as possible. But, as a minimum, models should have tropospheric chemistry and interactive aerosols. And the experimental setup should be consistent with other historical experiments.  3. Experiment conditions  4. Links to relevant references Fiedler et al. (in prep.) AerChemMIP2 - Unraveling the role of reactive gases, aerosols, and land use for air quality and climate change in CMIP7  5. Similarities to CMIP6 experiments hist-piNCTF  6. Forcing differences from parent experiment Aerosol, aerosol precursor and tropospheric non-methane ozone precursor emissions fixed at year-1850 values.",
@@ -1234,9 +1210,7 @@
             },
             "hist-piAer": {
                 "activity_id": [
-                    "fast-track",
-                    "AerChemMIP",
-                    "DAMIP"
+                    "AerChemMIP"
                 ],
                 "additional_allowed_model_components": [
                     "CHEM"
@@ -1269,9 +1243,7 @@
             },
             "historical": {
                 "activity_id": [
-                    "DAMIP",
-                    "PMIP",
-                    "FireMIP"
+                    "CMIP"
                 ],
                 "additional_allowed_model_components": [
                     "AER",
@@ -1291,9 +1263,7 @@
             },
             "land-hist": {
                 "activity_id": [
-                    "fast-track",
-                    "LMIP",
-                    "FireMIP"
+                    "LMIP"
                 ],
                 "additional_allowed_model_components": [
                     "BGC"
@@ -1421,7 +1391,7 @@
             },
             "piClim-4xCO2": {
                 "activity_id": [
-                    "FireMIP"
+                    "CMIP"
                 ],
                 "additional_allowed_model_components": [],
                 "description": "DECK: effective radiative forcing by 4xCO2 \n Effective radiative forcing by 4xCO2",
@@ -1472,7 +1442,6 @@
             },
             "piClim-CH4": {
                 "activity_id": [
-                    "fast-track",
                     "AerChemMIP"
                 ],
                 "additional_allowed_model_components": [],
@@ -1504,7 +1473,6 @@
             },
             "piClim-N2O": {
                 "activity_id": [
-                    "fast-track",
                     "AerChemMIP"
                 ],
                 "additional_allowed_model_components": [],
@@ -1541,7 +1509,6 @@
             },
             "piClim-NOx": {
                 "activity_id": [
-                    "fast-track",
                     "AerChemMIP"
                 ],
                 "additional_allowed_model_components": [],
@@ -1595,7 +1562,6 @@
             },
             "piClim-ODS": {
                 "activity_id": [
-                    "fast-track",
                     "AerChemMIP"
                 ],
                 "additional_allowed_model_components": [],
@@ -1613,7 +1579,6 @@
             },
             "piClim-SO2": {
                 "activity_id": [
-                    "fast-track",
                     "AerChemMIP"
                 ],
                 "additional_allowed_model_components": [
@@ -1647,7 +1612,6 @@
             },
             "piClim-aer": {
                 "activity_id": [
-                    "fast-track",
                     "AerChemMIP"
                 ],
                 "additional_allowed_model_components": [
@@ -1668,8 +1632,7 @@
             },
             "piClim-anthro": {
                 "activity_id": [
-                    "DAMIP",
-                    "FireMIP"
+                    "CMIP"
                 ],
                 "additional_allowed_model_components": [],
                 "description": "DECK: effective radiative forcing by present day anthropogenic forcings \n Effective radiative forcing by present day anthropogenic forcings",
@@ -1683,7 +1646,7 @@
             },
             "piClim-control": {
                 "activity_id": [
-                    "FireMIP"
+                    "CMIP"
                 ],
                 "additional_allowed_model_components": [],
                 "description": "DECK: Effective radiative forcing control simulation",
@@ -1697,7 +1660,7 @@
             },
             "piClim-histaer": {
                 "activity_id": [
-                    "fast-track"
+                    "RFMIP"
                 ],
                 "additional_allowed_model_components": [
                     "AER",
@@ -1717,7 +1680,7 @@
             },
             "piClim-histall": {
                 "activity_id": [
-                    "fast-track"
+                    "RFMIP"
                 ],
                 "additional_allowed_model_components": [
                     "AER",
@@ -1756,10 +1719,7 @@
             },
             "picontrol": {
                 "activity_id": [
-                    "PMIP",
-                    "DAMIP",
-                    "picontrol",
-                    "FireMIP"
+                    "CMIP"
                 ],
                 "additional_allowed_model_components": [
                     "AER",
@@ -1779,7 +1739,7 @@
             },
             "scen7-h": {
                 "activity_id": [
-                    "fast-track"
+                    "ScenarioMIP"
                 ],
                 "additional_allowed_model_components": [],
                 "description": "pending",
@@ -1811,7 +1771,7 @@
             },
             "scen7-hl": {
                 "activity_id": [
-                    "fast-track"
+                    "ScenarioMIP"
                 ],
                 "additional_allowed_model_components": [],
                 "description": "pending",
@@ -1843,7 +1803,7 @@
             },
             "scen7-l": {
                 "activity_id": [
-                    "fast-track"
+                    "ScenarioMIP"
                 ],
                 "additional_allowed_model_components": [],
                 "description": "pending",
@@ -1858,7 +1818,9 @@
                 ]
             },
             "scen7-l-ext": {
-                "activity_id": [],
+                "activity_id": [
+                    "ScenarioMIP"
+                ],
                 "additional_allowed_model_components": [],
                 "description": "pending",
                 "experiment": "pending",
@@ -1873,7 +1835,7 @@
             },
             "scen7-ln": {
                 "activity_id": [
-                    "fast-track"
+                    "ScenarioMIP"
                 ],
                 "additional_allowed_model_components": [],
                 "description": "pending",
@@ -1888,7 +1850,9 @@
                 ]
             },
             "scen7-ln-ext": {
-                "activity_id": [],
+                "activity_id": [
+                    "ScenarioMIP"
+                ],
                 "additional_allowed_model_components": [],
                 "description": "pending",
                 "experiment": "pending",
@@ -1903,7 +1867,7 @@
             },
             "scen7-m": {
                 "activity_id": [
-                    "fast-track"
+                    "ScenarioMIP"
                 ],
                 "additional_allowed_model_components": [],
                 "description": "pending",
@@ -1935,7 +1899,7 @@
             },
             "scen7-ml": {
                 "activity_id": [
-                    "fast-track"
+                    "ScenarioMIP"
                 ],
                 "additional_allowed_model_components": [],
                 "description": "pending",
@@ -1967,7 +1931,7 @@
             },
             "scen7-vl": {
                 "activity_id": [
-                    "fast-track"
+                    "ScenarioMIP"
                 ],
                 "additional_allowed_model_components": [],
                 "description": "pending",
@@ -2162,6 +2126,79 @@
                 ]
             }
         },
+        "frequency": {
+            "1hr": "sampled hourly",
+            "1hrCM": "monthly-mean diurnal cycle resolving each day into 1-hour means",
+            "1hrPt": "sampled hourly, at specified time point within an hour",
+            "3hr": "3 hourly mean samples",
+            "3hrPt": "sampled 3 hourly, at specified time point within the time period",
+            "6hr": "6 hourly mean samples",
+            "6hrPt": "sampled 6 hourly, at specified time point within the time period",
+            "day": "daily mean samples",
+            "dec": "decadal mean samples",
+            "fx": "fixed (time invariant) field",
+            "mon": "monthly mean samples",
+            "monC": "monthly climatology computed from monthly mean samples",
+            "monPt": "sampled monthly, at specified time point within the time period",
+            "subhrPt": "sampled sub-hourly, at specified time point within an hour",
+            "yr": "annual mean samples",
+            "yrPt": "sampled yearly, at specified time point within the time period"
+        },
+        "grid_label": {
+            "gm": "global mean data",
+            "gn": "data reported on a model's native grid",
+            "gna": "data reported on a native grid in the region of Antarctica",
+            "gng": "data reported on a native grid in the region of Greenland",
+            "gnz": "zonal mean data reported on a model's native latitude grid",
+            "gr": "regridded data reported on the data provider's preferred target grid",
+            "gr1": "regridded data reported on a grid other than the native grid and other than the preferred target grid",
+            "gr1a": "regridded data reported in the region of Antarctica on a grid other than the native grid and other than the preferred target grid",
+            "gr1g": "regridded data reported in the region of Greenland on a grid other than the native grid and other than the preferred target grid",
+            "gr1z": "regridded zonal mean data reported on a grid other than the native latitude grid and other than the preferred latitude target grid",
+            "gr2": "regridded data reported on a grid other than the native grid and other than the preferred target grid",
+            "gr2a": "regridded data reported in the region of Antarctica on a grid other than the native grid and other than the preferred target grid",
+            "gr2g": "regridded data reported in the region of Greenland on a grid other than the native grid and other than the preferred target grid",
+            "gr2z": "regridded zonal mean data reported on a grid other than the native latitude grid and other than the preferred latitude target grid",
+            "gr3": "regridded data reported on a grid other than the native grid and other than the preferred target grid",
+            "gr3a": "regridded data reported in the region of Antarctica on a grid other than the native grid and other than the preferred target grid",
+            "gr3g": "regridded data reported in the region of Greenland on a grid other than the native grid and other than the preferred target grid",
+            "gr3z": "regridded zonal mean data reported on a grid other than the native latitude grid and other than the preferred latitude target grid",
+            "gr4": "regridded data reported on a grid other than the native grid and other than the preferred target grid",
+            "gr4a": "regridded data reported in the region of Antarctica on a grid other than the native grid and other than the preferred target grid",
+            "gr4g": "regridded data reported in the region of Greenland on a grid other than the native grid and other than the preferred target grid",
+            "gr4z": "regridded zonal mean data reported on a grid other than the native latitude grid and other than the preferred latitude target grid",
+            "gr5": "regridded data reported on a grid other than the native grid and other than the preferred target grid",
+            "gr5a": "regridded data reported in the region of Antarctica on a grid other than the native grid and other than the preferred target grid",
+            "gr5g": "regridded data reported in the region of Greenland on a grid other than the native grid and other than the preferred target grid",
+            "gr5z": "regridded zonal mean data reported on a grid other than the native latitude grid and other than the preferred latitude target grid",
+            "gr6": "regridded data reported on a grid other than the native grid and other than the preferred target grid",
+            "gr6a": "regridded data reported in the region of Antarctica on a grid other than the native grid and other than the preferred target grid",
+            "gr6g": "regridded data reported in the region of Greenland on a grid other than the native grid and other than the preferred target grid",
+            "gr6z": "regridded zonal mean data reported on a grid other than the native latitude grid and other than the preferred latitude target grid",
+            "gr7": "regridded data reported on a grid other than the native grid and other than the preferred target grid",
+            "gr7a": "regridded data reported in the region of Antarctica on a grid other than the native grid and other than the preferred target grid",
+            "gr7g": "regridded data reported in the region of Greenland on a grid other than the native grid and other than the preferred target grid",
+            "gr7z": "regridded zonal mean data reported on a grid other than the native latitude grid and other than the preferred latitude target grid",
+            "gr8": "regridded data reported on a grid other than the native grid and other than the preferred target grid",
+            "gr8a": "regridded data reported in the region of Antarctica on a grid other than the native grid and other than the preferred target grid",
+            "gr8g": "regridded data reported in the region of Greenland on a grid other than the native grid and other than the preferred target grid",
+            "gr8z": "regridded zonal mean data reported on a grid other than the native latitude grid and other than the preferred latitude target grid",
+            "gr9": "regridded data reported on a grid other than the native grid and other than the preferred target grid",
+            "gr9a": "regridded data reported in the region of Antarctica on a grid other than the native grid and other than the preferred target grid",
+            "gr9g": "regridded data reported in the region of Greenland on a grid other than the native grid and other than the preferred target grid",
+            "gr9z": "regridded zonal mean data reported on a grid other than the native latitude grid and other than the preferred latitude target grid",
+            "gra": "regridded data in the region of Antarctica reported on the data provider's preferred target grid",
+            "grg": "regridded data in the region of Greenland reported on the data provider's preferred target grid",
+            "grz": "regridded zonal mean data reported on the data provider's preferred latitude target grid"
+        },
+        "horizontal_label": {
+            "hm": "Variables calculated as spatial averages across horizontal dimensions, typically representing area-weighted means over geographic regions. Used for regional or global horizontal averaging operations.",
+            "ht": "Variables calculated as means across specific labeled geographic areas or means along defined transects or lines. Used for regional averaging within designated boundaries or linear sampling.",
+            "hxy": "Variables represented on a regular 2D horizontal grid with longitude and latitude coordinates. Standard format for most climate model output with spatially distributed data across geographic grid points.",
+            "hxys": "Variables represented as point measurements at specific geographic sites or stations. Used for observational data, tower measurements, or model output extracted at particular locations rather than gridded data.",
+            "hy": "Variables calculated as zonal means, averaged along lines of constant latitude (east-west direction). Removes longitudinal variability to show meridional (north-south) patterns and large-scale circulation features."
+        },
+        "license": {},
         "mip_era": [
             "CMIP7"
         ],
@@ -2184,6 +2221,80 @@
         ],
         "product": [
             "model-output"
-        ]
+        ],
+        "realm": {
+            "aerosol": "Aerosol",
+            "atmos": "Atmosphere",
+            "atmosChem": "Atmospheric Chemistry",
+            "land": "Land Surface and Subsurface",
+            "landIce": "Land Ice",
+            "ocean": "Ocean",
+            "ocnBgchem": "Ocean Biogeochemistry",
+            "seaIce": "Sea Ice"
+        },
+        "region": {
+            "ant": "located around the South Pole, separated from other land masses by the Southern Ocean, and almost entirely south of 60 degrees South latitude",
+            "glb": "the complete Earth surface, 90 degrees North to 90 degrees South latitude, and all longitudes",
+            "gre": "located in the Northern Atlantic Ocean, separated from other land masses by the Labrador Sea and Straits, and almost entirely north of 60 degrees North latitude",
+            "nhem": "the complete Earth surface from the equator to the North Pole, 0 to 90 degrees North latitude",
+            "shem": "the complete Earth surface from the equator to the South Pole, 0 to 90 degrees South latitude"
+        },
+        "repo": null,
+        "required_global_attributes": {},
+        "source_type": {
+            "AER": "aerosol treatment in an atmospheric model where concentrations are calculated based on emissions, transformation, and removal processes (rather than being prescribed or omitted entirely)",
+            "AGCM": "atmospheric general circulation model run with prescribed ocean surface conditions and usually a model of the land surface",
+            "AOGCM": "coupled atmosphere-ocean global climate model, additionally including explicit representation of at least the land and sea ice",
+            "BGC": "biogeochemistry model component that at the very least accounts for carbon reservoirs and fluxes in the atmosphere, terrestrial biosphere, and ocean",
+            "CHEM": "chemistry treatment in an atmospheric model that calculates atmospheric oxidant concentrations (including at least ozone), rather than prescribing them",
+            "ISM": "ice-sheet model that includes ice-flow",
+            "LAND": "land model run uncoupled from the atmosphere",
+            "OGCM": "ocean general circulation model run uncoupled from an AGCM but, usually including a sea-ice model",
+            "RAD": "radiation component of an atmospheric model run 'offline'",
+            "SLAB": "slab-ocean used with an AGCM in representing the atmosphere-ocean coupled system",
+            "reanalysis": "gridded product generated from a model reanalysis based on in-situ instruments and possibly satellite measurements"
+        },
+        "tables": {},
+        "temporal_label": {
+            "tavg": "Time-averaged values calculated as the arithmetic mean over a specified time period. Commonly used for monthly, seasonal, or annual averages to represent typical conditions.",
+            "tclm": "Variables representing long-term annual cycle climatology, calculated as multi-year averages for each month or season. Shows typical seasonal patterns and annual variations in climate variables over extended time periods.",
+            "tclmdc": "Variables representing long-term diurnal cycle climatology, calculated as multi-year averages for each hour or time of day. Shows typical daily patterns and diurnal variations in climate variables over extended time periods.",
+            "ti": "Time-independent values that do not vary with time, such as fixed geographic coordinates, topography, land-sea masks, or other static boundary conditions and model parameters.",
+            "tpt": "Instantaneous values sampled at specific points in time, without temporal averaging. Represents snapshots of conditions at discrete time instances, often used for model output at specific time steps.",
+            "tsum": "Time-summed values representing the accumulation or total amount over a specified time period. Commonly used for precipitation totals, energy fluxes, or other cumulative quantities."
+        },
+        "tracking_id": null,
+        "vertical_label": {
+            "1000hPa": "Variables at the 1000 hPa pressure level, approximately equivalent to sea level pressure. This level is commonly used for surface meteorological conditions and represents the lower boundary of the atmosphere.",
+            "100hPa": "Variables at the 100 hPa pressure level, located in the lower stratosphere at approximately 16 km altitude. This level is important for stratospheric dynamics, ozone studies, and upper-level atmospheric analysis.",
+            "10hPa": "10 hPa",
+            "220hPa": "220 hPa",
+            "500hPa": "Variables at the 500 hPa pressure level, located in the middle troposphere at approximately 5-6 km altitude. This level is crucial for weather analysis, representing mid-level atmospheric dynamics and circulation patterns.",
+            "560hPa": "560 hPa",
+            "700hPa": "700 hPa",
+            "840hPa": "840 hPa",
+            "850hPa": "850 hPa",
+            "d0m": "Variables at the Earth's surface level (0 meters depth/height), including surface temperature, pressure, and exchange fluxes. Represents the interface between atmosphere, ocean, land, or ice.",
+            "d100m": "Variables at 100 meter depth below the surface, used for subsurface ocean conditions, deep soil properties, or underground environmental conditions at intermediate depths.",
+            "d10cm": "10 cm depth",
+            "d2000m": "upper 2000 m",
+            "d300m": "upper 300 m",
+            "d700m": "upper 700 m",
+            "h100m": "100 m height",
+            "h10m": "Variables at 10 meter height above the surface, the standard measurement height for wind speed and direction in meteorological observations and climate models.",
+            "h16": "16 height levels",
+            "h2m": "Variables at 2 meter height above the surface, the standard measurement height for near-surface air temperature and humidity in meteorological observations and climate models.",
+            "h40": "40 height levels",
+            "p19": "Variables interpolated to a standard set of 19 pressure levels spanning the atmosphere from surface to stratosphere. Commonly used for atmospheric analysis and comparison across different models.",
+            "p27": "Variables interpolated to a standard set of 27 pressure levels providing higher vertical resolution through the atmosphere. Used for detailed atmospheric profiling and high-resolution analysis of vertical structure.",
+            "p3": "3 pressure levels",
+            "p39": "Variables interpolated to a standard set of 39 pressure levels providing very high vertical resolution through the atmosphere. Used for comprehensive atmospheric profiling and detailed vertical structure analysis.",
+            "p4": "4 pressure levels",
+            "p7c": "7 pressure levels",
+            "p7h": "7 pressure levels",
+            "p8": "8 pressure levels",
+            "rho": "Variables on ocean density surfaces (isopycnal coordinates), where water parcels of equal density define the vertical coordinate. Used for ocean circulation analysis and water mass tracking.",
+            "u": "unspecified (no vertical dimension)"
+        }
     }
 }

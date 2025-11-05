@@ -1,12 +1,12 @@
 {
     "Header": {
         "file": "cmip7_horizontal_label.json",
-        "file_creation_date": "2025-11-05T15:10:14.499378",
+        "file_creation_date": "2025-11-05T15:31:01.191532",
         "version": "fatal: No names found, cannot describe anything.",
         "checksum": "md5: d2ef1fa46905550e155477a2f8fef293",
         "repo_url": "https://github.com/WCRP-CMIP/CMIP7-CVs",
         "repo_prefix": "cmip7",
-        "last_commit": "c15a742a9429c3f831eab8a8ac1c030b859bc788",
+        "last_commit": "38b19e12a6aa1bf6a022d035848deb43f926799b",
         "comment": "This is an automatically generated file. Do not edit."
     },
     "horizontal_label": {
