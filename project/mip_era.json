@@ -1,7 +1,7 @@
 {
     "validation_key": "mip_era",
-    "ui_label": "",
-    "description": "",
+    "ui_label": "MipEraCollection",
+    "description": "CMIP7 MIP Era",
     "mip_era": {
         "@id": "cmip7"
     },
@@ -15,9 +15,9 @@
         }
     },
     "@type": [
-        "wcrp:mip_era",
-        "esgvoc:MipEra",
+        "wcrp:project",
+        "esgvoc:Project",
         "cmip7"
     ],
-    "@id": "mip-era"
+    "@id": "mip_era"
 }

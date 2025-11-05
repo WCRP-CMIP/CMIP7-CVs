@@ -51,4 +51,4 @@ def run(io, whoami, path, name, **kwargs):
         
     # update the name to use the id field
     me2 = me + '_id'
-    return f"{path}/{name}_{me2}.json", me2, summary
+    return f"{path}/{whoami}_{me2}.json", me2, summary

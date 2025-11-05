@@ -1,7 +1,7 @@
 {
     "validation_key": "product",
-    "ui_label": "",
-    "description": "",
+    "ui_label": "ProductCollection",
+    "description": "CMIP7 Permissible Products",
     "product": {
         "@id": "model-output"
     },
@@ -15,8 +15,8 @@
         }
     },
     "@type": [
-        "wcrp:product",
-        "esgvoc:Product",
+        "wcrp:project",
+        "esgvoc:Project",
         "cmip7"
     ],
     "@id": "product"

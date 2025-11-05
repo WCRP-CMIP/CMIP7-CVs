@@ -18,8 +18,8 @@
         }
     },
     "@type": [
-        "wcrp:license",
-        "esgvoc:License",
+        "wcrp:project",
+        "esgvoc:Project",
         "cmip7"
     ],
     "@id": "license"

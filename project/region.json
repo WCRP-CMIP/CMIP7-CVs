@@ -1,7 +1,7 @@
 {
     "validation_key": "region",
-    "ui_label": "CMIP7 Permissible Regions",
-    "description": "The complete list of regions used in CMIP7",
+    "ui_label": "RegionCollection",
+    "description": "CMIP7 Permissible Regions",
     "region": [
         "ant",
         "glb",
@@ -19,8 +19,8 @@
         }
     },
     "@type": [
-        "wcrp:region",
-        "esgvoc:Region",
+        "wcrp:project",
+        "esgvoc:Project",
         "cmip7"
     ],
     "@id": "region"

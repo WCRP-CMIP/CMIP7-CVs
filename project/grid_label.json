@@ -1,7 +1,7 @@
 {
     "validation_key": "grid_label",
-    "ui_label": "CMIP7 Permitted Grid Labels",
-    "description": "",
+    "ui_label": "GridLabelCollection",
+    "description": "CMIP7 Permitted Grid Labels",
     "grid_label": [
         "gm",
         "gn",
@@ -59,9 +59,9 @@
         }
     },
     "@type": [
-        "wcrp:grid_label",
-        "esgvoc:GridLabel",
+        "wcrp:project",
+        "esgvoc:Project",
         "cmip7"
     ],
-    "@id": "grid-label"
+    "@id": "grid_label"
 }

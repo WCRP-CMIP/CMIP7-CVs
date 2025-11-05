@@ -1,7 +1,7 @@
 {
     "validation_key": "activity",
-    "ui_label": "",
-    "description": "",
+    "ui_label": "ActivityCollection",
+    "description": "CMIP7 Permissible Activities",
     "activity": [
         "aerchemmip",
         "c4mip",
@@ -26,8 +26,8 @@
         }
     },
     "@type": [
-        "wcrp:activity",
-        "esgvoc:Activity",
+        "wcrp:project",
+        "esgvoc:Project",
         "cmip7"
     ],
     "@id": "activity"
