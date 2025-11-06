@@ -1,0 +1,47 @@
+name: "Add/Modify: Source Type"
+description: Add source type to CMIP7 CVs
+title: "Add/Modify: Source Type: <Type source type here>"
+labels: ['delta', 'source-type', 'Review']
+body:
+  - type: markdown
+    attributes:
+      value: |
+        This form appends the following source type into the permitted CMIP7 Controlled Vocabularies list.
+        
+        The permitted set of values are defined in the [WCRP universal constants repo](https://wcrp-cmip.github.io/WCRP-universe/source_type/). If your item is missing please [register here first](https://github.com/WCRP-CMIP/WCRP-universe/issues/new?template=source_type.yml) and wait a day after it has been confirmed for this script to be remade.
+
+  - type: dropdown
+    id: issue_kind
+    attributes:
+      label: Issue Type
+      description: Select whether adding new or modifying existing
+      options:
+        - "New"
+        - "Modify"
+      default: 0
+    validations:
+      required: true
+
+  - type: dropdown
+    id: source_type
+    attributes:
+      multiple: true
+      label: Source Type
+      description: Select the source types to add to CMIP7
+      options:
+        - "AER"
+        - "AGCM"
+        - "AOGCM"
+        - "BGC"
+        - "CHEM"
+        - "ISM"
+        - "LAND"
+        - "OGCM"
+        - "RAD"
+        - "SLAB"
+        - "gridded_insitu"
+        - "reanalysis"
+        - "satellite_blended"
+        - "satellite_retrieval"
+    validations:
+      required: true
