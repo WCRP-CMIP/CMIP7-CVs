@@ -11,18 +11,6 @@ body:
         The permitted set of values are defined in the WCRP universal constants repo. Regions are not yet in the universal repo - this is a CMIP7-specific CV.
 
   - type: dropdown
-    id: issue_kind
-    attributes:
-      label: Issue Type
-      description: Select whether adding new or modifying existing
-      options:
-        - "New"
-        - "Modify"
-      default: 0
-    validations:
-      required: true
-
-  - type: dropdown
     id: region
     attributes:
       multiple: true
