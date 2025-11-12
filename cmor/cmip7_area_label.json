@@ -1,0 +1,17 @@
+{
+    "Header": {
+        "file": "cmip7_area_label.json",
+        "file_creation_date": "2025-11-05T15:29:59.880414",
+        "version": "fatal: No names found, cannot describe anything.",
+        "checksum": "md5: 20b933622b2b354ab0610aeddf3f6c81",
+        "repo_url": "https://github.com/WCRP-CMIP/CMIP7-CVs",
+        "repo_prefix": "cmip7",
+        "last_commit": "38b19e12a6aa1bf6a022d035848deb43f926799b",
+        "comment": "This is an automatically generated file. Do not edit."
+    },
+    "area_label": {
+        "": "unmasked (no \"where\" directive included in the cell_methods)",
+        "air": "Variables calculated over atmospheric air regions, typically representing conditions in the atmosphere above the surface. Used for atmospheric composition, temperature, humidity, and other meteorological variables.",
+        "lnd": "Variables calculated over land surface areas, including soil, vegetation, and terrestrial ecosystems. Used for land surface temperature, soil moisture, vegetation indices, and other terrestrial variables."
+    }
+}

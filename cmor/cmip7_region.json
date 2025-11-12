@@ -1,0 +1,19 @@
+{
+    "Header": {
+        "file": "cmip7_region.json",
+        "file_creation_date": "2025-11-05T15:30:02.421307",
+        "version": "fatal: No names found, cannot describe anything.",
+        "checksum": "md5: a0c08f126f440f5e39db977c2bac4a15",
+        "repo_url": "https://github.com/WCRP-CMIP/CMIP7-CVs",
+        "repo_prefix": "cmip7",
+        "last_commit": "38b19e12a6aa1bf6a022d035848deb43f926799b",
+        "comment": "This is an automatically generated file. Do not edit."
+    },
+    "region": {
+        "ant": "located around the South Pole, separated from other land masses by the Southern Ocean, and almost entirely south of 60 degrees South latitude",
+        "glb": "the complete Earth surface, 90 degrees North to 90 degrees South latitude, and all longitudes",
+        "gre": "located in the Northern Atlantic Ocean, separated from other land masses by the Labrador Sea and Straits, and almost entirely north of 60 degrees North latitude",
+        "nhem": "the complete Earth surface from the equator to the North Pole, 0 to 90 degrees North latitude",
+        "shem": "the complete Earth surface from the equator to the South Pole, 0 to 90 degrees South latitude"
+    }
+}
