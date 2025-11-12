@@ -1,12 +1,12 @@
 {
     "Header": {
         "file": "cmip7_mip_era.json",
-        "file_creation_date": "2025-11-05T15:30:03.233428",
+        "file_creation_date": "2025-11-12T15:33:10.319073",
         "version": "fatal: No names found, cannot describe anything.",
         "checksum": "md5: 0a97e450c4eaf53dd4ed2fa093bcbf2b",
         "repo_url": "https://github.com/WCRP-CMIP/CMIP7-CVs",
         "repo_prefix": "cmip7",
-        "last_commit": "38b19e12a6aa1bf6a022d035848deb43f926799b",
+        "last_commit": "a3ea16986d9b6cf8ac0bb02497b5a9b42246d675",
         "comment": "This is an automatically generated file. Do not edit."
     },
     "mip_era": [
