@@ -1,0 +1,29 @@
+{
+  "validation_key": "esm-scen7-h-Aer",
+  "ui_label": "pending",
+  "description": "pending",
+  "activity": [
+    "aerchemmip"
+  ],
+  "alias": [],
+  "minimum_number_of_years": 104,
+  "model_realms": [
+    {
+      "@id": "pending",
+      "is_required": true
+    }
+  ],
+  "parent_experiment": [
+    "pending"
+  ],
+  "start_date": "pending",
+  "tier": "pending",
+  "@context": "_context",
+  "@type": [
+    "wcrp:experiment",
+    "esgvoc:Experiment",
+    "cmip7",
+    "cmip:fast-track"
+  ],
+  "@id": "esm-scen7-h-aer-pending"
+}
