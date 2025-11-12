@@ -1,0 +1,24 @@
+{
+    "validation_key": "area_label",
+    "ui_label": "AreaLabelCollection",
+    "description": "CMIP7 Permissible Area Labels",
+    "area_label": [
+        "air",
+        "lnd",
+        "u"
+    ],
+    "@context": {
+        "@base": "https://wcrp-cmip.github.io/CMIP7-CVs/project/",
+        "@vocab": "https://wcrp-cmip.github.io/Variable-Registry/#area_label",
+        "area_label": {
+            "@context": "https://wcrp-cmip.github.io/Variable-Registry/area_label/_context",
+            "@container": "@set",
+            "@type": "@id"
+        }
+    },
+    "@type": [
+        "wcrp:area_label",
+        "cmip7"
+    ],
+    "@id": "area_label"
+}

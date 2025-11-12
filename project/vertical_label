@@ -1,0 +1,53 @@
+{
+    "validation_key": "vertical_label",
+    "ui_label": "VerticalLabelCollection",
+    "description": "CMIP7 Permissible Vertical Labels",
+    "vertical_label": [
+        "1000hPa",
+        "100hPa",
+        "10hPa",
+        "220hPa",
+        "500hPa",
+        "560hPa",
+        "700hPa",
+        "840hPa",
+        "850hPa",
+        "d0m",
+        "d100m",
+        "d10cm",
+        "d1m",
+        "d2000m",
+        "d300m",
+        "d700m",
+        "h100m",
+        "h10m",
+        "h16",
+        "h2m",
+        "h40",
+        "l",
+        "p19",
+        "p27",
+        "p3",
+        "p39",
+        "p4",
+        "p7c",
+        "p7h",
+        "p8",
+        "rho",
+        "u"
+    ],
+    "@context": {
+        "@base": "https://wcrp-cmip.github.io/CMIP7-CVs/project/",
+        "@vocab": "https://wcrp-cmip.github.io/Variable-Registry/#vertical_label",
+        "vertical_label": {
+            "@context": "https://wcrp-cmip.github.io/Variable-Registry/vertical_label/_context",
+            "@container": "@set",
+            "@type": "@id"
+        }
+    },
+    "@type": [
+        "wcrp:vertical_label",
+        "cmip7"
+    ],
+    "@id": "vertical_label"
+}
