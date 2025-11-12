@@ -1,6 +1,9 @@
 # Ignore everything by default
 *
 
+!cmor/
+!cmor/**
+
 # But don't ignore these specific items
 !LICENSE*
 !README.md
