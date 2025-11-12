@@ -9,10 +9,6 @@ on:
   push:
     branches:
       - "src-data"
-    # Temporarily remove path restrictions to test if that's the issue
-    # paths:
-    #   - '**/*.json'
-    #   - '**/_context'
   workflow_dispatch:
     inputs:
       debug:
@@ -21,26 +17,10 @@ on:
         default: 'false'
         type: boolean
 jobs:
-  sync:
+
+  sync_to_production:
     runs-on: ubuntu-latest
     steps:
-      - name: Debug trigger information
-        run: |
-          echo "🔍 Workflow triggered!"
-          echo "Event: ${{ github.event_name }}"
-          echo "Ref: ${{ github.ref }}"
-          echo "Branch: ${{ github.ref_name }}"
-          echo "Repository: ${{ github.repository }}"
-          echo "Commit SHA: ${{ github.sha }}"
-          echo "Actor: ${{ github.actor }}"
-          
-          if [[ "${{ github.event_name }}" == "push" ]]; then
-            echo "=== Push event details ==="
-            echo "Before: ${{ github.event.before }}"
-            echo "After: ${{ github.event.after }}"
-            echo "Forced: ${{ github.event.forced }}"
-            echo "Compare URL: ${{ github.event.compare }}"
-          fi
           
       - name: Checkout production branch
         uses: actions/checkout@v4
@@ -48,119 +28,46 @@ jobs:
           ref: production
           fetch-depth: 0
           persist-credentials: true
+
       - name: Clean production except docs and summaries
         run: |
-          echo "=== Before cleaning ==="
-          ls -la || true
-          
-          # Enable extended globbing
           shopt -s extglob dotglob
-          
-          # Show what will be removed
-          echo ">>> Files that will be removed (everything except docs, summaries, .git, .github):"
-          ls -A | awk '{
-            if ($0 != "docs" && $0 != "summaries" && $0 != ".git" && $0 != ".github") print $0
-          }' || true
-          
-          # Remove files (but keep docs, summaries, .git, .github)
           rm -rf -- !(docs|summaries|.git|.github) || true
-          
-          echo "=== After cleaning ==="
-          ls -la || true
+
       - name: Restore path from src-data branch
         uses: WCRP-CMIP/CMIPLD/actions/fetch_branch_path@main
         with:
           branch: "src-data"
           path: .
           remove: false
-      - name: Verify restore operation and analyze differences
+
+      - name: Verify restore and prepare changes
         run: |
-          echo "=== Files after restore ==="
-          ls -la || true
-          
-          echo "=== Git status after restore ==="
-          git status --porcelain || true
-          
-          echo "=== Comparing with src-data branch ==="
           git fetch origin src-data
-          
-          echo "=== Files different between current state and src-data ==="
-          git diff --name-only HEAD origin/src-data || true
-          
-          echo "=== Detailed diff summary ==="
-          git diff --stat HEAD origin/src-data || true
-          
-          echo "=== Check if working directory has uncommitted changes ==="
-          git status --untracked-files=all || true
-          
-          echo "=== Force add all files including untracked ==="
           git add -A
-          echo "=== Check staged changes ==="
-          git diff --cached --name-status || true
-      - name: Debug — show git status and changed files
-        run: |
-          git config --global --add safe.directory "$GITHUB_WORKSPACE" || true
-          echo "=== git status (porcelain) ==="
-          git status --porcelain --untracked-files=all || true
-          echo "=== changed files ==="
-          git --no-pager diff --name-only || true
-          echo "=== ls workspace ==="
-          ls -la || true
+
       - name: Check for changes
         id: check_changes
         run: |
-          # Set git config for the runner
           git config user.name "cmip-ipo"
           git config user.email "actions@wcrp-cmip.org"
           
-          # Ensure we're comparing against the right state
-          echo "=== Current branch and HEAD ==="
-          git branch -v
-          git log --oneline -1
-          
-          # Check what files exist and their status
-          echo "=== All files in workspace ==="
-          find . -type f -not -path './.git/*' | sort || true
-          
-          # Reset any previous staging
           git reset HEAD -- . || true
-          
-          # Add all files to staging (including untracked)
           git add -A
           
-          # Show what's staged
-          echo "=== Staged changes ==="
-          git diff --cached --name-status || true
-          
-          # Also check for any differences against origin/src-data
-          echo "=== Differences against src-data branch ==="
-          git fetch origin src-data || true
-          git diff --name-only HEAD origin/src-data || true
-          
-          # Check if there are any staged changes
           if git diff --cached --quiet; then
             echo "no_changes=true" >> $GITHUB_OUTPUT
-            echo "✅ No staged changes detected"
-            
-            # But let's also check if there are differences against src-data
-            if git diff --quiet HEAD origin/src-data; then
-              echo "✅ Production and src-data are identical - this is expected"
-            else
-              echo "⚠️ Files differ from src-data but not staged - potential issue with custom action"
-              # Force stage the differences
+            if ! git diff --quiet HEAD origin/src-data; then
               git checkout origin/src-data -- . || true
               git add -A
               if ! git diff --cached --quiet; then
-                echo "🔄 Forced staging worked - changes now detected"
                 echo "no_changes=false" >> $GITHUB_OUTPUT
               fi
             fi
           else
             echo "no_changes=false" >> $GITHUB_OUTPUT
-            echo "🔄 Changes detected — will commit."
-            echo "=== Summary of changes ==="
-            git diff --cached --stat || true
           fi
+
       - name: Commit and Push Changes
         if: steps.check_changes.outputs.no_changes == 'false'
         uses: EndBug/add-and-commit@v9
@@ -174,13 +81,12 @@ jobs:
           
   graph:
     uses: WCRP-CMIP/CMIPLD/.github/workflows/graph.yml@main
-    needs: sync
+    needs: sync_to_production
     with:
       updated: false
     
-    
   publish-pages:
-    if: always()  # Run even if graph job fails
+    if: always()
     needs:
       - graph
     uses: WCRP-CMIP/CMIPLD/.github/workflows/pages.yml@main
@@ -189,3 +95,8 @@ jobs:
       force: true
     secrets:
       token: ${{ secrets.GITHUB_TOKEN }}
+
+  generate-summaries:
+    uses: WCRP-CMIP/CMIPLD/.github/workflows/summarise.yml@main
+    with:
+      output-path: './cmor/'
