@@ -81,7 +81,7 @@ jobs:
           
   graph:
     uses: WCRP-CMIP/CMIPLD/.github/workflows/graph.yml@main
-    needs: sync
+    needs: sync_to_production
     with:
       updated: false
     
