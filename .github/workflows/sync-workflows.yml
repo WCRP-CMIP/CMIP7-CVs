@@ -8,6 +8,8 @@ on:
       - '.github/workflows/**'
       - '.github/CONTRIBUTING.md'
 
+  workflow_dispatch:
+
 permissions:
   contents: write
 
@@ -31,12 +33,16 @@ jobs:
       - name: Copy files from main
         run: |
           mkdir -p .github/workflows
+          mkdir -p .github/prepublish
 
           # Ensure remote main is available (works in detached HEAD)
           git fetch origin main --depth=1 || true
 
           # Copy workflows directory from remote main if present
           git checkout origin/main -- .github/workflows/ || true
+
+          # Copy prepublish directory from remote main if present
+          git checkout origin/main -- .github/prepublish/ || true
           
           # Copy CONTRIBUTING.md from remote main if present
           git cat-file -e origin/main:.github/CONTRIBUTING.md 2>/dev/null && \
@@ -49,5 +55,4 @@ jobs:
           author_name: 'cmip-ipo'
           author_email: 'actions@wcrp-cmip.org'
           message: 'Sync .github files from main'
-          branch: ${{ matrix.branch }}
           push: true
