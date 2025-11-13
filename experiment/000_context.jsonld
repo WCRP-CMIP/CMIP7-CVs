@@ -4,7 +4,7 @@
         "required_model_components": "full",
         "additional_allowed_model_components": "full",
         "parent_activity": "full",
-        "parent_experiment": "shallow",
+        "parent_experiment": "full",
         "parent_mip_era": "full"
     },
     "@context": {
