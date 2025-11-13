@@ -1,6 +1,0 @@
-{
-    "@context": "000_context.jsonld",
-    "id": "pnnl-waccem",
-    "type": "organisation",
-    "description": "PNNL (Pacific Northwest National Laboratory), Richland, WA 99352, USA"
-}

@@ -1,0 +1,5 @@
+{
+    "@context": "000_context.jsonld",
+    "id": "mipds7-2025p10p1",
+    "type": "data_specs_version"
+}

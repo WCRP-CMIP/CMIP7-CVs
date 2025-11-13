@@ -1,35 +1,41 @@
 # DIRECTORY DRS SPECIFICATIONS
 directory:
   type: directory
+  # Needs updating?
   regex: "^CMIP7/([A-Za-z0-9-]+/){8}v[0-9]{8}$"
   separator: /
   parts:
-    - source_collection: drsSpecs
+    - source_collection: drs_specs
+      is_required: true
+    - source_collection: mip_era
       is_required: true
     - source_collection: activity
       is_required: true
-    - source_collection: institution
+    - source_collection: contributor
       is_required: true
     - source_collection: source
       is_required: true
     - source_collection: experiment
       is_required: true
-    - source_collection: datasetVariant
+    - source_collection: variant_label
       is_required: true
     - source_collection: region
       is_required: true
+    - source_collection: frequency
+      is_required: true
     - source_collection: variable
       is_required: true
-    - source_collection: branding_suffix
+    - source_collection: branded_suffix
       is_required: true
-    - source_collection: gridLabel
+    - source_collection: grid
       is_required: true
-    - source_collection: datasetVersion
+    - source_collection: directory_date
       is_required: true
 
 # FILE NAME DRS SPECIFICATIONS
 file_name:
   type: file_name
+  # Needs updating?
   regex: '^([A-Za-z0-9-]+_){5}[A-Za-z0-9-]+(?:_[0-9]{6}-[0-9]{6})?\.nc$'
   separator: _
   properties:
@@ -38,48 +44,53 @@ file_name:
   parts:
     - source_collection: variable
       is_required: true
-    - source_collection: branding_suffix
+    - source_collection: branded_suffix
       is_required: true
-    - source_collection: reportingInterval
+    - source_collection: frequency
       is_required: true
     - source_collection: region
       is_required: true
-    - source_collection: gridLabel
+    - source_collection: grid
       is_required: true
     - source_collection: source
       is_required: true
     - source_collection: experiment
       is_required: true
-    - source_collection: datasetVariant
+    - source_collection: variant_label
       is_required: true
-    - source_collection: timeRange
+    - source_collection: time_range
       is_required: false
 
 # DATASET ID DRS SPECIFICATIONS
 dataset_id:
   type: dataset_id
+  # Needs updating?
   regex: '^CMIP7(\\.[A-Za-z0-9-]+){10}$'
   separator: .
   parts:
-    - source_collection: drsSpecs
+    - source_collection: drs_specs
+      is_required: true
+    - source_collection: mip_era
       is_required: true
     - source_collection: activity
       is_required: true
-    - source_collection: institution
+    - source_collection: contributor
       is_required: true
     - source_collection: source
       is_required: true
     - source_collection: experiment
       is_required: true
-    - source_collection: datasetVariant
+    - source_collection: variant_label
       is_required: true
     - source_collection: region
       is_required: true
+    - source_collection: frequency
+      is_required: true
     - source_collection: variable
       is_required: true
-    - source_collection: branding_suffix
+    - source_collection: branded_suffix
       is_required: true
-    - source_collection: gridLabel
+    - source_collection: grid
       is_required: true
-    - source_collection: datasetVersion
+    - source_collection: directory_date
       is_required: true

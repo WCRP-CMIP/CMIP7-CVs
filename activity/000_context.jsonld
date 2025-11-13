@@ -1,4 +1,7 @@
 {
+    "esgvoc_resolve_modes": {
+        "experiments": "reference"
+    },
     "@context": {
         "id": "@id",
         "type": "@type",

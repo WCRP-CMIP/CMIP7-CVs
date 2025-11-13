@@ -7,7 +7,7 @@
             "separator": "/",
             "parts": [
                 {
-                    "collection_id": "drsSpecs",
+                    "collection_id": "drs_specs",
                     "is_required": true,
                     "kind": "collection"
                 },
@@ -118,7 +118,7 @@
             "separator": ".",
             "parts": [
                 {
-                    "collection_id": "drsSpecs",
+                    "collection_id": "drs_specs",
                     "is_required": true,
                     "kind": "collection"
                 },
@@ -225,7 +225,7 @@
                 "value_type": "string"
             },
             "drs_specs": {
-                "source_collection": "drsSpecs",
+                "source_collection": "drs_specs",
                 "value_type": "string"
             },
             "directory_date": {

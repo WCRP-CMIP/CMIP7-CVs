@@ -1,0 +1,9 @@
+{
+    "@context": {
+        "id": "@id",
+        "type": "@type",
+        "@base": "https://espri-mod.github.io/mip-cmor-tables/branded_suffix/",
+        "branded_suffix": "https://espri-mod.github.io/mip-cmor-tables/branded_suffix"
+    }
+}
+
