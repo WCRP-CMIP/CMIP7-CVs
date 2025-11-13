@@ -12,16 +12,22 @@ def get_tier(experiment: str) -> int:
 
 def main():
     bases = [
-        ("vl", "PLACEHOLDER TBC. Very low emissions future."),
+        ("vl", "PLACEHOLDER TBC. CMIP7 ScenarioMIP Very low emissions future."),
         (
             "ln",
-            "PLACEHOLDER TBC. Low followed by negative (steep reductions begin in 2040, negative from TBD) emissions future.",
+            "PLACEHOLDER TBC. CMIP7 ScenarioMIP Low followed by negative (steep reductions begin in 2040, negative from TBD) emissions future.",
         ),
-        ("l", "PLACEHOLDER TBC. Low emissions future."),
-        ("ml", "PLACEHOLDER TBC. Medium followed by low (from 2040) emissions future."),
-        ("m", "PLACEHOLDER TBC. Medium emissions future."),
-        ("hl", "PLACEHOLDER TBC. High followed by low (from 2060) emissions future."),
-        ("h", "PLACEHOLDER TBC. High emissions future."),
+        ("l", "PLACEHOLDER TBC. CMIP7 ScenarioMIP Low emissions future."),
+        (
+            "ml",
+            "PLACEHOLDER TBC. CMIP7 ScenarioMIP Medium followed by low (from 2040) emissions future.",
+        ),
+        ("m", "PLACEHOLDER TBC. CMIP7 ScenarioMIP Medium emissions future."),
+        (
+            "hl",
+            "PLACEHOLDER TBC. CMIP7 ScenarioMIP High followed by low (from 2060) emissions future.",
+        ),
+        ("h", "PLACEHOLDER TBC. CMIP7 ScenarioMIP High emissions future."),
     ]
 
     for base, base_description in bases:

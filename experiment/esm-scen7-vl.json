@@ -2,7 +2,7 @@
     "@context": "000_context.jsonld",
     "id": "esm-scen7-vl",
     "type": "experiment",
-    "description": "PLACEHOLDER TBC. Very low emissions future. Run with prescribed emissions of CO2 (for runs with prescribed concentrations of CO2, see the `scen7-` experiments).",
+    "description": "PLACEHOLDER TBC. CMIP7 ScenarioMIP Very low emissions future. Run with prescribed emissions of CO2 (for runs with prescribed concentrations of CO2, see the `scen7-` experiments).",
     "branch_information": "Branch from esm-hist at 2022-01-01.",
     "end_timestamp": "2100-01-01",
     "min_ensemble_size": 1,
