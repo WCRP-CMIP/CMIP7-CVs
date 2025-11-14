@@ -13,22 +13,22 @@ from cmipld.utils.ldparse import *
 
 # Data for this template
 DATA = {
-    'activity': {"None Specified":{'validation-key': 'None Specified'},
+    'activity': {"None Specified":{'validation_key': 'None Specified'},
                  **dict(cmipld.utils.ldparse.name_extract(cmipld.get('cmip7:project/activity.json',depth=1)['activity']))  
     },  
     'parent_experiment': {
-        "Custom Parent: specify in 'Parent experiment other' field": {'id': 'custom-parent', 'validation-key': 'custom-parent'},
-        'no-parent': {'id': 'no-parent', 'validation-key': 'no-parent'},
+        "Custom Parent: specify in 'Parent experiment other' field": {'id': 'custom-parent', 'validation_key': 'custom-parent'},
+        'no-parent': {'id': 'no-parent', 'validation_key': 'no-parent'},
         ** name_multikey_extract(
             cmipld.get('cmip7:experiment/graph.jsonld',depth=0)['@graph'],
-            ['id','validation-key','ui-label'],'validation-key'
+            ['id','validation_key','ui-label'],'validation_key'
         ),
     },
     'tier': ['Tier 1', 'Tier 2', 'Tier 3'],
     'model_components': 
         name_multikey_extract(
         cmipld.get('universal:source_type/graph.jsonld',depth=0)['@graph'],
-        ['id','validation-key','ui-label'],'validation-key'
+        ['id','validation_key','ui-label'],'validation_key'
     ),
     'milestone': ['Review'],
     'issue_kind': ['New', 'Modify']
