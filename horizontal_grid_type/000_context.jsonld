@@ -2,7 +2,7 @@
     "@context": {
         "id": "@id",
         "type": "@type",
-        "@base": "https://espri-mod.github.io/mip-cmor-tables/horizontal_grid_type/",
-        "horizontal_grid_type": "https://espri-mod.github.io/mip-cmor-tables/horizontal_grid_type"
+        "@base": "https://esgvoc.ipsl.fr/resource/universe/horizontal_grid_type/",
+        "horizontal_grid_type": "https://esgvoc.ipsl.fr/resource/universe/horizontal_grid_type"
     }
 }

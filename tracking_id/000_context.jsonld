@@ -2,7 +2,7 @@
     "@context": {
         "id": "@id",
         "type": "@type",
-        "@base": "https://espri-mod.github.io/mip-cmor-tables/tracking_id/",
-        "realization": "https://espri-mod.github.io/mip-cmor-tables/tracking_id"
+        "@base": "https://esgvoc.ipsl.fr/resource/universe/tracking_id/",
+        "realization": "https://esgvoc.ipsl.fr/resource/universe/tracking_id"
     }
 }

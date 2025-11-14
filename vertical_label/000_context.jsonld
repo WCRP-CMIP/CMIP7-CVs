@@ -2,7 +2,7 @@
     "@context": {
         "id": "@id",
         "type": "@type",
-        "@base": "https://espri-mod.github.io/mip-cmor-tables/vertical_label/",
-        "vertical_label": "https://espri-mod.github.io/mip-cmor-tables/vertical_label"
+        "@base": "https://esgvoc.ipsl.fr/resource/universe/vertical_label/",
+        "vertical_label": "https://esgvoc.ipsl.fr/resource/universe/vertical_label"
     }
 }

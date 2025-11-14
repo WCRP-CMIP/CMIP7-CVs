@@ -2,7 +2,7 @@
     "@context": {
         "id": "@id",
         "type": "@type",
-        "@base": "https://espri-mod.github.io/mip-cmor-tables/drs_specs/",
-        "drs_specs": "https://espri-mod.github.io/mip-cmor-tables/drs_specs"
+        "@base": "https://esgvoc.ipsl.fr/resource/universe/drs_specs/",
+        "drs_specs": "https://esgvoc.ipsl.fr/resource/universe/drs_specs"
     }
 }

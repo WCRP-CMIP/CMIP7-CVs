@@ -2,7 +2,7 @@
     "@context": {
         "id": "@id",
         "type": "@type",
-        "@base": "https://espri-mod.github.io/mip-cmor-tables/horizontal_grid_temporal_refinement/",
-        "horizontal_grid_temporal_refinement": "https://espri-mod.github.io/mip-cmor-tables/horizontal_grid_temporal_refinement"
+        "@base": "https://esgvoc.ipsl.fr/resource/universe/horizontal_grid_temporal_refinement/",
+        "horizontal_grid_temporal_refinement": "https://esgvoc.ipsl.fr/resource/universe/horizontal_grid_temporal_refinement"
     }
 }

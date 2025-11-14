@@ -2,8 +2,8 @@
     "@context": {
         "id": "@id",
         "type": "@type",
-        "@base": "https://espri-mod.github.io/mip-cmor-tables/model_component/",
-        "model_component": "https://espri-mod.github.io/mip-cmor-tables/model_component"
+        "@base": "https://esgvoc.ipsl.fr/resource/universe/model_component/",
+        "model_component": "https://esgvoc.ipsl.fr/resource/universe/model_component"
     }
 }
 

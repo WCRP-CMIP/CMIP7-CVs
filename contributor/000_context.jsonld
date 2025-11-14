@@ -2,7 +2,7 @@
     "@context": {
         "id": "@id",
         "type": "@type",
-        "@base": "https://espri-mod.github.io/mip-cmor-tables/contributor/",
-        "contributor": "https://espri-mod.github.io/mip-cmor-tables/contributor"
+        "@base": "https://esgvoc.ipsl.fr/resource/universe/contributor/",
+        "contributor": "https://esgvoc.ipsl.fr/resource/universe/contributor"
     }
 }

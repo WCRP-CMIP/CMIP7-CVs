@@ -2,7 +2,7 @@
     "@context": {
         "id": "@id",
         "type": "@type",
-        "@base": "https://espri-mod.github.io/mip-cmor-tables/physics_index/",
-        "physics": "https://espri-mod.github.io/mip-cmor-tables/physics_index"
+        "@base": "https://esgvoc.ipsl.fr/resource/universe/physics_index/",
+        "physics": "https://esgvoc.ipsl.fr/resource/universe/physics_index"
     }
 }

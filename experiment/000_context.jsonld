@@ -8,9 +8,47 @@
         "parent_mip_era": "full"
     },
     "@context": {
+        "@base":"https://esgvoc.ipsl.fr/resource/universe/experiment/",
+        "@vocab": "http://schema.org/",
         "id": "@id",
-        "type": "@type",
-        "@base": "https://espri-mod.github.io/mip-cmor-tables/experiment/",
-        "experiment": "https://espri-mod.github.io/mip-cmor-tables/experiment"
+        "type":"@type",
+        "description":{"@id":"https://schema.org/description"},
+        "drs_name": {"@id": "acronym"},
+        "activity":{
+            "@id": "https://esgvoc.ipsl.fr/resource/universe/activity/",
+            "@type":"@id",
+            "@context":{"@base":"https://esgvoc.ipsl.fr/resource/universe/activity/"}
+        },
+        "additional_allowed_model_components":{
+            "@id": "https://esgvoc.ipsl.fr/resource/universe/additional_allowed_model_component/",
+            "@type":"@id",
+            "@context":{"@base":"https://esgvoc.ipsl.fr/resource/universe/model_component/"}
+        },
+        "branch_information":{"@id":"https://schema.org/description"},
+        "end_timestamp":"http://schema.org/endDate",
+        "min_ensemble_size":"https://esgvoc.ipsl.fr/resource/universe/min_ensemble_size",
+        "min_number_yrs_per_sim":"https://esgvoc.ipsl.fr/resource/universe/min_number_yrs_per_sim",
+        "parent_activity":{
+            "@id": "https://esgvoc.ipsl.fr/resource/universe/parent_activity/",
+            "@type":"@id",
+            "@context":{"@base":"https://esgvoc.ipsl.fr/resource/cmip7/activity/"}
+        },
+        "parent_experiment":{
+            "@id": "https://esgvoc.ipsl.fr/resource/universe/parent_experiment/",
+            "@type":"@id",
+            "@context":{"@base":"https://esgvoc.ipsl.fr/resource/cmip7/experiment/"}
+        },
+        "parent_mip_era":{
+            "@id": "https://esgvoc.ipsl.fr/resource/universe/parent_mip_era/",
+            "@type":"@id",
+            "@context":{"@base":"https://esgvoc.ipsl.fr/resource/cmip7/mip_era/"}
+        },
+        "required_model_components":{
+            "@id": "https://esgvoc.ipsl.fr/resource/universe/required_model_component/",
+            "@type":"@id",
+            "@context":{"@base":"https://esgvoc.ipsl.fr/resource/universe/model_component/"}
+        },
+        "start_timestamp":"http://schema.org/startDate",
+        "tier":{"@id":"https://es-vocab.ipsl.fr/tier"}
     }
 }

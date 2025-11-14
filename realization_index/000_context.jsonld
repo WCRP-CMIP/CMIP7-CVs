@@ -2,7 +2,7 @@
     "@context": {
         "id": "@id",
         "type": "@type",
-        "@base": "https://espri-mod.github.io/mip-cmor-tables/realization_index/",
-        "realization": "https://espri-mod.github.io/mip-cmor-tables/realization_index"
+        "@base": "https://esgvoc.ipsl.fr/resource/universe/realization_index/",
+        "realization": "https://esgvoc.ipsl.fr/resource/universe/realization_index"
     }
 }

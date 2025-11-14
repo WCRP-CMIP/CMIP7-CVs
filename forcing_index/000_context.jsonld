@@ -2,7 +2,7 @@
     "@context": {
         "id": "@id",
         "type": "@type",
-        "@base": "https://espri-mod.github.io/mip-cmor-tables/forcing_index/",
-        "forcing": "https://espri-mod.github.io/mip-cmor-tables/forcing_index"
+        "@base": "https://esgvoc.ipsl.fr/resource/universe/forcing_index/",
+        "forcing": "https://esgvoc.ipsl.fr/resource/universe/forcing_index"
     }
 }

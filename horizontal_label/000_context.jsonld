@@ -2,7 +2,7 @@
     "@context": {
         "id": "@id",
         "type": "@type",
-        "@base": "https://espri-mod.github.io/mip-cmor-tables/horizontal_label/",
-        "horizontal_label": "https://espri-mod.github.io/mip-cmor-tables/horizontal_label"
+        "@base": "https://esgvoc.ipsl.fr/resource/universe/horizontal_label/",
+        "horizontal_label": "https://esgvoc.ipsl.fr/resource/universe/horizontal_label"
     }
 }

@@ -2,7 +2,7 @@
     "@context": {
         "id": "@id",
         "type": "@type",
-        "@base": "https://espri-mod.github.io/mip-cmor-tables/branded_variable/",
-        "branded_variable": "https://espri-mod.github.io/mip-cmor-tables/branded_variable"
+        "@base": "https://esgvoc.ipsl.fr/resource/universe/branded_variable/",
+        "branded_variable": "https://esgvoc.ipsl.fr/resource/universe/branded_variable"
     }
 }
