@@ -13,10 +13,9 @@ from cmipld.utils.ldparse import *
 
 # Data for this template
 DATA = {
-    'activity': {"no-activity":'None',
+    'activity': {"None Specified":{'validation-key': 'None Specified'},
                  **dict(cmipld.utils.ldparse.name_extract(cmipld.get('cmip7:project/activity.json',depth=1)['activity']))  
-    },
-    
+    },  
     'parent_experiment': {
         "Custom Parent: specify in 'Parent experiment other' field": {'id': 'custom-parent', 'validation-key': 'custom-parent'},
         'no-parent': {'id': 'no-parent', 'validation-key': 'no-parent'},
