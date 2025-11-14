@@ -1,12 +1,12 @@
 {
     "Header": {
         "file": "cmip7_realm.json",
-        "file_creation_date": "2025-11-12T15:33:08.931324",
+        "file_creation_date": "2025-11-14T16:23:47.572205",
         "version": "fatal: No names found, cannot describe anything.",
         "checksum": "md5: 3f81c1cfd2e386eba1f8f7e1673d3f9e",
         "repo_url": "https://github.com/WCRP-CMIP/CMIP7-CVs",
         "repo_prefix": "cmip7",
-        "last_commit": "a3ea16986d9b6cf8ac0bb02497b5a9b42246d675",
+        "last_commit": "eda901888dc2797ccf41d50d576ce78716ec43cb",
         "comment": "This is an automatically generated file. Do not edit."
     },
     "realm": {

@@ -1,12 +1,12 @@
 {
     "Header": {
         "file": "cmip7_frequency.json",
-        "file_creation_date": "2025-11-12T15:33:23.350893",
+        "file_creation_date": "2025-11-14T16:23:55.125411",
         "version": "fatal: No names found, cannot describe anything.",
         "checksum": "md5: adee3ba581c9feb2ec15d17d364ec0c6",
         "repo_url": "https://github.com/WCRP-CMIP/CMIP7-CVs",
         "repo_prefix": "cmip7",
-        "last_commit": "a3ea16986d9b6cf8ac0bb02497b5a9b42246d675",
+        "last_commit": "eda901888dc2797ccf41d50d576ce78716ec43cb",
         "comment": "This is an automatically generated file. Do not edit."
     },
     "frequency": {
