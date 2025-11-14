@@ -24,13 +24,13 @@
         "@vocab": "https://esgf.github.io/esgf-vocab/api_documentation/data_descriptors.html#esgvoc.api.data_descriptors.NativeNominalResolution",
         "native_nominal_resolution": {
             "@context": "https://wcrp-cmip.github.io/WCRP-universe/resolution/_context",
-            "@container": "@set",
+            "@container": "@list",
             "@type": "@id"
         }
     },
     "@type": [
-        "wcrp:project",
-        "esgvoc:Project",
+        "wcrp:native_nominal_resolution",
+        "esgvoc:NativeNominalResolution",
         "cmip7"
     ],
     "@id": "native_nominal_resolution"

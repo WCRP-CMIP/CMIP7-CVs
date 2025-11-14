@@ -23,13 +23,13 @@
         "@vocab": "https://esgf.github.io/esgf-vocab/api_documentation/data_descriptors.html#esgvoc.api.data_descriptors.SourceType",
         "source_type": {
             "@context": "https://wcrp-cmip.github.io/WCRP-universe/source_type/_context",
-            "@container": "@set",
+            "@container": "@list",
             "@type": "@id"
         }
     },
     "@type": [
-        "wcrp:project",
-        "esgvoc:Project",
+        "wcrp:source_type",
+        "esgvoc:SourceType",
         "cmip7"
     ],
     "@id": "source_type"

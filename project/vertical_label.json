@@ -38,15 +38,16 @@
     ],
     "@context": {
         "@base": "https://wcrp-cmip.github.io/CMIP7-CVs/project/",
-        "@vocab": "https://wcrp-cmip.github.io/Variable-Registry/#vertical_label",
+        "@vocab": "https://esgf.github.io/esgf-vocab/api_documentation/data_descriptors.html#esgvoc.api.data_descriptors.VerticalLabel",
         "vertical_label": {
             "@context": "https://wcrp-cmip.github.io/Variable-Registry/vertical_label/_context",
-            "@container": "@set",
+            "@container": "@list",
             "@type": "@id"
         }
     },
     "@type": [
         "wcrp:vertical_label",
+        "esgvoc:VerticalLabel",
         "cmip7"
     ],
     "@id": "vertical_label"
