@@ -7,7 +7,7 @@
     ],
     "alias": [],
     "minimum_number_of_years": 10,
-    "model_realms_allowed_optional": [
+    "model_realms_additional_allowed": [
         "aer",
         "bgc",
         "chem",
@@ -26,8 +26,7 @@
     "@type": [
         "wcrp:experiment",
         "esgvoc:Experiment",
-        "cmip7",
-        "cmip:fast-track"
+        "cmip7"
     ],
     "@id": "dcppb-forecast-cmip6"
 }
