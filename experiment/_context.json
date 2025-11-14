@@ -1,0 +1,30 @@
+{
+    "@context": {
+        "@base": "https://wcrp-cmip.github.io/CMIP7-CVs/experiment/",
+        "@vocab": "https://esgf.github.io/esgf-vocab/api_documentation/data_descriptors.html#esgvoc.api.data_descriptors.Experiment.",
+        "activity": {
+            "@context": "https://wcrp-cmip.github.io/WCRP-universe/activity/_context",
+            "@container": "@list",
+            "@type": "@id"
+        },
+        "model_realms_additional_allowed": {
+            "@context": "https://wcrp-cmip.github.io/WCRP-universe/source_type/_context",
+            "@container": "@list",
+            "@type": "@id"
+        },
+        "model_realms_required": {
+            "@context": "https://wcrp-cmip.github.io/WCRP-universe/source_type/_context",
+            "@container": "@list",
+            "@type": "@id"
+        },
+        "parent_activity": {
+            "@context": "https://wcrp-cmip.github.io/WCRP-universe/activity/_context",
+            "@container": "@list",
+            "@type": "@id"
+        },
+        "parent_experiment": {
+            "@type": "@id",
+            "@container": "@set"
+        }
+    }
+}

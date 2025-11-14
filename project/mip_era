@@ -1,0 +1,23 @@
+{
+    "validation_key": "mip_era",
+    "ui_label": "MipEraCollection",
+    "description": "CMIP7 MIP Era",
+    "mip_era": {
+        "@id": "cmip7"
+    },
+    "@context": {
+        "@base": "https://wcrp-cmip.github.io/CMIP7-CVs/project/",
+        "@vocab": "https://esgf.github.io/esgf-vocab/api_documentation/data_descriptors.html#esgvoc.api.data_descriptors.MipEra",
+        "mip_era": {
+            "@context": "https://wcrp-cmip.github.io/WCRP-universe/mip/_context",
+            "@container": "@list",
+            "@type": "@id"
+        }
+    },
+    "@type": [
+        "wcrp:mip_era",
+        "esgvoc:MipEra",
+        "cmip7"
+    ],
+    "@id": "mip_era"
+}
