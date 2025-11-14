@@ -9,7 +9,8 @@
     "end": -999,
     "min_number_yrs_per_sim": -999,
     "minimum_number_of_years": 50,
-    "model_realms": [],
+    "model_realms_allowed_optional": [],
+    "model_realms_required": [],
     "parent_experiment": [
         "none"
     ],

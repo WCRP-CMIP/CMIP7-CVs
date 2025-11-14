@@ -9,23 +9,13 @@
     "end": -999,
     "min_number_yrs_per_sim": 400,
     "minimum_number_of_years": 400,
-    "model_realms": [
-        {
-            "@id": "aogcm",
-            "is_required": true
-        },
-        {
-            "@id": "bgc",
-            "is_required": true
-        },
-        {
-            "@id": "aer",
-            "is_required": false
-        },
-        {
-            "@id": "chem",
-            "is_required": false
-        }
+    "model_realms_allowed_optional": [
+        "aer",
+        "chem"
+    ],
+    "model_realms_required": [
+        "aogcm",
+        "bgc"
     ],
     "parent_experiment": [
         "none"

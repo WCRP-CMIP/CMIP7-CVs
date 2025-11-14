@@ -8,23 +8,13 @@
     "alias": [],
     "branch_date": "none",
     "minimum_number_of_years": 44,
-    "model_realms": [
-        {
-            "@id": "agcm",
-            "is_required": true
-        },
-        {
-            "@id": "aer",
-            "is_required": false
-        },
-        {
-            "@id": "bgc",
-            "is_required": false
-        },
-        {
-            "@id": "chem",
-            "is_required": false
-        }
+    "model_realms_allowed_optional": [
+        "aer",
+        "bgc",
+        "chem"
+    ],
+    "model_realms_required": [
+        "agcm"
     ],
     "parent_experiment": [
         "none"

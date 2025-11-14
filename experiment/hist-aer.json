@@ -7,11 +7,9 @@
     ],
     "alias": [],
     "minimum_number_of_years": 186,
-    "model_realms": [
-        {
-            "@id": "aogcm",
-            "is_required": true
-        }
+    "model_realms_allowed_optional": [],
+    "model_realms_required": [
+        "aogcm"
     ],
     "parent_experiment": [
         "picontrol"
