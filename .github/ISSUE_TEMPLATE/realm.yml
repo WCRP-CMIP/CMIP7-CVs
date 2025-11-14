@@ -17,5 +17,13 @@ body:
       label: Realm
       description: Select the realms to add to CMIP7
       options:
+        - "aerosol"
+        - "atmos"
+        - "atmosChem"
+        - "land"
+        - "landIce"
+        - "ocean"
+        - "ocnBgchem"
+        - "seaIce"
     validations:
       required: true
