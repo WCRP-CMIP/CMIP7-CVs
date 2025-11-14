@@ -1,41 +1,44 @@
 {
-  "validation_key": "amip-p4K-SST-rad",
-  "ui_label": "AMIP experiment with uniform 4K increase in the SST input to radiation",
-  "description": "Similar to `amip`, but SST is raised by 4K when calculating the upward longwave radiation from the sea surface using Planck function.  Reference: [Ogura et al., 2023](https://doi.org/10.1029/2023GL104786)",
-  "activity": [
-    "cfmip"
-  ],
-  "alias": [],
-  "branch_date": "none",
-  "minimum_number_of_years": 44,
-  "model_realms": [
-    {
-      "@id": "agcm",
-      "is_required": true
-    },
-    {
-      "@id": "aer",
-      "is_required": false
-    },
-    {
-      "@id": "bgc",
-      "is_required": false
-    },
-    {
-      "@id": "chem",
-      "is_required": false
-    }
-  ],
-  "parent_experiment": [
-    "none"
-  ],
-  "start_date": "1979-01-01",
-  "tier": "2",
-  "@context": "_context",
-  "@type": [
-    "wcrp:experiment",
-    "esgvoc:Experiment",
-    "cmip7"
-  ],
-  "@id": "amip-p4k-sst-rad"
+    "validation_key": "amip-p4K-SST-rad",
+    "ui_label": "AMIP experiment with uniform 4K increase in the SST input to radiation",
+    "description": "Similar to `amip`, but SST is raised by 4K when calculating the upward longwave radiation from the sea surface using Planck function.  Reference: [Ogura et al., 2023](https://doi.org/10.1029/2023GL104786)",
+    "activity": [
+        "cfmip"
+    ],
+    "alias": [],
+    "branch_date": "none",
+    "minimum_number_of_years": 44,
+    "model_realms": [
+        {
+            "@id": "agcm",
+            "is_required": true
+        },
+        {
+            "@id": "aer",
+            "is_required": false
+        },
+        {
+            "@id": "bgc",
+            "is_required": false
+        },
+        {
+            "@id": "chem",
+            "is_required": false
+        }
+    ],
+    "parent_experiment": [
+        "none"
+    ],
+    "references": [
+        "10.1029/2023GL104786"
+    ],
+    "start_date": "1979-01-01",
+    "tier": "2",
+    "@context": "_context",
+    "@type": [
+        "wcrp:experiment",
+        "esgvoc:Experiment",
+        "cmip7"
+    ],
+    "@id": "amip-p4k-sst-rad"
 }

@@ -1,29 +1,30 @@
 {
-  "validation_key": "scen7-m",
-  "ui_label": "pending",
-  "description": "pending",
-  "activity": [
-    "scenariomip"
-  ],
-  "alias": [],
-  "minimum_number_of_years": 75,
-  "model_realms": [
-    {
-      "@id": "pending",
-      "is_required": true
-    }
-  ],
-  "parent_experiment": [
-    "pending"
-  ],
-  "start_date": "pending",
-  "tier": "pending",
-  "@context": "_context",
-  "@type": [
-    "wcrp:experiment",
-    "esgvoc:Experiment",
-    "cmip7",
-    "cmip:fast-track"
-  ],
-  "@id": "scen7-m-pending"
+    "validation_key": "scen7-m",
+    "ui_label": "pending",
+    "description": "pending",
+    "activity": [
+        "scenariomip"
+    ],
+    "alias": [],
+    "minimum_number_of_years": 75,
+    "model_realms": [
+        {
+            "@id": "pending",
+            "is_required": true
+        }
+    ],
+    "parent_experiment": [
+        "pending"
+    ],
+    "references": [],
+    "start_date": "pending",
+    "tier": "pending",
+    "@context": "_context",
+    "@type": [
+        "wcrp:experiment",
+        "esgvoc:Experiment",
+        "cmip7",
+        "cmip:fast-track"
+    ],
+    "@id": "scen7-m-pending"
 }
