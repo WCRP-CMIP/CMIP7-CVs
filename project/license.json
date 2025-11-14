@@ -13,13 +13,13 @@
         "@vocab": "https://esgf.github.io/esgf-vocab/api_documentation/data_descriptors.html#esgvoc.api.data_descriptors.License",
         "license": {
             "@context": "https://wcrp-cmip.github.io/WCRP-universe/license/_context",
-            "@container": "@set",
+            "@container": "@list",
             "@type": "@id"
         }
     },
     "@type": [
-        "wcrp:project",
-        "esgvoc:Project",
+        "wcrp:license",
+        "esgvoc:License",
         "cmip7"
     ],
     "@id": "license"

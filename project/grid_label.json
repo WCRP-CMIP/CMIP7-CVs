@@ -2,20 +2,19 @@
     "validation_key": "grid_label",
     "ui_label": "GridLabelCollection",
     "description": "CMIP7 Permitted Grid Labels",
-    "grid_label": [
-    ],
+    "grid_label": [],
     "@context": {
         "@base": "https://wcrp-cmip.github.io/CMIP7-CVs/project/",
         "@vocab": "https://esgf.github.io/esgf-vocab/api_documentation/data_descriptors.html#esgvoc.api.data_descriptors.GridLabel",
         "grid_label": {
             "@context": "https://wcrp-cmip.github.io/WCRP-universe/grid_label/_context",
-            "@container": "@set",
+            "@container": "@list",
             "@type": "@id"
         }
     },
     "@type": [
-        "wcrp:project",
-        "esgvoc:Project",
+        "wcrp:grid_label",
+        "esgvoc:GridLabel",
         "cmip7"
     ],
     "@id": "grid_label"

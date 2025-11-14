@@ -10,8 +10,8 @@
         "@vocab": "https://esgf.github.io/esgf-vocab/api_documentation/data_descriptors.html#esgvoc.api.data_descriptors.TrackingId"
     },
     "@type": [
-        "wcrp:project",
-        "esgvoc:Project",
+        "wcrp:tracking_id",
+        "esgvoc:TrackingId",
         "cmip7"
     ],
     "@id": "tracking_id"
