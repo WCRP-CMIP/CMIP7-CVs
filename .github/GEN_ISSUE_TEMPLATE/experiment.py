@@ -13,7 +13,9 @@ from cmipld.utils.ldparse import *
 
 # Data for this template
 DATA = {
-    'activity': dict(cmipld.utils.ldparse.name_extract(cmipld.get('cmip7:activity.json',depth=1)['activity'])),
+    'activity': {"no-activity":'None',
+                 **dict(cmipld.utils.ldparse.name_extract(cmipld.get('cmip7:project/activity.json',depth=1)['activity']))  
+    },
     
     'parent_experiment': {
         "Custom Parent: specify in 'Parent experiment other' field": {'id': 'custom-parent', 'validation-key': 'custom-parent'},
@@ -24,11 +26,12 @@ DATA = {
         ),
     },
     'tier': ['Tier 1', 'Tier 2', 'Tier 3'],
-    'model_components': name_multikey_extract(
-        cmipld.get('universal:source-type/graph.jsonld',depth=0)['@graph'],
+    'model_components': 
+        name_multikey_extract(
+        cmipld.get('universal:source_type/graph.jsonld',depth=0)['@graph'],
         ['id','validation-key','ui-label'],'validation-key'
     ),
     'milestone': ['Review'],
-    'issue_kind': ['new', 'modify']
+    'issue_kind': ['New', 'Modify']
 }
 
