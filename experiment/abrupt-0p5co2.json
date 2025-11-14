@@ -9,7 +9,7 @@
     "end": -999,
     "min_number_yrs_per_sim": -999,
     "minimum_number_of_years": 300,
-    "model_realms_allowed_optional": [],
+    "model_realms_additional_allowed": [],
     "model_realms_required": [],
     "parent_experiment": [
         "none"
@@ -22,8 +22,7 @@
     "@type": [
         "wcrp:experiment",
         "esgvoc:Experiment",
-        "cmip7",
-        "cmip:fast-track"
+        "cmip7"
     ],
     "@id": "abrupt-0p5co2"
 }

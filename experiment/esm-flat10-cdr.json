@@ -7,7 +7,7 @@
     ],
     "alias": [],
     "minimum_number_of_years": 200,
-    "model_realms_allowed_optional": [
+    "model_realms_additional_allowed": [
         "aer",
         "chem",
         "ism"
@@ -26,8 +26,7 @@
     "@type": [
         "wcrp:experiment",
         "esgvoc:Experiment",
-        "cmip7",
-        "cmip:fast-track"
+        "cmip7"
     ],
     "@id": "esm-flat10-cdr"
 }
