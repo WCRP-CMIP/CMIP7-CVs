@@ -4,17 +4,22 @@
   "@vocab": "https://esgf.github.io/esgf-vocab/api_documentation/data_descriptors.html#esgvoc.api.data_descriptors.Experiment.",
   "activity": {
     "@context": "https://wcrp-cmip.github.io/WCRP-universe/activity/_context",
-    "@container": "@set",
+    "@container": "@id",
     "@type": "@id"
   },
-  "model_realms": {
+  "model_realms_additional_allowed": {
     "@context": "https://wcrp-cmip.github.io/WCRP-universe/source_type/_context",
-    "@container": "@set",
+    "@container": "@id",
+    "@type": "@id"
+  },
+  "model_realms_required": {
+    "@context": "https://wcrp-cmip.github.io/WCRP-universe/source_type/_context",
+    "@container": "@id",
     "@type": "@id"
   },
   "parent_activity": {
     "@context": "https://wcrp-cmip.github.io/WCRP-universe/activity/_context",
-    "@container": "@set",
+    "@container": "@id",
     "@type": "@id"
   },
   "parent_experiment": {
@@ -32,38 +37,25 @@
   ],
   "alias": [],
   "minimum_number_of_years": 150,
-  "model_realms": [
-    {
-      "@id": "aogcm",
-      "is_required": true
-    },
-    {
-      "@id": "bgc",
-      "is_required": true
-    },
-    {
-      "@id": "aer",
-      "is_required": false
-    },
-    {
-      "@id": "chem",
-      "is_required": false
-    },
-    {
-      "@id": "ism",
-      "is_required": false
-    }
+  "model_realms_additional_allowed": [
+    "aer",
+    "chem",
+    "ism"
+  ],
+  "model_realms_required": [
+    "aogcm",
+    "bgc"
   ],
   "parent_experiment": [
     "picontrol"
   ],
+  "references": [],
   "start_date": "none",
   "tier": "1",
   "@type": [
     "wcrp:experiment",
     "esgvoc:Experiment",
-    "cmip7",
-    "cmip:fast-track"
+    "cmip7"
   ],
   "@id": "1pctco2-bgc"
 }
@@ -76,38 +68,25 @@
   ],
   "alias": [],
   "minimum_number_of_years": 150,
-  "model_realms": [
-    {
-      "@id": "aogcm",
-      "is_required": true
-    },
-    {
-      "@id": "bgc",
-      "is_required": true
-    },
-    {
-      "@id": "aer",
-      "is_required": false
-    },
-    {
-      "@id": "chem",
-      "is_required": false
-    },
-    {
-      "@id": "ism",
-      "is_required": false
-    }
+  "model_realms_additional_allowed": [
+    "aer",
+    "chem",
+    "ism"
+  ],
+  "model_realms_required": [
+    "aogcm",
+    "bgc"
   ],
   "parent_experiment": [
     "picontrol"
   ],
+  "references": [],
   "start_date": "none",
   "tier": "1",
   "@type": [
     "wcrp:experiment",
     "esgvoc:Experiment",
-    "cmip7",
-    "cmip:fast-track"
+    "cmip7"
   ],
   "@id": "1pctco2-rad"
 }
@@ -122,27 +101,18 @@
   "end": -999,
   "min_number_yrs_per_sim": 150,
   "minimum_number_of_years": 150,
-  "model_realms": [
-    {
-      "@id": "aogcm",
-      "is_required": true
-    },
-    {
-      "@id": "aer",
-      "is_required": false
-    },
-    {
-      "@id": "chem",
-      "is_required": false
-    },
-    {
-      "@id": "bgc",
-      "is_required": false
-    }
+  "model_realms_additional_allowed": [
+    "aer",
+    "bgc",
+    "chem"
+  ],
+  "model_realms_required": [
+    "aogcm"
   ],
   "parent_experiment": [
     "picontrol"
   ],
+  "references": [],
   "start": -999,
   "start_date": "none",
   "tier": 0,
@@ -164,18 +134,19 @@
   "end": -999,
   "min_number_yrs_per_sim": -999,
   "minimum_number_of_years": 300,
-  "model_realms": [],
+  "model_realms_additional_allowed": [],
+  "model_realms_required": [],
   "parent_experiment": [
     "none"
   ],
+  "references": [],
   "start": -999,
   "start_date": "none",
   "tier": 0,
   "@type": [
     "wcrp:experiment",
     "esgvoc:Experiment",
-    "cmip7",
-    "cmip:fast-track"
+    "cmip7"
   ],
   "@id": "abrupt-0p5co2"
 }
@@ -189,26 +160,19 @@
   "alias": [],
   "branch_date": "none",
   "minimum_number_of_years": "300",
-  "model_realms": [
-    {
-      "@id": "aogcm",
-      "is_required": true
-    },
-    {
-      "@id": "aer",
-      "is_required": false
-    },
-    {
-      "@id": "bgc",
-      "is_required": false
-    },
-    {
-      "@id": "chem",
-      "is_required": false
-    }
+  "model_realms_additional_allowed": [
+    "aer",
+    "bgc",
+    "chem"
+  ],
+  "model_realms_required": [
+    "aogcm"
   ],
   "parent_experiment": [
     "picontrol"
+  ],
+  "references": [
+    "10.5194/gmd-10-359-2017"
   ],
   "start_date": "none",
   "tier": "1",
@@ -228,34 +192,24 @@
   ],
   "alias": [],
   "minimum_number_of_years": 100,
-  "model_realms": [
-    {
-      "@id": "aogcm",
-      "is_required": true
-    },
-    {
-      "@id": "aer",
-      "is_required": false
-    },
-    {
-      "@id": "bgc",
-      "is_required": false
-    },
-    {
-      "@id": "chem",
-      "is_required": false
-    }
+  "model_realms_additional_allowed": [
+    "aer",
+    "bgc",
+    "chem"
+  ],
+  "model_realms_required": [
+    "aogcm"
   ],
   "parent_experiment": [
     "picontrol"
   ],
+  "references": [],
   "start_date": "none",
   "tier": "1",
   "@type": [
     "wcrp:experiment",
     "esgvoc:Experiment",
-    "cmip7",
-    "cmip:fast-track"
+    "cmip7"
   ],
   "@id": "abrupt-127k"
 }
@@ -269,34 +223,26 @@
   "alias": [],
   "branch_date": "none",
   "minimum_number_of_years": 300,
-  "model_realms": [
-    {
-      "@id": "aogcm",
-      "is_required": true
-    },
-    {
-      "@id": "aer",
-      "is_required": false
-    },
-    {
-      "@id": "bgc",
-      "is_required": false
-    },
-    {
-      "@id": "chem",
-      "is_required": false
-    }
+  "model_realms_additional_allowed": [
+    "aer",
+    "bgc",
+    "chem"
+  ],
+  "model_realms_required": [
+    "aogcm"
   ],
   "parent_experiment": [
     "picontrol"
+  ],
+  "references": [
+    "10.5194/gmd-10-359-2017"
   ],
   "start_date": "none",
   "tier": "1",
   "@type": [
     "wcrp:experiment",
     "esgvoc:Experiment",
-    "cmip7",
-    "cmip:fast-track"
+    "cmip7"
   ],
   "@id": "abrupt-2xco2"
 }
@@ -309,27 +255,18 @@
   ],
   "alias": [],
   "minimum_number_of_years": "30",
-  "model_realms": [
-    {
-      "@id": "aogcm",
-      "is_required": true
-    },
-    {
-      "@id": "aer",
-      "is_required": false
-    },
-    {
-      "@id": "bgc",
-      "is_required": false
-    },
-    {
-      "@id": "chem",
-      "is_required": false
-    }
+  "model_realms_additional_allowed": [
+    "aer",
+    "bgc",
+    "chem"
+  ],
+  "model_realms_required": [
+    "aogcm"
   ],
   "parent_experiment": [
     "none"
   ],
+  "references": [],
   "start_date": "1950-01-01",
   "tier": "3",
   "@type": [
@@ -350,27 +287,18 @@
   "end": -999,
   "min_number_yrs_per_sim": 150,
   "minimum_number_of_years": 300,
-  "model_realms": [
-    {
-      "@id": "aogcm",
-      "is_required": true
-    },
-    {
-      "@id": "aer",
-      "is_required": false
-    },
-    {
-      "@id": "chem",
-      "is_required": false
-    },
-    {
-      "@id": "bgc",
-      "is_required": false
-    }
+  "model_realms_additional_allowed": [
+    "aer",
+    "bgc",
+    "chem"
+  ],
+  "model_realms_required": [
+    "aogcm"
   ],
   "parent_experiment": [
     "picontrol"
   ],
+  "references": [],
   "start": -999,
   "start_date": "none",
   "tier": 0,
@@ -390,15 +318,14 @@
   ],
   "alias": [],
   "minimum_number_of_years": 122,
-  "model_realms": [
-    {
-      "@id": "pending",
-      "is_required": true
-    }
+  "model_realms_additional_allowed": [],
+  "model_realms_required": [
+    "pending"
   ],
   "parent_experiment": [
     "pending"
   ],
+  "references": [],
   "start_date": "pending",
   "tier": "pending",
   "@type": [
@@ -418,26 +345,20 @@
   "alias": [],
   "branch_date": "none",
   "minimum_number_of_years": 44,
-  "model_realms": [
-    {
-      "@id": "agcm",
-      "is_required": true
-    },
-    {
-      "@id": "aer",
-      "is_required": false
-    },
-    {
-      "@id": "bgc",
-      "is_required": false
-    },
-    {
-      "@id": "chem",
-      "is_required": false
-    }
+  "model_realms_additional_allowed": [
+    "aer",
+    "bgc",
+    "chem"
+  ],
+  "model_realms_required": [
+    "agcm"
   ],
   "parent_experiment": [
     "none"
+  ],
+  "references": [
+    "10.1029/2023JD038861",
+    "10.5194/gmd"
   ],
   "start_date": "1979-01-01",
   "tier": "2",
@@ -457,15 +378,14 @@
   ],
   "alias": [],
   "minimum_number_of_years": 122,
-  "model_realms": [
-    {
-      "@id": "pending",
-      "is_required": true
-    }
+  "model_realms_additional_allowed": [],
+  "model_realms_required": [
+    "pending"
   ],
   "parent_experiment": [
     "pending"
   ],
+  "references": [],
   "start_date": "pending",
   "tier": "pending",
   "@type": [
@@ -485,26 +405,19 @@
   "alias": [],
   "branch_date": "none",
   "minimum_number_of_years": 44,
-  "model_realms": [
-    {
-      "@id": "agcm",
-      "is_required": true
-    },
-    {
-      "@id": "aer",
-      "is_required": false
-    },
-    {
-      "@id": "bgc",
-      "is_required": false
-    },
-    {
-      "@id": "chem",
-      "is_required": false
-    }
+  "model_realms_additional_allowed": [
+    "aer",
+    "bgc",
+    "chem"
+  ],
+  "model_realms_required": [
+    "agcm"
   ],
   "parent_experiment": [
     "none"
+  ],
+  "references": [
+    "10.1029/2023GL104786"
   ],
   "start_date": "1979-01-01",
   "tier": "2",
@@ -525,26 +438,19 @@
   "alias": [],
   "branch_date": "none",
   "minimum_number_of_years": 44,
-  "model_realms": [
-    {
-      "@id": "agcm",
-      "is_required": true
-    },
-    {
-      "@id": "aer",
-      "is_required": false
-    },
-    {
-      "@id": "bgc",
-      "is_required": false
-    },
-    {
-      "@id": "chem",
-      "is_required": false
-    }
+  "model_realms_additional_allowed": [
+    "aer",
+    "bgc",
+    "chem"
+  ],
+  "model_realms_required": [
+    "agcm"
   ],
   "parent_experiment": [
     "none"
+  ],
+  "references": [
+    "10.1029/2023GL104786"
   ],
   "start_date": "1979-01-01",
   "tier": "2",
@@ -565,34 +471,26 @@
   "alias": [],
   "branch_date": "none",
   "minimum_number_of_years": 36,
-  "model_realms": [
-    {
-      "@id": "agcm",
-      "is_required": true
-    },
-    {
-      "@id": "aer",
-      "is_required": false
-    },
-    {
-      "@id": "bgc",
-      "is_required": false
-    },
-    {
-      "@id": "chem",
-      "is_required": false
-    }
+  "model_realms_additional_allowed": [
+    "aer",
+    "bgc",
+    "chem"
+  ],
+  "model_realms_required": [
+    "agcm"
   ],
   "parent_experiment": [
     "none"
+  ],
+  "references": [
+    "10.5194/gmd-10-359-2017"
   ],
   "start_date": "1979-01-01",
   "tier": "1",
   "@type": [
     "wcrp:experiment",
     "esgvoc:Experiment",
-    "cmip7",
-    "cmip:fast-track"
+    "cmip7"
   ],
   "@id": "amip-p4k"
 }
@@ -606,34 +504,26 @@
   "alias": [],
   "branch_date": "none",
   "minimum_number_of_years": 145,
-  "model_realms": [
-    {
-      "@id": "agcm",
-      "is_required": true
-    },
-    {
-      "@id": "aer",
-      "is_required": false
-    },
-    {
-      "@id": "bgc",
-      "is_required": false
-    },
-    {
-      "@id": "chem",
-      "is_required": false
-    }
+  "model_realms_additional_allowed": [
+    "aer",
+    "bgc",
+    "chem"
+  ],
+  "model_realms_required": [
+    "agcm"
   ],
   "parent_experiment": [
     "none"
+  ],
+  "references": [
+    "10.5194/gmd-10-359-2017"
   ],
   "start_date": "1870-01-01",
   "tier": "1",
   "@type": [
     "wcrp:experiment",
     "esgvoc:Experiment",
-    "cmip7",
-    "cmip:fast-track"
+    "cmip7"
   ],
   "@id": "amip-piforcing"
 }
@@ -648,27 +538,18 @@
   "end": 2021,
   "min_number_yrs_per_sim": 43,
   "minimum_number_of_years": 42,
-  "model_realms": [
-    {
-      "@id": "agcm",
-      "is_required": true
-    },
-    {
-      "@id": "aer",
-      "is_required": false
-    },
-    {
-      "@id": "chem",
-      "is_required": false
-    },
-    {
-      "@id": "bgc",
-      "is_required": false
-    }
+  "model_realms_additional_allowed": [
+    "aer",
+    "bgc",
+    "chem"
+  ],
+  "model_realms_required": [
+    "agcm"
   ],
   "parent_experiment": [
     "none"
   ],
+  "references": [],
   "start": 1979,
   "start_date": "none",
   "tier": 0,
@@ -688,27 +569,18 @@
   ],
   "alias": [],
   "minimum_number_of_years": "100",
-  "model_realms": [
-    {
-      "@id": "aogcm",
-      "is_required": true
-    },
-    {
-      "@id": "aer",
-      "is_required": false
-    },
-    {
-      "@id": "bgc",
-      "is_required": false
-    },
-    {
-      "@id": "chem",
-      "is_required": false
-    }
+  "model_realms_additional_allowed": [
+    "aer",
+    "bgc",
+    "chem"
+  ],
+  "model_realms_required": [
+    "aogcm"
   ],
   "parent_experiment": [
     "spinup-1950"
   ],
+  "references": [],
   "start_date": "1950-01-01",
   "tier": "1",
   "@type": [
@@ -727,15 +599,14 @@
   ],
   "alias": [],
   "minimum_number_of_years": 56,
-  "model_realms": [
-    {
-      "@id": "pending",
-      "is_required": true
-    }
+  "model_realms_additional_allowed": [],
+  "model_realms_required": [
+    "pending"
   ],
   "parent_experiment": [
     "pending"
   ],
+  "references": [],
   "start_date": "pending",
   "tier": "pending",
   "@type": [
@@ -754,15 +625,14 @@
   ],
   "alias": [],
   "minimum_number_of_years": 5,
-  "model_realms": [
-    {
-      "@id": "pending",
-      "is_required": true
-    }
+  "model_realms_additional_allowed": [],
+  "model_realms_required": [
+    "pending"
   ],
   "parent_experiment": [
     "pending"
   ],
+  "references": [],
   "start_date": "pending",
   "tier": "pending",
   "@type": [
@@ -773,6 +643,37 @@
   "@id": "dcppa-hindcast-pending"
 }
     ,{
+  "validation_key": "dcppB-forecast-cmip6",
+  "ui_label": "forecast initialized from observations with forcing from ssp245",
+  "description": "CMIP6 DCPP (Boer et al., 2016; www.geosci-model-dev.net/9/3751/2016/) experiments B1 (and B2.1, B2.2)--ongoing fully-coupled decadal forecasts initialized from observation-based states. First full forecast year follows start year (e.g., for 2025 initialization, first full forecast year is 2026). This AR7 FastTrack experiment is a real-time extension of CMIP6 DCPP component B, so a pre-requisite is completion of CMIP6 DCPP component A (experiment id: dcppA-hindcast). For participation in AR7, forecasts should be 10 years long with minimum of 10 ensemble members.",
+  "activity": [
+    "dcpp"
+  ],
+  "alias": [],
+  "minimum_number_of_years": 10,
+  "model_realms_additional_allowed": [
+    "aer",
+    "bgc",
+    "chem",
+    "ism"
+  ],
+  "model_realms_required": [
+    "aogcm"
+  ],
+  "parent_experiment": [
+    "none"
+  ],
+  "references": [],
+  "start_date": "2026",
+  "tier": "1",
+  "@type": [
+    "wcrp:experiment",
+    "esgvoc:Experiment",
+    "cmip7"
+  ],
+  "@id": "dcppb-forecast-cmip6"
+}
+    ,{
   "validation_key": "dcppB-forecast",
   "ui_label": "pending",
   "description": "pending",
@@ -781,15 +682,14 @@
   ],
   "alias": [],
   "minimum_number_of_years": 5,
-  "model_realms": [
-    {
-      "@id": "pending",
-      "is_required": true
-    }
+  "model_realms_additional_allowed": [],
+  "model_realms_required": [
+    "pending"
   ],
   "parent_experiment": [
     "pending"
   ],
+  "references": [],
   "start_date": "pending",
   "tier": "pending",
   "@type": [
@@ -800,50 +700,6 @@
   "@id": "dcppb-forecast-pending"
 }
     ,{
-  "validation_key": "dcppB-forecast-cmip6",
-  "ui_label": "forecast initialized from observations with forcing from ssp245",
-  "description": "CMIP6 DCPP (Boer et al., 2016; www.geosci-model-dev.net/9/3751/2016/) experiments B1 (and B2.1, B2.2)--ongoing fully-coupled decadal forecasts initialized from observation-based states. First full forecast year follows start year (e.g., for 2025 initialization, first full forecast year is 2026). This AR7 FastTrack experiment is a real-time extension of CMIP6 DCPP component B, so a pre-requisite is completion of CMIP6 DCPP component A (experiment id: dcppA-hindcast). For participation in AR7, forecasts should be 10 years long with minimum of 10 ensemble members.",
-  "activity": [
-    "dcpp"
-  ],
-  "alias": [],
-  "minimum_number_of_years": 10,
-  "model_realms": [
-    {
-      "@id": "aogcm",
-      "is_required": true
-    },
-    {
-      "@id": "aer",
-      "is_required": false
-    },
-    {
-      "@id": "bgc",
-      "is_required": false
-    },
-    {
-      "@id": "chem",
-      "is_required": false
-    },
-    {
-      "@id": "ism",
-      "is_required": false
-    }
-  ],
-  "parent_experiment": [
-    "none"
-  ],
-  "start_date": "2026",
-  "tier": "1",
-  "@type": [
-    "wcrp:experiment",
-    "esgvoc:Experiment",
-    "cmip7",
-    "cmip:fast-track"
-  ],
-  "@id": "dcppb-forecast-cmip6"
-}
-    ,{
   "validation_key": "esm-flat10-cdr",
   "ui_label": "10 PgC/yr constant CO2 removal / negative emissions experiment",
   "description": "esm-flat10-cdr is newly introduced for CMIP7 as an emissions-driven idealised experiment to quantify sensitivity of the earth system to CO2 removal / negative emissions.  It requires fully-coupled AOGCM and BGC models with carbon cycle “emissions-driven”  The esm-flat10-cdr experiment branches from year 100 of the esm-flat10 simulation, but with CO2 emissions set to decline linearly to zero after 50 years, decrease further (becoming negative) over the next 50 years (reaching -10 PgC/yr) and then remain constant at -10 PgC/yr for a final 100 years.  It serves as an emissions-driven experiment to diagnose the reversibility of the Earth system due to carbon dioxide removal. By the end of the simulation the cumulative emissions over 300 years will be exactly zero – the same amount of CO2 has been removed as was added.  Used with the partner experiments esm-flat10 and esm-flat10-zec it forms a vital part of assessment of TCRE, ZEC and reversibility. In particular these experiments make assessment of ZEC easier than CMIP6 because: the experiment is emissions-driven from the outset and does not require a change in configuration at the branch point and the branch point is common across all models.  more details and analysis can be found here: https://egusphere.copernicus.org/preprints/2023/egusphere-2023-2127/ https://egusphere.copernicus.org/preprints/2024/egusphere-2024-3356/  this experiment is an evolution of the CDRMIP simulations from CMIP6: https://gmd.copernicus.org/articles/11/1133/2018/",
@@ -852,38 +708,25 @@
   ],
   "alias": [],
   "minimum_number_of_years": 200,
-  "model_realms": [
-    {
-      "@id": "agcm",
-      "is_required": true
-    },
-    {
-      "@id": "bgc",
-      "is_required": true
-    },
-    {
-      "@id": "aer",
-      "is_required": false
-    },
-    {
-      "@id": "chem",
-      "is_required": false
-    },
-    {
-      "@id": "ism",
-      "is_required": false
-    }
+  "model_realms_additional_allowed": [
+    "aer",
+    "chem",
+    "ism"
+  ],
+  "model_realms_required": [
+    "agcm",
+    "bgc"
   ],
   "parent_experiment": [
     "esm-flat10"
   ],
+  "references": [],
   "start_date": "none",
   "tier": "1",
   "@type": [
     "wcrp:experiment",
     "esgvoc:Experiment",
-    "cmip7",
-    "cmip:fast-track"
+    "cmip7"
   ],
   "@id": "esm-flat10-cdr"
 }
@@ -896,38 +739,25 @@
   ],
   "alias": [],
   "minimum_number_of_years": 200,
-  "model_realms": [
-    {
-      "@id": "aogcm",
-      "is_required": true
-    },
-    {
-      "@id": "bgc",
-      "is_required": true
-    },
-    {
-      "@id": "aer",
-      "is_required": false
-    },
-    {
-      "@id": "chem",
-      "is_required": false
-    },
-    {
-      "@id": "ism",
-      "is_required": false
-    }
+  "model_realms_additional_allowed": [
+    "aer",
+    "chem",
+    "ism"
+  ],
+  "model_realms_required": [
+    "aogcm",
+    "bgc"
   ],
   "parent_experiment": [
     "esm-flat10"
   ],
+  "references": [],
   "start_date": "none",
   "tier": "1",
   "@type": [
     "wcrp:experiment",
     "esgvoc:Experiment",
-    "cmip7",
-    "cmip:fast-track"
+    "cmip7"
   ],
   "@id": "esm-flat10-zec"
 }
@@ -940,38 +770,25 @@
   ],
   "alias": [],
   "minimum_number_of_years": 150,
-  "model_realms": [
-    {
-      "@id": "aogcm",
-      "is_required": true
-    },
-    {
-      "@id": "bgc",
-      "is_required": true
-    },
-    {
-      "@id": "aer",
-      "is_required": false
-    },
-    {
-      "@id": "chem",
-      "is_required": false
-    },
-    {
-      "@id": "ism",
-      "is_required": false
-    }
+  "model_realms_additional_allowed": [
+    "aer",
+    "chem",
+    "ism"
+  ],
+  "model_realms_required": [
+    "aogcm",
+    "bgc"
   ],
   "parent_experiment": [
     "esm-picontrol"
   ],
+  "references": [],
   "start_date": "none",
   "tier": "1",
   "@type": [
     "wcrp:experiment",
     "esgvoc:Experiment",
-    "cmip7",
-    "cmip:fast-track"
+    "cmip7"
   ],
   "@id": "esm-flat10"
 }
@@ -986,27 +803,18 @@
   "end": 2021,
   "min_number_yrs_per_sim": 172,
   "minimum_number_of_years": 172,
-  "model_realms": [
-    {
-      "@id": "aogcm",
-      "is_required": true
-    },
-    {
-      "@id": "bgc",
-      "is_required": true
-    },
-    {
-      "@id": "aer",
-      "is_required": false
-    },
-    {
-      "@id": "chem",
-      "is_required": false
-    }
+  "model_realms_additional_allowed": [
+    "aer",
+    "chem"
+  ],
+  "model_realms_required": [
+    "aogcm",
+    "bgc"
   ],
   "parent_experiment": [
     "esm-picontrol"
   ],
+  "references": [],
   "start": 1850,
   "start_date": "none",
   "tier": 0,
@@ -1028,27 +836,18 @@
   "end": -999,
   "min_number_yrs_per_sim": 400,
   "minimum_number_of_years": 400,
-  "model_realms": [
-    {
-      "@id": "aogcm",
-      "is_required": true
-    },
-    {
-      "@id": "bgc",
-      "is_required": true
-    },
-    {
-      "@id": "aer",
-      "is_required": false
-    },
-    {
-      "@id": "chem",
-      "is_required": false
-    }
+  "model_realms_additional_allowed": [
+    "aer",
+    "chem"
+  ],
+  "model_realms_required": [
+    "aogcm",
+    "bgc"
   ],
   "parent_experiment": [
     "none"
   ],
+  "references": [],
   "start": -999,
   "start_date": "none",
   "tier": 0,
@@ -1068,15 +867,14 @@
   ],
   "alias": [],
   "minimum_number_of_years": 10,
-  "model_realms": [
-    {
-      "@id": "pending",
-      "is_required": true
-    }
+  "model_realms_additional_allowed": [],
+  "model_realms_required": [
+    "pending"
   ],
   "parent_experiment": [
     "pending"
   ],
+  "references": [],
   "start_date": "pending",
   "tier": "pending",
   "@type": [
@@ -1087,34 +885,6 @@
   "@id": "esm-s7h-nofirechange-pending"
 }
     ,{
-  "validation_key": "esm-scen7-h",
-  "ui_label": "pending",
-  "description": "pending",
-  "activity": [
-    "scenariomip"
-  ],
-  "alias": [],
-  "minimum_number_of_years": 75,
-  "model_realms": [
-    {
-      "@id": "pending",
-      "is_required": true
-    }
-  ],
-  "parent_experiment": [
-    "pending"
-  ],
-  "start_date": "pending",
-  "tier": "pending",
-  "@type": [
-    "wcrp:experiment",
-    "esgvoc:Experiment",
-    "cmip7",
-    "cmip:fast-track"
-  ],
-  "@id": "esm-scen7-h-pending"
-}
-    ,{
   "validation_key": "esm-scen7-h-Aer",
   "ui_label": "pending",
   "description": "pending",
@@ -1123,22 +893,20 @@
   ],
   "alias": [],
   "minimum_number_of_years": 104,
-  "model_realms": [
-    {
-      "@id": "pending",
-      "is_required": true
-    }
+  "model_realms_additional_allowed": [],
+  "model_realms_required": [
+    "pending"
   ],
   "parent_experiment": [
     "pending"
   ],
+  "references": [],
   "start_date": "pending",
   "tier": "pending",
   "@type": [
     "wcrp:experiment",
     "esgvoc:Experiment",
-    "cmip7",
-    "cmip:fast-track"
+    "cmip7"
   ],
   "@id": "esm-scen7-h-aer-pending"
 }
@@ -1151,22 +919,20 @@
   ],
   "alias": [],
   "minimum_number_of_years": 104,
-  "model_realms": [
-    {
-      "@id": "pending",
-      "is_required": true
-    }
+  "model_realms_additional_allowed": [],
+  "model_realms_required": [
+    "pending"
   ],
   "parent_experiment": [
     "pending"
   ],
+  "references": [],
   "start_date": "pending",
   "tier": "pending",
   "@type": [
     "wcrp:experiment",
     "esgvoc:Experiment",
-    "cmip7",
-    "cmip:fast-track"
+    "cmip7"
   ],
   "@id": "esm-scen7-h-aq-pending"
 }
@@ -1179,15 +945,14 @@
   ],
   "alias": [],
   "minimum_number_of_years": 50,
-  "model_realms": [
-    {
-      "@id": "pending",
-      "is_required": true
-    }
+  "model_realms_additional_allowed": [],
+  "model_realms_required": [
+    "pending"
   ],
   "parent_experiment": [
     "pending"
   ],
+  "references": [],
   "start_date": "pending",
   "tier": "pending",
   "@type": [
@@ -1198,7 +963,7 @@
   "@id": "esm-scen7-h-ext-pending"
 }
     ,{
-  "validation_key": "esm-scen7-hl",
+  "validation_key": "esm-scen7-h",
   "ui_label": "pending",
   "description": "pending",
   "activity": [
@@ -1206,24 +971,22 @@
   ],
   "alias": [],
   "minimum_number_of_years": 75,
-  "model_realms": [
-    {
-      "@id": "pending",
-      "is_required": true
-    }
+  "model_realms_additional_allowed": [],
+  "model_realms_required": [
+    "pending"
   ],
   "parent_experiment": [
     "pending"
   ],
+  "references": [],
   "start_date": "pending",
   "tier": "pending",
   "@type": [
     "wcrp:experiment",
     "esgvoc:Experiment",
-    "cmip7",
-    "cmip:fast-track"
+    "cmip7"
   ],
-  "@id": "esm-scen7-hl-pending"
+  "@id": "esm-scen7-h-pending"
 }
     ,{
   "validation_key": "esm-scen7-hl-ext",
@@ -1234,15 +997,14 @@
   ],
   "alias": [],
   "minimum_number_of_years": 50,
-  "model_realms": [
-    {
-      "@id": "pending",
-      "is_required": true
-    }
+  "model_realms_additional_allowed": [],
+  "model_realms_required": [
+    "pending"
   ],
   "parent_experiment": [
     "pending"
   ],
+  "references": [],
   "start_date": "pending",
   "tier": "pending",
   "@type": [
@@ -1253,7 +1015,7 @@
   "@id": "esm-scen7-hl-ext-pending"
 }
     ,{
-  "validation_key": "esm-scen7-l",
+  "validation_key": "esm-scen7-hl",
   "ui_label": "pending",
   "description": "pending",
   "activity": [
@@ -1261,24 +1023,22 @@
   ],
   "alias": [],
   "minimum_number_of_years": 75,
-  "model_realms": [
-    {
-      "@id": "pending",
-      "is_required": true
-    }
+  "model_realms_additional_allowed": [],
+  "model_realms_required": [
+    "pending"
   ],
   "parent_experiment": [
     "pending"
   ],
+  "references": [],
   "start_date": "pending",
   "tier": "pending",
   "@type": [
     "wcrp:experiment",
     "esgvoc:Experiment",
-    "cmip7",
-    "cmip:fast-track"
+    "cmip7"
   ],
-  "@id": "esm-scen7-l-pending"
+  "@id": "esm-scen7-hl-pending"
 }
     ,{
   "validation_key": "esm-scen7-l-ext",
@@ -1289,15 +1049,14 @@
   ],
   "alias": [],
   "minimum_number_of_years": 50,
-  "model_realms": [
-    {
-      "@id": "pending",
-      "is_required": true
-    }
+  "model_realms_additional_allowed": [],
+  "model_realms_required": [
+    "pending"
   ],
   "parent_experiment": [
     "pending"
   ],
+  "references": [],
   "start_date": "pending",
   "tier": "pending",
   "@type": [
@@ -1308,7 +1067,7 @@
   "@id": "esm-scen7-l-ext-pending"
 }
     ,{
-  "validation_key": "esm-scen7-ln",
+  "validation_key": "esm-scen7-l",
   "ui_label": "pending",
   "description": "pending",
   "activity": [
@@ -1316,24 +1075,22 @@
   ],
   "alias": [],
   "minimum_number_of_years": 75,
-  "model_realms": [
-    {
-      "@id": "pending",
-      "is_required": true
-    }
+  "model_realms_additional_allowed": [],
+  "model_realms_required": [
+    "pending"
   ],
   "parent_experiment": [
     "pending"
   ],
+  "references": [],
   "start_date": "pending",
   "tier": "pending",
   "@type": [
     "wcrp:experiment",
     "esgvoc:Experiment",
-    "cmip7",
-    "cmip:fast-track"
+    "cmip7"
   ],
-  "@id": "esm-scen7-ln-pending"
+  "@id": "esm-scen7-l-pending"
 }
     ,{
   "validation_key": "esm-scen7-ln-ext",
@@ -1344,15 +1101,14 @@
   ],
   "alias": [],
   "minimum_number_of_years": 50,
-  "model_realms": [
-    {
-      "@id": "pending",
-      "is_required": true
-    }
+  "model_realms_additional_allowed": [],
+  "model_realms_required": [
+    "pending"
   ],
   "parent_experiment": [
     "pending"
   ],
+  "references": [],
   "start_date": "pending",
   "tier": "pending",
   "@type": [
@@ -1363,7 +1119,7 @@
   "@id": "esm-scen7-ln-ext-pending"
 }
     ,{
-  "validation_key": "esm-scen7-m",
+  "validation_key": "esm-scen7-ln",
   "ui_label": "pending",
   "description": "pending",
   "activity": [
@@ -1371,24 +1127,22 @@
   ],
   "alias": [],
   "minimum_number_of_years": 75,
-  "model_realms": [
-    {
-      "@id": "pending",
-      "is_required": true
-    }
+  "model_realms_additional_allowed": [],
+  "model_realms_required": [
+    "pending"
   ],
   "parent_experiment": [
     "pending"
   ],
+  "references": [],
   "start_date": "pending",
   "tier": "pending",
   "@type": [
     "wcrp:experiment",
     "esgvoc:Experiment",
-    "cmip7",
-    "cmip:fast-track"
+    "cmip7"
   ],
-  "@id": "esm-scen7-m-pending"
+  "@id": "esm-scen7-ln-pending"
 }
     ,{
   "validation_key": "esm-scen7-m-ext",
@@ -1399,15 +1153,14 @@
   ],
   "alias": [],
   "minimum_number_of_years": 50,
-  "model_realms": [
-    {
-      "@id": "pending",
-      "is_required": true
-    }
+  "model_realms_additional_allowed": [],
+  "model_realms_required": [
+    "pending"
   ],
   "parent_experiment": [
     "pending"
   ],
+  "references": [],
   "start_date": "pending",
   "tier": "pending",
   "@type": [
@@ -1418,7 +1171,7 @@
   "@id": "esm-scen7-m-ext-pending"
 }
     ,{
-  "validation_key": "esm-scen7-ml",
+  "validation_key": "esm-scen7-m",
   "ui_label": "pending",
   "description": "pending",
   "activity": [
@@ -1426,24 +1179,22 @@
   ],
   "alias": [],
   "minimum_number_of_years": 75,
-  "model_realms": [
-    {
-      "@id": "pending",
-      "is_required": true
-    }
+  "model_realms_additional_allowed": [],
+  "model_realms_required": [
+    "pending"
   ],
   "parent_experiment": [
     "pending"
   ],
+  "references": [],
   "start_date": "pending",
   "tier": "pending",
   "@type": [
     "wcrp:experiment",
     "esgvoc:Experiment",
-    "cmip7",
-    "cmip:fast-track"
+    "cmip7"
   ],
-  "@id": "esm-scen7-ml-pending"
+  "@id": "esm-scen7-m-pending"
 }
     ,{
   "validation_key": "esm-scen7-ml-ext",
@@ -1454,15 +1205,14 @@
   ],
   "alias": [],
   "minimum_number_of_years": 50,
-  "model_realms": [
-    {
-      "@id": "pending",
-      "is_required": true
-    }
+  "model_realms_additional_allowed": [],
+  "model_realms_required": [
+    "pending"
   ],
   "parent_experiment": [
     "pending"
   ],
+  "references": [],
   "start_date": "pending",
   "tier": "pending",
   "@type": [
@@ -1473,7 +1223,7 @@
   "@id": "esm-scen7-ml-ext-pending"
 }
     ,{
-  "validation_key": "esm-scen7-vl",
+  "validation_key": "esm-scen7-ml",
   "ui_label": "pending",
   "description": "pending",
   "activity": [
@@ -1481,24 +1231,22 @@
   ],
   "alias": [],
   "minimum_number_of_years": 75,
-  "model_realms": [
-    {
-      "@id": "pending",
-      "is_required": true
-    }
+  "model_realms_additional_allowed": [],
+  "model_realms_required": [
+    "pending"
   ],
   "parent_experiment": [
     "pending"
   ],
+  "references": [],
   "start_date": "pending",
   "tier": "pending",
   "@type": [
     "wcrp:experiment",
     "esgvoc:Experiment",
-    "cmip7",
-    "cmip:fast-track"
+    "cmip7"
   ],
-  "@id": "esm-scen7-vl-pending"
+  "@id": "esm-scen7-ml-pending"
 }
     ,{
   "validation_key": "esm-scen7-vl-Aer",
@@ -1509,22 +1257,20 @@
   ],
   "alias": [],
   "minimum_number_of_years": 104,
-  "model_realms": [
-    {
-      "@id": "pending",
-      "is_required": true
-    }
+  "model_realms_additional_allowed": [],
+  "model_realms_required": [
+    "pending"
   ],
   "parent_experiment": [
     "pending"
   ],
+  "references": [],
   "start_date": "pending",
   "tier": "pending",
   "@type": [
     "wcrp:experiment",
     "esgvoc:Experiment",
-    "cmip7",
-    "cmip:fast-track"
+    "cmip7"
   ],
   "@id": "esm-scen7-vl-aer-pending"
 }
@@ -1537,22 +1283,20 @@
   ],
   "alias": [],
   "minimum_number_of_years": 104,
-  "model_realms": [
-    {
-      "@id": "pending",
-      "is_required": true
-    }
+  "model_realms_additional_allowed": [],
+  "model_realms_required": [
+    "pending"
   ],
   "parent_experiment": [
     "pending"
   ],
+  "references": [],
   "start_date": "pending",
   "tier": "pending",
   "@type": [
     "wcrp:experiment",
     "esgvoc:Experiment",
-    "cmip7",
-    "cmip:fast-track"
+    "cmip7"
   ],
   "@id": "esm-scen7-vl-aq-pending"
 }
@@ -1565,15 +1309,14 @@
   ],
   "alias": [],
   "minimum_number_of_years": 50,
-  "model_realms": [
-    {
-      "@id": "pending",
-      "is_required": true
-    }
+  "model_realms_additional_allowed": [],
+  "model_realms_required": [
+    "pending"
   ],
   "parent_experiment": [
     "pending"
   ],
+  "references": [],
   "start_date": "pending",
   "tier": "pending",
   "@type": [
@@ -1584,6 +1327,32 @@
   "@id": "esm-scen7-vl-ext-pending"
 }
     ,{
+  "validation_key": "esm-scen7-vl",
+  "ui_label": "pending",
+  "description": "pending",
+  "activity": [
+    "scenariomip"
+  ],
+  "alias": [],
+  "minimum_number_of_years": 75,
+  "model_realms_additional_allowed": [],
+  "model_realms_required": [
+    "pending"
+  ],
+  "parent_experiment": [
+    "pending"
+  ],
+  "references": [],
+  "start_date": "pending",
+  "tier": "pending",
+  "@type": [
+    "wcrp:experiment",
+    "esgvoc:Experiment",
+    "cmip7"
+  ],
+  "@id": "esm-scen7-vl-pending"
+}
+    ,{
   "validation_key": "esm-up2p0-gwl2p0",
   "ui_label": "Zero-emission run starting at 2 degree C GWL",
   "description": "GWL=2 degree C experiment, branching off the ramp-up when GMSAT is 2 degree C warmer than pre-industrial.",
@@ -1592,27 +1361,18 @@
   ],
   "alias": [],
   "minimum_number_of_years": "300",
-  "model_realms": [
-    {
-      "@id": "aogcm",
-      "is_required": true
-    },
-    {
-      "@id": "bgc",
-      "is_required": true
-    },
-    {
-      "@id": "aer",
-      "is_required": false
-    },
-    {
-      "@id": "chem",
-      "is_required": false
-    }
+  "model_realms_additional_allowed": [
+    "aer",
+    "chem"
+  ],
+  "model_realms_required": [
+    "aogcm",
+    "bgc"
   ],
   "parent_experiment": [
     "esm-up2p0"
   ],
+  "references": [],
   "start_date": "none",
   "tier": "1",
   "@type": [
@@ -1631,27 +1391,18 @@
   ],
   "alias": [],
   "minimum_number_of_years": "200",
-  "model_realms": [
-    {
-      "@id": "aogcm",
-      "is_required": true
-    },
-    {
-      "@id": "bgc",
-      "is_required": true
-    },
-    {
-      "@id": "aer",
-      "is_required": false
-    },
-    {
-      "@id": "chem",
-      "is_required": false
-    }
+  "model_realms_additional_allowed": [
+    "aer",
+    "chem"
+  ],
+  "model_realms_required": [
+    "aogcm",
+    "bgc"
   ],
   "parent_experiment": [
     "esm-piControl"
   ],
+  "references": [],
   "start_date": "none",
   "tier": "1",
   "@type": [
@@ -1672,18 +1423,19 @@
   "end": -999,
   "min_number_yrs_per_sim": -999,
   "minimum_number_of_years": 50,
-  "model_realms": [],
+  "model_realms_additional_allowed": [],
+  "model_realms_required": [],
   "parent_experiment": [
     "none"
   ],
+  "references": [],
   "start": -999,
   "start_date": "none",
   "tier": 0,
   "@type": [
     "wcrp:experiment",
     "esgvoc:Experiment",
-    "cmip7",
-    "cmip:fast-track"
+    "cmip7"
   ],
   "@id": "g7-1p5k-sai"
 }
@@ -1696,15 +1448,14 @@
   ],
   "alias": [],
   "minimum_number_of_years": 78,
-  "model_realms": [
-    {
-      "@id": "pending",
-      "is_required": true
-    }
+  "model_realms_additional_allowed": [],
+  "model_realms_required": [
+    "pending"
   ],
   "parent_experiment": [
     "pending"
   ],
+  "references": [],
   "start_date": "pending",
   "tier": "pending",
   "@type": [
@@ -1723,27 +1474,18 @@
   ],
   "alias": [],
   "minimum_number_of_years": "1",
-  "model_realms": [
-    {
-      "@id": "agcm",
-      "is_required": true
-    },
-    {
-      "@id": "aer",
-      "is_required": false
-    },
-    {
-      "@id": "bgc",
-      "is_required": false
-    },
-    {
-      "@id": "chem",
-      "is_required": false
-    }
+  "model_realms_additional_allowed": [
+    "aer",
+    "bgc",
+    "chem"
+  ],
+  "model_realms_required": [
+    "agcm"
   ],
   "parent_experiment": [
     "none"
   ],
+  "references": [],
   "start_date": "2020-03-01",
   "tier": "3",
   "@type": [
@@ -1762,27 +1504,18 @@
   ],
   "alias": [],
   "minimum_number_of_years": 20,
-  "model_realms": [
-    {
-      "@id": "agcm",
-      "is_required": true
-    },
-    {
-      "@id": "aer",
-      "is_required": false
-    },
-    {
-      "@id": "bgc",
-      "is_required": false
-    },
-    {
-      "@id": "chem",
-      "is_required": false
-    }
+  "model_realms_additional_allowed": [
+    "aer",
+    "bgc",
+    "chem"
+  ],
+  "model_realms_required": [
+    "agcm"
   ],
   "parent_experiment": [
     "none"
   ],
+  "references": [],
   "start_date": "2003-01-01",
   "tier": "3",
   "@type": [
@@ -1801,27 +1534,18 @@
   ],
   "alias": [],
   "minimum_number_of_years": 20,
-  "model_realms": [
-    {
-      "@id": "agcm",
-      "is_required": true
-    },
-    {
-      "@id": "aer",
-      "is_required": false
-    },
-    {
-      "@id": "bgc",
-      "is_required": false
-    },
-    {
-      "@id": "chem",
-      "is_required": false
-    }
+  "model_realms_additional_allowed": [
+    "aer",
+    "bgc",
+    "chem"
+  ],
+  "model_realms_required": [
+    "agcm"
   ],
   "parent_experiment": [
     "none"
   ],
+  "references": [],
   "start_date": "2003-01-01",
   "tier": "3",
   "@type": [
@@ -1840,27 +1564,18 @@
   ],
   "alias": [],
   "minimum_number_of_years": "1",
-  "model_realms": [
-    {
-      "@id": "agcm",
-      "is_required": true
-    },
-    {
-      "@id": "aer",
-      "is_required": false
-    },
-    {
-      "@id": "bgc",
-      "is_required": false
-    },
-    {
-      "@id": "chem",
-      "is_required": false
-    }
+  "model_realms_additional_allowed": [
+    "aer",
+    "bgc",
+    "chem"
+  ],
+  "model_realms_required": [
+    "agcm"
   ],
   "parent_experiment": [
     "none"
   ],
+  "references": [],
   "start_date": "2020-03-01",
   "tier": "3",
   "@type": [
@@ -1879,27 +1594,18 @@
   ],
   "alias": [],
   "minimum_number_of_years": "43",
-  "model_realms": [
-    {
-      "@id": "agcm",
-      "is_required": true
-    },
-    {
-      "@id": "aer",
-      "is_required": false
-    },
-    {
-      "@id": "bgc",
-      "is_required": false
-    },
-    {
-      "@id": "chem",
-      "is_required": false
-    }
+  "model_realms_additional_allowed": [
+    "aer",
+    "bgc",
+    "chem"
+  ],
+  "model_realms_required": [
+    "agcm"
   ],
   "parent_experiment": [
     "none"
   ],
+  "references": [],
   "start_date": "1980-01-01",
   "tier": "1",
   "@type": [
@@ -1918,27 +1624,18 @@
   ],
   "alias": [],
   "minimum_number_of_years": 73,
-  "model_realms": [
-    {
-      "@id": "aogcm",
-      "is_required": true
-    },
-    {
-      "@id": "aer",
-      "is_required": false
-    },
-    {
-      "@id": "bgc",
-      "is_required": false
-    },
-    {
-      "@id": "chem",
-      "is_required": false
-    }
+  "model_realms_additional_allowed": [
+    "aer",
+    "bgc",
+    "chem"
+  ],
+  "model_realms_required": [
+    "aogcm"
   ],
   "parent_experiment": [
     "none"
   ],
+  "references": [],
   "start_date": "1950-01-01",
   "tier": "2",
   "@type": [
@@ -1957,22 +1654,22 @@
   ],
   "alias": [],
   "minimum_number_of_years": 186,
-  "model_realms": [
-    {
-      "@id": "aogcm",
-      "is_required": true
-    }
+  "model_realms_additional_allowed": [],
+  "model_realms_required": [
+    "aogcm"
   ],
   "parent_experiment": [
     "picontrol"
+  ],
+  "references": [
+    "10.5194/egusphere-2024-4086"
   ],
   "start_date": "1850-01-01",
   "tier": "1",
   "@type": [
     "wcrp:experiment",
     "esgvoc:Experiment",
-    "cmip7",
-    "cmip:fast-track"
+    "cmip7"
   ],
   "@id": "hist-aer"
 }
@@ -1985,22 +1682,22 @@
   ],
   "alias": [],
   "minimum_number_of_years": 186,
-  "model_realms": [
-    {
-      "@id": "aogcm",
-      "is_required": true
-    }
+  "model_realms_additional_allowed": [],
+  "model_realms_required": [
+    "aogcm"
   ],
   "parent_experiment": [
     "picontrol"
+  ],
+  "references": [
+    "10.5194/egusphere-2024-4086"
   ],
   "start_date": "1850-01-01",
   "tier": "1",
   "@type": [
     "wcrp:experiment",
     "esgvoc:Experiment",
-    "cmip7",
-    "cmip:fast-track"
+    "cmip7"
   ],
   "@id": "hist-ghg"
 }
@@ -2013,23 +1710,16 @@
   ],
   "alias": [],
   "minimum_number_of_years": 122,
-  "model_realms": [
-    {
-      "@id": "aogcm",
-      "is_required": true
-    },
-    {
-      "@id": "land",
-      "is_required": true
-    },
-    {
-      "@id": "bgc",
-      "is_required": true
-    }
+  "model_realms_additional_allowed": [],
+  "model_realms_required": [
+    "aogcm",
+    "bgc",
+    "land"
   ],
   "parent_experiment": [
     "historical"
   ],
+  "references": [],
   "start_date": "1901-01-01",
   "tier": "2",
   "@type": [
@@ -2048,22 +1738,22 @@
   ],
   "alias": [],
   "minimum_number_of_years": 172,
-  "model_realms": [
-    {
-      "@id": "aogcm",
-      "is_required": true
-    }
+  "model_realms_additional_allowed": [],
+  "model_realms_required": [
+    "aogcm"
   ],
   "parent_experiment": [
     "picontrol"
+  ],
+  "references": [
+    "10.5194/egusphere-2024-4086"
   ],
   "start_date": "1850-01-01",
   "tier": "1",
   "@type": [
     "wcrp:experiment",
     "esgvoc:Experiment",
-    "cmip7",
-    "cmip:fast-track"
+    "cmip7"
   ],
   "@id": "hist-nat"
 }
@@ -2076,27 +1766,18 @@
   ],
   "alias": [],
   "minimum_number_of_years": 172,
-  "model_realms": [
-    {
-      "@id": "aogcm",
-      "is_required": true
-    },
-    {
-      "@id": "bgc",
-      "is_required": true
-    },
-    {
-      "@id": "aer",
-      "is_required": true
-    },
-    {
-      "@id": "chem",
-      "is_required": false
-    }
+  "model_realms_additional_allowed": [
+    "chem"
+  ],
+  "model_realms_required": [
+    "aer",
+    "aogcm",
+    "bgc"
   ],
   "parent_experiment": [
     "esm-piControl"
   ],
+  "references": [],
   "start_date": "1850-01-01",
   "tier": "2",
   "@type": [
@@ -2115,23 +1796,16 @@
   ],
   "alias": [],
   "minimum_number_of_years": 122,
-  "model_realms": [
-    {
-      "@id": "aogcm",
-      "is_required": true
-    },
-    {
-      "@id": "land",
-      "is_required": true
-    },
-    {
-      "@id": "bgc",
-      "is_required": true
-    }
+  "model_realms_additional_allowed": [],
+  "model_realms_required": [
+    "aogcm",
+    "bgc",
+    "land"
   ],
   "parent_experiment": [
     "historical"
   ],
+  "references": [],
   "start_date": "1901-01-01",
   "tier": "2",
   "@type": [
@@ -2150,30 +1824,23 @@
   ],
   "alias": [],
   "minimum_number_of_years": 172,
-  "model_realms": [
-    {
-      "@id": "aer",
-      "is_required": true
-    },
-    {
-      "@id": "aogcm",
-      "is_required": true
-    },
-    {
-      "@id": "chem",
-      "is_required": false
-    }
+  "model_realms_additional_allowed": [
+    "chem"
+  ],
+  "model_realms_required": [
+    "aer",
+    "aogcm"
   ],
   "parent_experiment": [
     "picontrol"
   ],
+  "references": [],
   "start_date": "1850",
   "tier": "1",
   "@type": [
     "wcrp:experiment",
     "esgvoc:Experiment",
-    "cmip7",
-    "cmip:fast-track"
+    "cmip7"
   ],
   "@id": "hist-piaer"
 }
@@ -2186,30 +1853,22 @@
   ],
   "alias": [],
   "minimum_number_of_years": 172,
-  "model_realms": [
-    {
-      "@id": "aer",
-      "is_required": true
-    },
-    {
-      "@id": "aogcm",
-      "is_required": true
-    },
-    {
-      "@id": "chem",
-      "is_required": true
-    }
+  "model_realms_additional_allowed": [],
+  "model_realms_required": [
+    "aer",
+    "aogcm",
+    "chem"
   ],
   "parent_experiment": [
     "historical"
   ],
+  "references": [],
   "start_date": "none",
   "tier": "1",
   "@type": [
     "wcrp:experiment",
     "esgvoc:Experiment",
-    "cmip7",
-    "cmip:fast-track"
+    "cmip7"
   ],
   "@id": "hist-piaq"
 }
@@ -2223,10 +1882,12 @@
   "alias": [],
   "end": -999,
   "min_number_yrs_per_sim": -999,
-  "model_realms": [],
+  "model_realms_additional_allowed": [],
+  "model_realms_required": [],
   "parent_experiment": [
     "none"
   ],
+  "references": [],
   "start": -999,
   "start_date": "none",
   "tier": 0,
@@ -2248,27 +1909,18 @@
   "end": 2021,
   "min_number_yrs_per_sim": 172,
   "minimum_number_of_years": 171,
-  "model_realms": [
-    {
-      "@id": "aogcm",
-      "is_required": true
-    },
-    {
-      "@id": "aer",
-      "is_required": false
-    },
-    {
-      "@id": "chem",
-      "is_required": false
-    },
-    {
-      "@id": "bgc",
-      "is_required": false
-    }
+  "model_realms_additional_allowed": [
+    "aer",
+    "bgc",
+    "chem"
+  ],
+  "model_realms_required": [
+    "aogcm"
   ],
   "parent_experiment": [
     "picontrol"
   ],
+  "references": [],
   "start": 1850,
   "start_date": "none",
   "tier": 0,
@@ -2289,10 +1941,12 @@
   "alias": [],
   "end": -999,
   "min_number_yrs_per_sim": -999,
-  "model_realms": [],
+  "model_realms_additional_allowed": [],
+  "model_realms_required": [],
   "parent_experiment": [
     "none"
   ],
+  "references": [],
   "start": -999,
   "start_date": "none",
   "tier": 0,
@@ -2312,26 +1966,24 @@
   ],
   "alias": [],
   "minimum_number_of_years": 172,
-  "model_realms": [
-    {
-      "@id": "land",
-      "is_required": true
-    },
-    {
-      "@id": "bgc",
-      "is_required": false
-    }
+  "model_realms_additional_allowed": [
+    "bgc"
+  ],
+  "model_realms_required": [
+    "land"
   ],
   "parent_experiment": [
     "none"
+  ],
+  "references": [
+    "10.5194/gmd-9-2809-2016"
   ],
   "start_date": "1850",
   "tier": "1",
   "@type": [
     "wcrp:experiment",
     "esgvoc:Experiment",
-    "cmip7",
-    "cmip:fast-track"
+    "cmip7"
   ],
   "@id": "land-hist"
 }
@@ -2345,10 +1997,12 @@
   "alias": [],
   "end": -999,
   "min_number_yrs_per_sim": -999,
-  "model_realms": [],
+  "model_realms_additional_allowed": [],
+  "model_realms_required": [],
   "parent_experiment": [
     "none"
   ],
+  "references": [],
   "start": -999,
   "start_date": "none",
   "tier": 0,
@@ -2368,19 +2022,15 @@
   ],
   "alias": [],
   "minimum_number_of_years": "30",
-  "model_realms": [
-    {
-      "@id": "agcm",
-      "is_required": true
-    },
-    {
-      "@id": "chem",
-      "is_required": true
-    }
+  "model_realms_additional_allowed": [],
+  "model_realms_required": [
+    "agcm",
+    "chem"
   ],
   "parent_experiment": [
     "piclim-control"
   ],
+  "references": [],
   "start_date": "none",
   "tier": "2",
   "@type": [
@@ -2399,23 +2049,17 @@
   ],
   "alias": [],
   "minimum_number_of_years": "30",
-  "model_realms": [
-    {
-      "@id": "aer",
-      "is_required": true
-    },
-    {
-      "@id": "agcm",
-      "is_required": true
-    },
-    {
-      "@id": "chem",
-      "is_required": false
-    }
+  "model_realms_additional_allowed": [
+    "chem"
+  ],
+  "model_realms_required": [
+    "aer",
+    "agcm"
   ],
   "parent_experiment": [
     "piclim-control"
   ],
+  "references": [],
   "start_date": "none",
   "tier": "2",
   "@type": [
@@ -2434,23 +2078,17 @@
   ],
   "alias": [],
   "minimum_number_of_years": "30",
-  "model_realms": [
-    {
-      "@id": "aer",
-      "is_required": true
-    },
-    {
-      "@id": "agcm",
-      "is_required": true
-    },
-    {
-      "@id": "chem",
-      "is_required": false
-    }
+  "model_realms_additional_allowed": [
+    "chem"
+  ],
+  "model_realms_required": [
+    "aer",
+    "agcm"
   ],
   "parent_experiment": [
     "piclim-control"
   ],
+  "references": [],
   "start_date": "none",
   "tier": "2",
   "@type": [
@@ -2469,23 +2107,17 @@
   ],
   "alias": [],
   "minimum_number_of_years": "30",
-  "model_realms": [
-    {
-      "@id": "aer",
-      "is_required": true
-    },
-    {
-      "@id": "agcm",
-      "is_required": true
-    },
-    {
-      "@id": "chem",
-      "is_required": false
-    }
+  "model_realms_additional_allowed": [
+    "chem"
+  ],
+  "model_realms_required": [
+    "aer",
+    "agcm"
   ],
   "parent_experiment": [
     "piclim-control"
   ],
+  "references": [],
   "start_date": "none",
   "tier": "2",
   "@type": [
@@ -2504,23 +2136,17 @@
   ],
   "alias": [],
   "minimum_number_of_years": "30",
-  "model_realms": [
-    {
-      "@id": "aer",
-      "is_required": true
-    },
-    {
-      "@id": "agcm",
-      "is_required": true
-    },
-    {
-      "@id": "chem",
-      "is_required": false
-    }
+  "model_realms_additional_allowed": [
+    "chem"
+  ],
+  "model_realms_required": [
+    "aer",
+    "agcm"
   ],
   "parent_experiment": [
     "piclim-control"
   ],
+  "references": [],
   "start_date": "none",
   "tier": "2",
   "@type": [
@@ -2539,19 +2165,15 @@
   ],
   "alias": [],
   "minimum_number_of_years": "30",
-  "model_realms": [
-    {
-      "@id": "agcm",
-      "is_required": true
-    },
-    {
-      "@id": "chem",
-      "is_required": true
-    }
+  "model_realms_additional_allowed": [],
+  "model_realms_required": [
+    "agcm",
+    "chem"
   ],
   "parent_experiment": [
     "piclim-control"
   ],
+  "references": [],
   "start_date": "none",
   "tier": "2",
   "@type": [
@@ -2572,10 +2194,12 @@
   "end": -999,
   "min_number_yrs_per_sim": 30,
   "minimum_number_of_years": 30,
-  "model_realms": [],
+  "model_realms_additional_allowed": [],
+  "model_realms_required": [],
   "parent_experiment": [
     "picontrol"
   ],
+  "references": [],
   "start": -999,
   "start_date": "none",
   "tier": 0,
@@ -2596,34 +2220,27 @@
   "alias": [],
   "branch_date": "none",
   "minimum_number_of_years": 30,
-  "model_realms": [
-    {
-      "@id": "agcm",
-      "is_required": true
-    },
-    {
-      "@id": "aer",
-      "is_required": false
-    },
-    {
-      "@id": "bgc",
-      "is_required": false
-    },
-    {
-      "@id": "chem",
-      "is_required": false
-    }
+  "model_realms_additional_allowed": [
+    "aer",
+    "bgc",
+    "chem"
+  ],
+  "model_realms_required": [
+    "agcm"
   ],
   "parent_experiment": [
     "picontrol"
+  ],
+  "references": [
+    "10.5194/gmd-9-3447-2016",
+    "10.5194/acp-20-9591-2020"
   ],
   "start_date": "none",
   "tier": "1",
   "@type": [
     "wcrp:experiment",
     "esgvoc:Experiment",
-    "cmip7",
-    "cmip:fast-track"
+    "cmip7"
   ],
   "@id": "piclim-aer"
 }
@@ -2638,10 +2255,12 @@
   "end": -999,
   "min_number_yrs_per_sim": 30,
   "minimum_number_of_years": 30,
-  "model_realms": [],
+  "model_realms_additional_allowed": [],
+  "model_realms_required": [],
   "parent_experiment": [
     "picontrol"
   ],
+  "references": [],
   "start": -999,
   "start_date": "none",
   "tier": 0,
@@ -2661,23 +2280,16 @@
   ],
   "alias": [],
   "minimum_number_of_years": "30",
-  "model_realms": [
-    {
-      "@id": "aer",
-      "is_required": true
-    },
-    {
-      "@id": "agcm",
-      "is_required": true
-    },
-    {
-      "@id": "chem",
-      "is_required": true
-    }
+  "model_realms_additional_allowed": [],
+  "model_realms_required": [
+    "aer",
+    "agcm",
+    "chem"
   ],
   "parent_experiment": [
     "piClim-control"
   ],
+  "references": [],
   "start_date": "none",
   "tier": "1",
   "@type": [
@@ -2696,23 +2308,17 @@
   ],
   "alias": [],
   "minimum_number_of_years": "30",
-  "model_realms": [
-    {
-      "@id": "aer",
-      "is_required": true
-    },
-    {
-      "@id": "agcm",
-      "is_required": true
-    },
-    {
-      "@id": "chem",
-      "is_required": false
-    }
+  "model_realms_additional_allowed": [
+    "chem"
+  ],
+  "model_realms_required": [
+    "aer",
+    "agcm"
   ],
   "parent_experiment": [
     "piclim-control"
   ],
+  "references": [],
   "start_date": "none",
   "tier": "1",
   "@type": [
@@ -2731,26 +2337,21 @@
   ],
   "alias": [],
   "minimum_number_of_years": 30,
-  "model_realms": [
-    {
-      "@id": "agcm",
-      "is_required": true
-    },
-    {
-      "@id": "chem",
-      "is_required": true
-    }
+  "model_realms_additional_allowed": [],
+  "model_realms_required": [
+    "agcm",
+    "chem"
   ],
   "parent_experiment": [
     "piclim-control"
   ],
+  "references": [],
   "start_date": "none",
   "tier": "1",
   "@type": [
     "wcrp:experiment",
     "esgvoc:Experiment",
-    "cmip7",
-    "cmip:fast-track"
+    "cmip7"
   ],
   "@id": "piclim-ch4"
 }
@@ -2765,10 +2366,12 @@
   "end": -999,
   "min_number_yrs_per_sim": 30,
   "minimum_number_of_years": 30,
-  "model_realms": [],
+  "model_realms_additional_allowed": [],
+  "model_realms_required": [],
   "parent_experiment": [
     "picontrol"
   ],
+  "references": [],
   "start": -999,
   "start_date": "none",
   "tier": 0,
@@ -2789,10 +2392,12 @@
   "alias": [],
   "end": -999,
   "min_number_yrs_per_sim": -999,
-  "model_realms": [],
+  "model_realms_additional_allowed": [],
+  "model_realms_required": [],
   "parent_experiment": [
     "none"
   ],
+  "references": [],
   "start": -999,
   "start_date": "none",
   "tier": 0,
@@ -2812,34 +2417,27 @@
   ],
   "alias": [],
   "minimum_number_of_years": 30,
-  "model_realms": [
-    {
-      "@id": "agcm",
-      "is_required": true
-    },
-    {
-      "@id": "aer",
-      "is_required": false
-    },
-    {
-      "@id": "bgc",
-      "is_required": false
-    },
-    {
-      "@id": "chem",
-      "is_required": false
-    }
+  "model_realms_additional_allowed": [
+    "aer",
+    "bgc",
+    "chem"
+  ],
+  "model_realms_required": [
+    "agcm"
   ],
   "parent_experiment": [
     "picontrol"
+  ],
+  "references": [
+    "10.5194/gmd-9-3447-2016",
+    "10.1029/2020JD033622"
   ],
   "start_date": "1850-01-01",
   "tier": "1",
   "@type": [
     "wcrp:experiment",
     "esgvoc:Experiment",
-    "cmip7",
-    "cmip:fast-track"
+    "cmip7"
   ],
   "@id": "piclim-histaer"
 }
@@ -2852,34 +2450,26 @@
   ],
   "alias": [],
   "minimum_number_of_years": 30,
-  "model_realms": [
-    {
-      "@id": "agcm",
-      "is_required": true
-    },
-    {
-      "@id": "aer",
-      "is_required": false
-    },
-    {
-      "@id": "bgc",
-      "is_required": false
-    },
-    {
-      "@id": "chem",
-      "is_required": false
-    }
+  "model_realms_additional_allowed": [
+    "aer",
+    "bgc",
+    "chem"
+  ],
+  "model_realms_required": [
+    "agcm"
   ],
   "parent_experiment": [
     "picontrol"
+  ],
+  "references": [
+    "10.5194/gmd-9-3447-2016"
   ],
   "start_date": "1850-01-01",
   "tier": "1",
   "@type": [
     "wcrp:experiment",
     "esgvoc:Experiment",
-    "cmip7",
-    "cmip:fast-track"
+    "cmip7"
   ],
   "@id": "piclim-histall"
 }
@@ -2892,26 +2482,21 @@
   ],
   "alias": [],
   "minimum_number_of_years": 30,
-  "model_realms": [
-    {
-      "@id": "agcm",
-      "is_required": true
-    },
-    {
-      "@id": "chem",
-      "is_required": true
-    }
+  "model_realms_additional_allowed": [],
+  "model_realms_required": [
+    "agcm",
+    "chem"
   ],
   "parent_experiment": [
     "piclim-control"
   ],
+  "references": [],
   "start_date": "none",
   "tier": "1",
   "@type": [
     "wcrp:experiment",
     "esgvoc:Experiment",
-    "cmip7",
-    "cmip:fast-track"
+    "cmip7"
   ],
   "@id": "piclim-n2o"
 }
@@ -2924,23 +2509,17 @@
   ],
   "alias": [],
   "minimum_number_of_years": "30",
-  "model_realms": [
-    {
-      "@id": "aer",
-      "is_required": true
-    },
-    {
-      "@id": "agcm",
-      "is_required": true
-    },
-    {
-      "@id": "chem",
-      "is_required": false
-    }
+  "model_realms_additional_allowed": [
+    "chem"
+  ],
+  "model_realms_required": [
+    "aer",
+    "agcm"
   ],
   "parent_experiment": [
     "piclim-control"
   ],
+  "references": [],
   "start_date": "none",
   "tier": "1",
   "@type": [
@@ -2959,26 +2538,21 @@
   ],
   "alias": [],
   "minimum_number_of_years": 30,
-  "model_realms": [
-    {
-      "@id": "agcm",
-      "is_required": true
-    },
-    {
-      "@id": "chem",
-      "is_required": true
-    }
+  "model_realms_additional_allowed": [],
+  "model_realms_required": [
+    "agcm",
+    "chem"
   ],
   "parent_experiment": [
     "piclim-control"
   ],
+  "references": [],
   "start_date": "none",
   "tier": "1",
   "@type": [
     "wcrp:experiment",
     "esgvoc:Experiment",
-    "cmip7",
-    "cmip:fast-track"
+    "cmip7"
   ],
   "@id": "piclim-nox"
 }
@@ -2991,19 +2565,15 @@
   ],
   "alias": [],
   "minimum_number_of_years": "30",
-  "model_realms": [
-    {
-      "@id": "agcm",
-      "is_required": true
-    },
-    {
-      "@id": "chem",
-      "is_required": true
-    }
+  "model_realms_additional_allowed": [],
+  "model_realms_required": [
+    "agcm",
+    "chem"
   ],
   "parent_experiment": [
     "piclim-control"
   ],
+  "references": [],
   "start_date": "none",
   "tier": "1",
   "@type": [
@@ -3022,23 +2592,17 @@
   ],
   "alias": [],
   "minimum_number_of_years": "30",
-  "model_realms": [
-    {
-      "@id": "aer",
-      "is_required": true
-    },
-    {
-      "@id": "agcm",
-      "is_required": true
-    },
-    {
-      "@id": "chem",
-      "is_required": false
-    }
+  "model_realms_additional_allowed": [
+    "chem"
+  ],
+  "model_realms_required": [
+    "aer",
+    "agcm"
   ],
   "parent_experiment": [
     "piclim-control"
   ],
+  "references": [],
   "start_date": "none",
   "tier": "1",
   "@type": [
@@ -3057,26 +2621,21 @@
   ],
   "alias": [],
   "minimum_number_of_years": 30,
-  "model_realms": [
-    {
-      "@id": "agcm",
-      "is_required": true
-    },
-    {
-      "@id": "chem",
-      "is_required": true
-    }
+  "model_realms_additional_allowed": [],
+  "model_realms_required": [
+    "agcm",
+    "chem"
   ],
   "parent_experiment": [
     "piclim-control"
   ],
+  "references": [],
   "start_date": "none",
   "tier": "1",
   "@type": [
     "wcrp:experiment",
     "esgvoc:Experiment",
-    "cmip7",
-    "cmip:fast-track"
+    "cmip7"
   ],
   "@id": "piclim-ods"
 }
@@ -3089,23 +2648,17 @@
   ],
   "alias": [],
   "minimum_number_of_years": "30",
-  "model_realms": [
-    {
-      "@id": "agcm",
-      "is_required": true
-    },
-    {
-      "@id": "aer",
-      "is_required": true
-    },
-    {
-      "@id": "chem",
-      "is_required": false
-    }
+  "model_realms_additional_allowed": [
+    "chem"
+  ],
+  "model_realms_required": [
+    "aer",
+    "agcm"
   ],
   "parent_experiment": [
     "piClim-control"
   ],
+  "references": [],
   "start_date": "none",
   "tier": "2",
   "@type": [
@@ -3124,30 +2677,23 @@
   ],
   "alias": [],
   "minimum_number_of_years": 30,
-  "model_realms": [
-    {
-      "@id": "aer",
-      "is_required": true
-    },
-    {
-      "@id": "agcm",
-      "is_required": true
-    },
-    {
-      "@id": "chem",
-      "is_required": false
-    }
+  "model_realms_additional_allowed": [
+    "chem"
+  ],
+  "model_realms_required": [
+    "aer",
+    "agcm"
   ],
   "parent_experiment": [
     "piclim-control"
   ],
+  "references": [],
   "start_date": "none",
   "tier": "1",
   "@type": [
     "wcrp:experiment",
     "esgvoc:Experiment",
-    "cmip7",
-    "cmip:fast-track"
+    "cmip7"
   ],
   "@id": "piclim-so2"
 }
@@ -3161,10 +2707,12 @@
   "alias": [],
   "end": -999,
   "min_number_yrs_per_sim": -999,
-  "model_realms": [],
+  "model_realms_additional_allowed": [],
+  "model_realms_required": [],
   "parent_experiment": [
     "none"
   ],
+  "references": [],
   "start": -999,
   "start_date": "none",
   "tier": 0,
@@ -3186,27 +2734,18 @@
   "end": -999,
   "min_number_yrs_per_sim": 400,
   "minimum_number_of_years": 400,
-  "model_realms": [
-    {
-      "@id": "aogcm",
-      "is_required": true
-    },
-    {
-      "@id": "aer",
-      "is_required": false
-    },
-    {
-      "@id": "chem",
-      "is_required": false
-    },
-    {
-      "@id": "bgc",
-      "is_required": false
-    }
+  "model_realms_additional_allowed": [
+    "aer",
+    "bgc",
+    "chem"
+  ],
+  "model_realms_required": [
+    "aogcm"
   ],
   "parent_experiment": [
     "none"
   ],
+  "references": [],
   "start": -999,
   "start_date": "none",
   "tier": 0,
@@ -3218,34 +2757,6 @@
   "@id": "picontrol"
 }
     ,{
-  "validation_key": "scen7-h",
-  "ui_label": "pending",
-  "description": "pending",
-  "activity": [
-    "scenariomip"
-  ],
-  "alias": [],
-  "minimum_number_of_years": 75,
-  "model_realms": [
-    {
-      "@id": "pending",
-      "is_required": true
-    }
-  ],
-  "parent_experiment": [
-    "pending"
-  ],
-  "start_date": "pending",
-  "tier": "pending",
-  "@type": [
-    "wcrp:experiment",
-    "esgvoc:Experiment",
-    "cmip7",
-    "cmip:fast-track"
-  ],
-  "@id": "scen7-h-pending"
-}
-    ,{
   "validation_key": "scen7-h-ext",
   "ui_label": "pending",
   "description": "pending",
@@ -3254,15 +2765,14 @@
   ],
   "alias": [],
   "minimum_number_of_years": 50,
-  "model_realms": [
-    {
-      "@id": "pending",
-      "is_required": true
-    }
+  "model_realms_additional_allowed": [],
+  "model_realms_required": [
+    "pending"
   ],
   "parent_experiment": [
     "pending"
   ],
+  "references": [],
   "start_date": "pending",
   "tier": "pending",
   "@type": [
@@ -3273,7 +2783,7 @@
   "@id": "scen7-h-ext-pending"
 }
     ,{
-  "validation_key": "scen7-hl",
+  "validation_key": "scen7-h",
   "ui_label": "pending",
   "description": "pending",
   "activity": [
@@ -3281,24 +2791,22 @@
   ],
   "alias": [],
   "minimum_number_of_years": 75,
-  "model_realms": [
-    {
-      "@id": "pending",
-      "is_required": true
-    }
+  "model_realms_additional_allowed": [],
+  "model_realms_required": [
+    "pending"
   ],
   "parent_experiment": [
     "pending"
   ],
+  "references": [],
   "start_date": "pending",
   "tier": "pending",
   "@type": [
     "wcrp:experiment",
     "esgvoc:Experiment",
-    "cmip7",
-    "cmip:fast-track"
+    "cmip7"
   ],
-  "@id": "scen7-hl-pending"
+  "@id": "scen7-h-pending"
 }
     ,{
   "validation_key": "scen7-hl-ext",
@@ -3309,15 +2817,14 @@
   ],
   "alias": [],
   "minimum_number_of_years": 50,
-  "model_realms": [
-    {
-      "@id": "pending",
-      "is_required": true
-    }
+  "model_realms_additional_allowed": [],
+  "model_realms_required": [
+    "pending"
   ],
   "parent_experiment": [
     "pending"
   ],
+  "references": [],
   "start_date": "pending",
   "tier": "pending",
   "@type": [
@@ -3328,7 +2835,7 @@
   "@id": "scen7-hl-ext-pending"
 }
     ,{
-  "validation_key": "scen7-l",
+  "validation_key": "scen7-hl",
   "ui_label": "pending",
   "description": "pending",
   "activity": [
@@ -3336,24 +2843,22 @@
   ],
   "alias": [],
   "minimum_number_of_years": 75,
-  "model_realms": [
-    {
-      "@id": "pending",
-      "is_required": true
-    }
+  "model_realms_additional_allowed": [],
+  "model_realms_required": [
+    "pending"
   ],
   "parent_experiment": [
     "pending"
   ],
+  "references": [],
   "start_date": "pending",
   "tier": "pending",
   "@type": [
     "wcrp:experiment",
     "esgvoc:Experiment",
-    "cmip7",
-    "cmip:fast-track"
+    "cmip7"
   ],
-  "@id": "scen7-l-pending"
+  "@id": "scen7-hl-pending"
 }
     ,{
   "validation_key": "scen7-l-ext",
@@ -3364,15 +2869,14 @@
   ],
   "alias": [],
   "minimum_number_of_years": 50,
-  "model_realms": [
-    {
-      "@id": "pending",
-      "is_required": true
-    }
+  "model_realms_additional_allowed": [],
+  "model_realms_required": [
+    "pending"
   ],
   "parent_experiment": [
     "pending"
   ],
+  "references": [],
   "start_date": "pending",
   "tier": "pending",
   "@type": [
@@ -3383,7 +2887,7 @@
   "@id": "scen7-l-ext-pending"
 }
     ,{
-  "validation_key": "scen7-ln",
+  "validation_key": "scen7-l",
   "ui_label": "pending",
   "description": "pending",
   "activity": [
@@ -3391,24 +2895,22 @@
   ],
   "alias": [],
   "minimum_number_of_years": 75,
-  "model_realms": [
-    {
-      "@id": "pending",
-      "is_required": true
-    }
+  "model_realms_additional_allowed": [],
+  "model_realms_required": [
+    "pending"
   ],
   "parent_experiment": [
     "pending"
   ],
+  "references": [],
   "start_date": "pending",
   "tier": "pending",
   "@type": [
     "wcrp:experiment",
     "esgvoc:Experiment",
-    "cmip7",
-    "cmip:fast-track"
+    "cmip7"
   ],
-  "@id": "scen7-ln-pending"
+  "@id": "scen7-l-pending"
 }
     ,{
   "validation_key": "scen7-ln-ext",
@@ -3419,15 +2921,14 @@
   ],
   "alias": [],
   "minimum_number_of_years": 50,
-  "model_realms": [
-    {
-      "@id": "pending",
-      "is_required": true
-    }
+  "model_realms_additional_allowed": [],
+  "model_realms_required": [
+    "pending"
   ],
   "parent_experiment": [
     "pending"
   ],
+  "references": [],
   "start_date": "pending",
   "tier": "pending",
   "@type": [
@@ -3438,7 +2939,7 @@
   "@id": "scen7-ln-ext-pending"
 }
     ,{
-  "validation_key": "scen7-m",
+  "validation_key": "scen7-ln",
   "ui_label": "pending",
   "description": "pending",
   "activity": [
@@ -3446,24 +2947,22 @@
   ],
   "alias": [],
   "minimum_number_of_years": 75,
-  "model_realms": [
-    {
-      "@id": "pending",
-      "is_required": true
-    }
+  "model_realms_additional_allowed": [],
+  "model_realms_required": [
+    "pending"
   ],
   "parent_experiment": [
     "pending"
   ],
+  "references": [],
   "start_date": "pending",
   "tier": "pending",
   "@type": [
     "wcrp:experiment",
     "esgvoc:Experiment",
-    "cmip7",
-    "cmip:fast-track"
+    "cmip7"
   ],
-  "@id": "scen7-m-pending"
+  "@id": "scen7-ln-pending"
 }
     ,{
   "validation_key": "scen7-m-ext",
@@ -3474,15 +2973,14 @@
   ],
   "alias": [],
   "minimum_number_of_years": 50,
-  "model_realms": [
-    {
-      "@id": "pending",
-      "is_required": true
-    }
+  "model_realms_additional_allowed": [],
+  "model_realms_required": [
+    "pending"
   ],
   "parent_experiment": [
     "pending"
   ],
+  "references": [],
   "start_date": "pending",
   "tier": "pending",
   "@type": [
@@ -3493,7 +2991,7 @@
   "@id": "scen7-m-ext-pending"
 }
     ,{
-  "validation_key": "scen7-ml",
+  "validation_key": "scen7-m",
   "ui_label": "pending",
   "description": "pending",
   "activity": [
@@ -3501,24 +2999,22 @@
   ],
   "alias": [],
   "minimum_number_of_years": 75,
-  "model_realms": [
-    {
-      "@id": "pending",
-      "is_required": true
-    }
+  "model_realms_additional_allowed": [],
+  "model_realms_required": [
+    "pending"
   ],
   "parent_experiment": [
     "pending"
   ],
+  "references": [],
   "start_date": "pending",
   "tier": "pending",
   "@type": [
     "wcrp:experiment",
     "esgvoc:Experiment",
-    "cmip7",
-    "cmip:fast-track"
+    "cmip7"
   ],
-  "@id": "scen7-ml-pending"
+  "@id": "scen7-m-pending"
 }
     ,{
   "validation_key": "scen7-ml-ext",
@@ -3529,15 +3025,14 @@
   ],
   "alias": [],
   "minimum_number_of_years": 50,
-  "model_realms": [
-    {
-      "@id": "pending",
-      "is_required": true
-    }
+  "model_realms_additional_allowed": [],
+  "model_realms_required": [
+    "pending"
   ],
   "parent_experiment": [
     "pending"
   ],
+  "references": [],
   "start_date": "pending",
   "tier": "pending",
   "@type": [
@@ -3548,7 +3043,7 @@
   "@id": "scen7-ml-ext-pending"
 }
     ,{
-  "validation_key": "scen7-vl",
+  "validation_key": "scen7-ml",
   "ui_label": "pending",
   "description": "pending",
   "activity": [
@@ -3556,24 +3051,22 @@
   ],
   "alias": [],
   "minimum_number_of_years": 75,
-  "model_realms": [
-    {
-      "@id": "pending",
-      "is_required": true
-    }
+  "model_realms_additional_allowed": [],
+  "model_realms_required": [
+    "pending"
   ],
   "parent_experiment": [
     "pending"
   ],
+  "references": [],
   "start_date": "pending",
   "tier": "pending",
   "@type": [
     "wcrp:experiment",
     "esgvoc:Experiment",
-    "cmip7",
-    "cmip:fast-track"
+    "cmip7"
   ],
-  "@id": "scen7-vl-pending"
+  "@id": "scen7-ml-pending"
 }
     ,{
   "validation_key": "scen7-vl-ext",
@@ -3584,15 +3077,14 @@
   ],
   "alias": [],
   "minimum_number_of_years": 50,
-  "model_realms": [
-    {
-      "@id": "pending",
-      "is_required": true
-    }
+  "model_realms_additional_allowed": [],
+  "model_realms_required": [
+    "pending"
   ],
   "parent_experiment": [
     "pending"
   ],
+  "references": [],
   "start_date": "pending",
   "tier": "pending",
   "@type": [
@@ -3603,6 +3095,32 @@
   "@id": "scen7-vl-ext-pending"
 }
     ,{
+  "validation_key": "scen7-vl",
+  "ui_label": "pending",
+  "description": "pending",
+  "activity": [
+    "scenariomip"
+  ],
+  "alias": [],
+  "minimum_number_of_years": 75,
+  "model_realms_additional_allowed": [],
+  "model_realms_required": [
+    "pending"
+  ],
+  "parent_experiment": [
+    "pending"
+  ],
+  "references": [],
+  "start_date": "pending",
+  "tier": "pending",
+  "@type": [
+    "wcrp:experiment",
+    "esgvoc:Experiment",
+    "cmip7"
+  ],
+  "@id": "scen7-vl-pending"
+}
+    ,{
   "validation_key": "spinup-1950",
   "ui_label": "Coupled control spinup-1950",
   "description": "This experiment is designed to provide a multidecadal spinup for coupled model simulations. Its final output will serve as initial conditions for the control-1950, hist-1950, and highres-4xCO2 scenarios. The setup follows the same design as HighResMIP1, typically run for 50 years starting from the initial conditions.  For solar and ozone forcing, we suggest using an 11-year climatology centered on 1950 to average the solar cycle. For greenhouse gases (GHG), concentrations can be set to 1950 values as defined in CMIP. A 10-year mean around 1950 (e.g., 1946–1955 or 1950–1959) is recommended for aerosols and volcanic forcing.  For further details, please refer to: Roberts et al. (2025). High-Resolution Model Intercomparison Project phase 2 (HighResMIP2) towards CMIP7. Geoscientific Model Development, 18, 1307–1332.",
@@ -3611,27 +3129,18 @@
   ],
   "alias": [],
   "minimum_number_of_years": "50",
-  "model_realms": [
-    {
-      "@id": "aogcm",
-      "is_required": true
-    },
-    {
-      "@id": "bgc",
-      "is_required": false
-    },
-    {
-      "@id": "chem",
-      "is_required": false
-    },
-    {
-      "@id": "aer",
-      "is_required": false
-    }
+  "model_realms_additional_allowed": [
+    "aer",
+    "bgc",
+    "chem"
+  ],
+  "model_realms_required": [
+    "aogcm"
   ],
   "parent_experiment": [
     "none"
   ],
+  "references": [],
   "start_date": "none",
   "tier": "1",
   "@type": [
@@ -3651,10 +3160,12 @@
   "alias": [],
   "end": -999,
   "min_number_yrs_per_sim": -999,
-  "model_realms": [],
+  "model_realms_additional_allowed": [],
+  "model_realms_required": [],
   "parent_experiment": [
     "none"
   ],
+  "references": [],
   "start": -999,
   "start_date": "none",
   "tier": 0,
@@ -3666,33 +3177,6 @@
   "@id": "sspx-slcf"
 }
     ,{
-  "validation_key": "tipmip-provisional-esm-up2p0",
-  "ui_label": "pending",
-  "description": "pending",
-  "activity": [
-    "tipmip"
-  ],
-  "alias": [],
-  "minimum_number_of_years": 200,
-  "model_realms": [
-    {
-      "@id": "pending",
-      "is_required": true
-    }
-  ],
-  "parent_experiment": [
-    "pending"
-  ],
-  "start_date": "pending",
-  "tier": "pending",
-  "@type": [
-    "wcrp:experiment",
-    "esgvoc:Experiment",
-    "cmip7"
-  ],
-  "@id": "tipmip-provisional-esm-up2p0-pending"
-}
-    ,{
   "validation_key": "tipmip-provisional-esm-up2p0-gwl1p5",
   "ui_label": "pending",
   "description": "pending",
@@ -3701,15 +3185,14 @@
   ],
   "alias": [],
   "minimum_number_of_years": 300,
-  "model_realms": [
-    {
-      "@id": "pending",
-      "is_required": true
-    }
+  "model_realms_additional_allowed": [],
+  "model_realms_required": [
+    "pending"
   ],
   "parent_experiment": [
     "pending"
   ],
+  "references": [],
   "start_date": "pending",
   "tier": "pending",
   "@type": [
@@ -3720,33 +3203,6 @@
   "@id": "tipmip-provisional-esm-up2p0-gwl1p5-pending"
 }
     ,{
-  "validation_key": "tipmip-provisional-esm-up2p0-gwl2p0",
-  "ui_label": "pending",
-  "description": "pending",
-  "activity": [
-    "tipmip"
-  ],
-  "alias": [],
-  "minimum_number_of_years": 300,
-  "model_realms": [
-    {
-      "@id": "pending",
-      "is_required": true
-    }
-  ],
-  "parent_experiment": [
-    "pending"
-  ],
-  "start_date": "pending",
-  "tier": "pending",
-  "@type": [
-    "wcrp:experiment",
-    "esgvoc:Experiment",
-    "cmip7"
-  ],
-  "@id": "tipmip-provisional-esm-up2p0-gwl2p0-pending"
-}
-    ,{
   "validation_key": "tipmip-provisional-esm-up2p0-gwl2p0-50y-dn2p0",
   "ui_label": "pending",
   "description": "pending",
@@ -3755,15 +3211,14 @@
   ],
   "alias": [],
   "minimum_number_of_years": 100,
-  "model_realms": [
-    {
-      "@id": "pending",
-      "is_required": true
-    }
+  "model_realms_additional_allowed": [],
+  "model_realms_required": [
+    "pending"
   ],
   "parent_experiment": [
     "pending"
   ],
+  "references": [],
   "start_date": "pending",
   "tier": "pending",
   "@type": [
@@ -3774,6 +3229,32 @@
   "@id": "tipmip-provisional-esm-up2p0-gwl2p0-50y-dn2p0-pending"
 }
     ,{
+  "validation_key": "tipmip-provisional-esm-up2p0-gwl2p0",
+  "ui_label": "pending",
+  "description": "pending",
+  "activity": [
+    "tipmip"
+  ],
+  "alias": [],
+  "minimum_number_of_years": 300,
+  "model_realms_additional_allowed": [],
+  "model_realms_required": [
+    "pending"
+  ],
+  "parent_experiment": [
+    "pending"
+  ],
+  "references": [],
+  "start_date": "pending",
+  "tier": "pending",
+  "@type": [
+    "wcrp:experiment",
+    "esgvoc:Experiment",
+    "cmip7"
+  ],
+  "@id": "tipmip-provisional-esm-up2p0-gwl2p0-pending"
+}
+    ,{
   "validation_key": "tipmip-provisional-esm-up2p0-gwl3p0",
   "ui_label": "pending",
   "description": "pending",
@@ -3782,15 +3263,14 @@
   ],
   "alias": [],
   "minimum_number_of_years": 300,
-  "model_realms": [
-    {
-      "@id": "pending",
-      "is_required": true
-    }
+  "model_realms_additional_allowed": [],
+  "model_realms_required": [
+    "pending"
   ],
   "parent_experiment": [
     "pending"
   ],
+  "references": [],
   "start_date": "pending",
   "tier": "pending",
   "@type": [
@@ -3801,60 +3281,6 @@
   "@id": "tipmip-provisional-esm-up2p0-gwl3p0-pending"
 }
     ,{
-  "validation_key": "tipmip-provisional-esm-up2p0-gwl4p0",
-  "ui_label": "pending",
-  "description": "pending",
-  "activity": [
-    "tipmip"
-  ],
-  "alias": [],
-  "minimum_number_of_years": 300,
-  "model_realms": [
-    {
-      "@id": "pending",
-      "is_required": true
-    }
-  ],
-  "parent_experiment": [
-    "pending"
-  ],
-  "start_date": "pending",
-  "tier": "pending",
-  "@type": [
-    "wcrp:experiment",
-    "esgvoc:Experiment",
-    "cmip7"
-  ],
-  "@id": "tipmip-provisional-esm-up2p0-gwl4p0-pending"
-}
-    ,{
-  "validation_key": "tipmip-provisional-esm-up2p0-gwl4p0-50y-dn2p0",
-  "ui_label": "pending",
-  "description": "pending",
-  "activity": [
-    "tipmip"
-  ],
-  "alias": [],
-  "minimum_number_of_years": 200,
-  "model_realms": [
-    {
-      "@id": "pending",
-      "is_required": true
-    }
-  ],
-  "parent_experiment": [
-    "pending"
-  ],
-  "start_date": "pending",
-  "tier": "pending",
-  "@type": [
-    "wcrp:experiment",
-    "esgvoc:Experiment",
-    "cmip7"
-  ],
-  "@id": "tipmip-provisional-esm-up2p0-gwl4p0-50y-dn2p0-pending"
-}
-    ,{
   "validation_key": "tipmip-provisional-esm-up2p0-gwl4p0-50y-dn2p0-gwl2p0",
   "ui_label": "pending",
   "description": "pending",
@@ -3863,15 +3289,14 @@
   ],
   "alias": [],
   "minimum_number_of_years": 300,
-  "model_realms": [
-    {
-      "@id": "pending",
-      "is_required": true
-    }
+  "model_realms_additional_allowed": [],
+  "model_realms_required": [
+    "pending"
   ],
   "parent_experiment": [
     "pending"
   ],
+  "references": [],
   "start_date": "pending",
   "tier": "pending",
   "@type": [
@@ -3882,6 +3307,58 @@
   "@id": "tipmip-provisional-esm-up2p0-gwl4p0-50y-dn2p0-gwl2p0-pending"
 }
     ,{
+  "validation_key": "tipmip-provisional-esm-up2p0-gwl4p0-50y-dn2p0",
+  "ui_label": "pending",
+  "description": "pending",
+  "activity": [
+    "tipmip"
+  ],
+  "alias": [],
+  "minimum_number_of_years": 200,
+  "model_realms_additional_allowed": [],
+  "model_realms_required": [
+    "pending"
+  ],
+  "parent_experiment": [
+    "pending"
+  ],
+  "references": [],
+  "start_date": "pending",
+  "tier": "pending",
+  "@type": [
+    "wcrp:experiment",
+    "esgvoc:Experiment",
+    "cmip7"
+  ],
+  "@id": "tipmip-provisional-esm-up2p0-gwl4p0-50y-dn2p0-pending"
+}
+    ,{
+  "validation_key": "tipmip-provisional-esm-up2p0-gwl4p0",
+  "ui_label": "pending",
+  "description": "pending",
+  "activity": [
+    "tipmip"
+  ],
+  "alias": [],
+  "minimum_number_of_years": 300,
+  "model_realms_additional_allowed": [],
+  "model_realms_required": [
+    "pending"
+  ],
+  "parent_experiment": [
+    "pending"
+  ],
+  "references": [],
+  "start_date": "pending",
+  "tier": "pending",
+  "@type": [
+    "wcrp:experiment",
+    "esgvoc:Experiment",
+    "cmip7"
+  ],
+  "@id": "tipmip-provisional-esm-up2p0-gwl4p0-pending"
+}
+    ,{
   "validation_key": "tipmip-provisional-esm-up2p0-gwl5p0",
   "ui_label": "pending",
   "description": "pending",
@@ -3890,15 +3367,14 @@
   ],
   "alias": [],
   "minimum_number_of_years": 300,
-  "model_realms": [
-    {
-      "@id": "pending",
-      "is_required": true
-    }
+  "model_realms_additional_allowed": [],
+  "model_realms_required": [
+    "pending"
   ],
   "parent_experiment": [
     "pending"
   ],
+  "references": [],
   "start_date": "pending",
   "tier": "pending",
   "@type": [
@@ -3907,6 +3383,32 @@
     "cmip7"
   ],
   "@id": "tipmip-provisional-esm-up2p0-gwl5p0-pending"
+}
+    ,{
+  "validation_key": "tipmip-provisional-esm-up2p0",
+  "ui_label": "pending",
+  "description": "pending",
+  "activity": [
+    "tipmip"
+  ],
+  "alias": [],
+  "minimum_number_of_years": 200,
+  "model_realms_additional_allowed": [],
+  "model_realms_required": [
+    "pending"
+  ],
+  "parent_experiment": [
+    "pending"
+  ],
+  "references": [],
+  "start_date": "pending",
+  "tier": "pending",
+  "@type": [
+    "wcrp:experiment",
+    "esgvoc:Experiment",
+    "cmip7"
+  ],
+  "@id": "tipmip-provisional-esm-up2p0-pending"
 }
   ]
 }
