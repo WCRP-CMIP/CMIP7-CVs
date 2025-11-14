@@ -7,15 +7,10 @@
     ],
     "alias": [],
     "minimum_number_of_years": "30",
-    "model_realms": [
-        {
-            "@id": "agcm",
-            "is_required": true
-        },
-        {
-            "@id": "chem",
-            "is_required": true
-        }
+    "model_realms_allowed_optional": [],
+    "model_realms_required": [
+        "agcm",
+        "chem"
     ],
     "parent_experiment": [
         "piclim-control"

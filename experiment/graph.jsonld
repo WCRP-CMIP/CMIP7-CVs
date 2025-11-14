@@ -57,7 +57,6 @@
   "parent_experiment": [
     "picontrol"
   ],
-  "references": [],
   "start_date": "none",
   "tier": "1",
   "@type": [
@@ -102,7 +101,6 @@
   "parent_experiment": [
     "picontrol"
   ],
-  "references": [],
   "start_date": "none",
   "tier": "1",
   "@type": [
@@ -145,7 +143,6 @@
   "parent_experiment": [
     "picontrol"
   ],
-  "references": [],
   "start": -999,
   "start_date": "none",
   "tier": 0,
@@ -171,7 +168,6 @@
   "parent_experiment": [
     "none"
   ],
-  "references": [],
   "start": -999,
   "start_date": "none",
   "tier": 0,
@@ -214,9 +210,6 @@
   "parent_experiment": [
     "picontrol"
   ],
-  "references": [
-    "10.5194/gmd-10-359-2017"
-  ],
   "start_date": "none",
   "tier": "1",
   "@type": [
@@ -256,7 +249,6 @@
   "parent_experiment": [
     "picontrol"
   ],
-  "references": [],
   "start_date": "none",
   "tier": "1",
   "@type": [
@@ -298,9 +290,6 @@
   "parent_experiment": [
     "picontrol"
   ],
-  "references": [
-    "10.5194/gmd-10-359-2017"
-  ],
   "start_date": "none",
   "tier": "1",
   "@type": [
@@ -341,7 +330,6 @@
   "parent_experiment": [
     "none"
   ],
-  "references": [],
   "start_date": "1950-01-01",
   "tier": "3",
   "@type": [
@@ -383,7 +371,6 @@
   "parent_experiment": [
     "picontrol"
   ],
-  "references": [],
   "start": -999,
   "start_date": "none",
   "tier": 0,
@@ -412,7 +399,6 @@
   "parent_experiment": [
     "pending"
   ],
-  "references": [],
   "start_date": "pending",
   "tier": "pending",
   "@type": [
@@ -453,10 +439,6 @@
   "parent_experiment": [
     "none"
   ],
-  "references": [
-    "10.1029/2023JD038861",
-    "10.5194/gmd"
-  ],
   "start_date": "1979-01-01",
   "tier": "2",
   "@type": [
@@ -484,7 +466,6 @@
   "parent_experiment": [
     "pending"
   ],
-  "references": [],
   "start_date": "pending",
   "tier": "pending",
   "@type": [
@@ -524,9 +505,6 @@
   ],
   "parent_experiment": [
     "none"
-  ],
-  "references": [
-    "10.1029/2023GL104786"
   ],
   "start_date": "1979-01-01",
   "tier": "2",
@@ -568,9 +546,6 @@
   "parent_experiment": [
     "none"
   ],
-  "references": [
-    "10.1029/2023GL104786"
-  ],
   "start_date": "1979-01-01",
   "tier": "2",
   "@type": [
@@ -610,9 +585,6 @@
   ],
   "parent_experiment": [
     "none"
-  ],
-  "references": [
-    "10.5194/gmd-10-359-2017"
   ],
   "start_date": "1979-01-01",
   "tier": "1",
@@ -654,9 +626,6 @@
   ],
   "parent_experiment": [
     "none"
-  ],
-  "references": [
-    "10.5194/gmd-10-359-2017"
   ],
   "start_date": "1870-01-01",
   "tier": "1",
@@ -700,7 +669,6 @@
   "parent_experiment": [
     "none"
   ],
-  "references": [],
   "start": 1979,
   "start_date": "none",
   "tier": 0,
@@ -741,7 +709,6 @@
   "parent_experiment": [
     "spinup-1950"
   ],
-  "references": [],
   "start_date": "1950-01-01",
   "tier": "1",
   "@type": [
@@ -769,7 +736,6 @@
   "parent_experiment": [
     "pending"
   ],
-  "references": [],
   "start_date": "pending",
   "tier": "pending",
   "@type": [
@@ -797,7 +763,6 @@
   "parent_experiment": [
     "pending"
   ],
-  "references": [],
   "start_date": "pending",
   "tier": "pending",
   "@type": [
@@ -806,6 +771,33 @@
     "cmip7"
   ],
   "@id": "dcppa-hindcast-pending"
+}
+    ,{
+  "validation_key": "dcppB-forecast",
+  "ui_label": "pending",
+  "description": "pending",
+  "activity": [
+    "dcpp"
+  ],
+  "alias": [],
+  "minimum_number_of_years": 5,
+  "model_realms": [
+    {
+      "@id": "pending",
+      "is_required": true
+    }
+  ],
+  "parent_experiment": [
+    "pending"
+  ],
+  "start_date": "pending",
+  "tier": "pending",
+  "@type": [
+    "wcrp:experiment",
+    "esgvoc:Experiment",
+    "cmip7"
+  ],
+  "@id": "dcppb-forecast-pending"
 }
     ,{
   "validation_key": "dcppB-forecast-cmip6",
@@ -841,7 +833,6 @@
   "parent_experiment": [
     "none"
   ],
-  "references": [],
   "start_date": "2026",
   "tier": "1",
   "@type": [
@@ -851,34 +842,6 @@
     "cmip:fast-track"
   ],
   "@id": "dcppb-forecast-cmip6"
-}
-    ,{
-  "validation_key": "dcppB-forecast",
-  "ui_label": "pending",
-  "description": "pending",
-  "activity": [
-    "dcpp"
-  ],
-  "alias": [],
-  "minimum_number_of_years": 5,
-  "model_realms": [
-    {
-      "@id": "pending",
-      "is_required": true
-    }
-  ],
-  "parent_experiment": [
-    "pending"
-  ],
-  "references": [],
-  "start_date": "pending",
-  "tier": "pending",
-  "@type": [
-    "wcrp:experiment",
-    "esgvoc:Experiment",
-    "cmip7"
-  ],
-  "@id": "dcppb-forecast-pending"
 }
     ,{
   "validation_key": "esm-flat10-cdr",
@@ -914,7 +877,6 @@
   "parent_experiment": [
     "esm-flat10"
   ],
-  "references": [],
   "start_date": "none",
   "tier": "1",
   "@type": [
@@ -959,7 +921,6 @@
   "parent_experiment": [
     "esm-flat10"
   ],
-  "references": [],
   "start_date": "none",
   "tier": "1",
   "@type": [
@@ -1004,7 +965,6 @@
   "parent_experiment": [
     "esm-picontrol"
   ],
-  "references": [],
   "start_date": "none",
   "tier": "1",
   "@type": [
@@ -1047,7 +1007,6 @@
   "parent_experiment": [
     "esm-picontrol"
   ],
-  "references": [],
   "start": 1850,
   "start_date": "none",
   "tier": 0,
@@ -1090,7 +1049,6 @@
   "parent_experiment": [
     "none"
   ],
-  "references": [],
   "start": -999,
   "start_date": "none",
   "tier": 0,
@@ -1119,7 +1077,6 @@
   "parent_experiment": [
     "pending"
   ],
-  "references": [],
   "start_date": "pending",
   "tier": "pending",
   "@type": [
@@ -1128,6 +1085,34 @@
     "cmip7"
   ],
   "@id": "esm-s7h-nofirechange-pending"
+}
+    ,{
+  "validation_key": "esm-scen7-h",
+  "ui_label": "pending",
+  "description": "pending",
+  "activity": [
+    "scenariomip"
+  ],
+  "alias": [],
+  "minimum_number_of_years": 75,
+  "model_realms": [
+    {
+      "@id": "pending",
+      "is_required": true
+    }
+  ],
+  "parent_experiment": [
+    "pending"
+  ],
+  "start_date": "pending",
+  "tier": "pending",
+  "@type": [
+    "wcrp:experiment",
+    "esgvoc:Experiment",
+    "cmip7",
+    "cmip:fast-track"
+  ],
+  "@id": "esm-scen7-h-pending"
 }
     ,{
   "validation_key": "esm-scen7-h-Aer",
@@ -1147,7 +1132,6 @@
   "parent_experiment": [
     "pending"
   ],
-  "references": [],
   "start_date": "pending",
   "tier": "pending",
   "@type": [
@@ -1176,7 +1160,6 @@
   "parent_experiment": [
     "pending"
   ],
-  "references": [],
   "start_date": "pending",
   "tier": "pending",
   "@type": [
@@ -1205,7 +1188,6 @@
   "parent_experiment": [
     "pending"
   ],
-  "references": [],
   "start_date": "pending",
   "tier": "pending",
   "@type": [
@@ -1214,63 +1196,6 @@
     "cmip7"
   ],
   "@id": "esm-scen7-h-ext-pending"
-}
-    ,{
-  "validation_key": "esm-scen7-h",
-  "ui_label": "pending",
-  "description": "pending",
-  "activity": [
-    "scenariomip"
-  ],
-  "alias": [],
-  "minimum_number_of_years": 75,
-  "model_realms": [
-    {
-      "@id": "pending",
-      "is_required": true
-    }
-  ],
-  "parent_experiment": [
-    "pending"
-  ],
-  "references": [],
-  "start_date": "pending",
-  "tier": "pending",
-  "@type": [
-    "wcrp:experiment",
-    "esgvoc:Experiment",
-    "cmip7",
-    "cmip:fast-track"
-  ],
-  "@id": "esm-scen7-h-pending"
-}
-    ,{
-  "validation_key": "esm-scen7-hl-ext",
-  "ui_label": "pending",
-  "description": "pending",
-  "activity": [
-    "ismip7"
-  ],
-  "alias": [],
-  "minimum_number_of_years": 50,
-  "model_realms": [
-    {
-      "@id": "pending",
-      "is_required": true
-    }
-  ],
-  "parent_experiment": [
-    "pending"
-  ],
-  "references": [],
-  "start_date": "pending",
-  "tier": "pending",
-  "@type": [
-    "wcrp:experiment",
-    "esgvoc:Experiment",
-    "cmip7"
-  ],
-  "@id": "esm-scen7-hl-ext-pending"
 }
     ,{
   "validation_key": "esm-scen7-hl",
@@ -1290,7 +1215,6 @@
   "parent_experiment": [
     "pending"
   ],
-  "references": [],
   "start_date": "pending",
   "tier": "pending",
   "@type": [
@@ -1302,11 +1226,11 @@
   "@id": "esm-scen7-hl-pending"
 }
     ,{
-  "validation_key": "esm-scen7-l-ext",
+  "validation_key": "esm-scen7-hl-ext",
   "ui_label": "pending",
   "description": "pending",
   "activity": [
-    "scenariomip"
+    "ismip7"
   ],
   "alias": [],
   "minimum_number_of_years": 50,
@@ -1319,7 +1243,6 @@
   "parent_experiment": [
     "pending"
   ],
-  "references": [],
   "start_date": "pending",
   "tier": "pending",
   "@type": [
@@ -1327,7 +1250,7 @@
     "esgvoc:Experiment",
     "cmip7"
   ],
-  "@id": "esm-scen7-l-ext-pending"
+  "@id": "esm-scen7-hl-ext-pending"
 }
     ,{
   "validation_key": "esm-scen7-l",
@@ -1347,7 +1270,6 @@
   "parent_experiment": [
     "pending"
   ],
-  "references": [],
   "start_date": "pending",
   "tier": "pending",
   "@type": [
@@ -1359,7 +1281,7 @@
   "@id": "esm-scen7-l-pending"
 }
     ,{
-  "validation_key": "esm-scen7-ln-ext",
+  "validation_key": "esm-scen7-l-ext",
   "ui_label": "pending",
   "description": "pending",
   "activity": [
@@ -1376,7 +1298,6 @@
   "parent_experiment": [
     "pending"
   ],
-  "references": [],
   "start_date": "pending",
   "tier": "pending",
   "@type": [
@@ -1384,7 +1305,7 @@
     "esgvoc:Experiment",
     "cmip7"
   ],
-  "@id": "esm-scen7-ln-ext-pending"
+  "@id": "esm-scen7-l-ext-pending"
 }
     ,{
   "validation_key": "esm-scen7-ln",
@@ -1404,7 +1325,6 @@
   "parent_experiment": [
     "pending"
   ],
-  "references": [],
   "start_date": "pending",
   "tier": "pending",
   "@type": [
@@ -1416,11 +1336,11 @@
   "@id": "esm-scen7-ln-pending"
 }
     ,{
-  "validation_key": "esm-scen7-m-ext",
+  "validation_key": "esm-scen7-ln-ext",
   "ui_label": "pending",
   "description": "pending",
   "activity": [
-    "ismip7"
+    "scenariomip"
   ],
   "alias": [],
   "minimum_number_of_years": 50,
@@ -1433,7 +1353,6 @@
   "parent_experiment": [
     "pending"
   ],
-  "references": [],
   "start_date": "pending",
   "tier": "pending",
   "@type": [
@@ -1441,7 +1360,7 @@
     "esgvoc:Experiment",
     "cmip7"
   ],
-  "@id": "esm-scen7-m-ext-pending"
+  "@id": "esm-scen7-ln-ext-pending"
 }
     ,{
   "validation_key": "esm-scen7-m",
@@ -1461,7 +1380,6 @@
   "parent_experiment": [
     "pending"
   ],
-  "references": [],
   "start_date": "pending",
   "tier": "pending",
   "@type": [
@@ -1473,7 +1391,7 @@
   "@id": "esm-scen7-m-pending"
 }
     ,{
-  "validation_key": "esm-scen7-ml-ext",
+  "validation_key": "esm-scen7-m-ext",
   "ui_label": "pending",
   "description": "pending",
   "activity": [
@@ -1490,7 +1408,6 @@
   "parent_experiment": [
     "pending"
   ],
-  "references": [],
   "start_date": "pending",
   "tier": "pending",
   "@type": [
@@ -1498,7 +1415,7 @@
     "esgvoc:Experiment",
     "cmip7"
   ],
-  "@id": "esm-scen7-ml-ext-pending"
+  "@id": "esm-scen7-m-ext-pending"
 }
     ,{
   "validation_key": "esm-scen7-ml",
@@ -1518,7 +1435,6 @@
   "parent_experiment": [
     "pending"
   ],
-  "references": [],
   "start_date": "pending",
   "tier": "pending",
   "@type": [
@@ -1528,6 +1444,61 @@
     "cmip:fast-track"
   ],
   "@id": "esm-scen7-ml-pending"
+}
+    ,{
+  "validation_key": "esm-scen7-ml-ext",
+  "ui_label": "pending",
+  "description": "pending",
+  "activity": [
+    "ismip7"
+  ],
+  "alias": [],
+  "minimum_number_of_years": 50,
+  "model_realms": [
+    {
+      "@id": "pending",
+      "is_required": true
+    }
+  ],
+  "parent_experiment": [
+    "pending"
+  ],
+  "start_date": "pending",
+  "tier": "pending",
+  "@type": [
+    "wcrp:experiment",
+    "esgvoc:Experiment",
+    "cmip7"
+  ],
+  "@id": "esm-scen7-ml-ext-pending"
+}
+    ,{
+  "validation_key": "esm-scen7-vl",
+  "ui_label": "pending",
+  "description": "pending",
+  "activity": [
+    "scenariomip"
+  ],
+  "alias": [],
+  "minimum_number_of_years": 75,
+  "model_realms": [
+    {
+      "@id": "pending",
+      "is_required": true
+    }
+  ],
+  "parent_experiment": [
+    "pending"
+  ],
+  "start_date": "pending",
+  "tier": "pending",
+  "@type": [
+    "wcrp:experiment",
+    "esgvoc:Experiment",
+    "cmip7",
+    "cmip:fast-track"
+  ],
+  "@id": "esm-scen7-vl-pending"
 }
     ,{
   "validation_key": "esm-scen7-vl-Aer",
@@ -1547,7 +1518,6 @@
   "parent_experiment": [
     "pending"
   ],
-  "references": [],
   "start_date": "pending",
   "tier": "pending",
   "@type": [
@@ -1576,7 +1546,6 @@
   "parent_experiment": [
     "pending"
   ],
-  "references": [],
   "start_date": "pending",
   "tier": "pending",
   "@type": [
@@ -1605,7 +1574,6 @@
   "parent_experiment": [
     "pending"
   ],
-  "references": [],
   "start_date": "pending",
   "tier": "pending",
   "@type": [
@@ -1614,35 +1582,6 @@
     "cmip7"
   ],
   "@id": "esm-scen7-vl-ext-pending"
-}
-    ,{
-  "validation_key": "esm-scen7-vl",
-  "ui_label": "pending",
-  "description": "pending",
-  "activity": [
-    "scenariomip"
-  ],
-  "alias": [],
-  "minimum_number_of_years": 75,
-  "model_realms": [
-    {
-      "@id": "pending",
-      "is_required": true
-    }
-  ],
-  "parent_experiment": [
-    "pending"
-  ],
-  "references": [],
-  "start_date": "pending",
-  "tier": "pending",
-  "@type": [
-    "wcrp:experiment",
-    "esgvoc:Experiment",
-    "cmip7",
-    "cmip:fast-track"
-  ],
-  "@id": "esm-scen7-vl-pending"
 }
     ,{
   "validation_key": "esm-up2p0-gwl2p0",
@@ -1674,7 +1613,6 @@
   "parent_experiment": [
     "esm-up2p0"
   ],
-  "references": [],
   "start_date": "none",
   "tier": "1",
   "@type": [
@@ -1714,7 +1652,6 @@
   "parent_experiment": [
     "esm-piControl"
   ],
-  "references": [],
   "start_date": "none",
   "tier": "1",
   "@type": [
@@ -1739,7 +1676,6 @@
   "parent_experiment": [
     "none"
   ],
-  "references": [],
   "start": -999,
   "start_date": "none",
   "tier": 0,
@@ -1769,7 +1705,6 @@
   "parent_experiment": [
     "pending"
   ],
-  "references": [],
   "start_date": "pending",
   "tier": "pending",
   "@type": [
@@ -1809,7 +1744,6 @@
   "parent_experiment": [
     "none"
   ],
-  "references": [],
   "start_date": "2020-03-01",
   "tier": "3",
   "@type": [
@@ -1849,7 +1783,6 @@
   "parent_experiment": [
     "none"
   ],
-  "references": [],
   "start_date": "2003-01-01",
   "tier": "3",
   "@type": [
@@ -1889,7 +1822,6 @@
   "parent_experiment": [
     "none"
   ],
-  "references": [],
   "start_date": "2003-01-01",
   "tier": "3",
   "@type": [
@@ -1929,7 +1861,6 @@
   "parent_experiment": [
     "none"
   ],
-  "references": [],
   "start_date": "2020-03-01",
   "tier": "3",
   "@type": [
@@ -1969,7 +1900,6 @@
   "parent_experiment": [
     "none"
   ],
-  "references": [],
   "start_date": "1980-01-01",
   "tier": "1",
   "@type": [
@@ -2009,7 +1939,6 @@
   "parent_experiment": [
     "none"
   ],
-  "references": [],
   "start_date": "1950-01-01",
   "tier": "2",
   "@type": [
@@ -2036,9 +1965,6 @@
   ],
   "parent_experiment": [
     "picontrol"
-  ],
-  "references": [
-    "10.5194/egusphere-2024-4086"
   ],
   "start_date": "1850-01-01",
   "tier": "1",
@@ -2067,9 +1993,6 @@
   ],
   "parent_experiment": [
     "picontrol"
-  ],
-  "references": [
-    "10.5194/egusphere-2024-4086"
   ],
   "start_date": "1850-01-01",
   "tier": "1",
@@ -2107,7 +2030,6 @@
   "parent_experiment": [
     "historical"
   ],
-  "references": [],
   "start_date": "1901-01-01",
   "tier": "2",
   "@type": [
@@ -2134,9 +2056,6 @@
   ],
   "parent_experiment": [
     "picontrol"
-  ],
-  "references": [
-    "10.5194/egusphere-2024-4086"
   ],
   "start_date": "1850-01-01",
   "tier": "1",
@@ -2178,7 +2097,6 @@
   "parent_experiment": [
     "esm-piControl"
   ],
-  "references": [],
   "start_date": "1850-01-01",
   "tier": "2",
   "@type": [
@@ -2214,7 +2132,6 @@
   "parent_experiment": [
     "historical"
   ],
-  "references": [],
   "start_date": "1901-01-01",
   "tier": "2",
   "@type": [
@@ -2250,7 +2167,6 @@
   "parent_experiment": [
     "picontrol"
   ],
-  "references": [],
   "start_date": "1850",
   "tier": "1",
   "@type": [
@@ -2287,7 +2203,6 @@
   "parent_experiment": [
     "historical"
   ],
-  "references": [],
   "start_date": "none",
   "tier": "1",
   "@type": [
@@ -2312,7 +2227,6 @@
   "parent_experiment": [
     "none"
   ],
-  "references": [],
   "start": -999,
   "start_date": "none",
   "tier": 0,
@@ -2355,7 +2269,6 @@
   "parent_experiment": [
     "picontrol"
   ],
-  "references": [],
   "start": 1850,
   "start_date": "none",
   "tier": 0,
@@ -2380,7 +2293,6 @@
   "parent_experiment": [
     "none"
   ],
-  "references": [],
   "start": -999,
   "start_date": "none",
   "tier": 0,
@@ -2413,9 +2325,6 @@
   "parent_experiment": [
     "none"
   ],
-  "references": [
-    "10.5194/gmd-9-2809-2016"
-  ],
   "start_date": "1850",
   "tier": "1",
   "@type": [
@@ -2440,7 +2349,6 @@
   "parent_experiment": [
     "none"
   ],
-  "references": [],
   "start": -999,
   "start_date": "none",
   "tier": 0,
@@ -2473,7 +2381,6 @@
   "parent_experiment": [
     "piclim-control"
   ],
-  "references": [],
   "start_date": "none",
   "tier": "2",
   "@type": [
@@ -2509,7 +2416,6 @@
   "parent_experiment": [
     "piclim-control"
   ],
-  "references": [],
   "start_date": "none",
   "tier": "2",
   "@type": [
@@ -2545,7 +2451,6 @@
   "parent_experiment": [
     "piclim-control"
   ],
-  "references": [],
   "start_date": "none",
   "tier": "2",
   "@type": [
@@ -2581,7 +2486,6 @@
   "parent_experiment": [
     "piclim-control"
   ],
-  "references": [],
   "start_date": "none",
   "tier": "2",
   "@type": [
@@ -2617,7 +2521,6 @@
   "parent_experiment": [
     "piclim-control"
   ],
-  "references": [],
   "start_date": "none",
   "tier": "2",
   "@type": [
@@ -2649,7 +2552,6 @@
   "parent_experiment": [
     "piclim-control"
   ],
-  "references": [],
   "start_date": "none",
   "tier": "2",
   "@type": [
@@ -2674,7 +2576,6 @@
   "parent_experiment": [
     "picontrol"
   ],
-  "references": [],
   "start": -999,
   "start_date": "none",
   "tier": 0,
@@ -2716,10 +2617,6 @@
   "parent_experiment": [
     "picontrol"
   ],
-  "references": [
-    "10.5194/gmd-9-3447-2016",
-    "10.5194/acp-20-9591-2020"
-  ],
   "start_date": "none",
   "tier": "1",
   "@type": [
@@ -2745,7 +2642,6 @@
   "parent_experiment": [
     "picontrol"
   ],
-  "references": [],
   "start": -999,
   "start_date": "none",
   "tier": 0,
@@ -2782,7 +2678,6 @@
   "parent_experiment": [
     "piClim-control"
   ],
-  "references": [],
   "start_date": "none",
   "tier": "1",
   "@type": [
@@ -2818,7 +2713,6 @@
   "parent_experiment": [
     "piclim-control"
   ],
-  "references": [],
   "start_date": "none",
   "tier": "1",
   "@type": [
@@ -2850,7 +2744,6 @@
   "parent_experiment": [
     "piclim-control"
   ],
-  "references": [],
   "start_date": "none",
   "tier": "1",
   "@type": [
@@ -2876,7 +2769,6 @@
   "parent_experiment": [
     "picontrol"
   ],
-  "references": [],
   "start": -999,
   "start_date": "none",
   "tier": 0,
@@ -2901,7 +2793,6 @@
   "parent_experiment": [
     "none"
   ],
-  "references": [],
   "start": -999,
   "start_date": "none",
   "tier": 0,
@@ -2941,10 +2832,6 @@
   ],
   "parent_experiment": [
     "picontrol"
-  ],
-  "references": [
-    "10.5194/gmd-9-3447-2016",
-    "10.1029/2020JD033622"
   ],
   "start_date": "1850-01-01",
   "tier": "1",
@@ -2986,9 +2873,6 @@
   "parent_experiment": [
     "picontrol"
   ],
-  "references": [
-    "10.5194/gmd-9-3447-2016"
-  ],
   "start_date": "1850-01-01",
   "tier": "1",
   "@type": [
@@ -3021,7 +2905,6 @@
   "parent_experiment": [
     "piclim-control"
   ],
-  "references": [],
   "start_date": "none",
   "tier": "1",
   "@type": [
@@ -3058,7 +2941,6 @@
   "parent_experiment": [
     "piclim-control"
   ],
-  "references": [],
   "start_date": "none",
   "tier": "1",
   "@type": [
@@ -3090,7 +2972,6 @@
   "parent_experiment": [
     "piclim-control"
   ],
-  "references": [],
   "start_date": "none",
   "tier": "1",
   "@type": [
@@ -3123,7 +3004,6 @@
   "parent_experiment": [
     "piclim-control"
   ],
-  "references": [],
   "start_date": "none",
   "tier": "1",
   "@type": [
@@ -3159,7 +3039,6 @@
   "parent_experiment": [
     "piclim-control"
   ],
-  "references": [],
   "start_date": "none",
   "tier": "1",
   "@type": [
@@ -3191,7 +3070,6 @@
   "parent_experiment": [
     "piclim-control"
   ],
-  "references": [],
   "start_date": "none",
   "tier": "1",
   "@type": [
@@ -3228,7 +3106,6 @@
   "parent_experiment": [
     "piClim-control"
   ],
-  "references": [],
   "start_date": "none",
   "tier": "2",
   "@type": [
@@ -3264,7 +3141,6 @@
   "parent_experiment": [
     "piclim-control"
   ],
-  "references": [],
   "start_date": "none",
   "tier": "1",
   "@type": [
@@ -3289,7 +3165,6 @@
   "parent_experiment": [
     "none"
   ],
-  "references": [],
   "start": -999,
   "start_date": "none",
   "tier": 0,
@@ -3332,7 +3207,6 @@
   "parent_experiment": [
     "none"
   ],
-  "references": [],
   "start": -999,
   "start_date": "none",
   "tier": 0,
@@ -3342,34 +3216,6 @@
     "cmip7"
   ],
   "@id": "picontrol"
-}
-    ,{
-  "validation_key": "scen7-h-ext",
-  "ui_label": "pending",
-  "description": "pending",
-  "activity": [
-    "ismip7"
-  ],
-  "alias": [],
-  "minimum_number_of_years": 50,
-  "model_realms": [
-    {
-      "@id": "pending",
-      "is_required": true
-    }
-  ],
-  "parent_experiment": [
-    "pending"
-  ],
-  "references": [],
-  "start_date": "pending",
-  "tier": "pending",
-  "@type": [
-    "wcrp:experiment",
-    "esgvoc:Experiment",
-    "cmip7"
-  ],
-  "@id": "scen7-h-ext-pending"
 }
     ,{
   "validation_key": "scen7-h",
@@ -3389,7 +3235,6 @@
   "parent_experiment": [
     "pending"
   ],
-  "references": [],
   "start_date": "pending",
   "tier": "pending",
   "@type": [
@@ -3401,7 +3246,7 @@
   "@id": "scen7-h-pending"
 }
     ,{
-  "validation_key": "scen7-hl-ext",
+  "validation_key": "scen7-h-ext",
   "ui_label": "pending",
   "description": "pending",
   "activity": [
@@ -3418,7 +3263,6 @@
   "parent_experiment": [
     "pending"
   ],
-  "references": [],
   "start_date": "pending",
   "tier": "pending",
   "@type": [
@@ -3426,7 +3270,7 @@
     "esgvoc:Experiment",
     "cmip7"
   ],
-  "@id": "scen7-hl-ext-pending"
+  "@id": "scen7-h-ext-pending"
 }
     ,{
   "validation_key": "scen7-hl",
@@ -3446,7 +3290,6 @@
   "parent_experiment": [
     "pending"
   ],
-  "references": [],
   "start_date": "pending",
   "tier": "pending",
   "@type": [
@@ -3458,11 +3301,11 @@
   "@id": "scen7-hl-pending"
 }
     ,{
-  "validation_key": "scen7-l-ext",
+  "validation_key": "scen7-hl-ext",
   "ui_label": "pending",
   "description": "pending",
   "activity": [
-    "scenariomip"
+    "ismip7"
   ],
   "alias": [],
   "minimum_number_of_years": 50,
@@ -3475,7 +3318,6 @@
   "parent_experiment": [
     "pending"
   ],
-  "references": [],
   "start_date": "pending",
   "tier": "pending",
   "@type": [
@@ -3483,7 +3325,7 @@
     "esgvoc:Experiment",
     "cmip7"
   ],
-  "@id": "scen7-l-ext-pending"
+  "@id": "scen7-hl-ext-pending"
 }
     ,{
   "validation_key": "scen7-l",
@@ -3503,7 +3345,6 @@
   "parent_experiment": [
     "pending"
   ],
-  "references": [],
   "start_date": "pending",
   "tier": "pending",
   "@type": [
@@ -3515,7 +3356,7 @@
   "@id": "scen7-l-pending"
 }
     ,{
-  "validation_key": "scen7-ln-ext",
+  "validation_key": "scen7-l-ext",
   "ui_label": "pending",
   "description": "pending",
   "activity": [
@@ -3532,7 +3373,6 @@
   "parent_experiment": [
     "pending"
   ],
-  "references": [],
   "start_date": "pending",
   "tier": "pending",
   "@type": [
@@ -3540,7 +3380,7 @@
     "esgvoc:Experiment",
     "cmip7"
   ],
-  "@id": "scen7-ln-ext-pending"
+  "@id": "scen7-l-ext-pending"
 }
     ,{
   "validation_key": "scen7-ln",
@@ -3560,7 +3400,6 @@
   "parent_experiment": [
     "pending"
   ],
-  "references": [],
   "start_date": "pending",
   "tier": "pending",
   "@type": [
@@ -3572,11 +3411,11 @@
   "@id": "scen7-ln-pending"
 }
     ,{
-  "validation_key": "scen7-m-ext",
+  "validation_key": "scen7-ln-ext",
   "ui_label": "pending",
   "description": "pending",
   "activity": [
-    "ismip7"
+    "scenariomip"
   ],
   "alias": [],
   "minimum_number_of_years": 50,
@@ -3589,7 +3428,6 @@
   "parent_experiment": [
     "pending"
   ],
-  "references": [],
   "start_date": "pending",
   "tier": "pending",
   "@type": [
@@ -3597,7 +3435,7 @@
     "esgvoc:Experiment",
     "cmip7"
   ],
-  "@id": "scen7-m-ext-pending"
+  "@id": "scen7-ln-ext-pending"
 }
     ,{
   "validation_key": "scen7-m",
@@ -3617,7 +3455,6 @@
   "parent_experiment": [
     "pending"
   ],
-  "references": [],
   "start_date": "pending",
   "tier": "pending",
   "@type": [
@@ -3629,7 +3466,7 @@
   "@id": "scen7-m-pending"
 }
     ,{
-  "validation_key": "scen7-ml-ext",
+  "validation_key": "scen7-m-ext",
   "ui_label": "pending",
   "description": "pending",
   "activity": [
@@ -3646,7 +3483,6 @@
   "parent_experiment": [
     "pending"
   ],
-  "references": [],
   "start_date": "pending",
   "tier": "pending",
   "@type": [
@@ -3654,7 +3490,7 @@
     "esgvoc:Experiment",
     "cmip7"
   ],
-  "@id": "scen7-ml-ext-pending"
+  "@id": "scen7-m-ext-pending"
 }
     ,{
   "validation_key": "scen7-ml",
@@ -3674,7 +3510,6 @@
   "parent_experiment": [
     "pending"
   ],
-  "references": [],
   "start_date": "pending",
   "tier": "pending",
   "@type": [
@@ -3686,7 +3521,7 @@
   "@id": "scen7-ml-pending"
 }
     ,{
-  "validation_key": "scen7-vl-ext",
+  "validation_key": "scen7-ml-ext",
   "ui_label": "pending",
   "description": "pending",
   "activity": [
@@ -3703,7 +3538,6 @@
   "parent_experiment": [
     "pending"
   ],
-  "references": [],
   "start_date": "pending",
   "tier": "pending",
   "@type": [
@@ -3711,7 +3545,7 @@
     "esgvoc:Experiment",
     "cmip7"
   ],
-  "@id": "scen7-vl-ext-pending"
+  "@id": "scen7-ml-ext-pending"
 }
     ,{
   "validation_key": "scen7-vl",
@@ -3731,7 +3565,6 @@
   "parent_experiment": [
     "pending"
   ],
-  "references": [],
   "start_date": "pending",
   "tier": "pending",
   "@type": [
@@ -3741,6 +3574,33 @@
     "cmip:fast-track"
   ],
   "@id": "scen7-vl-pending"
+}
+    ,{
+  "validation_key": "scen7-vl-ext",
+  "ui_label": "pending",
+  "description": "pending",
+  "activity": [
+    "ismip7"
+  ],
+  "alias": [],
+  "minimum_number_of_years": 50,
+  "model_realms": [
+    {
+      "@id": "pending",
+      "is_required": true
+    }
+  ],
+  "parent_experiment": [
+    "pending"
+  ],
+  "start_date": "pending",
+  "tier": "pending",
+  "@type": [
+    "wcrp:experiment",
+    "esgvoc:Experiment",
+    "cmip7"
+  ],
+  "@id": "scen7-vl-ext-pending"
 }
     ,{
   "validation_key": "spinup-1950",
@@ -3772,7 +3632,6 @@
   "parent_experiment": [
     "none"
   ],
-  "references": [],
   "start_date": "none",
   "tier": "1",
   "@type": [
@@ -3796,7 +3655,6 @@
   "parent_experiment": [
     "none"
   ],
-  "references": [],
   "start": -999,
   "start_date": "none",
   "tier": 0,
@@ -3806,230 +3664,6 @@
     "cmip7"
   ],
   "@id": "sspx-slcf"
-}
-    ,{
-  "validation_key": "tipmip-provisional-esm-up2p0-gwl1p5",
-  "ui_label": "pending",
-  "description": "pending",
-  "activity": [
-    "tipmip"
-  ],
-  "alias": [],
-  "minimum_number_of_years": 300,
-  "model_realms": [
-    {
-      "@id": "pending",
-      "is_required": true
-    }
-  ],
-  "parent_experiment": [
-    "pending"
-  ],
-  "references": [],
-  "start_date": "pending",
-  "tier": "pending",
-  "@type": [
-    "wcrp:experiment",
-    "esgvoc:Experiment",
-    "cmip7"
-  ],
-  "@id": "tipmip-provisional-esm-up2p0-gwl1p5-pending"
-}
-    ,{
-  "validation_key": "tipmip-provisional-esm-up2p0-gwl2p0-50y-dn2p0",
-  "ui_label": "pending",
-  "description": "pending",
-  "activity": [
-    "tipmip"
-  ],
-  "alias": [],
-  "minimum_number_of_years": 100,
-  "model_realms": [
-    {
-      "@id": "pending",
-      "is_required": true
-    }
-  ],
-  "parent_experiment": [
-    "pending"
-  ],
-  "references": [],
-  "start_date": "pending",
-  "tier": "pending",
-  "@type": [
-    "wcrp:experiment",
-    "esgvoc:Experiment",
-    "cmip7"
-  ],
-  "@id": "tipmip-provisional-esm-up2p0-gwl2p0-50y-dn2p0-pending"
-}
-    ,{
-  "validation_key": "tipmip-provisional-esm-up2p0-gwl2p0",
-  "ui_label": "pending",
-  "description": "pending",
-  "activity": [
-    "tipmip"
-  ],
-  "alias": [],
-  "minimum_number_of_years": 300,
-  "model_realms": [
-    {
-      "@id": "pending",
-      "is_required": true
-    }
-  ],
-  "parent_experiment": [
-    "pending"
-  ],
-  "references": [],
-  "start_date": "pending",
-  "tier": "pending",
-  "@type": [
-    "wcrp:experiment",
-    "esgvoc:Experiment",
-    "cmip7"
-  ],
-  "@id": "tipmip-provisional-esm-up2p0-gwl2p0-pending"
-}
-    ,{
-  "validation_key": "tipmip-provisional-esm-up2p0-gwl3p0",
-  "ui_label": "pending",
-  "description": "pending",
-  "activity": [
-    "tipmip"
-  ],
-  "alias": [],
-  "minimum_number_of_years": 300,
-  "model_realms": [
-    {
-      "@id": "pending",
-      "is_required": true
-    }
-  ],
-  "parent_experiment": [
-    "pending"
-  ],
-  "references": [],
-  "start_date": "pending",
-  "tier": "pending",
-  "@type": [
-    "wcrp:experiment",
-    "esgvoc:Experiment",
-    "cmip7"
-  ],
-  "@id": "tipmip-provisional-esm-up2p0-gwl3p0-pending"
-}
-    ,{
-  "validation_key": "tipmip-provisional-esm-up2p0-gwl4p0-50y-dn2p0-gwl2p0",
-  "ui_label": "pending",
-  "description": "pending",
-  "activity": [
-    "tipmip"
-  ],
-  "alias": [],
-  "minimum_number_of_years": 300,
-  "model_realms": [
-    {
-      "@id": "pending",
-      "is_required": true
-    }
-  ],
-  "parent_experiment": [
-    "pending"
-  ],
-  "references": [],
-  "start_date": "pending",
-  "tier": "pending",
-  "@type": [
-    "wcrp:experiment",
-    "esgvoc:Experiment",
-    "cmip7"
-  ],
-  "@id": "tipmip-provisional-esm-up2p0-gwl4p0-50y-dn2p0-gwl2p0-pending"
-}
-    ,{
-  "validation_key": "tipmip-provisional-esm-up2p0-gwl4p0-50y-dn2p0",
-  "ui_label": "pending",
-  "description": "pending",
-  "activity": [
-    "tipmip"
-  ],
-  "alias": [],
-  "minimum_number_of_years": 200,
-  "model_realms": [
-    {
-      "@id": "pending",
-      "is_required": true
-    }
-  ],
-  "parent_experiment": [
-    "pending"
-  ],
-  "references": [],
-  "start_date": "pending",
-  "tier": "pending",
-  "@type": [
-    "wcrp:experiment",
-    "esgvoc:Experiment",
-    "cmip7"
-  ],
-  "@id": "tipmip-provisional-esm-up2p0-gwl4p0-50y-dn2p0-pending"
-}
-    ,{
-  "validation_key": "tipmip-provisional-esm-up2p0-gwl4p0",
-  "ui_label": "pending",
-  "description": "pending",
-  "activity": [
-    "tipmip"
-  ],
-  "alias": [],
-  "minimum_number_of_years": 300,
-  "model_realms": [
-    {
-      "@id": "pending",
-      "is_required": true
-    }
-  ],
-  "parent_experiment": [
-    "pending"
-  ],
-  "references": [],
-  "start_date": "pending",
-  "tier": "pending",
-  "@type": [
-    "wcrp:experiment",
-    "esgvoc:Experiment",
-    "cmip7"
-  ],
-  "@id": "tipmip-provisional-esm-up2p0-gwl4p0-pending"
-}
-    ,{
-  "validation_key": "tipmip-provisional-esm-up2p0-gwl5p0",
-  "ui_label": "pending",
-  "description": "pending",
-  "activity": [
-    "tipmip"
-  ],
-  "alias": [],
-  "minimum_number_of_years": 300,
-  "model_realms": [
-    {
-      "@id": "pending",
-      "is_required": true
-    }
-  ],
-  "parent_experiment": [
-    "pending"
-  ],
-  "references": [],
-  "start_date": "pending",
-  "tier": "pending",
-  "@type": [
-    "wcrp:experiment",
-    "esgvoc:Experiment",
-    "cmip7"
-  ],
-  "@id": "tipmip-provisional-esm-up2p0-gwl5p0-pending"
 }
     ,{
   "validation_key": "tipmip-provisional-esm-up2p0",
@@ -4049,7 +3683,6 @@
   "parent_experiment": [
     "pending"
   ],
-  "references": [],
   "start_date": "pending",
   "tier": "pending",
   "@type": [
@@ -4058,6 +3691,222 @@
     "cmip7"
   ],
   "@id": "tipmip-provisional-esm-up2p0-pending"
+}
+    ,{
+  "validation_key": "tipmip-provisional-esm-up2p0-gwl1p5",
+  "ui_label": "pending",
+  "description": "pending",
+  "activity": [
+    "tipmip"
+  ],
+  "alias": [],
+  "minimum_number_of_years": 300,
+  "model_realms": [
+    {
+      "@id": "pending",
+      "is_required": true
+    }
+  ],
+  "parent_experiment": [
+    "pending"
+  ],
+  "start_date": "pending",
+  "tier": "pending",
+  "@type": [
+    "wcrp:experiment",
+    "esgvoc:Experiment",
+    "cmip7"
+  ],
+  "@id": "tipmip-provisional-esm-up2p0-gwl1p5-pending"
+}
+    ,{
+  "validation_key": "tipmip-provisional-esm-up2p0-gwl2p0",
+  "ui_label": "pending",
+  "description": "pending",
+  "activity": [
+    "tipmip"
+  ],
+  "alias": [],
+  "minimum_number_of_years": 300,
+  "model_realms": [
+    {
+      "@id": "pending",
+      "is_required": true
+    }
+  ],
+  "parent_experiment": [
+    "pending"
+  ],
+  "start_date": "pending",
+  "tier": "pending",
+  "@type": [
+    "wcrp:experiment",
+    "esgvoc:Experiment",
+    "cmip7"
+  ],
+  "@id": "tipmip-provisional-esm-up2p0-gwl2p0-pending"
+}
+    ,{
+  "validation_key": "tipmip-provisional-esm-up2p0-gwl2p0-50y-dn2p0",
+  "ui_label": "pending",
+  "description": "pending",
+  "activity": [
+    "tipmip"
+  ],
+  "alias": [],
+  "minimum_number_of_years": 100,
+  "model_realms": [
+    {
+      "@id": "pending",
+      "is_required": true
+    }
+  ],
+  "parent_experiment": [
+    "pending"
+  ],
+  "start_date": "pending",
+  "tier": "pending",
+  "@type": [
+    "wcrp:experiment",
+    "esgvoc:Experiment",
+    "cmip7"
+  ],
+  "@id": "tipmip-provisional-esm-up2p0-gwl2p0-50y-dn2p0-pending"
+}
+    ,{
+  "validation_key": "tipmip-provisional-esm-up2p0-gwl3p0",
+  "ui_label": "pending",
+  "description": "pending",
+  "activity": [
+    "tipmip"
+  ],
+  "alias": [],
+  "minimum_number_of_years": 300,
+  "model_realms": [
+    {
+      "@id": "pending",
+      "is_required": true
+    }
+  ],
+  "parent_experiment": [
+    "pending"
+  ],
+  "start_date": "pending",
+  "tier": "pending",
+  "@type": [
+    "wcrp:experiment",
+    "esgvoc:Experiment",
+    "cmip7"
+  ],
+  "@id": "tipmip-provisional-esm-up2p0-gwl3p0-pending"
+}
+    ,{
+  "validation_key": "tipmip-provisional-esm-up2p0-gwl4p0",
+  "ui_label": "pending",
+  "description": "pending",
+  "activity": [
+    "tipmip"
+  ],
+  "alias": [],
+  "minimum_number_of_years": 300,
+  "model_realms": [
+    {
+      "@id": "pending",
+      "is_required": true
+    }
+  ],
+  "parent_experiment": [
+    "pending"
+  ],
+  "start_date": "pending",
+  "tier": "pending",
+  "@type": [
+    "wcrp:experiment",
+    "esgvoc:Experiment",
+    "cmip7"
+  ],
+  "@id": "tipmip-provisional-esm-up2p0-gwl4p0-pending"
+}
+    ,{
+  "validation_key": "tipmip-provisional-esm-up2p0-gwl4p0-50y-dn2p0",
+  "ui_label": "pending",
+  "description": "pending",
+  "activity": [
+    "tipmip"
+  ],
+  "alias": [],
+  "minimum_number_of_years": 200,
+  "model_realms": [
+    {
+      "@id": "pending",
+      "is_required": true
+    }
+  ],
+  "parent_experiment": [
+    "pending"
+  ],
+  "start_date": "pending",
+  "tier": "pending",
+  "@type": [
+    "wcrp:experiment",
+    "esgvoc:Experiment",
+    "cmip7"
+  ],
+  "@id": "tipmip-provisional-esm-up2p0-gwl4p0-50y-dn2p0-pending"
+}
+    ,{
+  "validation_key": "tipmip-provisional-esm-up2p0-gwl4p0-50y-dn2p0-gwl2p0",
+  "ui_label": "pending",
+  "description": "pending",
+  "activity": [
+    "tipmip"
+  ],
+  "alias": [],
+  "minimum_number_of_years": 300,
+  "model_realms": [
+    {
+      "@id": "pending",
+      "is_required": true
+    }
+  ],
+  "parent_experiment": [
+    "pending"
+  ],
+  "start_date": "pending",
+  "tier": "pending",
+  "@type": [
+    "wcrp:experiment",
+    "esgvoc:Experiment",
+    "cmip7"
+  ],
+  "@id": "tipmip-provisional-esm-up2p0-gwl4p0-50y-dn2p0-gwl2p0-pending"
+}
+    ,{
+  "validation_key": "tipmip-provisional-esm-up2p0-gwl5p0",
+  "ui_label": "pending",
+  "description": "pending",
+  "activity": [
+    "tipmip"
+  ],
+  "alias": [],
+  "minimum_number_of_years": 300,
+  "model_realms": [
+    {
+      "@id": "pending",
+      "is_required": true
+    }
+  ],
+  "parent_experiment": [
+    "pending"
+  ],
+  "start_date": "pending",
+  "tier": "pending",
+  "@type": [
+    "wcrp:experiment",
+    "esgvoc:Experiment",
+    "cmip7"
+  ],
+  "@id": "tipmip-provisional-esm-up2p0-gwl5p0-pending"
 }
   ]
 }

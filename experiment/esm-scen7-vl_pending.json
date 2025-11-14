@@ -7,11 +7,9 @@
     ],
     "alias": [],
     "minimum_number_of_years": 75,
-    "model_realms": [
-        {
-            "@id": "pending",
-            "is_required": true
-        }
+    "model_realms_allowed_optional": [],
+    "model_realms_required": [
+        "pending"
     ],
     "parent_experiment": [
         "pending"

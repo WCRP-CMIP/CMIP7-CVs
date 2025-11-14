@@ -7,27 +7,14 @@
     ],
     "alias": [],
     "minimum_number_of_years": 200,
-    "model_realms": [
-        {
-            "@id": "agcm",
-            "is_required": true
-        },
-        {
-            "@id": "bgc",
-            "is_required": true
-        },
-        {
-            "@id": "aer",
-            "is_required": false
-        },
-        {
-            "@id": "chem",
-            "is_required": false
-        },
-        {
-            "@id": "ism",
-            "is_required": false
-        }
+    "model_realms_allowed_optional": [
+        "aer",
+        "chem",
+        "ism"
+    ],
+    "model_realms_required": [
+        "agcm",
+        "bgc"
     ],
     "parent_experiment": [
         "esm-flat10"

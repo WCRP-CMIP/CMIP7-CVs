@@ -7,15 +7,11 @@
     ],
     "alias": [],
     "minimum_number_of_years": 172,
-    "model_realms": [
-        {
-            "@id": "land",
-            "is_required": true
-        },
-        {
-            "@id": "bgc",
-            "is_required": false
-        }
+    "model_realms_allowed_optional": [
+        "bgc"
+    ],
+    "model_realms_required": [
+        "land"
     ],
     "parent_experiment": [
         "none"
