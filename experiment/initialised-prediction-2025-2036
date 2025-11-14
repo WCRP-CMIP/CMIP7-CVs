@@ -1,0 +1,27 @@
+{
+    "validation_key": "Initialised-prediction-2025-2036",
+    "ui_label": "Describe Initialised-prediction-2025-2036 in one sentence.",
+    "description": "Initialised prediction for 2025-2036 \n Decadal climate prediction project initialised forecast for 2025-2036",
+    "activity": [
+        "dcpp"
+    ],
+    "alias": [],
+    "end": -999,
+    "min_number_yrs_per_sim": -999,
+    "model_realms_allowed_optional": [],
+    "model_realms_required": [],
+    "parent_experiment": [
+        "none"
+    ],
+    "references": [],
+    "start": -999,
+    "start_date": "none",
+    "tier": 0,
+    "@context": "_context",
+    "@type": [
+        "wcrp:experiment",
+        "esgvoc:Experiment",
+        "cmip7"
+    ],
+    "@id": "initialised-prediction-2025-2036"
+}

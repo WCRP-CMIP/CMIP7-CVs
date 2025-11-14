@@ -1,0 +1,34 @@
+{
+    "validation_key": "abrupt-4xCO2",
+    "ui_label": "CO2 prescribed to 4 times preindustrial",
+    "description": "DECK: abrupt quadrupling of CO2 \n Abrupt increase in CO2 concentration from pre-industrial level to quadrupling",
+    "activity": [
+        "cmip"
+    ],
+    "alias": [],
+    "end": -999,
+    "min_number_yrs_per_sim": 150,
+    "minimum_number_of_years": 300,
+    "model_realms_allowed_optional": [
+        "aer",
+        "bgc",
+        "chem"
+    ],
+    "model_realms_required": [
+        "aogcm"
+    ],
+    "parent_experiment": [
+        "picontrol"
+    ],
+    "references": [],
+    "start": -999,
+    "start_date": "none",
+    "tier": 0,
+    "@context": "_context",
+    "@type": [
+        "wcrp:experiment",
+        "esgvoc:Experiment",
+        "cmip7"
+    ],
+    "@id": "abrupt-4xco2"
+}

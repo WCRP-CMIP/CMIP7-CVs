@@ -1,0 +1,35 @@
+{
+    "validation_key": "amip-piForcing",
+    "ui_label": "AMIP experiment with pre-industrial forcing",
+    "description": "Identical to the `amip` DECK experiment, but from 1870 to the present with constant pre-industrial forcing levels (anthropogenic and natural).  Reference: [Webb et al., 2017](https://doi.org/10.5194/gmd-10-359-2017)",
+    "activity": [
+        "damip"
+    ],
+    "alias": [],
+    "branch_date": "none",
+    "minimum_number_of_years": 145,
+    "model_realms_allowed_optional": [
+        "aer",
+        "bgc",
+        "chem"
+    ],
+    "model_realms_required": [
+        "agcm"
+    ],
+    "parent_experiment": [
+        "none"
+    ],
+    "references": [
+        "10.5194/gmd-10-359-2017"
+    ],
+    "start_date": "1870-01-01",
+    "tier": "1",
+    "@context": "_context",
+    "@type": [
+        "wcrp:experiment",
+        "esgvoc:Experiment",
+        "cmip7",
+        "cmip:fast-track"
+    ],
+    "@id": "amip-piforcing"
+}

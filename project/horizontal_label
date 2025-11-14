@@ -1,0 +1,27 @@
+{
+    "validation_key": "horizontal_label",
+    "ui_label": "HorizontalLabelCollection",
+    "description": "CMIP7 Permissible Horizontal Labels",
+    "horizontal_label": [
+        "hm",
+        "ht",
+        "hxy",
+        "hxys",
+        "hy",
+        "hys"
+    ],
+    "@context": {
+        "@base": "https://wcrp-cmip.github.io/CMIP7-CVs/project/",
+        "@vocab": "https://wcrp-cmip.github.io/Variable-Registry/#horizontal_label",
+        "horizontal_label": {
+            "@context": "https://wcrp-cmip.github.io/Variable-Registry/horizontal_label/_context",
+            "@container": "@set",
+            "@type": "@id"
+        }
+    },
+    "@type": [
+        "wcrp:horizontal_label",
+        "cmip7"
+    ],
+    "@id": "horizontal_label"
+}
