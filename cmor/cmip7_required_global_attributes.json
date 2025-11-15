@@ -1,12 +1,12 @@
 {
     "Header": {
         "file": "cmip7_required_global_attributes.json",
-        "file_creation_date": "2025-11-14T22:24:21.167264",
+        "file_creation_date": "2025-11-15T00:01:59.056975",
         "version": "fatal: No names found, cannot describe anything.",
         "checksum": "md5: 99914b932bd37a50b983c5e7c90ae93b",
         "repo_url": "https://github.com/WCRP-CMIP/CMIP7-CVs",
         "repo_prefix": "cmip7",
-        "last_commit": "2586f242261044e37f65bd38032f06137c68e018",
+        "last_commit": "ba33629daf2e639fcf24587168aab16426aab59b",
         "comment": "This is an automatically generated file. Do not edit."
     },
     "required_global_attributes": {}
