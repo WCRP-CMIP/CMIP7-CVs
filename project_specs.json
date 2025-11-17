@@ -264,15 +264,15 @@
                 "source_collection": "dateCreated",
                 "value_type": "string"
             },
-            "realisation_index": {
-                "source_collection": "realisation",
+            "realization_index": {
+                "source_collection": "realization",
                 "value_type": "string"
             },
-            "initialisation_index": {
+            "initialization_index": {
                 "source_collection": "initialization",
                 "value_type": "string"
             },
-            "physic_index": {
+            "physics_index": {
                 "source_collection": "physics",
                 "value_type": "string"
             },
