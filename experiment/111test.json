@@ -1,9 +1,5 @@
 {
-  "@context": "000_context.jsonld",
-  "id": "111test",
-  "type": "experiment",
-  "end_timestamp": "2021-12-31",
-  "min_number_yrs_per_sim": 172,
-  "parent_mip_era": "cmip7",
-  "tier": 1
+    "@context": "000_context.jsonld",
+    "id": "111test",
+    "type": "experiment"
 }

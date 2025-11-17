@@ -1,7 +1,5 @@
 {
     "@context": "000_context.jsonld",
     "id": "esm-picontrol",
-    "type": "experiment",
-    "parent_mip_era": "cmip7",
-    "tier": 1
+    "type": "experiment"
 }
