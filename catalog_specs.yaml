@@ -40,7 +40,7 @@ dataset_properties:
   - source_collection: initialization_index
     catalog_field_value_type: integer
     is_required: true
-  - source_collection: contributor
+  - source_collection: organisation
     # source_collection_key: description
     catalog_field_value_type: string
     is_required: true
