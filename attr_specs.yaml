@@ -55,7 +55,7 @@
   is_required: true
   value_type: string
 - field_name: institution_id
-  source_collection: contributor
+  source_collection: organisation
   is_required: true
   value_type: string
 - field_name: license_id

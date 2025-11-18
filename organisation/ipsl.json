@@ -1,5 +1,5 @@
 {
     "@context": "000_context.jsonld",
     "id": "ipsl",
-    "type": "contributor_member"
+    "type": "organisation"
 }

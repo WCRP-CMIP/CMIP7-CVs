@@ -1,0 +1,8 @@
+{
+    "@context": {
+        "id": "@id",
+        "type": "@type",
+        "@base": "https://esgvoc.ipsl.fr/resource/universe/institution/",
+        "institution": "https://esgvoc.ipsl.fr/resource/universe/institution"
+    }
+}
