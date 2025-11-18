@@ -14,5 +14,5 @@ from cmipld.utils.ldparse import name_extract
 # Data for this template
 DATA = {
     'issue_kind': ['New', 'Modify'],
-    'activity': name_extract(cmipld.get('universal:activity/graph.jsonld', depth=0)['@graph'])
+    'activity': name_extract(cmipld.get('universal:activity/graph.jsonld', depth=0))
 }

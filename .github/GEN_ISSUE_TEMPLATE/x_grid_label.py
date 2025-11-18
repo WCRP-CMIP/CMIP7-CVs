@@ -14,5 +14,5 @@ from cmipld.utils.ldparse import name_extract
 # Data for this template
 DATA = {
     'issue_kind': ['New', 'Modify'],
-    'grid_label': name_extract(cmipld.get('universal:grid_label/graph.jsonld', depth=0)['@graph'])
+    'grid_label': name_extract(cmipld.get('universal:grid_label/graph.jsonld', depth=0))
 }

@@ -14,5 +14,5 @@ from cmipld.utils.ldparse import name_extract
 # Data for this template
 DATA = {
     'issue_kind': ['New', 'Modify'],
-    'native_nominal_resolution': name_extract(cmipld.get('universal:resolution/graph.jsonld', depth=0)['@graph'])
+    'native_nominal_resolution': name_extract(cmipld.get('universal:resolution/graph.jsonld', depth=0))
 }

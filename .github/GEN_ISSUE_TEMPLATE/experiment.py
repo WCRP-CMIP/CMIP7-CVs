@@ -20,14 +20,14 @@ DATA = {
         "Custom Parent: specify in 'Parent experiment other' field": {'id': 'custom-parent', 'validation_key': 'custom-parent'},
         'no-parent': {'id': 'no-parent', 'validation_key': 'no-parent'},
         ** name_multikey_extract(
-            cmipld.get('cmip7:experiment/graph.jsonld',depth=0)['@graph'],
+            cmipld.get('cmip7:experiment/graph.jsonld',depth=0),
             ['id','validation_key','ui-label'],'validation_key'
         ),
     },
     'tier': ['1', '2', '3'],
     'model_components': 
         name_multikey_extract(
-        cmipld.get('universal:source_type/graph.jsonld',depth=0)['@graph'],
+        cmipld.get('universal:source_type/graph.jsonld',depth=0),
         ['id','validation_key','ui-label'],'validation_key'
     ),
     'milestone': ['Review'],
