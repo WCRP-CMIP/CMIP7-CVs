@@ -6,10 +6,9 @@ print(me)
 
 def run(io, whoami, path, name, **kwargs):
     
+    print(f"{io}/project/{me}.json")
     
-    print(cmipld.jsonld.expand(f"{io}/project/{me}-list.json"))
-    
-    data = cmipld.get(f"{io}/project/{me}-list.json", depth=2)[me]
+    data = cmipld.get(f"{io}/project/{me}.json", depth=2)[me]
     print(data)
 
     if not data: return None
