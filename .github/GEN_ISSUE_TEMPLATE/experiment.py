@@ -24,7 +24,7 @@ DATA = {
             ['id','validation_key','ui-label'],'validation_key'
         ),
     },
-    'tier': ['Tier 1', 'Tier 2', 'Tier 3'],
+    'tier': ['1', '2', '3'],
     'model_components': 
         name_multikey_extract(
         cmipld.get('universal:source_type/graph.jsonld',depth=0)['@graph'],
