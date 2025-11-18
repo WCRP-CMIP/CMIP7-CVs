@@ -1,7 +1,8 @@
 #!/bin/bash
 find . -type f -name "_context" -print0 | while IFS= read -r -d '' file; do
-      cp "$file" "$file.json"
+      dir=$(dirname "$file")
+      cp "$file" "$dir/_context.json"
 done
 
-echo "Context files copied with .json extension."
+
 
