@@ -76,18 +76,6 @@ body:
         Please select a parent from the list below. Note: phases are not considered separate activies.
       options:
         - "None Specified"
-        - "AerChemMIP"
-        - "C4MIP"
-        - "CFMIP"
-        - "CMIP"
-        - "DAMIP"
-        - "DCPP"
-        - "GeoMIP"
-        - "HighResMIP"
-        - "LMIP"
-        - "PMIP"
-        - "RFMIP"
-        - "ScenarioMIP"
     validations:
       required: true
 
@@ -250,9 +238,9 @@ body:
             - Tier 2: Major scientific value
             - Tier 3: Useful but lower priority
       options:
-        - "Tier 1"
-        - "Tier 2"
-        - "Tier 3"
+        - "1"
+        - "2"
+        - "3"
     validations:
       required: true
 
@@ -278,7 +266,7 @@ body:
             > * SLAB : Slab-ocean used with an AGCM in representing the atmosphere-ocean coupled system
 
   - type: dropdown
-    id: required_model_realms
+    id: model_realms_required
     attributes:
       multiple: true
       label: Source type codes for required model components
@@ -304,7 +292,7 @@ body:
         - "SLAB"
 
   - type: dropdown
-    id: model_realms
+    id: model_realms_additional_allowed
     attributes:
       multiple: true
       label: Source type codes for additional allowed model components

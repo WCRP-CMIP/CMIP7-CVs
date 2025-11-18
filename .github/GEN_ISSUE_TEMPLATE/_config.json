@@ -1,0 +1,24 @@
+{
+    "grouping": {
+        "New CMIP7 Permissable Value": [
+            "activity",
+            "frequency",
+            "realm",
+            "source_type",
+            "native_nominal_resolution",
+            "grid_label",
+            "region"
+        ],
+        "Issues & Discussion": [
+            "discussion",
+            "general_issue"
+        ],
+        "Experiments": [
+            "experiment"
+        ],
+        "Models & Sources": [
+            "source"
+        ]
+
+    }
+}
