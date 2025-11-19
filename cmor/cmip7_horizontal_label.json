@@ -1,0 +1,19 @@
+{
+    "Header": {
+        "file": "cmip7_horizontal_label.json",
+        "file_creation_date": "2025-11-19T15:10:06.062666",
+        "version": "fatal: No names found, cannot describe anything.",
+        "checksum": "md5: d2ef1fa46905550e155477a2f8fef293",
+        "repo_url": "https://github.com/WCRP-CMIP/CMIP7-CVs",
+        "repo_prefix": "cmip7",
+        "last_commit": "45482d8a7a6382f2b0a971fabd8a66fbe75872ac",
+        "comment": "This is an automatically generated file. Do not edit."
+    },
+    "horizontal_label": {
+        "hm": "Variables calculated as spatial averages across horizontal dimensions, typically representing area-weighted means over geographic regions. Used for regional or global horizontal averaging operations.",
+        "ht": "Variables calculated as means across specific labeled geographic areas or means along defined transects or lines. Used for regional averaging within designated boundaries or linear sampling.",
+        "hxy": "Variables represented on a regular 2D horizontal grid with longitude and latitude coordinates. Standard format for most climate model output with spatially distributed data across geographic grid points.",
+        "hxys": "Variables represented as point measurements at specific geographic sites or stations. Used for observational data, tower measurements, or model output extracted at particular locations rather than gridded data.",
+        "hy": "Variables calculated as zonal means, averaged along lines of constant latitude (east-west direction). Removes longitudinal variability to show meridional (north-south) patterns and large-scale circulation features."
+    }
+}

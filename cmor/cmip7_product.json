@@ -1,0 +1,15 @@
+{
+    "Header": {
+        "file": "cmip7_product.json",
+        "file_creation_date": "2025-11-19T15:09:35.275166",
+        "version": "fatal: No names found, cannot describe anything.",
+        "checksum": "md5: de1ecf22352237922038ab9e0ec1ed42",
+        "repo_url": "https://github.com/WCRP-CMIP/CMIP7-CVs",
+        "repo_prefix": "cmip7",
+        "last_commit": "45482d8a7a6382f2b0a971fabd8a66fbe75872ac",
+        "comment": "This is an automatically generated file. Do not edit."
+    },
+    "product": [
+        "model-output"
+    ]
+}
