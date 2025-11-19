@@ -10,7 +10,6 @@
         "dec",
         "fx",
         "mon",
-        "monc",
         "yr",
     ],
     "@context": {
