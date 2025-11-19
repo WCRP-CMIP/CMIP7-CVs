@@ -1,0 +1,29 @@
+{
+    "validation_key": "temporal_label",
+    "ui_label": "TemporalLabelCollection",
+    "description": "CMIP7 Permissible Temporal Labels",
+    "temporal_label": [
+        "tavg",
+        "tclm",
+        "tclmdc",
+        "ti",
+        "tpt",
+        "tstat",
+        "tsum"
+    ],
+    "@context": {
+        "@base": "https://wcrp-cmip.github.io/CMIP7-CVs/project/",
+        "@vocab": "https://esgf.github.io/esgf-vocab/api_documentation/data_descriptors.html#esgvoc.api.data_descriptors.TemporalLabel",
+        "temporal_label": {
+            "@context": "https://wcrp-cmip.github.io/Variable-Registry/temporal_label/_context",
+            "@container": "@id",
+            "@type": "@id"
+        }
+    },
+    "@type": [
+        "wcrp:temporal_label",
+        "esgvoc:TemporalLabel",
+        "cmip7"
+    ],
+    "@id": "temporal_label"
+}
