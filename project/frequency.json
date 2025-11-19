@@ -5,20 +5,14 @@
     "frequency": [
         "1hr",
         "1hrcm",
-        "1hrpt",
         "3hr",
-        "3hrpt",
         "6hr",
-        "6hrpt",
         "day",
         "dec",
         "fx",
         "mon",
         "monc",
-        "monpt",
-        "subhrpt",
         "yr",
-        "yrpt"
     ],
     "@context": {
         "@base": "https://wcrp-cmip.github.io/CMIP7-CVs/project/",
