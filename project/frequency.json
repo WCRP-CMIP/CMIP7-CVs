@@ -4,7 +4,6 @@
     "description": "CMIP7 Permissible Frequencies",
     "frequency": [
         "1hr",
-        "1hrcm",
         "3hr",
         "6hr",
         "day",
