@@ -1,0 +1,25 @@
+{
+    "Header": {
+        "file": "cmip7_source_type.json",
+        "file_creation_date": "2025-11-21T09:51:55.934677",
+        "version": "fatal: No names found, cannot describe anything.",
+        "checksum": "md5: 27b6c13012e19461807c98d6a02de35d",
+        "repo_url": "https://github.com/WCRP-CMIP/CMIP7-CVs",
+        "repo_prefix": "cmip7",
+        "last_commit": "575e3486c131f9cc0834f0719f61077c6ee6b9f4",
+        "comment": "This is an automatically generated file. Do not edit."
+    },
+    "source_type": {
+        "aer": "aerosol treatment in an atmospheric model where concentrations are calculated based on emissions, transformation, and removal processes (rather than being prescribed or omitted entirely)",
+        "agcm": "atmospheric general circulation model run with prescribed ocean surface conditions and usually a model of the land surface",
+        "aogcm": "coupled atmosphere-ocean global climate model, additionally including explicit representation of at least the land and sea ice",
+        "bgc": "biogeochemistry model component that at the very least accounts for carbon reservoirs and fluxes in the atmosphere, terrestrial biosphere, and ocean",
+        "chem": "chemistry treatment in an atmospheric model that calculates atmospheric oxidant concentrations (including at least ozone), rather than prescribing them",
+        "ism": "ice-sheet model that includes ice-flow",
+        "land": "land model run uncoupled from the atmosphere",
+        "ogcm": "ocean general circulation model run uncoupled from an AGCM but, usually including a sea-ice model",
+        "rad": "radiation component of an atmospheric model run 'offline'",
+        "reanalysis": "gridded product generated from a model reanalysis based on in-situ instruments and possibly satellite measurements",
+        "slab": "slab-ocean used with an AGCM in representing the atmosphere-ocean coupled system"
+    }
+}
