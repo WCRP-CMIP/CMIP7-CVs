@@ -1,0 +1,46 @@
+name: ⚇ CI
+# description is not a valid workflow key - remove it
+
+permissions:
+  contents: write
+  pages: write
+  actions: write
+  id-token: write
+
+on:
+  schedule:
+    - cron: "1 1 * * 6"
+  workflow_dispatch:
+
+jobs:
+  links:
+    uses: WCRP-CMIP/CMIPLD/.github/workflows/linkcheck.yml@main
+
+  validate-fix-json:
+    uses: WCRP-CMIP/CMIPLD/.github/workflows/validate_json.yml@main
+
+  check-graph:
+    runs-on: ubuntu-latest  # Added: required for jobs
+    steps:  # Added: steps must be under a steps key
+      - name: Checkout production branch
+        uses: actions/checkout@v4
+        with:
+          ref: production
+          fetch-depth: 0  # Fixed: was incomplete
+      
+      - name: has a graph been built?
+        id: check_graph
+        run: |
+          {
+            for dir in */; do
+              if [ -f "${dir}_context" ]; then
+                echo "#### $dir"
+                if [ -f "${dir}graph.jsonld" ]; then
+                  echo "- graph.jsonld: ✅ present"
+                else
+                  echo "- graph.jsonld: ❌ missing"
+                fi
+                echo
+              fi
+            done
+          } >> "$GITHUB_STEP_SUMMARY"
