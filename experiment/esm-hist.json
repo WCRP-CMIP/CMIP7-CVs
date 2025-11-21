@@ -1,34 +1,34 @@
 {
-    "validation_key": "esm-hist",
-    "ui_label": "Simulation of the recent past (emissions driven)",
-    "description": "DECK: Earth System Model historical simulation \n Historical simulation with Earth System Models",
-    "activity": [
-        "cmip"
-    ],
-    "alias": [],
-    "end": 2021,
-    "min_number_yrs_per_sim": 172,
-    "minimum_number_of_years": 172,
-    "model_realms_additional_allowed": [
-        "aer",
-        "chem"
-    ],
-    "model_realms_required": [
-        "aogcm",
-        "bgc"
-    ],
-    "parent_experiment": [
-        "esm-picontrol"
-    ],
-    "references": [],
-    "start": 1850,
-    "start_date": "none",
-    "tier": 0,
-    "@context": "_context",
-    "@type": [
-        "wcrp:experiment",
-        "esgvoc:Experiment",
-        "cmip7"
-    ],
-    "@id": "esm-hist"
+  "validation_key": "esm-hist",
+  "ui_label": "Simulation of the recent past (emissions driven)",
+  "description": "DECK: Earth System Model historical simulation \n Historical simulation with Earth System Models",
+  "activity": [
+    "cmip"
+  ],
+  "alias": [],
+  "end": 2021,
+  "min_number_yrs_per_sim": 172,
+  "minimum_number_of_years": 172,
+  "model_realms_additional_allowed": [
+    "aer",
+    "chem"
+  ],
+  "model_realms_required": [
+    "aogcm",
+    "bgc"
+  ],
+  "parent_experiment": [
+    "esm-picontrol"
+  ],
+  "references": [],
+  "start": 1850,
+  "start_date": "none",
+  "tier": 0,
+  "@context": "_context",
+  "@type": [
+    "wcrp:experiment",
+    "esgvoc:Experiment",
+    "cmip7"
+  ],
+  "@id": "esm-hist"
 }
