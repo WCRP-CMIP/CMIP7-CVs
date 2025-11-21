@@ -1,0 +1,30 @@
+{
+  "validation_key": "piClim-2xss",
+  "ui_label": "Pre-industrial climatology with doubled sea-salt emissions",
+  "description": "1. Detailed experiment configuration An atmosphere only configuration following piClim but with sea-salt emissions scaled by a factor of 2  2. Required model settings We encourage modelling centres to include as much atmospheric composition capability as possible. As a minimum, models should have prescribed or interactive aerosols. And the experimental setup should be consistent with other AerChemMIP2 experiments, particularly piClim-control.   3. Experiment conditions  4. Links to relevant references Fiedler et al. (in prep.) AerChemMIP2 - Unraveling the role of reactive gases, aerosols, and land use for air quality and climate change in CMIP7  5. Similarities to CMIP6 experiments piClim–2xss  6. Forcing differences from parent experiment Doubled sea-salt emissions",
+  "activity": [
+    "aerchemmip"
+  ],
+  "alias": [],
+  "minimum_number_of_years": "30",
+  "model_realms_additional_allowed": [
+    "chem"
+  ],
+  "model_realms_required": [
+    "aer",
+    "agcm"
+  ],
+  "parent_experiment": [
+    "piclim-control"
+  ],
+  "references": [],
+  "start_date": "none",
+  "tier": "2",
+  "@context": "_context",
+  "@type": [
+    "wcrp:experiment",
+    "esgvoc:Experiment",
+    "cmip7"
+  ],
+  "@id": "piclim-2xss"
+}
