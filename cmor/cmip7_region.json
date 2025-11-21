@@ -1,7 +1,7 @@
 {
     "Header": {
         "file": "cmip7_region.json",
-        "file_creation_date": "2025-11-21T09:01:30.252650",
+        "file_creation_date": "2025-11-21T09:13:21.145403",
         "version": "fatal: No names found, cannot describe anything.",
         "checksum": "md5: a0c08f126f440f5e39db977c2bac4a15",
         "repo_url": "https://github.com/WCRP-CMIP/CMIP7-CVs",

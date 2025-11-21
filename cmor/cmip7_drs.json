@@ -1,7 +1,7 @@
 {
     "Header": {
         "file": "cmip7_drs.json",
-        "file_creation_date": "2025-11-21T09:01:30.270495",
+        "file_creation_date": "2025-11-21T09:13:21.163336",
         "version": "fatal: No names found, cannot describe anything.",
         "checksum": "md5: 99914b932bd37a50b983c5e7c90ae93b",
         "repo_url": "https://github.com/WCRP-CMIP/CMIP7-CVs",
