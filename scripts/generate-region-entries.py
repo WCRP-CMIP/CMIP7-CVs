@@ -7,16 +7,15 @@ import json
 
 def main():
     to_write = [
-        "global",
-        "antarctica",
-        "greenland",
-        "30S-90S",
-        "northern-hemisphere",
-        "southern-hemisphere",
+        ("glb", "global"),
+        ("ata", "antarctica"),
+        ("grl", "greenland"),
+        ("30S-90S", "30s-90s"),
+        ("nh", "northern-hemisphere"),
+        ("sh", "southern-hemisphere"),
     ]
 
-    for drs_name in to_write:
-        id = drs_name.lower()
+    for drs_name, id in to_write:
         content = {
             "@context": "000_context.jsonld",
             "id": id,
