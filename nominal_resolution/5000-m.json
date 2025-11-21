@@ -1,0 +1,5 @@
+{
+    "@context": "000_context.jsonld",
+    "id": "5000-m",
+    "type": "nominal_resolution"
+}
