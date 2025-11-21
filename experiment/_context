@@ -24,7 +24,7 @@
         },
         "parent_experiment": {
             "@type": "@id",
-            "@container": "@set"
+            "@container": "@id"
         }
     }
 }
