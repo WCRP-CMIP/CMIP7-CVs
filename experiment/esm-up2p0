@@ -1,0 +1,31 @@
+{
+  "validation_key": "esm-up2p0",
+  "ui_label": "Ramp up with constant CO2 emissions leading to 2 degree C/century warming",
+  "description": "Ramp-up experiment with a constant warming rate of 2 degree C per century.",
+  "activity": [
+    "tipmip"
+  ],
+  "alias": [],
+  "minimum_number_of_years": "200",
+  "model_realms_additional_allowed": [
+    "aer",
+    "chem"
+  ],
+  "model_realms_required": [
+    "aogcm",
+    "bgc"
+  ],
+  "parent_experiment": [
+    "esm-piControl"
+  ],
+  "references": [],
+  "start_date": "none",
+  "tier": "1",
+  "@context": "_context",
+  "@type": [
+    "wcrp:experiment",
+    "esgvoc:Experiment",
+    "cmip7"
+  ],
+  "@id": "esm-up2p0"
+}
