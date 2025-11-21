@@ -91,18 +91,11 @@ jobs:
     steps:
       - uses: WCRP-CMIP/CMIPLD/actions/cmipld@main
         id: install-cmipld
-
+  
       - uses: actions/checkout@v4
         with:
           fetch-depth: 0
-          ref: main
-
-      - name: Restore path from src-data branch
-        uses: WCRP-CMIP/CMIPLD/actions/fetch_branch_path@main
-        with:
-          branch: "src-data"
-          path: .
-          remove: false
+          ref: src-data
   
       - name: generate modifications
         run: template_prefill
