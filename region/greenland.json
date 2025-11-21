@@ -1,5 +1,5 @@
 {
     "@context": "000_context.jsonld",
-    "id": "grl",
+    "id": "greenland",
     "type": "region"
 }

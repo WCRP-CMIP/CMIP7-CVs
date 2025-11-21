@@ -7,12 +7,12 @@ import json
 
 def main():
     to_write = [
-        "glb",
-        "ata",
-        "grl",
+        "global",
+        "antarctica",
+        "greenland",
         "30S-90S",
-        "nh",
-        "sh",
+        "northern-hemisphere",
+        "southern-hemisphere",
     ]
 
     for drs_name in to_write:
