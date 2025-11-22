@@ -3,6 +3,7 @@
     "id": "cmip",
     "type": "activity",
     "experiments": [
+        "abrupt-4xco2",
         "amip",
         "esm-hist",
         "esm-picontrol",
