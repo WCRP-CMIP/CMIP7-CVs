@@ -1,31 +1,31 @@
 {
-  "validation_key": "highresSST-p4k-uni",
-  "ui_label": "Atmosphere-only 1-year experiment (add uniform +4K to SSTs)",
-  "description": "A one-year, atmosphere-only experiment with prescribed SSTs and sea ice, including a uniform **+4K SST perturbation**  The preferred period is 1 March 2020–28 February 2021.  References: Roberts, M. J., Reed, K. A., Bao, Q., Barsugli, J. J., Camargo, S. J., Caron, L. P., … & Zhao, M. (2025). High-Resolution Model Intercomparison Project Phase 2 (HighResMIP2) towards CMIP7. Geoscientific Model Development, 18, 1307–1332  [High-Resolution Model Intercomparison Project Phase 2 (HighResMIP2) towards CMIP7.pdf](https://github.com/user-attachments/files/19402610/High-Resolution.Model.Intercomparison.Project.Phase.2.HighResMIP2.towards.CMIP7.pdf)  Webpage: https://highresmip.org/experiments/experiment_cmip7/",
-  "activity": [
-    "highresmip"
-  ],
-  "alias": [],
-  "minimum_number_of_years": "1",
-  "model_realms_additional_allowed": [
-    "aer",
-    "bgc",
-    "chem"
-  ],
-  "model_realms_required": [
-    "agcm"
-  ],
-  "parent_experiment": [
-    "none"
-  ],
-  "references": [],
-  "start_date": "2020-03-01",
-  "tier": "3",
-  "@context": "_context",
-  "@type": [
-    "wcrp:experiment",
-    "esgvoc:Experiment",
-    "cmip7"
-  ],
-  "@id": "highressst-p4k-uni"
+    "validation_key": "highresSST-p4k-uni",
+    "ui_label": "Atmosphere-only 1-year experiment (add uniform +4K to SSTs)",
+    "description": "A one-year, atmosphere-only experiment with prescribed SSTs and sea ice, including a uniform **+4K SST perturbation**  The preferred period is 1 March 2020–28 February 2021.  References: Roberts, M. J., Reed, K. A., Bao, Q., Barsugli, J. J., Camargo, S. J., Caron, L. P., … & Zhao, M. (2025). High-Resolution Model Intercomparison Project Phase 2 (HighResMIP2) towards CMIP7. Geoscientific Model Development, 18, 1307–1332  [High-Resolution Model Intercomparison Project Phase 2 (HighResMIP2) towards CMIP7.pdf](https://github.com/user-attachments/files/19402610/High-Resolution.Model.Intercomparison.Project.Phase.2.HighResMIP2.towards.CMIP7.pdf)  Webpage: https://highresmip.org/experiments/experiment_cmip7/",
+    "activity": [
+        "highresmip"
+    ],
+    "alias": [],
+    "minimum_number_of_years": "1",
+    "model_realms_additional_allowed": [
+        "aer",
+        "bgc",
+        "chem"
+    ],
+    "model_realms_required": [
+        "agcm"
+    ],
+    "parent_experiment": [
+        "none"
+    ],
+    "references": [],
+    "start_date": "2020-03-01",
+    "tier": "3",
+    "@context": "_context",
+    "@type": [
+        "wcrp:experiment",
+        "esgvoc:Experiment",
+        "cmip7"
+    ],
+    "@id": "highressst-p4k-uni"
 }
