@@ -1,5 +1,13 @@
 {
     "@context": "000_context.jsonld",
     "id": "cmip",
-    "type": "activity"
+    "type": "activity",
+    "experiments": [
+        "amip",
+        "esm-hist",
+        "esm-picontrol",
+        "historical",
+        "picontrol"
+    ],
+    "urls": ["https://doi.org/10.5194/gmd-18-6671-2025"]
 }
