@@ -1,0 +1,5 @@
+{
+    "@context": "000_context.jsonld",
+    "id": "ufs",
+    "type": "area_label"
+}
