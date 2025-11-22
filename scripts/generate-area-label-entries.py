@@ -1,5 +1,5 @@
 """
-Generate realm entries
+Generate area label entries
 """
 
 import json
