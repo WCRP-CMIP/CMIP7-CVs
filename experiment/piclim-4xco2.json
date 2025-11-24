@@ -3,5 +3,6 @@
     "id": "piclim-4xco2",
     "type": "experiment",
     "parent_mip_era": "cmip7",
+    "activity": "cmip",
     "tier": 1
 }
