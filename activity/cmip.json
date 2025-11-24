@@ -4,7 +4,8 @@
     "type": "activity",
     "experiments": [
         "1pctco2",
-        "abrupt-4xco2"
+        "abrupt-4xco2",
+        "amip"
     ],
     "urls": [
         "https://doi.org/10.5194/gmd-18-6671-2025"

@@ -1,6 +1,6 @@
 {
     "@context": "000_context.jsonld",
-    "id": "amip",
+    "id": "amip-p4k",
     "type": "experiment",
     "start_timestamp": "1979-01-01",
     "end_timestamp": "2021-12-31",
