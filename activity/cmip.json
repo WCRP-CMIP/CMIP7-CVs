@@ -7,10 +7,8 @@
         "abrupt-4xco2",
         "amip",
         "esm-hist",
-        "esm-hist",
         "esm-picontrol",
         "esm-picontrol-spinup",
-        "historical",
         "historical",
         "picontrol",
         "picontrol-spinup"

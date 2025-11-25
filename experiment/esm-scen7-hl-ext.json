@@ -2,14 +2,9 @@
     "@context": "000_context.jsonld",
     "id": "esm-scen7-hl-ext",
     "type": "experiment",
-    "description": "PLACEHOLDER TBC. CMIP7 ScenarioMIP High followed by low (from 2060) emissions future. Run with prescribed emissions of CO2 (for runs with prescribed concentrations of CO2, see the `scen7-` experiments). Extension beyond 2100",
-    "branch_information": "Branch from esm-scen7-hl at 2100-01-01.",
-    "end_timestamp": "2300-01-01",
-    "min_ensemble_size": 1,
-    "min_number_yrs_per_sim": 51,
-    "parent_activity": "scenariomip",
-    "parent_experiment": "esm-scen7-hl",
+    "start_timestamp": "2101-01-01",
+    "end_timestamp": "2500-12-31",
+    "min_number_yrs_per_sim": 50.0,
     "parent_mip_era": "cmip7",
-    "start_timestamp": "2100-01-01",
-    "tier": 0
+    "tier": 1
 }
