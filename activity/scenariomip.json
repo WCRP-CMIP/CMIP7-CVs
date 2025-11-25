@@ -2,7 +2,22 @@
     "@context": "000_context.jsonld",
     "id": "scenariomip",
     "type": "activity",
-    "experiments": [],
+    "experiments": [
+        "scen7-h",
+        "scen7-h-ext",
+        "scen7-hl",
+        "scen7-hl-ext",
+        "scen7-l",
+        "scen7-l-ext",
+        "scen7-ln",
+        "scen7-ln-ext",
+        "scen7-m",
+        "scen7-m-ext",
+        "scen7-ml",
+        "scen7-ml-ext",
+        "scen7-vl",
+        "scen7-vl-ext"
+    ],
     "urls": [
         "https://doi.org/10.5194/egusphere-2024-3765"
     ]
