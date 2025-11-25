@@ -1,5 +1,5 @@
 {
     "@context": "000_context.jsonld",
-    "id": "multilus",
+    "id": "multi",
     "type": "area_label"
 }
