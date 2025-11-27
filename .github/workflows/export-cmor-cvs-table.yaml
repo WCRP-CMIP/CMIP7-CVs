@@ -28,7 +28,7 @@ jobs:
           UNIVERSE_CVS_FORK: "znichollscr"
           UNIVERSE_CVS_BRANCH: "esgvoc-zn"
           CMIP7_CVS_FORK: ${{ github.repository_owner }}
-          CMIP7_CVS_BRANCH: ${{ github.head_ref | github.ref_name }}
+          CMIP7_CVS_BRANCH: ${{ github.head_ref || github.ref_name }}
         run: |
           echo $CMIP7_CVS_FORK
           echo $CMIP7_CVS_BRANCH
