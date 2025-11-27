@@ -22,6 +22,7 @@
             "li": "Data is only included where the reporting point is in an area where land ice is present. 'Land ice' means glaciers, ice-caps, grounded ice sheets resting on bedrock and floating ice-shelves.",
             "lnd": "Data is only included where the reporting point is in on land.",
             "lsi": "Data is only included where the reporting point is in an area of land or sea ice.",
+            "multi": "Data is reported on multiple areas. These are indicated by a 'sector' dimension.This area type is typically used for including multiple land-use or vegetation area types in a single file.",
             "ng": "Data is only included where the reporting point is in an area where natural grasses are present. 'Natural grasses' means grasses growing in areas of low productivity, often situated on rough or uneven ground. This can include rocky areas, briars and heathland.",
             "pst": "Data is only included where the reporting point is in an area of pasture. Pastures are assumed to be anthropogenic in origin. They include anthropogenically managed pastureland and rangeland.",
             "scl": "Data is only included where the reporting point is in stratiform cloud.",
