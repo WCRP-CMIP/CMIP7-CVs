@@ -4,7 +4,7 @@ ci:
   autoupdate_schedule: quarterly
   autoupdate_branch: pre-commit-autoupdate
   # Currently network access isn't supported in the pre-commit CI product.
-  skip: [uv-sync, uv-lock, uv-export]
+  skip: [cmor-cvs-table]
 
 # See https://pre-commit.com/hooks.html for more hooks
 repos:
