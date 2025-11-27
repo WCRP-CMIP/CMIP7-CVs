@@ -15,7 +15,6 @@ debugpy==1.8.17
 decorator==5.2.1
 devtools==0.12.2
 distlib==0.4.0
-esgvoc @ git+https://github.com/znichollscr/esgf-vocab.git@5145b8f6d8b1859c663e63fb7b0bad952e8bc7b5
 executing==2.2.1
 filelock==3.20.0
 flexcache==0.3
