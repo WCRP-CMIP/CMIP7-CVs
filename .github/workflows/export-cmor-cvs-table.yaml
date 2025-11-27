@@ -9,7 +9,7 @@ on:
     tags: ['v*']
 
 jobs:
-    check-docs-up-to-date:
+    check-cmor-cvs-table-up-to-date:
       runs-on: ubuntu-latest
       steps:
         - name: Check out repository
