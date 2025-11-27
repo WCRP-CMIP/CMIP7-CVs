@@ -1,0 +1,18 @@
+# See https://pre-commit.com for more information
+ci:
+  autofix_prs: false
+  autoupdate_schedule: quarterly
+  autoupdate_branch: pre-commit-autoupdate
+  # Currently network access isn't supported in the pre-commit CI product.
+  skip: [uv-sync, uv-lock, uv-export]
+
+# See https://pre-commit.com/hooks.html for more hooks
+repos:
+  - repo: local
+    hooks:
+      - id: cmor-cvs-table
+        name: cmor-cvs-table
+        entry: venv/bin/esgvoc cmor-export-cvs-table --out-path cmor-cvs.json
+        language: system
+        require_serial: true
+        pass_filenames: false

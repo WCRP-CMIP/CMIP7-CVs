@@ -1,0 +1,57 @@
+# The CVs table should be handled by pre-commit.
+# This just makes sure that people haven't hacked around/missed that.
+name: Check CMOR CVs table
+
+on:
+  pull_request:
+  push:
+    branches: [main]
+    tags: ['v*']
+
+jobs:
+  check-cmor-cvs-table-up-to-date:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.13"
+
+      - name: Set up and install esgvoc
+        env:
+          # Modify these as needed
+          ESGVOC_FORK: "znichollscr"
+          ESGVOC_REVISION: "2bd33c2633580799c874bbaaebfe0bde6f9369e5"
+          # Modify these as needed
+          UNIVERSE_CVS_FORK: "znichollscr"
+          UNIVERSE_CVS_BRANCH: "dunne-et-al-experiments"
+          CMIP7_CVS_FORK: ${{ github.repository_owner }}
+          CMIP7_CVS_BRANCH: ${{ github.head_ref || github.ref_name }}
+        run: |
+          which pip
+          pip install -r requirements-cmor-cvs-table.txt
+          pip install --no-deps "git+https://github.com/$ESGVOC_FORK/esgf-vocab.git@$ESGVOC_REVISION"
+          esgvoc config create cmip7-cvs-ci-export
+          esgvoc config switch cmip7-cvs-ci-export
+
+          esgvoc config set "universe:github_repo=https://github.com/$UNIVERSE_CVS_FORK/WCRP-universe" "universe:branch=$UNIVERSE_CVS_BRANCH"
+          esgvoc config add-project cmip7 --custom --repo "https://github.com/$CMIP7_CVS_FORK/CMIP7-CVs" --branch "$CMIP7_CVS_BRANCH"
+
+          esgvoc config remove-project -f cmip6
+          esgvoc config remove-project -f cmip6plus
+          esgvoc install
+
+      - name: Check CMOR CVs table is up to date
+        run: |
+          ls /home/runner/.local/share/esgvoc/cmip7-cvs-ci-export/repos/WCRP-universe
+          ls /home/runner/.local/share/esgvoc/cmip7-cvs-ci-export/repos/cmip7
+          tree /home/runner/.local/share/esgvoc/cmip7-cvs-ci-export/repos/WCRP-universe/frequency
+          tree /home/runner/.local/share/esgvoc/cmip7-cvs-ci-export/repos/cmip7/frequency
+          esgvoc get cmip7:frequency:
+
+          esgvoc cmor-export-cvs-table --out-path cmor-cvs.json
+
+          git diff
+          (! git status --porcelain --untracked-files=no | grep '^.M') || (echo "CMOR CVs table is not up to date. Please run `bash create-cmor-cvs-table-export-environment.sh` (if you haven't already), then run `venv/bin/esgvoc cmor-export-cvs-table --out-path cmor-cvs.json` locally, then commit and push the results." && exit 1)
