@@ -27,7 +27,7 @@ jobs:
           # Modify these as needed
           UNIVERSE_CVS_FORK: "WCRP-CMIP"
           UNIVERSE_CVS_BRANCH: "esgvoc_dev"
-          CMIP7_CVS_FORK: ${{ github.repository_owner }}
+          CMIP7_CVS_FORK: ${{ github.event.pull_request.head.repo.owner.login }}
           CMIP7_CVS_BRANCH: ${{ github.head_ref || github.ref_name }}
         run: |
           which pip
@@ -45,12 +45,6 @@ jobs:
 
       - name: Check CMOR CVs table is up to date
         run: |
-          ls /home/runner/.local/share/esgvoc/cmip7-cvs-ci-export/repos/WCRP-universe
-          ls /home/runner/.local/share/esgvoc/cmip7-cvs-ci-export/repos/cmip7
-          tree /home/runner/.local/share/esgvoc/cmip7-cvs-ci-export/repos/WCRP-universe/frequency
-          tree /home/runner/.local/share/esgvoc/cmip7-cvs-ci-export/repos/cmip7/frequency
-          esgvoc get cmip7:frequency:
-
           esgvoc cmor-export-cvs-table --out-path cmor-cvs.json
 
           git diff
