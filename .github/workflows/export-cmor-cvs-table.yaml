@@ -23,10 +23,10 @@ jobs:
         env:
           # Modify these as needed
           ESGVOC_FORK: "znichollscr"
-          ESGVOC_REVISION: "2bd33c2633580799c874bbaaebfe0bde6f9369e5"
+          ESGVOC_REVISION: "5145b8f6d8b1859c663e63fb7b0bad952e8bc7b5"
           # Modify these as needed
-          UNIVERSE_CVS_FORK: "znichollscr"
-          UNIVERSE_CVS_BRANCH: "dunne-et-al-experiments"
+          UNIVERSE_CVS_FORK: "WCRP-CMIP"
+          UNIVERSE_CVS_BRANCH: "esgvoc_dev"
           CMIP7_CVS_FORK: ${{ github.repository_owner }}
           CMIP7_CVS_BRANCH: ${{ github.head_ref || github.ref_name }}
         run: |
