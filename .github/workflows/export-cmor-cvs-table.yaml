@@ -28,8 +28,10 @@ jobs:
           UNIVERSE_CVS_FORK: "znichollscr"
           UNIVERSE_CVS_BRANCH: "esgvoc-zn"
           CMIP7_CVS_FORK: ${{ github.repository_owner }}
-          CMIP7_CVS_BRANCH: $GITHUB_REF
+          CMIP7_CVS_BRANCH: ${{ github.ref }}
         run: |
+          echo $CMIP7_CVS_FORK
+          echo $CMIP7_CVS_BRANCH
           which pip
           pip install -r requirements-cmor-cvs-table.txt
           pip install "git+https://github.com/$ESGVOC_FORK/esgf-vocab.git@$ESGVOC_REVISION"
@@ -37,8 +39,6 @@ jobs:
           esgvoc config switch cmip7-cvs-ci-export
 
           esgvoc config set "universe:github_repo=https://github.com/$UNIVERSE_CVS_FORK/WCRP-universe" "universe:branch=$UNIVERSE_CVS_BRANCH"
-          echo $CMIP7_CVS_FORK
-          echo $CMIP7_CVS_BRANCH
           esgvoc config add-project cmip7 --custom --repo "https://github.com/$CMIP7_CVS_FORK/CMIP7-CVs" --branch "$CMIP7_CVS_BRANCH"
 
           esgvoc config remove-project -f cmip6
