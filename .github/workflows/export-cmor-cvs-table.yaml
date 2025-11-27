@@ -32,7 +32,7 @@ jobs:
         run: |
           which pip
           pip install -r requirements-cmor-cvs-table.txt
-          pip install "git+https://github.com/$ESGVOC_FORK/esgf-vocab.git@$ESGVOC_REVISION"
+          pip install --no-deps "git+https://github.com/$ESGVOC_FORK/esgf-vocab.git@$ESGVOC_REVISION"
           esgvoc config create cmip7-cvs-ci-export
           esgvoc config switch cmip7-cvs-ci-export
 
