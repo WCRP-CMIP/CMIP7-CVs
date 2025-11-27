@@ -45,8 +45,8 @@ jobs:
 
       - name: Check CMOR CVs table is up to date
         run: |
-          tree /home/runner/.local/share/esgvoc/repos/WCRP-universe
-          tree /home/runner/.local/share/esgvoc/repos/cmip7
+          tree /home/runner/.local/share/esgvoc/cmip7-cvs-ci-export/repos/WCRP-universe/frequency
+          tree /home/runner/.local/share/esgvoc/cmip7-cvs-ci-export/repos/cmip7/frequency
           esgvoc get cmip7:frequency:
 
           esgvoc cmor-export-cvs-table --out-path cmor-cvs.json
