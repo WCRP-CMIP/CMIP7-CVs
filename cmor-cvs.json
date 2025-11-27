@@ -691,7 +691,7 @@
                 "approx_interval": 3652.5,
                 "description": "Decadal samples. Note that this means that the time interval between each sample is not constant for some calendars."
             },
-            "fx": "Fixed field i.e. no time dimension and therefore no applicable frequency information.",
+            "fx": "fixed (time invariant) field",
             "mon": {
                 "approx_interval": 30.0,
                 "description": "Monthly samples. Note that this means that the time interval between each sample is not constant for some calendars."
@@ -704,10 +704,7 @@
                 "approx_interval": 30.0,
                 "description": "Monthly samples. This is a legacy label that indicated that the sample was a point sample i.e. represented the value at a specific point in time. This information is now conveyed via the temporal label instead."
             },
-            "subhrPt": {
-                "approx_interval": "",
-                "description": "Sub-hourly (i.e. more frequently than once per hour) samples. This is a legacy label that indicated that the sample was a point sample i.e. represented the value at a specific point in time. This information is now conveyed via the temporal label instead."
-            },
+            "subhrPt": "fixed (time invariant) field",
             "yr": {
                 "approx_interval": 365.25,
                 "description": "Yearly (i.e. annual) samples. Note that this means that the time interval between each sample is not constant for some calendars."

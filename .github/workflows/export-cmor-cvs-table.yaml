@@ -54,4 +54,4 @@ jobs:
           esgvoc cmor-export-cvs-table --out-path cmor-cvs.json
 
           git diff
-          (! git status --porcelain --untracked-files=no | grep '^.M') || (echo "CMOR CVs table is not up to date. Please run `bash create-cmor-cvs-table-export-environment.sh` (if you haven't already), then run `venv/bin/esgvoc cmor-export-cvs-table --out-path cmor-cvs.json` locally, then commit and push the results." && exit 1)
+          (! git status --porcelain --untracked-files=no | grep '^.M') || (echo 'CMOR CVs table is not up to date. Please run `bash create-cmor-cvs-table-export-environment.sh` (if you have not already), then run `venv/bin/esgvoc cmor-export-cvs-table --out-path cmor-cvs.json` locally, then commit and push the results.' && exit 1)
