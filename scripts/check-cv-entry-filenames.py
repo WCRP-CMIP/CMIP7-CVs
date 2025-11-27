@@ -1,7 +1,8 @@
 """
-Check that all entries are lowercase
+Check that all entries' filename matches their ID
 """
 
+import json
 import os
 from pathlib import Path
 
@@ -15,8 +16,11 @@ def main():
             continue
 
         for cv_file in Path(cvs_folder).glob("*.json"):
-            if cv_file.name != cv_file.name.lower():
-                failing.append(cv_file)
+            with open(cv_file) as fh:
+                content = json.load(fh)
+
+            if cv_file.stem != content["id"]:
+                failing.append(f"{content['id']}: {cv_file}")
 
     if failing:
         raise AssertionError(failing)

@@ -1,6 +1,5 @@
 {
     "@context": "000_context.jsonld",
-    "id": "canesm6-mr.json",
+    "id": "canesm6-mr",
     "type": "source"
 }
-

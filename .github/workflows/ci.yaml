@@ -1,0 +1,32 @@
+name: CI (continuous integration)
+
+on:
+  pull_request:
+  push:
+    branches: [main]
+    tags: ['v*']
+
+jobs:
+  check-all-filenames:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.13"
+
+      - name: Check all files have same name as ID
+        run: |
+          ls /home/runner/.local/share/esgvoc/cmip7-cvs-ci-export/repos/WCRP-universe
+          ls /home/runner/.local/share/esgvoc/cmip7-cvs-ci-export/repos/cmip7
+          tree /home/runner/.local/share/esgvoc/cmip7-cvs-ci-export/repos/WCRP-universe/frequency
+          tree /home/runner/.local/share/esgvoc/cmip7-cvs-ci-export/repos/cmip7/frequency
+          esgvoc get cmip7:frequency:
+
+          esgvoc cmor-export-cvs-table --out-path cmor-cvs.json
+
+          git diff
+          (! git status --porcelain --untracked-files=no | grep '^.M') || (echo "CMOR CVs table is not up to date. Please run `bash create-cmor-cvs-table-export-environment.sh` (if you haven't already), then run `venv/bin/esgvoc cmor-export-cvs-table --out-path cmor-cvs.json` locally, then commit and push the results." && exit 1)
+
