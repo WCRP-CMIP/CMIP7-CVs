@@ -1,6 +1,6 @@
 {
     "@context": "000_context.jsonld",
-    "id": "piclim-control",
+    "id": "piclim-n2o",
     "type": "experiment",
     "tier": 1
 }
