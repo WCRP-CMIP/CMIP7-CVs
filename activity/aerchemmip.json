@@ -1,0 +1,23 @@
+{
+    "@context": "000_context.jsonld",
+    "id": "aerchemmip",
+    "type": "activity",
+    "experiments": [
+        "esm-scen7-h-aer",
+        "esm-scen7-h-aq",
+        "esm-scen7-vl-aer",
+        "esm-scen7-vl-aq",
+        "piclim-ch4",
+        "piclim-n2o",
+        "piclim-nox",
+        "piclim-ods",
+        "piclim-so2",
+        "scen7-h-aer",
+        "scen7-h-aq",
+        "scen7-vl-aer",
+        "scen7-vl-aq"
+    ],
+    "urls": [
+        "https://doi.org/10.5194/gmd-10-585-2017"
+    ]
+}

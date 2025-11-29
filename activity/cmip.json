@@ -1,5 +1,22 @@
 {
     "@context": "000_context.jsonld",
     "id": "cmip",
-    "type": "activity"
+    "type": "activity",
+    "experiments": [
+        "1pctco2",
+        "abrupt-4xco2",
+        "amip",
+        "esm-hist",
+        "esm-picontrol",
+        "esm-picontrol-spinup",
+        "historical",
+        "piclim-4xco2",
+        "piclim-anthro",
+        "piclim-control",
+        "picontrol",
+        "picontrol-spinup"
+    ],
+    "urls": [
+        "https://doi.org/10.5194/gmd-18-6671-2025"
+    ]
 }

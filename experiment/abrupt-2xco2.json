@@ -1,0 +1,8 @@
+{
+    "@context": "000_context.jsonld",
+    "id": "abrupt-2xco2",
+    "type": "experiment",
+    "min_number_yrs_per_sim": 300.0,
+    "parent_mip_era": "cmip7",
+    "tier": 1
+}

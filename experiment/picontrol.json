@@ -2,6 +2,7 @@
     "@context": "000_context.jsonld",
     "id": "picontrol",
     "type": "experiment",
+    "min_number_yrs_per_sim": 400.0,
     "parent_mip_era": "cmip7",
     "tier": 1
 }

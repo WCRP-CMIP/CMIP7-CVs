@@ -2,14 +2,9 @@
     "@context": "000_context.jsonld",
     "id": "scen7-vl",
     "type": "experiment",
-    "description": "PLACEHOLDER TBC. CMIP7 ScenarioMIP Very low emissions future. Run with prescribed concentrations of CO2 (for runs with prescribed emissions of CO2, see the `esm-scen7-` experiments).",
-    "branch_information": "Branch from historical at 2022-01-01.",
-    "end_timestamp": "2100-01-01",
-    "min_ensemble_size": 1,
-    "min_number_yrs_per_sim": 78,
-    "parent_activity": "cmip",
-    "parent_experiment": "historical",
-    "parent_mip_era": "cmip7",
     "start_timestamp": "2022-01-01",
-    "tier": 0
+    "end_timestamp": "2100-12-31",
+    "min_number_yrs_per_sim": 79.0,
+    "parent_mip_era": "cmip7",
+    "tier": 1
 }
