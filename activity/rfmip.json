@@ -3,7 +3,9 @@
     "id": "rfmip",
     "type": "activity",
     "experiments": [
-        "piclim-aer"
+        "piclim-aer",
+        "piclim-histaer",
+        "piclim-histall"
     ],
     "urls": [
         "https://doi.org/10.5194/acp-20-9591-2020",
