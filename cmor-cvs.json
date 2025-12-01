@@ -11,6 +11,7 @@
             "C4MIP": "Coupled climate carbon cycle model intercomparison project: exploration of the response of the coupled carbon-climate system.",
             "CFMIP": "Cloud feedback model intercomparison project. Focussed primarily on cloud feedbacks with a secondary focus on understanding of response to forcing, model biases, circulation, regional-scale precipitation, and non-linear changes.",
             "CMIP": "CMIP core common experiments i.e. the DECK (Diagnostic, Evaluation and Characterization of Klima)",
+            "RFMIP": " Radiative Forcing Model Intercomparison Project: characterisation of radiative forcing within models.",
             "ScenarioMIP": "Future scenario experiments. Exploration of the future climate under a (selected) range of possible boundary conditions"
         },
         "area_label": {
@@ -730,6 +731,20 @@
                 "start_year": "",
                 "tier": 1
             },
+            "piClim-aer": {
+                "activity_id": [
+                    "RFMIP"
+                ],
+                "description": "In combination with `piClim-control`, quantifies present-day aerosol effective radiative forcing (ERF). Same as `piClim-control`, except anthropogenic aerosol emissions use present-day values (typically the last year of the `historical` simulation within the same CMIP era e.g. 2014 values for CMIP6, 2021 values for CMIP7).",
+                "end_year": "",
+                "experiment": "In combination with `piClim-control`, quantifies present-day aerosol effective radiative forcing (ERF). Same as `piClim-control`, except anthropogenic aerosol emissions use present-day values (typically the last year of the `historical` simulation within the same CMIP era e.g. 2014 values for CMIP6, 2021 values for CMIP7).",
+                "experiment_id": "piClim-aer",
+                "min_number_yrs_per_sim": 30,
+                "parent_activity_id": [],
+                "parent_experiment_id": [],
+                "start_year": "",
+                "tier": 1
+            },
             "piClim-anthro": {
                 "activity_id": [
                     "CMIP"
@@ -756,6 +771,34 @@
                 "parent_activity_id": [],
                 "parent_experiment_id": [],
                 "start_year": "",
+                "tier": 1
+            },
+            "piClim-histaer": {
+                "activity_id": [
+                    "RFMIP"
+                ],
+                "description": "Simulation of the historical period with prescribed sea-surface temperatures and sea-ice concentrations. Aerosol emissions follow the `historical` experiment while all other forcings follow `piControl` to allow for a (approximate) diagnosis of transient historical aerosol effective radiative forcing (ERF) (can be compared with `piClim-aer` which provides a more precise quantification of present-day aerosol ERF).",
+                "end_year": 2100,
+                "experiment": "Simulation of the historical period with prescribed sea-surface temperatures and sea-ice concentrations. Aerosol emissions follow the `historical` experiment while all other forcings follow `piControl` to allow for a (approximate) diagnosis of transient historical aerosol effective radiative forcing (ERF) (can be compared with `piClim-aer` which provides a more precise quantification of present-day aerosol ERF).",
+                "experiment_id": "piClim-histaer",
+                "min_number_yrs_per_sim": 251,
+                "parent_activity_id": [],
+                "parent_experiment_id": [],
+                "start_year": 1850,
+                "tier": 1
+            },
+            "piClim-histall": {
+                "activity_id": [
+                    "RFMIP"
+                ],
+                "description": "Simulation of the historical period with prescribed sea-surface temperatures and sea-ice concentrations. All forcings follow the `historical` experiment to allow for a (approximate) diagnosis of transient historical effective radiative forcing (ERF).(can be compared with the `piClim-*` experiments which provide a more precise quantification of present-day ERF from various forcers).",
+                "end_year": 2100,
+                "experiment": "Simulation of the historical period with prescribed sea-surface temperatures and sea-ice concentrations. All forcings follow the `historical` experiment to allow for a (approximate) diagnosis of transient historical effective radiative forcing (ERF).(can be compared with the `piClim-*` experiments which provide a more precise quantification of present-day ERF from various forcers).",
+                "experiment_id": "piClim-histall",
+                "min_number_yrs_per_sim": 251,
+                "parent_activity_id": [],
+                "parent_experiment_id": [],
+                "start_year": 1850,
                 "tier": 1
             },
             "piControl": {
