@@ -1,0 +1,46 @@
+{
+    "validation_key": "required-global-attributes",
+    "ui_label": "Required Global Attributes",
+    "description": "List of global attributes required for CMIP7 datasets",
+    "required_global_attributes": [
+        "activity_id",
+        "area_label",
+        "branded_variable",
+        "branding_suffix",
+        "Conventions",
+        "creation_date",
+        "data_specs_version",
+        "drs_specs",
+        "experiment_id",
+        "forcing_index",
+        "frequency",
+        "grid_label",
+        "horizontal_label",
+        "initialization_index",
+        "institution_id",
+        "license_id",
+        "mip_era",
+        "nominal_resolution",
+        "physics_index",
+        "product",
+        "realization_index",
+        "realm",
+        "region",
+        "source_id",
+        "temporal_label",
+        "tracking_id",
+        "variable_id",
+        "variant_label",
+        "vertical_label"
+    ],
+    "@context": {
+        "@base": "https://wcrp-cmip.github.io/CMIP7-CVs/project/",
+        "@vocab": "https://esgf.github.io/esgf-vocab/api_documentation/data_descriptors.html#esgvoc.api.data_descriptors.RequiredGlobalAttributes"
+    },
+    "@type": [
+        "wcrp:required_global_attributes",
+        "esgvoc:RequiredGlobalAttributes",
+        "cmip7"
+    ],
+    "@id": "required_global_attributes"
+}
