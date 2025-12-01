@@ -200,6 +200,60 @@
                 "start_year": 1870,
                 "tier": 1
             },
+            "esm-flat10": {
+                "activity_id": [
+                    "C4MIP"
+                ],
+                "description": "10 PgC / yr constant carbon dioxide emissions.",
+                "end_year": "",
+                "experiment": "10 PgC / yr constant carbon dioxide emissions.",
+                "experiment_id": "esm-flat10",
+                "min_number_yrs_per_sim": 100,
+                "parent_activity_id": [
+                    "CMIP"
+                ],
+                "parent_experiment_id": [
+                    "piControl"
+                ],
+                "start_year": "",
+                "tier": 1
+            },
+            "esm-flat10-cdr": {
+                "activity_id": [
+                    "C4MIP"
+                ],
+                "description": "Extension of `esm-flat10` where emissions decline linearly to -10 PgC / yr then stay constant until cumulative emissions (including the emissions in `esm-flat10`) reach zero. An extra 20 years is included at the end to allow for calculating averages over different time windows.",
+                "end_year": "",
+                "experiment": "Extension of `esm-flat10` where emissions decline linearly to -10 PgC / yr then stay constant until cumulative emissions (including the emissions in `esm-flat10`) reach zero. An extra 20 years is included at the end to allow for calculating averages over different time windows.",
+                "experiment_id": "esm-flat10-cdr",
+                "min_number_yrs_per_sim": 220,
+                "parent_activity_id": [
+                    "C4MIP"
+                ],
+                "parent_experiment_id": [
+                    "esm-flat10"
+                ],
+                "start_year": "",
+                "tier": 1
+            },
+            "esm-flat10-zec": {
+                "activity_id": [
+                    "C4MIP"
+                ],
+                "description": "Extension of `esm-flat10` with zero emissions.",
+                "end_year": "",
+                "experiment": "Extension of `esm-flat10` with zero emissions.",
+                "experiment_id": "esm-flat10-zec",
+                "min_number_yrs_per_sim": 100,
+                "parent_activity_id": [
+                    "C4MIP"
+                ],
+                "parent_experiment_id": [
+                    "esm-flat10"
+                ],
+                "start_year": "",
+                "tier": 1
+            },
             "esm-hist": {
                 "activity_id": [
                     "CMIP"
