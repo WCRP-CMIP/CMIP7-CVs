@@ -10,9 +10,9 @@
             "AerChemMIP": "Aerosols and chemistry model intercomparison project: exploration of aerosol chemistry.",
             "C4MIP": "Coupled climate carbon cycle model intercomparison project: exploration of the response of the coupled carbon-climate system.",
             "CFMIP": "Cloud feedback model intercomparison project. Focussed primarily on cloud feedbacks with a secondary focus on understanding of response to forcing, model biases, circulation, regional-scale precipitation, and non-linear changes.",
-            "CMIP": "CMIP core common experiments i.e. the DECK (Diagnostic, Evaluation and Characterization of Klima)",
+            "CMIP": "CMIP core common experiments i.e. the DECK (Diagnostic, Evaluation and Characterization of Klima).",
             "RFMIP": " Radiative Forcing Model Intercomparison Project: characterisation of radiative forcing within models.",
-            "ScenarioMIP": "Future scenario experiments. Exploration of the future climate under a (selected) range of possible boundary conditions"
+            "ScenarioMIP": "Future scenario experiments. Exploration of the future climate under a (selected) range of possible boundary conditions."
         },
         "area_label": {
             "air": "Data is only included where the reporting point is in air (this isn't always the case e.g. if a variable is reported at sea level pressure but there is a mountain then the surface would not be air).",
