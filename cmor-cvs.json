@@ -13,6 +13,7 @@
             "CMIP": "CMIP core common experiments i.e. the DECK (Diagnostic, Evaluation and Characterization of Klima).",
             "DAMIP": "Detection and attribution model intercomparison project: exploration of the role of individual forcings (both anthropogenic and natural) in past and future climate change.",
             "GeoMIP": "Geoengineering model intercomparison project: exploration of the climate response to solar radiation manipulation.",
+            "LMIP": "Land surface, snow and soil moisture model intercomparison project: assessment of land surface, snow and soil moisture feedbacks on climate variability and climate change, and diagnosis of systematic biases in the land modules of Earth system models (ESMs)",
             "RFMIP": " Radiative Forcing Model Intercomparison Project: characterisation of radiative forcing within models.",
             "ScenarioMIP": "Future scenario experiments. Exploration of the future climate under a (selected) range of possible boundary conditions."
         },
@@ -718,6 +719,20 @@
                 "parent_experiment_id": [
                     "piControl"
                 ],
+                "start_year": 1850,
+                "tier": 1
+            },
+            "land-hist": {
+                "activity_id": [
+                    "LMIP"
+                ],
+                "description": "Land-only version of `historical`.",
+                "end_year": 2021,
+                "experiment": "Land-only version of `historical`.",
+                "experiment_id": "land-hist",
+                "min_number_yrs_per_sim": 172,
+                "parent_activity_id": [],
+                "parent_experiment_id": [],
                 "start_year": 1850,
                 "tier": 1
             },
