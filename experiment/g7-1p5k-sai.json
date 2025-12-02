@@ -1,0 +1,15 @@
+{
+    "@context": "000_context.jsonld",
+    "id": "g7-1p5k-sai",
+    "type": "experiment",
+    "description": "After following the `scen7-m` scenario until 2035, stablisation of global-mean temperature at 1.5C by holding stratospheric sulfur forcing constant (at whatever level is required to achieve stable temperatures).",
+    "start_timestamp": "2035-01-01",
+    "end_timestamp": null,
+    "min_number_yrs_per_sim": 50.0,
+    "branch_information": "Branch from the `scen7-m` simulation at the start of 2035.",
+    "min_ensemble_size": 1,
+    "parent_activity": "scenariomip",
+    "parent_experiment": "scen7-m",
+    "parent_mip_era": "cmip7",
+    "tier": 1
+}
