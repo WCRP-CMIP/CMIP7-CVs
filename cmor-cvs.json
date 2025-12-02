@@ -234,7 +234,7 @@
                     "CMIP"
                 ],
                 "parent_experiment_id": [
-                    "piControl"
+                    "esm-piControl"
                 ],
                 "start_year": "",
                 "tier": 1
