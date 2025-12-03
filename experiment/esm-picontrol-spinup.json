@@ -1,5 +1,8 @@
 {
     "@context": "000_context.jsonld",
     "id": "esm-picontrol-spinup",
-    "type": "experiment"
+    "type": "experiment",
+    "min_number_yrs_per_sim": null,
+    "parent_mip_era": null,
+    "tier": 3
 }

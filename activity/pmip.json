@@ -1,0 +1,12 @@
+{
+    "@context": "000_context.jsonld",
+    "id": "pmip",
+    "type": "activity",
+    "experiments": [
+        "abrupt-127k"
+    ],
+    "urls": [
+        "https://doi.org/10.5194/cp-19-883-2023",
+        "https://doi.org/10.5194/gmd-10-3979-2017"
+    ]
+}
