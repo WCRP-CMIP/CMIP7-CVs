@@ -8,6 +8,7 @@
         },
         "activity_id": {
             "C4MIP": "Coupled climate carbon cycle model intercomparison project: exploration of the response of the coupled carbon-climate system.",
+            "CFMIP": "Cloud feedback model intercomparison project. Focussed primarily on cloud feedbacks with a secondary focus on understanding of response to forcing, model biases, circulation, regional-scale precipitation, and non-linear changes.",
             "CMIP": "CMIP core common experiments i.e. the DECK (Diagnostic, Evaluation and Characterization of Klima)",
             "ScenarioMIP": "Future scenario experiments. Exploration of the future climate under a (selected) range of possible boundary conditions"
         },
@@ -93,6 +94,60 @@
                 "experiment": "Radiatively coupled simulation (i.e. the carbon cycle only 'sees' the increase in temperature, not any change in atmospheric carbon dioxide) of a 1% per year increase in atmospheric carbon dioxide levels. All other conditions are kept the same as piControl.",
                 "experiment_id": "1pctCO2-rad",
                 "min_number_yrs_per_sim": 150,
+                "parent_activity_id": [
+                    "CMIP"
+                ],
+                "parent_experiment_id": [
+                    "piControl"
+                ],
+                "start_year": "",
+                "tier": 1
+            },
+            "abrupt-0p5xCO2": {
+                "activity_id": [
+                    "CFMIP"
+                ],
+                "description": "Abrupt halving of atmospheric carbon dioxide levels. All other conditions are kept the same as piControl.",
+                "end_year": "",
+                "experiment": "Abrupt halving of atmospheric carbon dioxide levels. All other conditions are kept the same as piControl.",
+                "experiment_id": "abrupt-0p5xCO2",
+                "min_number_yrs_per_sim": 300,
+                "parent_activity_id": [
+                    "CMIP"
+                ],
+                "parent_experiment_id": [
+                    "piControl"
+                ],
+                "start_year": "",
+                "tier": 1
+            },
+            "abrupt-2xCO2": {
+                "activity_id": [
+                    "CFMIP"
+                ],
+                "description": "Abrupt doubling of atmospheric carbon dioxide levels. All other conditions are kept the same as piControl.",
+                "end_year": "",
+                "experiment": "Abrupt doubling of atmospheric carbon dioxide levels. All other conditions are kept the same as piControl.",
+                "experiment_id": "abrupt-2xCO2",
+                "min_number_yrs_per_sim": 300,
+                "parent_activity_id": [
+                    "CMIP"
+                ],
+                "parent_experiment_id": [
+                    "piControl"
+                ],
+                "start_year": "",
+                "tier": 1
+            },
+            "abrupt-4xCO2": {
+                "activity_id": [
+                    "CMIP"
+                ],
+                "description": "Abrupt quadrupling of atmospheric carbon dioxide levels. All other conditions are kept the same as piControl.",
+                "end_year": "",
+                "experiment": "Abrupt quadrupling of atmospheric carbon dioxide levels. All other conditions are kept the same as piControl.",
+                "experiment_id": "abrupt-4xCO2",
+                "min_number_yrs_per_sim": 300,
                 "parent_activity_id": [
                     "CMIP"
                 ],
