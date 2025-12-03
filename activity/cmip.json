@@ -1,5 +1,11 @@
 {
     "@context": "000_context.jsonld",
     "id": "cmip",
-    "type": "activity"
+    "type": "activity",
+    "experiments": [
+        "1pctco2"
+    ],
+    "urls": [
+        "https://doi.org/10.5194/gmd-18-6671-2025"
+    ]
 }
