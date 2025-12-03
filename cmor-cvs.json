@@ -1,12 +1,13 @@
 {
     "CV": {
         "DRS": {
-            "directory_path_example": "MIP-DRS7/CMIP7/CMIP/CCCma/CanESM6-MR/esm-hist/r1i1p1f1/glb/mon/tas/tavg-h2m-hxy-u/g99/20251104",
+            "directory_path_example": "MIP-DRS7/CMIP7/CMIP/CCCma/CanESM6-MR/1pctCO2/r1i1p1f1/glb/mon/tas/tavg-h2m-hxy-u/g99/20251104",
             "directory_path_template": "<drs_specs>/<mip_era>/<activity_id>/<institution_id>/<source_id>/<experiment_id>/<variant_label>/<region>/<frequency>/<variable_id>/<branding_suffix>/<grid_label>/<version>",
-            "filename_path_example": "tas_tavg-h2m-hxy-u_mon_glb_g99_CanESM6-MR_esm-hist_r1i1p1f1_185001-202112.nc",
+            "filename_path_example": "tas_tavg-h2m-hxy-u_mon_glb_g99_CanESM6-MR_1pctCO2_r1i1p1f1_185001-202112.nc",
             "filename_path_template": "<variable_id>_<branding_suffix>_<frequency>_<region>_<grid_label>_<source_id>_<experiment_id>_<variant_label>[_<timeRange>].nc"
         },
         "activity_id": {
+            "C4MIP": "Coupled climate carbon cycle model intercomparison project: exploration of the response of the coupled carbon-climate system.",
             "CMIP": "CMIP core common experiments i.e. the DECK (Diagnostic, Evaluation and Characterization of Klima)",
             "ScenarioMIP": "Future scenario experiments. Exploration of the future climate under a (selected) range of possible boundary conditions"
         },
@@ -47,6 +48,60 @@
             "MIP-DRS7": "Data reference syntax (DRS) initially designed for use with CMIP7"
         },
         "experiment_id": {
+            "1pctCO2": {
+                "activity_id": [
+                    "CMIP"
+                ],
+                "description": "1% per year increase in atmospheric carbon dioxide levels. All other conditions are kept the same as piControl.",
+                "end_year": "",
+                "experiment": "1% per year increase in atmospheric carbon dioxide levels. All other conditions are kept the same as piControl.",
+                "experiment_id": "1pctCO2",
+                "min_number_yrs_per_sim": 150,
+                "parent_activity_id": [
+                    "CMIP"
+                ],
+                "parent_experiment_id": [
+                    "piControl"
+                ],
+                "start_year": "",
+                "tier": 1
+            },
+            "1pctCO2-bgc": {
+                "activity_id": [
+                    "C4MIP"
+                ],
+                "description": "Biogeochemically coupled simulation (i.e. the carbon cycle only 'sees' the increase in atmospheric carbon dioxide, not any change in temperature) of a 1% per year increase in atmospheric carbon dioxide levels. All other conditions are kept the same as piControl.",
+                "end_year": "",
+                "experiment": "Biogeochemically coupled simulation (i.e. the carbon cycle only 'sees' the increase in atmospheric carbon dioxide, not any change in temperature) of a 1% per year increase in atmospheric carbon dioxide levels. All other conditions are kept the same as piControl.",
+                "experiment_id": "1pctCO2-bgc",
+                "min_number_yrs_per_sim": 150,
+                "parent_activity_id": [
+                    "CMIP"
+                ],
+                "parent_experiment_id": [
+                    "piControl"
+                ],
+                "start_year": "",
+                "tier": 1
+            },
+            "1pctCO2-rad": {
+                "activity_id": [
+                    "C4MIP"
+                ],
+                "description": "Radiatively coupled simulation (i.e. the carbon cycle only 'sees' the increase in temperature, not any change in atmospheric carbon dioxide) of a 1% per year increase in atmospheric carbon dioxide levels. All other conditions are kept the same as piControl.",
+                "end_year": "",
+                "experiment": "Radiatively coupled simulation (i.e. the carbon cycle only 'sees' the increase in temperature, not any change in atmospheric carbon dioxide) of a 1% per year increase in atmospheric carbon dioxide levels. All other conditions are kept the same as piControl.",
+                "experiment_id": "1pctCO2-rad",
+                "min_number_yrs_per_sim": 150,
+                "parent_activity_id": [
+                    "CMIP"
+                ],
+                "parent_experiment_id": [
+                    "piControl"
+                ],
+                "start_year": "",
+                "tier": 1
+            },
             "esm-hist": {
                 "activity_id": [
                     "CMIP"
