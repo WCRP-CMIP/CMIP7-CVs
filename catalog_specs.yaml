@@ -10,7 +10,9 @@ catalog_properties:
       version: v1.2.0
 
 dataset_properties:
-  - source_collection: activity_id
+  - source_collection: activity
+    source_collection_key: id
+    catalog_field_name: activity_id
     catalog_field_value_type: string_array
     is_required: true
 
@@ -35,8 +37,11 @@ dataset_properties:
     catalog_field_value_type: string
     is_required: false
 
-  - source_collection: experiment_id
+  - source_collection: experiment
+    source_collection_key: id
+    catalog_field_name: experiment_id
     catalog_field_value_type: string
+
     is_required: true
 
   - source_collection: forcing_index
