@@ -1,0 +1,11 @@
+{
+    "@context": "000_context.jsonld",
+    "id": "geomip",
+    "type": "activity",
+    "experiments": [
+        "g7-1p5k-sai"
+    ],
+    "urls": [
+        "https://doi.org/10.5194/gmd-17-2583-2024"
+    ]
+}

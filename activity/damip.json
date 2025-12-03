@@ -1,0 +1,13 @@
+{
+    "@context": "000_context.jsonld",
+    "id": "damip",
+    "type": "activity",
+    "experiments": [
+        "hist-aer",
+        "hist-ghg",
+        "hist-nat"
+    ],
+    "urls": [
+        "https://doi.org/10.5194/gmd-18-4399-2025"
+    ]
+}
