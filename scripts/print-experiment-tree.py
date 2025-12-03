@@ -1,11 +1,10 @@
 import esgvoc.api as ev
-from attrs import define
+from pydantic import BaseModel
 from rich import print
 from rich.tree import Tree
 
 
-@define
-class Node:
+class Node(BaseModel):
     drs_name: str
     children: list["Node"]
     is_root: bool
@@ -25,8 +24,8 @@ def main():
     for experiment in experiments:
         if experiment.id not in experiment_d:
             experiment_d[experiment.id] = Node(
-                experiment.drs_name,
-                [],
+                drs_name=experiment.drs_name,
+                children=[],
                 is_root=False,
             )
 
@@ -37,7 +36,9 @@ def main():
         if experiment.parent_experiment:
             if experiment.parent_experiment.id not in experiment_d:
                 experiment_d[experiment.parent_experiment.id] = Node(
-                    experiment.parent_experiment.drs_name, [], False
+                    drs_name=experiment.parent_experiment.drs_name,
+                    children=[],
+                    is_root=False,
                 )
 
             experiment_d[experiment.parent_experiment.id].children.append(
