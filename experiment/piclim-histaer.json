@@ -1,0 +1,9 @@
+{
+    "@context": "000_context.jsonld",
+    "id": "piclim-histaer",
+    "type": "experiment",
+    "start_timestamp": "1850-01-01",
+    "end_timestamp": "2100-12-31",
+    "min_number_yrs_per_sim": 251.0,
+    "tier": 1
+}
