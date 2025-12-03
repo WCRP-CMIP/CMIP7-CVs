@@ -2,14 +2,9 @@
     "@context": "000_context.jsonld",
     "id": "esm-scen7-ln",
     "type": "experiment",
-    "description": "PLACEHOLDER TBC. CMIP7 ScenarioMIP Low followed by negative (steep reductions begin in 2040, negative from TBD) emissions future. Run with prescribed emissions of CO2 (for runs with prescribed concentrations of CO2, see the `scen7-` experiments).",
-    "branch_information": "Branch from esm-hist at 2022-01-01.",
-    "end_timestamp": "2100-01-01",
-    "min_ensemble_size": 1,
-    "min_number_yrs_per_sim": 78,
-    "parent_activity": "cmip",
-    "parent_experiment": "esm-hist",
-    "parent_mip_era": "cmip7",
     "start_timestamp": "2022-01-01",
-    "tier": 0
+    "end_timestamp": "2100-12-31",
+    "min_number_yrs_per_sim": 79.0,
+    "parent_mip_era": "cmip7",
+    "tier": 1
 }
