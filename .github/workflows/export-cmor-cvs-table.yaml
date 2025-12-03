@@ -26,7 +26,7 @@ jobs:
           ESGVOC_REVISION: "5145b8f6d8b1859c663e63fb7b0bad952e8bc7b5"
           # Modify these as needed
           UNIVERSE_CVS_FORK: "znichollscr"
-          UNIVERSE_CVS_BRANCH: "add-amip-experiments"
+          UNIVERSE_CVS_BRANCH: "add-lmip-entires"
           CMIP7_CVS_FORK: ${{ github.event.pull_request.head.repo.owner.login }}
           CMIP7_CVS_BRANCH: ${{ github.head_ref || github.ref_name }}
         run: |
