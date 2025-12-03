@@ -10,13 +10,13 @@ catalog_properties:
       version: v1.2.0
 
 dataset_properties:
-   - source_collection: activity_id
-     catalog_field_value_type: string_array
-     is_required: true
+  - source_collection: activity_id
+    catalog_field_value_type: string_array
+    is_required: true
 
-   - source_collection: area_label
-     catalog_field_value_type: string
-     is_required: true
+  - source_collection: area_label
+    catalog_field_value_type: string
+    is_required: true
 
   - source_collection: conventions
     catalog_field_value_type: string_array
@@ -27,8 +27,8 @@ dataset_properties:
     is_required: true
 
   - source_collection: drs_specs
-   catalog_field_value_type: string
-   is_required: true
+    catalog_field_value_type: string
+    is_required: true
 
   - source_collection: null
     catalog_field_name: experiment
