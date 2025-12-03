@@ -9,7 +9,9 @@
         "activity_id": {
             "C4MIP": "Coupled climate carbon cycle model intercomparison project: exploration of the response of the coupled carbon-climate system.",
             "CFMIP": "Cloud feedback model intercomparison project. Focussed primarily on cloud feedbacks with a secondary focus on understanding of response to forcing, model biases, circulation, regional-scale precipitation, and non-linear changes.",
-            "CMIP": "CMIP core common experiments i.e. the DECK (Diagnostic, Evaluation and Characterization of Klima)",
+            "CMIP": "CMIP core common experiments i.e. the DECK (Diagnostic, Evaluation and Characterization of Klima).",
+            "DAMIP": "Detection and attribution model intercomparison project: exploration of the role of individual forcings (both anthropogenic and natural) in past and future climate change.",
+            "PMIP": "Palaeoclimate modelling intercomparison project: assessment of paleoclimate i.e. climate thousands of years or more in the past.",
             "ScenarioMIP": "Future scenario experiments. Exploration of the future climate under a (selected) range of possible boundary conditions"
         },
         "area_label": {
@@ -121,6 +123,24 @@
                 "start_year": "",
                 "tier": 1
             },
+            "abrupt-127k": {
+                "activity_id": [
+                    "PMIP"
+                ],
+                "description": "Simulation to examine the response to orbital and greenhouse gas concentration changes associated with the last interglacial (127 000 years before present).",
+                "end_year": "",
+                "experiment": "Simulation to examine the response to orbital and greenhouse gas concentration changes associated with the last interglacial (127 000 years before present).",
+                "experiment_id": "abrupt-127k",
+                "min_number_yrs_per_sim": 100,
+                "parent_activity_id": [
+                    "CMIP"
+                ],
+                "parent_experiment_id": [
+                    "piControl"
+                ],
+                "start_year": "",
+                "tier": 1
+            },
             "abrupt-2xCO2": {
                 "activity_id": [
                     "CFMIP"
@@ -157,13 +177,109 @@
                 "start_year": "",
                 "tier": 1
             },
+            "amip": {
+                "activity_id": [
+                    "CMIP"
+                ],
+                "description": "Simulation of the climate of the recent past with prescribed sea surface temperatures and sea ice concentrations.",
+                "end_year": 2021,
+                "experiment": "Simulation of the climate of the recent past with prescribed sea surface temperatures and sea ice concentrations.",
+                "experiment_id": "amip",
+                "min_number_yrs_per_sim": 43,
+                "parent_activity_id": [],
+                "parent_experiment_id": [],
+                "start_year": 1979,
+                "tier": 1
+            },
+            "amip-p4k": {
+                "activity_id": [
+                    "CFMIP"
+                ],
+                "description": "Same as `amip` simulation, except sea surface temperatures are increased by 4K in ice-free regions.",
+                "end_year": 2021,
+                "experiment": "Same as `amip` simulation, except sea surface temperatures are increased by 4K in ice-free regions.",
+                "experiment_id": "amip-p4k",
+                "min_number_yrs_per_sim": 43,
+                "parent_activity_id": [],
+                "parent_experiment_id": [],
+                "start_year": 1979,
+                "tier": 1
+            },
+            "amip-piForcing": {
+                "activity_id": [
+                    "CFMIP"
+                ],
+                "description": "Same as `amip` simulation, except it starts in 1870 and all forcings are set to pre-industrial levels rather than time-varying forcings.",
+                "end_year": 2021,
+                "experiment": "Same as `amip` simulation, except it starts in 1870 and all forcings are set to pre-industrial levels rather than time-varying forcings.",
+                "experiment_id": "amip-piForcing",
+                "min_number_yrs_per_sim": 152,
+                "parent_activity_id": [],
+                "parent_experiment_id": [],
+                "start_year": 1870,
+                "tier": 1
+            },
+            "esm-flat10": {
+                "activity_id": [
+                    "C4MIP"
+                ],
+                "description": "10 PgC / yr constant carbon dioxide emissions.",
+                "end_year": "",
+                "experiment": "10 PgC / yr constant carbon dioxide emissions.",
+                "experiment_id": "esm-flat10",
+                "min_number_yrs_per_sim": 100,
+                "parent_activity_id": [
+                    "CMIP"
+                ],
+                "parent_experiment_id": [
+                    "esm-piControl"
+                ],
+                "start_year": "",
+                "tier": 1
+            },
+            "esm-flat10-cdr": {
+                "activity_id": [
+                    "C4MIP"
+                ],
+                "description": "Extension of `esm-flat10` where emissions decline linearly to -10 PgC / yr then stay constant until cumulative emissions (including the emissions in `esm-flat10`) reach zero. An extra 20 years is included at the end to allow for calculating averages over different time windows.",
+                "end_year": "",
+                "experiment": "Extension of `esm-flat10` where emissions decline linearly to -10 PgC / yr then stay constant until cumulative emissions (including the emissions in `esm-flat10`) reach zero. An extra 20 years is included at the end to allow for calculating averages over different time windows.",
+                "experiment_id": "esm-flat10-cdr",
+                "min_number_yrs_per_sim": 220,
+                "parent_activity_id": [
+                    "C4MIP"
+                ],
+                "parent_experiment_id": [
+                    "esm-flat10"
+                ],
+                "start_year": "",
+                "tier": 1
+            },
+            "esm-flat10-zec": {
+                "activity_id": [
+                    "C4MIP"
+                ],
+                "description": "Extension of `esm-flat10` with zero emissions.",
+                "end_year": "",
+                "experiment": "Extension of `esm-flat10` with zero emissions.",
+                "experiment_id": "esm-flat10-zec",
+                "min_number_yrs_per_sim": 100,
+                "parent_activity_id": [
+                    "C4MIP"
+                ],
+                "parent_experiment_id": [
+                    "esm-flat10"
+                ],
+                "start_year": "",
+                "tier": 1
+            },
             "esm-hist": {
                 "activity_id": [
                     "CMIP"
                 ],
-                "description": "Simulation of the climate of the recent past (typically meaning 1850 to present-day) with prescribed CO2 emissions (for prescribed CO2 concentration runs, see `historical`)",
+                "description": "Simulation of the climate of the recent past (typically meaning 1850 to present-day) with prescribed carbon dioxide emissions (for prescribed carbon dioxide concentrations, see `historical`).",
                 "end_year": 2021,
-                "experiment": "Simulation of the climate of the recent past (typically meaning 1850 to present-day) with prescribed CO2 emissions (for prescribed CO2 concentration runs, see `historical`)",
+                "experiment": "Simulation of the climate of the recent past (typically meaning 1850 to present-day) with prescribed carbon dioxide emissions (for prescribed carbon dioxide concentrations, see `historical`).",
                 "experiment_id": "esm-hist",
                 "min_number_yrs_per_sim": 172,
                 "parent_activity_id": [
@@ -179,11 +295,11 @@
                 "activity_id": [
                     "CMIP"
                 ],
-                "description": "Pre-industrial control simulation with prescribed CO2 emissions (for pre-industrial control with prescribed CO2 concentrations, see `piControl`). Used to characterise natural variability and unforced behaviour.",
+                "description": "Pre-industrial control simulation with prescribed carbon dioxide emissions (for prescribed carbon dioxide concentrations, see `piControl`). Used to characterise natural variability and unforced behaviour.",
                 "end_year": "",
-                "experiment": "Pre-industrial control simulation with prescribed CO2 emissions (for pre-industrial control with prescribed CO2 concentrations, see `piControl`). Used to characterise natural variability and unforced behaviour.",
+                "experiment": "Pre-industrial control simulation with prescribed carbon dioxide emissions (for prescribed carbon dioxide concentrations, see `piControl`). Used to characterise natural variability and unforced behaviour.",
                 "experiment_id": "esm-piControl",
-                "min_number_yrs_per_sim": 500,
+                "min_number_yrs_per_sim": 400,
                 "parent_activity_id": [
                     "CMIP"
                 ],
@@ -197,15 +313,15 @@
                 "activity_id": [
                     "CMIP"
                 ],
-                "description": "Pre-industrial control spin-up simulation with prescribed CO2 emissions (for spin-up with prescribed CO2 concentrations, see `piControl-spinup`). Used to get the model into a state of approximate radiative equilibrium before starting the piControl simulation.",
+                "description": "Spin-up simulation. Used to get the model into a state of approximate radiative equilibrium before starting the `esm-piControl` simulation.",
                 "end_year": "",
-                "experiment": "Pre-industrial control spin-up simulation with prescribed CO2 emissions (for spin-up with prescribed CO2 concentrations, see `piControl-spinup`). Used to get the model into a state of approximate radiative equilibrium before starting the piControl simulation.",
+                "experiment": "Spin-up simulation. Used to get the model into a state of approximate radiative equilibrium before starting the `esm-piControl` simulation.",
                 "experiment_id": "esm-piControl-spinup",
                 "min_number_yrs_per_sim": "",
                 "parent_activity_id": [],
                 "parent_experiment_id": [],
                 "start_year": "",
-                "tier": 1
+                "tier": 3
             },
             "esm-scen7-h": {
                 "activity_id": [
@@ -459,13 +575,67 @@
                 "start_year": 2100,
                 "tier": 0
             },
+            "hist-GHG": {
+                "activity_id": [
+                    "DAMIP"
+                ],
+                "description": "Response to historical aerosol forcing (with extension using forcings from the `m` scenario simulation). All other conditions are kept the same as piControl.",
+                "end_year": 2035,
+                "experiment": "Response to historical aerosol forcing (with extension using forcings from the `m` scenario simulation). All other conditions are kept the same as piControl.",
+                "experiment_id": "hist-GHG",
+                "min_number_yrs_per_sim": 186,
+                "parent_activity_id": [
+                    "CMIP"
+                ],
+                "parent_experiment_id": [
+                    "piControl"
+                ],
+                "start_year": 1850,
+                "tier": 1
+            },
+            "hist-aer": {
+                "activity_id": [
+                    "DAMIP"
+                ],
+                "description": "Response to historical aerosol forcing (with extension using forcings from the `m` scenario simulation). All other conditions are kept the same as piControl.",
+                "end_year": 2035,
+                "experiment": "Response to historical aerosol forcing (with extension using forcings from the `m` scenario simulation). All other conditions are kept the same as piControl.",
+                "experiment_id": "hist-aer",
+                "min_number_yrs_per_sim": 186,
+                "parent_activity_id": [
+                    "CMIP"
+                ],
+                "parent_experiment_id": [
+                    "piControl"
+                ],
+                "start_year": 1850,
+                "tier": 1
+            },
+            "hist-nat": {
+                "activity_id": [
+                    "DAMIP"
+                ],
+                "description": "Response to historical aerosol forcing (with extension using forcings from the `m` scenario simulation). All other conditions are kept the same as piControl.",
+                "end_year": 2035,
+                "experiment": "Response to historical aerosol forcing (with extension using forcings from the `m` scenario simulation). All other conditions are kept the same as piControl.",
+                "experiment_id": "hist-nat",
+                "min_number_yrs_per_sim": 186,
+                "parent_activity_id": [
+                    "CMIP"
+                ],
+                "parent_experiment_id": [
+                    "piControl"
+                ],
+                "start_year": 1850,
+                "tier": 1
+            },
             "historical": {
                 "activity_id": [
                     "CMIP"
                 ],
-                "description": "Simulation of the climate of the recent past (typically meaning 1850 to present-day)",
+                "description": "Simulation of the climate of the recent past (typically meaning 1850 to present-day) with prescribed carbon dioxide concentrations (for prescribed carbon dioxide emissions, see `esm-hist`).",
                 "end_year": 2021,
-                "experiment": "Simulation of the climate of the recent past (typically meaning 1850 to present-day)",
+                "experiment": "Simulation of the climate of the recent past (typically meaning 1850 to present-day) with prescribed carbon dioxide concentrations (for prescribed carbon dioxide emissions, see `esm-hist`).",
                 "experiment_id": "historical",
                 "min_number_yrs_per_sim": 172,
                 "parent_activity_id": [
@@ -481,11 +651,11 @@
                 "activity_id": [
                     "CMIP"
                 ],
-                "description": "Pre-industrial control simulation. Used to characterise natural variability and unforced behaviour.",
+                "description": "Pre-industrial control simulation with prescribed carbon dioxide concentrations (for prescribed carbon dioxide emissions, see `esm-piControl`). Used to characterise natural variability and unforced behaviour.",
                 "end_year": "",
-                "experiment": "Pre-industrial control simulation. Used to characterise natural variability and unforced behaviour.",
+                "experiment": "Pre-industrial control simulation with prescribed carbon dioxide concentrations (for prescribed carbon dioxide emissions, see `esm-piControl`). Used to characterise natural variability and unforced behaviour.",
                 "experiment_id": "piControl",
-                "min_number_yrs_per_sim": 500,
+                "min_number_yrs_per_sim": 400,
                 "parent_activity_id": [
                     "CMIP"
                 ],
@@ -499,15 +669,15 @@
                 "activity_id": [
                     "CMIP"
                 ],
-                "description": "Pre-industrial control spin-up simulation. Used to get the model into a state of approximate radiative equilibrium before starting the piControl simulation.",
+                "description": "Spin-up simulation. Used to get the model into a state of approximate radiative equilibrium before starting the `piControl` simulation.",
                 "end_year": "",
-                "experiment": "Pre-industrial control spin-up simulation. Used to get the model into a state of approximate radiative equilibrium before starting the piControl simulation.",
+                "experiment": "Spin-up simulation. Used to get the model into a state of approximate radiative equilibrium before starting the `piControl` simulation.",
                 "experiment_id": "piControl-spinup",
                 "min_number_yrs_per_sim": "",
                 "parent_activity_id": [],
                 "parent_experiment_id": [],
                 "start_year": "",
-                "tier": 1
+                "tier": 3
             },
             "scen7-h": {
                 "activity_id": [
