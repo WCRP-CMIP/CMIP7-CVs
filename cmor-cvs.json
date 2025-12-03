@@ -12,8 +12,8 @@
             "CFMIP": "Cloud feedback model intercomparison project. Focussed primarily on cloud feedbacks with a secondary focus on understanding of response to forcing, model biases, circulation, regional-scale precipitation, and non-linear changes.",
             "CMIP": "CMIP core common experiments i.e. the DECK (Diagnostic, Evaluation and Characterization of Klima).",
             "DAMIP": "Detection and attribution model intercomparison project: exploration of the role of individual forcings (both anthropogenic and natural) in past and future climate change.",
+            "GeoMIP": "Geoengineering model intercomparison project: exploration of the climate response to solar radiation manipulation.",
             "PMIP": "Palaeoclimate modelling intercomparison project: assessment of paleoclimate i.e. climate thousands of years or more in the past.",
-            "RFMIP": " Radiative Forcing Model Intercomparison Project: characterisation of radiative forcing within models.",
             "ScenarioMIP": "Future scenario experiments. Exploration of the future climate under a (selected) range of possible boundary conditions."
         },
         "area_label": {
@@ -105,6 +105,24 @@
                     "piControl"
                 ],
                 "start_year": "",
+                "tier": 1
+            },
+            "G7-1p5K-SAI": {
+                "activity_id": [
+                    "GeoMIP"
+                ],
+                "description": "After following the `scen7-m` scenario until 2035, stablisation of global-mean temperature at 1.5C by holding stratospheric sulfur forcing constant (at whatever level is required to achieve stable temperatures).",
+                "end_year": "",
+                "experiment": "After following the `scen7-m` scenario until 2035, stablisation of global-mean temperature at 1.5C by holding stratospheric sulfur forcing constant (at whatever level is required to achieve stable temperatures).",
+                "experiment_id": "G7-1p5K-SAI",
+                "min_number_yrs_per_sim": 50,
+                "parent_activity_id": [
+                    "ScenarioMIP"
+                ],
+                "parent_experiment_id": [
+                    "scen7-m"
+                ],
+                "start_year": 2035,
                 "tier": 1
             },
             "abrupt-0p5xCO2": {
@@ -329,11 +347,11 @@
                 "activity_id": [
                     "ScenarioMIP"
                 ],
-                "description": "PLACEHOLDER TBC. CMIP7 ScenarioMIP High emissions future. Run with prescribed emissions of CO2 (for runs with prescribed concentrations of CO2, see the `scen7-` experiments).",
+                "description": "PLACEHOLDER TBC. CMIP7 ScenarioMIP high emissions future. Run with prescribed carbon dioxide emissions (for prescribed carbon dioxide concentrations, see `scen7-h`).",
                 "end_year": 2100,
-                "experiment": "PLACEHOLDER TBC. CMIP7 ScenarioMIP High emissions future. Run with prescribed emissions of CO2 (for runs with prescribed concentrations of CO2, see the `scen7-` experiments).",
+                "experiment": "PLACEHOLDER TBC. CMIP7 ScenarioMIP high emissions future. Run with prescribed carbon dioxide emissions (for prescribed carbon dioxide concentrations, see `scen7-h`).",
                 "experiment_id": "esm-scen7-h",
-                "min_number_yrs_per_sim": 78,
+                "min_number_yrs_per_sim": 79,
                 "parent_activity_id": [
                     "CMIP"
                 ],
@@ -341,35 +359,35 @@
                     "esm-hist"
                 ],
                 "start_year": 2022,
-                "tier": 0
+                "tier": 1
             },
             "esm-scen7-h-ext": {
                 "activity_id": [
                     "ScenarioMIP"
                 ],
-                "description": "PLACEHOLDER TBC. CMIP7 ScenarioMIP High emissions future. Run with prescribed emissions of CO2 (for runs with prescribed concentrations of CO2, see the `scen7-` experiments). Extension beyond 2100",
-                "end_year": 2300,
-                "experiment": "PLACEHOLDER TBC. CMIP7 ScenarioMIP High emissions future. Run with prescribed emissions of CO2 (for runs with prescribed concentrations of CO2, see the `scen7-` experiments). Extension beyond 2100",
+                "description": "Extension of `esm-scen7-h` beyond 2100.",
+                "end_year": 2500,
+                "experiment": "Extension of `esm-scen7-h` beyond 2100.",
                 "experiment_id": "esm-scen7-h-ext",
-                "min_number_yrs_per_sim": 51,
+                "min_number_yrs_per_sim": 50,
                 "parent_activity_id": [
                     "ScenarioMIP"
                 ],
                 "parent_experiment_id": [
                     "esm-scen7-h"
                 ],
-                "start_year": 2100,
-                "tier": 0
+                "start_year": 2101,
+                "tier": 1
             },
             "esm-scen7-hl": {
                 "activity_id": [
                     "ScenarioMIP"
                 ],
-                "description": "PLACEHOLDER TBC. CMIP7 ScenarioMIP High followed by low (from 2060) emissions future. Run with prescribed emissions of CO2 (for runs with prescribed concentrations of CO2, see the `scen7-` experiments).",
+                "description": "PLACEHOLDER TBC. CMIP7 ScenarioMIP High followed by low (from 2060) emissions future. Run with prescribed carbon dioxide emissions (for prescribed carbon dioxide concentrations, see `scen7-hl`).",
                 "end_year": 2100,
-                "experiment": "PLACEHOLDER TBC. CMIP7 ScenarioMIP High followed by low (from 2060) emissions future. Run with prescribed emissions of CO2 (for runs with prescribed concentrations of CO2, see the `scen7-` experiments).",
+                "experiment": "PLACEHOLDER TBC. CMIP7 ScenarioMIP High followed by low (from 2060) emissions future. Run with prescribed carbon dioxide emissions (for prescribed carbon dioxide concentrations, see `scen7-hl`).",
                 "experiment_id": "esm-scen7-hl",
-                "min_number_yrs_per_sim": 78,
+                "min_number_yrs_per_sim": 79,
                 "parent_activity_id": [
                     "CMIP"
                 ],
@@ -377,35 +395,35 @@
                     "esm-hist"
                 ],
                 "start_year": 2022,
-                "tier": 0
+                "tier": 1
             },
             "esm-scen7-hl-ext": {
                 "activity_id": [
                     "ScenarioMIP"
                 ],
-                "description": "PLACEHOLDER TBC. CMIP7 ScenarioMIP High followed by low (from 2060) emissions future. Run with prescribed emissions of CO2 (for runs with prescribed concentrations of CO2, see the `scen7-` experiments). Extension beyond 2100",
-                "end_year": 2300,
-                "experiment": "PLACEHOLDER TBC. CMIP7 ScenarioMIP High followed by low (from 2060) emissions future. Run with prescribed emissions of CO2 (for runs with prescribed concentrations of CO2, see the `scen7-` experiments). Extension beyond 2100",
+                "description": "Extension of `esm-scen7-hl` beyond 2100.",
+                "end_year": 2500,
+                "experiment": "Extension of `esm-scen7-hl` beyond 2100.",
                 "experiment_id": "esm-scen7-hl-ext",
-                "min_number_yrs_per_sim": 51,
+                "min_number_yrs_per_sim": 50,
                 "parent_activity_id": [
                     "ScenarioMIP"
                 ],
                 "parent_experiment_id": [
                     "esm-scen7-hl"
                 ],
-                "start_year": 2100,
-                "tier": 0
+                "start_year": 2101,
+                "tier": 1
             },
             "esm-scen7-l": {
                 "activity_id": [
                     "ScenarioMIP"
                 ],
-                "description": "PLACEHOLDER TBC. CMIP7 ScenarioMIP Low emissions future. Run with prescribed emissions of CO2 (for runs with prescribed concentrations of CO2, see the `scen7-` experiments).",
+                "description": "PLACEHOLDER TBC. CMIP7 ScenarioMIP low emissions future. Run with prescribed carbon dioxide emissions (for prescribed carbon dioxide concentrations, see `scen7-l`).",
                 "end_year": 2100,
-                "experiment": "PLACEHOLDER TBC. CMIP7 ScenarioMIP Low emissions future. Run with prescribed emissions of CO2 (for runs with prescribed concentrations of CO2, see the `scen7-` experiments).",
+                "experiment": "PLACEHOLDER TBC. CMIP7 ScenarioMIP low emissions future. Run with prescribed carbon dioxide emissions (for prescribed carbon dioxide concentrations, see `scen7-l`).",
                 "experiment_id": "esm-scen7-l",
-                "min_number_yrs_per_sim": 78,
+                "min_number_yrs_per_sim": 79,
                 "parent_activity_id": [
                     "CMIP"
                 ],
@@ -413,35 +431,35 @@
                     "esm-hist"
                 ],
                 "start_year": 2022,
-                "tier": 0
+                "tier": 1
             },
             "esm-scen7-l-ext": {
                 "activity_id": [
                     "ScenarioMIP"
                 ],
-                "description": "PLACEHOLDER TBC. CMIP7 ScenarioMIP Low emissions future. Run with prescribed emissions of CO2 (for runs with prescribed concentrations of CO2, see the `scen7-` experiments). Extension beyond 2100",
-                "end_year": 2300,
-                "experiment": "PLACEHOLDER TBC. CMIP7 ScenarioMIP Low emissions future. Run with prescribed emissions of CO2 (for runs with prescribed concentrations of CO2, see the `scen7-` experiments). Extension beyond 2100",
+                "description": "Extension of `esm-scen7-l` beyond 2100.",
+                "end_year": 2500,
+                "experiment": "Extension of `esm-scen7-l` beyond 2100.",
                 "experiment_id": "esm-scen7-l-ext",
-                "min_number_yrs_per_sim": 51,
+                "min_number_yrs_per_sim": 50,
                 "parent_activity_id": [
                     "ScenarioMIP"
                 ],
                 "parent_experiment_id": [
                     "esm-scen7-l"
                 ],
-                "start_year": 2100,
-                "tier": 0
+                "start_year": 2101,
+                "tier": 1
             },
             "esm-scen7-ln": {
                 "activity_id": [
                     "ScenarioMIP"
                 ],
-                "description": "PLACEHOLDER TBC. CMIP7 ScenarioMIP Low followed by negative (steep reductions begin in 2040, negative from TBD) emissions future. Run with prescribed emissions of CO2 (for runs with prescribed concentrations of CO2, see the `scen7-` experiments).",
+                "description": "PLACEHOLDER TBC. CMIP7 ScenarioMIP low followed by negative (steep reductions begin in 2040, negative from TBD) emissions future. Run with prescribed carbon dioxide emissions (for prescribed carbon dioxide concentrations, see `scen7-ln`).",
                 "end_year": 2100,
-                "experiment": "PLACEHOLDER TBC. CMIP7 ScenarioMIP Low followed by negative (steep reductions begin in 2040, negative from TBD) emissions future. Run with prescribed emissions of CO2 (for runs with prescribed concentrations of CO2, see the `scen7-` experiments).",
+                "experiment": "PLACEHOLDER TBC. CMIP7 ScenarioMIP low followed by negative (steep reductions begin in 2040, negative from TBD) emissions future. Run with prescribed carbon dioxide emissions (for prescribed carbon dioxide concentrations, see `scen7-ln`).",
                 "experiment_id": "esm-scen7-ln",
-                "min_number_yrs_per_sim": 78,
+                "min_number_yrs_per_sim": 79,
                 "parent_activity_id": [
                     "CMIP"
                 ],
@@ -449,35 +467,35 @@
                     "esm-hist"
                 ],
                 "start_year": 2022,
-                "tier": 0
+                "tier": 1
             },
             "esm-scen7-ln-ext": {
                 "activity_id": [
                     "ScenarioMIP"
                 ],
-                "description": "PLACEHOLDER TBC. CMIP7 ScenarioMIP Low followed by negative (steep reductions begin in 2040, negative from TBD) emissions future. Run with prescribed emissions of CO2 (for runs with prescribed concentrations of CO2, see the `scen7-` experiments). Extension beyond 2100",
-                "end_year": 2300,
-                "experiment": "PLACEHOLDER TBC. CMIP7 ScenarioMIP Low followed by negative (steep reductions begin in 2040, negative from TBD) emissions future. Run with prescribed emissions of CO2 (for runs with prescribed concentrations of CO2, see the `scen7-` experiments). Extension beyond 2100",
+                "description": "Extension of `esm-scen7-ln` beyond 2100.",
+                "end_year": 2500,
+                "experiment": "Extension of `esm-scen7-ln` beyond 2100.",
                 "experiment_id": "esm-scen7-ln-ext",
-                "min_number_yrs_per_sim": 51,
+                "min_number_yrs_per_sim": 50,
                 "parent_activity_id": [
                     "ScenarioMIP"
                 ],
                 "parent_experiment_id": [
                     "esm-scen7-ln"
                 ],
-                "start_year": 2100,
-                "tier": 0
+                "start_year": 2101,
+                "tier": 1
             },
             "esm-scen7-m": {
                 "activity_id": [
                     "ScenarioMIP"
                 ],
-                "description": "PLACEHOLDER TBC. CMIP7 ScenarioMIP Medium emissions future. Run with prescribed emissions of CO2 (for runs with prescribed concentrations of CO2, see the `scen7-` experiments).",
+                "description": "PLACEHOLDER TBC. CMIP7 ScenarioMIP medium emissions future. Run with prescribed carbon dioxide emissions (for prescribed carbon dioxide concentrations, see `scen7-m`).",
                 "end_year": 2100,
-                "experiment": "PLACEHOLDER TBC. CMIP7 ScenarioMIP Medium emissions future. Run with prescribed emissions of CO2 (for runs with prescribed concentrations of CO2, see the `scen7-` experiments).",
+                "experiment": "PLACEHOLDER TBC. CMIP7 ScenarioMIP medium emissions future. Run with prescribed carbon dioxide emissions (for prescribed carbon dioxide concentrations, see `scen7-m`).",
                 "experiment_id": "esm-scen7-m",
-                "min_number_yrs_per_sim": 78,
+                "min_number_yrs_per_sim": 79,
                 "parent_activity_id": [
                     "CMIP"
                 ],
@@ -485,35 +503,35 @@
                     "esm-hist"
                 ],
                 "start_year": 2022,
-                "tier": 0
+                "tier": 1
             },
             "esm-scen7-m-ext": {
                 "activity_id": [
                     "ScenarioMIP"
                 ],
-                "description": "PLACEHOLDER TBC. CMIP7 ScenarioMIP Medium emissions future. Run with prescribed emissions of CO2 (for runs with prescribed concentrations of CO2, see the `scen7-` experiments). Extension beyond 2100",
-                "end_year": 2300,
-                "experiment": "PLACEHOLDER TBC. CMIP7 ScenarioMIP Medium emissions future. Run with prescribed emissions of CO2 (for runs with prescribed concentrations of CO2, see the `scen7-` experiments). Extension beyond 2100",
+                "description": "Extension of `esm-scen7-m` beyond 2100.",
+                "end_year": 2500,
+                "experiment": "Extension of `esm-scen7-m` beyond 2100.",
                 "experiment_id": "esm-scen7-m-ext",
-                "min_number_yrs_per_sim": 51,
+                "min_number_yrs_per_sim": 50,
                 "parent_activity_id": [
                     "ScenarioMIP"
                 ],
                 "parent_experiment_id": [
                     "esm-scen7-m"
                 ],
-                "start_year": 2100,
-                "tier": 0
+                "start_year": 2101,
+                "tier": 1
             },
             "esm-scen7-ml": {
                 "activity_id": [
                     "ScenarioMIP"
                 ],
-                "description": "PLACEHOLDER TBC. CMIP7 ScenarioMIP Medium followed by low (from 2040) emissions future. Run with prescribed emissions of CO2 (for runs with prescribed concentrations of CO2, see the `scen7-` experiments).",
+                "description": "PLACEHOLDER TBC. CMIP7 ScenarioMIP medium followed by low (from 2040) emissions future. Run with prescribed carbon dioxide emissions (for prescribed carbon dioxide concentrations, see `scen7-ml`).",
                 "end_year": 2100,
-                "experiment": "PLACEHOLDER TBC. CMIP7 ScenarioMIP Medium followed by low (from 2040) emissions future. Run with prescribed emissions of CO2 (for runs with prescribed concentrations of CO2, see the `scen7-` experiments).",
+                "experiment": "PLACEHOLDER TBC. CMIP7 ScenarioMIP medium followed by low (from 2040) emissions future. Run with prescribed carbon dioxide emissions (for prescribed carbon dioxide concentrations, see `scen7-ml`).",
                 "experiment_id": "esm-scen7-ml",
-                "min_number_yrs_per_sim": 78,
+                "min_number_yrs_per_sim": 79,
                 "parent_activity_id": [
                     "CMIP"
                 ],
@@ -521,35 +539,35 @@
                     "esm-hist"
                 ],
                 "start_year": 2022,
-                "tier": 0
+                "tier": 1
             },
             "esm-scen7-ml-ext": {
                 "activity_id": [
                     "ScenarioMIP"
                 ],
-                "description": "PLACEHOLDER TBC. CMIP7 ScenarioMIP Medium followed by low (from 2040) emissions future. Run with prescribed emissions of CO2 (for runs with prescribed concentrations of CO2, see the `scen7-` experiments). Extension beyond 2100",
-                "end_year": 2300,
-                "experiment": "PLACEHOLDER TBC. CMIP7 ScenarioMIP Medium followed by low (from 2040) emissions future. Run with prescribed emissions of CO2 (for runs with prescribed concentrations of CO2, see the `scen7-` experiments). Extension beyond 2100",
+                "description": "Extension of `esm-scen7-ml` beyond 2100.",
+                "end_year": 2500,
+                "experiment": "Extension of `esm-scen7-ml` beyond 2100.",
                 "experiment_id": "esm-scen7-ml-ext",
-                "min_number_yrs_per_sim": 51,
+                "min_number_yrs_per_sim": 50,
                 "parent_activity_id": [
                     "ScenarioMIP"
                 ],
                 "parent_experiment_id": [
                     "esm-scen7-ml"
                 ],
-                "start_year": 2100,
-                "tier": 0
+                "start_year": 2101,
+                "tier": 1
             },
             "esm-scen7-vl": {
                 "activity_id": [
                     "ScenarioMIP"
                 ],
-                "description": "PLACEHOLDER TBC. CMIP7 ScenarioMIP Very low emissions future. Run with prescribed emissions of CO2 (for runs with prescribed concentrations of CO2, see the `scen7-` experiments).",
+                "description": "PLACEHOLDER TBC. CMIP7 ScenarioMIP very low emissions future. Run with prescribed carbon dioxide emissions (for prescribed carbon dioxide concentrations, see `scen7-vl`).",
                 "end_year": 2100,
-                "experiment": "PLACEHOLDER TBC. CMIP7 ScenarioMIP Very low emissions future. Run with prescribed emissions of CO2 (for runs with prescribed concentrations of CO2, see the `scen7-` experiments).",
+                "experiment": "PLACEHOLDER TBC. CMIP7 ScenarioMIP very low emissions future. Run with prescribed carbon dioxide emissions (for prescribed carbon dioxide concentrations, see `scen7-vl`).",
                 "experiment_id": "esm-scen7-vl",
-                "min_number_yrs_per_sim": 78,
+                "min_number_yrs_per_sim": 79,
                 "parent_activity_id": [
                     "CMIP"
                 ],
@@ -557,25 +575,25 @@
                     "esm-hist"
                 ],
                 "start_year": 2022,
-                "tier": 0
+                "tier": 1
             },
             "esm-scen7-vl-ext": {
                 "activity_id": [
                     "ScenarioMIP"
                 ],
-                "description": "PLACEHOLDER TBC. CMIP7 ScenarioMIP Very low emissions future. Run with prescribed emissions of CO2 (for runs with prescribed concentrations of CO2, see the `scen7-` experiments). Extension beyond 2100",
-                "end_year": 2300,
-                "experiment": "PLACEHOLDER TBC. CMIP7 ScenarioMIP Very low emissions future. Run with prescribed emissions of CO2 (for runs with prescribed concentrations of CO2, see the `scen7-` experiments). Extension beyond 2100",
+                "description": "Extension of `esm-scen7-vl` beyond 2100.",
+                "end_year": 2500,
+                "experiment": "Extension of `esm-scen7-vl` beyond 2100.",
                 "experiment_id": "esm-scen7-vl-ext",
-                "min_number_yrs_per_sim": 51,
+                "min_number_yrs_per_sim": 50,
                 "parent_activity_id": [
                     "ScenarioMIP"
                 ],
                 "parent_experiment_id": [
                     "esm-scen7-vl"
                 ],
-                "start_year": 2100,
-                "tier": 0
+                "start_year": 2101,
+                "tier": 1
             },
             "hist-GHG": {
                 "activity_id": [
@@ -649,160 +667,6 @@
                 "start_year": 1850,
                 "tier": 1
             },
-            "piClim-4xCO2": {
-                "activity_id": [
-                    "CMIP"
-                ],
-                "description": "In combination with `piClim-control`, quantifies a quadrupling of atmospheric carbon dioxide's (4xCO2's) effective radiative forcing (ERF). Same as `piClim-control`, except atmospheric carbon dioxide concentrations are set to four times `piControl` levels.",
-                "end_year": "",
-                "experiment": "In combination with `piClim-control`, quantifies a quadrupling of atmospheric carbon dioxide's (4xCO2's) effective radiative forcing (ERF). Same as `piClim-control`, except atmospheric carbon dioxide concentrations are set to four times `piControl` levels.",
-                "experiment_id": "piClim-4xCO2",
-                "min_number_yrs_per_sim": 30,
-                "parent_activity_id": [],
-                "parent_experiment_id": [],
-                "start_year": "",
-                "tier": 1
-            },
-            "piClim-CH4": {
-                "activity_id": [
-                    "AerChemMIP"
-                ],
-                "description": "In combination with `piClim-control`, quantifies present-day methane effective radiative forcing (ERF). Same as `piClim-control`, except methane atmospheric forcing use present-day values (typically the last year of the `historical` simulation within the same CMIP era e.g. 2014 values for CMIP6, 2021 values for CMIP7).",
-                "end_year": "",
-                "experiment": "In combination with `piClim-control`, quantifies present-day methane effective radiative forcing (ERF). Same as `piClim-control`, except methane atmospheric forcing use present-day values (typically the last year of the `historical` simulation within the same CMIP era e.g. 2014 values for CMIP6, 2021 values for CMIP7).",
-                "experiment_id": "piClim-CH4",
-                "min_number_yrs_per_sim": 30,
-                "parent_activity_id": [],
-                "parent_experiment_id": [],
-                "start_year": "",
-                "tier": 1
-            },
-            "piClim-N2O": {
-                "activity_id": [
-                    "AerChemMIP"
-                ],
-                "description": "In combination with `piClim-control`, quantifies present-day nitrous oxide effective radiative forcing (ERF). Same as `piClim-control`, except nitrous oxide atmospheric forcing use present-day values (typically the last year of the `historical` simulation within the same CMIP era e.g. 2014 values for CMIP6, 2021 values for CMIP7).",
-                "end_year": "",
-                "experiment": "In combination with `piClim-control`, quantifies present-day nitrous oxide effective radiative forcing (ERF). Same as `piClim-control`, except nitrous oxide atmospheric forcing use present-day values (typically the last year of the `historical` simulation within the same CMIP era e.g. 2014 values for CMIP6, 2021 values for CMIP7).",
-                "experiment_id": "piClim-N2O",
-                "min_number_yrs_per_sim": 30,
-                "parent_activity_id": [],
-                "parent_experiment_id": [],
-                "start_year": "",
-                "tier": 1
-            },
-            "piClim-NOx": {
-                "activity_id": [
-                    "AerChemMIP"
-                ],
-                "description": "In combination with `piClim-control`, quantifies present-day nitrous oxide (NOx) effective radiative forcing (ERF). Same as `piClim-control`, except nitrous oxide (NOx) emissions use present-day values (typically the last year of the `historical` simulation within the same CMIP era e.g. 2014 values for CMIP6, 2021 values for CMIP7).",
-                "end_year": "",
-                "experiment": "In combination with `piClim-control`, quantifies present-day nitrous oxide (NOx) effective radiative forcing (ERF). Same as `piClim-control`, except nitrous oxide (NOx) emissions use present-day values (typically the last year of the `historical` simulation within the same CMIP era e.g. 2014 values for CMIP6, 2021 values for CMIP7).",
-                "experiment_id": "piClim-NOx",
-                "min_number_yrs_per_sim": 30,
-                "parent_activity_id": [],
-                "parent_experiment_id": [],
-                "start_year": "",
-                "tier": 1
-            },
-            "piClim-ODS": {
-                "activity_id": [
-                    "AerChemMIP"
-                ],
-                "description": "In combination with `piClim-control`, quantifies present-day ozone-depleting substances' effective radiative forcing (ERF). Same as `piClim-control`, except ozone-depleting substance atmospheric forcing use present-day values (typically the last year of the `historical` simulation within the same CMIP era e.g. 2014 values for CMIP6, 2021 values for CMIP7).",
-                "end_year": "",
-                "experiment": "In combination with `piClim-control`, quantifies present-day ozone-depleting substances' effective radiative forcing (ERF). Same as `piClim-control`, except ozone-depleting substance atmospheric forcing use present-day values (typically the last year of the `historical` simulation within the same CMIP era e.g. 2014 values for CMIP6, 2021 values for CMIP7).",
-                "experiment_id": "piClim-ODS",
-                "min_number_yrs_per_sim": 30,
-                "parent_activity_id": [],
-                "parent_experiment_id": [],
-                "start_year": "",
-                "tier": 1
-            },
-            "piClim-SO2": {
-                "activity_id": [
-                    "AerChemMIP"
-                ],
-                "description": "In combination with `piClim-control`, quantifies present-day sulfur (dioxide) effective radiative forcing (ERF). Same as `piClim-control`, except sulfur emissions use present-day values (typically the last year of the `historical` simulation within the same CMIP era e.g. 2014 values for CMIP6, 2021 values for CMIP7).",
-                "end_year": "",
-                "experiment": "In combination with `piClim-control`, quantifies present-day sulfur (dioxide) effective radiative forcing (ERF). Same as `piClim-control`, except sulfur emissions use present-day values (typically the last year of the `historical` simulation within the same CMIP era e.g. 2014 values for CMIP6, 2021 values for CMIP7).",
-                "experiment_id": "piClim-SO2",
-                "min_number_yrs_per_sim": 30,
-                "parent_activity_id": [],
-                "parent_experiment_id": [],
-                "start_year": "",
-                "tier": 1
-            },
-            "piClim-aer": {
-                "activity_id": [
-                    "RFMIP"
-                ],
-                "description": "In combination with `piClim-control`, quantifies present-day aerosol effective radiative forcing (ERF). Same as `piClim-control`, except anthropogenic aerosol emissions use present-day values (typically the last year of the `historical` simulation within the same CMIP era e.g. 2014 values for CMIP6, 2021 values for CMIP7).",
-                "end_year": "",
-                "experiment": "In combination with `piClim-control`, quantifies present-day aerosol effective radiative forcing (ERF). Same as `piClim-control`, except anthropogenic aerosol emissions use present-day values (typically the last year of the `historical` simulation within the same CMIP era e.g. 2014 values for CMIP6, 2021 values for CMIP7).",
-                "experiment_id": "piClim-aer",
-                "min_number_yrs_per_sim": 30,
-                "parent_activity_id": [],
-                "parent_experiment_id": [],
-                "start_year": "",
-                "tier": 1
-            },
-            "piClim-anthro": {
-                "activity_id": [
-                    "CMIP"
-                ],
-                "description": "In combination with `piClim-control`, quantifies present-day total anthropogenic effective radiative forcing (ERF). Same as `piClim-control`, except all anthropogenic forcings use present-day values (typically the last year of the `historical` simulation within the same CMIP era e.g. 2014 values for CMIP6, 2021 values for CMIP7).",
-                "end_year": "",
-                "experiment": "In combination with `piClim-control`, quantifies present-day total anthropogenic effective radiative forcing (ERF). Same as `piClim-control`, except all anthropogenic forcings use present-day values (typically the last year of the `historical` simulation within the same CMIP era e.g. 2014 values for CMIP6, 2021 values for CMIP7).",
-                "experiment_id": "piClim-anthro",
-                "min_number_yrs_per_sim": 30,
-                "parent_activity_id": [],
-                "parent_experiment_id": [],
-                "start_year": "",
-                "tier": 1
-            },
-            "piClim-control": {
-                "activity_id": [
-                    "CMIP"
-                ],
-                "description": "Baseline for effective radiative forcing (ERF) calculations. `piControl` with prescribed sea-surface temperatures and sea-ice concentrations.",
-                "end_year": "",
-                "experiment": "Baseline for effective radiative forcing (ERF) calculations. `piControl` with prescribed sea-surface temperatures and sea-ice concentrations.",
-                "experiment_id": "piClim-control",
-                "min_number_yrs_per_sim": 30,
-                "parent_activity_id": [],
-                "parent_experiment_id": [],
-                "start_year": "",
-                "tier": 1
-            },
-            "piClim-histaer": {
-                "activity_id": [
-                    "RFMIP"
-                ],
-                "description": "Simulation of the historical period with prescribed sea-surface temperatures and sea-ice concentrations. Aerosol emissions follow the `historical` experiment while all other forcings follow `piControl` to allow for a (approximate) diagnosis of transient historical aerosol effective radiative forcing (ERF) (can be compared with `piClim-aer` which provides a more precise quantification of present-day aerosol ERF).",
-                "end_year": 2100,
-                "experiment": "Simulation of the historical period with prescribed sea-surface temperatures and sea-ice concentrations. Aerosol emissions follow the `historical` experiment while all other forcings follow `piControl` to allow for a (approximate) diagnosis of transient historical aerosol effective radiative forcing (ERF) (can be compared with `piClim-aer` which provides a more precise quantification of present-day aerosol ERF).",
-                "experiment_id": "piClim-histaer",
-                "min_number_yrs_per_sim": 251,
-                "parent_activity_id": [],
-                "parent_experiment_id": [],
-                "start_year": 1850,
-                "tier": 1
-            },
-            "piClim-histall": {
-                "activity_id": [
-                    "RFMIP"
-                ],
-                "description": "Simulation of the historical period with prescribed sea-surface temperatures and sea-ice concentrations. All forcings follow the `historical` experiment to allow for a (approximate) diagnosis of transient historical effective radiative forcing (ERF).(can be compared with the `piClim-*` experiments which provide a more precise quantification of present-day ERF from various forcers).",
-                "end_year": 2100,
-                "experiment": "Simulation of the historical period with prescribed sea-surface temperatures and sea-ice concentrations. All forcings follow the `historical` experiment to allow for a (approximate) diagnosis of transient historical effective radiative forcing (ERF).(can be compared with the `piClim-*` experiments which provide a more precise quantification of present-day ERF from various forcers).",
-                "experiment_id": "piClim-histall",
-                "min_number_yrs_per_sim": 251,
-                "parent_activity_id": [],
-                "parent_experiment_id": [],
-                "start_year": 1850,
-                "tier": 1
-            },
             "piControl": {
                 "activity_id": [
                     "CMIP"
@@ -839,11 +703,11 @@
                 "activity_id": [
                     "ScenarioMIP"
                 ],
-                "description": "PLACEHOLDER TBC. CMIP7 ScenarioMIP High emissions future. Run with prescribed concentrations of CO2 (for runs with prescribed emissions of CO2, see the `esm-scen7-` experiments).",
+                "description": "PLACEHOLDER TBC. CMIP7 ScenarioMIP high emissions future. Run with prescribed carbon dioxide concentrations (for prescribed carbon dioxide emissions, see `esm-scen7-h`).",
                 "end_year": 2100,
-                "experiment": "PLACEHOLDER TBC. CMIP7 ScenarioMIP High emissions future. Run with prescribed concentrations of CO2 (for runs with prescribed emissions of CO2, see the `esm-scen7-` experiments).",
+                "experiment": "PLACEHOLDER TBC. CMIP7 ScenarioMIP high emissions future. Run with prescribed carbon dioxide concentrations (for prescribed carbon dioxide emissions, see `esm-scen7-h`).",
                 "experiment_id": "scen7-h",
-                "min_number_yrs_per_sim": 78,
+                "min_number_yrs_per_sim": 79,
                 "parent_activity_id": [
                     "CMIP"
                 ],
@@ -851,35 +715,35 @@
                     "historical"
                 ],
                 "start_year": 2022,
-                "tier": 0
+                "tier": 1
             },
             "scen7-h-ext": {
                 "activity_id": [
                     "ScenarioMIP"
                 ],
-                "description": "PLACEHOLDER TBC. CMIP7 ScenarioMIP High emissions future. Run with prescribed concentrations of CO2 (for runs with prescribed emissions of CO2, see the `esm-scen7-` experiments). Extension beyond 2100",
-                "end_year": 2300,
-                "experiment": "PLACEHOLDER TBC. CMIP7 ScenarioMIP High emissions future. Run with prescribed concentrations of CO2 (for runs with prescribed emissions of CO2, see the `esm-scen7-` experiments). Extension beyond 2100",
+                "description": "Extension of `scen7-h` beyond 2100.",
+                "end_year": 2500,
+                "experiment": "Extension of `scen7-h` beyond 2100.",
                 "experiment_id": "scen7-h-ext",
-                "min_number_yrs_per_sim": 51,
+                "min_number_yrs_per_sim": 50,
                 "parent_activity_id": [
                     "ScenarioMIP"
                 ],
                 "parent_experiment_id": [
                     "scen7-h"
                 ],
-                "start_year": 2100,
-                "tier": 0
+                "start_year": 2101,
+                "tier": 1
             },
             "scen7-hl": {
                 "activity_id": [
                     "ScenarioMIP"
                 ],
-                "description": "PLACEHOLDER TBC. CMIP7 ScenarioMIP High followed by low (from 2060) emissions future. Run with prescribed concentrations of CO2 (for runs with prescribed emissions of CO2, see the `esm-scen7-` experiments).",
+                "description": "PLACEHOLDER TBC. CMIP7 ScenarioMIP High followed by low (from 2060) emissions future. Run with prescribed carbon dioxide concentrations (for prescribed carbon dioxide emissions, see `esm-scen7-hl`).",
                 "end_year": 2100,
-                "experiment": "PLACEHOLDER TBC. CMIP7 ScenarioMIP High followed by low (from 2060) emissions future. Run with prescribed concentrations of CO2 (for runs with prescribed emissions of CO2, see the `esm-scen7-` experiments).",
+                "experiment": "PLACEHOLDER TBC. CMIP7 ScenarioMIP High followed by low (from 2060) emissions future. Run with prescribed carbon dioxide concentrations (for prescribed carbon dioxide emissions, see `esm-scen7-hl`).",
                 "experiment_id": "scen7-hl",
-                "min_number_yrs_per_sim": 78,
+                "min_number_yrs_per_sim": 79,
                 "parent_activity_id": [
                     "CMIP"
                 ],
@@ -887,35 +751,35 @@
                     "historical"
                 ],
                 "start_year": 2022,
-                "tier": 0
+                "tier": 1
             },
             "scen7-hl-ext": {
                 "activity_id": [
                     "ScenarioMIP"
                 ],
-                "description": "PLACEHOLDER TBC. CMIP7 ScenarioMIP High followed by low (from 2060) emissions future. Run with prescribed concentrations of CO2 (for runs with prescribed emissions of CO2, see the `esm-scen7-` experiments). Extension beyond 2100",
-                "end_year": 2300,
-                "experiment": "PLACEHOLDER TBC. CMIP7 ScenarioMIP High followed by low (from 2060) emissions future. Run with prescribed concentrations of CO2 (for runs with prescribed emissions of CO2, see the `esm-scen7-` experiments). Extension beyond 2100",
+                "description": "Extension of `scen7-hl` beyond 2100.",
+                "end_year": 2500,
+                "experiment": "Extension of `scen7-hl` beyond 2100.",
                 "experiment_id": "scen7-hl-ext",
-                "min_number_yrs_per_sim": 51,
+                "min_number_yrs_per_sim": 50,
                 "parent_activity_id": [
                     "ScenarioMIP"
                 ],
                 "parent_experiment_id": [
                     "scen7-hl"
                 ],
-                "start_year": 2100,
-                "tier": 0
+                "start_year": 2101,
+                "tier": 1
             },
             "scen7-l": {
                 "activity_id": [
                     "ScenarioMIP"
                 ],
-                "description": "PLACEHOLDER TBC. CMIP7 ScenarioMIP Low emissions future. Run with prescribed concentrations of CO2 (for runs with prescribed emissions of CO2, see the `esm-scen7-` experiments).",
+                "description": "PLACEHOLDER TBC. CMIP7 ScenarioMIP low emissions future. Run with prescribed carbon dioxide concentrations (for prescribed carbon dioxide emissions, see `esm-scen7-l`).",
                 "end_year": 2100,
-                "experiment": "PLACEHOLDER TBC. CMIP7 ScenarioMIP Low emissions future. Run with prescribed concentrations of CO2 (for runs with prescribed emissions of CO2, see the `esm-scen7-` experiments).",
+                "experiment": "PLACEHOLDER TBC. CMIP7 ScenarioMIP low emissions future. Run with prescribed carbon dioxide concentrations (for prescribed carbon dioxide emissions, see `esm-scen7-l`).",
                 "experiment_id": "scen7-l",
-                "min_number_yrs_per_sim": 78,
+                "min_number_yrs_per_sim": 79,
                 "parent_activity_id": [
                     "CMIP"
                 ],
@@ -923,35 +787,35 @@
                     "historical"
                 ],
                 "start_year": 2022,
-                "tier": 0
+                "tier": 1
             },
             "scen7-l-ext": {
                 "activity_id": [
                     "ScenarioMIP"
                 ],
-                "description": "PLACEHOLDER TBC. CMIP7 ScenarioMIP Low emissions future. Run with prescribed concentrations of CO2 (for runs with prescribed emissions of CO2, see the `esm-scen7-` experiments). Extension beyond 2100",
-                "end_year": 2300,
-                "experiment": "PLACEHOLDER TBC. CMIP7 ScenarioMIP Low emissions future. Run with prescribed concentrations of CO2 (for runs with prescribed emissions of CO2, see the `esm-scen7-` experiments). Extension beyond 2100",
+                "description": "Extension of `scen7-l` beyond 2100.",
+                "end_year": 2500,
+                "experiment": "Extension of `scen7-l` beyond 2100.",
                 "experiment_id": "scen7-l-ext",
-                "min_number_yrs_per_sim": 51,
+                "min_number_yrs_per_sim": 50,
                 "parent_activity_id": [
                     "ScenarioMIP"
                 ],
                 "parent_experiment_id": [
                     "scen7-l"
                 ],
-                "start_year": 2100,
-                "tier": 0
+                "start_year": 2101,
+                "tier": 1
             },
             "scen7-ln": {
                 "activity_id": [
                     "ScenarioMIP"
                 ],
-                "description": "PLACEHOLDER TBC. CMIP7 ScenarioMIP Low followed by negative (steep reductions begin in 2040, negative from TBD) emissions future. Run with prescribed concentrations of CO2 (for runs with prescribed emissions of CO2, see the `esm-scen7-` experiments).",
+                "description": "PLACEHOLDER TBC. CMIP7 ScenarioMIP low followed by negative (steep reductions begin in 2040, negative from TBD) emissions future. Run with prescribed carbon dioxide concentrations (for prescribed carbon dioxide emissions, see `esm-scen7-ln`).",
                 "end_year": 2100,
-                "experiment": "PLACEHOLDER TBC. CMIP7 ScenarioMIP Low followed by negative (steep reductions begin in 2040, negative from TBD) emissions future. Run with prescribed concentrations of CO2 (for runs with prescribed emissions of CO2, see the `esm-scen7-` experiments).",
+                "experiment": "PLACEHOLDER TBC. CMIP7 ScenarioMIP low followed by negative (steep reductions begin in 2040, negative from TBD) emissions future. Run with prescribed carbon dioxide concentrations (for prescribed carbon dioxide emissions, see `esm-scen7-ln`).",
                 "experiment_id": "scen7-ln",
-                "min_number_yrs_per_sim": 78,
+                "min_number_yrs_per_sim": 79,
                 "parent_activity_id": [
                     "CMIP"
                 ],
@@ -959,35 +823,35 @@
                     "historical"
                 ],
                 "start_year": 2022,
-                "tier": 0
+                "tier": 1
             },
             "scen7-ln-ext": {
                 "activity_id": [
                     "ScenarioMIP"
                 ],
-                "description": "PLACEHOLDER TBC. CMIP7 ScenarioMIP Low followed by negative (steep reductions begin in 2040, negative from TBD) emissions future. Run with prescribed concentrations of CO2 (for runs with prescribed emissions of CO2, see the `esm-scen7-` experiments). Extension beyond 2100",
-                "end_year": 2300,
-                "experiment": "PLACEHOLDER TBC. CMIP7 ScenarioMIP Low followed by negative (steep reductions begin in 2040, negative from TBD) emissions future. Run with prescribed concentrations of CO2 (for runs with prescribed emissions of CO2, see the `esm-scen7-` experiments). Extension beyond 2100",
+                "description": "Extension of `scen7-ln` beyond 2100.",
+                "end_year": 2500,
+                "experiment": "Extension of `scen7-ln` beyond 2100.",
                 "experiment_id": "scen7-ln-ext",
-                "min_number_yrs_per_sim": 51,
+                "min_number_yrs_per_sim": 50,
                 "parent_activity_id": [
                     "ScenarioMIP"
                 ],
                 "parent_experiment_id": [
                     "scen7-ln"
                 ],
-                "start_year": 2100,
-                "tier": 0
+                "start_year": 2101,
+                "tier": 1
             },
             "scen7-m": {
                 "activity_id": [
                     "ScenarioMIP"
                 ],
-                "description": "PLACEHOLDER TBC. CMIP7 ScenarioMIP Medium emissions future. Run with prescribed concentrations of CO2 (for runs with prescribed emissions of CO2, see the `esm-scen7-` experiments).",
+                "description": "PLACEHOLDER TBC. CMIP7 ScenarioMIP medium emissions future. Run with prescribed carbon dioxide concentrations (for prescribed carbon dioxide emissions, see `esm-scen7-m`).",
                 "end_year": 2100,
-                "experiment": "PLACEHOLDER TBC. CMIP7 ScenarioMIP Medium emissions future. Run with prescribed concentrations of CO2 (for runs with prescribed emissions of CO2, see the `esm-scen7-` experiments).",
+                "experiment": "PLACEHOLDER TBC. CMIP7 ScenarioMIP medium emissions future. Run with prescribed carbon dioxide concentrations (for prescribed carbon dioxide emissions, see `esm-scen7-m`).",
                 "experiment_id": "scen7-m",
-                "min_number_yrs_per_sim": 78,
+                "min_number_yrs_per_sim": 79,
                 "parent_activity_id": [
                     "CMIP"
                 ],
@@ -995,35 +859,35 @@
                     "historical"
                 ],
                 "start_year": 2022,
-                "tier": 0
+                "tier": 1
             },
             "scen7-m-ext": {
                 "activity_id": [
                     "ScenarioMIP"
                 ],
-                "description": "PLACEHOLDER TBC. CMIP7 ScenarioMIP Medium emissions future. Run with prescribed concentrations of CO2 (for runs with prescribed emissions of CO2, see the `esm-scen7-` experiments). Extension beyond 2100",
-                "end_year": 2300,
-                "experiment": "PLACEHOLDER TBC. CMIP7 ScenarioMIP Medium emissions future. Run with prescribed concentrations of CO2 (for runs with prescribed emissions of CO2, see the `esm-scen7-` experiments). Extension beyond 2100",
+                "description": "Extension of `scen7-m` beyond 2100.",
+                "end_year": 2500,
+                "experiment": "Extension of `scen7-m` beyond 2100.",
                 "experiment_id": "scen7-m-ext",
-                "min_number_yrs_per_sim": 51,
+                "min_number_yrs_per_sim": 50,
                 "parent_activity_id": [
                     "ScenarioMIP"
                 ],
                 "parent_experiment_id": [
                     "scen7-m"
                 ],
-                "start_year": 2100,
-                "tier": 0
+                "start_year": 2101,
+                "tier": 1
             },
             "scen7-ml": {
                 "activity_id": [
                     "ScenarioMIP"
                 ],
-                "description": "PLACEHOLDER TBC. CMIP7 ScenarioMIP Medium followed by low (from 2040) emissions future. Run with prescribed concentrations of CO2 (for runs with prescribed emissions of CO2, see the `esm-scen7-` experiments).",
+                "description": "PLACEHOLDER TBC. CMIP7 ScenarioMIP medium followed by low (from 2040) emissions future. Run with prescribed carbon dioxide concentrations (for prescribed carbon dioxide emissions, see `esm-scen7-ml`).",
                 "end_year": 2100,
-                "experiment": "PLACEHOLDER TBC. CMIP7 ScenarioMIP Medium followed by low (from 2040) emissions future. Run with prescribed concentrations of CO2 (for runs with prescribed emissions of CO2, see the `esm-scen7-` experiments).",
+                "experiment": "PLACEHOLDER TBC. CMIP7 ScenarioMIP medium followed by low (from 2040) emissions future. Run with prescribed carbon dioxide concentrations (for prescribed carbon dioxide emissions, see `esm-scen7-ml`).",
                 "experiment_id": "scen7-ml",
-                "min_number_yrs_per_sim": 78,
+                "min_number_yrs_per_sim": 79,
                 "parent_activity_id": [
                     "CMIP"
                 ],
@@ -1031,35 +895,35 @@
                     "historical"
                 ],
                 "start_year": 2022,
-                "tier": 0
+                "tier": 1
             },
             "scen7-ml-ext": {
                 "activity_id": [
                     "ScenarioMIP"
                 ],
-                "description": "PLACEHOLDER TBC. CMIP7 ScenarioMIP Medium followed by low (from 2040) emissions future. Run with prescribed concentrations of CO2 (for runs with prescribed emissions of CO2, see the `esm-scen7-` experiments). Extension beyond 2100",
-                "end_year": 2300,
-                "experiment": "PLACEHOLDER TBC. CMIP7 ScenarioMIP Medium followed by low (from 2040) emissions future. Run with prescribed concentrations of CO2 (for runs with prescribed emissions of CO2, see the `esm-scen7-` experiments). Extension beyond 2100",
+                "description": "Extension of `scen7-ml` beyond 2100.",
+                "end_year": 2500,
+                "experiment": "Extension of `scen7-ml` beyond 2100.",
                 "experiment_id": "scen7-ml-ext",
-                "min_number_yrs_per_sim": 51,
+                "min_number_yrs_per_sim": 50,
                 "parent_activity_id": [
                     "ScenarioMIP"
                 ],
                 "parent_experiment_id": [
                     "scen7-ml"
                 ],
-                "start_year": 2100,
-                "tier": 0
+                "start_year": 2101,
+                "tier": 1
             },
             "scen7-vl": {
                 "activity_id": [
                     "ScenarioMIP"
                 ],
-                "description": "PLACEHOLDER TBC. CMIP7 ScenarioMIP Very low emissions future. Run with prescribed concentrations of CO2 (for runs with prescribed emissions of CO2, see the `esm-scen7-` experiments).",
+                "description": "PLACEHOLDER TBC. CMIP7 ScenarioMIP very low emissions future. Run with prescribed carbon dioxide concentrations (for prescribed carbon dioxide emissions, see `esm-scen7-vl`).",
                 "end_year": 2100,
-                "experiment": "PLACEHOLDER TBC. CMIP7 ScenarioMIP Very low emissions future. Run with prescribed concentrations of CO2 (for runs with prescribed emissions of CO2, see the `esm-scen7-` experiments).",
+                "experiment": "PLACEHOLDER TBC. CMIP7 ScenarioMIP very low emissions future. Run with prescribed carbon dioxide concentrations (for prescribed carbon dioxide emissions, see `esm-scen7-vl`).",
                 "experiment_id": "scen7-vl",
-                "min_number_yrs_per_sim": 78,
+                "min_number_yrs_per_sim": 79,
                 "parent_activity_id": [
                     "CMIP"
                 ],
@@ -1067,25 +931,25 @@
                     "historical"
                 ],
                 "start_year": 2022,
-                "tier": 0
+                "tier": 1
             },
             "scen7-vl-ext": {
                 "activity_id": [
                     "ScenarioMIP"
                 ],
-                "description": "PLACEHOLDER TBC. CMIP7 ScenarioMIP Very low emissions future. Run with prescribed concentrations of CO2 (for runs with prescribed emissions of CO2, see the `esm-scen7-` experiments). Extension beyond 2100",
-                "end_year": 2300,
-                "experiment": "PLACEHOLDER TBC. CMIP7 ScenarioMIP Very low emissions future. Run with prescribed concentrations of CO2 (for runs with prescribed emissions of CO2, see the `esm-scen7-` experiments). Extension beyond 2100",
+                "description": "Extension of `scen7-vl` beyond 2100.",
+                "end_year": 2500,
+                "experiment": "Extension of `scen7-vl` beyond 2100.",
                 "experiment_id": "scen7-vl-ext",
-                "min_number_yrs_per_sim": 51,
+                "min_number_yrs_per_sim": 50,
                 "parent_activity_id": [
                     "ScenarioMIP"
                 ],
                 "parent_experiment_id": [
                     "scen7-vl"
                 ],
-                "start_year": 2100,
-                "tier": 0
+                "start_year": 2101,
+                "tier": 1
             }
         },
         "forcing_index": [
