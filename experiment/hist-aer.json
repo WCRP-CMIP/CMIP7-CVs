@@ -1,0 +1,12 @@
+{
+    "@context": "000_context.jsonld",
+    "id": "hist-aer",
+    "type": "experiment",
+    "description": "Response to historical aerosol forcing (with extension using forcings from the `m` scenario simulation). All other conditions are kept the same as piControl.",
+    "start_timestamp": "1850-01-01",
+    "end_timestamp": "2035-12-31",
+    "min_number_yrs_per_sim": 186.0,
+    "min_ensemble_size": 3,
+    "parent_mip_era": "cmip7",
+    "tier": 1
+}
