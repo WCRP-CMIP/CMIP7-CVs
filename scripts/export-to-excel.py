@@ -4,6 +4,7 @@ Export hydrated CVs to excel
 Uses the environment created with `create-cmor-cvs-table-export-environment.sh`
 """
 
+from pathlib import Path
 from typing import Any
 
 import esgvoc.api as ev
@@ -22,6 +23,8 @@ def extract_id_if_needed(v: Any) -> Any:
 
 def main():
     out_file = "cvs-export.xlsx"
+    out_dir_csvs = Path("cvs-as-csvs")
+    out_dir_csvs.mkdir(exist_ok=True, parents=True)
 
     with pd.ExcelWriter(out_file, engine="openpyxl", mode="w") as writer:
         # All required global attributes
@@ -83,6 +86,10 @@ def main():
                 startrow=0,
                 index=True,
             )
+
+            csv_file = out_dir_csvs / f"{collection.replace(' ', '_')}.csv"
+            df.to_csv(csv_file)
+            print(f"Wrote {csv_file}")
 
     print(f"Wrote {out_file}")
 

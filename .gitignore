@@ -1,1 +1,3 @@
 cvs-export.xlsx
+# Could also track these like we do the CMOR table
+cvs-as-csvs
