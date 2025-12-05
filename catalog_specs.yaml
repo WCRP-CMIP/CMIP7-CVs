@@ -38,7 +38,6 @@ dataset_properties:
     is_required: false
 
   - source_collection: experiment
-    source_collection_key: id
     catalog_field_name: experiment_id
     catalog_field_value_type: string
 
