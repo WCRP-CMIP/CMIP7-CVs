@@ -123,36 +123,36 @@ dataset_properties:
     catalog_field_value_type: string
     is_required: true
 
-  - source_collection: variable
+  - source_collection: branded_variable
     catalog_field_name: variable_branded_name
     catalog_field_value_type: string
     is_required: true
 
-  - source_collection: variable
+  - source_collection: branded_variable
     source_collection_key: branding_suffix_name
     catalog_field_name: variable_branded_suffix
     catalog_field_value_type: string
     is_required: true
 
-  - source_collection: variable
+  - source_collection: branded_variable
     source_collection_key: cf_standard_name
     catalog_field_name: variable_branded_name
     catalog_field_value_type: string
     is_required: true
 
-  - source_collection: variable
+  - source_collection: branded_variable
     source_collection_key: variable_root_name
     catalog_field_name: variable_id
     catalog_field_value_type: string
     is_required: true
 
-  - source_collection: variable
+  - source_collection: branded_variable
     source_collection_key: description
     catalog_field_name: variable_long_name
     catalog_field_value_type: string
     is_required: true
 
-  - source_collection: variable
+  - source_collection: branded_variable
     source_collection_key: cf_units
     catalog_field_name: variable_units
     catalog_field_value_type: string
