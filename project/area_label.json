@@ -12,7 +12,6 @@
         "@vocab": "https://esgf.github.io/esgf-vocab/api_documentation/data_descriptors.html#esgvoc.api.data_descriptors.AreaLabel",
         "area_label": {
             "@context": "https://wcrp-cmip.github.io/Variable-Registry/area_label/_context",
-            "@container": "@id",
             "@type": "@id"
         }
     },
