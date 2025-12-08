@@ -1,0 +1,5 @@
+{
+    "@context": "000_context.jsonld",
+    "id": "litempbot_tavg-u-hxy-gis",
+    "type": "known_branded_variable"
+}
