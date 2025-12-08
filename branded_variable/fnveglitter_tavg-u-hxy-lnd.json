@@ -1,5 +1,5 @@
 {
     "@context": "000_context.jsonld",
     "id": "fnveglitter_tavg-u-hxy-lnd",
-    "type": "branded_variable"
+    "type": "known_branded_variable"
 }
