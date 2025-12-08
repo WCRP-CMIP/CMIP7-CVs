@@ -1,5 +1,5 @@
 {
     "@context": "000_context.jsonld",
     "id": "ncfc22_tavg-u-hm-u",
-    "type": "branded_variable"
+    "type": "known_branded_variable"
 }

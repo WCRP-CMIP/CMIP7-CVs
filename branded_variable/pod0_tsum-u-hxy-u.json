@@ -1,5 +1,5 @@
 {
     "@context": "000_context.jsonld",
     "id": "pod0_tsum-u-hxy-u",
-    "type": "branded_variable"
+    "type": "known_branded_variable"
 }

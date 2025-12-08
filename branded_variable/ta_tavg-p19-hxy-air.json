@@ -1,5 +1,5 @@
 {
     "@context": "000_context.jsonld",
     "id": "ta_tavg-p19-hxy-air",
-    "type": "branded_variable"
+    "type": "known_branded_variable"
 }

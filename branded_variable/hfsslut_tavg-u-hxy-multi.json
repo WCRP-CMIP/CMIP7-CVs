@@ -1,5 +1,5 @@
 {
     "@context": "000_context.jsonld",
     "id": "hfsslut_tavg-u-hxy-multi",
-    "type": "branded_variable"
+    "type": "known_branded_variable"
 }
