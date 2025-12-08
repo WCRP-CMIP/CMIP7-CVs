@@ -15,7 +15,7 @@ def main():
         content = {
             "@context": "000_context.jsonld",
             "id": id,
-            "type": "known_branded_variable",
+            "type": "branded_variable",
         }
 
         out_file = f"branded_variable/{id}.json"

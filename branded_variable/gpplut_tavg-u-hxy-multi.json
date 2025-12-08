@@ -1,5 +1,5 @@
 {
     "@context": "000_context.jsonld",
     "id": "gpplut_tavg-u-hxy-multi",
-    "type": "known_branded_variable"
+    "type": "branded_variable"
 }
