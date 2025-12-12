@@ -2,6 +2,7 @@
     "@context": "000_context.jsonld",
     "id": "scenariomip",
     "type": "activity",
+    "description": "Future scenario experiments. Exploration of the future climate under a (selected) range of possible boundary conditions. In CMIP7, the priority tier for experiments is conditional on whether you are doing emissions- or concentration-driven simulations. There is no way to express this in the CVs (nor time to implement something to handle this conditionality). This means that, for your particular situation, some experiments may be at a lower tier than is listed in the CVs. For example, the `vl` scenario is tier 1 for concentration-driven models and tier 2 for emissions-driven models. However, in the CVs, we have used the highest priority tier (across all the possible conditionalities). Hence `vl` is listed as tier 1 in the CVs (even though it is actually tier 2 for emissions-driven models).For details, please see the full description in the ScenarioMIP description papers.",
     "experiments": [
         "esm-scen7-h",
         "esm-scen7-h-ext",
@@ -35,5 +36,4 @@
     "urls": [
         "https://doi.org/10.5194/egusphere-2024-3765"
     ]
-
 }
