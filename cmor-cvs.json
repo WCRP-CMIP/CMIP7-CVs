@@ -111,16 +111,16 @@
                 "activity_id": [
                     "GeoMIP"
                 ],
-                "description": "After following the `scen7-m` scenario until 2035, stablisation of global-mean temperature at 1.5C by increasing stratospheric sulfur forcing to whatever level is required to achieve stable temperatures.",
+                "description": "Stablisation of global-mean temperature at 1.5C by increasing stratospheric sulfur forcing to whatever level is required to achieve stable temperatures after following the `scen7-ml` scenario until 2035.",
                 "end_year": "",
-                "experiment": "After following the `scen7-m` scenario until 2035, stablisation of global-mean temperature at 1.5C by increasing stratospheric sulfur forcing to whatever level is required to achieve stable temperatures.",
+                "experiment": "Stablisation of global-mean temperature at 1.5C by increasing stratospheric sulfur forcing to whatever level is required to achieve stable temperatures after following the `scen7-ml` scenario until 2035.",
                 "experiment_id": "G7-1p5K-SAI",
                 "min_number_yrs_per_sim": 50,
                 "parent_activity_id": [
                     "ScenarioMIP"
                 ],
                 "parent_experiment_id": [
-                    "scen7-m"
+                    "scen7-ml"
                 ],
                 "start_year": 2035,
                 "tier": 1
