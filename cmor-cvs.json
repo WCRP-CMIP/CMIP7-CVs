@@ -10,39 +10,39 @@
             "AerChemMIP": "Aerosols and chemistry model intercomparison project: exploration of aerosol chemistry.",
             "C4MIP": "Coupled climate carbon cycle model intercomparison project: exploration of the response of the coupled carbon-climate system.",
             "CFMIP": "Cloud feedback model intercomparison project. Focussed primarily on cloud feedbacks with a secondary focus on understanding of response to forcing, model biases, circulation, regional-scale precipitation, and non-linear changes.",
-            "CMIP": "CMIP core common experiments i.e. the DECK (Diagnostic, Evaluation and Characterization of Klima).",
+            "CMIP": "CMIP core common experiments i.e. the DECK (Diagnostic, Evaluation and Characterization of Klima) and historical.",
             "DAMIP": "Detection and attribution model intercomparison project: exploration of the role of individual forcings (both anthropogenic and natural) in past and future climate change.",
             "GeoMIP": "Geoengineering model intercomparison project: exploration of the climate response to solar radiation manipulation.",
             "PMIP": "Palaeoclimate modelling intercomparison project: assessment of paleoclimate i.e. climate thousands of years or more in the past.",
             "ScenarioMIP": "Future scenario experiments. Exploration of the future climate under a (selected) range of possible boundary conditions. In CMIP7, the priority tier for experiments is conditional on whether you are doing emissions- or concentration-driven simulations. There is no way to express this in the CVs (nor time to implement something to handle this conditionality). This means that, for your particular situation, some experiments may be at a lower tier than is listed in the CVs. For example, the `vl` scenario is tier 1 for concentration-driven models and tier 2 for emissions-driven models. However, in the CVs, we have used the highest priority tier (across all the possible conditionalities). Hence `vl` is listed as tier 1 in the CVs (even though it is actually tier 2 for emissions-driven models).For details, please see the full description in the ScenarioMIP description papers."
         },
         "area_label": {
-            "air": "Data is only included where the reporting point is in air (this isn't always the case e.g. if a variable is reported at sea level pressure but there is a mountain then the surface would not be air).",
-            "ccl": "Data is only included where the reporting point is in convective cloud.",
-            "cl": "Data is only included where the reporting point is in cloud.",
-            "crp": "Data is only included where the reporting point is in an area of crops. Crops is loosely defined and model dependent.",
-            "fis": "Data is only included where the reporting point is in an area of floating ice shelf. Ice shelves are the component of ice sheets that flow over the ocean.",
-            "gis": "Data is only included where the reporting point is in an area of grounded ice sheet. Grounded ice sheets rest over bedrock, excluding ice-caps, glaciers and floating ice shelves.",
-            "ifs": "Data is only included where the reporting point is in an area of sea without ice.",
-            "is": "Data is only included where the reporting point is in an area where ice sheets are present. It includes both grounded ice sheets resting over bedrock and any ice shelves flowing over the ocean that are attached to grounded ice sheets. It excludes ice-caps and glaciers and any floating ice shelves and ice tongues attached to them.",
-            "li": "Data is only included where the reporting point is in an area where land ice is present. 'Land ice' means glaciers, ice-caps, grounded ice sheets resting on bedrock and floating ice-shelves.",
-            "lnd": "Data is only included where the reporting point is in on land.",
-            "lsi": "Data is only included where the reporting point is in an area of land or sea ice.",
-            "multi": "Data is reported on multiple areas. These are indicated by a 'sector' dimension.This area type is typically used for including multiple land-use or vegetation area types in a single file.",
-            "ng": "Data is only included where the reporting point is in an area where natural grasses are present. 'Natural grasses' means grasses growing in areas of low productivity, often situated on rough or uneven ground. This can include rocky areas, briars and heathland.",
-            "pst": "Data is only included where the reporting point is in an area of pasture. Pastures are assumed to be anthropogenic in origin. They include anthropogenically managed pastureland and rangeland.",
-            "scl": "Data is only included where the reporting point is in stratiform cloud.",
-            "sea": "Data is only included where there is sea (both ice-free sea and areas with sea ice)",
-            "shb": "Data is only included where the reporting point is in an area of shrubs. Shrubs is loosely defined and model dependent.",
-            "si": "Data is only included where the reporting point is in an area where sea ice is present.",
-            "simp": "Data is only included where the reporting point is in an area where melt pond on top of sea ice is present.",
-            "sir": "Data is only included where the reporting point is in an area where 'ridged' sea ice is present.",
-            "sn": "Data is only included where the reporting point is in an area of snow.",
-            "tree": "Data is only included where the reporting point is in an area of trees. All trees are in the C3 plant functional type. Trees is loosely defined and model dependent.",
-            "u": "Unmasked i.e. all areas are included/sampled",
-            "ufs": "Data is only included where the reporting point is in an area of unfrozen soil. Unfrozen soil means that the soil at the surface is unfrozen. Frozen soil may be present at lower levels.",
-            "veg": "Data is only included where the reporting point is in an area of vegetation.",
-            "wl": "Data is only included where the reporting point is in an area of wetland. Wetlands are areas where water covers the soil, or is present either at or near the surface of the soil all year or for varying periods of time during the year, including during the growing season."
+            "air": "Data come solely from regions occupied by air (this isn't always the case e.g. if a variable is reported at sea level pressure but there is a mountain then the surface would not be air).",
+            "ccl": "Data come solely from the portion of the atmosphere or the portion of an atmospheric column occupied by convective cloud.",
+            "cl": "Data come solely from the portion of the atmosphere or the portion of an atmospheric column occupied by cloud.",
+            "crp": "Data come solely from land areas covered by crops. 'Crops' is loosely defined and model dependent.",
+            "fis": "Data come solely from areas of floating ice shelf. 'Ice shelves' are the component of ice sheets that flow over the ocean.",
+            "gis": "Data come solely from areas of grounded ice sheet. Grounded ice sheets rest over bedrock, excluding ice-caps, glaciers and floating ice shelves.",
+            "ifs": "Data come solely from sea areas that are free of ice.",
+            "is": "Data come solely from areas of ice sheets. 'Ice sheets' include both grounded ice sheets resting on bedrock and any ice shelves flowing over the ocean that are attached to grounded ice sheets. It excludes ice-caps and glaciers and any floating ice shelves and ice tongues attached to them.",
+            "li": "Data come solely from areas of land ice. 'Land ice' means glaciers, ice-caps, grounded ice sheets resting on bedrock and floating ice-shelves.",
+            "lnd": "Data come solely from land areas.  Every location on earth is classified as either land or sea, but further area type labels also apply to these primary types (e.g., crops or land ice apply to portions of the land area).",
+            "lsi": "Data come solely from either areas of land or areas of sea ice.",
+            "multi": "Data come from several different area types with data from each area type stored separately in the variable's array as identified by its 'sector' dimension. This area type is typically used for including multiple land-use or vegetation area types in a single file.",
+            "ng": "Data come solely from land areas covered by natural grasses. 'Natural grasses' means grasses growing in areas of low productivity, often situated on rough or uneven ground. This can include rocky areas, briars and heathland.",
+            "pst": "Data come solely from land areas covered by pasture. Pastures are assumed to be anthropogenic in origin. They include anthropogenically managed pastureland and rangeland.",
+            "scl": "Data come solely from the portion of the atmosphere or the portion of an atmospheric column occupied by stratiform cloud.",
+            "sea": "Data come solely from areas covered by sea.  Every location on earth is classified as either land or sea, but further area type labels also apply to these primary types (e.g., sea ice or floating ice shelf).",
+            "shb": "Data come solely from land areas covered by shrubs. Shrubs is loosely defined and model dependent.",
+            "si": "Data come solely from areas of sea ice.",
+            "simp": "Data come solely from areas where melt pond is present atop sea ice.",
+            "sir": "Data come solely from areas where sea ice is 'ridged'.",
+            "sn": "Data come solely from areas where the surface is covered by snow.",
+            "tree": "Data come solely from land areas covered by trees. All trees are in the C3 plant functional type. 'Trees' is loosely defined and model dependent.",
+            "u": "Unmasked; all areas of the Earth are included.",
+            "ufs": "Data come solely from areas of unfrozen soil. Unfrozen soil means that the soil at the surface is unfrozen. Frozen soil may be present at lower levels.",
+            "veg": "Data come solely from land areas covered by vegetation.",
+            "wl": "Data come solely from wetland areas. Wetlands are land areas where water covers the soil, or is present either at or near the surface of the soil all year or for varying periods of time during the year, including during the growing season."
         },
         "branding_suffix": "<temporal_label><vertical_label><horizontal_label><area_label>",
         "creation_date": [
@@ -960,29 +960,13 @@
                 "approx_interval": 0.041666666666666664,
                 "description": "Hourly samples."
             },
-            "1hrCM": {
-                "approx_interval": 0.041666666666666664,
-                "description": "Monthly climatology (i.e. mean over a number of months) at hourly resolution."
-            },
-            "1hrPt": {
-                "approx_interval": 0.041666666666666664,
-                "description": "Hourly samples. This is a legacy label that indicated that the sample was a point sample i.e. represented the value at a specific point in time. This information is now conveyed via the temporal label instead."
-            },
             "3hr": {
                 "approx_interval": 0.125,
                 "description": "Three hourly samples."
             },
-            "3hrPt": {
-                "approx_interval": 0.125,
-                "description": "Three hourly samples. This is a legacy label that indicated that the sample was a point sample i.e. represented the value at a specific point in time. This information is now conveyed via the temporal label instead."
-            },
             "6hr": {
                 "approx_interval": 0.25,
-                "description": "Three hourly samples."
-            },
-            "6hrPt": {
-                "approx_interval": 0.25,
-                "description": "Six hourly samples. This is a legacy label that indicated that the sample was a point sample i.e. represented the value at a specific point in time. This information is now conveyed via the temporal label instead."
+                "description": "Six hourly samples."
             },
             "day": {
                 "approx_interval": 1.0,
@@ -997,34 +981,21 @@
                 "approx_interval": 30.0,
                 "description": "Monthly samples. Note that this means that the time interval between each sample is not constant for some calendars."
             },
-            "monC": {
-                "approx_interval": 30.0,
-                "description": "Monthly climatology (i.e. mean over a number of months) at monthly resolution. Note that this means that the time interval between each sample is not constant for some calendars."
-            },
-            "monPt": {
-                "approx_interval": 30.0,
-                "description": "Monthly samples. This is a legacy label that indicated that the sample was a point sample i.e. represented the value at a specific point in time. This information is now conveyed via the temporal label instead."
-            },
-            "subhrPt": "fixed (time invariant) field",
             "yr": {
                 "approx_interval": 365.25,
                 "description": "Yearly (i.e. annual) samples. Note that this means that the time interval between each sample is not constant for some calendars."
-            },
-            "yrPt": {
-                "approx_interval": 365.25,
-                "description": "Yearly (i.e. annual) samples. This is a legacy label that indicated that the sample was a point sample i.e. represented the value at a specific point in time. This information is now conveyed via the temporal label instead."
             }
         },
         "grid_label": {
             "g99": "Demo entry - do not use"
         },
         "horizontal_label": {
-            "hm": "No other horizontal label. This usually means the data is a horizontal mean (therefore has no horizontal dimensions).",
+            "hm": "Data reported as a mean over some horizontal area.",
             "hs": "Data reported at specific sites.",
-            "ht": "Data along a transect. This is usually some aggregate (sum, mean etc.) along the transect(s).",
+            "ht": "Data along a transect. This is some aggregate (sum, mean etc.) along the transect(s).",
             "hxy": "Data on x-y (often lat-lon) grid, also referred to as gridded data.",
-            "hy": "Data on y (often just lat) grid. This is usually zonal-mean or zonal-sum or some other zonal-aggregate data.",
-            "hyb": "Data on y (often just lat) grids in specific basins. This is usually zonal-mean or zonal-sum or some other zonal-aggregate data."
+            "hy": "Data that is a function of the y horizontal dimension, but not x (i.e., often just a function of latitude). This is usually a zonal-mean or zonal-sum or some other zonal-aggregate data.",
+            "hyb": "Data that is a function of the y horizontal dimension (i.e., often just a function of latitude), representing a zonal-mean or zonal-sum or some other aggregate across the x dimension for individual ocean basins (e.g., a zonal mean across each of the ocean basins)."
         },
         "initialization_index": [
             "^i[[:digit:]]\\{4\\}[[:digit:]]\\{2\\}[abcde]\\{0,\\}$",
@@ -1068,28 +1039,28 @@
             "^p[[:digit:]]\\{1,\\}$"
         ],
         "product": {
-            "model-output": "Output from a model (i.e. numerical representation), in this context typically of the climate system or a component thereof."
+            "model-output": "Output from a model simulation, in this context typically of the climate system or a component thereof."
         },
         "realization_index": [
             "^r[[:digit:]]\\{1,\\}$"
         ],
         "realm": {
-            "aerosol": "Dataset which applies (or mostly applies) to components of the Earth system related to aerosol chemistry.",
-            "atmos": "Dataset which applies (or mostly applies) to or is reported in the atmosphere part of the earth system.",
-            "atmosChem": "Dataset which applies (or mostly applies) to components of the Earth system related to atmospheric chemistry.",
-            "land": "Dataset which applies (or mostly applies) to or is reported in the land surface and/or sub-surface part of the earth system.",
-            "landIce": "Dataset which applies (or mostly applies) to or is reported on land ice.",
-            "ocean": "Dataset which applies (or mostly applies) to or is reported in the ocean part of the earth system.",
-            "ocnBgchem": "Dataset which applies (or mostly applies) to components of the Earth system related to ocean biogeochemistry.",
-            "seaIce": "Dataset which applies (or mostly applies) to or is reported on sea ice."
+            "aerosol": "Dataset of primary interest in studying atmospheric aerosols.",
+            "atmos": "Dataset of primary interest in studying the dynamics and physic of the atmosphere.",
+            "atmosChem": "Dataset of primary interest in studying the chemical composition and processes in the atmosphere.",
+            "land": "Dataset of primary interest in studying the land surface and/or sub-surface part of the earth system.",
+            "landIce": "Dataset of primary interest in studying land ice.",
+            "ocean": "Dataset of primary interest in studying the dynamics and physic of the ocean.",
+            "ocnBgchem": "Dataset of primary interest in studying the biogeochemical composition and processes in the ocean.",
+            "seaIce": "Dataset of primary interest in studying sea ice."
         },
         "region": {
-            "30S-90S": "The area of the globe south of the latitude 30S.",
+            "30S-90S": "The region south of the latitude 30S.",
             "ata": "Antarcica.",
             "glb": "The entire globe i.e. earth.",
             "grl": "Greenland.",
-            "nh": "The northern hemisphere.",
-            "sh": "The southern hemisphere."
+            "nh": "The Northern Hemisphere.",
+            "sh": "The Southern Hemisphere."
         },
         "required_global_attributes": [
             "activity_id",
@@ -1135,16 +1106,16 @@
             }
         },
         "temporal_label": {
-            "tavg": "Data is the average over each time period (i.e. interval defined by the time bounds).",
-            "tclm": "Data is a climatology. In this case, it is a monthly climatology i.e. each set of time bounds represents a month and the values show the monthy-by-month variation (derived by averaging over a number of years).",
+            "tavg": "Data is averaged over each time period (i.e. each reported interval defined by its time bounds).",
+            "tclm": "Data is a climatology. In this case, it is a monthly climatology i.e. each set of time bounds represents a month and the twelve values show the month-by-month variation (derived by averaging over a number of years).",
             "tclmdc": "Data is a climatology. In this case, it is a diurnal cycle climatology i.e. each set of time bounds represents an hour and the values show the hour-by-hour variation (derived by averaging over a number of days or months or years).",
             "ti": "Data is time independent i.e. has no time dimension. This does not necessarily mean the data has no time relevance e.g. the data may be a mean over all time (therefore not having a time dimension), although such cases are rare (if they exist at all) in CMIP contexts.",
-            "tmax": "Data is the maximum within each time period (i.e. interval defined by the time bounds).",
-            "tmaxavg": "Data is the mean of daily maximum over each time period (i.e. interval defined by the time bounds).For example, the data may be reported monthly, with each value being the mean of the daily maximum temperature for each day in the month.",
-            "tmin": "Data is the minimum within each time period (i.e. interval defined by the time bounds).",
+            "tmax": "Data is the maximum within each time period (i.e. each reported interval defined by its time bounds).",
+            "tmaxavg": "Data is the mean of daily maxima over each time period (i.e. each reported interval defined by its time bounds).For example, the data may be reported monthly, with each value being the mean of the daily maximum temperature for each day in the month.",
+            "tmin": "Data is the mean of daily minima over each time period (i.e. each reported interval defined by its time bounds).For example, the data may be reported monthly, with each value being the mean of the daily minimum temperature for each day in the month.",
             "tminavg": "Data is the mean of daily minimum over each time period (i.e. interval defined by the time bounds).For example, the data may be reported monthly, with each value being the mean of the daily minimum temperature for each day in the month.",
             "tpt": "Data represents the value at the specific point in time at which the data is reported (all other time points within each time interval are not considered).",
-            "tsum": "Data is the sum over each time period (i.e. interval defined by the time bounds)."
+            "tsum": "Data is the sum over each time period (i.e. each reported interval defined by its time bounds)."
         },
         "tracking_id": [
             "^hdl:21.14107/[0-9A-Fa-f]\\{8\\}-[0-9A-Fa-f]\\{4\\}-4[0-9A-Fa-f]\\{3\\}-[89ABab][0-9A-Fa-f]\\{3\\}-[0-9A-Fa-f]\\{12\\}$"
@@ -1194,8 +1165,8 @@
             "p7h": "Data is reported at 7 pressure levels (although they're not the same pressure levels as `p7c`).",
             "p8": "Data is reported at 8 pressure levels.",
             "rho": "Data is reported on specific density surface(s).",
-            "sl": "Data is reported on the model's soil model levels.",
-            "u": "Data is reported with no vertical dimension. This does not necessarily mean that there is no vertical information attached to the variable, it is just not included in the dimension information. Vertical information could alternately be found in the variable's standard name or cell methods."
+            "sl": "Data is reported on the soil model's levels.",
+            "u": "Data is reported with no vertical dimension. This does not necessarily mean that there is no vertical information attached to the variable, it is just not included in the dimension information. Vertical information might be found in the variable's standard name or cell methods."
         }
     }
 }
