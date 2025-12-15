@@ -10,8 +10,9 @@
             "AerChemMIP": "Aerosols and chemistry model intercomparison project: exploration of aerosol chemistry.",
             "C4MIP": "Coupled climate carbon cycle model intercomparison project: exploration of the response of the coupled carbon-climate system.",
             "CFMIP": "Cloud feedback model intercomparison project. Focussed primarily on cloud feedbacks with a secondary focus on understanding of response to forcing, model biases, circulation, regional-scale precipitation, and non-linear changes.",
-            "CMIP": "CMIP core common experiments i.e. the DECK (Diagnostic, Evaluation and Characterization of Klima).",
+            "CMIP": "CMIP core common experiments i.e. the DECK (Diagnostic, Evaluation and Characterization of Klima) and historical.",
             "DAMIP": "Detection and attribution model intercomparison project: exploration of the role of individual forcings (both anthropogenic and natural) in past and future climate change.",
+            "GeoMIP": "Geoengineering model intercomparison project: exploration of the climate response to solar radiation manipulation.",
             "PMIP": "Palaeoclimate modelling intercomparison project: assessment of paleoclimate i.e. climate thousands of years or more in the past.",
             "ScenarioMIP": "Future scenario experiments. Exploration of the future climate under a (selected) range of possible boundary conditions. In CMIP7, the priority tier for experiments is conditional on whether you are doing emissions- or concentration-driven simulations. There is no way to express this in the CVs (nor time to implement something to handle this conditionality). This means that, for your particular situation, some experiments may be at a lower tier than is listed in the CVs. For example, the `vl` scenario is tier 1 for concentration-driven models and tier 2 for emissions-driven models. However, in the CVs, we have used the highest priority tier (across all the possible conditionalities). Hence `vl` is listed as tier 1 in the CVs (even though it is actually tier 2 for emissions-driven models).For details, please see the full description in the ScenarioMIP description papers."
         },
@@ -104,6 +105,24 @@
                     "piControl"
                 ],
                 "start_year": "",
+                "tier": 1
+            },
+            "G7-1p5K-SAI": {
+                "activity_id": [
+                    "GeoMIP"
+                ],
+                "description": "Stablisation of global-mean temperature at 1.5C by increasing stratospheric sulfur forcing to whatever level is required to achieve stable temperatures after following the `scen7-ml` scenario until 2035.",
+                "end_year": "",
+                "experiment": "Stablisation of global-mean temperature at 1.5C by increasing stratospheric sulfur forcing to whatever level is required to achieve stable temperatures after following the `scen7-ml` scenario until 2035.",
+                "experiment_id": "G7-1p5K-SAI",
+                "min_number_yrs_per_sim": 50,
+                "parent_activity_id": [
+                    "ScenarioMIP"
+                ],
+                "parent_experiment_id": [
+                    "scen7-ml"
+                ],
+                "start_year": 2035,
                 "tier": 1
             },
             "abrupt-0p5xCO2": {
