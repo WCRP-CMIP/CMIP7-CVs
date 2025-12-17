@@ -1,0 +1,5 @@
+{
+  "@context": "000_context.jsonld",
+  "id": "bgc",
+  "type": "component_type"
+}
