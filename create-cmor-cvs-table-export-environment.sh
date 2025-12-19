@@ -7,7 +7,7 @@ python3.13 -m venv venv
 ESGVOC_FORK="znichollscr"
 ESGVOC_REVISION="5145b8f6d8b1859c663e63fb7b0bad952e8bc7b5"
 UNIVERSE_CVS_FORK="znichollscr"
-UNIVERSE_CVS_BRANCH="add-ols"
+UNIVERSE_CVS_BRANCH="update-cmor-cvs"
 CMIP7_CVS_FORK="znichollscr"
 CMIP7_CVS_BRANCH="add-ols"
 

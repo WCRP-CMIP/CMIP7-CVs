@@ -1297,6 +1297,7 @@
             "h40": "Data is reported at 40 height levels",
             "ol": "Data is reported on the model's ocean model levels.",
             "olh": "Data is reported on the model's ocean model half-levels (i.e. at the interfaces between model vertical layers).",
+            "ols": "Data is reported for the surface level of the model's ocean model.",
             "op4": "Data is reported at 4 ocean pressure layers.",
             "p19": "Data is reported at 19 pressure levels.",
             "p27": "Data is reported at 27 pressure levels.",
