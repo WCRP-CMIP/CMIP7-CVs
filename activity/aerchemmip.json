@@ -3,11 +3,6 @@
     "id": "aerchemmip",
     "type": "activity",
     "experiments": [
-        "piclim-ch4",
-        "piclim-n2o",
-        "piclim-nox",
-        "piclim-ods",
-        "piclim-so2"
     ],
     "urls": [
         "https://doi.org/10.5194/gmd-10-585-2017"

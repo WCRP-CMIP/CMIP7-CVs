@@ -1,5 +1,0 @@
-{
-    "@context": "000_context.jsonld",
-    "id": "static",
-    "type": "horizontal_grid_temporal_refinement"
-}

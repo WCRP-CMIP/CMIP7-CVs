@@ -1,0 +1,5 @@
+{
+    "@context": "000_context.jsonld",
+    "id": "cveg_tavg-u-hxy-tree",
+    "type": "known_branded_variable"
+}

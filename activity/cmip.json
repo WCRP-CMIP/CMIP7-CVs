@@ -2,6 +2,7 @@
     "@context": "000_context.jsonld",
     "id": "cmip",
     "type": "activity",
+    "description": "CMIP core common experiments i.e. the DECK (Diagnostic, Evaluation and Characterization of Klima).",
     "experiments": [
         "1pctco2",
         "abrupt-4xco2",
