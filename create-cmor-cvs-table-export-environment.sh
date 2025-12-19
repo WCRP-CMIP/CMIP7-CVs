@@ -9,7 +9,7 @@ ESGVOC_REVISION="5145b8f6d8b1859c663e63fb7b0bad952e8bc7b5"
 UNIVERSE_CVS_FORK="znichollscr"
 UNIVERSE_CVS_BRANCH="update-cmor-cvs"
 CMIP7_CVS_FORK="znichollscr"
-CMIP7_CVS_BRANCH="add-piclim-experiments"
+CMIP7_CVS_BRANCH="update-cmor-cvs"
 
 venv/bin/pip install -r requirements-cmor-cvs-table.txt
 venv/bin/pip install --no-deps "git+https://github.com/$ESGVOC_FORK/esgf-vocab.git@$ESGVOC_REVISION"
