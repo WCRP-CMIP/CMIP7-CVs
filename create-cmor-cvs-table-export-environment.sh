@@ -7,9 +7,9 @@ python3.13 -m venv venv
 ESGVOC_FORK="znichollscr"
 ESGVOC_REVISION="5145b8f6d8b1859c663e63fb7b0bad952e8bc7b5"
 UNIVERSE_CVS_FORK="znichollscr"
-UNIVERSE_CVS_BRANCH="cmip-description"
+UNIVERSE_CVS_BRANCH="add-ols"
 CMIP7_CVS_FORK="znichollscr"
-CMIP7_CVS_BRANCH="cmip-description"
+CMIP7_CVS_BRANCH="add-ols"
 
 venv/bin/pip install -r requirements-cmor-cvs-table.txt
 venv/bin/pip install --no-deps "git+https://github.com/$ESGVOC_FORK/esgf-vocab.git@$ESGVOC_REVISION"
