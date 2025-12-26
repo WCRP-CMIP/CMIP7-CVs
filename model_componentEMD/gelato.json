@@ -1,0 +1,5 @@
+{
+  "@context": "000_context.jsonld",
+  "id": "gelato",
+  "type": "model_componentEMD"
+}

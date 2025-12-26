@@ -1,0 +1,8 @@
+{
+  "@context": {
+    "id": "@id",
+    "type": "@type",
+    "@base": "https://esgvoc.ipsl.fr/resource/universe/horizontal_computational_grid/",
+    "horizontal_computational_grid": "https://esgvoc.ipsl.fr/resource/universe/horizontal_computational_grid"
+  }
+}

@@ -1,0 +1,8 @@
+{
+  "@context": {
+    "id": "@id",
+    "type": "@type",
+    "@base": "https://esgvoc.ipsl.fr/resource/universe/horizontal_subgrid/",
+    "horizontal_subgrid": "https://esgvoc.ipsl.fr/resource/universe/horizontal_subgrid"
+  }
+}

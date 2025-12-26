@@ -1,0 +1,5 @@
+{
+  "@context": "000_context.jsonld",
+  "id": "height",
+  "type": "vertical_coordinate"
+}

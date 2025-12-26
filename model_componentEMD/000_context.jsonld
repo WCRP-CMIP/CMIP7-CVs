@@ -1,0 +1,8 @@
+{
+  "@context": {
+    "id": "@id",
+    "type": "@type",
+    "@base": "https://esgvoc.ipsl.fr/resource/universe/model_componentEMD/",
+    "model_componentEMD": "https://esgvoc.ipsl.fr/resource/universe/model_componentEMD"
+  }
+}
