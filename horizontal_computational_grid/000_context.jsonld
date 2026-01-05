@@ -1,4 +1,8 @@
 {
+  "esgvoc_resolve_modes": {
+    "arrangement": "reference",
+    "horizontal_subgrids": "full"
+  },
   "@context": {
     "id": "@id",
     "type": "@type",
