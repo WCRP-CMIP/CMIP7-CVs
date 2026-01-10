@@ -13,8 +13,9 @@
         ]
     },
     "@context": {
-        "@base": "https://wcrp-cmip.github.io/CMIP7-CVs/project/",
-        "@vocab": "https://esgf.github.io/esgf-vocab/api_documentation/data_descriptors.html#esgvoc.api.data_descriptors.Drs"
+        "@alt_base": "https://wcrp-cmip.github.io/CMIP7-CVs/drs/",
+        "@base": "cmip7.mipcvs.dev/drs/",
+        "@vocab": "cmip7.mipcvs.dev/docs/contents/Drs/"
     },
     "@type": [
         "wcrp:drs",

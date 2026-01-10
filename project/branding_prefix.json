@@ -92,8 +92,9 @@
         "u"
     ],
     "@context": {
-        "@base": "https://wcrp-cmip.github.io/CMIP7-CVs/project/",
-        "@vocab": "https://esgf.github.io/esgf-vocab/api_documentation/data_descriptors.html#esgvoc.api.data_descriptors.BrandingPrefix",
+        "@alt_base": "https://wcrp-cmip.github.io/CMIP7-CVs/branding_prefix/",
+        "@base": "cmip7.mipcvs.dev/branding_prefix/",
+        "@vocab": "cmip7.mipcvs.dev/docs/contents/BrandingPrefix/",
         "area_label": {
             "@context": "https://wcrp-cmip.github.io/Variable-Registry/area_label/_context",
             "@type": "@id"

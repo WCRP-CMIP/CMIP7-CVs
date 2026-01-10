@@ -34,8 +34,9 @@
         "vertical_label"
     ],
     "@context": {
-        "@base": "https://wcrp-cmip.github.io/CMIP7-CVs/project/",
-        "@vocab": "https://esgf.github.io/esgf-vocab/api_documentation/data_descriptors.html#esgvoc.api.data_descriptors.RequiredGlobalAttributes"
+        "@alt_base": "https://wcrp-cmip.github.io/CMIP7-CVs/required_global_attributes/",
+        "@base": "cmip7.mipcvs.dev/required_global_attributes/",
+        "@vocab": "cmip7.mipcvs.dev/docs/contents/RequiredGlobalAttributes/"
     },
     "@type": [
         "wcrp:required_global_attributes",
