@@ -109,7 +109,7 @@ dataset_properties:
     is_required: true
 
   - source_collection: source
-    source_collection_key: desription
+    source_collection_key: description
     catalog_field_value_type: string
     is_required: false
 
