@@ -1,4 +1,4 @@
-version: v3.0.1
+version: v3.0.2
 
 catalog_properties:
   name: stac
@@ -11,9 +11,8 @@ catalog_properties:
 
 dataset_properties:
   - source_collection: activity
-    source_collection_key: id
     catalog_field_name: activity_id
-    catalog_field_value_type: string_array
+    catalog_field_value_type: string
     is_required: true
 
   - source_collection: area_label
@@ -21,6 +20,7 @@ dataset_properties:
     is_required: true
 
   - source_collection: conventions
+    catalog_field_name: Conventions
     catalog_field_value_type: string_array
     is_required: false
 
@@ -40,7 +40,6 @@ dataset_properties:
   - source_collection: experiment
     catalog_field_name: experiment_id
     catalog_field_value_type: string
-
     is_required: true
 
   - source_collection: forcing_index
@@ -51,7 +50,7 @@ dataset_properties:
     catalog_field_value_type: string
     is_required: true
 
-  - source_collection: grid
+  - source_collection: grid_label
     catalog_field_value_type: string
     is_required: true
 
@@ -110,7 +109,7 @@ dataset_properties:
     is_required: true
 
   - source_collection: source
-    source_collection_key: label_extended
+    source_collection_key: desription
     catalog_field_value_type: string
     is_required: false
 
@@ -136,7 +135,7 @@ dataset_properties:
 
   - source_collection: branded_variable
     source_collection_key: cf_standard_name
-    catalog_field_name: variable_branded_name
+    catalog_field_name: variable_cf_standard_name
     catalog_field_value_type: string
     is_required: true
 
@@ -174,4 +173,4 @@ dataset_properties:
 file_properties:
   - source_collection: tracking_id
     catalog_field_value_type: string
-    is_required: true
+    is_required: false
