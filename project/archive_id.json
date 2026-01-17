@@ -7,8 +7,8 @@
     },
     "@context": {
         "@alt_base": "https://wcrp-cmip.github.io/CMIP7-CVs/archive_id/",
-        "@base": "cmip7.mipcvs.dev/archive_id/",
-        "@vocab": "cmip7.mipcvs.dev/docs/contents/ArchiveId/",
+        "@base": "https://cmip7.mipcvs.dev/archive_id/",
+        "@vocab": "https://cmip7.mipcvs.dev/docs/contents/ArchiveId/",
         "mip_era": {
             "@context": "https://wcrp-cmip.github.io/WCRP-universe/archive_id/_context",
             "@type": "@id"

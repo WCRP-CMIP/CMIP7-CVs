@@ -11,8 +11,8 @@
     ],
     "@context": {
         "@alt_base": "https://wcrp-cmip.github.io/CMIP7-CVs/region/",
-        "@base": "cmip7.mipcvs.dev/region/",
-        "@vocab": "cmip7.mipcvs.dev/docs/contents/Region/",
+        "@base": "https://cmip7.mipcvs.dev/region/",
+        "@vocab": "https://cmip7.mipcvs.dev/docs/contents/Region/",
         "region": {
             "@context": "https://wcrp-cmip.github.io/WCRP-universe/region/_context",
             "@type": "@id"

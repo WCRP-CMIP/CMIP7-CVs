@@ -1,8 +1,8 @@
 {
     "@context": {
         "@alt_base": "https://wcrp-cmip.github.io/CMIP7-CVs/experiment/",
-        "@base": "cmip7.mipcvs.dev/experiment/",
-        "@vocab": "cmip7.mipcvs.dev/docs/contents/Experiment/",
+        "@base": "https://cmip7.mipcvs.dev/experiment/",
+        "@vocab": "https://cmip7.mipcvs.dev/docs/contents/Experiment/",
         "activity": {
             "@context": "https://wcrp-cmip.github.io/WCRP-universe/activity/_context",
             "@type": "@id"

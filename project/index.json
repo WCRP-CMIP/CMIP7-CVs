@@ -24,8 +24,8 @@
     },
     "@context": {
         "@alt_base": "https://wcrp-cmip.github.io/CMIP7-CVs/index/",
-        "@base": "cmip7.mipcvs.dev/index/",
-        "@vocab": "cmip7.mipcvs.dev/docs/contents/Index/"
+        "@base": "https://cmip7.mipcvs.dev/index/",
+        "@vocab": "https://cmip7.mipcvs.dev/docs/contents/Index/"
     },
     "@type": [
         "wcrp:index",

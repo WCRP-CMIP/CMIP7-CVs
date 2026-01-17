@@ -14,8 +14,8 @@
     ],
     "@context": {
         "@alt_base": "https://wcrp-cmip.github.io/CMIP7-CVs/realm/",
-        "@base": "cmip7.mipcvs.dev/realm/",
-        "@vocab": "cmip7.mipcvs.dev/docs/contents/Realm/",
+        "@base": "https://cmip7.mipcvs.dev/realm/",
+        "@vocab": "https://cmip7.mipcvs.dev/docs/contents/Realm/",
         "realm": {
             "@context": "https://wcrp-cmip.github.io/WCRP-universe/realm/_context",
             "@type": "@id"

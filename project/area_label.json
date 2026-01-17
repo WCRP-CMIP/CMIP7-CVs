@@ -9,8 +9,8 @@
     ],
     "@context": {
         "@alt_base": "https://wcrp-cmip.github.io/CMIP7-CVs/area_label/",
-        "@base": "cmip7.mipcvs.dev/area_label/",
-        "@vocab": "cmip7.mipcvs.dev/docs/contents/AreaLabel/",
+        "@base": "https://cmip7.mipcvs.dev/area_label/",
+        "@vocab": "https://cmip7.mipcvs.dev/docs/contents/AreaLabel/",
         "area_label": {
             "@context": "https://wcrp-cmip.github.io/Variable-Registry/area_label/_context",
             "@type": "@id"

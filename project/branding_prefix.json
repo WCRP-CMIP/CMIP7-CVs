@@ -93,8 +93,8 @@
     ],
     "@context": {
         "@alt_base": "https://wcrp-cmip.github.io/CMIP7-CVs/branding_prefix/",
-        "@base": "cmip7.mipcvs.dev/branding_prefix/",
-        "@vocab": "cmip7.mipcvs.dev/docs/contents/BrandingPrefix/",
+        "@base": "https://cmip7.mipcvs.dev/branding_prefix/",
+        "@vocab": "https://cmip7.mipcvs.dev/docs/contents/BrandingPrefix/",
         "area_label": {
             "@context": "https://wcrp-cmip.github.io/Variable-Registry/area_label/_context",
             "@type": "@id"

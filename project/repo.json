@@ -5,8 +5,8 @@
     "repo": "https://github.com/WCRP-CMIP/CMIP6Plus_CVs",
     "@context": {
         "@alt_base": "https://wcrp-cmip.github.io/CMIP7-CVs/repo/",
-        "@base": "cmip7.mipcvs.dev/repo/",
-        "@vocab": "cmip7.mipcvs.dev/docs/contents/Repo/"
+        "@base": "https://cmip7.mipcvs.dev/repo/",
+        "@vocab": "https://cmip7.mipcvs.dev/docs/contents/Repo/"
     },
     "@type": [
         "wcrp:repo",

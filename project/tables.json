@@ -5,8 +5,8 @@
     "tables": [],
     "@context": {
         "@alt_base": "https://wcrp-cmip.github.io/CMIP7-CVs/tables/",
-        "@base": "cmip7.mipcvs.dev/tables/",
-        "@vocab": "cmip7.mipcvs.dev/docs/contents/Tables/"
+        "@base": "https://cmip7.mipcvs.dev/tables/",
+        "@vocab": "https://cmip7.mipcvs.dev/docs/contents/Tables/"
     },
     "@type": [
         "wcrp:tables",
