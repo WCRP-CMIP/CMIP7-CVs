@@ -9,6 +9,9 @@ catalog_properties:
     - name: alternate-assets
       version: v1.2.0
 
+  regex_id: '^MIP-DRS7.CMIP7(\.[A-Za-z0-9-]+){11}$'
+  regex_base_id: '^MIP-DRS7.CMIP7(\.[A-Za-z0-9-]+){10}$'
+
 dataset_properties:
   - source_collection: activity
     catalog_field_name: activity_id
