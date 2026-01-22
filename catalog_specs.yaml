@@ -8,9 +8,8 @@ catalog_properties:
       version: v2.1.0
     - name: alternate-assets
       version: v1.2.0
-
-  regex_id: '^MIP-DRS7.CMIP7(\.[A-Za-z0-9-]+){11}$'
-  regex_base_id: '^MIP-DRS7.CMIP7(\.[A-Za-z0-9-]+){10}$'
+  regex_id: '^MIP-DRS7\.CMIP7(\.[A-Za-z0-9-]+){10}\.v[0-9]{8}$'
+  regex_base_id: '^MIP-DRS7\.CMIP7(\.[A-Za-z0-9-]+){10}$'
 
 dataset_properties:
   - source_collection: activity
@@ -100,7 +99,7 @@ dataset_properties:
     is_required: true
 
   - source_collection: realization_index
-    catalog_field_value_type: integer
+    catalog_field_value_type: string
     is_required: true
 
   - source_collection: realm
@@ -148,7 +147,7 @@ dataset_properties:
     catalog_field_value_type: string
     is_required: true
 
-  - source_collection: branded_variable
+  - source_collection: null
     source_collection_key: description
     catalog_field_name: variable_long_name
     catalog_field_value_type: string
