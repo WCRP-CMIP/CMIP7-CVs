@@ -3,8 +3,8 @@
         "DRS": {
             "directory_path_example": "MIP-DRS7/CMIP7/CMIP/CCCma/CanESM6-MR/1pctCO2/r1i1p1f1/glb/mon/tas/tavg-h2m-hxy-u/g99/20251104",
             "directory_path_template": "<drs_specs>/<mip_era>/<activity_id>/<institution_id>/<source_id>/<experiment_id>/<variant_label>/<region>/<frequency>/<variable_id>/<branding_suffix>/<grid_label>/<version>",
-            "filename_path_example": "tas_tavg-h2m-hxy-u_mon_glb_g99_CanESM6-MR_1pctCO2_r1i1p1f1_185001-202112.nc",
-            "filename_path_template": "<variable_id>_<branding_suffix>_<frequency>_<region>_<grid_label>_<source_id>_<experiment_id>_<variant_label>[_<timeRange>].nc"
+            "filename_example": "tas_tavg-h2m-hxy-u_mon_glb_g99_CanESM6-MR_1pctCO2_r1i1p1f1_185001-202112.nc",
+            "filename_template": "<variable_id><branding_suffix><frequency><region><grid_label><source_id><experiment_id><variant_label>"
         },
         "activity_id": {
             "AerChemMIP": "Aerosols and chemistry model intercomparison project: exploration of aerosol chemistry.",
@@ -48,7 +48,7 @@
         "creation_date": [
             "^[[:digit:]]\\{4\\}-[[:digit:]]\\{2\\}-[[:digit:]]\\{2\\}T[[:digit:]]\\{2\\}:[[:digit:]]\\{2\\}:[[:digit:]]\\{2\\}Z$"
         ],
-        "data_specs_version": "MIPDS7-0p0p1",
+        "data_specs_version": "MIP-DS7-0.0.0",
         "drs_specs": {
             "MIP-DRS7": "Data reference syntax (DRS) initially designed for use with CMIP7"
         },
@@ -1003,7 +1003,8 @@
         ],
         "institution_id": {
             "CCCma": "Environment and Climate Change Canada",
-            "IPSL": "Institut Pierre-Simon Laplace"
+            "IPSL": "Institut Pierre-Simon Laplace",
+            "MOHC": "Met Office Hadley Centre"
         },
         "license": {
             "license_id": {
@@ -1098,12 +1099,17 @@
                 "institution_id": [
                     "CCCma"
                 ],
-                "label": "Context is wrong - label isn't really a name. Label for plots etc.",
-                "label_extended": "Context is wrong - extended label isn't really an extended name. Long label with full detail about the source",
                 "model_component": {},
                 "source": "CanESM6-MR:",
                 "source_id": "CanESM6-MR"
-            }
+            },
+            "UKESM1-0-LL": {
+                "institution_id": [
+                    "MOHC"
+                ],
+                "model_component": {},
+                "source": "UKESM1-0-LL:",
+                "source_id": "UKESM-0-LL"
         },
         "temporal_label": {
             "tavg": "Data is averaged over each time period (i.e. each reported interval defined by its time bounds).",
