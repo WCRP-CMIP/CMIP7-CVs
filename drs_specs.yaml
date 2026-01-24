@@ -25,7 +25,7 @@ directory:
       is_required: true
     - source_collection: branded_suffix
       is_required: true
-    - source_collection: grid_label
+    - source_collection: grid
       is_required: true
     - source_collection: directory_date
       is_required: true
@@ -46,7 +46,7 @@ file_name:
       is_required: true
     - source_collection: region
       is_required: true
-    - source_collection: grid_label
+    - source_collection: grid
       is_required: true
     - source_collection: source
       is_required: true
@@ -84,7 +84,7 @@ dataset_id:
       is_required: true
     - source_collection: branded_suffix
       is_required: true
-    - source_collection: grid_label
+    - source_collection: grid
       is_required: true
     - source_collection: directory_date
       is_required: true
