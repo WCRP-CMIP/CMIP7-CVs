@@ -10,7 +10,7 @@
             "AerChemMIP": "Aerosols and chemistry model intercomparison project: exploration of aerosol chemistry.",
             "C4MIP": "Coupled climate carbon cycle model intercomparison project: exploration of the response of the coupled carbon-climate system.",
             "CFMIP": "Cloud feedback model intercomparison project. Focussed primarily on cloud feedbacks with a secondary focus on understanding of response to forcing, model biases, circulation, regional-scale precipitation, and non-linear changes.",
-            "CMIP": "CMIP core common experiments i.e. the DECK (Diagnostic, Evaluation and Characterization of Klima) and historical.",
+            "CMIP": "CMIP core common experiments i.e. the DECK (Diagnostic, Evaluation and Characterization of Klima).",
             "DAMIP": "Detection and attribution model intercomparison project: exploration of the role of individual forcings (both anthropogenic and natural) in past and future climate change.",
             "GeoMIP": "Geoengineering model intercomparison project: exploration of the climate response to solar radiation manipulation.",
             "PMIP": "Palaeoclimate modelling intercomparison project: assessment of paleoclimate i.e. climate thousands of years or more in the past.",
@@ -211,14 +211,14 @@
                 "start_year": 1979,
                 "tier": 1
             },
-            "amip-p4k": {
+            "amip-p4K": {
                 "activity_id": [
                     "CFMIP"
                 ],
                 "description": "Same as `amip` simulation, except sea surface temperatures are increased by 4K in ice-free regions.",
                 "end_year": 2021,
                 "experiment": "Same as `amip` simulation, except sea surface temperatures are increased by 4K in ice-free regions.",
-                "experiment_id": "amip-p4k",
+                "experiment_id": "amip-p4K",
                 "min_number_yrs_per_sim": 43,
                 "parent_activity_id": [],
                 "parent_experiment_id": [],
@@ -351,6 +351,42 @@
                 "end_year": 2100,
                 "experiment": "PLACEHOLDER TBC. CMIP7 ScenarioMIP high emissions future. Run with prescribed carbon dioxide emissions (for prescribed carbon dioxide concentrations, see `scen7-h`).",
                 "experiment_id": "esm-scen7-h",
+                "min_number_yrs_per_sim": 79,
+                "parent_activity_id": [
+                    "CMIP"
+                ],
+                "parent_experiment_id": [
+                    "esm-hist"
+                ],
+                "start_year": 2022,
+                "tier": 1
+            },
+            "esm-scen7-h-AQ": {
+                "activity_id": [
+                    "AerChemMIP"
+                ],
+                "description": "PLACEHOLDER TBC. CMIP7 ScenarioMIP high emissions future. Altered to use high aerosol and tropospheric non-methane ozone precursor emissions. This is for models with interactive chemistry. Models without interactive chemistry should run `esm-scen7-h-Aer` instead.",
+                "end_year": 2100,
+                "experiment": "PLACEHOLDER TBC. CMIP7 ScenarioMIP high emissions future. Altered to use high aerosol and tropospheric non-methane ozone precursor emissions. This is for models with interactive chemistry. Models without interactive chemistry should run `esm-scen7-h-Aer` instead.",
+                "experiment_id": "esm-scen7-h-AQ",
+                "min_number_yrs_per_sim": 79,
+                "parent_activity_id": [
+                    "CMIP"
+                ],
+                "parent_experiment_id": [
+                    "esm-hist"
+                ],
+                "start_year": 2022,
+                "tier": 1
+            },
+            "esm-scen7-h-Aer": {
+                "activity_id": [
+                    "AerChemMIP"
+                ],
+                "description": "PLACEHOLDER TBC. CMIP7 ScenarioMIP high emissions future. Altered to use high aerosol and tropospheric non-methane ozone precursor emissions. This is for models without interactive chemistry. Models with interactive chemistry should run `esm-scen7-h-Aq` instead.",
+                "end_year": 2100,
+                "experiment": "PLACEHOLDER TBC. CMIP7 ScenarioMIP high emissions future. Altered to use high aerosol and tropospheric non-methane ozone precursor emissions. This is for models without interactive chemistry. Models with interactive chemistry should run `esm-scen7-h-Aq` instead.",
+                "experiment_id": "esm-scen7-h-Aer",
                 "min_number_yrs_per_sim": 79,
                 "parent_activity_id": [
                     "CMIP"
@@ -577,6 +613,42 @@
                 "start_year": 2022,
                 "tier": 1
             },
+            "esm-scen7-vl-AQ": {
+                "activity_id": [
+                    "AerChemMIP"
+                ],
+                "description": "PLACEHOLDER TBC. CMIP7 ScenarioMIP very low emissions future. Altered to use high aerosol and tropospheric non-methane ozone precursor emissions. This is for models with interactive chemistry. Models without interactive chemistry should run `esm-scen7-vl-Aer` instead.",
+                "end_year": 2100,
+                "experiment": "PLACEHOLDER TBC. CMIP7 ScenarioMIP very low emissions future. Altered to use high aerosol and tropospheric non-methane ozone precursor emissions. This is for models with interactive chemistry. Models without interactive chemistry should run `esm-scen7-vl-Aer` instead.",
+                "experiment_id": "esm-scen7-vl-AQ",
+                "min_number_yrs_per_sim": 79,
+                "parent_activity_id": [
+                    "CMIP"
+                ],
+                "parent_experiment_id": [
+                    "esm-hist"
+                ],
+                "start_year": 2022,
+                "tier": 1
+            },
+            "esm-scen7-vl-Aer": {
+                "activity_id": [
+                    "AerChemMIP"
+                ],
+                "description": "PLACEHOLDER TBC. CMIP7 ScenarioMIP very low emissions future. Altered to use high aerosol and tropospheric non-methane ozone precursor emissions. This is for models without interactive chemistry. Models with interactive chemistry should run `esm-scen7-vl-Aq` instead.",
+                "end_year": 2100,
+                "experiment": "PLACEHOLDER TBC. CMIP7 ScenarioMIP very low emissions future. Altered to use high aerosol and tropospheric non-methane ozone precursor emissions. This is for models without interactive chemistry. Models with interactive chemistry should run `esm-scen7-vl-Aq` instead.",
+                "experiment_id": "esm-scen7-vl-Aer",
+                "min_number_yrs_per_sim": 79,
+                "parent_activity_id": [
+                    "CMIP"
+                ],
+                "parent_experiment_id": [
+                    "esm-hist"
+                ],
+                "start_year": 2022,
+                "tier": 1
+            },
             "esm-scen7-vl-ext": {
                 "activity_id": [
                     "ScenarioMIP"
@@ -707,6 +779,42 @@
                 "end_year": 2100,
                 "experiment": "PLACEHOLDER TBC. CMIP7 ScenarioMIP high emissions future. Run with prescribed carbon dioxide concentrations (for prescribed carbon dioxide emissions, see `esm-scen7-h`).",
                 "experiment_id": "scen7-h",
+                "min_number_yrs_per_sim": 79,
+                "parent_activity_id": [
+                    "CMIP"
+                ],
+                "parent_experiment_id": [
+                    "historical"
+                ],
+                "start_year": 2022,
+                "tier": 1
+            },
+            "scen7-h-AQ": {
+                "activity_id": [
+                    "AerChemMIP"
+                ],
+                "description": "PLACEHOLDER TBC. CMIP7 ScenarioMIP high emissions future. Altered to use high aerosol and tropospheric non-methane ozone precursor emissions. This is for models with interactive chemistry. Models without interactive chemistry should run `scen7-h-Aer` instead.",
+                "end_year": 2100,
+                "experiment": "PLACEHOLDER TBC. CMIP7 ScenarioMIP high emissions future. Altered to use high aerosol and tropospheric non-methane ozone precursor emissions. This is for models with interactive chemistry. Models without interactive chemistry should run `scen7-h-Aer` instead.",
+                "experiment_id": "scen7-h-AQ",
+                "min_number_yrs_per_sim": 79,
+                "parent_activity_id": [
+                    "CMIP"
+                ],
+                "parent_experiment_id": [
+                    "historical"
+                ],
+                "start_year": 2022,
+                "tier": 1
+            },
+            "scen7-h-Aer": {
+                "activity_id": [
+                    "AerChemMIP"
+                ],
+                "description": "PLACEHOLDER TBC. CMIP7 ScenarioMIP high emissions future. Altered to use high aerosol and tropospheric non-methane ozone precursor emissions. This is for models without interactive chemistry. Models with interactive chemistry should run `scen7-h-Aq` instead.",
+                "end_year": 2100,
+                "experiment": "PLACEHOLDER TBC. CMIP7 ScenarioMIP high emissions future. Altered to use high aerosol and tropospheric non-methane ozone precursor emissions. This is for models without interactive chemistry. Models with interactive chemistry should run `scen7-h-Aq` instead.",
+                "experiment_id": "scen7-h-Aer",
                 "min_number_yrs_per_sim": 79,
                 "parent_activity_id": [
                     "CMIP"
@@ -933,6 +1041,42 @@
                 "start_year": 2022,
                 "tier": 1
             },
+            "scen7-vl-AQ": {
+                "activity_id": [
+                    "AerChemMIP"
+                ],
+                "description": "PLACEHOLDER TBC. CMIP7 ScenarioMIP very low emissions future. Altered to use high aerosol and tropospheric non-methane ozone precursor emissions. This is for models with interactive chemistry. Models without interactive chemistry should run `scen7-vl-Aer` instead.",
+                "end_year": 2100,
+                "experiment": "PLACEHOLDER TBC. CMIP7 ScenarioMIP very low emissions future. Altered to use high aerosol and tropospheric non-methane ozone precursor emissions. This is for models with interactive chemistry. Models without interactive chemistry should run `scen7-vl-Aer` instead.",
+                "experiment_id": "scen7-vl-AQ",
+                "min_number_yrs_per_sim": 79,
+                "parent_activity_id": [
+                    "CMIP"
+                ],
+                "parent_experiment_id": [
+                    "historical"
+                ],
+                "start_year": 2022,
+                "tier": 1
+            },
+            "scen7-vl-Aer": {
+                "activity_id": [
+                    "AerChemMIP"
+                ],
+                "description": "PLACEHOLDER TBC. CMIP7 ScenarioMIP very low emissions future. Altered to use high aerosol and tropospheric non-methane ozone precursor emissions. This is for models without interactive chemistry. Models with interactive chemistry should run `scen7-vl-Aq` instead.",
+                "end_year": 2100,
+                "experiment": "PLACEHOLDER TBC. CMIP7 ScenarioMIP very low emissions future. Altered to use high aerosol and tropospheric non-methane ozone precursor emissions. This is for models without interactive chemistry. Models with interactive chemistry should run `scen7-vl-Aq` instead.",
+                "experiment_id": "scen7-vl-Aer",
+                "min_number_yrs_per_sim": 79,
+                "parent_activity_id": [
+                    "CMIP"
+                ],
+                "parent_experiment_id": [
+                    "historical"
+                ],
+                "start_year": 2022,
+                "tier": 1
+            },
             "scen7-vl-ext": {
                 "activity_id": [
                     "ScenarioMIP"
@@ -986,9 +1130,7 @@
                 "description": "Yearly (i.e. annual) samples. Note that this means that the time interval between each sample is not constant for some calendars."
             }
         },
-        "grid_label": {
-            "g99": "Demo entry - do not use"
-        },
+        "grid_label": {},
         "horizontal_label": {
             "hm": "Data reported as a mean over some horizontal area.",
             "hs": "Data reported at specific sites.",
@@ -1003,6 +1145,7 @@
         ],
         "institution_id": {
             "CCCma": "Environment and Climate Change Canada",
+            "CNRM-CERFACS": "CNRM (Centre National de Recherches Meteorologiques, Toulouse 31057, France), CERFACS (Centre Europeen de Recherche et de Formation Avancee en Calcul Scientifique, Toulouse 31057, France)",
             "IPSL": "Institut Pierre-Simon Laplace"
         },
         "license": {
@@ -1055,10 +1198,10 @@
             "seaIce": "Dataset of primary interest in studying sea ice."
         },
         "region": {
-            "30S-90S": "The region south of the latitude 30S.",
+            "30S-90S": "The geographical region of the Earth\u2019s surface between 30 and 90 degrees south.",
             "ata": "Antarcica.",
-            "glb": "The entire globe i.e. earth.",
-            "grl": "Greenland.",
+            "glb": "The geographical region of the whole of the Earth\u2019s surface, as defined by the CF conventions.",
+            "grl": "The geographical region of Greenland, as defined by the CF conventions.",
             "nh": "The Northern Hemisphere.",
             "sh": "The Southern Hemisphere."
         },
