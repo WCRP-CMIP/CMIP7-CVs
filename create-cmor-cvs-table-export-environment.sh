@@ -5,13 +5,13 @@
 python3.13 -m venv venv
 
 ESGVOC_FORK="znichollscr"
-ESGVOC_REVISION="6f75519f4bf1a6965b4121509256a6ecdd7ec431"
-# UNIVERSE_CVS_FORK="znichollscr"
-# UNIVERSE_CVS_BRANCH="cmip-description"
+ESGVOC_REVISION="a02ccc2"
+UNIVERSE_CVS_FORK="znichollscr"
+UNIVERSE_CVS_BRANCH="update-data-specs-version"
 CMIP7_CVS_FORK="znichollscr"
-CMIP7_CVS_BRANCH="update-cmor-cvs-table"
-UNIVERSE_CVS_FORK="WCRP-CMIP"
-UNIVERSE_CVS_BRANCH="esgvoc_dev"
+CMIP7_CVS_BRANCH="update-data-specs-version"
+# UNIVERSE_CVS_FORK="WCRP-CMIP"
+# UNIVERSE_CVS_BRANCH="esgvoc_dev"
 # CMIP7_CVS_FORK="WCRP-CMIP"
 # CMIP7_CVS_BRANCH="update-cmor-cvs-table"
 
