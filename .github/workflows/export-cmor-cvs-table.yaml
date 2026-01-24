@@ -25,8 +25,8 @@ jobs:
           ESGVOC_FORK: "znichollscr"
           ESGVOC_REVISION: "6f75519f4bf1a6965b4121509256a6ecdd7ec431"
           # Modify these as needed
-          UNIVERSE_CVS_FORK: "WCRP-CMIP"
-          UNIVERSE_CVS_BRANCH: "esgvoc_dev"
+          UNIVERSE_CVS_FORK: "znichollscr"
+          UNIVERSE_CVS_BRANCH: "update-data-specs-version"
           CMIP7_CVS_FORK: ${{ github.event.pull_request.head.repo.owner.login }}
           CMIP7_CVS_BRANCH: ${{ github.head_ref || github.ref_name }}
         run: |
