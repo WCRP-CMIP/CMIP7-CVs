@@ -5,7 +5,7 @@
 python3.13 -m venv venv
 
 ESGVOC_FORK="znichollscr"
-ESGVOC_REVISION="5145b8f6d8b1859c663e63fb7b0bad952e8bc7b5"
+ESGVOC_REVISION="11777bd27cd03d07255f873afcdddeecf9c9da9d"
 # UNIVERSE_CVS_FORK="znichollscr"
 # UNIVERSE_CVS_BRANCH="cmip-description"
 CMIP7_CVS_FORK="znichollscr"
@@ -16,8 +16,9 @@ UNIVERSE_CVS_BRANCH="esgvoc_dev"
 # CMIP7_CVS_BRANCH="update-cmor-cvs-table"
 
 venv/bin/pip install -r requirements-cmor-cvs-table.txt
-# venv/bin/pip install --no-deps "git+https://github.com/$ESGVOC_FORK/esgf-vocab.git@$ESGVOC_REVISION"
-venv/bin/pip install --no-deps -e ../esgf-vocab
+venv/bin/pip install --no-deps "git+https://github.com/$ESGVOC_FORK/esgf-vocab.git@$ESGVOC_REVISION"
+# Local installation
+# venv/bin/pip install --no-deps -e ../esgf-vocab
 venv/bin/esgvoc config create cmip7-cvs-ci-export
 venv/bin/esgvoc config switch cmip7-cvs-ci-export
 
