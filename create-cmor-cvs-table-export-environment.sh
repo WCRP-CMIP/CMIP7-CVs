@@ -2,6 +2,9 @@
 #
 # If you're on windows, sorry.
 # You should be able to more or less copy these commands out
+#
+# The below will allow you to update the file `cmor-cvs.json`.
+# bash create-cmor-cvs-table-export-environment.sh && venv/bin/esgvoc cmor-export-cvs-table --out-path cmor-cvs.json
 python3.13 -m venv venv
 
 ESGVOC_FORK="znichollscr"
