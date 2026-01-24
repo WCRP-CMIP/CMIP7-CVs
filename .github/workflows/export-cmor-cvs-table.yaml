@@ -26,7 +26,7 @@ jobs:
           ESGVOC_REVISION: "a02ccc2"
           # Modify these as needed
           UNIVERSE_CVS_FORK: "znichollscr"
-          UNIVERSE_CVS_BRANCH: "update-data-specs-version"
+          UNIVERSE_CVS_BRANCH: "add-ukmo-entries"
           CMIP7_CVS_FORK: ${{ github.event.pull_request.head.repo.owner.login }}
           CMIP7_CVS_BRANCH: ${{ github.head_ref || github.ref_name }}
         run: |
