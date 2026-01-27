@@ -5,7 +5,7 @@
 python3.13 -m venv venv
 
 ESGVOC_FORK="znichollscr"
-ESGVOC_REVISION="7b2cd240829ee30e3500ce4dbe6b6ce70bcc3ba8"
+ESGVOC_REVISION="4106c7494c9fd37017f3202235a659dbd3d0ec1d"
 # UNIVERSE_CVS_FORK="znichollscr"
 # UNIVERSE_CVS_BRANCH="cmip-description"
 CMIP7_CVS_FORK="znichollscr"
