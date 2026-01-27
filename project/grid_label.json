@@ -4,11 +4,11 @@
     "description": "CMIP7 Permitted Grid Labels",
     "grid_label": [],
     "@context": {
-        "@base": "https://wcrp-cmip.github.io/CMIP7-CVs/project/",
-        "@vocab": "https://esgf.github.io/esgf-vocab/api_documentation/data_descriptors.html#esgvoc.api.data_descriptors.GridLabel",
+        "@alt_base": "https://wcrp-cmip.github.io/CMIP7-CVs/grid_label/",
+        "@base": "https://cmip7.mipcvs.dev/grid_label/",
+        "@vocab": "https://cmip7.mipcvs.dev/docs/contents/GridLabel/",
         "grid_label": {
             "@context": "https://wcrp-cmip.github.io/WCRP-universe/grid_label/_context",
-            "@container": "@id",
             "@type": "@id"
         }
     },

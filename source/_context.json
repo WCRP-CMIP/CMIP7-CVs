@@ -1,6 +1,0 @@
-{
-    "@context": {
-        "@base": "https://wcrp-cmip.github.io/CMIP7-CVs/source/",
-        "@vocab": "https://esgf.github.io/esgf-vocab/api_documentation/data_descriptors.html#esgvoc.api.data_descriptors.Source."
-    }
-}

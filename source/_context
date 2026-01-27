@@ -1,6 +1,20 @@
 {
     "@context": {
-        "@base": "https://wcrp-cmip.github.io/CMIP7-CVs/source/",
-        "@vocab": "https://esgf.github.io/esgf-vocab/api_documentation/data_descriptors.html#esgvoc.api.data_descriptors.Source."
+        "@alt_base": "https://wcrp-cmip.github.io/CMIP7-CVs/source/",
+        "@base": "https://cmip7.mipcvs.dev/source/",
+        "@vocab": "https://cmip7.mipcvs.dev/docs/contents/Source/",
+	"institution":{
+		"@context": "https://universe.mipcvs.dev/organisation/_context"
+	},
+	"activity":{
+		"@context": "https://universe.mipcvs.dev/activity/_context"
+	},
+	"license":{
+		"@context": "https://universe.mipcvs.dev/license/_context"
+	},
+	"emd":{
+		"@context": "https://emd.mipcvs.dev/model/_context"
+	}
+
     }
 }
