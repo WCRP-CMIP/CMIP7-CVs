@@ -90,6 +90,10 @@ jobs:
             sed -i -e 's/UNIVERSE_CVS_BRANCH=.*/UNIVERSE_CVS_BRANCH='"${UNIVERSE_CVS_BRANCH}"'/g' cmor-cvs-creation.env
           fi
 
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.13"
+
       - name: Set up environment
         run: |
           source cmor-cvs-creation.env
