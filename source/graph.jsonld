@@ -1,0 +1,42 @@
+{
+  "@context": {
+  "@alt_base": "https://wcrp-cmip.github.io/CMIP7-CVs/source/",
+  "@base": "https://cmip7.mipcvs.dev/source/",
+  "@vocab": "https://cmip7.mipcvs.dev/docs/contents/Source/",
+  "institution": {
+    "@context": "https://universe.mipcvs.dev/organisation/_context"
+  },
+  "activity": {
+    "@context": "https://universe.mipcvs.dev/activity/_context"
+  },
+  "license": {
+    "@context": "https://universe.mipcvs.dev/license/_context"
+  },
+  "emd": {
+    "@context": "https://emd.mipcvs.dev/model/_context"
+  }
+},
+  "@graph": [
+    {
+  "validation-key": "TEST-2-0",
+  "description": "Test model 2 description. Here is some more text not part of the EMD",
+  "activity": [
+    "RFMIP"
+  ],
+  "cohort": [
+    "Published"
+  ],
+  "institution": [
+    "CNRM"
+  ],
+  "license_info": [
+    "cc-by-4p0"
+  ],
+  "model_documentation": "cnrm-esm2-1e",
+  "@id": "test-2-0",
+  "@type": [
+    "wcrp:source"
+  ]
+}
+  ]
+}
