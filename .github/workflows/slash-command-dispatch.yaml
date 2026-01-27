@@ -1,0 +1,49 @@
+# Dispatch of jobs triggered by slash commands
+name: Slash command dispatch
+
+on:
+  issue_comment:
+    types: [created]
+
+jobs:
+  command-dispatch:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: alessbell/pull-request-comment-branch@v2.1.0
+        id: comment-branch
+      - name: Debug
+        run: |
+          echo "DEBUG"
+          echo ${{ github.event.comment.head.repo.owner.login }}
+          echo ${{ steps.comment-branch.outputs.head_ref }}
+      - name: Dispatch
+        uses: peter-evans/slash-command-dispatch@v5.0.1
+        with:
+          token: ${{ secrets.PERSONAL_ACCESS_TOKEN }}
+          reaction-token: ${{ secrets.PERSONAL_ACCESS_TOKEN }}
+          issue-type: pull-request
+          event-type-suffix: -command
+          dispatch-type: workflow
+          commands: |
+            update-cmor-cvs-table
+            update-stac-json
+          static-args: |
+            repository=${{ github.repository }}
+            comment-id=${{ github.event.comment.id }}
+            comment-pr-number=${{ github.event.issue.number }}
+            universe-cvs-fork="not-set"
+            universe-cvs-branch="not-set"
+            esgvoc-fork="not-set"
+            esgvoc-commit="not-set"
+            cmip7-cvs-fork=${{ steps.comment-branch.outputs.head_owner }}
+            cmip7-cvs-branch=${{ steps.comment-branch.outputs.head_ref }}
+
+      - name: Update comment with error message
+        if: steps.scd.outputs.error-message
+        uses: peter-evans/create-or-update-comment@v5
+        with:
+          comment-id: ${{ github.event.comment.id }}
+          body: |
+            **Errors:**
+
+            ${{ steps.scd.outputs.error-message }}

@@ -1,0 +1,112 @@
+# Update CMOR CVs table workflow.
+# Intended to be triggered by `/update-cmor-cvs-table`
+# in a pull request comment
+# via `slash-command-dispatch.yaml`.
+name: Update CMOR CVs table
+
+on:
+  workflow_dispatch:
+    inputs:
+      repository:
+        description: 'The repository from which the slash command was dispatched'
+        required: true
+      comment-id:
+        description: 'The comment-id of the slash command'
+        required: true
+      comment-pr-number:
+        description: 'The number of the pull request of the slash command'
+        required: true
+      universe-cvs-fork:
+        description: 'The fork to use when retrieving the universe CVs'
+        required: true
+      universe-cvs-branch:
+        description: 'The branch to use when retrieving the universe CVs'
+        required: true
+      esgvoc-fork:
+        description: 'The fork to use when installing esgvoc'
+        required: true
+      esgvoc-commit:
+        description: 'The commit (ID) to use when installing esgvoc'
+        required: true
+      cmip7-cvs-fork:
+        description: 'The fork to use when retrieving the CMIP7 CVs'
+        required: true
+      cmip7-cvs-branch:
+        description: 'The branch to use when retrieving the CMIP7 CVs'
+        required: true
+
+jobs:
+  update-cmor-cvs-table:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Add reaction
+        uses: peter-evans/create-or-update-comment@v5
+        with:
+          token: ${{ secrets.PERSONAL_ACCESS_TOKEN }}
+          repository: ${{ github.event.inputs.repository }}
+          comment-id: ${{ github.event.inputs.comment-id }}
+          reactions: rocket
+
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          repository: ${{ github.event.client_payload.pull_request.head.repo.full_name }}
+          token: "${{ secrets.PERSONAL_ACCESS_TOKEN }}"
+
+      - name: Checkout branch
+        env:
+          GITHUB_TOKEN: "${{ secrets.PERSONAL_ACCESS_TOKEN }}"
+        run: gh pr checkout ${{ github.event.inputs.comment-pr-number }}
+
+      - name: Update environment file
+        env:
+          ESGVOC_FORK: "${{ github.event.inputs.esgvoc-fork }}"
+          ESGVOC_REVISION: "${{ github.event.inputs.esgvoc-commit }}"
+          UNIVERSE_CVS_FORK: "${{ github.event.inputs.universe-cvs-fork }}"
+          UNIVERSE_CVS_BRANCH: "${{ github.event.inputs.universe-cvs-branch }}"
+          CMIP7_CVS_FORK: ${{ github.event.inputs.cmip7-cvs-fork }}
+          CMIP7_CVS_BRANCH: ${{ github.event.inputs.cmip7-cvs-branch }}
+        run: |
+          if [[ $ESGVOC_FORK != "not-set" ]]; then
+            sed -i -e 's/ESGVOC_FORK=.*/ESGVOC_FORK='"${ESGVOC_FORK}"'/g' cmor-cvs-creation.env
+            sed -i -E -e 's#(.*)/github.com/.*/(.*)#\1/github.com/'"${ESGVOC_FORK}"'/\2#' requirements-cmor-cvs-table.txt
+          fi
+          if [[ $ESGVOC_REVISION != "not-set" ]]; then
+            sed -i -e 's/ESGVOC_REVISION=.*/ESGVOC_REVISION='"${ESGVOC_REVISION}"'/g' cmor-cvs-creation.env
+            sed -i -E -e 's#(.*)/esgf-vocab.git@.*#\1/esgf-vocab.git@'"${ESGVOC_REVISION}"'#' requirements-cmor-cvs-table.txt
+          fi
+          if [[ $UNIVERSE_CVS_FORK != "not-set" ]]; then
+            sed -i -e 's/UNIVERSE_CVS_FORK=.*/UNIVERSE_CVS_FORK='"${UNIVERSE_CVS_FORK}"'/g' cmor-cvs-creation.env
+          fi
+          if [[ $UNIVERSE_CVS_BRANCH != "not-set" ]]; then
+            sed -i -e 's/UNIVERSE_CVS_BRANCH=.*/UNIVERSE_CVS_BRANCH='"${UNIVERSE_CVS_BRANCH}"'/g' cmor-cvs-creation.env
+          fi
+
+          sed -i -e 's/CMIP7_CVS_FORK=.*/CMIP7_CVS_FORK='"${CMIP7_CVS_FORK}"'/g' cmor-cvs-creation.env
+          sed -i -e 's/CMIP7_CVS_BRANCH=.*/CMIP7_CVS_BRANCH='"${CMIP7_CVS_BRANCH}"'/g' cmor-cvs-creation.env
+
+          cat cmor-cvs-creation.env
+          cat requirements-cmor-cvs-table.txt | grep esgf-vocab
+
+      - name: Set up environment
+        run: |
+          source cmor-cvs-creation.env
+          bash install-environment-for-cmor-cvs-creation.sh -v
+
+      - name: Update cmor-cvs.json
+        run: |
+          esgvoc cmor-export-cvs-table --out-path cmor-cvs.json
+
+          git add cmor-cvs.json requirements-cmor-cvs-table.txt cmor-cvs-creation.env
+          git config --local user.email "ci-runner@cmip7-cvs.invalid"
+          git config --local user.name "$GITHUB_ACTOR"
+          git commit -m "Update CMOR CVs file"
+          git push
+
+      - name: Add reaction
+        uses: peter-evans/create-or-update-comment@v5
+        with:
+          token: ${{ secrets.PERSONAL_ACCESS_TOKEN }}
+          repository: ${{ github.event.inputs.repository }}
+          comment-id: ${{ github.event.inputs.comment-id }}
+          reactions: hooray
