@@ -23,7 +23,7 @@ DATA = {
         'Preliminary'
     ],
     'institution': name_multikey_extract(
-        cmipld.get('universal:institution/graph.jsonld', depth=0),
+        cmipld.get('universal:organisation/graph.jsonld', depth=0),
         ['id', 'validation_key'], 'validation_key'
     ),
     'license_info': name_multikey_extract(

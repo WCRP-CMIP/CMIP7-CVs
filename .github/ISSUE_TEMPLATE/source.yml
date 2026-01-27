@@ -1,0 +1,504 @@
+name: "Add/Modify: Model/Source"
+description: Register a climate model or data source for CMIP7
+title: "Add/Modify: Source: <Type source_id here>"
+labels: ['delta', 'source', 'Review']
+body:
+  - type: markdown
+    attributes:
+      value: |
+        ## CMIP7 Model/Source Registration
+        
+        Register a climate model or data source for CMIP7.
+        
+        For CMIP7, this becomes the **source_id** in file metadata and directory structures.
+
+  - type: input
+    id: validation-key
+    attributes:
+      label: Source ID
+      description: |
+        The unique identifier for this model or data source.
+        
+        **Naming convention:**
+        - Use lowercase letters, numbers, and hyphens
+        - Include institution prefix (recommended)
+        - Include model name and version
+        - Examples: cnrm-esm2-1, hadgem3-gc31-mm, ukesm1-0-ll
+        
+        Note: This will become the @id and source_id in metadata.
+      placeholder: "e.g., institution-model-version"
+    validations:
+      required: true
+
+  - type: textarea
+    id: description
+    attributes:
+      label: Model Description
+      description: |
+        Comprehensive description of the model or data source.
+        
+        **For models, describe:**
+        - Overall model structure and components
+        - Resolution characteristics
+        - Key physics and parameterizations
+        - Version history or relationship to other models
+        
+        **For obs/reanalysis, describe:**
+        - Data source and collection methods
+        - Processing and quality control
+        - Spatial and temporal coverage
+        - Version information
+      placeholder: "Provide detailed description of the model/source..."
+    validations:
+      required: true
+
+  - type: dropdown
+    id: activity
+    attributes:
+      multiple: true
+      label: Activity ID(s)
+      description: |
+        MIP activities this model/source will participate in.
+        
+        **For models**: Select all activities you plan to contribute to
+        **For obs/reanalysis**: Select activities where this data will be used
+        
+        * Select Multiple *
+      options:
+    validations:
+      required: true
+
+  - type: dropdown
+    id: cohort
+    attributes:
+      multiple: true
+      label: Cohort
+      description: |
+        Publication status or data availability.
+        
+        **Options:**
+        - Published: Peer-reviewed model description exists
+        - Registered: Model registered but paper in prep
+        - Preliminary: Early development, may change
+        
+        **For obs/reanalysis:**
+        - Published: Publicly available
+        - Registered: Available with registration
+        - Preliminary: Pre-release version
+        
+        * Select Multiple *
+      options:
+        - "Published"
+        - "Registered"
+        - "Preliminary"
+    validations:
+      required: true
+
+  - type: dropdown
+    id: institution
+    attributes:
+      multiple: true
+      label: Institution(s)
+      description: |
+        Institution(s) responsible for this model/source.
+        
+        Select all that apply for multi-institutional efforts.
+        
+        Institutions must be registered in the WCRP-universe repository.
+        
+        * Select Multiple *
+      options:
+        - "LMD"
+        - "CMIP-IPO"
+        - "UFZ"
+        - "MTU"
+        - "UNIPAMPA"
+        - "IIT"
+        - "CGISC"
+        - "CGI"
+        - "NOC"
+        - "FAO"
+        - "VUA"
+        - "LSE"
+        - "ICTP"
+        - "LSHTM"
+        - "IRD"
+        - "UW"
+        - "QCCCE"
+        - "UHH"
+        - "ARCCSS"
+        - "AMAP"
+        - "SMHI"
+        - "UTAustin"
+        - "UColorado"
+        - "MPI-G"
+        - "BOKU"
+        - "RU-CORE"
+        - "NCEP"
+        - "EAWAG"
+        - "UKCEH"
+        - "HKUST"
+        - "NILU"
+        - "INGV"
+        - "NUI"
+        - "INM"
+        - "WUR"
+        - "OSU"
+        - "EC-Earth-Consortium"
+        - "UoSask"
+        - "BCCR"
+        - "WMO"
+        - "SKYE"
+        - "ECMWF"
+        - "UoMontreal"
+        - "UCSD"
+        - "NASA-GSFC"
+        - "UNIST"
+        - "UMN"
+        - "NYU"
+        - "CIMA"
+        - "UERJ"
+        - "ANU"
+        - "UCBerkeley"
+        - "MOHC"
+        - "NASA-GISS"
+        - "ENS"
+        - "LANL"
+        - "UoM"
+        - "TAMU"
+        - "CCCma"
+        - "CICERO"
+        - "SAL"
+        - "ASMERC"
+        - "UoOtago"
+        - "CR"
+        - "UTAS"
+        - "KAUST"
+        - "ORNL"
+        - "ULB"
+        - "BAS"
+        - "DESNZ"
+        - "CMCC"
+        - "IST"
+        - "UAL"
+        - "RSS"
+        - "NCAR"
+        - "COLA"
+        - "INPA"
+        - "ISSI"
+        - "UiO"
+        - "FIO"
+        - "TMA"
+        - "DMI"
+        - "IGCI"
+        - "NSF"
+        - "KCL"
+        - "C-DAC"
+        - "BNU"
+        - "GERICS"
+        - "NLR"
+        - "CNRM-CERFACS"
+        - "UCLouvain"
+        - "UoLeeds"
+        - "UEA"
+        - "ECCC"
+        - "QLNM"
+        - "NAU"
+        - "NASA-JPL"
+        - "NASA"
+        - "IISER"
+        - "DSIT"
+        - "NERC"
+        - "COMSATS"
+        - "CAMS"
+        - "TenneT"
+        - "CERFACS"
+        - "TUDelft"
+        - "BNL"
+        - "Cineca"
+        - "MPI-C"
+        - "CNRS"
+        - "NORCE"
+        - "CSIC"
+        - "PMOD"
+        - "IFM-GEOMAR"
+        - "IPSL"
+        - "AoR"
+        - "NIES"
+        - "AUoT"
+        - "MPS"
+        - "LBNL"
+        - "GMU"
+        - "UCL"
+        - "PCMDI"
+        - "CEMIG"
+        - "TUM"
+        - "DWD"
+        - "ETH-Zürich"
+        - "UCM"
+        - "CESDAC"
+        - "TWP"
+        - "UGA"
+        - "UCSB"
+        - "CU"
+        - "OJERI"
+        - "IIASA"
+        - "IPCC"
+        - "ISDR"
+        - "Empa"
+        - "NUIST"
+        - "NOAA"
+        - "BlackRock"
+        - "MRI"
+        - "UBA"
+        - "AWI"
+        - "E3SM-Project"
+        - "KIOST"
+        - "USGS"
+        - "Fidelidade"
+        - "PMAS-AAUR"
+        - "NCEO"
+        - "ACMAD"
+        - "FZJ"
+        - "CIAT"
+        - "NASA-LaRC"
+        - "TROPOS"
+        - "CREAF"
+        - "uOttawa"
+        - "THU"
+        - "UofT"
+        - "LSCE"
+        - "NOA"
+        - "PIK"
+        - "RAL"
+        - "TERI"
+        - "NRL"
+        - "USD"
+        - "ISM"
+        - "CCCR-IITM"
+        - "Wits"
+        - "BCC"
+        - "UA"
+        - "INMET"
+        - "UCRiverside"
+        - "UCT"
+        - "CENICAFÉ"
+        - "ACCESS-NRI"
+        - "HEREON"
+        - "CSIR-Wits-CSIRO"
+        - "HUJI"
+        - "R-CCS"
+        - "UNSW"
+        - "UBC"
+        - "TUW"
+        - "IIHS"
+        - "UCSC"
+        - "DIAS"
+        - "BOEM"
+        - "BIRA-IASB"
+        - "NOAA-GFDL"
+        - "ESA"
+        - "IOW"
+        - "UoOulu"
+        - "ESCWA"
+        - "ITM"
+        - "UiB"
+        - "APCC"
+        - "DKRZ"
+        - "CEMA"
+        - "IFCA"
+        - "ImperialCollege"
+        - "LLNL"
+        - "UNSTIM"
+        - "IAP"
+        - "CEMC"
+        - "MIT"
+        - "PNU"
+        - "CNRM"
+        - "IDRC"
+        - "IFREMER"
+        - "IEK"
+        - "ESSTI"
+        - "FUBerlin"
+        - "UCLA"
+        - "NCM"
+        - "UIUC"
+        - "UofMD"
+        - "MEXT"
+        - "LPC2E"
+        - "UoH"
+        - "WSL"
+        - "AER"
+        - "WCRC"
+        - "ENVEO"
+        - "WWRP"
+        - "CUG"
+        - "JCU"
+        - "UCI"
+        - "CNES"
+        - "SNU"
+        - "NIWA"
+        - "CEDA"
+        - "UCAD"
+        - "IAA"
+        - "AEMET"
+        - "NIMS"
+        - "CSC"
+        - "CMA"
+        - "UAH"
+        - "UU"
+        - "EDF"
+        - "PAUWES"
+        - "DTU"
+        - "SJSU"
+        - "NOAA-NCEI"
+        - "ISU"
+        - "KIT"
+        - "ICHEC"
+        - "NCState"
+        - "TUBITAK"
+        - "UFRN"
+        - "INPE"
+        - "ESSO"
+        - "OGS"
+        - "NCI"
+        - "CNR"
+        - "UCAR"
+        - "CICESE"
+        - "SMU"
+        - "RCEC"
+        - "MPI-B"
+        - "MARN"
+        - "PBL"
+        - "LMU"
+        - "Ouranos"
+        - "STFC"
+        - "PNNL-JGCRI"
+        - "CCRS"
+        - "JAMSTEC"
+        - "JAXA"
+        - "IACETH"
+        - "KAIST"
+        - "PML"
+        - "NTU"
+        - "KNMI"
+        - "Caltech"
+        - "LSU"
+        - "MPI-M"
+        - "NERSC"
+        - "SWP"
+        - "FSU"
+        - "ANL"
+        - "RWE"
+        - "PNNL"
+        - "FMI"
+        - "IIS"
+        - "GTI"
+        - "KSU"
+        - "FACET"
+        - "CETESB"
+        - "UReading"
+        - "ICAR"
+        - "CSIR"
+        - "NTNU"
+        - "DLR"
+        - "INRAE"
+        - "LiU"
+        - "AORI"
+        - "AS-RCEC"
+        - "CAS"
+        - "CLEX"
+        - "CSIRO"
+        - "FIO-QLNM"
+        - "FUB"
+        - "GCISC"
+        - "IITM"
+        - "JGCRI"
+        - "KMA"
+        - "MIROC"
+        - "MPI-BGC"
+        - "Météo-France"
+        - "NCAS"
+        - "NCC"
+        - "NIMR"
+        - "NIMS-KMA"
+        - "PNNL-WACCEM"
+        - "SOLARIS HEPPA"
+        - "UAAR"
+        - "UoBergen"
+        - "WCRP"
+    validations:
+      required: true
+
+  - type: dropdown
+    id: license_info
+    attributes:
+      multiple: true
+      label: License
+      description: |
+        Data license type.
+        
+        **Most common:**
+        - cc-by-4.0: Creative Commons Attribution 4.0
+        - cc-by-sa-4.0: Creative Commons Attribution-ShareAlike 4.0
+        - cc0-1.0: Public domain dedication
+        
+        For obs/reanalysis, specify applicable license.
+        
+        * Select Multiple *
+      options:
+        - "CC BY 4.0"
+        - "CC BY-NC-SA 4.0"
+        - "CC BY-SA 4.0"
+        - "CC0 1.0"
+    validations:
+      required: true
+
+  - type: input
+    id: model_documentation
+    attributes:
+      label: Model Documentation Reference
+      description: |
+        Reference to comprehensive model documentation.
+        
+        Can be:
+        - CMIP Essential Model Documentation (EMD) identifier
+        - Institution website URL
+        - Published paper DOI
+        - GitHub repository
+        
+        For EMD references, use the model identifier (e.g., 'cnrm-esm2-1').
+        For URLs, must start with http:// or https://
+      placeholder: "e.g., cnrm-esm2-1 or https://example.com/model-docs"
+
+  - type: markdown
+    attributes:
+      value: |
+        ## Issue Handling Metadata
+        
+        These options control how the submission is processed.
+        
+        In most cases, these do not need to be changed.
+
+  - type: dropdown
+    id: issue_category
+    attributes:
+      label: Issue Type
+      description: This is pre-set and cannot be changed.
+      options:
+        - "source"
+      default: 0
+    validations:
+      required: true
+
+  - type: dropdown
+    id: issue_kind
+    attributes:
+      label: Issue Kind
+      description: Select whether this is a new submission or modification of existing entry.
+      options:
+        - "New"
+        - "Modify"
+      default: 0
+    validations:
+      required: true
