@@ -1,0 +1,17 @@
+{
+    "validation_key": "repo",
+    "ui_label": "",
+    "description": "",
+    "repo": "https://github.com/WCRP-CMIP/CMIP6Plus_CVs",
+    "@context": {
+        "@alt_base": "https://wcrp-cmip.github.io/CMIP7-CVs/repo/",
+        "@base": "https://cmip7.mipcvs.dev/repo/",
+        "@vocab": "https://cmip7.mipcvs.dev/docs/contents/Repo/"
+    },
+    "@type": [
+        "wcrp:repo",
+        "esgvoc:Repo",
+        "cmip7"
+    ],
+    "@id": "repo"
+}
