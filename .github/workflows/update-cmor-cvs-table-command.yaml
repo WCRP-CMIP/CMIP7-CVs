@@ -1,7 +1,6 @@
 # Update CMOR CVs table workflow.
 # Intended to be triggered by `/update-cmor-cvs-table`
-# in a pull request comment
-# via `slash-command-dispatch.yaml`.
+# in a pull request comment via the `slash-command-dispatch.yaml` workflow.
 name: Update CMOR CVs table
 
 on:
@@ -11,10 +10,10 @@ on:
         description: 'The repository from which the slash command was dispatched'
         required: true
       comment-id:
-        description: 'The comment-id of the slash command'
+        description: 'The comment-id in which the slash command was made'
         required: true
       comment-pr-number:
-        description: 'The number of the pull request of the slash command'
+        description: 'The number of the pull request in which the slash command made'
         required: true
       universe-cvs-fork:
         description: 'The fork to use when retrieving the universe CVs'
@@ -67,26 +66,29 @@ jobs:
           CMIP7_CVS_FORK: ${{ github.event.inputs.cmip7-cvs-fork }}
           CMIP7_CVS_BRANCH: ${{ github.event.inputs.cmip7-cvs-branch }}
         run: |
+          # Update the CMIP7 CVs fork and branch in the environment file
+          sed -i -e 's/CMIP7_CVS_FORK=.*/CMIP7_CVS_FORK='"${CMIP7_CVS_FORK}"'/g' cmor-cvs-creation.env
+          sed -i -e 's/CMIP7_CVS_BRANCH=.*/CMIP7_CVS_BRANCH='"${CMIP7_CVS_BRANCH}"'/g' cmor-cvs-creation.env
+
+          # If the user supplied other arguments,
+          # update them in the environment file too.
           if [[ $ESGVOC_FORK != "not-set" ]]; then
             sed -i -e 's/ESGVOC_FORK=.*/ESGVOC_FORK='"${ESGVOC_FORK}"'/g' cmor-cvs-creation.env
             sed -i -E -e 's#(.*)/github.com/.*/(.*)#\1/github.com/'"${ESGVOC_FORK}"'/\2#' requirements-cmor-cvs-table.txt
           fi
+
           if [[ $ESGVOC_REVISION != "not-set" ]]; then
             sed -i -e 's/ESGVOC_REVISION=.*/ESGVOC_REVISION='"${ESGVOC_REVISION}"'/g' cmor-cvs-creation.env
             sed -i -E -e 's#(.*)/esgf-vocab.git@.*#\1/esgf-vocab.git@'"${ESGVOC_REVISION}"'#' requirements-cmor-cvs-table.txt
           fi
+
           if [[ $UNIVERSE_CVS_FORK != "not-set" ]]; then
             sed -i -e 's/UNIVERSE_CVS_FORK=.*/UNIVERSE_CVS_FORK='"${UNIVERSE_CVS_FORK}"'/g' cmor-cvs-creation.env
           fi
+
           if [[ $UNIVERSE_CVS_BRANCH != "not-set" ]]; then
             sed -i -e 's/UNIVERSE_CVS_BRANCH=.*/UNIVERSE_CVS_BRANCH='"${UNIVERSE_CVS_BRANCH}"'/g' cmor-cvs-creation.env
           fi
-
-          sed -i -e 's/CMIP7_CVS_FORK=.*/CMIP7_CVS_FORK='"${CMIP7_CVS_FORK}"'/g' cmor-cvs-creation.env
-          sed -i -e 's/CMIP7_CVS_BRANCH=.*/CMIP7_CVS_BRANCH='"${CMIP7_CVS_BRANCH}"'/g' cmor-cvs-creation.env
-
-          cat cmor-cvs-creation.env
-          cat requirements-cmor-cvs-table.txt | grep esgf-vocab
 
       - name: Set up environment
         run: |

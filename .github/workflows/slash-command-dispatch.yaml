@@ -11,11 +11,6 @@ jobs:
     steps:
       - uses: alessbell/pull-request-comment-branch@v2.1.0
         id: comment-branch
-      - name: Debug
-        run: |
-          echo "DEBUG"
-          echo ${{ github.event.comment.head.repo.owner.login }}
-          echo ${{ steps.comment-branch.outputs.head_ref }}
       - name: Dispatch
         uses: peter-evans/slash-command-dispatch@v5.0.1
         with:
@@ -24,9 +19,9 @@ jobs:
           issue-type: pull-request
           event-type-suffix: -command
           dispatch-type: workflow
+          # Could also add update-stac-json here in future too
           commands: |
             update-cmor-cvs-table
-            update-stac-json
           static-args: |
             repository=${{ github.repository }}
             comment-id=${{ github.event.comment.id }}
