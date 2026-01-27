@@ -1,20 +1,13 @@
 {
     "Header": {
         "file": "cmip7_temporal_label.json",
-        "file_creation_date": "2025-11-21T08:23:35.873369",
+        "file_creation_date": "2025-11-30T20:07:44.229101",
         "version": "fatal: No names found, cannot describe anything.",
-        "checksum": "md5: b15fe4f425320489009147566b7aa676",
+        "checksum": "md5: 99914b932bd37a50b983c5e7c90ae93b",
         "repo_url": "https://github.com/WCRP-CMIP/CMIP7-CVs",
         "repo_prefix": "cmip7",
-        "last_commit": "8d91fce3a4ef0af721f7c897e2ecce68f9c2dc1f",
+        "last_commit": "3435ec86853233b74b0fdf55f885aae2746529a5",
         "comment": "This is an automatically generated file. Do not edit."
     },
-    "temporal_label": {
-        "tavg": "Time-averaged values calculated as the arithmetic mean over a specified time period. Commonly used for monthly, seasonal, or annual averages to represent typical conditions.",
-        "tclm": "Variables representing long-term annual cycle climatology, calculated as multi-year averages for each month or season. Shows typical seasonal patterns and annual variations in climate variables over extended time periods.",
-        "tclmdc": "Variables representing long-term diurnal cycle climatology, calculated as multi-year averages for each hour or time of day. Shows typical daily patterns and diurnal variations in climate variables over extended time periods.",
-        "ti": "Time-independent values that do not vary with time, such as fixed geographic coordinates, topography, land-sea masks, or other static boundary conditions and model parameters.",
-        "tpt": "Instantaneous values sampled at specific points in time, without temporal averaging. Represents snapshots of conditions at discrete time instances, often used for model output at specific time steps.",
-        "tsum": "Time-summed values representing the accumulation or total amount over a specified time period. Commonly used for precipitation totals, energy fluxes, or other cumulative quantities."
-    }
+    "temporal_label": {}
 }
