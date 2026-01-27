@@ -17,5 +17,21 @@ body:
       label: Frequency
       description: Select the frequencies to add to CMIP7
       options:
+        - "1hr"
+        - "1hrCM"
+        - "1hrPt"
+        - "3hr"
+        - "3hrPt"
+        - "6hr"
+        - "6hrPt"
+        - "day"
+        - "dec"
+        - "fx"
+        - "mon"
+        - "monC"
+        - "monPt"
+        - "subhrPt"
+        - "yr"
+        - "yrPt"
     validations:
       required: true

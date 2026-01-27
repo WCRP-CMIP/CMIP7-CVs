@@ -56,6 +56,6 @@ body:
         - "TIPMIP"
         - "VolMIP"
         - "WhatIfMIP"
-        - "none"
+        - "no-value"
     validations:
       required: true
