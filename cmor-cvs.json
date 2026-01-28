@@ -1241,8 +1241,6 @@
                 "institution_id": [
                     "CCCma"
                 ],
-                "label": "Context is wrong - label isn't really a name. Label for plots etc.",
-                "label_extended": "Context is wrong - extended label isn't really an extended name. Long label with full detail about the source",
                 "model_component": {},
                 "source": "CanESM6-MR:",
                 "source_id": "CanESM6-MR"
