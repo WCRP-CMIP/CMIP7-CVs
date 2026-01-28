@@ -1250,8 +1250,6 @@
                 "institution_id": [
                     "MOHC"
                 ],
-                "label": "Context is wrong - label isn't really a name. Label for plots etc.",
-                "label_extended": "Context is wrong - extended label isn't really an extended name. Long label with full detail about the source",
                 "model_component": {},
                 "source": "UKESM1-0-LL:",
                 "source_id": "UKESM1-0-LL"
