@@ -89,11 +89,6 @@ dataset_properties:
     catalog_field_value_type: string
     is_required: true
 
-  - source_collection: tracking_id
-    catalog_field_name: pid
-    catalog_field_value_type: string
-    is_required: true
-
   - source_collection: product
     catalog_field_value_type: string
     is_required: true
