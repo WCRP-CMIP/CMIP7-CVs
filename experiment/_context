@@ -2,6 +2,7 @@
     "@context": {
         "@alt_base": "https://wcrp-cmip.github.io/CMIP7-CVs/experiment/",
         "@base": "https://cmip7.mipcvs.dev/experiment/",
+        "@esgvoc": "Experiment",
         "@vocab": "https://cmip7.mipcvs.dev/docs/contents/Experiment/",
         "activity": {
             "@context": "https://wcrp-cmip.github.io/WCRP-universe/activity/_context",
