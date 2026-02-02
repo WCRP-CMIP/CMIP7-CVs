@@ -34,6 +34,6 @@ The following links will open pre-filled GitHub issues with content from the sel
 <details name="source">
 <summary>Source (1 entries)</summary>
 
-- [test-2-0](https://github.com/WCRP-CMIP/CMIP7-CVs/issues/new?template=source.yml&title=Modify%3A+Source%3A+test-2-0&issue_kind=%22Modify%22&description=Test+model+2+description.+Here+is+some+more+text+not+part+of+the+EMD&activity=%22RFMIP%22&license_info=%22cc-by-4p0%22&model_documentation=cnrm-esm2-1e&cohort=%22Published%22&institution=%22CNRM%22&validation-key=TEST-2-0)
+- [TEST-2-0](https://github.com/WCRP-CMIP/CMIP7-CVs/issues/new?template=source.yml&title=Modify%3A+Source%3A+TEST-2-0&issue_kind=%22Modify%22&activity=%22RFMIP%22&description=Test+model+2+description.+Here+is+some+more+text+not+part+of+the+EMD&cohort=%22Published%22&institution=%22CNRM%22&model_documentation=cnrm-esm2-1e&license_info=%22cc-by-4p0%22)
 
 </details>
