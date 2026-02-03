@@ -48,7 +48,7 @@
         "creation_date": [
             "^[[:digit:]]\\{4\\}-[[:digit:]]\\{2\\}-[[:digit:]]\\{2\\}T[[:digit:]]\\{2\\}:[[:digit:]]\\{2\\}:[[:digit:]]\\{2\\}Z$"
         ],
-        "data_specs_version": "MIP-DS7-0.0.0",
+        "data_specs_version": "MIP-DS7.0.0.0",
         "drs_specs": {
             "MIP-DRS7": "Data reference syntax (DRS) initially designed for use with CMIP7"
         },
