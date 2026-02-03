@@ -5,6 +5,7 @@
         {
             "type": "directory",
             "separator": "/",
+            "regex": "what-is-this",
             "parts": [
                 {
                     "collection_id": "drs_specs",
@@ -66,6 +67,7 @@
         {
             "type": "file_name",
             "separator": "_",
+            "regex": "what-is-this",
             "properties": {
                 "extension": "nc",
                 "extension_separator": "."
@@ -116,6 +118,7 @@
         {
             "type": "dataset_id",
             "separator": ".",
+            "regex": "what-is-this",
             "parts": [
                 {
                     "collection_id": "drs_specs",
