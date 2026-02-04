@@ -43,7 +43,6 @@
   is_required: true
   value_type: string
 - field_name: grid_label
-  source_collection: grid
   is_required: true
   value_type: string
 - field_name: horizontal_label
