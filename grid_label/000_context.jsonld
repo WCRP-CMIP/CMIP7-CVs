@@ -2,7 +2,7 @@
     "@context": {
         "id": "@id",
         "type": "@type",
-        "@base": "https://esgvoc.ipsl.fr/resource/universe/grid/",
-        "grid": "https://esgvoc.ipsl.fr/resource/universe/grid"
+        "@base": "https://esgvoc.ipsl.fr/resource/universe/horizontal_grid_cell/",
+        "grid": "https://esgvoc.ipsl.fr/resource/universe/horizontal_grid_cell"
     }
 }
