@@ -30,6 +30,13 @@ DATA = {
         cmipld.get('constants:license/graph.jsonld', depth=0),
         ['id', 'validation_key'], 'validation_key'
     ),
+    'model_documentation': {
+        "un-registered": {'id': 'unregistered', 'validation_key': 'unregistered'},
+        **name_multikey_extract(
+            cmipld.get('emd:model/graph.jsonld', depth=0),
+            ['id', 'validation_key'], 'validation_key')
+    },    
+        
     'issue_category': ['source'],
     'issue_kind': ['New', 'Modify']
 }
