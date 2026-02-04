@@ -42,8 +42,7 @@
   source_collection: frequency
   is_required: true
   value_type: string
-- field_name: grid_label
-  source_collection: grid_label
+- source_collection: grid_label
   is_required: true
   value_type: string
 - field_name: horizontal_label
