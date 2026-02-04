@@ -65,6 +65,18 @@ body:
         
         * Select Multiple *
       options:
+        - "AerChemMIP"
+        - "C4MIP"
+        - "CFMIP"
+        - "CMIP"
+        - "DAMIP"
+        - "DCPP"
+        - "GeoMIP"
+        - "HighResMIP"
+        - "LMIP"
+        - "PMIP"
+        - "RFMIP"
+        - "ScenarioMIP"
     validations:
       required: true
 

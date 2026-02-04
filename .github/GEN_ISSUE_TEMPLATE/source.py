@@ -14,7 +14,7 @@ from cmipld.utils.ldparse import name_extract, name_multikey_extract
 # Data for this template
 DATA = {
     'activity': name_multikey_extract(
-        cmipld.get('cmip7:project/activity.json', depth=1)['activity'],
+        cmipld.get('cmip7:project/activity.json', depth=2)['activity'],
         ['id', 'validation_key'], 'validation_key'
     ),
     'cohort': [
