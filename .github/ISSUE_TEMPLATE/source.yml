@@ -134,11 +134,12 @@ body:
     validations:
       required: true
 
-  - type: select
+  - type: dropdown
     id: model_documentation
     attributes:
       label: Model Documentation Reference
       description: Please register your EMD and then update this field.
+      options:
 
   - type: markdown
     attributes:
