@@ -1,7 +1,7 @@
 # CMIP7 Source/Model Template Configuration
 
 TEMPLATE_CONFIG = {
-    'name': 'New Review submission : Model/Source',
+    'name': 'New Review submission : Model / Source',
     'description': 'Register a climate model or data source for CMIP7',
     'title': 'New Review submission : Source:',
     'labels': ['delta', 'source', 'Review'],

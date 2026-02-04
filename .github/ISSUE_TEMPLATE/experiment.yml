@@ -374,11 +374,9 @@ body:
     attributes:
       value: |
         ####
-        ## Issue Handling Metadata
+        ## Issue Handling Metadata [for admin use only]
         
         The following options are only here such that the github actions know what to do with the information provided above.
-        
-        In almost all cases, these do not require to be changed.
 
   - type: dropdown
     id: issue_category
