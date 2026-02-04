@@ -1,6 +1,6 @@
-name: "Add/Modify: Resolution"
+name: "New Review submission : Resolution"
 description: Add resolution to CMIP7 CVs
-title: "Add/Modify: Resolution: <Type resolution here>"
+title: "New Review submission : Resolution:"
 labels: ['delta', 'resolution', 'Review']
 body:
   - type: markdown
@@ -8,7 +8,7 @@ body:
       value: |
         This form appends the following resolution into the permitted CMIP7 Controlled Vocabularies list.
         
-        The permitted set of values are defined in the [WCRP universal constants repo](https://wcrp-cmip.github.io/WCRP-universe/resolution/). If your item is missing please [register here first](https://github.com/WCRP-CMIP/WCRP-universe/issues/new?template=resolution.yml) and wait a day after it has been confirmed for this script to be remade.
+        The permitted set of values are defined in the [WCRP constants repo](https://wcrp-cmip.github.io/WCRP-constants/resolution/). If your item is missing please [register here first](https://github.com/WCRP-CMIP/WCRP-constants/issues/new?template=resolution.yml) and wait a day after it has been confirmed for this script to be remade.
 
   - type: dropdown
     id: native_nominal_resolution

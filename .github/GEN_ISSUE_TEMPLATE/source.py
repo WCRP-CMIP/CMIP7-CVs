@@ -1,9 +1,9 @@
 # CMIP7 Source/Model Template Configuration
 
 TEMPLATE_CONFIG = {
-    'name': 'Add/Modify: Model/Source',
+    'name': 'New Review submission : Model/Source',
     'description': 'Register a climate model or data source for CMIP7',
-    'title': 'Add/Modify: Source: <Type source_id here>',
+    'title': 'New Review submission : Source:',
     'labels': ['delta', 'source', 'Review'],
     'issue_category': ['source']
 }
@@ -23,11 +23,11 @@ DATA = {
         'Preliminary'
     ],
     'institution': name_multikey_extract(
-        cmipld.get('universal:organisation/graph.jsonld', depth=0),
+        cmipld.get('constants:organisation/graph.jsonld', depth=0),
         ['id', 'validation_key'], 'validation_key'
     ),
     'license_info': name_multikey_extract(
-        cmipld.get('universal:license/graph.jsonld', depth=0),
+        cmipld.get('constants:license/graph.jsonld', depth=0),
         ['id', 'validation_key'], 'validation_key'
     ),
     'issue_category': ['source'],

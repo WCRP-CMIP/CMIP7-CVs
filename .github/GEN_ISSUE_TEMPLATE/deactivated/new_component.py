@@ -14,13 +14,13 @@ from cmipld.utils.ldparse import *
 # Data for this template - updated to match EMD property requirements
 DATA = {
     'realms': name_multikey_extract(
-        cmipld.get('universal:realm/graph.jsonld')['@graph'],
+        cmipld.get('constants:realm/graph.jsonld')['@graph'],
         ['id','validation-key','ui-label'],'validation-key'
     ),
     'horizontal_grid_types': {
         'no-horizontal-grid': {'id': 'no-horizontal-grid', 'validation-key': 'no-horizontal-grid'},
         ** name_multikey_extract(
-            cmipld.get('universal:native-horizontal-grid-type/graph.jsonld')['@graph'],
+            cmipld.get('constants:native-horizontal-grid-type/graph.jsonld')['@graph'],
             ['id','validation-key','ui-label'],'validation-key'
         )
     },
@@ -32,28 +32,28 @@ DATA = {
         'transverse_mercator', 'vertical_perspective'
     ],
     'horizontal_regions': name_multikey_extract(
-        cmipld.get('universal:native-horizontal-grid-region/graph.jsonld')['@graph'],
+        cmipld.get('constants:native-horizontal-grid-region/graph.jsonld')['@graph'],
         ['id','validation-key','ui-label'],'validation-key'
     ),
     'temporal_refinements': name_multikey_extract(
-        cmipld.get('universal:native-horizontal-grid-temporal-refinement/graph.jsonld')['@graph'],
+        cmipld.get('constants:native-horizontal-grid-temporal-refinement/graph.jsonld')['@graph'],
         ['id','validation-key','ui-label'],'validation-key'
     ),
     'grid_arrangements': ['arakawa_A', 'arakawa_B', 'arakawa_C', 'arakawa_D', 'arakawa_E'],
     'truncation_methods': ['triangular', 'rhomboidal'],
     'nominal_resolutions': name_multikey_extract(
-        cmipld.get('universal:resolution/graph.jsonld')['@graph'],
+        cmipld.get('constants:resolution/graph.jsonld')['@graph'],
         ['id','validation-key','ui-label'],'validation-key'
     ),
     'vertical_coordinates': {
         'no-vertical-grid': {'id': 'no-vertical-grid', 'validation-key': 'no-vertical-grid'},
         ** name_multikey_extract(
-            cmipld.get('universal:native-vertical-grid-coordinate/graph.jsonld')['@graph'],
+            cmipld.get('constants:native-vertical-grid-coordinate/graph.jsonld')['@graph'],
             ['id','validation-key','ui-label'],'validation-key'
         )
     },
     'vertical_units': name_multikey_extract(
-        cmipld.get('universal:native-vertical-grid-units/graph.jsonld')['@graph'],
+        cmipld.get('constants:native-vertical-grid-units/graph.jsonld')['@graph'],
         ['id','validation-key','ui-label'],'validation-key'
     ),
     'resolution_units': {

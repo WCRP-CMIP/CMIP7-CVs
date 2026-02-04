@@ -1,6 +1,6 @@
-name: "Add/Modify: Model/Source"
+name: "New Review submission : Model/Source"
 description: Register a climate model or data source for CMIP7
-title: "Add/Modify: Source: <Type source_id here>"
+title: "New Review submission : Source:"
 labels: ['delta', 'source', 'Review']
 body:
   - type: markdown

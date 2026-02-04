@@ -20,9 +20,7 @@ The following forms are available for this repository, and can be used to add or
 - [general_issue](https://github.com/WCRP-CMIP/CMIP7-CVs/issues/new?template=general_issue.yml)
 ### Experiments
 
+- [experiment](https://github.com/WCRP-CMIP/CMIP7-CVs/issues/new?template=experiment.yml)
 ### Models & Sources
 
 - [source](https://github.com/WCRP-CMIP/CMIP7-CVs/issues/new?template=source.yml)
-### Ungrouped Forms
-
-- [experiment](https://github.com/WCRP-CMIP/CMIP7-CVs/issues/new?template=experiment.yml)

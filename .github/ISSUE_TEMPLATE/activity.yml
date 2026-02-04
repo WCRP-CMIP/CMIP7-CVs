@@ -1,6 +1,6 @@
-name: "Add/Modify: Activity"
+name: "New Review submission : Activity"
 description: Add activity to CMIP7 CVs
-title: "Add/Modify: Activity: <Type activity name here>"
+title: "New Review submission : Activity:"
 labels: ['delta', 'activity', 'Review']
 body:
   - type: markdown
@@ -8,7 +8,7 @@ body:
       value: |
         This form appends the following activity into the permitted CMIP7 Controlled Vocabularies list.
         
-        The permitted set of values are defined in the [WCRP universal constants repo](https://wcrp-cmip.github.io/WCRP-universe/activity/). If your item is missing please [register here first](https://github.com/WCRP-CMIP/WCRP-universe/issues/new?template=activity.yml) and wait a day after it has been confirmed for this script to be remade.
+        The permitted set of values are defined in the [WCRP constants repo](https://wcrp-cmip.github.io/WCRP-constants/activity/). If your item is missing please [register here first](https://github.com/WCRP-CMIP/WCRP-constants/issues/new?template=activity.yml) and wait a day after it has been confirmed for this script to be remade.
 
   - type: dropdown
     id: activity

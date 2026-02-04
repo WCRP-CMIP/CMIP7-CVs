@@ -148,16 +148,16 @@ DATA = {
 
 ## CMIPLD Integration
 
-For controlled vocabularies from the WCRP universe:
+For controlled vocabularies from the WCRP constants:
 
 ```python
 import cmipld
 from cmipld.utils.ldparse import *
 
 DATA = {
-    # Load from universal repository
+    # Load from constants repository
     'realms': name_multikey_extract(
-        cmipld.get('universal:realm/graph.jsonld')['@graph'],
+        cmipld.get('constants:realm/graph.jsonld')['@graph'],
         ['id','validation-key','ui-label'],'validation-key'
     ),
     
@@ -165,12 +165,12 @@ DATA = {
     'calendars': {
         'no-calendar': {'id': 'no-calendar', 'validation-key': 'no-calendar'},
         ** name_multikey_extract(
-            cmipld.get('universal:model-calendar/graph.jsonld')['@graph'],
+            cmipld.get('constants:model-calendar/graph.jsonld')['@graph'],
             ['id','validation-key','ui-label'],'validation-key'
         )
     },
     
-    # Hardcoded data for CVs not in universal repo
+    # Hardcoded data for CVs not in constants repo
     'grid_descriptors': ['N48', 'N96', 'ORCA1', 'T63']
 }
 ```

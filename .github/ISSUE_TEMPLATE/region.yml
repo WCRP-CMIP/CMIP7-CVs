@@ -1,6 +1,6 @@
-name: "Add/Modify: Region"
+name: "New Review submission : Region"
 description: Add region to CMIP7 CVs
-title: "Add/Modify: Region: <Type region here>"
+title: "New Review submission : Region:"
 labels: ['delta', 'region', 'Review']
 body:
   - type: markdown
@@ -8,7 +8,7 @@ body:
       value: |
         This form appends the following region into the permitted CMIP7 Controlled Vocabularies list.
         
-        The permitted set of values are defined in the WCRP universal constants repo. Regions are not yet in the universal repo - this is a CMIP7-specific CV.
+        The permitted set of values are defined in the WCRP constants repo. Regions are not yet in the constants repo - this is a CMIP7-specific CV.
 
   - type: dropdown
     id: region

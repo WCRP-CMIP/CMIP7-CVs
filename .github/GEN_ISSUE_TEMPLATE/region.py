@@ -1,9 +1,9 @@
 # Region Template Configuration
 
 TEMPLATE_CONFIG = {
-    'name': 'Add/Modify: Region',
+    'name': 'New Review submission : Region',
     'description': 'Add region to CMIP7 CVs',
-    'title': 'Add/Modify: Region: <Type region here>',
+    'title': 'New Review submission : Region:',
     'labels': ['delta', 'region', 'Review'],
     'issue_category': 'region'
 }
