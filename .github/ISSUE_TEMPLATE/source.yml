@@ -467,8 +467,13 @@ body:
     id: model_documentation
     attributes:
       label: Model Documentation Reference
-      description: Please register your EMD and then update this field.
+      description: |
+        Please register your EMD and then update this field by resubmitting the form from the issue comments.
       options:
+        - "un-registered"
+        - "cnrm-esm2-1e"
+    validations:
+      required: true
 
   - type: markdown
     attributes:
