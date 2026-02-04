@@ -1,10 +1,10 @@
 field_order,field_type,field_id,label,description,data_source,required,placeholder,options_type,default_value
 1,markdown,header,Header,"## General Issue Report\n\nPlease provide details about your issue, bug report, or feature request.",none,false,,,
 2,dropdown,issue_type,Issue Type,What kind of issue are you reporting?,issue_type_options,true,,list,
-3,multi-select,affected_areas,Affected Areas,"Which parts of WCRP-universe does this issue affect?\n\n*Select multiple if applicable*",affected_areas_options,true,,list,
-4,textarea,description,Description,"Provide a clear and detailed description of the issue.\n\nFor bugs: What happened? What did you expect to happen?\nFor features: What would you like to see added/changed?",none,true,"Describe your issue in detail...\n\nInclude any relevant context, examples, or use cases.",,
+3,multi-select,affected_areas,Affected Areas,Select all that apply.,affected_areas_options,true,,list,
+4,textarea,description,Description,"Provide a clear and detailed description of the issue.\n\n<details>\n<summary>Completion Guidance</summary>\n\nFor bugs: What happened? What did you expect to happen?\nFor features: What would you like to see added/changed?\n\n</details>",none,true,"Describe your issue in detail...",,
 6,textarea,expected_behavior,Expected/Desired Behavior,What should happen instead? What would you like to see?,none,false,The system should...,,
-7,textarea,steps_to_reproduce,Steps to Reproduce (for bugs),If reporting a bug provide step-by-step instructions to reproduce the issue.,none,false,"1. Go to...\n2. Click on...\n3. See error...",,
+7,textarea,steps_to_reproduce,Steps to Reproduce (for bugs),"If reporting a bug, provide step-by-step instructions to reproduce the issue.",none,false,"1. Go to...\n2. Click on...\n3. See error...",,
 10,markdown,metadata_header,Metadata,## Metadata,none,false,,,
 11,dropdown,priority,Priority,How urgent is this issue?,priority_options,true,,list,2
 12,multi-select,help_needed,Help Needed,Do you need help with this issue?,help_needed_options,false,,list,

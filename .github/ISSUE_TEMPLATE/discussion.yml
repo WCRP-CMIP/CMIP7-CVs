@@ -26,11 +26,16 @@ body:
       description: |
         Provide background information to help others understand the discussion topic.
         
+        <details>
+        <summary>Completion Guidance</summary>
+        
         Include:
         - Why this discussion is needed
         - Current situation or problem
         - Any relevant history or previous discussions
-      placeholder: "Provide context for this discussion...\n\nWhy is this important now?\nWhat prompted this discussion?"
+        
+        </details>
+      placeholder: "Provide context for this discussion..."
     validations:
       required: true
 
@@ -41,7 +46,12 @@ body:
       description: |
         What are the key points or questions you'd like the community to address?
         
+        <details>
+        <summary>Completion Guidance</summary>
+        
         Use bullet points or numbered lists for clarity.
+        
+        </details>
       placeholder: "1. Should we consider...\n2. What are the implications of...\n3. How should we approach..."
     validations:
       required: true
@@ -60,7 +70,12 @@ body:
       description: |
         Who should be involved in this discussion?
         
+        <details>
+        <summary>Completion Guidance</summary>
+        
         You can @mention specific people or teams, or describe groups that should provide input.
+        
+        </details>
       placeholder: "- Data providers\n- @username\n- Teams working on..."
 
   - type: input
@@ -77,11 +92,16 @@ body:
       description: |
         What do you hope to achieve from this discussion?
         
+        <details>
+        <summary>Completion Guidance</summary>
+        
         Examples:
         - Consensus on approach
         - List of requirements
         - Decision on policy
         - Community feedback
+        
+        </details>
       placeholder: "By the end of this discussion we should have..."
     validations:
       required: true

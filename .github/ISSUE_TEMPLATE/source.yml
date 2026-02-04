@@ -1,4 +1,4 @@
-name: "New Review submission : Model/Source"
+name: "New Review submission : Model / Source"
 description: Register a climate model or data source for CMIP7
 title: "New Review submission : Source:"
 labels: ['delta', 'source', 'Review']
@@ -19,6 +19,9 @@ body:
       description: |
         The unique identifier for this model or data source.
         
+        <details>
+        <summary>Completion Guidance</summary>
+        
         **Naming convention:**
         - Use lowercase letters, numbers, and hyphens
         - Include institution prefix (recommended)
@@ -26,6 +29,8 @@ body:
         - Examples: cnrm-esm2-1, hadgem3-gc31-mm, ukesm1-0-ll
         
         Note: This will become the @id and source_id in metadata.
+        
+        </details>
       placeholder: "e.g., institution-model-version"
     validations:
       required: true
@@ -36,6 +41,9 @@ body:
       label: Model Description
       description: |
         Comprehensive description of the model or data source.
+        
+        <details>
+        <summary>Completion Guidance</summary>
         
         **For models, describe:**
         - Overall model structure and components
@@ -48,6 +56,8 @@ body:
         - Processing and quality control
         - Spatial and temporal coverage
         - Version information
+        
+        </details>
       placeholder: "Provide detailed description of the model/source..."
     validations:
       required: true
@@ -55,15 +65,17 @@ body:
   - type: dropdown
     id: activity
     attributes:
-      multiple: true
       label: Activity ID(s)
       description: |
-        MIP activities this model/source will participate in.
+        Select all that apply.
+        
+        <details>
+        <summary>Completion Guidance</summary>
         
         **For models**: Select all activities you plan to contribute to
         **For obs/reanalysis**: Select activities where this data will be used
         
-        * Select Multiple *
+        </details>
       options:
         - "AerChemMIP"
         - "C4MIP"
@@ -85,7 +97,10 @@ body:
     attributes:
       label: Cohort
       description: |
-        Publication status or data availability.
+        Select the publication status or data availability.
+        
+        <details>
+        <summary>Completion Guidance</summary>
         
         **Options:**
         - Published: Peer-reviewed model description exists
@@ -97,7 +112,7 @@ body:
         - Registered: Available with registration
         - Preliminary: Pre-release version
         
-        * Select Multiple *
+        </details>
       options:
         - "Published"
         - "Registered"
@@ -110,13 +125,14 @@ body:
     attributes:
       label: Institution(s)
       description: |
-        Institution(s) responsible for this model/source.
-        
         Select all that apply for multi-institutional efforts.
         
-        Institutions must be registered in the WCRP-universe repository.
+        <details>
+        <summary>Completion Guidance</summary>
         
-        * Select Multiple *
+        Institutions must be registered in the WCRP-constants repository.
+        
+        </details>
       options:
         - "LMD"
         - "CMIP-IPO"
@@ -445,7 +461,10 @@ body:
     attributes:
       label: License
       description: |
-        Data license type.
+        Select the data license type.
+        
+        <details>
+        <summary>Completion Guidance</summary>
         
         **Most common:**
         - cc-by-4.0: Creative Commons Attribution 4.0
@@ -454,7 +473,7 @@ body:
         
         For obs/reanalysis, specify applicable license.
         
-        * Select Multiple *
+        </details>
       options:
         - "CC BY 4.0"
         - "CC BY-NC-SA 4.0"
