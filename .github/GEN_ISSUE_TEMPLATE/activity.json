@@ -1,0 +1,9 @@
+{
+  "name": "New Review submission : Activity",
+  "description": "Add activity to CMIP7 CVs",
+  "title": "New Review submission : Activity:",
+  "labels": ["delta", "activity", "Review"],
+  "issue_category": "activity",
+  "dropdown_title": "Completion Guidance",
+  "field_guidance": {}
+}

@@ -1,0 +1,9 @@
+{
+  "name": "New Review submission : Scientific Domain",
+  "description": "Add scientific domain to CMIP7 CVs",
+  "title": "New Review submission : Scientific Domain:",
+  "labels": ["delta", "scientific_domain", "Review"],
+  "issue_category": "scientific_domain",
+  "dropdown_title": "Completion Guidance",
+  "field_guidance": {}
+}

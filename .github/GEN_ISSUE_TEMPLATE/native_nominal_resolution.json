@@ -1,0 +1,9 @@
+{
+  "name": "New Review submission : Resolution",
+  "description": "Add resolution to CMIP7 CVs",
+  "title": "New Review submission : Resolution:",
+  "labels": ["delta", "resolution", "Review"],
+  "issue_category": "native_nominal_resolution",
+  "dropdown_title": "Completion Guidance",
+  "field_guidance": {}
+}

@@ -1,12 +1,5 @@
-# Activity Template Configuration
-
-TEMPLATE_CONFIG = {
-    'name': 'New Review submission : Activity',
-    'description': 'Add activity to CMIP7 CVs',
-    'title': 'New Review submission : Activity:',
-    'labels': ['delta', 'activity', 'Review'],
-    'issue_category': 'activity'
-}
+# Activity Template Data
+# Configuration is in activity.json
 
 import cmipld
 from cmipld.utils.ldparse import name_extract

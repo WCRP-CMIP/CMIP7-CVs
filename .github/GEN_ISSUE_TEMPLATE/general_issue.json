@@ -1,0 +1,11 @@
+{
+  "name": "General Issue",
+  "description": "Report a general issue, bug, or request",
+  "title": "Issue: <Brief description here>",
+  "labels": ["cmip7", "general"],
+  "issue_category": "general",
+  "dropdown_title": "Completion Guidance",
+  "field_guidance": {
+    "description": "For bugs: What happened? What did you expect to happen?\nFor features: What would you like to see added/changed?"
+  }
+}

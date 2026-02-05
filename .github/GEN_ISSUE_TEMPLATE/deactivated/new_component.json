@@ -1,0 +1,19 @@
+{
+  "name": "Model Component Submission",
+  "description": "Submit metadata for a model component as specified in the EMD specification.",
+  "title": "[EMD] Model Component Submission",
+  "labels": ["emd-submission", "component"],
+  "issue_category": "component",
+  "dropdown_title": "Completion Guidance",
+  "field_guidance": {
+    "instructions": "Each component description enables traceability across different models, supports scientific evaluation, and is mandatory for publishing model data to ESGF. The information you provide helps the climate modeling community understand your component's scientific basis, track how components are shared between institutions, and ensure proper attribution in research studies.",
+    "component": "MANDATORY field from Model component process CV.\n\nIf your component type is not listed, you can register a new entry at: https://github.com/WCRP-CMIP/WCRP-constants/tree/main/realm",
+    "embedded_in": "Select the model component(s) in which this component is embedded.\n\nOPTIONAL field from Model component process CV.\n\nIf your component type is not listed, you can register a new entry at: https://github.com/WCRP-CMIP/WCRP-constants/tree/main/realm",
+    "coupled_with": "Select the model component(s) to which this component is coupled.\n\nOPTIONAL field from Model component process CV.\n\nIf your component type is not listed, you can register a new entry at: https://github.com/WCRP-CMIP/WCRP-constants/tree/main/realm",
+    "horizontal_grid": "MANDATORY field from Native horizontal grid Type CV.\n\nIf your grid type is not listed, you can register a new entry at: https://github.com/WCRP-CMIP/WCRP-constants/tree/main/native-horizontal-grid-type",
+    "horizontal_region": "MANDATORY field from Region CV.\n\nIf your region is not listed, you can register a new entry at: https://github.com/WCRP-CMIP/WCRP-constants/tree/main/native-horizontal-grid-region",
+    "horizontal_temporal_refinement": "MANDATORY field from Temporal refinement CV.\n\nIf your temporal refinement type is not listed, you can register a new entry at: https://github.com/WCRP-CMIP/WCRP-constants/tree/main/native-horizontal-grid-temporal-refinement",
+    "horizontal_nominal_resolution": "MANDATORY field from Nominal resolution CV.\n\nIf your resolution is not listed, you can register a new entry at: https://github.com/WCRP-CMIP/WCRP-constants/tree/main/resolution",
+    "vertical_coordinate": "MANDATORY field from Coordinate CV.\n\nIf your coordinate type is not listed, you can register a new entry at: https://github.com/WCRP-CMIP/WCRP-constants/tree/main/native-vertical-grid-coordinate"
+  }
+}

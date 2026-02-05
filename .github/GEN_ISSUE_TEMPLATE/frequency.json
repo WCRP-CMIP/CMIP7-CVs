@@ -1,0 +1,9 @@
+{
+  "name": "New Review submission : Frequency",
+  "description": "Add frequency to CMIP7 CVs",
+  "title": "New Review submission : Frequency:",
+  "labels": ["delta", "frequency", "Review"],
+  "issue_category": "frequency",
+  "dropdown_title": "Completion Guidance",
+  "field_guidance": {}
+}

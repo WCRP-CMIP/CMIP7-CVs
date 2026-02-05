@@ -1,0 +1,9 @@
+{
+  "name": "New Review submission : Source Type",
+  "description": "Add source type to CMIP7 CVs",
+  "title": "New Review submission : Source Type:",
+  "labels": ["delta", "source-type", "Review"],
+  "issue_category": "source_type",
+  "dropdown_title": "Completion Guidance",
+  "field_guidance": {}
+}

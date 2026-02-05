@@ -1,13 +1,5 @@
-# Scientific Domain Template Configuration
-# (Previously called "realm" - updated to use correct WCRP terminology)
-
-TEMPLATE_CONFIG = {
-    'name': 'New Review submission : Scientific Domain',
-    'description': 'Add scientific domain to CMIP7 CVs',
-    'title': 'New Review submission : Scientific Domain:',
-    'labels': ['delta', 'scientific_domain', 'Review'],
-    'issue_category': 'scientific_domain'
-}
+# Scientific Domain Template Data
+# Configuration is in realm.json
 
 import cmipld
 from cmipld.utils.ldparse import name_extract

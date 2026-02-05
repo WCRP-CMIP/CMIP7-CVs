@@ -1,12 +1,5 @@
-# CMIP7 Source/Model Template Configuration
-
-TEMPLATE_CONFIG = {
-    'name': 'New Review submission : Model / Source',
-    'description': 'Register a climate model or data source for CMIP7',
-    'title': 'New Review submission : Source:',
-    'labels': ['delta', 'source', 'Review'],
-    'issue_category': ['source']
-}
+# CMIP7 Source/Model Template Data
+# Configuration is in source.json
 
 import cmipld
 from cmipld.utils.ldparse import name_extract, name_multikey_extract
@@ -40,4 +33,3 @@ DATA = {
     'issue_category': ['source'],
     'issue_kind': ['New', 'Modify']
 }
-

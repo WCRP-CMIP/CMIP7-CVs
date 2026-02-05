@@ -59,3 +59,15 @@ body:
         - "no-value"
     validations:
       required: true
+
+  - type: dropdown
+    id: issue_kind
+    attributes:
+      label: Issue Kind
+      description: Select whether this is a new submission or modification of existing entry.
+      options:
+        - "New"
+        - "Modify"
+      default: 0
+    validations:
+      required: true

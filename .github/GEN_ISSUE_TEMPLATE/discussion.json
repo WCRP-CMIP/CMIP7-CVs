@@ -1,0 +1,14 @@
+{
+  "name": "Start a Discussion",
+  "description": "Open a topic for discussion or request community input",
+  "title": "Discussion: <Topic here>",
+  "labels": ["cmip7", "discussion"],
+  "issue_category": "discussion",
+  "dropdown_title": "Completion Guidance",
+  "field_guidance": {
+    "background": "Include:\n- Why this discussion is needed\n- Current situation or problem\n- Any relevant history or previous discussions",
+    "main_points": "Use bullet points or numbered lists for clarity.",
+    "stakeholders": "You can @mention specific people or teams, or describe groups that should provide input.",
+    "desired_outcome": "Examples:\n- Consensus on approach\n- List of requirements\n- Decision on policy\n- Community feedback"
+  }
+}

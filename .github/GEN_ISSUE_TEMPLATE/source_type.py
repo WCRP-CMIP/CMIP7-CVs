@@ -1,12 +1,5 @@
-# Source Type Template Configuration
-
-TEMPLATE_CONFIG = {
-    'name': 'New Review submission : Source Type',
-    'description': 'Add source type to CMIP7 CVs',
-    'title': 'New Review submission : Source Type:',
-    'labels': ['delta', 'source-type', 'Review'],
-    'issue_category': 'source_type'
-}
+# Source Type Template Data
+# Configuration is in source_type.json
 
 import cmipld
 from cmipld.utils.ldparse import name_extract

@@ -1,12 +1,5 @@
-# CMIPLD Experiment Template Configuration
-
-TEMPLATE_CONFIG = {
-    'name': 'New Review submission : Experiment',
-    'description': 'Type: experiment',
-    'title': 'New Review submission : Experiment:',
-    'labels': ['delta', 'experiment', 'Review'],
-    'issue_category': ['experiment']
-}
+# CMIPLD Experiment Template Data
+# Configuration is in experiment.json
 
 import cmipld
 from cmipld.utils.ldparse import *
@@ -33,4 +26,3 @@ DATA = {
     'milestone': ['Review'],
     'issue_kind': ['New', 'Modify']
 }
-

@@ -1,12 +1,5 @@
-# Region Template Configuration
-
-TEMPLATE_CONFIG = {
-    'name': 'New Review submission : Region',
-    'description': 'Add region to CMIP7 CVs',
-    'title': 'New Review submission : Region:',
-    'labels': ['delta', 'region', 'Review'],
-    'issue_category': 'region'
-}
+# Region Template Data
+# Configuration is in region.json
 
 import cmipld
 from cmipld.utils.ldparse import name_extract

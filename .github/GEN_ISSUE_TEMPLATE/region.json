@@ -1,0 +1,9 @@
+{
+  "name": "New Review submission : Region",
+  "description": "Add region to CMIP7 CVs",
+  "title": "New Review submission : Region:",
+  "labels": ["delta", "region", "Review"],
+  "issue_category": "region",
+  "dropdown_title": "Completion Guidance",
+  "field_guidance": {}
+}

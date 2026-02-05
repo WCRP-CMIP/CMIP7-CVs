@@ -1,12 +1,5 @@
-# General Issue Template Configuration
-
-TEMPLATE_CONFIG = {
-    'name': 'General Issue',
-    'description': 'Report a general issue, bug, or request',
-    'title': 'Issue: <Brief description here>',
-    'labels': ['cmip7', 'general'],
-    'issue_category': 'general'
-}
+# General Issue Template Data
+# Configuration is in general_issue.json
 
 # Data for this template
 DATA = {

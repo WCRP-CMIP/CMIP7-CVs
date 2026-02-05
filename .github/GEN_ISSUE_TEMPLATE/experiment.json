@@ -1,0 +1,21 @@
+{
+  "name": "New Review submission : Experiment",
+  "description": "Type: experiment",
+  "title": "New Review submission : Experiment:",
+  "labels": ["delta", "experiment", "Review"],
+  "issue_category": ["experiment"],
+  "dropdown_title": "Completion Guidance",
+  "field_guidance": {
+    "validation_key": "There are rules for constructing acceptable experiment names which can be found in this guidance document (https://doi.org/10.5281/zenodo.14929768).\n\nNote: This name must be unique across all experiments.",
+    "ui_label": "As examples, the CMIP6 titles are listed at https://wcrp-cmip.github.io/CMIP6_CVs/docs/CMIP6_experiment_id.html in the third column labeled experiments.",
+    "description": "Please provide:\n1. Detailed experiment configuration\n2. Required model settings\n3. Experiment conditions\n4. Links to relevant references\n5. Similarities to CMIP6 experiments\n6. Forcing differences from parent experiment",
+    "activity": "Note: phases are not considered separate activities.",
+    "parent_experiment": "Please note that scenarioMIP experiment names are under discussion and are likely to change.",
+    "tier": "- Tier 1: Essential to primary scientific goals\n- Tier 2: Major scientific value\n- Tier 3: Useful but lower priority",
+    "model_components_header": "> * AER  : Aerosol treatment in an atmospheric model where concentrations are calculated based on emissions, transformation, and removal processes (rather than being prescribed or omitted entirely)\n> * AGCM : Atmospheric general circulation model run with prescribed ocean surface conditions and usually a model of the land surface\n> * AOGCM : Coupled atmosphere-ocean global climate model, additionally including explicit representation of at least the land and sea ice\n> * BGC  : Biogeochemistry model component that at the very least accounts for carbon reservoirs and fluxes in the atmosphere, terrestrial biosphere, and ocean\n> * CHEM : Chemistry treatment in an atmospheric model that calculates atmospheric oxidant concentrations (including at least ozone), rather than prescribing them\n> * ISM  : Ice-sheet model that includes ice-flow\n> * LAND : Land model run uncoupled from the atmosphere\n> * OGCM : Ocean general circulation model run uncoupled from an AGCM but, usually including a sea-ice model\n> * RAD  : Radiation component of an atmospheric model run offline\n> * SLAB : Slab-ocean used with an AGCM in representing the atmosphere-ocean coupled system",
+    "model_realms_required": "Components that must be included in models when running this experiment.\nSee note 15 in https://wcrp-cmip.github.io/WGCM_Infrastructure_Panel/Papers/CMIP6_global_attributes_filenames_CVs_v6.2.7.pdf for full descriptions.",
+    "model_realms_additional_allowed": "Components that may be included in models when running this experiment in addition to the required components listed above.\nSee note 15 in https://wcrp-cmip.github.io/WGCM_Infrastructure_Panel/Papers/CMIP6_global_attributes_filenames_CVs_v6.2.7.pdf for full description.",
+    "start_date": "For experiments initialized on a particular historical date, enter that date in the form YYYY-MM-DD.\n\nIf a set of sub-experiments are initialized at different times, list all the start times requested.\n\n- For example, for an historical simulation initialized at the beginning of 1850, enter 1850-01-01.\n- For a set of DCPP prediction runs, enter all dates of the first full forecast/hindcast year (e.g., 1960, 1970, 1980, 1990, 2000, 2010).\n- If there is no specific start date please enter the word none",
+    "minimum_number_of_years": "For most experiments this will be the actual length of the desired simulation.\n\nCalculation: (end_year - start_year + 1)\n- For example, 172 would be specified for a run initialized in 1850-01-01 and extending to 2022-01-01."
+  }
+}

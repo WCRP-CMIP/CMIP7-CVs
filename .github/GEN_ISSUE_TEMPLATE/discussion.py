@@ -1,12 +1,5 @@
-# Discussion Template Configuration
-
-TEMPLATE_CONFIG = {
-    'name': 'Start a Discussion',
-    'description': 'Open a topic for discussion or request community input',
-    'title': 'Discussion: <Topic here>',
-    'labels': ['cmip7', 'discussion'],
-    'issue_category': 'discussion'
-}
+# Discussion Template Data
+# Configuration is in discussion.json
 
 # Data for this template
 DATA = {
