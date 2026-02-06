@@ -1,0 +1,30 @@
+{
+    "validation_key": "frequency",
+    "ui_label": "FrequencyCollection",
+    "description": "CMIP7 Permissible Frequencies",
+    "frequency": [
+        "1hr",
+        "3hr",
+        "6hr",
+        "day",
+        "dec",
+        "fx",
+        "mon",
+        "yr",
+    ],
+    "@context": {
+        "@base": "https://wcrp-cmip.github.io/CMIP7-CVs/project/",
+        "@vocab": "https://esgf.github.io/esgf-vocab/api_documentation/data_descriptors.html#esgvoc.api.data_descriptors.Frequency",
+        "frequency": {
+            "@context": "https://constants.mipcvs.dev/frequency/_context",
+            "@container": "@id",
+            "@type": "@id"
+        }
+    },
+    "@type": [
+        "wcrp:frequency",
+        "esgvoc:Frequency",
+        "cmip7"
+    ],
+    "@id": "frequency"
+}

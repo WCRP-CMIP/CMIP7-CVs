@@ -1,0 +1,8 @@
+{
+    "@context": {
+        "@alt_base": "https://wcrp-cmip.github.io/CMIP7-CVs/source/",
+        "@base": "https://cmip7.mipcvs.dev/source/",
+        "@esgvoc": "Source",
+        "@vocab": "https://cmip7.mipcvs.dev/docs/contents/Source/"
+    }
+}

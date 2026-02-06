@@ -1,0 +1,26 @@
+{
+    "validation_key": "license",
+    "ui_label": "",
+    "description": "",
+    "license": [
+        {
+            "regex": "^CMIP7 model data produced by .* is licensed under a Creative Commons .* License (https://creativecommons\\.org/.*)\\. *Consult https://pcmdi\\.llnl\\.gov/CMIP7/TermsOfUse for terms of use governing CMIP7 output, including citation requirements and proper acknowledgment\\. *The data producers and data providers make no warranty, either express or implied, including, but not limited to, warranties of merchantability and fitness for a particular purpose\\. *All liabilities arising from the supply of the information (including any liability arising in negligence) are excluded to the fullest extent permitted by law\\.$",
+            "@id": "cc-by-4.0"
+        }
+    ],
+    "@context": {
+        "@alt_base": "https://wcrp-cmip.github.io/CMIP7-CVs/license/",
+        "@base": "https://cmip7.mipcvs.dev/license/",
+        "@vocab": "https://cmip7.mipcvs.dev/docs/contents/License/",
+        "license": {
+            "@context": "https://wcrp-cmip.github.io/WCRP-universe/license/_context",
+            "@type": "@id"
+        }
+    },
+    "@type": [
+        "wcrp:license",
+        "esgvoc:License",
+        "cmip7"
+    ],
+    "@id": "license"
+}
