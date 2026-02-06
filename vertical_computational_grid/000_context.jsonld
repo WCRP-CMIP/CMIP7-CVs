@@ -1,8 +1,30 @@
 {
-  "@context": {
-    "id": "@id",
-    "type": "@type",
-    "@base": "https://esgvoc.ipsl.fr/resource/universe/vertical_computational_grid/",
-    "vertical_computational_grid": "https://esgvoc.ipsl.fr/resource/universe/vertical_computational_grid"
-  }
+    "@context": {
+        "@base": "https://esgvoc.ipsl.fr/resource/universe/vertical_computational_grid/",
+        "@vocab": "http://schema.org/",
+        "id": "@id",
+        "type": "@type",
+        "description": {
+            "@id": "https://schema.org/description"
+        },
+        "vertical_coordinate": {
+            "@id": "https://esgvoc.ipsl.fr/resource/universe/vertical_coordinate/",
+            "@type": "@id",
+            "@context": {
+                "@base": "https://esgvoc.ipsl.fr/resource/universe/vertical_coordinate/"
+            }
+        },
+        "n_z": {
+            "@id": "https://esgvoc.ipsl.fr/resource/universe/vertical_levels"
+        },
+        "bottom_layer_thickness": {
+            "@id": "https://esgvoc.ipsl.fr/resource/universe/bottom_layer_thickness"
+        },
+        "top_layer_thickness": {
+            "@id": "https://esgvoc.ipsl.fr/resource/universe/top_layer_thickness"
+        },
+        "top_of_model": {
+            "@id": "https://esgvoc.ipsl.fr/resource/universe/top_of_model"
+        }
+    }
 }

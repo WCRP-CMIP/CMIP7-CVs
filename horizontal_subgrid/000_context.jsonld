@@ -1,8 +1,26 @@
 {
-  "@context": {
-    "id": "@id",
-    "type": "@type",
-    "@base": "https://esgvoc.ipsl.fr/resource/universe/horizontal_subgrid/",
-    "horizontal_subgrid": "https://esgvoc.ipsl.fr/resource/universe/horizontal_subgrid"
-  }
+    "esgvoc_resolve_modes": {
+        "cell_variable_type": "reference",
+        "horizontal_grid_cells": "full"
+    },
+    "@context": {
+        "@base": "https://esgvoc.ipsl.fr/resource/universe/horizontal_subgrid/",
+        "@vocab": "http://schema.org/",
+        "id": "@id",
+        "type": "@type",
+        "cell_variable_type": {
+            "@id": "https://esgvoc.ipsl.fr/resource/universe/cell_variable_type/",
+            "@type": "@id",
+            "@context": {
+                "@base": "https://esgvoc.ipsl.fr/resource/universe/cell_variable_type/"
+            }
+        },
+        "horizontal_grid_cells": {
+            "@id": "https://esgvoc.ipsl.fr/resource/universe/horizontal_grid_cell/",
+            "@type": "@id",
+            "@context": {
+                "@base": "https://esgvoc.ipsl.fr/resource/universe/horizontal_grid_cell/"
+            }
+        }
+    }
 }

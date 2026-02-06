@@ -1,8 +1,70 @@
 {
-  "@context": {
-    "id": "@id",
-    "type": "@type",
-    "@base": "https://esgvoc.ipsl.fr/resource/universe/model_componentEMD/",
-    "model_componentEMD": "https://esgvoc.ipsl.fr/resource/universe/model_componentEMD"
-  }
+    "esgvoc_resolve_modes": {
+        "component": "reference",
+        "embedded_in": "reference",
+        "coupled_with": "reference",
+        "references": "full",
+        "horizontal_computational_grid": "full",
+        "vertical_computational_grid": "full"
+    },
+    "@context": {
+        "@base": "https://esgvoc.ipsl.fr/resource/universe/model_componentEMD/",
+        "@vocab": "http://schema.org/",
+        "id": "@id",
+        "type": "@type",
+        "description": {
+            "@id": "https://schema.org/description"
+        },
+        "name": {
+            "@id": "https://schema.org/name"
+        },
+        "family": {
+            "@id": "https://esgvoc.ipsl.fr/resource/universe/component_family"
+        },
+        "component": {
+            "@id": "https://esgvoc.ipsl.fr/resource/universe/component_type/",
+            "@type": "@id",
+            "@context": {
+                "@base": "https://esgvoc.ipsl.fr/resource/universe/component_type/"
+            }
+        },
+        "code_base": {
+            "@id": "https://esgvoc.ipsl.fr/resource/universe/code_base"
+        },
+        "embedded_in": {
+            "@id": "https://esgvoc.ipsl.fr/resource/universe/embedded_in/",
+            "@type": "@id",
+            "@context": {
+                "@base": "https://esgvoc.ipsl.fr/resource/universe/component_type/"
+            }
+        },
+        "coupled_with": {
+            "@id": "https://esgvoc.ipsl.fr/resource/universe/coupled_with/",
+            "@type": "@id",
+            "@context": {
+                "@base": "https://esgvoc.ipsl.fr/resource/universe/component_type/"
+            }
+        },
+        "references": {
+            "@id": "https://esgvoc.ipsl.fr/resource/universe/reference/",
+            "@type": "@id",
+            "@context": {
+                "@base": "https://esgvoc.ipsl.fr/resource/universe/reference/"
+            }
+        },
+        "horizontal_computational_grid": {
+            "@id": "https://esgvoc.ipsl.fr/resource/universe/horizontal_computational_grid/",
+            "@type": "@id",
+            "@context": {
+                "@base": "https://esgvoc.ipsl.fr/resource/universe/horizontal_computational_grid/"
+            }
+        },
+        "vertical_computational_grid": {
+            "@id": "https://esgvoc.ipsl.fr/resource/universe/vertical_computational_grid/",
+            "@type": "@id",
+            "@context": {
+                "@base": "https://esgvoc.ipsl.fr/resource/universe/vertical_computational_grid/"
+            }
+        }
+    }
 }
