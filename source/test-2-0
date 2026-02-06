@@ -1,0 +1,25 @@
+{
+    "validation_key": "TEST-2-0",
+    "ui_label": "",
+    "description": "Test model 2 description. Here is some more text not part of the EMD",
+    "activity": [
+        "RFMIP"
+    ],
+    "cohort": [
+        "Published"
+    ],
+    "institution": [
+        "CNRM"
+    ],
+    "license_info": [
+        "cc-by-4p0"
+    ],
+    "model_documentation": "cnrm-esm2-1e",
+    "@context": "_context",
+    "@type": [
+        "wcrp:source",
+        "esgvoc:Source",
+        "cmip7"
+    ],
+    "@id": "test-2-0"
+}
