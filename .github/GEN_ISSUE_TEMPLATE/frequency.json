@@ -1,9 +1,11 @@
 {
-  "name": "New Review submission : Frequency",
-  "description": "Add frequency to CMIP7 CVs",
-  "title": "New Review submission : Frequency:",
+  "name": "Link Frequency to CMIP7",
+  "description": "Register a frequency for use in CMIP7",
+  "title": "Link Frequency to CMIP7:",
   "labels": ["delta", "frequency", "Review"],
   "issue_category": "frequency",
   "dropdown_title": "Completion Guidance",
-  "field_guidance": {}
+  "field_guidance": {
+    "header": "Frequencies are initially defined in the [WCRP-constants repository](https://github.com/WCRP-CMIP/WCRP-constants). You can view existing frequencies at https://wcrp-cmip.github.io/WCRP-constants/frequency/\n\n**If your frequency is not listed below**, you must first [register it in WCRP-constants](https://github.com/WCRP-CMIP/WCRP-constants/issues/new?template=frequency.yml) and wait for it to be approved before linking it here.\n\nOnce your frequency exists in WCRP-constants, use this form to make it available for use in CMIP7.\n\n---\n\n**Currently registered in CMIP7:**\n{cmip7_frequency}"
+  }
 }

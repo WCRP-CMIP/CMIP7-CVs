@@ -52,7 +52,7 @@ body:
     attributes:
       label: Description
       description: |
-        Describe the experiment configuration, conditions and requirements.
+        Describe the experiment configuration conditions and requirements.
         
         <details>
         <summary>Completion Guidance</summary>
@@ -96,6 +96,21 @@ body:
         <summary>Completion Guidance</summary>
         
         Note: phases are not considered separate activities.
+        
+        **Available activities:**
+        - None Specified
+        - AerChemMIP
+        - C4MIP
+        - CFMIP
+        - CMIP
+        - DAMIP
+        - DCPP
+        - GeoMIP
+        - HighResMIP
+        - LMIP
+        - PMIP
+        - RFMIP
+        - ScenarioMIP
         
         </details>
       options:
@@ -297,9 +312,6 @@ body:
         
         Select the required and optional model components for this experiment.
         
-        <details>
-        <summary>Completion Guidance</summary>
-        
         > * AER  : Aerosol treatment in an atmospheric model where concentrations are calculated based on emissions, transformation, and removal processes (rather than being prescribed or omitted entirely)
         > * AGCM : Atmospheric general circulation model run with prescribed ocean surface conditions and usually a model of the land surface
         > * AOGCM : Coupled atmosphere-ocean global climate model, additionally including explicit representation of at least the land and sea ice
@@ -310,8 +322,6 @@ body:
         > * OGCM : Ocean general circulation model run uncoupled from an AGCM but, usually including a sea-ice model
         > * RAD  : Radiation component of an atmospheric model run offline
         > * SLAB : Slab-ocean used with an AGCM in representing the atmosphere-ocean coupled system
-        
-        </details>
 
   - type: dropdown
     id: model_realms_required

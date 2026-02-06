@@ -1,21 +1,32 @@
-name: "New Review submission : Source Type"
-description: Add source type to CMIP7 CVs
-title: "New Review submission : Source Type:"
+name: Link Source Type to CMIP7
+description: Register a source type for use in CMIP7
+title: "Link Source Type to CMIP7:"
 labels: ['delta', 'source-type', 'Review']
 body:
   - type: markdown
     attributes:
       value: |
-        This form appends the following source type into the permitted CMIP7 Controlled Vocabularies list.
+        ## Link Source Type to CMIP7
         
-        The permitted set of values are defined in the [WCRP constants repo](https://wcrp-cmip.github.io/WCRP-constants/source_type/). If your item is missing please [register here first](https://github.com/WCRP-CMIP/WCRP-constants/issues/new?template=source_type.yml) and wait a day after it has been confirmed for this script to be remade.
+        Select source types from WCRP-constants to make available in CMIP7.
+        
+        Source types are initially defined in the [WCRP-constants repository](https://github.com/WCRP-CMIP/WCRP-constants). You can view existing source types at https://wcrp-cmip.github.io/WCRP-constants/source_type/
+        
+        **If your source type is not listed below**, you must first [register it in WCRP-constants](https://github.com/WCRP-CMIP/WCRP-constants/issues/new?template=source_type.yml) and wait for it to be approved before linking it here.
+        
+        Once your source type exists in WCRP-constants, use this form to make it available for use in CMIP7.
+        
+        ---
+        
+        **Currently registered in CMIP7:**
+        
 
   - type: dropdown
     id: source_type
     attributes:
       multiple: true
       label: Source Type
-      description: Select the source types to add to CMIP7
+      description: Select the source types to add to CMIP7.
       options:
         - "AER"
         - "AGCM"

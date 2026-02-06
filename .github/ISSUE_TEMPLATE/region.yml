@@ -1,27 +1,43 @@
-name: "New Review submission : Region"
-description: Add region to CMIP7 CVs
-title: "New Review submission : Region:"
+name: Link Region to CMIP7
+description: Register a region for use in CMIP7
+title: "Link Region to CMIP7:"
 labels: ['delta', 'region', 'Review']
 body:
   - type: markdown
     attributes:
       value: |
-        This form appends the following region into the permitted CMIP7 Controlled Vocabularies list.
+        ## Link Region to CMIP7
         
-        The permitted set of values are defined in the WCRP constants repo. Regions are not yet in the constants repo - this is a CMIP7-specific CV.
+        Select regions from WCRP-constants to make available in CMIP7.
+        
+        Regions are initially defined in the [WCRP-constants repository](https://github.com/WCRP-CMIP/WCRP-constants). You can view existing regions at https://wcrp-cmip.github.io/WCRP-constants/region/
+        
+        **If your region is not listed below**, you must first [register it in WCRP-constants](https://github.com/WCRP-CMIP/WCRP-constants/issues/new?template=region.yml) and wait for it to be approved before linking it here.
+        
+        Once your region exists in WCRP-constants, use this form to make it available for use in CMIP7.
+        
+        ---
+        
+        **Currently registered in CMIP7:**
+        
 
   - type: dropdown
     id: region
     attributes:
       multiple: true
       label: Region
-      description: Select the regions to add to CMIP7
+      description: Select the regions to add to CMIP7.
       options:
-        - "ant"
-        - "glb"
-        - "gre"
-        - "nhem"
+        - "30s-90s"
+        - "antarctica"
+        - "arctic"
+        - "global"
+        - "greenland"
+        - "limited-area"
+        - "northern_hemisphere"
         - "shem"
+        - "southern_hemisphere"
+        - "tropics"
     validations:
       required: true
 

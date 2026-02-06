@@ -1,4 +1,4 @@
 field_order,field_type,field_id,label,description,data_source,required,placeholder,options_type,default_value
-1,markdown,header,,"This form appends the following region into the permitted CMIP7 Controlled Vocabularies list.\n\nThe permitted set of values are defined in the WCRP constants repo. Regions are not yet in the constants repo - this is a CMIP7-specific CV.",none,false,,,
-2,multi-select,region,Region,Select the regions to add to CMIP7,region,true,,dict_multiple,
+1,markdown,header,,"## Link Region to CMIP7\n\nSelect regions from WCRP-constants to make available in CMIP7.",none,false,,,
+2,multi-select,region,Region,Select the regions to add to CMIP7.,region,true,,dict_multiple,
 3,dropdown,issue_kind,Issue Kind,Select whether this is a new submission or modification of existing entry.,issue_kind,true,,list,0

@@ -1,21 +1,32 @@
-name: "New Review submission : Resolution"
-description: Add resolution to CMIP7 CVs
-title: "New Review submission : Resolution:"
+name: Link Resolution to CMIP7
+description: Register a resolution for use in CMIP7
+title: "Link Resolution to CMIP7:"
 labels: ['delta', 'resolution', 'Review']
 body:
   - type: markdown
     attributes:
       value: |
-        This form appends the following resolution into the permitted CMIP7 Controlled Vocabularies list.
+        ## Link Resolution to CMIP7
         
-        The permitted set of values are defined in the [WCRP constants repo](https://wcrp-cmip.github.io/WCRP-constants/resolution/). If your item is missing please [register here first](https://github.com/WCRP-CMIP/WCRP-constants/issues/new?template=resolution.yml) and wait a day after it has been confirmed for this script to be remade.
+        Select resolutions from WCRP-constants to make available in CMIP7.
+        
+        Resolutions are initially defined in the [WCRP-constants repository](https://github.com/WCRP-CMIP/WCRP-constants). You can view existing resolutions at https://wcrp-cmip.github.io/WCRP-constants/resolution/
+        
+        **If your resolution is not listed below**, you must first [register it in WCRP-constants](https://github.com/WCRP-CMIP/WCRP-constants/issues/new?template=resolution.yml) and wait for it to be approved before linking it here.
+        
+        Once your resolution exists in WCRP-constants, use this form to make it available for use in CMIP7.
+        
+        ---
+        
+        **Currently registered in CMIP7:**
+        
 
   - type: dropdown
     id: native_nominal_resolution
     attributes:
       multiple: true
       label: Resolution
-      description: Select the resolutions to add to CMIP7
+      description: Select the resolutions to add to CMIP7.
       options:
         - "0.5 km"
         - "1 km"
