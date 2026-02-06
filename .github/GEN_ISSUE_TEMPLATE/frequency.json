@@ -4,8 +4,8 @@
   "title": "Link Frequency to CMIP7:",
   "labels": ["delta", "frequency", "Review"],
   "issue_category": "frequency",
-  "dropdown_title": "Existing entries",
+  "dropdown_title": "Currently registered in CMIP7",
   "field_guidance": {
-    "frequency": "**Currently registered in CMIP7:**\n{cmip7_frequency}"
+    "frequency": "{cmip7_frequency}"
   }
 }

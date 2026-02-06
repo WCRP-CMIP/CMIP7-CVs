@@ -4,8 +4,8 @@
   "title": "Link Source Type to CMIP7:",
   "labels": ["delta", "source-type", "Review"],
   "issue_category": "source_type",
-  "dropdown_title": "Existing entries",
+  "dropdown_title": "Currently registered in CMIP7",
   "field_guidance": {
-    "source_type": "**Currently registered in CMIP7:**\n{cmip7_source_type}"
+    "source_type": "{cmip7_source_type}"
   }
 }

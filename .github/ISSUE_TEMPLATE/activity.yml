@@ -9,13 +9,23 @@ body:
       multiple: true
       label: Activity
       description: |
-        If your activity is not listed below, you must first register it in the [WCRP-constants repository](https://wcrp-cmip.github.io/WCRP-constants/activity/) after which it should appear in the dropdown below.
+        If your activity is not listed below, you must first register it in the [WCRP-universe repository](https://github.com/WCRP-CMIP/WCRP-universe/issues/new?template=activity.yml) after which it should appear in the dropdown below.
         
         <details>
-        <summary>Existing entries</summary>
+        <summary>Currently registered in CMIP7</summary>
         
-        **Currently registered in CMIP7:**
-        
+        - AerChemMIP
+        - C4MIP
+        - CFMIP
+        - CMIP
+        - DAMIP
+        - DCPP
+        - GeoMIP
+        - HighResMIP
+        - LMIP
+        - PMIP
+        - RFMIP
+        - ScenarioMIP
         
         </details>
       options:

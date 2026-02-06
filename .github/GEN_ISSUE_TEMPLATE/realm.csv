@@ -1,4 +1,4 @@
 field_order,field_type,field_id,label,description,data_source,required,placeholder,options_type,default_value
-1,multi-select,realm,Scientific Domain,"If your scientific domain is not listed below, you must first register it in the [WCRP-constants repository](https://wcrp-cmip.github.io/WCRP-constants/scientific_domain/) after which it should appear in the dropdown below.",realm,true,,dict_multiple,
+1,multi-select,realm,Scientific Domain,"If your scientific domain is not listed below, you must first register it in the [WCRP-universe repository](https://github.com/WCRP-CMIP/WCRP-universe/issues/new?template=scientific_domain.yml) after which it should appear in the dropdown below.",realm,true,,dict_multiple,
 2,markdown,metadata_header,Issue Handling Metadata [for internal use only],"## Issue Handling Metadata [for internal use only]",none,false,,,
 3,dropdown,issue_kind,Issue Kind,Select whether this is a new submission or modification of existing entry.,issue_kind,true,,list,0

@@ -4,8 +4,8 @@
   "title": "Link Resolution to CMIP7:",
   "labels": ["delta", "resolution", "Review"],
   "issue_category": "native_nominal_resolution",
-  "dropdown_title": "Existing entries",
+  "dropdown_title": "Currently registered in CMIP7",
   "field_guidance": {
-    "native_nominal_resolution": "**Currently registered in CMIP7:**\n{cmip7_resolution}"
+    "native_nominal_resolution": "{cmip7_resolution}"
   }
 }

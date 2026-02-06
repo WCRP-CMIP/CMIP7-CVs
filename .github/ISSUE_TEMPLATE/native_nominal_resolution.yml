@@ -9,13 +9,26 @@ body:
       multiple: true
       label: Resolution
       description: |
-        If your resolution is not listed below, you must first register it in the [WCRP-constants repository](https://wcrp-cmip.github.io/WCRP-constants/resolution/) after which it should appear in the dropdown below.
+        If your resolution is not listed below, you must first register it in the [WCRP-universe repository](https://github.com/WCRP-CMIP/WCRP-universe/issues/new?template=resolution.yml) after which it should appear in the dropdown below.
         
         <details>
-        <summary>Existing entries</summary>
+        <summary>Currently registered in CMIP7</summary>
         
-        **Currently registered in CMIP7:**
-        
+        - 0.5 km
+        - 1 km
+        - 10 km
+        - 100 km
+        - 1000 km
+        - 10000 km
+        - 1x1 degree
+        - 2.5 km
+        - 25 km
+        - 250 km
+        - 2500 km
+        - 5 km
+        - 50 km
+        - 500 km
+        - 5000 km
         
         </details>
       options:

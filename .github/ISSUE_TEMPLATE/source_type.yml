@@ -9,13 +9,22 @@ body:
       multiple: true
       label: Source Type
       description: |
-        If your source type is not listed below, you must first register it in the [WCRP-constants repository](https://wcrp-cmip.github.io/WCRP-constants/source_type/) after which it should appear in the dropdown below.
+        If your source type is not listed below, you must first register it in the [WCRP-universe repository](https://github.com/WCRP-CMIP/WCRP-universe/issues/new?template=source_type.yml) after which it should appear in the dropdown below.
         
         <details>
-        <summary>Existing entries</summary>
+        <summary>Currently registered in CMIP7</summary>
         
-        **Currently registered in CMIP7:**
-        
+        - AER
+        - AGCM
+        - AOGCM
+        - BGC
+        - CHEM
+        - ISM
+        - LAND
+        - OGCM
+        - RAD
+        - SLAB
+        - reanalysis
         
         </details>
       options:

@@ -4,8 +4,8 @@
   "title": "Link Region to CMIP7:",
   "labels": ["delta", "region", "Review"],
   "issue_category": "region",
-  "dropdown_title": "Existing entries",
+  "dropdown_title": "Currently registered in CMIP7",
   "field_guidance": {
-    "region": "**Currently registered in CMIP7:**\n{cmip7_region}"
+    "region": "{cmip7_region}"
   }
 }

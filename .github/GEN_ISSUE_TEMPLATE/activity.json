@@ -4,8 +4,8 @@
   "title": "Link Activity to CMIP7:",
   "labels": ["delta", "activity", "Review"],
   "issue_category": "activity",
-  "dropdown_title": "Existing entries",
+  "dropdown_title": "Currently registered in CMIP7",
   "field_guidance": {
-    "activity": "**Currently registered in CMIP7:**\n{cmip7_activity}"
+    "activity": "{cmip7_activity}"
   }
 }
