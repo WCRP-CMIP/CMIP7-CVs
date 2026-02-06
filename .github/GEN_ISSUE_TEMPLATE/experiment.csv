@@ -1,5 +1,5 @@
 field_order,field_type,field_id,label,description,data_source,required,placeholder,options_type,default_value
-1,markdown,header,Generic Experiment Information,####\n## Generic Experiment information\n\nPlease fill in the information below.,none,FALSE,,,
+1,markdown,header,Generic Experiment Information,"## CMIP7 Experiment Registration\n\nRegister an experiment for CMIP7.\n\n> [!NOTE]\n> Please ensure you are familiar with the completion guidance in the collapsible dropdown where it exists. Failure to do so will result in a failed submission.\n> For more information: [consult the documentation](https://cmip7.mipcvs.dev/docs)",none,FALSE,,,
 2,input,validation_key,Experiment ID,Enter a unique experiment name.,none,TRUE,"e.g., piClim-CH4, hist-GHG, amip-p4k",,
 3,input,ui_label,Experiment Title,A short phrase that can help in interpreting the unique experiment IDs.,none,TRUE,"e.g., AMIP plus 4K sea surface temperature",,
 4,textarea,description,Description,Describe the experiment configuration conditions and requirements.,none,TRUE,Describe the experiment configuration conditions and requirements...,,
@@ -17,6 +17,6 @@ field_order,field_type,field_id,label,description,data_source,required,placehold
 16,input,start_date,Start Date,"Enter the start date in YYYY-MM-DD format, or 'none' if not applicable.",none,FALSE,"e.g., 1850-01-01 or 1960,1970,1980",,
 17,input,branch_date,Branch Date,"Add the branch date if known, otherwise enter 'none'.",none,FALSE,"e.g., 1850-01-01 or 1960,1970,1980",,
 18,input,minimum_number_of_years,(Minimum) Number of Years,Enter the minimum number of simulation years required.,none,TRUE,"e.g., 172",,
-19,markdown,metadata_header,Issue Handling Metadata [For internal use only],"\n\n## Issue Handling Metadata [For internal use only]",none,FALSE,,,
+19,markdown,metadata_header,Issue Handling Metadata [For internal use only],"####\n## Issue Handling Metadata [For internal use only]",none,FALSE,,,
 39,dropdown,issue_category,Issue Type,This is pre-set and cannot be changed.,issue_category,TRUE,,list,0
 40,dropdown,issue_kind,Issue Kind,Select whether this is a new submission or modification of existing entry.,issue_kind,TRUE,,list,0

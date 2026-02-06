@@ -1,5 +1,5 @@
 field_order,field_type,field_id,label,description,data_source,required,placeholder,options_type,default_value
-1,markdown,header,Header,"## General Issue Report\n\nPlease provide details about your issue, bug report, or feature request.",none,false,,,
+1,markdown,header,Header,"## General Issue Report\n\nPlease provide details about your issue, bug report, or feature request.\n\n> [!NOTE]\n> Please ensure you are familiar with the completion guidance in the collapsible dropdown where it exists. Failure to do so will result in a failed submission.\n> For more information: [consult the documentation](https://cmip7.mipcvs.dev/docs)",none,false,,,
 2,dropdown,issue_type,Issue Type,What kind of issue are you reporting?,issue_type_options,true,,list,
 3,multi-select,affected_areas,Affected Areas,Select all that apply.,affected_areas_options,true,,list,
 4,textarea,description,Description,Provide a clear and detailed description of the issue.,none,true,"Describe your issue in detail...",,

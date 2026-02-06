@@ -6,10 +6,13 @@ body:
   - type: markdown
     attributes:
       value: |
-        ####
-        ## Generic Experiment information
+        ## CMIP7 Experiment Registration
         
-        Please fill in the information below.
+        Register an experiment for CMIP7.
+        
+        > [!NOTE]
+        > Please ensure you are familiar with the completion guidance in the collapsible dropdown where it exists. Failure to do so will result in a failed submission.
+        > For more information: [consult the documentation](https://cmip7.mipcvs.dev/docs)
 
   - type: input
     id: validation_key
@@ -443,8 +446,7 @@ body:
   - type: markdown
     attributes:
       value: |
-        
-        
+        ####
         ## Issue Handling Metadata [For internal use only]
 
   - type: dropdown

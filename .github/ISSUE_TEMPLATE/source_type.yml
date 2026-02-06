@@ -3,6 +3,17 @@ description: Register a source type for use in CMIP7
 title: "Link Source Type to CMIP7:"
 labels: ['delta', 'source-type', 'Review']
 body:
+  - type: markdown
+    attributes:
+      value: |
+        ## Link Source Type to CMIP7
+        
+        Select source types from WCRP-constants to make available in CMIP7.
+        
+        > [!NOTE]
+        > Please ensure you are familiar with the completion guidance in the collapsible dropdown where it exists. Failure to do so will result in a failed submission.
+        > For more information: [consult the documentation](https://cmip7.mipcvs.dev/docs)
+
   - type: dropdown
     id: source_type
     attributes:

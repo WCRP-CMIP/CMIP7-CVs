@@ -1,4 +1,5 @@
 field_order,field_type,field_id,label,description,data_source,required,placeholder,options_type,default_value
-1,multi-select,region,Region,"If your region is not listed below, you must first register it in the [WCRP-constants repository](https://github.com/WCRP-CMIP/WCRP-constants/issues/new?template=region.yml) after which it should appear in the dropdown below.",region,true,,dict_multiple,
-2,markdown,metadata_header,Issue Handling Metadata [For internal use only],"####\n## Issue Handling Metadata [For internal use only]",none,false,,,
-3,dropdown,issue_kind,Issue Kind,Select whether this is a new submission or modification of existing entry.,issue_kind,true,,list,0
+1,markdown,header,Link Region to CMIP7,"## Link Region to CMIP7\n\nSelect regions from WCRP-constants to make available in CMIP7.\n\n> [!NOTE]\n> Please ensure you are familiar with the completion guidance in the collapsible dropdown where it exists. Failure to do so will result in a failed submission.\n> For more information: [consult the documentation](https://cmip7.mipcvs.dev/docs)",none,false,,,
+2,multi-select,region,Region,"If your region is not listed below, you must first register it in the [WCRP-constants repository](https://github.com/WCRP-CMIP/WCRP-constants/issues/new?template=region.yml) after which it should appear in the dropdown below.",region,true,,dict_multiple,
+3,markdown,metadata_header,Issue Handling Metadata [For internal use only],"####\n## Issue Handling Metadata [For internal use only]",none,false,,,
+4,dropdown,issue_kind,Issue Kind,Select whether this is a new submission or modification of existing entry.,issue_kind,true,,list,0
