@@ -3,30 +3,21 @@ description: Register a resolution for use in CMIP7
 title: "Link Resolution to CMIP7:"
 labels: ['delta', 'resolution', 'Review']
 body:
-  - type: markdown
-    attributes:
-      value: |
-        ## Link Resolution to CMIP7
-        
-        Select resolutions from WCRP-constants to make available in CMIP7.
-        
-        Resolutions are initially defined in the [WCRP-constants repository](https://github.com/WCRP-CMIP/WCRP-constants). You can view existing resolutions at https://wcrp-cmip.github.io/WCRP-constants/resolution/
-        
-        **If your resolution is not listed below**, you must first [register it in WCRP-constants](https://github.com/WCRP-CMIP/WCRP-constants/issues/new?template=resolution.yml) and wait for it to be approved before linking it here.
-        
-        Once your resolution exists in WCRP-constants, use this form to make it available for use in CMIP7.
-        
-        ---
-        
-        **Currently registered in CMIP7:**
-        
-
   - type: dropdown
     id: native_nominal_resolution
     attributes:
       multiple: true
       label: Resolution
-      description: Select the resolutions to add to CMIP7.
+      description: |
+        If your resolution is not listed below, you must first register it in the [WCRP-constants repository](https://wcrp-cmip.github.io/WCRP-constants/resolution/) after which it should appear in the dropdown below.
+        
+        <details>
+        <summary>Existing entries</summary>
+        
+        **Currently registered in CMIP7:**
+        
+        
+        </details>
       options:
         - "0.5 km"
         - "1 km"
@@ -45,6 +36,11 @@ body:
         - "5000 km"
     validations:
       required: true
+
+  - type: markdown
+    attributes:
+      value: |
+        ## Issue Handling Metadata [for internal use only]
 
   - type: dropdown
     id: issue_kind

@@ -1,4 +1,4 @@
 field_order,field_type,field_id,label,description,data_source,required,placeholder,options_type,default_value
-1,markdown,header,,"## Link Source Type to CMIP7\n\nSelect source types from WCRP-constants to make available in CMIP7.",none,false,,,
-2,multi-select,source_type,Source Type,Select the source types to add to CMIP7.,source_type,true,,dict_multiple,
+1,multi-select,source_type,Source Type,"If your source type is not listed below, you must first register it in the [WCRP-constants repository](https://wcrp-cmip.github.io/WCRP-constants/source_type/) after which it should appear in the dropdown below.",source_type,true,,dict_multiple,
+2,markdown,metadata_header,Issue Handling Metadata [for internal use only],"## Issue Handling Metadata [for internal use only]",none,false,,,
 3,dropdown,issue_kind,Issue Kind,Select whether this is a new submission or modification of existing entry.,issue_kind,true,,list,0

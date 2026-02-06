@@ -3,30 +3,21 @@ description: Register an activity for use in CMIP7
 title: "Link Activity to CMIP7:"
 labels: ['delta', 'activity', 'Review']
 body:
-  - type: markdown
-    attributes:
-      value: |
-        ## Link Activity to CMIP7
-        
-        Select activities from WCRP-constants to make available in CMIP7.
-        
-        Activities are initially defined in the [WCRP-constants repository](https://github.com/WCRP-CMIP/WCRP-constants). You can view existing activities at https://wcrp-cmip.github.io/WCRP-constants/activity/
-        
-        **If your activity is not listed below**, you must first [register it in WCRP-constants](https://github.com/WCRP-CMIP/WCRP-constants/issues/new?template=activity.yml) and wait for it to be approved before linking it here.
-        
-        Once your activity exists in WCRP-constants, use this form to make it available for use in CMIP7.
-        
-        ---
-        
-        **Currently registered in CMIP7:**
-        
-
   - type: dropdown
     id: activity
     attributes:
       multiple: true
       label: Activity
-      description: Select the activities to add to CMIP7.
+      description: |
+        If your activity is not listed below, you must first register it in the [WCRP-constants repository](https://wcrp-cmip.github.io/WCRP-constants/activity/) after which it should appear in the dropdown below.
+        
+        <details>
+        <summary>Existing entries</summary>
+        
+        **Currently registered in CMIP7:**
+        
+        
+        </details>
       options:
         - "AERA-MIP"
         - "AerChemMIP"
@@ -70,6 +61,11 @@ body:
         - "no-value"
     validations:
       required: true
+
+  - type: markdown
+    attributes:
+      value: |
+        ## Issue Handling Metadata [for internal use only]
 
   - type: dropdown
     id: issue_kind

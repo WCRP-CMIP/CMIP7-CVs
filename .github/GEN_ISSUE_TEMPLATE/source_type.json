@@ -4,8 +4,8 @@
   "title": "Link Source Type to CMIP7:",
   "labels": ["delta", "source-type", "Review"],
   "issue_category": "source_type",
-  "dropdown_title": "Completion Guidance",
+  "dropdown_title": "Existing entries",
   "field_guidance": {
-    "header": "Source types are initially defined in the [WCRP-constants repository](https://github.com/WCRP-CMIP/WCRP-constants). You can view existing source types at https://wcrp-cmip.github.io/WCRP-constants/source_type/\n\n**If your source type is not listed below**, you must first [register it in WCRP-constants](https://github.com/WCRP-CMIP/WCRP-constants/issues/new?template=source_type.yml) and wait for it to be approved before linking it here.\n\nOnce your source type exists in WCRP-constants, use this form to make it available for use in CMIP7.\n\n---\n\n**Currently registered in CMIP7:**\n{cmip7_source_type}"
+    "source_type": "**Currently registered in CMIP7:**\n{cmip7_source_type}"
   }
 }
