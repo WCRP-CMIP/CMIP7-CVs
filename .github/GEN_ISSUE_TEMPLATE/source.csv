@@ -7,6 +7,6 @@ field_order,field_type,field_id,label,description,data_source,required,placehold
 6,dropdown,institution,Institution(s),Select all that apply for multi-institutional efforts.,institution,true,,dict_multiple,
 7,dropdown,license_info,License,Select the data license type.,license_info,true,,list,
 8,dropdown,model_documentation,Model Documentation Reference,Please register your EMD and then update this field by resubmitting the form from the issue comments.,model_documentation,true,,dict_multiple,
-9,markdown,metadata_header,Issue Handling Metadata [for admin use only],"## Issue Handling Metadata [for admin use only]\n\nThese options control how the submission is processed.",none,false,,,
+9,markdown,metadata_header,Issue Handling Metadata [For internal use only],"\n\n---\n\n## Issue Handling Metadata [For internal use only]",none,false,,,
 10,dropdown,issue_category,Issue Type,This is pre-set and cannot be changed.,issue_category,true,,list,0
 11,dropdown,issue_kind,Issue Kind,Select whether this is a new submission or modification of existing entry.,issue_kind,true,,list,0
