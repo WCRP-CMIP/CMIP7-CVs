@@ -78,7 +78,11 @@ body:
   - type: markdown
     attributes:
       value: |
-        ## Metadata
+        
+        
+        ---
+        
+        ## Metadata [For internal use only]
 
   - type: dropdown
     id: priority

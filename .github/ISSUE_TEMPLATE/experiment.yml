@@ -443,10 +443,11 @@ body:
   - type: markdown
     attributes:
       value: |
-        ####
-        ## Issue Handling Metadata [for admin use only]
         
-        The following options are only here such that the github actions know what to do with the information provided above.
+        
+        ---
+        
+        ## Issue Handling Metadata [For internal use only]
 
   - type: dropdown
     id: issue_category

@@ -497,9 +497,11 @@ body:
   - type: markdown
     attributes:
       value: |
-        ## Issue Handling Metadata [for admin use only]
         
-        These options control how the submission is processed.
+        
+        ---
+        
+        ## Issue Handling Metadata [For internal use only]
 
   - type: dropdown
     id: issue_category

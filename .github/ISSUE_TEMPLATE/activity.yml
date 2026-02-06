@@ -75,7 +75,11 @@ body:
   - type: markdown
     attributes:
       value: |
-        ## Issue Handling Metadata [for internal use only]
+        
+        
+        ---
+        
+        ## Issue Handling Metadata [For internal use only]
 
   - type: dropdown
     id: issue_kind
