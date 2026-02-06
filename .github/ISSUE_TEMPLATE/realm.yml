@@ -9,7 +9,7 @@ body:
       multiple: true
       label: Scientific Domain
       description: |
-        If your scientific domain is not listed below, you must first register it in the [WCRP-universe repository](https://github.com/WCRP-CMIP/WCRP-universe/issues/new?template=scientific_domain.yml) after which it should appear in the dropdown below.
+        If your scientific domain is not listed below, you must first register it in the [WCRP-constants repository](https://github.com/WCRP-CMIP/WCRP-constants/issues/new?template=scientific_domain.yml) after which it should appear in the dropdown below.
         
         <details>
         <summary>Currently registered in CMIP7</summary>
