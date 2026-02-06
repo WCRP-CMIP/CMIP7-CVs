@@ -33,8 +33,7 @@ body:
   - type: markdown
     attributes:
       value: |
-        
-        
+        ####
         ## Issue Handling Metadata [For internal use only]
 
   - type: dropdown

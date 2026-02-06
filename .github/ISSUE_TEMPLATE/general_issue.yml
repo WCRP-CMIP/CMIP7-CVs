@@ -78,8 +78,7 @@ body:
   - type: markdown
     attributes:
       value: |
-        
-        
+        ####
         ## Metadata [For internal use only]
 
   - type: dropdown
