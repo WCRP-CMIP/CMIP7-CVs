@@ -7,6 +7,62 @@
 },
   "@graph": [
     {
+  "@graph": [
+    {
+      "validation_key": "TEST-2-0",
+      "ui_label": "",
+      "description": "Testmodel2description.HereissomemoretextnotpartoftheEMD",
+      "activity": [
+        "RFMIP"
+      ],
+      "cohort": [
+        "Published"
+      ],
+      "institution": [
+        "CNRM"
+      ],
+      "license_info": [
+        "cc-by-4p0"
+      ],
+      "model_documentation": "cnrm-esm2-1e",
+      "@type": [
+        "wcrp:source",
+        "esgvoc:Source",
+        "cmip7"
+      ],
+      "@id": "test-2-0"
+    }
+  ]
+}
+    ,{
+  "@graph": [
+    {
+      "validation_key": "TEST-2-0",
+      "ui_label": "",
+      "description": "Testmodel2description.HereissomemoretextnotpartoftheEMD",
+      "activity": [
+        "RFMIP"
+      ],
+      "cohort": [
+        "Published"
+      ],
+      "institution": [
+        "CNRM"
+      ],
+      "license_info": [
+        "cc-by-4p0"
+      ],
+      "model_documentation": "cnrm-esm2-1e",
+      "@type": [
+        "wcrp:source",
+        "esgvoc:Source",
+        "cmip7"
+      ],
+      "@id": "test-2-0"
+    }
+  ]
+}
+    ,{
   "validation_key": "TEST-2-0",
   "ui_label": "",
   "description": "Test model 2 description. Here is some more text not part of the EMD",
