@@ -80,8 +80,6 @@ body:
       value: |
         
         
-        ---
-        
         ## Metadata [For internal use only]
 
   - type: dropdown

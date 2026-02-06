@@ -17,6 +17,6 @@ field_order,field_type,field_id,label,description,data_source,required,placehold
 16,input,start_date,Start Date,"Enter the start date in YYYY-MM-DD format, or 'none' if not applicable.",none,FALSE,"e.g., 1850-01-01 or 1960,1970,1980",,
 17,input,branch_date,Branch Date,"Add the branch date if known, otherwise enter 'none'.",none,FALSE,"e.g., 1850-01-01 or 1960,1970,1980",,
 18,input,minimum_number_of_years,(Minimum) Number of Years,Enter the minimum number of simulation years required.,none,TRUE,"e.g., 172",,
-19,markdown,metadata_header,Issue Handling Metadata [For internal use only],"\n\n---\n\n## Issue Handling Metadata [For internal use only]",none,FALSE,,,
+19,markdown,metadata_header,Issue Handling Metadata [For internal use only],"\n\n## Issue Handling Metadata [For internal use only]",none,FALSE,,,
 39,dropdown,issue_category,Issue Type,This is pre-set and cannot be changed.,issue_category,TRUE,,list,0
 40,dropdown,issue_kind,Issue Kind,Select whether this is a new submission or modification of existing entry.,issue_kind,TRUE,,list,0

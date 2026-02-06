@@ -5,6 +5,6 @@ field_order,field_type,field_id,label,description,data_source,required,placehold
 4,textarea,description,Description,Provide a clear and detailed description of the issue.,none,true,"Describe your issue in detail...",,
 6,textarea,expected_behavior,Expected/Desired Behavior,What should happen instead? What would you like to see?,none,false,The system should...,,
 7,textarea,steps_to_reproduce,Steps to Reproduce (for bugs),"If reporting a bug, provide step-by-step instructions to reproduce the issue.",none,false,"1. Go to...\n2. Click on...\n3. See error...",,
-10,markdown,metadata_header,Metadata [For internal use only],"\n\n---\n\n## Metadata [For internal use only]",none,false,,,
+10,markdown,metadata_header,Metadata [For internal use only],"\n\n## Metadata [For internal use only]",none,false,,,
 11,dropdown,priority,Priority,How urgent is this issue?,priority_options,true,,list,2
 12,multi-select,help_needed,Help Needed,Do you need help with this issue?,help_needed_options,false,,list,

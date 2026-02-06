@@ -55,8 +55,6 @@ body:
       value: |
         
         
-        ---
-        
         ## Issue Handling Metadata [For internal use only]
 
   - type: dropdown
