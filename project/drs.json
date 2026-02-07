@@ -14,8 +14,8 @@
     },
     "@context": {
         "@alt_base": "https://wcrp-cmip.github.io/CMIP7-CVs/drs/",
-        "@base": "https://cmip7.mipcvs.dev/drs/",
-        "@vocab": "https://cmip7.mipcvs.dev/docs/contents/Drs/"
+        "@base": "https://no-prefix.mipcvs.dev/drs/",
+        "@vocab": "https://no-prefix.mipcvs.dev/docs/contents/Drs/"
     },
     "@type": [
         "wcrp:drs",

@@ -18,8 +18,8 @@
     ],
     "@context": {
         "@alt_base": "https://wcrp-cmip.github.io/CMIP7-CVs/activity/",
-        "@base": "https://cmip7.mipcvs.dev/activity/",
-        "@vocab": "https://cmip7.mipcvs.dev/docs/contents/Activity/",
+        "@base": "https://no-prefix.mipcvs.dev/activity/",
+        "@vocab": "https://no-prefix.mipcvs.dev/docs/contents/Activity/",
         "activity": {
             "@context": "https://wcrp-cmip.github.io/WCRP-universe/activity/_context",
             "@type": "@id"

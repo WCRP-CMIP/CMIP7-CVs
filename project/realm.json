@@ -14,8 +14,8 @@
     ],
     "@context": {
         "@alt_base": "https://wcrp-cmip.github.io/CMIP7-CVs/realm/",
-        "@base": "https://cmip7.mipcvs.dev/realm/",
-        "@vocab": "https://cmip7.mipcvs.dev/docs/contents/Realm/",
+        "@base": "https://no-prefix.mipcvs.dev/realm/",
+        "@vocab": "https://no-prefix.mipcvs.dev/docs/contents/Realm/",
         "realm": {
             "@context": "https://constants.mipcvs.dev/scientific_domain/_context",
             "@type": "@id"

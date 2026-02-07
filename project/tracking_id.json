@@ -7,8 +7,8 @@
     ],
     "@context": {
         "@alt_base": "https://wcrp-cmip.github.io/CMIP7-CVs/tracking_id/",
-        "@base": "https://cmip7.mipcvs.dev/tracking_id/",
-        "@vocab": "https://cmip7.mipcvs.dev/docs/contents/TrackingId/"
+        "@base": "https://no-prefix.mipcvs.dev/tracking_id/",
+        "@vocab": "https://no-prefix.mipcvs.dev/docs/contents/TrackingId/"
     },
     "@type": [
         "wcrp:tracking_id",

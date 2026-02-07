@@ -10,8 +10,8 @@
     ],
     "@context": {
         "@alt_base": "https://wcrp-cmip.github.io/CMIP7-CVs/license/",
-        "@base": "https://cmip7.mipcvs.dev/license/",
-        "@vocab": "https://cmip7.mipcvs.dev/docs/contents/License/",
+        "@base": "https://no-prefix.mipcvs.dev/license/",
+        "@vocab": "https://no-prefix.mipcvs.dev/docs/contents/License/",
         "license": {
             "@context": "https://wcrp-cmip.github.io/WCRP-universe/license/_context",
             "@type": "@id"

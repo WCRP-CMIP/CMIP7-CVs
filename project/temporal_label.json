@@ -13,8 +13,8 @@
     ],
     "@context": {
         "@alt_base": "https://wcrp-cmip.github.io/CMIP7-CVs/temporal_label/",
-        "@base": "https://cmip7.mipcvs.dev/temporal_label/",
-        "@vocab": "https://cmip7.mipcvs.dev/docs/contents/TemporalLabel/",
+        "@base": "https://no-prefix.mipcvs.dev/temporal_label/",
+        "@vocab": "https://no-prefix.mipcvs.dev/docs/contents/TemporalLabel/",
         "temporal_label": {
             "@context": "https://wcrp-cmip.github.io/Variable-Registry/temporal_label/_context",
             "@type": "@id"

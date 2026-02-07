@@ -35,8 +35,8 @@
     ],
     "@context": {
         "@alt_base": "https://wcrp-cmip.github.io/CMIP7-CVs/required_global_attributes/",
-        "@base": "https://cmip7.mipcvs.dev/required_global_attributes/",
-        "@vocab": "https://cmip7.mipcvs.dev/docs/contents/RequiredGlobalAttributes/"
+        "@base": "https://no-prefix.mipcvs.dev/required_global_attributes/",
+        "@vocab": "https://no-prefix.mipcvs.dev/docs/contents/RequiredGlobalAttributes/"
     },
     "@type": [
         "wcrp:required_global_attributes",
