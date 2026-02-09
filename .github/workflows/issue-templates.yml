@@ -1,4 +1,8 @@
 name: ⇑ Update Issue Templates
+description: Generate issue templates from CSV/Python definitions
+
+permissions:
+  contents: write
 
 on:
   push:
@@ -6,68 +10,40 @@ on:
       - main
     paths:
       - '.github/GEN_ISSUE_TEMPLATE/**'
-  
   workflow_dispatch:
-  
   schedule:
-    - cron: '0 0 * * 1'  # Weekly on Mondays at 00:00 UTC
-
-permissions:
-  contents: write
+    - cron: '0 0 * * 1'  # Weekly on Mondays
 
 jobs:
-  update-templates:
+  update_templates:
     runs-on: ubuntu-latest
-    
     steps:
-
-      - name: install cmipld
-        id: install-cmipld
+      - name: Install CMIPLD
         uses: WCRP-CMIP/CMIPLD/actions/cmipld@main
-
 
       - name: Checkout repository
         uses: actions/checkout@v4
-      
+        with:
+          fetch-depth: 0
+
       - name: Set up Python
         uses: actions/setup-python@v5
         with:
           python-version: '3.11'
 
-      - name: Run template generator
-        working-directory: ${{ github.workspace }}
+      - name: Generate templates
         run: |
-          template_update ;
+          echo "Generating issue templates..."
+          template_generate
           
-        continue-on-error: true
-        env:
-          GH_TOKEN: ${{ github.token }}
+          echo "Updating modification links..."
+          template_update || echo "template_update not available"
 
-      # - name: Check for changes
-      #   id: check_changes
-      #   run: |
-      #     if ! git diff --quiet .github/ISSUE_TEMPLATE/; then
-      #       echo "changed=true" >> $GITHUB_OUTPUT
-      #     fi
-      #   continue-on-error: true
-      
-      # - name: Commit and push changes
-        
-      #   run: |
-      #     git config user.name "cmipld-actions[bot]"
-      #     git config user.email "wolfiex@users.noreply.github.com"
-      #     git add .github/ISSUE_TEMPLATE/*
-      #     git diff --staged --quiet || git commit -m "auto-update issue templates from GEN_ISSUE_TEMPLATE"
-      #     git push
-      
-      - name: Commit and Push Changes
-        # if: steps.check_changes.outputs.no_changes == 'false'
+      - name: Commit changes
         uses: EndBug/add-and-commit@v9
         with:
           add: '.github/'
           author_name: 'cmip-ipo'
-          author_email: 'wolfiex@users.noreply.github.com'
-          message: 'Auto-update issue templates from GEN_ISSUE_TEMPLATE.'
-          branch: main
+          author_email: 'actions@wcrp-cmip.org'
+          message: 'Auto-update issue templates'
           push: true
-          
