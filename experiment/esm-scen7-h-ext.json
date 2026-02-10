@@ -1,0 +1,24 @@
+{
+    "id": "esm-scen7-h-ext",
+    "validation-key": "esm-scen7-h-ext",
+    "ui-label": "High Scenario Extension",
+    "description": "High emission scenario extension to explore potential high-end impacts",
+    "activity": [
+        "scenariomip"
+    ],
+    "alias": [],
+    "end": 2500,
+    "min-number-yrs-per-sim": 50,
+    "model-realms": [],
+    "parent-experiment": [
+        "esm-scen7-h"
+    ],
+    "start": 2101,
+    "start-date": "none",
+    "tier": 0,
+    "@context": "_context_",
+    "type": [
+        "wcrp:experiment",
+        "cmip7"
+    ]
+}
