@@ -5,6 +5,7 @@
         {
             "type": "directory",
             "separator": "/",
+            # Can we delete this?
             "regex": "what-is-this",
             "parts": [
                 {
@@ -18,6 +19,9 @@
                     "kind": "collection"
                 },
                 {
+    # Keeping in mind the mapping in `attr_specs.yaml`,
+    # should this be organisation or institution?
+    # (similar comments can be applied to a number of collections here).
                     "collection_id": "institution",
                     "is_required": true,
                     "kind": "collection"
@@ -33,6 +37,7 @@
                     "kind": "collection"
                 },
                 {
+                    # Why CamelCase here but snake_case in e.g. drs_specs.yaml?
                     "collection_id": "datasetVariant",
                     "is_required": true,
                     "kind": "collection"
@@ -67,6 +72,7 @@
         {
             "type": "file_name",
             "separator": "_",
+            # Can we delete this?
             "regex": "what-is-this",
             "properties": {
                 "extension": "nc",
@@ -118,6 +124,7 @@
         {
             "type": "dataset_id",
             "separator": ".",
+            # Can we delete this?
             "regex": "what-is-this",
             "parts": [
                 {
