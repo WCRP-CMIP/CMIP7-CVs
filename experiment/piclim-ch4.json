@@ -1,0 +1,6 @@
+{
+    "@context": "000_context.jsonld",
+    "id": "piclim-ch4",
+    "type": "experiment",
+    "tier": 1
+}
