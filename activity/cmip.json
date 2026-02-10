@@ -11,6 +11,9 @@
         "esm-picontrol",
         "esm-picontrol-spinup",
         "historical",
+        "piclim-4xco2",
+        "piclim-anthro",
+        "piclim-control",
         "picontrol",
         "picontrol-spinup"
     ],
