@@ -1,0 +1,5 @@
+{
+    "@context": "000_context.jsonld",
+    "id": "sidmassmeltbot_tavg-u-hxy-si",
+    "type": "known_branded_variable"
+}

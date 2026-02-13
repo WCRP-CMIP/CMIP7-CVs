@@ -1,0 +1,5 @@
+{
+    "@context": "000_context.jsonld",
+    "id": "tntd_tpt-al-hs-u",
+    "type": "known_branded_variable"
+}
