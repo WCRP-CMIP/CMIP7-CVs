@@ -6,19 +6,23 @@
         "@vocab": "https://cmip7.mipcvs.dev/docs/contents/Experiment/",
         "activity": {
             "@context": "https://wcrp-cmip.github.io/WCRP-universe/activity/_context",
-            "@type": "@id"
+            "@type": "@id",
+            "@id": "activity"
         },
         "model_realms_additional_allowed": {
             "@context": "https://wcrp-cmip.github.io/WCRP-universe/source_type/_context",
-            "@type": "@id"
+            "@type": "@id",
+            "@id": "model_realms_additional_allowed"
         },
         "model_realms_required": {
             "@context": "https://wcrp-cmip.github.io/WCRP-universe/source_type/_context",
-            "@type": "@id"
+            "@type": "@id",
+            "@id": "model_realms_required"
         },
         "parent_activity": {
             "@context": "https://wcrp-cmip.github.io/WCRP-universe/activity/_context",
-            "@type": "@id"
+            "@type": "@id",
+            "@id": "parent_activity"
         },
         "parent_experiment": {
             "@type": "@id"

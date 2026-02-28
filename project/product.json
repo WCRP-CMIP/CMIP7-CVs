@@ -11,7 +11,8 @@
         "@vocab": "https://no-prefix.mipcvs.dev/docs/contents/Product/",
         "product": {
             "@context": "https://wcrp-cmip.github.io/WCRP-universe/product/_context",
-            "@type": "@id"
+            "@type": "@id",
+            "@id": "product"
         }
     },
     "@type": [

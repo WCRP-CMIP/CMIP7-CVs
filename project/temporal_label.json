@@ -17,7 +17,8 @@
         "@vocab": "https://no-prefix.mipcvs.dev/docs/contents/TemporalLabel/",
         "temporal_label": {
             "@context": "https://wcrp-cmip.github.io/Variable-Registry/temporal_label/_context",
-            "@type": "@id"
+            "@type": "@id",
+            "@id": "temporal_label"
         }
     },
     "@type": [

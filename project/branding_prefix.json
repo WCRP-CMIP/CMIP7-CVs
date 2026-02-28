@@ -97,19 +97,23 @@
         "@vocab": "https://no-prefix.mipcvs.dev/docs/contents/BrandingPrefix/",
         "area_label": {
             "@context": "https://wcrp-cmip.github.io/Variable-Registry/area_label/_context",
-            "@type": "@id"
+            "@type": "@id",
+            "@id": "area_label"
         },
         "horizontal_label": {
             "@context": "https://wcrp-cmip.github.io/Variable-Registry/horizontal_label/_context",
-            "@type": "@id"
+            "@type": "@id",
+            "@id": "horizontal_label"
         },
         "temporal_label": {
             "@context": "https://wcrp-cmip.github.io/Variable-Registry/temporal_label/_context",
-            "@type": "@id"
+            "@type": "@id",
+            "@id": "temporal_label"
         },
         "vertical_label": {
             "@context": "https://wcrp-cmip.github.io/Variable-Registry/vertical_label/_context",
-            "@type": "@id"
+            "@type": "@id",
+            "@id": "vertical_label"
         }
     },
     "@type": [

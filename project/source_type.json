@@ -24,7 +24,8 @@
         "@vocab": "https://no-prefix.mipcvs.dev/docs/contents/SourceType/",
         "source_type": {
             "@context": "https://wcrp-cmip.github.io/WCRP-universe/source_type/_context",
-            "@type": "@id"
+            "@type": "@id",
+            "@id": "source_type"
         }
     },
     "@type": [
