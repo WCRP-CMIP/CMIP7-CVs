@@ -11,7 +11,8 @@
   is_required: true
   value_type: string
 - field_name: branding_suffix
-  source_collection: branded_suffix
+  source_collection: branded_variable
+  specific_key: branding_suffix_name
   is_required: true
   value_type: string
 - field_name: Conventions
