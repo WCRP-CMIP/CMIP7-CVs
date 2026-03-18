@@ -21,7 +21,7 @@ dataset_properties:
     catalog_field_value_type: string
     is_required: true
 
-  - source_collection: conventions
+  - source_collection: Conventions
     catalog_field_name: Conventions
     catalog_field_value_type: string_array
     is_required: false

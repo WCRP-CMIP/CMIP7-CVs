@@ -16,7 +16,7 @@
   is_required: true
   value_type: string
 - field_name: Conventions
-  source_collection: conventions
+  source_collection: Conventions
   is_required: true
   value_type: string
 - field_name: creation_date
