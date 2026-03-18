@@ -1,5 +1,0 @@
-{
-    "@context": "000_context.jsonld",
-    "id": "g90",
-    "type": "horizontal_grid_cell"
-}
