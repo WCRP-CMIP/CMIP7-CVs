@@ -1,0 +1,9 @@
+{
+    "@context": {
+        "id": "@id",
+        "type": "@type",
+        "@base": "https://esgvoc.ipsl.fr/resource/universe/branding_suffix/",
+        "branding_suffix": "https://esgvoc.ipsl.fr/resource/universe/branding_suffix"
+    }
+}
+h

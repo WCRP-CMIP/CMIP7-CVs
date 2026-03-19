@@ -131,7 +131,7 @@ dataset_properties:
 
   - source_collection: branded_variable
     source_collection_key: branding_suffix_name
-    catalog_field_name: variable_branded_suffix
+    catalog_field_name: variable_branding_suffix
     catalog_field_value_type: string
     is_required: true
 

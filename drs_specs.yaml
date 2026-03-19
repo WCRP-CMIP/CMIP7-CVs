@@ -25,7 +25,7 @@ directory:
       is_required: true
     - source_collection: variable
       is_required: true
-    - source_collection: branded_suffix
+    - source_collection: branding_suffix
       is_required: true
     - source_collection: grid_label
       is_required: true
@@ -42,7 +42,7 @@ file_name:
   parts:
     - source_collection: variable
       is_required: true
-    - source_collection: branded_suffix
+    - source_collection: branding_suffix
       is_required: true
     - source_collection: frequency
       is_required: true
@@ -86,7 +86,7 @@ dataset_id:
       is_required: true
     - source_collection: variable
       is_required: true
-    - source_collection: branded_suffix
+    - source_collection: branding_suffix
       is_required: true
     - source_collection: grid_label
       is_required: true
