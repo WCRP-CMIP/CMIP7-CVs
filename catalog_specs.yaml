@@ -1,4 +1,4 @@
-version: v3.0.3
+version: v3.0.4
 
 catalog_properties:
   name: stac
@@ -170,4 +170,20 @@ dataset_properties:
 file_properties:
   - source_collection: tracking_id
     catalog_field_value_type: string
+    is_required: false
+
+link_properties:
+  - rel: cite-as
+    link_type: "application/json"
+    title: "Citation URL"
+    is_required: true
+
+  - rel: describedby
+    title: "Essential Model Documentation URL"
+    is_required: false
+
+  - rel: related
+    link_pattern: "^https?://errata.esgf.io/.*$"
+    link_type: "text/html"
+    title: "Errata issue"
     is_required: false
