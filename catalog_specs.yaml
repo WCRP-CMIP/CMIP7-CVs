@@ -1,4 +1,4 @@
-version: v3.0.3
+version: v3.0.4
 
 catalog_properties:
   name: stac
@@ -21,7 +21,7 @@ dataset_properties:
     catalog_field_value_type: string
     is_required: true
 
-  - source_collection: conventions
+  - source_collection: Conventions
     catalog_field_name: Conventions
     catalog_field_value_type: string_array
     is_required: false
@@ -131,7 +131,7 @@ dataset_properties:
 
   - source_collection: branded_variable
     source_collection_key: branding_suffix_name
-    catalog_field_name: variable_branded_suffix
+    catalog_field_name: variable_branding_suffix
     catalog_field_value_type: string
     is_required: true
 
@@ -167,12 +167,23 @@ dataset_properties:
     catalog_field_value_type: string
     is_required: true
 
-  - source_collection: version
-    source_collection_term: creationdatenb
-    catalog_field_value_type: string
-    is_required: true
-
 file_properties:
   - source_collection: tracking_id
     catalog_field_value_type: string
+    is_required: false
+
+link_properties:
+  - rel: cite-as
+    link_type: "application/json"
+    title: "Citation URL"
+    is_required: true
+
+  - rel: describedby
+    title: "Essential Model Documentation URL"
+    is_required: false
+
+  - rel: related
+    link_pattern: "^https?://errata.esgf.io/.*$"
+    link_type: "text/html"
+    title: "Errata issue"
     is_required: false

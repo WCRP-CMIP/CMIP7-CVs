@@ -1,0 +1,5 @@
+{
+    "@context": "000_context.jsonld",
+    "id": "emibbso2",
+    "type": "variable"
+}

@@ -1,8 +1,66 @@
 {
+  "esgvoc_resolve_modes": {
+    "grid_type": "full",
+    "grid_mapping": "full",
+    "region": "reference",
+    "temporal_refinement": "full",
+    "arrangement": "full",
+    "cell_variable_type": "full",
+    "truncation_method": "reference"
+  },
   "@context": {
+    "@base": "https://esgvoc.ipsl.fr/resource/universe/horizontal_grid_cell/",
+    "@vocab": "http://schema.org/",
     "id": "@id",
     "type": "@type",
-    "@base": "https://esgvoc.ipsl.fr/resource/universe/horizontal_grid_cell/",
-    "horizontal_grid_cell": "https://esgvoc.ipsl.fr/resource/universe/horizontal_grid_cell"
+    "description": {
+      "@id": "https://schema.org/description"
+    },
+    "drs_name": {
+      "@id": "acronym"
+    },
+    "grid_type": {
+      "@id": "https://esgvoc.ipsl.fr/resource/universe/grid_type/",
+      "@type": "@id",
+      "@context": {
+        "@base": "https://esgvoc.ipsl.fr/resource/universe/grid_type/"
+      }
+    },
+    "grid_mapping": {
+      "@id": "https://esgvoc.ipsl.fr/resource/universe/grid_mapping/",
+      "@type": "@id",
+      "@context": {
+        "@base": "https://esgvoc.ipsl.fr/resource/universe/grid_mapping/"
+      }
+    },
+    "region": {
+      "@id": "https://esgvoc.ipsl.fr/resource/universe/region/",
+      "@type": "@id",
+      "@context": {
+        "@base": "https://esgvoc.ipsl.fr/resource/universe/region/"
+      }
+    },
+    "temporal_refinement": {
+      "@id": "https://esgvoc.ipsl.fr/resource/universe/grid_temporal_refinement/",
+      "@type": "@id",
+      "@context": {
+        "@base": "https://esgvoc.ipsl.fr/resource/universe/grid_temporal_refinement/"
+      }
+    },
+    "resolution_x": "https://schema.org/distance",
+    "resolution_y": "https://schema.org/distance",
+    "horizontal_units": "https://schema.org/unitText",
+    "southernmost_latitude": "https://schema.org/latitude",
+    "westernmost_longitude": "https://schema.org/longitude",
+    "n_cells": "https://schema.org/Number",
+    "truncation_method": {
+      "@id": "https://esgvoc.ipsl.fr/resource/universe/truncation_method/",
+      "@type": "@id",
+      "@context": {
+        "@base": "https://esgvoc.ipsl.fr/resource/universe/truncation_method/"
+      }
+    },
+    "resolution_range_km": "https://schema.org/distance",
+    "mean_resolution_km": "https://schema.org/distance"
   }
 }
