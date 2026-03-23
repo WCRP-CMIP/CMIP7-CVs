@@ -2,5 +2,9 @@
     "@context": "000_context.jsonld",
     "id": "piclim-control",
     "type": "experiment",
+    "branch_information": "Branch from `piControl` at a time of your choosing. Given that you are using a climatology from your own model as boundary conditions, we recommended branching from the mid-point of the period over which you calculated the climatology (but this recommendation may not be appropriate for all models, so ultimately it is up to you to decide what introduces the smallest 'shock'/'jump' at the branch time).",
+    "parent_activity": "cmip",
+    "parent_experiment": "picontrol",
+    "parent_mip_era": "cmip7",
     "tier": 1
 }
