@@ -1,4 +1,4 @@
-version: v3.0.4
+version: v3.0.5
 
 catalog_properties:
   name: stac
@@ -176,7 +176,7 @@ link_properties:
   - rel: cite-as
     link_type: "application/json"
     title: "Citation URL"
-    is_required: true
+    is_required: false
 
   - rel: describedby
     title: "Essential Model Documentation URL"
@@ -187,3 +187,4 @@ link_properties:
     link_type: "text/html"
     title: "Errata issue"
     is_required: false
+
