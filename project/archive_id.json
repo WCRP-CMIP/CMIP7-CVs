@@ -11,8 +11,7 @@
         "@vocab": "https://no-prefix.mipcvs.dev/docs/contents/ArchiveId/",
         "mip_era": {
             "@context": "https://wcrp-cmip.github.io/WCRP-universe/archive_id/_context",
-            "@type": "@id",
-            "@id": "mip_era"
+            "@type": "@id"
         }
     },
     "@type": [

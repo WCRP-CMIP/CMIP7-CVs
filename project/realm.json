@@ -18,8 +18,7 @@
         "@vocab": "https://no-prefix.mipcvs.dev/docs/contents/Realm/",
         "realm": {
             "@context": "https://constants.mipcvs.dev/scientific_domain/_context",
-            "@type": "@id",
-            "@id": "realm"
+            "@type": "@id"
         }
     },
     "@type": [

@@ -16,8 +16,7 @@
         "@vocab": "https://no-prefix.mipcvs.dev/docs/contents/HorizontalLabel/",
         "horizontal_label": {
             "@context": "https://wcrp-cmip.github.io/Variable-Registry/horizontal_label/_context",
-            "@type": "@id",
-            "@id": "horizontal_label"
+            "@type": "@id"
         }
     },
     "@type": [

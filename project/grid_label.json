@@ -9,8 +9,7 @@
         "@vocab": "https://no-prefix.mipcvs.dev/docs/contents/GridLabel/",
         "grid_label": {
             "@context": "https://wcrp-cmip.github.io/WCRP-universe/grid_label/_context",
-            "@type": "@id",
-            "@id": "grid_label"
+            "@type": "@id"
         }
     },
     "@type": [
