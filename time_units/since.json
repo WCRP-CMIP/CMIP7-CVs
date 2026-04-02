@@ -1,5 +1,5 @@
 {
   "@context": "000_context.jsonld",
-  "id": "time_units",
+  "id": "time_unit",
   "type": "regex"
 }
