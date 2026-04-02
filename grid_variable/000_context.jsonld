@@ -1,0 +1,8 @@
+{
+    "@context": {
+        "id": "@id",
+        "type": "@type",
+        "@base": "https://esgvoc.ipsl.fr/resource/universe/grid_variable/",
+        "grid_variable": "https://esgvoc.ipsl.fr/resource/universe/grid_variable"
+    }
+}

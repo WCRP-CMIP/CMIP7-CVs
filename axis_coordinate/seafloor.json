@@ -1,0 +1,5 @@
+{
+    "@context": "000_context.jsonld",
+    "id": "seafloor",
+    "type": "axis_coordinate"
+}

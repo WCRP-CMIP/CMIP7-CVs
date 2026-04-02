@@ -1,0 +1,5 @@
+{
+    "@context": "000_context.jsonld",
+    "id": "p700",
+    "type": "axis_coordinate"
+}

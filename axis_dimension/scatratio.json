@@ -1,0 +1,5 @@
+{
+    "@context": "000_context.jsonld",
+    "id": "scatratio",
+    "type": "axis_dimension"
+}

@@ -1,0 +1,5 @@
+{
+    "@context": "000_context.jsonld",
+    "id": "ap_bnds",
+    "type": "formula_term"
+}

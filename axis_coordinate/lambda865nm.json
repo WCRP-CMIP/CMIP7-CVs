@@ -1,0 +1,5 @@
+{
+    "@context": "000_context.jsonld",
+    "id": "lambda865nm",
+    "type": "axis_coordinate"
+}

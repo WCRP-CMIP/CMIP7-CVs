@@ -1,0 +1,5 @@
+{
+    "@context": "000_context.jsonld",
+    "id": "typenwd",
+    "type": "axis_coordinate"
+}

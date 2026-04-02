@@ -1,0 +1,5 @@
+{
+    "@context": "000_context.jsonld",
+    "id": "dbze",
+    "type": "axis_dimension"
+}

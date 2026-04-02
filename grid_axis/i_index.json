@@ -1,0 +1,5 @@
+{
+    "@context": "000_context.jsonld",
+    "id": "i_index",
+    "type": "grid_axis"
+}

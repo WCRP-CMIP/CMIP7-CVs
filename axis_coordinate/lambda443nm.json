@@ -1,0 +1,5 @@
+{
+    "@context": "000_context.jsonld",
+    "id": "lambda443nm",
+    "type": "axis_coordinate"
+}

@@ -1,0 +1,5 @@
+{
+    "@context": "000_context.jsonld",
+    "id": "depth_coord_half",
+    "type": "axis_dimension"
+}

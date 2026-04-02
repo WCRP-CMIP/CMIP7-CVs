@@ -1,0 +1,8 @@
+{
+    "@context": {
+        "id": "@id",
+        "type": "@type",
+        "@base": "https://esgvoc.ipsl.fr/resource/universe/formula_term/",
+        "formula_term": "https://esgvoc.ipsl.fr/resource/universe/formula_term"
+    }
+}

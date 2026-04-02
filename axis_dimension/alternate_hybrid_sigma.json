@@ -1,0 +1,5 @@
+{
+    "@context": "000_context.jsonld",
+    "id": "alternate_hybrid_sigma",
+    "type": "axis_dimension"
+}
