@@ -60,13 +60,12 @@ dataset_properties:
     catalog_field_value_type: string
     is_required: true
 
-  - source_collection: organisation
+  - source_collection: institution
     source_collection_key: description
-    catalog_field_name: institution
     catalog_field_value_type: string
     is_required: false
 
-  - source_collection: organisation
+  - source_collection: institution
     catalog_field_name: institution_id
     catalog_field_value_type: string
     is_required: true
@@ -187,4 +186,3 @@ link_properties:
     link_type: "text/html"
     title: "Errata issue"
     is_required: false
-
