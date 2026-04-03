@@ -9,9 +9,7 @@ directory:
       is_required: true
     - source_collection: activity
       is_required: true
-    # Keeping in mind the mapping in `attr_specs.yaml`,
-    # should this be organisation or institution?
-    - source_collection: organisation
+    - source_collection: institution
       is_required: true
     - source_collection: source
       is_required: true
@@ -70,9 +68,7 @@ dataset_id:
       is_required: true
     - source_collection: activity
       is_required: true
-    # Keeping in mind the mapping in `attr_specs.yaml`,
-    # should this be organisation or institution?
-    - source_collection: organisation
+    - source_collection: institution
       is_required: true
     - source_collection: source
       is_required: true
