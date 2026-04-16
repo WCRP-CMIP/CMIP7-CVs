@@ -72,7 +72,7 @@
 - source_collection: frequency
   attr_field_value_type: string
   is_required: true
-  
+
 - source_collection: grid_label
   attr_field_value_type: string
   is_required: true
@@ -80,18 +80,18 @@
 - source_collection: horizontal_label
   attr_field_value_type: string
   is_required: true
-  
+
 - source_collection: initialization_index
   attr_field_value_type: string
   is_required: true
 
-- source_collection: organisation
+- source_collection: institution
   source_collection_key: description
   attr_field_name: institution
   attr_field_value_type: string
   is_required: false
 
-- source_collection: organisation
+- source_collection: institution
   attr_field_name: institution_id
   attr_field_value_type: string
   is_required: true
