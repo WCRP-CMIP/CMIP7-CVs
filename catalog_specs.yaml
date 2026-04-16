@@ -1,4 +1,6 @@
-version: v3.0.5
+# STAC CATALOG SPECIFICATIONS
+
+version: v3.0.6
 
 catalog_properties:
   name: stac
@@ -21,8 +23,17 @@ dataset_properties:
     catalog_field_value_type: string
     is_required: true
 
+  - source_collection: null
+    catalog_field_name: branch_time_in_child
+    catalog_field_value_type: double
+    is_required: false
+
+  - source_collection: null
+    catalog_field_name: branch_time_in_parent
+    catalog_field_value_type: double
+    is_required: false
+
   - source_collection: Conventions
-    catalog_field_name: Conventions
     catalog_field_value_type: string_array
     is_required: false
 
@@ -55,6 +66,10 @@ dataset_properties:
   - source_collection: grid_label
     catalog_field_value_type: string
     is_required: true
+  
+  - source_collection: horizontal_label
+    catalog_field_value_type: string
+    is_required: true
 
   - source_collection: initialization_index
     catalog_field_value_type: string
@@ -81,9 +96,43 @@ dataset_properties:
     catalog_field_value_type: string
     is_required: true
 
+  - source_collection: mip_era
+    catalog_field_value_type: string
+    is_required: true
+
   - source_collection: nominal_resolution
     catalog_field_value_type: string
     is_required: true
+
+  - source_collection: activity
+    catalog_field_name: parent_activity_id
+    catalog_field_value_type: string
+    is_required: false
+
+  - source_collection: experiment
+    catalog_field_name: parent_experiment_id
+    catalog_field_value_type: string
+    is_required: false
+
+  - source_collection: mip_era
+    catalog_field_name: parent_mip_era
+    catalog_field_value_type: string
+    is_required: false
+
+  - source_collection: source
+    catalog_field_name: parent_source_id
+    catalog_field_value_type: string
+    is_required: false
+
+  - source_collection: time_unit
+    catalog_field_name: parent_time_units
+    catalog_field_value_type: string
+    is_required: false
+
+  - source_collection: variant_label
+    catalog_field_name: parent_variant_label
+    catalog_field_value_type: string
+    is_required: false
 
   - source_collection: physics_index
     catalog_field_value_type: string
@@ -110,8 +159,8 @@ dataset_properties:
     catalog_field_value_type: string
     is_required: true
 
-  - source_collection: source
-    source_collection_key: description
+  - source_collection: null
+    catalog_field_name: source
     catalog_field_value_type: string
     is_required: false
 
@@ -148,7 +197,6 @@ dataset_properties:
     is_required: true
 
   - source_collection: null
-    source_collection_key: description
     catalog_field_name: variable_long_name
     catalog_field_value_type: string
     is_required: true
