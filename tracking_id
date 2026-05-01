@@ -1,0 +1,19 @@
+{
+    "validation_key": "tracking-id",
+    "ui_label": "",
+    "description": "",
+    "tracking_id": [
+        ""
+    ],
+    "@context": {
+        "@alt_base": "https://wcrp-cmip.github.io/CMIP7-CVs/tracking_id/",
+        "@base": "https://cmip7.mipcvs.dev/tracking_id/",
+        "@vocab": "https://cmip7.mipcvs.dev/docs/contents/TrackingId/"
+    },
+    "@type": [
+        "wcrp:tracking_id",
+        "esgvoc:TrackingId",
+        "cmip7"
+    ],
+    "@id": "tracking_id"
+}

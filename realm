@@ -1,0 +1,30 @@
+{
+    "validation_key": "realm",
+    "ui_label": "RealmCollection",
+    "description": "CMIP7 Permissible Realms",
+    "realm": [
+        "aerosol",
+        "atmos",
+        "atmoschem",
+        "land",
+        "landice",
+        "ocean",
+        "ocnbgchem",
+        "seaice"
+    ],
+    "@context": {
+        "@alt_base": "https://wcrp-cmip.github.io/CMIP7-CVs/realm/",
+        "@base": "https://cmip7.mipcvs.dev/realm/",
+        "@vocab": "https://cmip7.mipcvs.dev/docs/contents/Realm/",
+        "realm": {
+            "@context": "https://constants.mipcvs.dev/scientific_domain/_context",
+            "@type": "@id"
+        }
+    },
+    "@type": [
+        "wcrp:realm",
+        "esgvoc:Realm",
+        "cmip7"
+    ],
+    "@id": "realm"
+}
