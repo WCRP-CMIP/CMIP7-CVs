@@ -1,0 +1,100 @@
+name: Close inactive issues
+
+on:
+  schedule:
+    - cron: "30 1 * * *"
+  workflow_dispatch:
+
+jobs:
+  create-labels:
+    name: Create required labels
+    runs-on: ubuntu-latest
+    permissions:
+      issues: write
+    steps:
+      - name: Ensure "low-priority" and "keep-open" labels exist
+        uses: actions/github-script@v6
+        with:
+          github-token: ${{ secrets.GITHUB_TOKEN }}
+          script: |
+            const labels = [
+              {
+                name: "low-priority",
+                color: "9e9e9e",
+                description: "Low priority issues: eligible for lower-frequency automated cleanup."
+              },
+              {
+                name: "keep-open",
+                color: "b60205",
+                description: "Safety label — do not close this issue automatically."
+              }
+            ];
+
+            for (const lbl of labels) {
+              try {
+                await github.rest.issues.createLabel({
+                  owner: context.repo.owner,
+                  repo: context.repo.repo,
+                  name: lbl.name,
+                  color: lbl.color,
+                  description: lbl.description
+                });
+                core.info(`Created label '${lbl.name}'`);
+              } catch (err) {
+                if (err.status === 422) {
+                  // Label already exists — update to ensure color/description are correct
+                  await github.rest.issues.updateLabel({
+                    owner: context.repo.owner,
+                    repo: context.repo.repo,
+                    current_name: lbl.name,
+                    name: lbl.name,
+                    color: lbl.color,
+                    description: lbl.description
+                  });
+                  core.info(`Updated label '${lbl.name}'`);
+                } else {
+                  throw err;
+                }
+              }
+            }
+
+  low-priority-issues:
+    name: Low priority issues cleanup
+    needs: create-labels
+    runs-on: ubuntu-latest
+    permissions:
+      issues: write
+      pull-requests: write
+    steps:
+      - uses: actions/stale@v9
+        with:
+          days-before-issue-stale: 60
+          days-before-issue-close: 30
+          stale-issue-label: "stale"
+          stale-issue-message: "This low-priority issue has been inactive for 60 days."
+          close-issue-message: "This low-priority issue was closed after 30 more days of inactivity."
+          only-issue-labels: "low-priority"
+          exempt-issue-labels: "keep-open"
+          days-before-pr-stale: -1
+          days-before-pr-close: -1
+          repo-token: ${{ secrets.GITHUB_TOKEN }}
+
+  default-issues:
+    name: Default issues cleanup
+    needs: create-labels
+    runs-on: ubuntu-latest
+    permissions:
+      issues: write
+      pull-requests: write
+    steps:
+      - uses: actions/stale@v9
+        with:
+          days-before-issue-stale: 30
+          days-before-issue-close: 14
+          stale-issue-label: "stale"
+          stale-issue-message: "This issue is stale after 30 days of inactivity."
+          close-issue-message: "This issue was closed after 14 more days of inactivity."
+          exempt-issue-labels: "low-priority,keep-open"
+          days-before-pr-stale: -1
+          days-before-pr-close: -1
+          repo-token: ${{ secrets.GITHUB_TOKEN }}

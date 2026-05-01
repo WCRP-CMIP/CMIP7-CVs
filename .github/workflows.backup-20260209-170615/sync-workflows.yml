@@ -1,0 +1,58 @@
+name: → workflows
+
+on:
+  push:
+    branches:
+      - main
+    paths:
+      - '.github/workflows/**'
+      - '.github/CONTRIBUTING.md'
+
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        branch: 
+          - src-data
+          - docs
+    
+    steps:
+      - name: Checkout branch
+        uses: actions/checkout@v4
+        with:
+          ref: ${{ matrix.branch }}
+          fetch-depth: 0
+          token: ${{ secrets.GITHUB_TOKEN }}
+      
+      - name: Copy files from main
+        run: |
+          mkdir -p .github/workflows
+          mkdir -p .github/prepublish
+
+          # Ensure remote main is available (works in detached HEAD)
+          git fetch origin main --depth=1 || true
+
+          # Copy workflows directory from remote main if present
+          git checkout origin/main -- .github/workflows/ || true
+
+          # Copy prepublish directory from remote main if present
+          git checkout origin/main -- .github/prepublish/ || true
+          
+          # Copy CONTRIBUTING.md from remote main if present
+          git cat-file -e origin/main:.github/CONTRIBUTING.md 2>/dev/null && \
+            git checkout origin/main -- .github/CONTRIBUTING.md || true
+      
+      - name: Commit and push
+        uses: EndBug/add-and-commit@v9
+        with:
+          add: '.github/'
+          author_name: 'cmip-ipo'
+          author_email: 'actions@wcrp-cmip.org'
+          message: 'Sync .github files from main'
+          push: true
