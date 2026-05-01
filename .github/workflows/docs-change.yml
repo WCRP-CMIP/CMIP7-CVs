@@ -1,0 +1,92 @@
+name: 📚 docs-change
+description: Build and deploy documentation when docs branch changes
+
+permissions:
+  contents: write
+  pages: write
+  id-token: write
+
+on:
+  push:
+    branches:
+      - "docs"
+    paths:
+      - "docs/**"
+  workflow_dispatch:
+
+jobs:
+  build_and_deploy:
+    runs-on: ubuntu-latest
+    outputs:
+      has_changes: ${{ steps.check_changes.outputs.has_changes }}
+    
+    steps:
+      - name: Checkout docs branch
+        uses: actions/checkout@v4
+        with:
+          ref: docs
+          fetch-depth: 0
+
+      - name: Configure Git
+        run: |
+          git config user.name "cmip-ipo"
+          git config user.email "actions@wcrp-cmip.org"
+
+      - name: Checkout production branch
+        run: |
+          echo "Fetching production branch..."
+          git fetch origin production --depth=1
+          git checkout production
+
+      - name: Copy docs from docs branch
+        run: |
+          echo "Fetching docs branch..."
+          git fetch origin docs --depth=1
+          
+          echo "Restoring docs folder..."
+          rm -rf docs
+          git restore --source origin/docs --staged --worktree -- docs/
+          
+          echo "✓ Copied docs from docs branch"
+
+      - name: Check for changes
+        id: check_changes
+        run: |
+          git add -A
+          
+          if git diff --cached --quiet; then
+            echo "has_changes=false" >> $GITHUB_OUTPUT
+            echo "No documentation changes"
+          else
+            echo "has_changes=true" >> $GITHUB_OUTPUT
+            echo "Documentation changes detected"
+          fi
+
+      - name: Commit changes
+        if: steps.check_changes.outputs.has_changes == 'true'
+        run: |
+          git commit -m "Update documentation from docs branch"
+          git push origin production
+
+  deploy:
+    needs: build_and_deploy
+    if: needs.build_and_deploy.outputs.has_changes == 'true'
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+      pages: write
+      id-token: write
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: production
+      - uses: actions/configure-pages@v5
+      - uses: actions/upload-pages-artifact@v3
+        with:
+          path: '.'
+      - uses: actions/deploy-pages@v4
+        id: deployment
+      - name: Display URL
+        run: |
+          echo "## 📚 Documentation Deployed" >> $GITHUB_STEP_SUMMARY
+          echo "URL: ${{ steps.deployment.outputs.page_url }}" >> $GITHUB_STEP_SUMMARY

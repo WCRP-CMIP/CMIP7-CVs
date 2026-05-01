@@ -13,7 +13,7 @@
         "@base": "https://cmip7.mipcvs.dev/license/",
         "@vocab": "https://cmip7.mipcvs.dev/docs/contents/License/",
         "license": {
-            "@context": "https://wcrp-cmip.github.io/WCRP-universe/license/_context",
+            "@context": "https://wcrp-cmip.github.io/WCRP-constants/license/_context",
             "@type": "@id"
         }
     },

@@ -10,7 +10,7 @@
         "@base": "https://cmip7.mipcvs.dev/archive_id/",
         "@vocab": "https://cmip7.mipcvs.dev/docs/contents/ArchiveId/",
         "mip_era": {
-            "@context": "https://wcrp-cmip.github.io/WCRP-universe/archive_id/_context",
+            "@context": "https://wcrp-cmip.github.io/WCRP-constants/archive_id/_context",
             "@type": "@id"
         }
     },

@@ -8,7 +8,7 @@
         "@base": "https://cmip7.mipcvs.dev/grid_label/",
         "@vocab": "https://cmip7.mipcvs.dev/docs/contents/GridLabel/",
         "grid_label": {
-            "@context": "https://wcrp-cmip.github.io/WCRP-universe/grid_label/_context",
+            "@context": "https://wcrp-cmip.github.io/WCRP-constants/grid_label/_context",
             "@type": "@id"
         }
     },

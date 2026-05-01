@@ -24,7 +24,7 @@
         "@base": "https://cmip7.mipcvs.dev/native_nominal_resolution/",
         "@vocab": "https://cmip7.mipcvs.dev/docs/contents/NativeNominalResolution/",
         "native_nominal_resolution": {
-            "@context": "https://wcrp-cmip.github.io/WCRP-universe/resolution/_context",
+            "@context": "https://wcrp-cmip.github.io/WCRP-constants/resolution/_context",
             "@type": "@id"
         }
     },

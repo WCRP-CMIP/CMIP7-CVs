@@ -21,7 +21,7 @@
         "@base": "https://cmip7.mipcvs.dev/activity/",
         "@vocab": "https://cmip7.mipcvs.dev/docs/contents/Activity/",
         "activity": {
-            "@context": "https://wcrp-cmip.github.io/WCRP-universe/activity/_context",
+            "@context": "https://wcrp-cmip.github.io/WCRP-constants/activity/_context",
             "@type": "@id"
         }
     },

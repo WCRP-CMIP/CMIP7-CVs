@@ -14,7 +14,7 @@
         "@base": "https://cmip7.mipcvs.dev/region/",
         "@vocab": "https://cmip7.mipcvs.dev/docs/contents/Region/",
         "region": {
-            "@context": "https://wcrp-cmip.github.io/WCRP-universe/region/_context",
+            "@context": "https://wcrp-cmip.github.io/WCRP-constants/region/_context",
             "@type": "@id"
         }
     },

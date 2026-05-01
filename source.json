@@ -1,0 +1,23 @@
+{
+    "validation_key": "source",
+    "ui_label": "SourceCollection",
+    "description": "CMIP7 Permissible Source IDs",
+    "source": [
+        "cnrm-esm2-1e"
+    ],
+    "@context": {
+        "@alt_base": "https://wcrp-cmip.github.io/CMIP7-CVs/source/",
+        "@base": "https://cmip7.mipcvs.dev/source/",
+        "@vocab": "https://cmip7.mipcvs.dev/docs/Source/",
+        "source": {
+            "@context": "https://wcrp-cmip.github.io/Essential-Model-Documentation/source/_context",
+            "@type": "@id"
+        }
+    },
+    "@type": [
+        "wcrp:source",
+        "esgvoc:Source",
+        "cmip7"
+    ],
+    "@id": "source"
+}
