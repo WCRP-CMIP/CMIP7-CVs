@@ -18,12 +18,17 @@
         "10.5194/egusphere-2024-4086"
     ],
     "start_date": "1850-01-01",
-    "tier": "1",
+    "tier": 1,
     "@context": "_context",
     "@type": [
         "wcrp:experiment",
         "esgvoc:Experiment",
         "cmip7"
     ],
-    "@id": "hist-ghg"
+    "@id": "hist-ghg",
+    "parent_mip_era": "cmip7",
+    "start_timestamp": "1850-01-01",
+    "end_timestamp": "2035-12-31",
+    "min_number_yrs_per_sim": 186.0,
+    "min_ensemble_size": 3
 }

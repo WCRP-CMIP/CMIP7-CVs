@@ -13,16 +13,19 @@
         "chem"
     ],
     "parent_experiment": [
-        "piclim-control"
+        "picontrol"
     ],
     "references": [],
     "start_date": "none",
-    "tier": "1",
+    "tier": 1,
     "@context": "_context",
     "@type": [
         "wcrp:experiment",
         "esgvoc:Experiment",
         "cmip7"
     ],
-    "@id": "piclim-ods"
+    "@id": "piclim-ods",
+    "parent_mip_era": "cmip7",
+    "parent_activity": "cmip",
+    "branch_information": "Same as `piClim-control`"
 }

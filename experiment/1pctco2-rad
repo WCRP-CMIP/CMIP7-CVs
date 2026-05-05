@@ -21,12 +21,14 @@
     ],
     "references": [],
     "start_date": "none",
-    "tier": "1",
+    "tier": 1,
     "@context": "_context",
     "@type": [
         "wcrp:experiment",
         "esgvoc:Experiment",
         "cmip7"
     ],
-    "@id": "1pctco2-rad"
+    "@id": "1pctco2-rad",
+    "parent_mip_era": "cmip7",
+    "min_number_yrs_per_sim": 150.0
 }
