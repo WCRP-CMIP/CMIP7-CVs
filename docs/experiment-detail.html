@@ -172,7 +172,10 @@ async function load() {
         } catch(e) { console.warn('Fallback to raw:', e); }
         render(exp, id);
         const warnEl = document.getElementById('warn-url');
-        if (warnEl) warnEl.textContent = `await JsonLdExpand.compact('${url}', {depth: 3});`;
+        if (warnEl) {
+            const href = url.endsWith('.json') ? url : url + '.json';
+            warnEl.innerHTML = `await JsonLdExpand.compact('<a href="${href}" target="_blank" style="color:#5a4200">${url}</a>', {depth: 3});`;
+        }
         document.getElementById('loading').style.display = 'none';
         document.getElementById('content').style.display = 'block';
     } catch(e) {
