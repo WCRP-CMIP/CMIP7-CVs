@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CMIP7 Experiments</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            background: #f5f5f5;
+            color: #333;
+            line-height: 1.6;
+        }
+        .header {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 2rem;
+            margin-bottom: 2rem;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+        }
+        .header h1 {
+            font-size: 2.5rem;
+            margin-bottom: 0.5rem;
+        }
+        .header p {
+            opacity: 0.95;
+            font-size: 1.1rem;
+        }
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 1rem 2rem;
+        }
+        .controls {
+            margin-bottom: 1.5rem;
+            display: flex;
+            gap: 1rem;
+            flex-wrap: wrap;
+            align-items: center;
+        }
+        .controls input, .controls select {
+            padding: 0.5rem 1rem;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            font-size: 1rem;
+        }
+        .controls input {
+            flex: 1;
+            min-width: 200px;
+        }
+        .loading {
+            text-align: center;
+            padding: 2rem;
+            font-size: 1.1rem;
+            color: #666;
+        }
+        .error {
+            background: #fee;
+            border: 1px solid #fcc;
+            color: #c33;
+            padding: 1rem;
+            border-radius: 4px;
+            margin-bottom: 1rem;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            background: white;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            border-radius: 4px;
+            overflow: hidden;
+        }
+        thead {
+            background: #f0f0f0;
+            border-bottom: 2px solid #667eea;
+        }
+        th {
+            padding: 1rem;
+            text-align: left;
+            font-weight: 600;
+            color: #333;
+        }
+        td {
+            padding: 0.75rem 1rem;
+            border-bottom: 1px solid #eee;
+        }
+        tbody tr:hover {
+            background: #f9f9f9;
+        }
+        a {
+            color: #667eea;
+            text-decoration: none;
+            font-weight: 500;
+            transition: color 0.2s;
+        }
+        a:hover {
+            color: #764ba2;
+            text-decoration: underline;
+        }
+        .validation-key {
+            font-family: 'Courier New', monospace;
+            font-weight: 600;
+            color: #333;
+        }
+        .ui-label {
+            font-weight: 500;
+        }
+        .description {
+            color: #666;
+            font-size: 0.95rem;
+            max-width: 400px;
+            white-space: normal;
+            word-break: break-word;
+        }
+        .tier {
+            display: inline-block;
+            padding: 0.25rem 0.75rem;
+            border-radius: 12px;
+            font-size: 0.85rem;
+            font-weight: 600;
+            background: #e8eaf6;
+            color: #3f51b5;
+        }
+        .stats {
+            background: white;
+            padding: 1rem;
+            border-radius: 4px;
+            margin-bottom: 1rem;
+            display: flex;
+            gap: 2rem;
+        }
+        .stat-item {
+            display: flex;
+            flex-direction: column;
+        }
+        .stat-value {
+            font-size: 1.5rem;
+            font-weight: 600;
+            color: #667eea;
+        }
+        .stat-label {
+            font-size: 0.85rem;
+            color: #666;
+            margin-top: 0.25rem;
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <h1>CMIP7 Experiments</h1>
+        <p>Controlled vocabulary for climate model experiments</p>
+    </div>
+
+    <div class="container">
+        <div id="stats" class="stats" style="display: none;">
+            <div class="stat-item">
+                <div class="stat-value" id="total-count">0</div>
+                <div class="stat-label">Total Experiments</div>
+            </div>
+            <div class="stat-item">
+                <div class="stat-value" id="filtered-count">0</div>
+                <div class="stat-label">Matching</div>
+            </div>
+        </div>
+
+        <div class="controls">
+            <input type="text" id="search" placeholder="Search experiments by name or label...">
+            <select id="activity-filter">
+                <option value="">All Activities</option>
+            </select>
+        </div>
+
+        <div id="error" class="error" style="display: none;"></div>
+        <div id="loading" class="loading">Loading experiments from CMIP7-CVs...</div>
+        <table id="table" style="display: none;">
+            <thead>
+                <tr>
+                    <th style="width: 15%;">ID</th>
+                    <th style="width: 20%;">Label</th>
+                    <th style="width: 45%;">Description</th>
+                    <th style="width: 10%;">Tier</th>
+                    <th style="width: 10%;">Activity</th>
+                </tr>
+            </thead>
+            <tbody id="tbody"></tbody>
+        </table>
+    </div>
+
+    <script>
+        const API_URL = 'https://wcrp-cmip.github.io/CMIP7-CVs/experiment/_graph.json';
+        let allExperiments = [];
+        let filteredExperiments = [];
+
+        async function loadExperiments() {
+            try {
+                const response = await fetch(API_URL);
+                if (!response.ok) throw new Error(`HTTP ${response.status}`);
+                const data = await response.json();
+                
+                // Extract experiments from the graph
+                allExperiments = (data.contents || [])
+                    .filter(item => {
+                        const types = Array.isArray(item['@type']) ? item['@type'] : [item['@type']];
+                        return types.includes('wcrp:experiment') && item.validation_key;
+                    })
+                    .sort((a, b) => {
+                        const keyA = (a.validation_key || '').toLowerCase();
+                        const keyB = (b.validation_key || '').toLowerCase();
+                        return keyA.localeCompare(keyB);
+                    });
+
+                // Extract unique activities
+                const activities = [...new Set(allExperiments
+                    .map(exp => exp.activity?.validation_key || exp.activity)
+                    .filter(Boolean)
+                )].sort();
+
+                const select = document.getElementById('activity-filter');
+                activities.forEach(activity => {
+                    const option = document.createElement('option');
+                    option.value = activity;
+                    option.textContent = activity;
+                    select.appendChild(option);
+                });
+
+                // Update stats
+                document.getElementById('total-count').textContent = allExperiments.length;
+                document.getElementById('stats').style.display = 'flex';
+
+                // Initial render
+                filterExperiments();
+                document.getElementById('loading').style.display = 'none';
+                document.getElementById('table').style.display = 'table';
+
+            } catch (error) {
+                console.error('Error loading experiments:', error);
+                document.getElementById('loading').style.display = 'none';
+                document.getElementById('error').style.display = 'block';
+                document.getElementById('error').textContent = `Error loading experiments: ${error.message}`;
+            }
+        }
+
+        function filterExperiments() {
+            const searchText = document.getElementById('search').value.toLowerCase();
+            const activityFilter = document.getElementById('activity-filter').value;
+
+            filteredExperiments = allExperiments.filter(exp => {
+                const matchesSearch = !searchText || 
+                    (exp.validation_key || '').toLowerCase().includes(searchText) ||
+                    (exp.ui_label || '').toLowerCase().includes(searchText) ||
+                    (exp.description || '').toLowerCase().includes(searchText);
+
+                const activity = exp.activity?.validation_key || exp.activity;
+                const matchesActivity = !activityFilter || activity === activityFilter;
+
+                return matchesSearch && matchesActivity;
+            });
+
+            renderTable();
+        }
+
+        function renderTable() {
+            const tbody = document.getElementById('tbody');
+            tbody.innerHTML = '';
+
+            filteredExperiments.forEach(exp => {
+                const row = document.createElement('tr');
+                const activity = exp.activity?.validation_key || exp.activity || '—';
+                const tier = exp.tier !== undefined ? `Tier ${exp.tier}` : '—';
+                
+                row.innerHTML = `
+                    <td class="validation-key">
+                        <a href="experiment-detail.html?id=${encodeURIComponent(exp.validation_key)}">
+                            ${escapeHtml(exp.validation_key)}
+                        </a>
+                    </td>
+                    <td class="ui-label">${escapeHtml(exp.ui_label || '—')}</td>
+                    <td class="description">${escapeHtml((exp.description || '—').substring(0, 150))}${(exp.description || '').length > 150 ? '...' : ''}</td>
+                    <td><span class="tier">${tier}</span></td>
+                    <td>${escapeHtml(activity)}</td>
+                `;
+                tbody.appendChild(row);
+            });
+
+            document.getElementById('filtered-count').textContent = filteredExperiments.length;
+        }
+
+        function escapeHtml(text) {
+            const div = document.createElement('div');
+            div.textContent = text;
+            return div.innerHTML;
+        }
+
+        // Event listeners
+        document.getElementById('search').addEventListener('input', filterExperiments);
+        document.getElementById('activity-filter').addEventListener('change', filterExperiments);
+
+        // Load on page load
+        window.addEventListener('load', loadExperiments);
+    </script>
+</body>
+</html>
