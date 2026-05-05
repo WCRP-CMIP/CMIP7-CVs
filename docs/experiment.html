@@ -11,7 +11,10 @@
         :root {
             --emd-primary: #1e293b;
             --emd-primary-dark: #0f172a;
+            --emd-link: #2563eb;
         }
+        a { color: var(--emd-link); }
+        a:hover { color: #1d4ed8; }
         .controls { display:flex; gap:1rem; flex-wrap:wrap; margin-bottom:1.5rem; }
         .controls input, .controls select {
             padding:.6rem 1rem; border:1px solid var(--emd-border);
@@ -35,8 +38,8 @@
         tbody tr:hover { background:var(--emd-bg); }
         tbody tr:last-child td { border-bottom:none; }
         .id-cell { font-family:'SF Mono',Monaco,'Cascadia Code',monospace; font-size:.8rem; }
-        .id-cell a { color:var(--emd-primary); text-decoration:none; font-weight:600; }
-        .id-cell a:hover { text-decoration:underline; }
+        .id-cell a { color:var(--emd-link); text-decoration:none; font-weight:600; }
+        .id-cell a:hover { color:#1d4ed8; text-decoration:underline; }
         .desc-cell { color:var(--emd-text-muted); font-size:.85rem; line-height:1.5; max-width:500px; }
         .tier-badge {
             display:inline-block; padding:.2rem .65rem; border-radius:9px;
