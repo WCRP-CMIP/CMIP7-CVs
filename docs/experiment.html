@@ -284,25 +284,30 @@
 
         async function loadExperiments() {
             try {
-                console.log('Fetching experiments from:', API_URL);
+                console.log('🔄 Fetching experiments from:', API_URL);
                 const response = await fetch(API_URL);
                 if (!response.ok) throw new Error(`HTTP ${response.status}`);
                 const data = await response.json();
                 
-                console.log('Data loaded, resolving JSON-LD with depth=3...');
+                console.log('📦 Raw JSON fetched from API:');
+                console.log(data);
+                
+                console.log('🔗 Data loaded, resolving JSON-LD with depth=3...');
                 
                 // Use jsonld-recursive to resolve nested references
                 let resolvedData = data;
                 if (window.JsonLdExpand) {
                     try {
                         resolvedData = await JsonLdExpand.compact(API_URL, { depth: 3 });
-                        console.log('JSON-LD resolved successfully');
+                        console.log('✅ JSON-LD resolved successfully');
+                        console.log('📦 Resolved JSON-LD data:');
+                        console.log(resolvedData);
                     } catch (err) {
-                        console.warn('JSON-LD resolution failed, using raw data:', err);
+                        console.warn('⚠️ JSON-LD resolution failed, using raw data:', err);
                     }
                 }
                 
-                console.log('Extracting experiments...');
+                console.log('📊 Extracting experiments...');
                 // Extract experiments from the graph
                 allExperiments = ((resolvedData.contents || resolvedData['@graph'] || []))
                     .filter(item => {
@@ -315,7 +320,7 @@
                         return keyA.localeCompare(keyB);
                     });
 
-                console.log('Found', allExperiments.length, 'experiments');
+                console.log(`✅ Found ${allExperiments.length} experiments:`, allExperiments);
 
                 // Extract unique activities
                 const activities = [...new Set(allExperiments
@@ -328,7 +333,7 @@
                     .filter(Boolean)
                 )].sort();
 
-                console.log('Found', activities.length, 'activities:', activities);
+                console.log(`✅ Found ${activities.length} activities:`, activities);
 
                 const select = document.getElementById('activity-filter');
                 activities.forEach(activity => {
@@ -348,7 +353,7 @@
                 document.getElementById('table').style.display = 'table';
 
             } catch (error) {
-                console.error('Error loading experiments:', error);
+                console.error('❌ Error loading experiments:', error);
                 document.getElementById('loading').style.display = 'none';
                 document.getElementById('error').style.display = 'block';
                 document.getElementById('error').textContent = `⚠️ Error loading experiments: ${error.message}. Please try again later.`;
