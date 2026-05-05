@@ -250,12 +250,25 @@
                 if (!response.ok) throw new Error(`HTTP ${response.status}`);
                 const data = await response.json();
                 
-                console.log('Data loaded, extracting experiments...');
+                console.log('Data loaded, resolving JSON-LD with depth=3...');
+                
+                // Use jsonld-recursive to resolve nested references
+                let resolvedData = data;
+                if (window.JsonLdExpand) {
+                    try {
+                        resolvedData = await JsonLdExpand.compact(API_URL, { depth: 3 });
+                        console.log('JSON-LD resolved successfully');
+                    } catch (err) {
+                        console.warn('JSON-LD resolution failed, using raw data:', err);
+                    }
+                }
+                
+                console.log('Extracting experiments...');
                 // Extract experiments from the graph
-                allExperiments = (data.contents || [])
+                allExperiments = ((resolvedData.contents || resolvedData['@graph'] || []))
                     .filter(item => {
                         const types = Array.isArray(item['@type']) ? item['@type'] : [item['@type']];
-                        return types.includes('wcrp:experiment') && item.validation_key;
+                        return types && types.some(t => t.includes('experiment')) && item.validation_key;
                     })
                     .sort((a, b) => {
                         const keyA = (a.validation_key || '').toLowerCase();
@@ -267,7 +280,12 @@
 
                 // Extract unique activities
                 const activities = [...new Set(allExperiments
-                    .map(exp => exp.activity?.validation_key || exp.activity)
+                    .map(exp => {
+                        if (typeof exp.activity === 'object') {
+                            return exp.activity.validation_key || exp.activity['@id'];
+                        }
+                        return exp.activity;
+                    })
                     .filter(Boolean)
                 )].sort();
 
@@ -308,7 +326,13 @@
                     (exp.ui_label || '').toLowerCase().includes(searchText) ||
                     (exp.description || '').toLowerCase().includes(searchText);
 
-                const activity = exp.activity?.validation_key || exp.activity;
+                let activity = '';
+                if (typeof exp.activity === 'object') {
+                    activity = exp.activity.validation_key || exp.activity['@id'] || '';
+                } else {
+                    activity = exp.activity || '';
+                }
+                
                 const matchesActivity = !activityFilter || activity === activityFilter;
 
                 return matchesSearch && matchesActivity;
@@ -333,7 +357,14 @@
 
             filteredExperiments.forEach(exp => {
                 const row = document.createElement('tr');
-                const activity = exp.activity?.validation_key || exp.activity || '—';
+                
+                let activity = '';
+                if (typeof exp.activity === 'object') {
+                    activity = exp.activity.validation_key || exp.activity['@id'] || '—';
+                } else {
+                    activity = exp.activity || '—';
+                }
+                
                 const tier = exp.tier !== undefined ? `Tier ${exp.tier}` : '—';
                 const description = (exp.description || '').replace(/\n/g, ' ').substring(0, 180);
                 
