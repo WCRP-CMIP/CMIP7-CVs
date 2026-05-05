@@ -142,7 +142,11 @@ async function load() {
         }).sort((a, b) => {
             const sa = slug(a['@id']), sb = slug(b['@id']);
             const ak = a.validation_key || sa, bk = b.validation_key || sb;
-            // push unknowns (no label/description) to end
+            // pending experiments always go to the end
+            const aPending = (a['@id'] || '').endsWith('-pending');
+            const bPending = (b['@id'] || '').endsWith('-pending');
+            if (aPending !== bPending) return aPending ? 1 : -1;
+            // push unknowns (no label/description) after that
             const aEmpty = !a.ui_label && !a.description;
             const bEmpty = !b.ui_label && !b.description;
             if (aEmpty !== bEmpty) return aEmpty ? 1 : -1;
