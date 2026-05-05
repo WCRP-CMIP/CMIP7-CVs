@@ -1,0 +1,71 @@
+<dialog id="bottom-sidebar" onclick="onBottomSidebarDialogClick(event)" class="bg-transparent"
+    style="position: fixed; left: 0px; top: 0px; transform: translate(0px, 58px); min-width: max-content; --radix-popper-transform-origin: 0% 0px; will-change: transform; z-index: 50; --radix-popper-available-width: 504px; --radix-popper-available-height: 857px; --radix-popper-anchor-width: 72.94999694824219px; --radix-popper-anchor-height: 32px;">
+    <div data-side="bottom" data-align="start" data-state="open" role="dialog" data-slot="popover-content"
+        class="text-popover-foreground data-[state=open]:animate-in data-[state=closed]:animate-out data-[state=closed]:fade-out-0 data-[state=open]:fade-in-0 data-[state=closed]:zoom-out-95 data-[state=open]:zoom-in-95 data-[side=bottom]:slide-in-from-top-2 data-[side=left]:slide-in-from-right-2 data-[side=right]:slide-in-from-left-2 data-[side=top]:slide-in-from-bottom-2 z-50 origin-(--radix-popover-content-transform-origin) border outline-hidden bg-background/90 no-scrollbar h-(--radix-popper-available-height) w-(--radix-popper-available-width) overflow-y-auto rounded-none border-none p-0 shadow-none backdrop-blur duration-100"
+        style="--radix-popover-content-transform-origin: var(--radix-popper-transform-origin); --radix-popover-content-available-width: var(--radix-popper-available-width); --radix-popover-content-available-height: var(--radix-popper-available-height); --radix-popover-trigger-width: var(--radix-popper-anchor-width); --radix-popover-trigger-height: var(--radix-popper-anchor-height);"
+        tabindex="-1">
+        <div class="flex flex-col gap-12 overflow-auto px-6 py-6">
+            {% if nav|length > 1 %}
+            {# Separate pages, sections, and external links #}
+            {% set top_items = nav|selectattr("is_page")|list %}
+            {% set section_items = nav|rejectattr("is_page")|rejectattr("is_link")|list %}
+            {% set link_items = nav|selectattr("is_link")|list %}
+
+            {% if top_items|length > 0 %}
+            <div class="flex flex-col gap-4">
+                <div class="text-muted-foreground text-sm font-medium">Menu</div>
+                <div class="flex flex-col gap-3">
+                    {% for top_item in top_items|sort(attribute="title") %}
+                    <a class="text-2xl font-medium" href="{{ top_item.url | url }}">
+                        {% if top_item.meta and top_item.meta.sidebar_title %}
+                        {{ top_item.meta.sidebar_title }}
+                        {% else %}
+                        {{ top_item.title }}
+                        {% endif %}
+                    </a>
+                    {% endfor %}
+                </div>
+            </div>
+            {% endif %}
+
+            {% if section_items|length > 0 %}
+            <div class="flex flex-col gap-8">
+                {% for top_item in section_items %}
+                <div class="flex flex-col gap-4">
+                    <div class="text-muted-foreground text-sm font-medium">{{ top_item.title }}</div>
+                    {% if top_item.children %}
+                    <div class="flex flex-col gap-3">
+                        {% for sidebar_item in top_item.children|selectattr("is_page")|sort(attribute="title") %}
+                        <a class="text-2xl font-medium" href="{{ sidebar_item.url | url}}">
+                            {% if sidebar_item.meta and sidebar_item.meta.sidebar_title %}
+                            {{ sidebar_item.meta.sidebar_title }}
+                            {% else %}
+                            {{ sidebar_item.title }}
+                            {% endif %}
+                        </a>
+                        {% endfor %}
+                    </div>
+                    {% endif %}
+                </div>
+                {% endfor %}
+            </div>
+            {% endif %}
+
+            {% if link_items|length > 0 %}
+            <div class="flex flex-col gap-4">
+                <div class="text-muted-foreground text-sm font-medium">Links</div>
+                <div class="flex flex-col gap-3">
+                    {% for link_item in link_items %}
+                    <a class="text-2xl font-medium flex items-center gap-2" href="{{ link_item.url }}" target="_blank" rel="noopener">
+                        {{ link_item.title }}
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="opacity-50"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+                    </a>
+                    {% endfor %}
+                </div>
+            </div>
+            {% endif %}
+            {% endif %}
+
+        </div>
+    </div>
+</dialog>

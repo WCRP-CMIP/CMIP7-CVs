@@ -1,0 +1,30 @@
+{% macro render_nav_item(item, indent=0) %}
+  {% if item.get('children') %}
+    <div data-slot="sidebar-group" data-sidebar="group" class="relative flex w-full min-w-0 flex-col p-2">
+      <div data-slot="sidebar-group-label" data-sidebar="group-label" class="text-muted-foreground font-medium text-xs">
+        {{ item.title }}
+      </div>
+      <div data-slot="sidebar-group-content" data-sidebar="group-content" class="w-full text-sm">
+        <ul data-slot="sidebar-menu" data-sidebar="menu" class="flex w-full min-w-0 flex-col gap-0.5">
+          {% for child in item.children %}
+            {{ render_nav_item(child, indent + 1) }}
+          {% endfor %}
+        </ul>
+      </div>
+    </div>
+  {% else %}
+    <li data-slot="sidebar-menu-item" data-sidebar="menu-item" class="group/menu-item relative">
+      <a data-slot="sidebar-menu-button" data-sidebar="menu-button" href="{{ item.url }}" class="hover:bg-sidebar-accent text-[0.8rem] font-medium p-2 rounded-md">
+        {{ item.title }}
+      </a>
+    </li>
+  {% endif %}
+{% endmacro %}
+
+<div data-slot="sidebar-content" data-sidebar="content" class="flex min-h-0 flex-1 flex-col gap-2 overflow-auto no-scrollbar px-2 pb-12">
+  {% if config.nav_data %}
+    {% for item in config.nav_data %}
+      {{ render_nav_item(item) }}
+    {% endfor %}
+  {% endif %}
+</div>
