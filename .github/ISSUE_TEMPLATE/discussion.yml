@@ -30,7 +30,7 @@ body:
       description: |
         Provide background information to help others understand the discussion topic.
         
-        <details>
+        <details markdown="1">
         <summary>Completion Guidance</summary>
         
         Include:
@@ -50,7 +50,7 @@ body:
       description: |
         What are the key points or questions you'd like the community to address?
         
-        <details>
+        <details markdown="1">
         <summary>Completion Guidance</summary>
         
         Use bullet points or numbered lists for clarity.
@@ -74,7 +74,7 @@ body:
       description: |
         Who should be involved in this discussion?
         
-        <details>
+        <details markdown="1">
         <summary>Completion Guidance</summary>
         
         You can @mention specific people or teams, or describe groups that should provide input.
@@ -96,7 +96,7 @@ body:
       description: |
         What do you hope to achieve from this discussion?
         
-        <details>
+        <details markdown="1">
         <summary>Completion Guidance</summary>
         
         Examples:
