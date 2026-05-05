@@ -23,12 +23,15 @@
         "10.1029/2020JD033622"
     ],
     "start_date": "1850-01-01",
-    "tier": "1",
+    "tier": 1,
     "@context": "_context",
     "@type": [
         "wcrp:experiment",
         "esgvoc:Experiment",
         "cmip7"
     ],
-    "@id": "piclim-histaer"
+    "@id": "piclim-histaer",
+    "start_timestamp": "1850-01-01",
+    "end_timestamp": "2100-12-31",
+    "min_number_yrs_per_sim": 251.0
 }

@@ -1,0 +1,27 @@
+{
+    "validation_key": "picontrol-spinup",
+    "ui_label": "",
+    "description": "",
+    "activity": [
+        "cmip"
+    ],
+    "alias": [],
+    "min_number_yrs_per_sim": null,
+    "minimum_number_of_years": null,
+    "model_realms_additional_allowed": [],
+    "model_realms_required": [],
+    "parent_experiment": [
+        "none"
+    ],
+    "references": [],
+    "start_date": "none",
+    "tier": 3,
+    "parent_mip_era": null,
+    "@context": "_context",
+    "@type": [
+        "wcrp:experiment",
+        "esgvoc:Experiment",
+        "cmip7"
+    ],
+    "@id": "picontrol-spinup"
+}
