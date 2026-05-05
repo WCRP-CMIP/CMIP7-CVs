@@ -1,0 +1,400 @@
+name: ⟳ Rename tempgrid files on PR merge
+
+permissions:
+  contents: write
+  issues: write
+  pull-requests: write
+  actions: write
+
+on:
+  pull_request:
+    types:
+      - closed
+  workflow_dispatch:
+    inputs:
+      pr_number:
+        description: 'Pull Request number to process (for manual trigger)'
+        required: false
+        type: string
+
+jobs:
+  rename_tempgrid:
+    if: >
+      (github.event_name == 'pull_request' &&
+       github.event.pull_request.merged == true) ||
+      github.event_name == 'workflow_dispatch'
+
+    runs-on: ubuntu-latest
+
+    env:
+      MANUAL_PR_NUMBER: ${{ github.event.inputs.pr_number }}
+
+    steps:
+      # ── 1. Checkout src-data ───────────────────────────────────────────────
+      - name: Checkout src-data branch
+        uses: actions/checkout@v4
+        with:
+          ref: src-data
+          fetch-depth: 0
+
+      - name: Set PR number
+        id: set_pr
+        run: |
+          if [ -z "$MANUAL_PR_NUMBER" ]; then
+            PR_NUM="${{ github.event.pull_request.number }}"
+          else
+            PR_NUM="$MANUAL_PR_NUMBER"
+          fi
+          echo "pr_number=$PR_NUM" >> "$GITHUB_OUTPUT"
+          echo "Using PR #$PR_NUM"
+
+      - name: Configure Git
+        run: |
+          git config user.name  "cmip-ipo"
+          git config user.email "actions@wcrp-cmip.org"
+
+      # ── 2. Find tempgrid files added by this PR ────────────────────────────
+      - name: Identify added tempgrid files
+        id: find_tempgrid
+        run: |
+          ADDED=$(git diff --name-only --diff-filter=A HEAD^1 HEAD 2>/dev/null || true)
+          TEMPGRID=$(echo "$ADDED" | grep -E '(^|/)([^/]*tempgrid[^/]*)$' || true)
+          echo "Tempgrid files found:"
+          echo "$TEMPGRID"
+          {
+            echo "tempgrid_files<<EOF"
+            echo "$TEMPGRID"
+            echo "EOF"
+          } >> "$GITHUB_OUTPUT"
+
+      # ── 3. Process each tempgrid file ─────────────────────────────────────
+      - name: Process and rename tempgrid files
+        id: rename
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          REPO: ${{ github.repository }}
+          PR_NUMBER: ${{ steps.set_pr.outputs.pr_number }}
+        run: |
+          FILES="${{ steps.find_tempgrid.outputs.tempgrid_files }}"
+          MAPPING_JSON=""
+
+          echo "## ⟳ Tempgrid rename summary" >> "$GITHUB_STEP_SUMMARY"
+          echo "| Original | Renamed to | Authors |" >> "$GITHUB_STEP_SUMMARY"
+          echo "|---|---|---|" >> "$GITHUB_STEP_SUMMARY"
+
+          if [ -z "$FILES" ]; then
+            echo "No tempgrid files found – skipping rename."
+            echo "| _(none)_ | – | – |" >> "$GITHUB_STEP_SUMMARY"
+            echo "mapping_json=[]" >> "$GITHUB_OUTPUT"
+          else
+            while IFS= read -r filepath; do
+            [ -z "$filepath" ] && continue
+            echo "━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━"
+            echo "Processing: $filepath"
+
+            dir=$(dirname "$filepath")
+
+            # ── a. Collect authors from git log for this specific file ────────
+            AUTHORS_FILE=$(mktemp)
+
+            git log --follow --diff-filter=A \
+              --format="%an <%ae>" -- "$filepath" \
+              2>/dev/null >> "$AUTHORS_FILE" || true
+
+            git log --follow --format="%B" -- "$filepath" 2>/dev/null \
+              | grep -oE 'Co-authored-by: [A-Za-z0-9 _.-]+ <[A-Za-z0-9._%+!-]+@[A-Za-z0-9.-]+>' \
+              | sed 's/Co-authored-by: //' \
+              >> "$AUTHORS_FILE" || true
+
+            PR_LOGIN=$(gh pr view "$PR_NUMBER" --repo "$REPO" \
+              --json author --jq '.author.login' 2>/dev/null || true)
+            if [ -n "$PR_LOGIN" ] && \
+               ! echo "$PR_LOGIN" | grep -qE '(\[bot\]|^app/|-bot$)'; then
+              PR_NAME=$(gh api "users/$PR_LOGIN" \
+                --jq '.name // .login' 2>/dev/null || true)
+              if echo "$PR_NAME" | grep -qE '^[A-Za-z0-9 _.@-]+$'; then
+                echo "${PR_NAME} <${PR_LOGIN}@users.noreply.github.com>" \
+                  >> "$AUTHORS_FILE"
+              fi
+            fi
+
+            AUTHOR_NAMES=$(sort -u "$AUTHORS_FILE" \
+              | grep -vE '(cmip-ipo|github-actions|\[bot\]|noreply@github\.com)' \
+              | grep -E '^[A-Za-z0-9]' \
+              | sed 's/ <.*//' | paste -sd ', ')
+            TRAILERS=$(sort -u "$AUTHORS_FILE" \
+              | grep -vE '(cmip-ipo|github-actions|\[bot\]|noreply@github\.com)' \
+              | grep -E '^[A-Za-z0-9]' \
+              | sed 's/^/Co-authored-by: /')
+            rm -f "$AUTHORS_FILE"
+
+            # ── b. Get last commit message for this file ──────────────────────
+            LAST_MSG=$(git log --follow -1 --format="%s" -- "$filepath" 2>/dev/null || true)
+
+            # ── c. Check for duplicate content among existing numbered files ──
+            # Strip identity fields and sort keys so comparison is order-independent
+            JQ_STRIP='del(.["@id"], .["@type"], .validation_key, .ui_label, .alias) | to_entries | sort_by(.key) | from_entries'
+            CANDIDATE_SIG=$(jq -c "$JQ_STRIP" "$filepath")
+            EXISTING_ID=""
+            for existing in "$dir"/[gGhHvVsS][0-9]*.json; do
+              [ -e "$existing" ] || continue
+              if [ "$(jq -c "$JQ_STRIP" "$existing")" = "$CANDIDATE_SIG" ]; then
+                EXISTING_ID=$(basename "$existing" .json)
+                break
+              fi
+            done
+
+            if [ -n "$EXISTING_ID" ]; then
+              echo "  DUPLICATE: content matches existing $EXISTING_ID — skipping rename"
+              echo "| \`$filepath\` | duplicate of \`$EXISTING_ID\` | $AUTHOR_NAMES |" >> "$GITHUB_STEP_SUMMARY"
+              git rm "$filepath"
+              [ -n "$MAPPING_JSON" ] && MAPPING_JSON="${MAPPING_JSON},"
+              LAST_MSG_JSON=$(echo "$LAST_MSG" | jq -Rs .)
+              MAPPING_JSON="${MAPPING_JSON}{\"old\":\"${filepath}\",\"new\":\"${dir}/${EXISTING_ID}.json\",\"old_id\":\"$(basename "$filepath" .json)\",\"new_id\":\"${EXISTING_ID}\",\"authors\":\"${AUTHOR_NAMES}\",\"last_msg\":${LAST_MSG_JSON},\"duplicate\":true}"
+              continue
+            fi
+
+            # ── d. Find the next sequential ID for this folder ───────────────
+            LETTER=""
+            MAX_NUM=-1
+            for existing in "$dir"/[sghvSGHV]*[0-9].json; do
+              [ -e "$existing" ] || continue
+              base=$(basename "$existing" .json)
+              if [[ "$base" =~ ^([sghvSGHV])([0-9]+)$ ]]; then
+                L="${BASH_REMATCH[1],,}"
+                N="${BASH_REMATCH[2]}"
+                NUM=$((10#$N))
+                [ -z "$LETTER" ] && LETTER="$L"
+                [ $NUM -gt $MAX_NUM ] && MAX_NUM=$NUM
+              fi
+            done
+
+            if [ -z "$LETTER" ]; then
+              echo "  SKIP: no existing numbered files in $dir"
+              echo "| \`$filepath\` | skipped | – |" >> "$GITHUB_STEP_SUMMARY"
+              continue
+            fi
+
+            NEXT_NUM=$(( MAX_NUM + 1 ))
+            NEW_NAME=$(printf "%s%03d.json" "$LETTER" "$NEXT_NUM")
+            NEW_PATH="$dir/$NEW_NAME"
+            NEW_ID=$(basename "$NEW_PATH" .json)
+            OLD_ID=$(basename "$filepath" .json)
+
+            echo "  Renaming: $filepath -> $NEW_PATH"
+
+            # ── d. Rename file ────────────────────────────────────────────────
+            git mv "$filepath" "$NEW_PATH"
+
+            # ── e. Update @id and validation_key inside the JSON ─────────────
+            # Explicitly set @id and validation_key to NEW_ID, then also do a
+            # walk() to catch the old tempgrid ID anywhere else in the document.
+            tmp=$(mktemp)
+            jq --arg old "$OLD_ID" --arg new "$NEW_ID" '
+              . as $doc |
+              $doc
+              | .["@id"] = $new
+              | .["validation_key"] = $new
+              | walk(if type == "string" and . == $old then $new else . end)
+            ' "$NEW_PATH" > "$tmp" && mv "$tmp" "$NEW_PATH" || rm -f "$tmp"
+
+            echo "  Updated @id and validation_key: $OLD_ID -> $NEW_ID"
+            echo "| \`$filepath\` | \`$NEW_PATH\` | $AUTHOR_NAMES |" >> "$GITHUB_STEP_SUMMARY"
+
+            [ -n "$MAPPING_JSON" ] && MAPPING_JSON="${MAPPING_JSON},"
+            LAST_MSG_JSON=$(echo "$LAST_MSG" | jq -Rs .)
+            MAPPING_JSON="${MAPPING_JSON}{\"old\":\"${filepath}\",\"new\":\"${NEW_PATH}\",\"old_id\":\"${OLD_ID}\",\"new_id\":\"${NEW_ID}\",\"authors\":\"${AUTHOR_NAMES}\",\"last_msg\":${LAST_MSG_JSON}}"
+
+          done <<< "$FILES"
+            echo "mapping_json=[${MAPPING_JSON}]" >> "$GITHUB_OUTPUT"
+          fi
+
+      # ── 4. Commit to src-data ──────────────────────────────────────────────
+      - name: Commit renames to src-data
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          REPO: ${{ github.repository }}
+          PR_NUMBER: ${{ steps.set_pr.outputs.pr_number }}
+        run: |
+          git add -A
+          if git diff --cached --quiet; then
+            echo "Nothing to commit."
+            exit 0
+          fi
+
+          ALL=$(mktemp)
+          gh pr view "$PR_NUMBER" --repo "$REPO" --json commits \
+            --jq '.commits[].authors[] | select(.email | test("@")) | "\(.name) <\(.email>)"' \
+            2>/dev/null >> "$ALL" || true
+          gh pr view "$PR_NUMBER" --repo "$REPO" --json commits \
+            --jq '.commits[].messageBody' 2>/dev/null \
+            | grep -oE 'Co-authored-by: [A-Za-z0-9 _.-]+ <[A-Za-z0-9._%+!-]+@[A-Za-z0-9.-]+>' \
+            | sed 's/Co-authored-by: //' >> "$ALL" || true
+
+          TRAILERS=$(sort -u "$ALL" \
+            | grep -vE '(cmip-ipo|github-actions|\[bot\]|noreply@github\.com)' \
+            | grep -E '^[A-Za-z0-9]' \
+            | sed 's/^/Co-authored-by: /')
+          rm -f "$ALL"
+
+          if [ -n "$TRAILERS" ]; then
+            git commit \
+              -m "Rename tempgrid files with sequential ids [PR #${PR_NUMBER}]" \
+              -m "$TRAILERS"
+          else
+            git commit \
+              -m "Rename tempgrid files with sequential ids [PR #${PR_NUMBER}]"
+          fi
+          git push origin src-data
+
+      # ── 5. Cancel stale src-data-change runs then retrigger ───────────────
+      - name: Cancel and retrigger src-data-change
+        if: ${{ !cancelled() }}
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          REPO: ${{ github.repository }}
+        run: |
+          RUNS=$(gh run list --repo "$REPO" -w src-data-change.yml \
+            --status in_progress --json databaseId --jq '.[].databaseId')
+          for run_id in $RUNS; do
+            gh run cancel "$run_id" --repo "$REPO" || true
+          done
+          gh workflow run src-data-change.yml --repo "$REPO" --ref src-data
+
+      # ── 6. Update PR + issues: comment and retitle ────────────────────────
+      - name: Update PR and linked issues
+        if: ${{ !cancelled() }}
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          PR_NUMBER: ${{ steps.set_pr.outputs.pr_number }}
+          REPO: ${{ github.repository }}
+          MAPPING_JSON: ${{ steps.rename.outputs.mapping_json }}
+        run: |
+          ISSUE_NUMBERS=$(gh pr view "$PR_NUMBER" --repo "$REPO" \
+            --json body --jq '.body' | tr '\n' ' ' \
+            | grep -oiE '(Resolves|Fixes|Closes)[[:space:]]+#[0-9]+' \
+            | grep -oE '[0-9]+' || true)
+
+          BRANCH=$(gh pr view "$PR_NUMBER" --repo "$REPO" \
+            --json headRefName --jq '.headRefName' 2>/dev/null || true)
+
+          # ── No tempgrid files — still close issues and delete branch ────────
+          if [ -z "$MAPPING_JSON" ] || [ "$MAPPING_JSON" = "[]" ]; then
+            echo "No tempgrid entries — closing linked issues and deleting branch."
+
+            if [ -n "$ISSUE_NUMBERS" ]; then
+              while IFS= read -r issue_num; do
+                [ -z "$issue_num" ] && continue
+                gh issue close "$issue_num" --repo "$REPO" || true
+                echo "Closed issue #${issue_num}" >> "$GITHUB_STEP_SUMMARY"
+              done <<< "$ISSUE_NUMBERS"
+            fi
+
+            if [ -n "$BRANCH" ]; then
+              gh api -X DELETE "repos/$REPO/git/refs/heads/$BRANCH" \
+                && echo "Deleted branch $BRANCH" \
+                || echo "Could not delete $BRANCH (may already be gone)"
+            fi
+            exit 0
+          fi
+          TABLE_ROWS=$(echo "$MAPPING_JSON" | jq -r \
+            '.[] | if .duplicate then
+              "| `\(.old_id)` | ⚠️ duplicate of `\(.new_id)` | \(.authors) |"
+            else
+              "| `\(.old_id)` | `\(.new_id)` | \(.authors) |"
+            end')
+          NEW_IDS=$(echo "$MAPPING_JSON" | jq -r '[.[].new_id] | unique | join(", ")')
+
+          BODY_FILE=$(mktemp)
+          HAS_DUPS=$(echo "$MAPPING_JSON" | jq '[.[] | select(.duplicate == true)] | length')
+          HAS_NEW=$(echo "$MAPPING_JSON"  | jq '[.[] | select(.duplicate != true)] | length')
+
+          if [ "$HAS_NEW" -gt 0 ]; then
+            echo "## Grid IDs assigned" >> "$BODY_FILE"
+          else
+            echo "## Duplicate grid detected" >> "$BODY_FILE"
+          fi
+          echo "" >> "$BODY_FILE"
+          if [ "$HAS_DUPS" -gt 0 ]; then
+            echo "> [!WARNING]" >> "$BODY_FILE"
+            echo "> One or more submitted grids are identical to an existing entry (ignoring ID fields). The existing ID has been used — no new entry was created." >> "$BODY_FILE"
+            echo "" >> "$BODY_FILE"
+            echo "**What to do next:**" >> "$BODY_FILE"
+            echo "" >> "$BODY_FILE"
+            echo "- **Use the existing grid** — reference the ID shown above in your Stage 2a (Horizontal Computational Grid) submission instead." >> "$BODY_FILE"
+            echo "- **Your grid is genuinely different** — close this issue and submit a new one, using the **Description** field to explain how your grid differs from the one listed above. Any difference that cannot be captured by the other form fields must be described there." >> "$BODY_FILE"
+            echo "" >> "$BODY_FILE"
+          fi
+          if [ "$HAS_NEW" -gt 0 ]; then
+            echo "Temporary grid files renamed to permanent sequential IDs on \`src-data\`." >> "$BODY_FILE"
+            echo "" >> "$BODY_FILE"
+          fi
+          echo "| Temporary ID | Result | Authors |" >> "$BODY_FILE"
+          echo "|---|---|---|" >> "$BODY_FILE"
+          printf "%s\n" "$TABLE_ROWS" >> "$BODY_FILE"
+          echo "" >> "$BODY_FILE"
+          echo "> Use the permanent ID in subsequent registration steps." >> "$BODY_FILE"
+          COMMENT_BODY=$(cat "$BODY_FILE")
+          rm -f "$BODY_FILE"
+
+          OLD_PR_TITLE=$(gh pr view "$PR_NUMBER" --repo "$REPO" \
+            --json title --jq '.title')
+          CLEAN_PR_TITLE=$(echo "$OLD_PR_TITLE" | sed 's/^|[^|]*| *//')
+          NEW_PR_TITLE="| ${NEW_IDS} | ${CLEAN_PR_TITLE}"
+          if [ "$OLD_PR_TITLE" != "$NEW_PR_TITLE" ]; then
+            gh pr edit "$PR_NUMBER" --repo "$REPO" --title "$NEW_PR_TITLE"
+          fi
+
+          gh pr comment "$PR_NUMBER" --repo "$REPO" --body "$COMMENT_BODY"
+          echo "Updated and commented on PR #${PR_NUMBER}" >> "$GITHUB_STEP_SUMMARY"
+
+          if [ -n "$ISSUE_NUMBERS" ]; then
+            echo "## Linked issues" >> "$GITHUB_STEP_SUMMARY"
+            echo "| Issue | Action |" >> "$GITHUB_STEP_SUMMARY"
+            echo "|---|---|" >> "$GITHUB_STEP_SUMMARY"
+            while IFS= read -r issue_num; do
+              [ -z "$issue_num" ] && continue
+
+              gh issue comment "$issue_num" --repo "$REPO" --body "$COMMENT_BODY"
+
+              OLD_ISSUE_TITLE=$(gh issue view "$issue_num" --repo "$REPO" \
+                --json title --jq '.title')
+              CLEAN_ISSUE_TITLE=$(echo "$OLD_ISSUE_TITLE" | sed 's/^|[^|]*| *//')
+              NEW_ISSUE_TITLE="| ${NEW_IDS} | ${CLEAN_ISSUE_TITLE}"
+              if [ "$OLD_ISSUE_TITLE" != "$NEW_ISSUE_TITLE" ]; then
+                gh issue edit "$issue_num" --repo "$REPO" --title "$NEW_ISSUE_TITLE"
+              fi
+
+              gh issue close "$issue_num" --repo "$REPO" || true
+
+              echo "| #${issue_num} | updated + closed |" >> "$GITHUB_STEP_SUMMARY"
+            done <<< "$ISSUE_NUMBERS"
+          else
+            echo "_No linked issues found._" >> "$GITHUB_STEP_SUMMARY"
+          fi
+
+          # ── Delete branch — always, whether new IDs or duplicates ──────────
+          if [ -n "$BRANCH" ]; then
+            gh api -X DELETE "repos/$REPO/git/refs/heads/$BRANCH" \
+              && echo "Deleted branch $BRANCH" >> "$GITHUB_STEP_SUMMARY" \
+              || echo "Could not delete $BRANCH (may already be gone)" >> "$GITHUB_STEP_SUMMARY"
+          fi
+
+  delete_branch:
+    if: >
+      github.event_name == 'pull_request' &&
+      github.event.pull_request.merged == true
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    env:
+      GH_TOKEN: ${{ secrets.CMIP_IPO_BOT_TOKEN || github.token }}
+      REPO:     ${{ github.repository }}
+      BRANCH:   ${{ github.event.pull_request.head.ref }}
+    steps:
+      - name: Delete head branch
+        run: |
+          echo "Deleting branch: $BRANCH"
+          gh api -X DELETE "repos/$REPO/git/refs/heads/$BRANCH" \
+            && echo "Deleted $BRANCH" \
+            || echo "Could not delete $BRANCH (may already be gone)"

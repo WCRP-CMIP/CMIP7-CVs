@@ -1,0 +1,54 @@
+name: ⚇ CI
+description: Continuous Integration - validation and checks
+
+permissions:
+  contents: write
+  pages: write
+  actions: write
+
+on:
+  schedule:
+    - cron: "0 0 * * 6"  # Weekly on Saturdays
+  workflow_dispatch:
+
+jobs:
+  # ============================================
+  # Check for broken links
+  # ============================================
+  link_check:
+    uses: WCRP-CMIP/CMIPLD/.github/workflows/linkcheck.yml@main
+
+  # ============================================
+  # Validate JSON files
+  # ============================================
+  validate_json:
+    uses: WCRP-CMIP/CMIPLD/.github/workflows/validate_json.yml@main
+
+  # ============================================
+  # Verify graphs exist
+  # ============================================
+  check_graphs:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout production branch
+        uses: actions/checkout@v4
+        with:
+          ref: production
+          fetch-depth: 1
+
+      - name: Check for graphs
+        run: |
+          echo "## Graph Status" >> $GITHUB_STEP_SUMMARY
+          echo "" >> $GITHUB_STEP_SUMMARY
+          
+          for dir in */; do
+            if [ -f "${dir}_context" ]; then
+              echo "### $dir" >> $GITHUB_STEP_SUMMARY
+              if [ -f "${dir}graph.jsonld" ]; then
+                echo "✅ graph.jsonld present" >> $GITHUB_STEP_SUMMARY
+              else
+                echo "❌ graph.jsonld missing" >> $GITHUB_STEP_SUMMARY
+              fi
+              echo "" >> $GITHUB_STEP_SUMMARY
+            fi
+          done

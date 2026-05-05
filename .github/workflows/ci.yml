@@ -1,4 +1,4 @@
-name: ⚇ CI
+name: CI
 description: Continuous Integration - validation and checks
 
 permissions:
@@ -8,25 +8,29 @@ permissions:
 
 on:
   schedule:
-    - cron: "0 0 * * 6"  # Weekly on Saturdays
+    - cron: "0 0 * * 6"
   workflow_dispatch:
 
 jobs:
-  # ============================================
-  # Check for broken links
-  # ============================================
+  check_contexts:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout production branch
+        uses: actions/checkout@v4
+        with:
+          ref: production
+          fetch-depth: 1
+
+      - name: Check context URLs
+        uses: WCRP-CMIP/CMIPLD/.github/actions/check-contexts@main
+
   link_check:
     uses: WCRP-CMIP/CMIPLD/.github/workflows/linkcheck.yml@main
 
-  # ============================================
-  # Validate JSON files
-  # ============================================
   validate_json:
     uses: WCRP-CMIP/CMIPLD/.github/workflows/validate_json.yml@main
 
-  # ============================================
-  # Verify graphs exist
-  # ============================================
+
   check_graphs:
     runs-on: ubuntu-latest
     steps:
@@ -40,15 +44,22 @@ jobs:
         run: |
           echo "## Graph Status" >> $GITHUB_STEP_SUMMARY
           echo "" >> $GITHUB_STEP_SUMMARY
-          
+
+          MISSING=0
           for dir in */; do
-            if [ -f "${dir}_context" ]; then
-              echo "### $dir" >> $GITHUB_STEP_SUMMARY
-              if [ -f "${dir}graph.jsonld" ]; then
-                echo "✅ graph.jsonld present" >> $GITHUB_STEP_SUMMARY
+            if [ -f "${dir}_context" ] || [ -f "${dir}_context.json" ]; then
+              if [ -f "${dir}_graph.json" ]; then
+                echo "${dir}_graph.json - OK" >> $GITHUB_STEP_SUMMARY
               else
-                echo "❌ graph.jsonld missing" >> $GITHUB_STEP_SUMMARY
+                echo "${dir}_graph.json - MISSING" >> $GITHUB_STEP_SUMMARY
+                MISSING=$((MISSING + 1))
               fi
-              echo "" >> $GITHUB_STEP_SUMMARY
             fi
           done
+
+          echo "" >> $GITHUB_STEP_SUMMARY
+          if [ $MISSING -gt 0 ]; then
+            echo "**$MISSING graph file(s) missing** - run graphify to generate" >> $GITHUB_STEP_SUMMARY
+          else
+            echo "All graphs present" >> $GITHUB_STEP_SUMMARY
+          fi

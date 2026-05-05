@@ -1,4 +1,4 @@
-name: ⌛ Stale Issues
+name: 🗑️ Stale Issues
 description: Mark and close stale issues
 
 permissions:
@@ -7,7 +7,7 @@ permissions:
 
 on:
   schedule:
-    - cron: '0 0 * * *'
+    - cron: '0 0 * * *'  # Daily
   workflow_dispatch:
 
 jobs:
@@ -17,23 +17,27 @@ jobs:
       - uses: actions/stale@v9
         with:
           repo-token: ${{ secrets.GITHUB_TOKEN }}
-
-          stale-issue-message: >
-            This issue has been automatically marked as stale due to lack of activity.
+          
+          # Issue settings
+          stale-issue-message: |
+            This issue has been automatically marked as stale due to lack of activity. 
             It will be closed in 7 days if no further activity occurs.
           close-issue-message: 'Closed due to inactivity.'
           days-before-issue-stale: 60
           days-before-issue-close: 7
-
-          stale-pr-message: >
+          
+          # PR settings
+          stale-pr-message: |
             This pull request has been automatically marked as stale due to lack of activity.
             It will be closed in 7 days if no further activity occurs.
           close-pr-message: 'Closed due to inactivity.'
           days-before-pr-stale: 30
           days-before-pr-close: 7
-
+          
+          # Labels
           stale-issue-label: 'stale'
           stale-pr-label: 'stale'
-
+          
+          # Exemptions
           exempt-issue-labels: 'pinned,security,bug'
           exempt-pr-labels: 'pinned,security'
