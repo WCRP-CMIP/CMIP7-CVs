@@ -1,0 +1,60 @@
+site_name: CMIP7 Controlled Vocabularies
+site_url: https://cmip7-cvs.mipcvs.dev/
+repo_url: https://github.com/WCRP-CMIP/CMIP7-CVs
+repo_name: WCRP-CMIP/CMIP7-CVs
+site_description: Controlled Vocabularies for CMIP7
+site_author: WCRP-CMIP
+
+docs_dir: ../../docs
+site_dir: ../../build
+use_directory_urls: true
+clean_site_directory: true
+
+theme:
+  name: shadcn
+  custom_dir: overrides
+  palette:
+    primary: blue
+    accent: blue
+  show_stargazers: false
+
+plugins:
+  - search:
+      lang: en
+      separator: '[\s\-\.]+'
+
+hooks:
+  - hooks/generate_nav.py
+  - hooks/pre_build.py
+  - hooks/post_build.py
+
+extra:
+  generator: false
+
+extra_css:
+  - stylesheets/custom.css
+  - stylesheets/footer-override.css
+
+extra_javascript:
+  - stylesheets/custom.js
+  - stylesheets/embed.js
+
+markdown_extensions:
+  - admonition
+  - attr_list
+  - def_list
+  - footnotes
+  - md_in_html
+  - tables
+  - toc:
+      permalink: true
+      toc_depth: 3
+  - pymdownx.details
+  - pymdownx.highlight:
+      anchor_linenums: true
+  - pymdownx.inlinehilite
+  - pymdownx.superfences
+  - pymdownx.tabbed:
+      alternate_style: true
+  - pymdownx.tasklist:
+      custom_checkbox: true
