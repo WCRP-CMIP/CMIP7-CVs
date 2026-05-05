@@ -1,1 +1,329 @@
-<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>Experiment Detail - CMIP7</title><link rel="stylesheet" href="https://wcrp-cmip.org/wp-includes/css/dist/block-library/style.min.css?ver=6.9.4"><link rel="stylesheet" href="stylesheets/experiments.css"><script src="https://cdn.jsdelivr.net/npm/jsonld-recursive@1/lib/ldr-core.js"></script><script src="https://cdn.jsdelivr.net/npm/jsonld-recursive@1/lib/ldr-browser.js"></script></head><body><div class="header"><div class="header-content"><a href="experiment.html" class="back-link">← Back to Experiments</a><h1 id="title">Experiment</h1><p id="subtitle"></p></div></div><div class="container"><div class="warning-box"><h3>⚠️ Dynamic Data Source</h3><p>All data dynamically extracted from JSON-LD repository with no duplication risk.</p><pre><code>await JsonLdExpand.compact('https://wcrp-cmip.github.io/CMIP7-CVs/experiment/_graph.json', {depth: 4});</code></pre></div><div id="error" class="error" style="display:none"></div><div id="loading" class="loading">⏳ Loading...</div><div id="content" style="display:none"><div class="title-section"><h1 id="name"></h1><div class="subtitle" id="label"></div><div class="metadata"><div class="metadata-item"><div class="metadata-label">Key</div><div class="metadata-value" id="key"></div></div><div class="metadata-item"><div class="metadata-label">Tier</div><div class="metadata-value" id="tier"></div></div><div class="metadata-item"><div class="metadata-label">Activity</div><div class="metadata-value" id="activity"></div></div><div class="metadata-item"><div class="metadata-label">Status</div><div class="metadata-value" id="status"></div></div></div></div><div class="section" id="desc-sec" style="display:none"><h2>Description</h2><div class="property-value" id="desc" style="white-space:pre-wrap"></div></div><div class="section" id="props-sec" style="display:none"><h2>Properties</h2><div id="props"></div></div><div class="section" id="models-sec" style="display:none"><h2>Model Requirements</h2><div id="models"></div></div><div class="section" id="parent-sec" style="display:none"><h2>Parent Experiment</h2><div id="parent"></div></div><div class="section" id="refs-sec" style="display:none"><h2>References</h2><div id="refs"></div></div><div class="section"><h2>Raw JSON</h2><pre id="raw"></pre></div></div></div><script>const API='https://wcrp-cmip.github.io/CMIP7-CVs/experiment/_graph.json';async function load(){try{const id=new URLSearchParams(window.location.search).get('id');if(!id)throw new Error('No ID');console.log('🔄 Loading:',id);const r=await fetch(API),d=await r.json();console.log('📦 Raw JSON:',d);let res=d;if(window.JsonLdExpand)try{res=await JsonLdExpand.compact(API,{depth:4});console.log('✅ Resolved:',res)}catch(e){console.warn('⚠️ Fallback:',e)}const exp=((res.contents||res['@graph']||[]).find(i=>i.validation_key===id||i['@id']===id));if(!exp)throw new Error(`"${id}" not found`);console.log('✅ Found:',exp);render(exp);document.getElementById('loading').style.display='none';document.getElementById('content').style.display='block'}catch(e){console.error('❌ Error:',e);document.getElementById('loading').style.display='none';document.getElementById('error').style.display='block';document.getElementById('error').textContent='⚠️ '+e.message}}function render(e){document.getElementById('title').textContent=e.validation_key||'Exp';document.getElementById('subtitle').textContent=e.ui_label||'';document.getElementById('name').textContent=e['@id']||e.validation_key||'?';document.getElementById('label').textContent=e.ui_label||'';document.getElementById('key').textContent=e.validation_key||'—';document.getElementById('tier').innerHTML=e.tier!==undefined?`<span class="badge tier">Tier ${e.tier}</span>`:'—';if(e.activity){const l=typeof e.activity==='object'?e.activity.validation_key||e.activity['@id']||e.activity:e.activity;document.getElementById('activity').innerHTML=`<span class="badge activity">${esc(String(l))}</span>`}else document.getElementById('activity').textContent='—';document.getElementById('status').innerHTML=(e['@id']||'').includes('pending')?'<span class="badge pending">Pending</span>':'<span class="badge active">Active</span>';if(e.description){document.getElementById('desc').textContent=e.description;document.getElementById('desc-sec').style.display='block'}const excluded=['@id','@type','description','ui_label','validation_key','activity','model_realms_required','model_realms_additional_allowed','parent_experiment','references','alias'];const props=[];for(const[k,v]of Object.entries(e)){if(excluded.includes(k)||!v&&v!==0&&v!==false)continue;props.push(p(k,v))}if(props.length){document.getElementById('props').innerHTML=props.join('');document.getElementById('props-sec').style.display='block'}const mh=[];if(e.model_realms_required){mh.push('<div class="property"><div class="property-label">Required Realms</div>');mh.push(mr(e.model_realms_required));mh.push('</div>')}if(e.model_realms_additional_allowed){mh.push('<div class="property"><div class="property-label">Additional Realms</div>');mh.push(mr(e.model_realms_additional_allowed));mh.push('</div>')}if(mh.length){document.getElementById('models').innerHTML=mh.join('');document.getElementById('models-sec').style.display='block'}if(e.parent_experiment&&typeof e.parent_experiment==='object'){const par=e.parent_experiment;let ph='<div class="nested-object">';ph+=`<strong>${esc(par.validation_key||par['@id']||'Parent')}</strong><br>`;if(par.ui_label)ph+=esc(par.ui_label)+'<br>';if(par.description)ph+=`<small style="display:block;margin-top:.5rem">${esc(par.description.substring(0,250))}</small>`;ph+='</div>';document.getElementById('parent').innerHTML=ph;document.getElementById('parent-sec').style.display='block'}else if(e.parent_experiment&&e.parent_experiment!=='none'){document.getElementById('parent').innerHTML=`<div class="nested-object"><strong>${esc(String(e.parent_experiment))}</strong></div>`;document.getElementById('parent-sec').style.display='block'}if(e.references&&(typeof e.references==='string'||Array.isArray(e.references))){const refs=Array.isArray(e.references)?e.references:[e.references];const rh=refs.filter(r=>r).map(r=>{const doi=String(r).match(/10\.\d+\/[\w\-.]+/)?.[0];return doi?`<a href="https://doi.org/${doi}" class="reference-link" target="_blank">DOI: ${doi} ↗</a>`:`<span class="reference-link">${esc(String(r))}</span>`}).join('');if(rh){document.getElementById('refs').innerHTML=rh;document.getElementById('refs-sec').style.display='block'}}document.getElementById('raw').textContent=JSON.stringify(e,null,2)}function p(k,v){const l=k.replace(/_/g,' ').replace(/\b\w/g,x=>x.toUpperCase());let h=`<div class="property"><div class="property-label">${l}</div><div class="property-value">`;if(v===null||v===undefined)h+='—';else if(Array.isArray(v))h+=v.length?v.map(x=>`<div class="array-item">${esc(String(x))}</div>`).join(''):'(empty)';else if(typeof v==='object')h+=`<pre style="margin-top:.5rem">${esc(JSON.stringify(v,null,2))}</pre>`;else h+=esc(String(v));h+='</div></div>';return h}function mr(r){if(!r)return'';if(typeof r==='string')return`<span class="source-type">${esc(r)}</span>`;const items=Array.isArray(r)?r:[r];return items.map(i=>typeof i==='object'?`<div class="array-item"><strong>${esc(i.validation_key||i['@id']||'')}</strong><br><small>${esc((i.description||'').substring(0,150))}</small></div>`:`<span class="source-type">${esc(String(i))}</span>`).join('')}function esc(t){const d=document.createElement('div');d.textContent=t;return d.innerHTML}window.addEventListener('load',load)</script></body></html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Experiment | CMIP7</title>
+    <link rel="stylesheet" href="stylesheets/emd-page.css">
+    <style>
+        :root { --emd-primary: #1e293b; --emd-primary-dark: #0f172a; }
+        .warning-box {
+            font-size:.85rem; color:#856404;
+            background:#fff3cd; border:1px solid #ffc107;
+            border-radius:var(--emd-radius); padding:1rem 1.25rem;
+            margin-bottom:1.5rem;
+        }
+        .warning-box strong { display:block; margin-bottom:.4rem; font-size:.9rem; }
+        .warning-box code {
+            font-family:'SF Mono',Monaco,'Cascadia Code',monospace;
+            font-size:.78rem; color:#5a4200;
+        }
+    </style>
+    <script src="https://cdn.jsdelivr.net/npm/jsonld-recursive@1/lib/ldr-core.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/jsonld-recursive@1/lib/ldr-browser.js"></script>
+</head>
+<body class="emd-page">
+<div class="emd-container">
+
+    <div id="loading" class="emd-section" style="padding:2rem;text-align:center">Loading experiment...</div>
+    <div id="error" class="emd-section" style="padding:2rem;color:#ef4444;display:none"></div>
+
+    <div id="content" style="display:none">
+
+        <header class="emd-header">
+            <nav class="emd-breadcrumb">
+                <a href="experiment.html">← All Experiments</a>
+                <span>→</span>
+                <span id="bc-name"></span>
+            </nav>
+            <div class="emd-badge">CMIP7 Experiment</div>
+            <h1 class="emd-title" id="title"></h1>
+            <p class="emd-long-name" id="id-line"></p>
+            <p class="emd-subtitle" id="subtitle"></p>
+            <div class="emd-header-meta">
+                <div class="emd-meta-item">
+                    <span class="emd-meta-label">Validation Key</span>
+                    <span class="emd-meta-value" id="meta-key"></span>
+                </div>
+                <div class="emd-meta-item">
+                    <span class="emd-meta-label">Tier</span>
+                    <span class="emd-meta-value" id="meta-tier"></span>
+                </div>
+                <div class="emd-meta-item">
+                    <span class="emd-meta-label">Activity</span>
+                    <span class="emd-meta-value" id="meta-activity"></span>
+                </div>
+                <div class="emd-meta-item">
+                    <span class="emd-meta-label">Min. Years</span>
+                    <span class="emd-meta-value" id="meta-minyears"></span>
+                </div>
+                <div class="emd-meta-item">
+                    <span class="emd-meta-label">Start Date</span>
+                    <span class="emd-meta-value" id="meta-startdate"></span>
+                </div>
+                <div class="emd-meta-item">
+                    <span class="emd-meta-label">Status</span>
+                    <span class="emd-meta-value" id="meta-status"></span>
+                </div>
+            </div>
+        </header>
+
+        <div class="warning-box">
+            <strong>⚠ Dynamic Data Source</strong>
+            Data resolved in real-time from the individual experiment record — always current, no duplication risk.<br>
+            <code id="warn-url">await JsonLdExpand.compact('...', {depth: 3});</code>
+        </div>
+
+        <div class="emd-section expanded" id="sec-desc" style="display:none">
+            <div class="emd-section-header" onclick="toggleSection(this)">
+                <div class="emd-section-title-wrapper"><span class="emd-section-title">Description</span></div>
+                <span class="emd-section-toggle">▾</span>
+            </div>
+            <div class="emd-section-content">
+                <div class="emd-section-divider"></div>
+                <p class="emd-description-text" id="desc" style="white-space:pre-wrap"></p>
+            </div>
+        </div>
+
+        <div class="emd-section expanded" id="sec-activity" style="display:none">
+            <div class="emd-section-header" onclick="toggleSection(this)">
+                <div class="emd-section-title-wrapper"><span class="emd-section-title">Activity</span></div>
+                <span class="emd-section-toggle">▾</span>
+            </div>
+            <div class="emd-section-content">
+                <div class="emd-section-divider"></div>
+                <div id="activity-body"></div>
+            </div>
+        </div>
+
+        <div class="emd-section expanded" id="sec-models" style="display:none">
+            <div class="emd-section-header" onclick="toggleSection(this)">
+                <div class="emd-section-title-wrapper"><span class="emd-section-title">Model Requirements</span></div>
+                <span class="emd-section-toggle">▾</span>
+            </div>
+            <div class="emd-section-content">
+                <div class="emd-section-divider"></div>
+                <div id="models-body"></div>
+            </div>
+        </div>
+
+        <div class="emd-section expanded" id="sec-parent" style="display:none">
+            <div class="emd-section-header" onclick="toggleSection(this)">
+                <div class="emd-section-title-wrapper"><span class="emd-section-title">Parent Experiment</span></div>
+                <span class="emd-section-toggle">▾</span>
+            </div>
+            <div class="emd-section-content">
+                <div class="emd-section-divider"></div>
+                <div id="parent-body"></div>
+            </div>
+        </div>
+
+        <div class="emd-section expanded" id="sec-props" style="display:none">
+            <div class="emd-section-header" onclick="toggleSection(this)">
+                <div class="emd-section-title-wrapper"><span class="emd-section-title">Additional Properties</span></div>
+                <span class="emd-section-toggle">▾</span>
+            </div>
+            <div class="emd-section-content">
+                <div class="emd-section-divider"></div>
+                <div class="emd-tech-grid" id="props-body"></div>
+            </div>
+        </div>
+
+        <div class="emd-section expanded" id="sec-refs" style="display:none">
+            <div class="emd-section-header" onclick="toggleSection(this)">
+                <div class="emd-section-title-wrapper"><span class="emd-section-title">References</span></div>
+                <span class="emd-section-toggle">▾</span>
+            </div>
+            <div class="emd-section-content">
+                <div class="emd-section-divider"></div>
+                <div id="refs-body"></div>
+            </div>
+        </div>
+
+        <div class="emd-section">
+            <div class="emd-section-header" onclick="toggleSection(this)">
+                <div class="emd-section-title-wrapper"><span class="emd-section-title">Raw JSON</span></div>
+                <span class="emd-section-toggle">▾</span>
+            </div>
+            <div class="emd-section-content">
+                <div class="emd-section-divider"></div>
+                <pre style="font-size:.8rem;overflow-x:auto" id="raw"></pre>
+            </div>
+        </div>
+
+    </div>
+</div>
+
+<script>
+const BASE = 'https://wcrp-cmip.github.io/CMIP7-CVs/experiment/';
+
+async function load() {
+    const id = new URLSearchParams(window.location.search).get('id');
+    if (!id) return showError('No experiment ID in URL.');
+    const url = BASE + id;
+    console.log('Loading:', url);
+    try {
+        const raw = await fetch(url).then(r => { if (!r.ok) throw new Error('HTTP ' + r.status); return r.json(); });
+        console.log('Raw JSON:', raw);
+        let exp = raw;
+        if (window.JsonLdExpand) try {
+            exp = await JsonLdExpand.compact(url, { depth: 3 });
+            console.log('Resolved:', exp);
+        } catch(e) { console.warn('Fallback to raw:', e); }
+        render(exp, id);
+        const warnEl = document.getElementById('warn-url');
+        if (warnEl) warnEl.textContent = `await JsonLdExpand.compact('${url}', {depth: 3});`;
+        document.getElementById('loading').style.display = 'none';
+        document.getElementById('content').style.display = 'block';
+    } catch(e) {
+        console.error('Error:', e);
+        showError(e.message);
+    }
+}
+
+function render(e, id) {
+    const k   = e.validation_key || id || '-';
+    const l   = e.ui_label || '-';
+    const d   = e.description || '-';
+    const tier = e.tier !== undefined && e.tier !== null ? String(e.tier) : null;
+
+    document.title = k + ' | CMIP7 Experiment';
+    document.getElementById('bc-name').textContent = k;
+    document.getElementById('title').textContent = l && l !== '-' ? l : k;
+    document.getElementById('id-line').textContent = e['@id'] || '';
+    document.getElementById('subtitle').textContent = l && l !== '-' ? k : '';
+    document.getElementById('meta-key').textContent = k;
+    document.getElementById('meta-tier').textContent = tier !== null ? 'Tier ' + tier : '-';
+
+    // Activity — string or resolved object
+    const act = e.activity;
+    const actKey = act
+        ? (typeof act === 'object' ? act.validation_key || act['@id'] || '-' : Array.isArray(act) ? act.join(', ') : act)
+        : '-';
+    document.getElementById('meta-activity').innerHTML = (act && typeof act === 'object' && act.url)
+        ? `<a href="${esc(act.url)}" target="_blank" style="color:var(--emd-primary)">${esc(actKey)}</a>`
+        : esc(actKey);
+
+    // Min years / start date
+    const minYrs = e.minimum_number_of_years;
+    document.getElementById('meta-minyears').textContent = (minYrs !== undefined && minYrs !== null && Number(minYrs) > 0) ? minYrs : '-';
+    const sd = e.start_date;
+    document.getElementById('meta-startdate').textContent = (sd && sd !== 'none') ? sd : '-';
+
+    document.getElementById('meta-status').innerHTML = (e['@id'] || '').includes('pending')
+        ? '<span style="color:#f59e0b;font-weight:600">Pending</span>'
+        : '<span style="color:#22c55e;font-weight:600">Active</span>';
+
+    // Description
+    if (d && d !== '-') { document.getElementById('desc').textContent = d; show('sec-desc'); }
+
+    // Activity section — only when resolved to an object with description or url
+    if (act && typeof act === 'object' && (act.description || act.url)) {
+        document.getElementById('activity-body').innerHTML = `<div class="emd-domain-card">
+            <div class="emd-domain-card-header">
+                <span class="emd-domain-card-title">${esc(actKey)}</span>
+                ${act.url ? `<a class="emd-domain-card-type" href="${esc(act.url)}" target="_blank" style="text-decoration:none">↗ Website</a>` : ''}
+            </div>
+            ${act.ui_label ? `<div class="emd-domain-card-id">${esc(act.ui_label)}</div>` : ''}
+            ${act.description ? `<div class="emd-domain-card-description">${esc(act.description)}</div>` : ''}
+        </div>`;
+        show('sec-activity');
+    }
+
+    // Model realms — handle single object or array, skip empty arrays
+    const mh = [];
+    const req = e.model_realms_required;
+    const add = e.model_realms_additional_allowed;
+    if (req && !(Array.isArray(req) && !req.length)) mh.push(realmGroup('Required', req));
+    if (add && !(Array.isArray(add) && !add.length)) mh.push(realmGroup('Additional Allowed', add));
+    if (mh.length) { document.getElementById('models-body').innerHTML = mh.join(''); show('sec-models'); }
+
+    // Parent experiment
+    const par = e.parent_experiment;
+    if (par) {
+        const pars = Array.isArray(par) ? par : [par];
+        const valid = pars.filter(p => p && p !== 'none');
+        if (valid.length) {
+            document.getElementById('parent-body').innerHTML = valid.map(p => {
+                if (typeof p !== 'object') return `<div class="emd-domain-card"><div class="emd-domain-card-title">${esc(String(p))}</div></div>`;
+                const pKey  = p.validation_key || p['@id'] || '-';
+                const pAct  = p.activity ? (Array.isArray(p.activity) ? p.activity.join(', ') : typeof p.activity === 'object' ? p.activity.validation_key || p.activity['@id'] : p.activity) : null;
+                const pTier = (p.tier !== undefined && p.tier !== null) ? 'Tier ' + p.tier : null;
+                const pDesc = p.description ? p.description.split('\n')[0] : null;
+                return `<div class="emd-domain-card">
+                    <div class="emd-domain-card-header">
+                        <span class="emd-domain-card-title">${esc(pKey)}</span>
+                        <div style="display:flex;gap:.4rem;flex-wrap:wrap">
+                            ${pTier ? `<span class="emd-domain-card-type">${pTier}</span>` : ''}
+                            ${pAct  ? `<span class="emd-domain-card-type" style="background:rgba(30,41,59,.1);color:#1e293b">${esc(pAct)}</span>` : ''}
+                        </div>
+                    </div>
+                    ${p.ui_label ? `<div class="emd-domain-card-id">${esc(p.ui_label)}</div>` : ''}
+                    ${pDesc ? `<div class="emd-domain-card-description">${esc(pDesc)}</div>` : ''}
+                </div>`;
+            }).join('');
+            show('sec-parent');
+        }
+    }
+
+    // Additional properties — skip already-shown fields, and skip meaningless placeholder values
+    const excluded = new Set(['@id','@type','@context','description','ui_label','validation_key',
+        'activity','model_realms_required','model_realms_additional_allowed','parent_experiment',
+        'references','alias','tier','minimum_number_of_years','start_date']);
+    const meaningless = v => v === null || v === undefined || v === '' || v === 'none'
+        || v === -999 || v === '-999' || (Array.isArray(v) && !v.length);
+
+    const props = Object.entries(e)
+        .filter(([k2, v]) => !excluded.has(k2) && !meaningless(v))
+        .map(([k2, v]) => `<div class="emd-tech-item">
+            <div class="emd-tech-label">${k2.replace(/_/g,' ')}</div>
+            <div class="emd-tech-value">${typeof v === 'object'
+                ? `<pre style="font-size:.78rem;white-space:pre-wrap">${esc(JSON.stringify(v,null,2))}</pre>`
+                : esc(String(v))}</div>
+        </div>`);
+    if (props.length) { document.getElementById('props-body').innerHTML = props.join(''); show('sec-props'); }
+
+    // References — bare DOI strings like "10.5194/gmd-9-3447-2016"
+    if (e.references && e.references.length) {
+        const refs = Array.isArray(e.references) ? e.references : [e.references];
+        const rh = refs.filter(Boolean).map(r => {
+            const s = String(r);
+            const doi = s.match(/10\.\d{4,}\/\S+/)?.[0];
+            return doi
+                ? `<a class="emd-reference-item" href="https://doi.org/${doi}" target="_blank">
+                    <span class="emd-reference-text">DOI: ${doi}</span>
+                    <span class="emd-reference-arrow">→</span></a>`
+                : `<div class="emd-reference-item"><span class="emd-reference-text">${esc(s)}</span></div>`;
+        }).join('');
+        if (rh) { document.getElementById('refs-body').innerHTML = rh; show('sec-refs'); }
+    }
+
+    document.getElementById('raw').textContent = JSON.stringify(e, null, 2);
+}
+
+function realmGroup(label, realms) {
+    const items = Array.isArray(realms) ? realms : [realms];
+    const cards = items.map(i => typeof i === 'object'
+        ? `<div class="emd-domain-card">
+            <div class="emd-domain-card-title">${esc(i.validation_key || i['@id'] || '-')}</div>
+            ${i.description ? `<div class="emd-domain-card-description">${esc(i.description.substring(0,150))}</div>` : ''}
+          </div>`
+        : `<div class="emd-domain-card"><div class="emd-domain-card-title">${esc(String(i))}</div></div>`
+    ).join('');
+    return `<div class="emd-coupling-group-header" style="margin-bottom:.75rem">${label}</div><div class="emd-domains-grid">${cards}</div>`;
+}
+
+function show(id) { document.getElementById(id).style.display = 'block'; }
+function showError(msg) {
+    document.getElementById('loading').style.display = 'none';
+    const el = document.getElementById('error');
+    el.textContent = 'Error: ' + msg;
+    el.style.display = 'block';
+}
+function toggleSection(h) { h.parentElement.classList.toggle('expanded'); }
+function esc(t) { const d = document.createElement('div'); d.textContent = t; return d.innerHTML; }
+
+window.addEventListener('load', load);
+</script>
+</body>
+</html>

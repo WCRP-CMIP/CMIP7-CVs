@@ -1,1 +1,227 @@
-<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>CMIP7 Experiments</title><link rel="stylesheet" href="https://wcrp-cmip.org/wp-includes/css/dist/block-library/style.min.css?ver=6.9.4"><link rel="stylesheet" href="stylesheets/experiments.css"><script src="https://cdn.jsdelivr.net/npm/jsonld-recursive@1/lib/ldr-core.js"></script><script src="https://cdn.jsdelivr.net/npm/jsonld-recursive@1/lib/ldr-browser.js"></script></head><body><div class="header"><h1>CMIP7 Experiments</h1><p>Browse and search the CMIP7 controlled vocabulary for climate model experiments</p></div><div class="container"><div class="warning-box"><h3>⚠️ Dynamic Data Source</h3><p>All data dynamically extracted from JSON-LD repository in real-time with no duplication risk.</p><pre><code>await JsonLdExpand.compact('https://wcrp-cmip.github.io/CMIP7-CVs/experiment/_graph.json', {depth: 4});</code></pre></div><div id="stats" class="stats" style="display:none"><div class="stat-item"><div class="stat-value" id="total-count">0</div><div class="stat-label">Total</div></div><div class="stat-item"><div class="stat-value" id="filtered-count">0</div><div class="stat-label">Displayed</div></div></div><div class="controls"><input type="text" id="search" placeholder="Search experiments..."><select id="activity-filter"><option value="">All Activities</option></select></div><div id="error" class="error" style="display:none"></div><div id="loading" class="loading">⏳ Loading...</div><div id="no-results" class="no-results" style="display:none">No experiments match search criteria.</div><div style="overflow-x:auto"><table id="table" style="display:none"><thead><tr><th style="width:18%">ID</th><th style="width:22%">Label</th><th style="width:40%">Description</th><th style="width:8%">Tier</th><th style="width:12%">Activity</th></tr></thead><tbody id="tbody"></tbody></table></div></div><script>const API='https://wcrp-cmip.github.io/CMIP7-CVs/experiment/_graph.json';let all=[],filtered=[];async function load(){try{console.log('🔄 Fetching:',API);const r=await fetch(API),d=await r.json();console.log('📦 Raw JSON:',d);let res=d;if(window.JsonLdExpand)try{res=await JsonLdExpand.compact(API,{depth:4});console.log('✅ Resolved:',res)}catch(e){console.warn('⚠️ Fallback:',e)}all=((res.contents||res['@graph']||[]).filter(i=>{const t=Array.isArray(i['@type'])?i['@type']:[i['@type']];return t&&t.some(x=>x.includes('experiment'))&&i.validation_key}).sort((a,b)=>(a.validation_key||'').toLowerCase().localeCompare((b.validation_key||'').toLowerCase())));console.log(`✅ ${all.length} experiments:`,all);const acts=[...new Set(all.map(e=>typeof e.activity==='object'?e.activity.validation_key||e.activity['@id']:e.activity).filter(Boolean))].sort();console.log(`✅ ${acts.length} activities:`,acts);const sel=document.getElementById('activity-filter');acts.forEach(a=>{const o=document.createElement('option');o.value=a;o.textContent=a;sel.appendChild(o)});document.getElementById('total-count').textContent=all.length;document.getElementById('stats').style.display='grid';filter();document.getElementById('loading').style.display='none';document.getElementById('table').style.display='table'}catch(e){console.error('❌ Error:',e);document.getElementById('loading').style.display='none';document.getElementById('error').style.display='block';document.getElementById('error').textContent='⚠️ '+e.message}}function filter(){const s=document.getElementById('search').value.toLowerCase(),a=document.getElementById('activity-filter').value;filtered=all.filter(e=>{const match=!s||(e.validation_key||'').toLowerCase().includes(s)||(e.ui_label||'').toLowerCase().includes(s)||(e.description||'').toLowerCase().includes(s),act=typeof e.activity==='object'?e.activity.validation_key||e.activity['@id']||'':e.activity||'';return match&&(!a||act===a)});render()}function render(){const tb=document.getElementById('tbody');tb.innerHTML='';if(!filtered.length){document.getElementById('table').style.display='none';document.getElementById('no-results').style.display='block';document.getElementById('filtered-count').textContent='0';return}document.getElementById('table').style.display='table';document.getElementById('no-results').style.display='none';filtered.forEach(e=>{const r=document.createElement('tr'),act=typeof e.activity==='object'?e.activity.validation_key||e.activity['@id']||'—':e.activity||'—',tier=e.tier!==undefined?`Tier ${e.tier}`:'—',desc=(e.description||'').substring(0,180);r.innerHTML=`<td class="validation-key"><a href="experiment-detail.html?id=${encodeURIComponent(e.validation_key)}">${esc(e.validation_key)}</a></td><td class="ui-label">${esc(e.ui_label||'—')}</td><td class="description">${esc(desc)}${(e.description||'').length>180?'…':''}</td><td><span class="tier">${tier}</span></td><td><span class="activity-badge">${esc(act)}</span></td>`;tb.appendChild(r)});document.getElementById('filtered-count').textContent=filtered.length}function esc(t){const d=document.createElement('div');d.textContent=t;return d.innerHTML}document.getElementById('search').addEventListener('input',filter);document.getElementById('activity-filter').addEventListener('change',filter);window.addEventListener('load',load)</script></body></html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CMIP7 Experiments</title>
+    <link rel="stylesheet" href="stylesheets/emd-page.css">
+    <script src="https://cdn.jsdelivr.net/npm/jsonld-recursive@1/lib/ldr-core.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/jsonld-recursive@1/lib/ldr-browser.js"></script>
+    <style>
+        :root {
+            --emd-primary: #1e293b;
+            --emd-primary-dark: #0f172a;
+        }
+        .controls { display:flex; gap:1rem; flex-wrap:wrap; margin-bottom:1.5rem; }
+        .controls input, .controls select {
+            padding:.6rem 1rem; border:1px solid var(--emd-border);
+            border-radius:var(--emd-radius); font-size:.9rem; font-family:inherit;
+            background:var(--emd-surface); color:var(--emd-text);
+        }
+        .controls input { flex:1; min-width:220px; }
+        .controls input:focus, .controls select:focus {
+            outline:none; border-color:var(--emd-primary);
+            box-shadow:0 0 0 3px rgba(37,99,235,.1);
+        }
+        .stats { display:flex; gap:2rem; margin-bottom:1.5rem; }
+        .stat { border-left:3px solid var(--emd-primary); padding:.25rem 0 .25rem 1rem; }
+        .stat-value { font-size:1.75rem; font-weight:700; color:var(--emd-text); line-height:1; }
+        .stat-label { font-size:.75rem; color:var(--emd-text-muted); text-transform:uppercase; letter-spacing:.05em; margin-top:.2rem; }
+        table { width:100%; border-collapse:collapse; }
+        thead { background:#040438; }
+        th { padding:.75rem 1rem; text-align:left; font-size:.75rem; font-weight:600;
+             color:#ffffff; text-transform:uppercase; letter-spacing:.05em; }
+        td { padding:.85rem 1rem; border-bottom:1px solid var(--emd-border); font-size:.9rem; vertical-align:top; }
+        tbody tr:hover { background:var(--emd-bg); }
+        tbody tr:last-child td { border-bottom:none; }
+        .id-cell { font-family:'SF Mono',Monaco,'Cascadia Code',monospace; font-size:.8rem; }
+        .id-cell a { color:var(--emd-primary); text-decoration:none; font-weight:600; }
+        .id-cell a:hover { text-decoration:underline; }
+        .desc-cell { color:var(--emd-text-muted); font-size:.85rem; line-height:1.5; max-width:500px; }
+        .tier-badge {
+            display:inline-block; padding:.2rem .65rem; border-radius:9px;
+            font-size:.75rem; font-weight:600;
+            background:rgba(30,41,59,.1); color:var(--emd-primary);
+        }
+        .activity-badge {
+            display:inline-block; padding:.2rem .65rem; border-radius:4px;
+            font-size:.75rem; font-weight:500;
+            background:var(--emd-bg); color:var(--emd-secondary);
+            border:1px solid var(--emd-border);
+        }
+        .no-results { text-align:center; padding:3rem; color:var(--emd-text-muted); }
+        .warning-box {
+            font-size:.85rem; color:#856404;
+            background:#fff3cd; border:1px solid #ffc107;
+            border-radius:var(--emd-radius); padding:1rem 1.25rem;
+            margin-bottom:1.5rem;
+        }
+        .warning-box strong { display:block; margin-bottom:.4rem; font-size:.9rem; }
+        .warning-box code {
+            font-family:'SF Mono',Monaco,'Cascadia Code',monospace;
+            font-size:.78rem; color:#5a4200;
+        }
+    </style>
+</head>
+<body class="emd-page">
+<div class="emd-container">
+
+    <header class="emd-header">
+        <div class="emd-badge">CMIP7 Controlled Vocabularies</div>
+        <h1 class="emd-title">Experiments</h1>
+        <p class="emd-subtitle">Browse and search the CMIP7 controlled vocabulary for climate model experiments</p>
+    </header>
+
+    <div class="warning-box">
+        <strong>⚠ Dynamic Data Source</strong>
+        Data resolved dynamically — always current, no duplication risk.<br>
+        <code>await JsonLdExpand.compact('https://wcrp-cmip.github.io/CMIP7-CVs/experiment/_graph.json', {depth: 2});</code>
+    </div>
+
+    <div id="stats" class="stats" style="display:none">
+        <div class="stat"><div class="stat-value" id="total-count">0</div><div class="stat-label">Total</div></div>
+        <div class="stat"><div class="stat-value" id="filtered-count">0</div><div class="stat-label">Displayed</div></div>
+    </div>
+
+    <div class="controls">
+        <input type="text" id="search" placeholder="Search by ID, label or description...">
+        <select id="activity-filter"><option value="">All Activities</option></select>
+    </div>
+
+    <div id="error" class="emd-section" style="padding:1.5rem;color:#ef4444;display:none"></div>
+    <div id="loading" class="emd-section" style="padding:2rem;text-align:center;color:var(--emd-text-muted)">Loading experiments...</div>
+    <div id="no-results" class="no-results" style="display:none">No experiments match your search criteria.</div>
+
+    <div class="emd-section" id="table-section" style="display:none;overflow:hidden">
+        <div style="overflow-x:auto">
+            <table>
+                <thead>
+                    <tr>
+                        <th style="width:18%">ID</th>
+                        <th style="width:20%">Label</th>
+                        <th style="width:38%">Description</th>
+                        <th style="width:8%">Tier</th>
+                        <th style="width:16%">Activity</th>
+                    </tr>
+                </thead>
+                <tbody id="tbody"></tbody>
+            </table>
+        </div>
+    </div>
+
+</div>
+
+<script>
+const API = 'https://wcrp-cmip.github.io/CMIP7-CVs/experiment/_graph.json';
+let all = [], filtered = [];
+
+function slug(id) { return (id || '').split('/').filter(Boolean).pop() || id || ''; }
+
+async function load() {
+    try {
+        console.log('Fetching:', API);
+        const r = await fetch(API), d = await r.json();
+        console.log('Raw JSON:', d);
+        let res = d;
+        if (window.JsonLdExpand) try {
+            res = await JsonLdExpand.compact(API, { depth: 2 });
+            console.log('Resolved graph:', res);
+        } catch(e) { console.warn('Fallback to raw:', e); }
+
+        const contents = res.contents || res['@graph'] || [];
+        console.log('Building table from', contents.length, 'items');
+
+        all = contents.filter(i => {
+            if (!i['@id']) return false;
+            if (!i['@type']) return true;
+            const t = Array.isArray(i['@type']) ? i['@type'] : [i['@type']];
+            return t.some(x => x && x.includes('experiment'));
+        }).sort((a, b) => {
+            const sa = slug(a['@id']), sb = slug(b['@id']);
+            const ak = a.validation_key || sa, bk = b.validation_key || sb;
+            // push unknowns (no label/description) to end
+            const aEmpty = !a.ui_label && !a.description;
+            const bEmpty = !b.ui_label && !b.description;
+            if (aEmpty !== bEmpty) return aEmpty ? 1 : -1;
+            return ak.localeCompare(bk);
+        });
+
+        console.log('Found', all.length, 'experiments:', all);
+
+        const acts = [...new Set(all.map(e =>
+            typeof e.activity === 'object' ? e.activity.validation_key || e.activity['@id'] : e.activity
+        ).filter(Boolean))].sort();
+
+        const sel = document.getElementById('activity-filter');
+        acts.forEach(a => { const o = document.createElement('option'); o.value = a; o.textContent = a; sel.appendChild(o); });
+
+        document.getElementById('total-count').textContent = all.length;
+        document.getElementById('stats').style.display = 'flex';
+        document.getElementById('loading').style.display = 'none';
+
+        filter();
+    } catch(e) {
+        console.error('Error:', e);
+        document.getElementById('loading').style.display = 'none';
+        const el = document.getElementById('error');
+        el.textContent = 'Error: ' + e.message;
+        el.style.display = 'block';
+    }
+}
+
+function filter() {
+    const s = document.getElementById('search').value.toLowerCase();
+    const a = document.getElementById('activity-filter').value;
+    filtered = all.filter(e => {
+        const k = e.validation_key || slug(e['@id']) || '';
+        const l = e.ui_label || '';
+        const d = e.description || '';
+        const match = !s || k.toLowerCase().includes(s) || l.toLowerCase().includes(s) || d.toLowerCase().includes(s);
+        const act = typeof e.activity === 'object' ? e.activity.validation_key || e.activity['@id'] || '' : e.activity || '';
+        return match && (!a || act === a);
+    });
+    render();
+}
+
+function render() {
+    const tb = document.getElementById('tbody');
+    tb.innerHTML = '';
+
+    document.getElementById('filtered-count').textContent = filtered.length;
+
+    if (!filtered.length) {
+        document.getElementById('table-section').style.display = 'none';
+        document.getElementById('no-results').style.display = 'block';
+        return;
+    }
+
+    document.getElementById('table-section').style.display = 'block';
+    document.getElementById('no-results').style.display = 'none';
+
+    filtered.forEach(e => {
+        const id  = slug(e['@id']);
+        const k   = e.validation_key || id || '-';
+        const l   = e.ui_label || '-';
+        const d   = e.description || '-';
+        const desc = d === '-' ? '-' : d.replace(/\n/g, ' ').substring(0, 180) + (d.length > 180 ? '...' : '');
+        const act = typeof e.activity === 'object' ? e.activity.validation_key || e.activity['@id'] || '-' : e.activity || '-';
+        const tier = e.tier !== undefined ? 'Tier ' + e.tier : '-';
+
+        const row = document.createElement('tr');
+        row.innerHTML = `
+            <td class="id-cell"><a href="experiment-detail.html?id=${encodeURIComponent(id)}">${esc(k)}</a></td>
+            <td>${esc(l)}</td>
+            <td class="desc-cell">${esc(desc)}</td>
+            <td><span class="tier-badge">${tier}</span></td>
+            <td><span class="activity-badge">${esc(act)}</span></td>`;
+        tb.appendChild(row);
+    });
+}
+
+function esc(t) { const d = document.createElement('div'); d.textContent = t; return d.innerHTML; }
+document.getElementById('search').addEventListener('input', filter);
+document.getElementById('activity-filter').addEventListener('change', filter);
+window.addEventListener('load', load);
+</script>
+</body>
+</html>
