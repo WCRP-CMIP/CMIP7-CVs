@@ -4,6 +4,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Experiment Detail - CMIP7</title>
+    <!-- WCRP Styling -->
+    <link rel="stylesheet" href="https://wcrp-cmip.org/wp-includes/css/dist/block-library/style.min.css?ver=6.9.4">
+    <!-- jsonld-recursive library -->
+    <script src="https://cdn.jsdelivr.net/npm/jsonld-recursive@1.0.0/dist/jsonld-recursive.umd.js"></script>
     <style>
         * {
             margin: 0;
@@ -11,72 +15,88 @@
             box-sizing: border-box;
         }
         body {
-            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', sans-serif;
             background: #f5f5f5;
             color: #333;
             line-height: 1.6;
         }
         .header {
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            background: linear-gradient(135deg, #1f1f5c 0%, #003d82 100%);
             color: white;
             padding: 2rem;
             margin-bottom: 2rem;
             box-shadow: 0 2px 8px rgba(0,0,0,0.1);
         }
-        .header a {
-            color: #e8eaf6;
+        .header-content {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 0 1.5rem;
+        }
+        .back-link {
+            color: #e3f2fd;
             text-decoration: none;
-            margin-right: 1rem;
-            display: inline-block;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
             margin-bottom: 1rem;
             font-size: 0.95rem;
-            padding: 0.5rem 1rem;
-            border: 1px solid rgba(255,255,255,0.3);
-            border-radius: 4px;
-            transition: all 0.2s;
+            transition: color 0.2s;
         }
-        .header a:hover {
-            background: rgba(255,255,255,0.2);
+        .back-link:hover {
+            color: #fff;
+        }
+        .header h1 {
+            font-size: 2.5rem;
+            margin-bottom: 0.25rem;
+            font-weight: 700;
+        }
+        .header p {
+            opacity: 0.95;
+            font-size: 1.05rem;
+            font-weight: 300;
         }
         .container {
             max-width: 1000px;
             margin: 0 auto;
-            padding: 0 1rem 2rem;
+            padding: 0 1.5rem 2rem;
         }
         .loading {
             text-align: center;
-            padding: 2rem;
+            padding: 3rem 1.5rem;
             font-size: 1.1rem;
             color: #666;
         }
         .error {
-            background: #fee;
-            border: 1px solid #fcc;
-            color: #c33;
-            padding: 1rem;
+            background: #ffebee;
+            border-left: 4px solid #c62828;
+            color: #c62828;
+            padding: 1rem 1.5rem;
             border-radius: 4px;
-            margin-bottom: 1rem;
+            margin-bottom: 1.5rem;
         }
         .title-section {
             background: white;
             padding: 2rem;
             border-radius: 4px;
             margin-bottom: 1.5rem;
-            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+            border-top: 4px solid #003d82;
         }
         .title-section h1 {
             font-size: 2rem;
             margin-bottom: 0.5rem;
-            color: #667eea;
+            color: #1f1f5c;
+            font-weight: 700;
         }
         .title-section .subtitle {
             font-size: 1.2rem;
             color: #666;
-            margin-bottom: 1rem;
+            margin-bottom: 1.5rem;
+            font-weight: 400;
         }
         .metadata {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
             gap: 1rem;
             margin-top: 1rem;
         }
@@ -84,19 +104,20 @@
             padding: 1rem;
             background: #f9f9f9;
             border-radius: 4px;
-            border-left: 3px solid #667eea;
+            border-left: 3px solid #003d82;
         }
         .metadata-label {
-            font-size: 0.85rem;
+            font-size: 0.8rem;
             color: #666;
             text-transform: uppercase;
             letter-spacing: 0.5px;
-            margin-bottom: 0.25rem;
+            margin-bottom: 0.5rem;
+            font-weight: 600;
         }
         .metadata-value {
             font-size: 1.1rem;
             font-weight: 600;
-            color: #333;
+            color: #1f1f5c;
             word-break: break-word;
         }
         .section {
@@ -104,14 +125,15 @@
             padding: 2rem;
             border-radius: 4px;
             margin-bottom: 1.5rem;
-            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            box-shadow: 0 1px 3px rgba(0,0,0,0.1);
         }
         .section h2 {
             font-size: 1.5rem;
             margin-bottom: 1rem;
-            color: #333;
-            border-bottom: 2px solid #667eea;
-            padding-bottom: 0.5rem;
+            color: #1f1f5c;
+            border-bottom: 2px solid #003d82;
+            padding-bottom: 0.75rem;
+            font-weight: 700;
         }
         .property {
             margin-bottom: 1.5rem;
@@ -124,9 +146,9 @@
             padding-bottom: 0;
         }
         .property-label {
-            font-weight: 600;
-            color: #667eea;
-            font-size: 0.95rem;
+            font-weight: 700;
+            color: #003d82;
+            font-size: 0.9rem;
             text-transform: uppercase;
             letter-spacing: 0.5px;
             margin-bottom: 0.5rem;
@@ -141,20 +163,28 @@
             padding: 1rem;
             border-radius: 4px;
             margin-top: 0.5rem;
-            border-left: 3px solid #764ba2;
+            border-left: 3px solid #1f1f5c;
+            font-size: 0.95rem;
+        }
+        .nested-object strong {
+            color: #1f1f5c;
+        }
+        .nested-object small {
+            color: #666;
         }
         .array-item {
             background: #f9f9f9;
             padding: 0.75rem 1rem;
             margin: 0.5rem 0;
             border-radius: 4px;
-            border-left: 3px solid #667eea;
+            border-left: 3px solid #003d82;
+            font-size: 0.95rem;
         }
         .badge {
             display: inline-block;
-            padding: 0.25rem 0.75rem;
-            background: #e8eaf6;
-            color: #3f51b5;
+            padding: 0.35rem 0.9rem;
+            background: #e3f2fd;
+            color: #003d82;
             border-radius: 12px;
             font-size: 0.85rem;
             font-weight: 600;
@@ -166,42 +196,70 @@
             color: #2e7d32;
         }
         .badge.activity {
-            background: #bbdefb;
-            color: #1565c0;
+            background: #fff3e0;
+            color: #e65100;
+        }
+        .badge.active {
+            background: #c8e6c9;
+            color: #2e7d32;
+        }
+        .badge.pending {
+            background: #ffe0b2;
+            color: #e65100;
         }
         .source-type {
-            font-family: 'Courier New', monospace;
+            font-family: 'Monaco', 'Courier New', monospace;
             background: #f0f0f0;
             padding: 0.25rem 0.5rem;
             border-radius: 3px;
             font-size: 0.9rem;
+            color: #1f1f5c;
         }
         a {
-            color: #667eea;
+            color: #003d82;
             text-decoration: none;
+            font-weight: 500;
         }
         a:hover {
             text-decoration: underline;
+            color: #1f1f5c;
         }
         .reference-link {
             display: inline-block;
             padding: 0.5rem 1rem;
             background: #f0f0f0;
-            border-radius: 4px;
+            border-left: 3px solid #003d82;
+            border-radius: 2px;
             margin: 0.25rem 0.25rem 0.25rem 0;
             font-size: 0.9rem;
+            transition: background 0.2s;
+        }
+        .reference-link:hover {
+            background: #e8f5e9;
+            border-left-color: #2e7d32;
+        }
+        pre {
+            background: #f5f5f5;
+            padding: 1rem;
+            border-radius: 4px;
+            overflow-x: auto;
+            font-size: 0.85rem;
+            border: 1px solid #eee;
         }
     </style>
 </head>
 <body>
     <div class="header">
-        <a href="experiment.html">← Back to Experiments</a>
-        <h1 id="exp-title">Experiment Detail</h1>
+        <div class="header-content">
+            <a href="experiment.html" class="back-link">← Back to Experiments</a>
+            <h1 id="exp-title">Experiment Detail</h1>
+            <p id="header-subtitle"></p>
+        </div>
     </div>
 
     <div class="container">
         <div id="error" class="error" style="display: none;"></div>
-        <div id="loading" class="loading">Loading experiment details...</div>
+        <div id="loading" class="loading">⏳ Loading experiment details...</div>
         <div id="content" style="display: none;">
             <!-- Title section -->
             <div class="title-section">
@@ -230,7 +288,7 @@
             <!-- Description -->
             <div class="section" id="description-section" style="display: none;">
                 <h2>Description</h2>
-                <div class="property-value" id="description"></div>
+                <div class="property-value" id="description" style="white-space: pre-wrap;"></div>
             </div>
 
             <!-- Key Properties -->
@@ -259,8 +317,8 @@
 
             <!-- Raw Data -->
             <div class="section">
-                <h2>Raw Data</h2>
-                <pre id="raw-data" style="background: #f5f5f5; padding: 1rem; border-radius: 4px; overflow-x: auto; font-size: 0.9rem;"></pre>
+                <h2>Raw JSON Data</h2>
+                <pre id="raw-data"></pre>
             </div>
         </div>
     </div>
@@ -274,9 +332,10 @@
                 const experimentId = params.get('id');
 
                 if (!experimentId) {
-                    throw new Error('No experiment ID provided');
+                    throw new Error('No experiment ID provided in URL');
                 }
 
+                console.log('Loading experiment:', experimentId);
                 const response = await fetch(API_URL);
                 if (!response.ok) throw new Error(`HTTP ${response.status}`);
                 const data = await response.json();
@@ -286,9 +345,10 @@
                 );
 
                 if (!experiment) {
-                    throw new Error(`Experiment "${experimentId}" not found`);
+                    throw new Error(`Experiment "${experimentId}" not found in repository`);
                 }
 
+                console.log('Found experiment:', experiment);
                 renderExperiment(experiment);
                 document.getElementById('loading').style.display = 'none';
                 document.getElementById('content').style.display = 'block';
@@ -297,13 +357,14 @@
                 console.error('Error loading experiment:', error);
                 document.getElementById('loading').style.display = 'none';
                 document.getElementById('error').style.display = 'block';
-                document.getElementById('error').textContent = `Error: ${error.message}`;
+                document.getElementById('error').textContent = `⚠️ ${error.message}. Please try again later or check the experiment ID.`;
             }
         }
 
         function renderExperiment(exp) {
             // Title
             document.getElementById('exp-title').textContent = exp.validation_key || 'Experiment';
+            document.getElementById('header-subtitle').textContent = exp.ui_label || '';
             document.getElementById('name').textContent = exp['@id'] || exp.validation_key || 'Unknown';
             document.getElementById('label').textContent = exp.ui_label || '';
 
@@ -324,8 +385,8 @@
             // Status (pending or active)
             const isPending = (exp['@id'] || '').includes('pending');
             document.getElementById('status').innerHTML = isPending 
-                ? '<span class="badge">Pending</span>' 
-                : '<span class="badge" style="background: #c8e6c9; color: #2e7d32;">Active</span>';
+                ? '<span class="badge pending">Pending</span>' 
+                : '<span class="badge active">Active</span>';
 
             // Description
             if (exp.description) {
@@ -336,10 +397,11 @@
             // Properties
             const propsHtml = [];
             const excludedKeys = ['@id', '@type', 'description', 'ui_label', 'validation_key', 'activity', 
-                                'model_realms_required', 'model_realms_additional_allowed', 'parent_experiment', 'references'];
+                                'model_realms_required', 'model_realms_additional_allowed', 'parent_experiment', 'references', 'alias'];
             
             for (const [key, value] of Object.entries(exp)) {
                 if (excludedKeys.includes(key)) continue;
+                if (!value && value !== 0 && value !== false) continue;
                 propsHtml.push(renderProperty(key, value));
             }
             
@@ -351,12 +413,12 @@
             // Model Requirements
             const modelHtml = [];
             if (exp.model_realms_required) {
-                modelHtml.push('<div class="property"><div class="property-label">Required</div>');
+                modelHtml.push('<div class="property"><div class="property-label">Required Model Realms</div>');
                 modelHtml.push(renderModelRealms(exp.model_realms_required));
                 modelHtml.push('</div>');
             }
             if (exp.model_realms_additional_allowed) {
-                modelHtml.push('<div class="property"><div class="property-label">Additional Allowed</div>');
+                modelHtml.push('<div class="property"><div class="property-label">Additional Allowed Model Realms</div>');
                 modelHtml.push(renderModelRealms(exp.model_realms_additional_allowed));
                 modelHtml.push('</div>');
             }
@@ -371,13 +433,13 @@
                 let parentHtml = '<div class="nested-object">';
                 parentHtml += `<strong>${escapeHtml(parent.validation_key || parent['@id'] || 'Parent')}</strong><br>`;
                 if (parent.ui_label) parentHtml += `${escapeHtml(parent.ui_label)}<br>`;
-                if (parent.description) parentHtml += `<small>${escapeHtml(parent.description.substring(0, 200))}</small>`;
+                if (parent.description) parentHtml += `<small style="display: block; margin-top: 0.5rem;">${escapeHtml(parent.description.substring(0, 250))}</small>`;
                 parentHtml += '</div>';
                 document.getElementById('parent-content').innerHTML = parentHtml;
                 document.getElementById('parent-section').style.display = 'block';
             } else if (exp.parent_experiment && exp.parent_experiment !== 'none') {
                 document.getElementById('parent-content').innerHTML = 
-                    `<div class="nested-object">${escapeHtml(exp.parent_experiment)}</div>`;
+                    `<div class="nested-object"><strong>${escapeHtml(exp.parent_experiment)}</strong></div>`;
                 document.getElementById('parent-section').style.display = 'block';
             }
 
@@ -387,7 +449,7 @@
                 const refHtml = refs.filter(r => r).map(r => {
                     const doi = r.match(/10\.\d+\/[\w\-\.]+/)?.[0];
                     if (doi) {
-                        return `<a href="https://doi.org/${doi}" class="reference-link" target="_blank">DOI: ${doi}</a>`;
+                        return `<a href="https://doi.org/${doi}" class="reference-link" target="_blank">DOI: ${doi} ↗</a>`;
                     }
                     return `<span class="reference-link">${escapeHtml(r)}</span>`;
                 }).join('');
@@ -414,7 +476,7 @@
                     html += value.map(v => `<div class="array-item">${escapeHtml(String(v))}</div>`).join('');
                 }
             } else if (typeof value === 'object') {
-                html += `<div class="nested-object">${escapeHtml(JSON.stringify(value, null, 2))}</div>`;
+                html += `<pre style="margin-top: 0.5rem;">${escapeHtml(JSON.stringify(value, null, 2))}</pre>`;
             } else {
                 html += escapeHtml(String(value));
             }
@@ -430,7 +492,7 @@
             const items = Array.isArray(realms) ? realms : [realms];
             return items.map(item => {
                 if (typeof item === 'object') {
-                    return `<div class="array-item"><strong>${escapeHtml(item.validation_key || item['@id'] || '')}</strong><br><small>${escapeHtml(item.description || '')}</small></div>`;
+                    return `<div class="array-item"><strong>${escapeHtml(item.validation_key || item['@id'] || '')}</strong><br><small>${escapeHtml((item.description || '').substring(0, 150))}</small></div>`;
                 }
                 return `<span class="source-type">${escapeHtml(String(item))}</span>`;
             }).join('');
