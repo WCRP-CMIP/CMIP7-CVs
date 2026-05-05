@@ -1,0 +1,151 @@
+name: ∆ src-data
+description: Sync JSON and @context changes from src-data to production
+
+permissions:
+  contents: write
+  pages: write
+  actions: write
+  id-token: write
+
+on:
+  push:
+    branches:
+      - "src-data"
+  workflow_dispatch:
+
+jobs:
+  # ============================================
+  # STEP 1: Sync data from src-data to production
+  # ============================================
+  sync_to_production:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout production branch
+        uses: actions/checkout@v4
+        with:
+          ref: production
+          fetch-depth: 0
+          persist-credentials: true
+
+      - name: Install CMIPLD
+        uses: WCRP-CMIP/CMIPLD/actions/cmipld@main
+
+      - name: Clean production (keep docs and summaries)
+        run: |
+          shopt -s extglob dotglob
+          rm -rf -- !(docs|summaries|.git|.github) || true
+
+      - name: Copy from src-data branch
+        uses: WCRP-CMIP/CMIPLD/actions/fetch_branch_path@main
+        with:
+          branch: "src-data"
+          path: .
+          remove: false
+
+      - name: Run prepublish scripts (if they exist)
+        run: |
+          if [ -d ".github/prepublish" ]; then
+            for script in .github/prepublish/*.sh; do
+              if [ -f "$script" ]; then
+                echo "Running: $script"
+                chmod +x "$script"
+                bash "$script"
+              fi
+            done
+          else
+            echo "No prepublish scripts found, skipping"
+          fi
+
+      - name: Check for changes
+        id: check_changes
+        run: |
+          git config user.name "cmip-ipo"
+          git config user.email "actions@wcrp-cmip.org"
+          git add -A
+          
+          if git diff --cached --quiet; then
+            echo "has_changes=false" >> $GITHUB_OUTPUT
+            echo "No changes to commit"
+          else
+            echo "has_changes=true" >> $GITHUB_OUTPUT
+            echo "Changes detected"
+          fi
+
+      - name: Commit and push to production
+        if: steps.check_changes.outputs.has_changes == 'true'
+        uses: EndBug/add-and-commit@v9
+        with:
+          add: '.'
+          author_name: 'cmip-ipo'
+          author_email: 'actions@wcrp-cmip.org'
+          message: 'Sync from src-data'
+          branch: production
+          push: true
+
+    outputs:
+      has_changes: ${{ steps.check_changes.outputs.has_changes }}
+
+  # ============================================
+  # STEP 2: Generate graphs
+  # ============================================
+  graph:
+    needs: sync_to_production
+    if: needs.sync_to_production.outputs.has_changes == 'true'
+    uses: WCRP-CMIP/CMIPLD/.github/workflows/graph.yml@main
+    with:
+      updated: false
+
+  # ============================================
+  # STEP 3: Update modification links
+  # ============================================
+  modification_scripts:
+    needs: sync_to_production
+    if: needs.sync_to_production.outputs.has_changes == 'true'
+    runs-on: ubuntu-latest
+    steps:
+      - name: Install CMIPLD
+        uses: WCRP-CMIP/CMIPLD/actions/cmipld@main
+
+      - name: Checkout src-data
+        uses: actions/checkout@v4
+        with:
+          ref: src-data
+          fetch-depth: 0
+
+      - name: Generate modification links
+        run: |
+          # Use template_update for modification links
+          template_update || echo "template_update not available or failed"
+
+      - name: Commit to main
+        uses: stefanzweifel/git-auto-commit-action@v4
+        with:
+          commit_message: "Update modification links"
+          branch: main
+          file_pattern: ".github/modifications.md"
+          commit_user_name: "cmip-ipo"
+          commit_user_email: "actions@wcrp-cmip.org"
+        continue-on-error: true
+
+  # ============================================
+  # STEP 4: Publish to GitHub Pages
+  # ============================================
+  publish_pages:
+    needs: graph
+    if: always() && needs.sync_to_production.outputs.has_changes == 'true'
+    uses: WCRP-CMIP/CMIPLD/.github/workflows/pages.yml@main
+    with:
+      branch: production
+      force: true
+    secrets:
+      token: ${{ secrets.GITHUB_TOKEN }}
+
+  # ============================================
+  # STEP 5: Generate summaries
+  # ============================================
+  generate_summaries:
+    needs: graph
+    if: needs.sync_to_production.outputs.has_changes == 'true'
+    uses: WCRP-CMIP/CMIPLD/.github/workflows/summarise.yml@main
+    with:
+      output-path: './summaries/'

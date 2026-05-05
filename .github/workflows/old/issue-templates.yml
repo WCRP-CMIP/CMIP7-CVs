@@ -1,4 +1,4 @@
-name: ⇈ Update Issue Templates
+name: ⇑ Update Issue Templates
 description: Generate issue templates from CSV/Python definitions
 
 permissions:
@@ -11,9 +11,8 @@ on:
     paths:
       - '.github/GEN_ISSUE_TEMPLATE/**'
   workflow_dispatch:
-  workflow_call:
   schedule:
-    - cron: '0 6 * * *'  # daily at 6am UTC
+    - cron: '0 0 * * 1'  # Weekly on Mondays
 
 jobs:
   update_templates:
@@ -33,35 +32,10 @@ jobs:
           python-version: '3.11'
 
       - name: Generate templates
-        continue-on-error: true
-        env:
-          GH_TOKEN: ${{ github.token }}
         run: |
           echo "Generating issue templates..."
-
-          # ldr server start already daemonizes itself — do not add &
-          echo "Starting LDR server..."
-          ldr server stop 2>/dev/null || true
-          ldr server start
-
-          # Wait for server to be ready (bash built-in /dev/tcp — no curl needed)
-          echo "Waiting for LDR server on port 3333..."
-          for i in $(seq 1 30); do
-            if timeout 1 bash -c 'cat < /dev/null > /dev/tcp/localhost/3333' 2>/dev/null; then
-              echo "✅ LDR server ready (attempt $i)"
-              break
-            fi
-            sleep 1
-          done
-
-          if ! timeout 1 bash -c 'cat < /dev/null > /dev/tcp/localhost/3333' 2>/dev/null; then
-            echo "ERROR: LDR server did not start within 30s"
-            exit 1
-          fi
-
-          echo "Running template generator..."
           template_generate
-
+          
           echo "Updating modification links..."
           template_update || echo "template_update not available"
 

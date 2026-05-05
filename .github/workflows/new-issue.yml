@@ -1,0 +1,168 @@
+name: ⟳ New Issue Processing
+
+on:
+  issues:
+    types: [opened, edited]
+  workflow_dispatch:
+    inputs:
+      issue_number:
+        description: 'Issue number to process'
+        required: true
+        type: string
+
+permissions:
+  issues: write
+  contents: write
+  pull-requests: write
+
+jobs:
+  process-issue:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout main
+        uses: actions/checkout@v4
+        with:
+          ref: main
+          fetch-depth: 0
+
+      - name: Install CMIPLD
+        uses: WCRP-CMIP/CMIPLD/actions/cmipld@main
+
+      - name: Configure Git
+        run: git config --global push.default simple
+        shell: bash
+
+      - name: Process issue
+        env:
+          ISSUE_NUMBER:      ${{ github.event.inputs.issue_number || github.event.issue.number }}
+          ISSUE_SUBMITTER:   ${{ github.event.issue.user.login }}
+          ISSUE_CREATED_AT:  ${{ github.event.issue.created_at }}
+          GH_TOKEN:          ${{ secrets.CMIP_IPO_BOT_TOKEN || github.token }}
+          GITHUB_TOKEN:      ${{ secrets.CMIP_IPO_BOT_TOKEN || github.token }}
+          GITHUB_REPOSITORY: ${{ github.repository }}
+        run: |
+          cd $GITHUB_WORKSPACE
+
+          # Populate a temp dir with src-data so the LDR server serves
+          # the live graph files rather than the main-branch stubs.
+          LDR_DATA=$(mktemp -d)
+          git fetch origin src-data
+          git --work-tree="$LDR_DATA" checkout origin/src-data -- .
+
+          # ldr server start already daemonizes itself — do not add &
+          ldr server stop 2>/dev/null || true
+          cd "$LDR_DATA"
+          ldr server start
+          cd "$GITHUB_WORKSPACE"
+
+          # Wait until port 3333 accepts TCP connections.
+          # Uses bash built-in /dev/tcp — no nc or curl needed.
+          echo "Waiting for LDR server on port 3333..."
+          for i in $(seq 1 30); do
+            if timeout 1 bash -c 'cat < /dev/null > /dev/tcp/localhost/3333' 2>/dev/null; then
+              echo "LDR server ready (attempt $i)"
+              break
+            fi
+            sleep 1
+          done
+
+          if ! timeout 1 bash -c 'cat < /dev/null > /dev/tcp/localhost/3333' 2>/dev/null; then
+            echo "ERROR: LDR server did not start within 30 s"
+            exit 1
+          fi
+
+          new_issue --issue $ISSUE_NUMBER
+        shell: bash
+
+      - name: Find PR for this issue
+        id: find_pr
+        env:
+          GH_TOKEN:     ${{ secrets.CMIP_IPO_BOT_TOKEN || github.token }}
+          ISSUE_NUMBER: ${{ github.event.inputs.issue_number || github.event.issue.number }}
+          REPO:         ${{ github.repository }}
+        run: |
+          # Retry for up to 20s — newly created PRs take a moment to index in the API
+          for attempt in $(seq 1 10); do
+            PR_NUMBER=$(gh pr list --repo "$REPO" --state open \
+              --limit 200 \
+              --json number,headRefName \
+              --jq "[.[] | select(.headRefName | test("_${ISSUE_NUMBER}_|[-_]${ISSUE_NUMBER}$"))] | .[0].number" \
+              2>/dev/null || true)
+            if [ -n "$PR_NUMBER" ] && [ "$PR_NUMBER" != "null" ]; then
+              break
+            fi
+            echo "Attempt $attempt: PR not visible yet, retrying in 2s..."
+            sleep 2
+          done
+
+          if [ -z "$PR_NUMBER" ] || [ "$PR_NUMBER" = "null" ]; then
+            echo "No open PR found for issue #${ISSUE_NUMBER}."
+            echo "pr_number=" >> "$GITHUB_OUTPUT"
+          else
+            echo "Found PR #${PR_NUMBER}"
+            echo "pr_number=$PR_NUMBER" >> "$GITHUB_OUTPUT"
+            PR_URL=$(gh pr view "$PR_NUMBER" --repo "$REPO" --json url --jq '.url')
+            echo "pr_url=$PR_URL" >> "$GITHUB_OUTPUT"
+          fi
+        shell: bash
+
+      - name: Add PR to project board
+        if: steps.find_pr.outputs.pr_number != ''
+        continue-on-error: true
+        env:
+          GH_TOKEN:   ${{ secrets.CMIP_IPO_BOT_TOKEN || github.token }}
+          PR_URL:     ${{ steps.find_pr.outputs.pr_url }}
+          REPO_OWNER: ${{ github.repository_owner }}
+        run: |
+          gh project item-add 8 --owner "$REPO_OWNER" --url "$PR_URL" \
+            && echo "-> PR linked to project #8" >> "$GITHUB_STEP_SUMMARY" \
+            || echo "! Could not add PR to project #8 (check project number, owner, and token 'project' scope)" >> "$GITHUB_STEP_SUMMARY"
+        shell: bash
+
+      - name: Check for duplicate grid content
+        if: steps.find_pr.outputs.pr_number != ''
+        uses: WCRP-CMIP/CMIPLD/actions/check-tempgrid-duplicate@main
+        with:
+          pr_number: ${{ steps.find_pr.outputs.pr_number }}
+          gh_token:  ${{ secrets.CMIP_IPO_BOT_TOKEN || github.token }}
+
+      # ── If issue is being updated and PR has changes-requested, add changes-made
+      - name: Add changes-made label if changes-requested exists
+        if: >
+          steps.find_pr.outputs.pr_number != '' &&
+          github.event.action == 'edited'
+        env:
+          GH_TOKEN:     ${{ secrets.CMIP_IPO_BOT_TOKEN || github.token }}
+          REPO:         ${{ github.repository }}
+          PR_NUMBER:    ${{ steps.find_pr.outputs.pr_number }}
+          ISSUE_NUMBER: ${{ github.event.inputs.issue_number || github.event.issue.number }}
+          ISSUE_AUTHOR: ${{ github.event.issue.user.login }}
+          EDITOR:       ${{ github.event.sender.login }}
+        run: |
+          # Only act when the person editing is the issue author (the submitter)
+          # — avoids false positives from bots or admins editing issue metadata
+          if [ "$EDITOR" != "$ISSUE_AUTHOR" ]; then
+            echo "Editor ($EDITOR) is not the issue author ($ISSUE_AUTHOR) — skipping."
+            exit 0
+          fi
+
+          # Check whether the PR currently carries the changes-requested label
+          HAS_CR=$(gh pr view "$PR_NUMBER" --repo "$REPO" \
+            --json labels --jq '[.labels[].name] | any(. == "changes-requested")' \
+            2>/dev/null || echo 'false')
+
+          if [ "$HAS_CR" != "true" ]; then
+            echo "No changes-requested label on PR #${PR_NUMBER} — skipping."
+            exit 0
+          fi
+
+          gh label create "changes-made" --repo "$REPO" \
+            --color "5319e7" \
+            --description "Submitter has made changes in response to review" \
+            --force 2>/dev/null || true
+
+          gh pr    edit "$PR_NUMBER"    --repo "$REPO" --add-label "changes-made" || true
+          gh issue edit "$ISSUE_NUMBER" --repo "$REPO" --add-label "changes-made" || true
+
+          echo "Added changes-made to PR #${PR_NUMBER} and issue #${ISSUE_NUMBER}" \
+            >> "$GITHUB_STEP_SUMMARY"

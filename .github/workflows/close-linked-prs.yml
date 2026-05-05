@@ -1,0 +1,60 @@
+name: ✗ Issue closed — close linked PRs
+
+# When an issue is closed, find any open PRs whose body contains
+# "Resolves #N", "Fixes #N", or "Closes #N" referencing that issue,
+# close them, and leave a comment explaining why.
+
+on:
+  issues:
+    types: [closed]
+
+permissions:
+  issues: read
+  pull-requests: write
+
+jobs:
+  close_linked_prs:
+    runs-on: ubuntu-latest
+    env:
+      GH_TOKEN:    ${{ secrets.CMIP_IPO_BOT_TOKEN || github.token }}
+      REPO:        ${{ github.repository }}
+      ISSUE_NUMBER: ${{ github.event.issue.number }}
+      ISSUE_TITLE:  ${{ github.event.issue.title }}
+
+    steps:
+      - name: Close PRs that reference this issue
+        run: |
+          echo "## Issue #${ISSUE_NUMBER} closed — checking for linked PRs" >> "$GITHUB_STEP_SUMMARY"
+          echo "| PR | Action |" >> "$GITHUB_STEP_SUMMARY"
+          echo "|---|---|" >> "$GITHUB_STEP_SUMMARY"
+
+          # Fetch all open PRs (up to 100)
+          OPEN_PRS=$(gh pr list --repo "$REPO" --state open --limit 100 --json number,body)
+
+          # Find PRs whose body references this issue with Resolves/Fixes/Closes
+          LINKED_PRS=$(echo "$OPEN_PRS" | jq -r \
+            --arg issue "$ISSUE_NUMBER" \
+            '.[] | select(
+              .body != null and
+              (.body | test("(?i)(resolves|fixes|closes)[[:space:]]+#" + $issue + "\\b"))
+            ) | .number')
+
+          if [ -z "$LINKED_PRS" ]; then
+            echo "No open PRs found referencing issue #${ISSUE_NUMBER}."
+            echo "| — | none found |" >> "$GITHUB_STEP_SUMMARY"
+            exit 0
+          fi
+
+          while IFS= read -r pr_num; do
+            [ -z "$pr_num" ] && continue
+
+            # Leave a comment before closing
+            gh pr comment "$pr_num" --repo "$REPO" --body \
+              "Closing this PR as the linked issue #${ISSUE_NUMBER} (_${ISSUE_TITLE}_) has been closed."
+
+            # Close the PR
+            gh pr close "$pr_num" --repo "$REPO"
+
+            echo "| #${pr_num} | closed |" >> "$GITHUB_STEP_SUMMARY"
+            echo "-> Closed PR #${pr_num} (linked to issue #${ISSUE_NUMBER})"
+          done <<< "$LINKED_PRS"
