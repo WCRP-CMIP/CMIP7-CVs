@@ -341,9 +341,21 @@
                 if (!response.ok) throw new Error(`HTTP ${response.status}`);
                 const data = await response.json();
 
-                const experiment = (data.contents || []).find(item => 
-                    item.validation_key === experimentId || item['@id'] === experimentId
-                );
+                console.log('Resolving JSON-LD with depth=3...');
+                
+                // Use jsonld-recursive to resolve nested references
+                let resolvedData = data;
+                if (window.JsonLdExpand) {
+                    try {
+                        resolvedData = await JsonLdExpand.compact(API_URL, { depth: 3 });
+                        console.log('JSON-LD resolved successfully');
+                    } catch (err) {
+                        console.warn('JSON-LD resolution failed, using raw data:', err);
+                    }
+                }
+
+                const experiment = ((resolvedData.contents || resolvedData['@graph'] || []))
+                    .find(item => item.validation_key === experimentId || item['@id'] === experimentId);
 
                 if (!experiment) {
                     throw new Error(`Experiment "${experimentId}" not found in repository`);
@@ -377,8 +389,11 @@
             
             const activity = exp.activity;
             if (activity) {
+                const activityLabel = typeof activity === 'object' 
+                    ? (activity.validation_key || activity['@id'] || activity)
+                    : activity;
                 document.getElementById('activity').innerHTML = 
-                    `<span class="badge activity">${escapeHtml(activity.validation_key || activity)}</span>`;
+                    `<span class="badge activity">${escapeHtml(String(activityLabel))}</span>`;
             } else {
                 document.getElementById('activity').textContent = '—';
             }
@@ -440,7 +455,7 @@
                 document.getElementById('parent-section').style.display = 'block';
             } else if (exp.parent_experiment && exp.parent_experiment !== 'none') {
                 document.getElementById('parent-content').innerHTML = 
-                    `<div class="nested-object"><strong>${escapeHtml(exp.parent_experiment)}</strong></div>`;
+                    `<div class="nested-object"><strong>${escapeHtml(String(exp.parent_experiment))}</strong></div>`;
                 document.getElementById('parent-section').style.display = 'block';
             }
 
@@ -448,11 +463,11 @@
             if (exp.references && (typeof exp.references === 'string' || Array.isArray(exp.references))) {
                 const refs = Array.isArray(exp.references) ? exp.references : [exp.references];
                 const refHtml = refs.filter(r => r).map(r => {
-                    const doi = r.match(/10\.\d+\/[\w\-\.]+/)?.[0];
+                    const doi = String(r).match(/10\.\d+\/[\w\-\.]+/)?.[0];
                     if (doi) {
                         return `<a href="https://doi.org/${doi}" class="reference-link" target="_blank">DOI: ${doi} ↗</a>`;
                     }
-                    return `<span class="reference-link">${escapeHtml(r)}</span>`;
+                    return `<span class="reference-link">${escapeHtml(String(r))}</span>`;
                 }).join('');
                 if (refHtml) {
                     document.getElementById('references-content').innerHTML = refHtml;
