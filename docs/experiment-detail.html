@@ -375,21 +375,26 @@
                     throw new Error('No experiment ID provided in URL');
                 }
 
-                console.log('Loading experiment:', experimentId);
+                console.log('🔄 Loading experiment:', experimentId);
                 const response = await fetch(API_URL);
                 if (!response.ok) throw new Error(`HTTP ${response.status}`);
                 const data = await response.json();
 
-                console.log('Resolving JSON-LD with depth=3...');
+                console.log('📦 Raw JSON fetched from API:');
+                console.log(data);
+
+                console.log('🔗 Resolving JSON-LD with depth=3...');
                 
                 // Use jsonld-recursive to resolve nested references
                 let resolvedData = data;
                 if (window.JsonLdExpand) {
                     try {
                         resolvedData = await JsonLdExpand.compact(API_URL, { depth: 3 });
-                        console.log('JSON-LD resolved successfully');
+                        console.log('✅ JSON-LD resolved successfully');
+                        console.log('📦 Resolved JSON-LD data:');
+                        console.log(resolvedData);
                     } catch (err) {
-                        console.warn('JSON-LD resolution failed, using raw data:', err);
+                        console.warn('⚠️ JSON-LD resolution failed, using raw data:', err);
                     }
                 }
 
@@ -400,13 +405,13 @@
                     throw new Error(`Experiment "${experimentId}" not found in repository`);
                 }
 
-                console.log('Found experiment:', experiment);
+                console.log('✅ Found experiment:', experiment);
                 renderExperiment(experiment);
                 document.getElementById('loading').style.display = 'none';
                 document.getElementById('content').style.display = 'block';
 
             } catch (error) {
-                console.error('Error loading experiment:', error);
+                console.error('❌ Error loading experiment:', error);
                 document.getElementById('loading').style.display = 'none';
                 document.getElementById('error').style.display = 'block';
                 document.getElementById('error').textContent = `⚠️ ${error.message}. Please try again later or check the experiment ID.`;
