@@ -1,128 +1,233 @@
 name: ∆ src-data
-description: Sync JSON and @context changes from src-data to production, applying relevant updates.
+description: Sync and process data from src-data to production, then build docs
+
 permissions:
   contents: write
+  issues: write
   pages: write
-  actions: write
   id-token: write
+
 on:
   push:
     branches:
       - "src-data"
-  workflow_dispatch:
-    inputs:
-      debug:
-        description: 'Enable debug output'
-        required: false
-        default: 'false'
-        type: boolean
-jobs:
 
-  sync_to_production:
+      - "docs"
+
+  workflow_dispatch:
+
+jobs:
+  check_contexts:
+    if: github.ref == 'refs/heads/src-data'
     runs-on: ubuntu-latest
     steps:
-          
+      - name: Checkout src-data branch
+        uses: actions/checkout@v4
+        with:
+          ref: src-data
+          fetch-depth: 1
+
+      - name: Check context URLs
+        uses: WCRP-CMIP/CMIPLD/.github/actions/check-contexts@main
+
+  # ── Job 1: sync data to production and commit ────────────────────────────
+  sync_data:
+    if: github.ref == 'refs/heads/src-data'
+    runs-on: ubuntu-latest
+    outputs:
+      has_data_changes: ${{ steps.commit_data.outputs.has_changes }}
+
+    steps:
       - name: Checkout production branch
         uses: actions/checkout@v4
         with:
           ref: production
           fetch-depth: 0
-          persist-credentials: true
 
-      - name: Clean production except docs and summaries
+      - name: Fetch src-data branch
+        run: git fetch origin src-data:src-data
+
+      - name: Install CMIPLD
+        uses: WCRP-CMIP/CMIPLD/actions/cmipld@main
+
+
+      - name: Configure Git
         run: |
+          git config user.name "cmip-ipo"
+          git config user.email "actions@wcrp-cmip.org"
+
+      - name: Clean production vocab dirs
+        run: |
+          cd "$GITHUB_WORKSPACE"
           shopt -s extglob dotglob
           rm -rf -- !(docs|summaries|.git|.github) || true
+          echo "Cleaned production vocab dirs"
 
-      - name: Restore path from src-data branch
-        uses: WCRP-CMIP/CMIPLD/actions/fetch_branch_path@main
-        with:
-          branch: "src-data"
-          path: .
-          remove: false
-
-      - name: Verify restore and prepare changes
+      - name: Copy data from src-data branch
         run: |
-          git fetch origin src-data
+          echo "Copying vocab files from src-data..."
+          git checkout origin/src-data -- . 2>/dev/null || true
+          git checkout production -- .gitignore 2>/dev/null || true
+          touch "$GITHUB_WORKSPACE/.nojekyll"
+          echo "Files now at GITHUB_WORKSPACE:"
+          ls "$GITHUB_WORKSPACE"
+
+
+      - name: Generate graphs (graphify)
+        run: |
+          ldr server stop 2>/dev/null || true
+          ldr server start
+          echo "LDR server started"
+          cd "$GITHUB_WORKSPACE"
+          graphify --all --output-summary
+
+
+
+      - name: Run prepublish scripts
+        run: |
+          cd "$GITHUB_WORKSPACE"
+          if [ ! -d ".github/prepublish" ]; then
+            echo "No prepublish directory"; exit 0
+          fi
+          for script in .github/prepublish/*.sh; do
+            [ -f "$script" ] || continue
+            echo "Running: $(basename $script)"
+            chmod +x "$script"
+            bash "$script" || echo "Script failed: $(basename $script)"
+          done
+
+
+      - name: Commit data to production
+        id: commit_data
+        run: |
+          cd "$GITHUB_WORKSPACE"
           git add -A
+          if git diff --cached --quiet; then
+            echo "has_changes=false" >> $GITHUB_OUTPUT
+            echo "No data changes to commit"
+          else
+            echo "has_changes=true" >> $GITHUB_OUTPUT
+            git commit -m "Sync vocab data from src-data"
+            git push origin production
+            echo "Data committed and pushed to production"
+            echo "## Data sync" >> $GITHUB_STEP_SUMMARY
+            echo "Vocab data committed to production" >> $GITHUB_STEP_SUMMARY
+          fi
+
+  # ── Job 2: build docs ────────────────────────────────────────────────────
+
+  build_docs:
+    needs: sync_data
+    if: ${{ !failure() && !cancelled() }}
+    runs-on: ubuntu-latest
+    outputs:
+      has_changes: ${{ steps.check_changes.outputs.has_changes }}
+
+    steps:
+      - name: Checkout production branch
+        uses: actions/checkout@v4
+        with:
+          ref: production
+          fetch-depth: 0
+
+      - name: Fetch docs branch
+        run: git fetch origin docs:docs
+
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Configure Git
+        run: |
+          git config user.name "cmip-ipo"
+          git config user.email "actions@wcrp-cmip.org"
+
+      - name: Copy docs source from docs branch
+        run: |
+          # Clean stale generated content from docs/ before overlaying
+          rm -rf "$GITHUB_WORKSPACE/docs" "$GITHUB_WORKSPACE/src"
+          git checkout origin/docs -- src 2>/dev/null && echo "Copied src/" || echo "No src/ on docs branch"
+          git checkout origin/docs -- docs 2>/dev/null && echo "Copied docs/" || true
+
+      - name: Install dependencies
+        run: |
+          npm install -g jsonld-recursive
+          MKDOCS_DIR="$GITHUB_WORKSPACE/src/mkdocs"
+          if [ -f "$MKDOCS_DIR/requirements.txt" ]; then
+            pip install -r "$MKDOCS_DIR/requirements.txt"
+          else
+            echo "WARNING: requirements.txt not found, using fallback"
+            pip install mkdocs mkdocs-material mkdocs-shadcn mkdocs-gen-files mkdocs-literate-nav pymdown-extensions beautifulsoup4 cmipld
+          fi
+
+      - name: Pre-build diagnostics
+        run: |
+          echo "## Pre-build diagnostics" >> $GITHUB_STEP_SUMMARY
+          echo "**Branch:** $(git -C $GITHUB_WORKSPACE rev-parse --abbrev-ref HEAD)" >> $GITHUB_STEP_SUMMARY
+
+      - name: Build MkDocs site
+        run: |
+          ldr server stop 2>/dev/null || true
+          ldr server start
+          echo "LDR server started"
+
+          mkdocs build -f "$GITHUB_WORKSPACE/src/mkdocs/mkdocs.yml"
+
+          BUILD_DIR="$GITHUB_WORKSPACE/build"
+          if [ ! -d "$BUILD_DIR" ]; then echo "Error: no build dir"; exit 1; fi
+
+          rm -rf "$GITHUB_WORKSPACE/src" "$GITHUB_WORKSPACE/mkdocs"
+          [ -d "$GITHUB_WORKSPACE/docs" ] && rm -rf "$GITHUB_WORKSPACE/docs"
+          mv "$BUILD_DIR" "$GITHUB_WORKSPACE/docs"
 
       - name: Check for changes
         id: check_changes
         run: |
-          git config user.name "cmip-ipo"
-          git config user.email "actions@wcrp-cmip.org"
-          
-          git reset HEAD -- . || true
           git add -A
-          
           if git diff --cached --quiet; then
-            echo "no_changes=true" >> $GITHUB_OUTPUT
-            if ! git diff --quiet HEAD origin/src-data; then
-              git checkout origin/src-data -- . || true
-              git add -A
-              if ! git diff --cached --quiet; then
-                echo "no_changes=false" >> $GITHUB_OUTPUT
-              fi
-            fi
+            echo "has_changes=false" >> $GITHUB_OUTPUT
           else
-            echo "no_changes=false" >> $GITHUB_OUTPUT
+            echo "has_changes=true" >> $GITHUB_OUTPUT
           fi
 
-      - name: Commit and Push Changes
-        if: steps.check_changes.outputs.no_changes == 'false'
-        uses: EndBug/add-and-commit@v9
-        with:
-          add: '.'
-          author_name: 'cmip-ipo'
-          author_email: 'actions@wcrp-cmip.org'
-          message: 'Clean file upload from src-data'
-          branch: production
-          push: true
-          
-  graph:
-    uses: WCRP-CMIP/CMIPLD/.github/workflows/graph.yml@main
-    needs: sync_to_production
-    with:
-      updated: false
-  
-  modification_scripts:
+      - name: Commit docs
+        if: ${{ steps.check_changes.outputs.has_changes == 'true' }}
+        run: |
+          git commit -m "Build documentation from docs branch"
+          git push origin production
+
+
+
+  deploy:
+    needs: [sync_data, build_docs]
+    if: ${{ !failure() && !cancelled() && (needs.build_docs.outputs.has_changes == 'true' || needs.sync_data.outputs.has_data_changes == 'true') }}
     runs-on: ubuntu-latest
-    needs: sync_to_production
+    permissions:
+      contents: read
+      pages: write
+      id-token: write
     steps:
-      - uses: WCRP-CMIP/CMIPLD/actions/cmipld@main
-        id: install-cmipld
-  
       - uses: actions/checkout@v4
         with:
-          fetch-depth: 0
-          ref: src-data
-  
-      - name: generate modifications
-        run: template_prefill
-  
-      - uses: stefanzweifel/git-auto-commit-action@v4
+          ref: production
+      - uses: actions/configure-pages@v5
+      - uses: actions/upload-pages-artifact@v3
         with:
-          commit_message: "Links to prefilled issue templates"
-          branch: main
-          file_pattern: ".github/modifications.md"
-          commit_user_name: "cmip-ipo automation"
-          commit_user_email: "actions@wcrp-cmip.org"
-        continue-on-error: true
+          path: '.'
+      - uses: actions/deploy-pages@v4
+        id: deployment
+      - name: Display URL
+        run: |
+          echo "## Deployed" >> $GITHUB_STEP_SUMMARY
+          echo "URL: ${{ steps.deployment.outputs.page_url }}" >> $GITHUB_STEP_SUMMARY
 
-
-    
-  publish-pages:
-    if: always()
-    needs:
-      - graph
-    uses: WCRP-CMIP/CMIPLD/.github/workflows/pages.yml@main
-    with:
-      branch: production
-      force: true
-    secrets:
-      token: ${{ secrets.GITHUB_TOKEN }}
-
-  generate-summaries:
-    uses: WCRP-CMIP/CMIPLD/.github/workflows/summarise.yml@main
-    with:
-      output-path: './cmor/'
+  update_issue_templates:
+    needs: [deploy]
+    if: ${{ !failure() && !cancelled() }}
+    uses: ./.github/workflows/issue-templates.yml

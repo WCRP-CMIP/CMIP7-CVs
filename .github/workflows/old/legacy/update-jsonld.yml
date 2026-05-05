@@ -1,0 +1,90 @@
+name: Update JSONLD
+on: 
+  push:
+    # branches:
+    #   - '*' 
+      # - main  # Adjust this to your branch name if different
+    branches-ignore:
+      - production
+
+jobs:
+  update-jsonld:
+    runs-on: ubuntu-latest  # Specify the machine type
+      
+    steps:
+
+    - name: install cmipld
+      id: install-cmipld
+      uses: WCRP-CMIP/CMIPLD/actions/cmipld@main
+    
+    - name: Checkout Code
+      uses: actions/checkout@v4
+      with:
+        fetch-depth: 2
+
+    - name: Set up Git
+      run: |
+        git pull
+
+    - name: Get a list of directories with updated files
+      id: updated-dirs
+      uses: WCRP-CMIP/CMIPLD/actions/updated-dirs@main
+      with:
+        filter_dir: "src-data"
+
+    - name: Group JSONLD files
+      id: group-jsonld
+      uses: WCRP-CMIP/CMIPLD/actions/process_jsonld@main
+      with:
+        dirs: ${{ env.updated_dirs }}
+        # frames: "$PWD/compiled/graph_data.json"
+
+
+    - name: Generate summaries
+      id: gen-summary
+      run: |
+        generate_summary .github/GENERATE_SUMMARY/
+
+
+
+    # - name: Run Update Scripts
+    #   if: ${{ env.updated_dirs }}
+    #   id: run-all-files
+    #   uses: WCRP-CMIP/CMIPLD/actions/run-all-files@main
+    #   with:
+    #     directory: "$PWD/JSONLD/scripts"
+    #     script: python
+    #     script_ext: .py
+  
+
+    # - name: generate CV
+    #   if: ${{ env.updated_dirs }}
+    #   id: generate_cv
+    #   run: |
+    #     if [[ "${{env.updated_dirs}}" == *"JSONLD"* ]]; then
+    #       gencv && git push origin HEAD
+    #     fi
+  
+    - name: Commit All
+      uses: WCRP-CMIP/CMIPLD/actions/commit-all@main
+      with:
+        message: "Automated Content Update"
+  
+    # - name: Push Changes
+    #   run: |
+    #     git push 
+    - name: Push PR
+      uses: WCRP-CMIP/CMIPLD/actions/pushpr@main
+      with:
+          message: "Automated JSONLD update"
+          token: ${{ secrets.GITHUB_TOKEN }}
+
+    - name: Publish
+      if: github.ref_name == 'main'
+      uses: WCRP-CMIP/CMIPLD/actions/publish2pages@main
+      with:
+        api_key: ${{ secrets.API_KEY }}
+        github_token: ${{ secrets.GITHUB_TOKEN }}
+        branch_name: ${{ github.ref_name }}
+
+
