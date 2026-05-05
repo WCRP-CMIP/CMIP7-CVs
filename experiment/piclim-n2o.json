@@ -3,7 +3,7 @@
     "id": "piclim-n2o",
     "type": "experiment",
     "branch_information": "Same as `piClim-control`",
-    "min_ensemble_size": 3,
+    "min_ensemble_size": 1,
     "parent_activity": "cmip",
     "parent_experiment": "picontrol",
     "parent_mip_era": "cmip7",
