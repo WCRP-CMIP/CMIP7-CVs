@@ -40,7 +40,6 @@ file_name:
     extension: nc
     extension_separator: .
   parts:
-    # How am I supposed to know that this maps to variable_id?
     - source_collection: variable
       is_required: true
     - source_collection: branding_suffix
