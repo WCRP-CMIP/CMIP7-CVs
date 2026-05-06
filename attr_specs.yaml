@@ -6,6 +6,7 @@
   is_required: true
 
 - source_collection: area_label
+  attr_field_name: area_label
   attr_field_value_type: string
   is_required: true
 
@@ -50,6 +51,7 @@
   attr_field_value_type: string
   is_required: true
 
+# @Laurent what is this?
 - source_collection: null
   attr_field_name: experiment
   attr_field_value_type: string
@@ -78,6 +80,7 @@
   is_required: true
 
 - source_collection: horizontal_label
+  attr_field_name: horizontal_label
   attr_field_value_type: string
   is_required: true
 
@@ -85,6 +88,7 @@
   attr_field_value_type: string
   is_required: true
 
+# @Laurent what is this?
 - source_collection: institution
   source_collection_key: description
   attr_field_name: institution
@@ -96,6 +100,7 @@
   attr_field_value_type: string
   is_required: true
 
+# @Laurent what is this?
 - source_collection: null
   attr_field_name: license
   attr_field_value_type: string
@@ -129,6 +134,12 @@
   attr_field_value_type: string
   is_required: false
 
+# There are now two attrs which point to the same source collection.
+# As a user, how I am I supposed to know which attr_field_name is represented by this
+# when I look at the DRS name?
+# Right now, for the part represented by source,
+# it could either be parent_source_id or source_id
+# (they both have `source_collection: source`).
 - source_collection: source
   attr_field_name: parent_source_id
   attr_field_value_type: string
@@ -169,6 +180,7 @@
   attr_field_value_type: string
   is_required: true
 
+# @Laurent what is this?
 - source_collection: null
   attr_field_name: source
   attr_field_value_type: string
@@ -180,6 +192,7 @@
   is_required: true
 
 - source_collection: temporal_label
+  attr_field_name: temporal_label
   attr_field_value_type: string
   is_required: true
 
@@ -209,5 +222,6 @@
   is_required: true
 
 - source_collection: vertical_label
+  attr_field_name: vertical_label
   attr_field_value_type: string
   is_required: true
