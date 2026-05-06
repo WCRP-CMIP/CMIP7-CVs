@@ -25,12 +25,12 @@ dataset_properties:
 
   - source_collection: null
     catalog_field_name: branch_time_in_child
-    catalog_field_value_type: double
+    catalog_field_value_type: number
     is_required: false
 
   - source_collection: null
     catalog_field_name: branch_time_in_parent
-    catalog_field_value_type: double
+    catalog_field_value_type: number
     is_required: false
 
   - source_collection: Conventions
@@ -235,4 +235,3 @@ link_properties:
     link_type: "text/html"
     title: "Errata issue"
     is_required: false
-
