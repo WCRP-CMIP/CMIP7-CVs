@@ -6,6 +6,7 @@
         "pmip"
     ],
     "alias": [],
+    "min_number_yrs_per_sim": 100.0,
     "minimum_number_of_years": 100,
     "model_realms_additional_allowed": [
         "aer",
@@ -18,6 +19,7 @@
     "parent_experiment": [
         "picontrol"
     ],
+    "parent_mip_era": "cmip7",
     "references": [],
     "start_date": "none",
     "tier": 1,
@@ -27,7 +29,5 @@
         "esgvoc:Experiment",
         "cmip7"
     ],
-    "@id": "abrupt-127k",
-    "parent_mip_era": "cmip7",
-    "min_number_yrs_per_sim": 100.0
+    "@id": "abrupt-127k"
 }

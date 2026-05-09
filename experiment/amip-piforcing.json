@@ -7,6 +7,8 @@
     ],
     "alias": [],
     "branch_date": "none",
+    "end_timestamp": "2021-12-31",
+    "min_number_yrs_per_sim": 152.0,
     "minimum_number_of_years": 145,
     "model_realms_additional_allowed": [
         "aer",
@@ -19,10 +21,12 @@
     "parent_experiment": [
         "none"
     ],
+    "parent_mip_era": "cmip7",
     "references": [
         "10.5194/gmd-10-359-2017"
     ],
     "start_date": "1870-01-01",
+    "start_timestamp": "1870-01-01",
     "tier": 1,
     "@context": "_context",
     "@type": [
@@ -30,9 +34,5 @@
         "esgvoc:Experiment",
         "cmip7"
     ],
-    "@id": "amip-piforcing",
-    "parent_mip_era": "cmip7",
-    "start_timestamp": "1870-01-01",
-    "end_timestamp": "2021-12-31",
-    "min_number_yrs_per_sim": 152.0
+    "@id": "amip-piforcing"
 }
