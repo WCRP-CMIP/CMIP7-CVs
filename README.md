@@ -95,6 +95,15 @@ Add if we have a version of this we're happy with.
 
 ## Altering (i.e. writing) the CVs
 
+### Via forms
+
+- experiments
+- activities
+
+### Editing the CVs directly
+
+[intro sentence]
+
 The values that underpin the CVs are kept in two separate repositories:
 
 1. https://github.com/WCRP-CMIP/CMIP7-CVs
@@ -118,7 +127,7 @@ We go through some examples here.
 If you want to understand the underlying structure,
 see the 'theory' header below.
 
-### Theory
+#### Theory
 
 Note that this is an attempt to summarise how this system works.
 However, it is likely to leave you with some questions because:
