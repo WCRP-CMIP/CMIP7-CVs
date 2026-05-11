@@ -184,4 +184,5 @@ The key bits are:
 
 - from there, look at the model (normally comes from universe, but can come from project CVs, be careful)
 - then you should be able to see the structure and can mostly ignore 000_context.jsonld otherwise
-- if things explode, raise a blank issue [TODO link] and tag @ltroussellier and @glevava
+- if things explode or you can't understand, raise a [blank issue](https://github.com/WCRP-CMIP/CMIP7-CVs/issues/new?template=BLANK_ISSUE),
+  describe what happened and tag @ltroussellier and @glevava who can then help
