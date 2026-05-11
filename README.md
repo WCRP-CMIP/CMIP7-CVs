@@ -12,14 +12,14 @@ However, this is not currently the case so when you view the CVs,
 you will likely also want to specify which version of the CVs you are looking at
 in order to avoid confusion.
 It is for exactly this reason that,
-<!-- 
-REVIEWERS: note that this link is dead.
-It will go live when this MR is merged into main
-(i.e. after the esgvoc branches become the main branches)
--->
 when raising an [issue with the CVs values](https://github.com/WCRP-CMIP/CMIP7-CVs/issues/new?template=cv-value.md),
 we ask you to specify how you were looking at the CVs
 and also specify the underlying version of the CVs (if possible).
+<!-- 
+REVIEWERS: note that the link above is dead.
+It will go live when this MR is merged into main
+(i.e. after the esgvoc branches become the main branches)
+-->
 
 To view the CVs as they are used within CMIP, you have a few options.
 
@@ -32,8 +32,8 @@ a) wrong
 or b) based on a different commit/snapshot of the CVs from the one that you are viewing via esgvoc
 (e.g. your esgvoc installation is configured to use the 'latest' version of the CMIP7 CVs,
 but you are looking at a view of the CVs from another tool that is based on an earlier version).
-Its full documentation can be found at
-[https://esgf.github.io/esgf-vocab/]().
+esgvoc's full documentation can be found at
+[esgf.github.io/esgf-vocab/](https://esgf.github.io/esgf-vocab/).
 
 At the time of writing
 (noting that esgvoc is also being developed rapidly,
@@ -50,30 +50,36 @@ you could do something like
 ```sh
 # create a virtual environment
 $ python3 -m venv venv
+
 # activate it
 $ source venv/bin/activate
+
 # install esgvoc's latest version
 $ pip install esgvoc
+
 # get the latest release of the CMIP7 CVs
 # (note that this will not have incorporated
 # any changes which are still sitting in pull requests into this repository,
 # i.e. anything you see here: https://github.com/WCRP-CMIP/CMIP7-CVs/pulls)
 $ esgvoc use cmip7@latest
+
 # get the value of interest to us, e.g. historical
 $ esgvoc get cmip7:experiment:historical
+
 # Note that the `get` command requires IDs (all lowercase),
 # not the experiment name as used in CMIP (e.g. in filenames).
 # So this works
 $ esgvoc get cmip7:experiment:picontrol
+
 # This does not
 $ esgvoc get cmip7:experiment:piControl
 ```
 
 If you want to look at lots of CVs, doing it via the command line may not be your best option.
-Fortunately, esgvoc offers a full Python API.
-See [their docs](https://esgf.github.io/esgf-vocab/).
+Fortunately, esgvoc offers a full Python API to support easier scripting and other uses,
+see [their docs](https://esgf.github.io/esgf-vocab/).
 If you want an example of working with esgvoc's Python API to create a derived product,
-see [the script used for creating CMOR tables](https://github.com/WCRP-CMIP/cmip7-cmor-tables/tree/main/tables-cvs/generate-cmor-cvs-table.py).
+see [the script used to create CMOR tables](https://github.com/WCRP-CMIP/cmip7-cmor-tables/tree/main/tables-cvs/generate-cmor-cvs-table.py).
 
 ### CMOR tables
 
@@ -97,12 +103,26 @@ Add if we have a version of this we're happy with.
 
 ### Via forms
 
-- experiments
-- activities
+The easiest way to alter the CVs is via GitHub forms
+(specifically GitHub issue forms).
+At the moment we have forms available for:
+
+- [adding new experiments](TODO link)
+- [adding new activities](TODO link)
+
+For all other changes, please use either:
+
+- [this template](https://github.com/WCRP-CMIP/CMIP7-CVs/issues/new?template=cv-value.md)
+  for requesting changes to existing CVs
+- [a blank issue](https://github.com/WCRP-CMIP/CMIP7-CVs/issues/new?template=BLANK_ISSUE)
+  for anything else (e.g. a request for a new form)
 
 ### Editing the CVs directly
 
-[intro sentence]
+It is possible to edit the CVs yourself.
+This will require more effort to understand the process,
+but direct editing also gives you much more control
+and can lead to a much faster process if done correctly.
 
 The values that underpin the CVs are kept in two separate repositories:
 
@@ -126,6 +146,13 @@ as well as the interaction between them.
 We go through some examples here.
 If you want to understand the underlying structure,
 see the 'theory' header below.
+
+#### Examples
+
+- adding an experiment
+- adding an activity
+- adding lots of experiments and activities
+- adding lots of area labels: https://github.com/WCRP-CMIP/WCRP-universe/blob/esgvoc/scripts/generate-area-labels.py
 
 #### Theory
 
