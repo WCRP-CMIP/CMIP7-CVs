@@ -179,12 +179,21 @@ def check_experiment_against_cvs(
             ),
         )
         if parent_lookup.found:
+            parent_activity_value = (parent_lookup.data or {}).get("activity")
             parent_activity = (
-                str(parent_lookup.data.get("activity", "")).strip().lower()
-            )  # type: ignore[union-attr]
-            if (
-                parent_activity
-                and experiment.parent_activity is not None
+                str(parent_activity_value).strip().lower()
+                if parent_activity_value is not None
+                else ""
+            )
+            if not parent_activity:
+                notes.append(
+                    "Could not check parent activity for parent experiment "
+                    f"`{experiment.parent_experiment}`: parent experiment entry "
+                    "does not include an `activity` value."
+                )
+
+            elif (
+                experiment.parent_activity is not None
                 and parent_activity != experiment.parent_activity
             ):
                 notes.append(
