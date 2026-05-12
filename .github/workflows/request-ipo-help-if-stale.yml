@@ -1,0 +1,47 @@
+name: Request IPO help if stale
+
+on:
+  schedule:
+    - cron: "15 9 * * *"
+  workflow_dispatch:
+
+permissions:
+  issues: write
+  pull-requests: write
+
+jobs:
+  request-ipo-help-if-stale:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Remove stale-check label after activity
+        uses: actions/stale@v10
+        with:
+          days-before-stale: -1
+          days-before-close: -1
+          stale-issue-label: request-ipo-help-if-stale
+          stale-pr-label: request-ipo-help-if-stale
+          remove-stale-when-updated: true
+          operations-per-run: 1000
+
+      - name: Remove IPO help-requested label after activity
+        uses: actions/stale@v10
+        with:
+          days-before-stale: -1
+          days-before-close: -1
+          stale-issue-label: ipo-help-requested
+          stale-pr-label: ipo-help-requested
+          remove-stale-when-updated: true
+          operations-per-run: 1000
+
+      - name: Comment on unchanged IPO help requests
+        uses: actions/stale@v10
+        with:
+          any-of-labels: request-ipo-help-if-stale
+          days-before-stale: 3
+          days-before-close: -1
+          stale-issue-label: ipo-help-requested
+          stale-pr-label: ipo-help-requested
+          stale-issue-message: "@CMIP-IPO @eleanororourke can you please help follow this up, context is above"
+          stale-pr-message: "@CMIP-IPO @eleanororourke can you please help follow this up, context is above"
+          labels-to-remove-when-stale: request-ipo-help-if-stale
+          operations-per-run: 1000
