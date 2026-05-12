@@ -8,7 +8,14 @@ from datetime import date
 from typing import Any
 from urllib.parse import urlparse
 
-from pydantic import BaseModel, ConfigDict, Field, field_validator, model_validator
+from pydantic import (
+    BaseModel,
+    ConfigDict,
+    Field,
+    ValidationError,
+    field_validator,
+    model_validator,
+)
 
 NAME_PATTERN = re.compile(r"^[A-Za-z0-9-]+$")
 BLANK_VALUES = {"", "_No response_", "No response"}
@@ -61,6 +68,34 @@ class ExperimentRegistration(RegistrationBase):
     parent_activity: str | None = None
     parent_mip_era: str | None = None
     branch_information: str | None = None
+
+    @classmethod
+    def from_fields(cls, fields: dict[str, str]) -> ExperimentRegistration:
+        """Create an experiment registration from parsed issue form fields."""
+        return cls.model_validate(
+            {
+                "name": _require_field(fields, "Experiment name"),
+                "description": _require_field(fields, "Experiment description"),
+                "activity": _require_field(fields, "Activity"),
+                "tier": _require_field(fields, "Tier"),
+                "min_ensemble_size": _require_field(fields, "Minimum ensemble size"),
+                "start_date": _optional_field(fields, "Start date"),
+                "end_date": _optional_field(fields, "End date"),
+                "min_number_yrs_per_sim": _require_field(
+                    fields, "Minimum number of years per simulation"
+                ),
+                "required_model_components": _optional_field(
+                    fields, "Required model components"
+                ),
+                "additional_allowed_model_components": _optional_field(
+                    fields, "Additional allowed model components"
+                ),
+                "parent_experiment": _optional_field(fields, "Parent experiment"),
+                "parent_activity": _optional_field(fields, "Parent activity"),
+                "parent_mip_era": _optional_field(fields, "Parent MIP era"),
+                "branch_information": _optional_field(fields, "Branch information"),
+            }
+        )
 
     @field_validator(
         "activity",
@@ -170,6 +205,18 @@ class ActivityRegistration(RegistrationBase):
     experiments: list[str] = Field(default_factory=list)
     urls: list[str] = Field(default_factory=list)
 
+    @classmethod
+    def from_fields(cls, fields: dict[str, str]) -> ActivityRegistration:
+        """Create an activity registration from parsed issue form fields."""
+        return cls.model_validate(
+            {
+                "name": _require_field(fields, "Activity name"),
+                "description": _require_field(fields, "Activity description"),
+                "experiments": _optional_field(fields, "Experiments"),
+                "urls": _optional_field(fields, "Reference URLs"),
+            }
+        )
+
     @field_validator("experiments", mode="before")
     @classmethod
     def _parse_experiments(cls, value: Any) -> list[str]:
@@ -221,6 +268,29 @@ def parse_list(value: Any) -> list[str]:
         if item:
             items.append(item)
     return items
+
+
+def _require_field(fields: dict[str, str], label: str) -> str:
+    value = fields.get(label, "").strip()
+    if not value:
+        raise ValidationError.from_exception_data(
+            "Issue form",
+            [
+                {
+                    "type": "value_error",
+                    "loc": (label,),
+                    "msg": "Field required",
+                    "input": value,
+                    "ctx": {"error": ValueError("field is required")},
+                }
+            ],
+        )
+    return value
+
+
+def _optional_field(fields: dict[str, str], label: str) -> str | None:
+    value = fields.get(label, "").strip()
+    return value or None
 
 
 def _blank_to_none(value: Any) -> str | None:

@@ -11,6 +11,22 @@ from urllib.error import HTTPError, URLError
 from urllib.parse import quote
 from urllib.request import Request, urlopen
 
+from github_form_processor.format import (
+    format_cmip7_activity_check_error_prefix,
+    format_cmip7_experiment_check_error_prefix,
+    format_lookup_error_note,
+    format_missing_cmip7_activity_note,
+    format_missing_cmip7_experiment_note,
+    format_missing_wcrp_model_component_note,
+    format_missing_wcrp_parent_experiment_note,
+    format_parent_activity_mismatch_note,
+    format_parent_activity_missing_note,
+    format_parent_mip_era_note,
+    format_reference_url_status_error,
+    format_reference_url_unreachable_error,
+    format_wcrp_model_component_check_error_prefix,
+    format_wcrp_parent_experiment_check_error_prefix,
+)
 from github_form_processor.models import ActivityRegistration, ExperimentRegistration
 
 CMIP7_CVS_URL = "https://raw.githubusercontent.com/WCRP-CMIP/CMIP7-CVs/esgvoc"
@@ -131,11 +147,8 @@ def check_experiment_against_cvs(
     _append_missing_or_error_note(
         notes,
         activity_lookup,
-        f"Activity `{experiment.activity}` is not already part of the CMIP7 CVs.",
-        (
-            f"Could not check whether activity `{experiment.activity}` is already "
-            "part of the CMIP7 CVs"
-        ),
+        format_missing_cmip7_activity_note(experiment.activity),
+        format_cmip7_activity_check_error_prefix(experiment.activity),
     )
 
     for component in sorted(
@@ -151,14 +164,8 @@ def check_experiment_against_cvs(
         _append_missing_or_error_note(
             notes,
             component_lookup,
-            (
-                f"Model component `{component}` is not already part of the WCRP "
-                "universe CVs."
-            ),
-            (
-                f"Could not check model component `{component}` against the WCRP "
-                "universe CVs"
-            ),
+            format_missing_wcrp_model_component_note(component),
+            format_wcrp_model_component_check_error_prefix(component),
         )
 
     if experiment.parent_experiment:
@@ -169,13 +176,9 @@ def check_experiment_against_cvs(
         _append_missing_or_error_note(
             notes,
             parent_lookup,
-            (
-                f"Parent experiment `{experiment.parent_experiment}` is not already "
-                "part of the WCRP universe CVs."
-            ),
-            (
-                f"Could not check parent experiment `{experiment.parent_experiment}` "
-                "against the WCRP universe CVs"
+            format_missing_wcrp_parent_experiment_note(experiment.parent_experiment),
+            format_wcrp_parent_experiment_check_error_prefix(
+                experiment.parent_experiment
             ),
         )
         if parent_lookup.found:
@@ -187,9 +190,7 @@ def check_experiment_against_cvs(
             )
             if not parent_activity:
                 notes.append(
-                    "Could not check parent activity for parent experiment "
-                    f"`{experiment.parent_experiment}`: parent experiment entry "
-                    "does not include an `activity` value."
+                    format_parent_activity_missing_note(experiment.parent_experiment)
                 )
 
             elif (
@@ -197,12 +198,14 @@ def check_experiment_against_cvs(
                 and parent_activity != experiment.parent_activity
             ):
                 notes.append(
-                    f"Parent activity `{experiment.parent_activity}` does not match "
-                    f"the parent experiment entry, which uses `{parent_activity}`."
+                    format_parent_activity_mismatch_note(
+                        experiment.parent_activity,
+                        parent_activity,
+                    )
                 )
 
     if experiment.parent_mip_era and experiment.parent_mip_era != "cmip7":
-        notes.append(f"Parent MIP era `{experiment.parent_mip_era}` is not `cmip7`.")
+        notes.append(format_parent_mip_era_note(experiment.parent_mip_era))
 
     return notes
 
@@ -219,8 +222,8 @@ def check_activity_against_cvs(
         _append_missing_or_error_note(
             notes,
             experiment_lookup,
-            f"Experiment `{experiment_id}` is not already part of the CMIP7 CVs.",
-            f"Could not check experiment `{experiment_id}` against the CMIP7 CVs",
+            format_missing_cmip7_experiment_note(experiment_id),
+            format_cmip7_experiment_check_error_prefix(experiment_id),
         )
 
     return notes
@@ -237,9 +240,9 @@ def check_activity_urls(
         if check.accessible:
             continue
         if check.status is not None:
-            errors.append(f"Reference URL `{url}` returned HTTP status {check.status}.")
+            errors.append(format_reference_url_status_error(url, check.status))
         else:
-            errors.append(f"Reference URL `{url}` could not be reached: {check.error}.")
+            errors.append(format_reference_url_unreachable_error(url, check.error))
 
     return errors
 
@@ -251,7 +254,7 @@ def _append_missing_or_error_note(
     error_prefix: str,
 ) -> None:
     if lookup.error:
-        notes.append(f"{error_prefix}: {lookup.error}.")
+        notes.append(format_lookup_error_note(error_prefix, lookup.error))
     elif not lookup.found:
         notes.append(missing_note)
 

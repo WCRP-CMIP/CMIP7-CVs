@@ -9,14 +9,25 @@ from pathlib import Path
 import typer
 
 from github_form_processor.cv import CvClient
-from github_form_processor.github_api import GitHubClient
-from github_form_processor.processor import (
-    PreparedRegistration,
+from github_form_processor.format import (
+    format_branch_name,
+    format_branch_prefix,
+    format_closed_registration_pull_request_error,
+    format_created_pull_request_message,
     format_edit_error_comment,
+    format_missing_registration_pull_request_error,
+    format_multiple_open_pull_requests_error,
+    format_output_path_for_identifier,
+    format_pull_request_body,
+    format_remove_previous_registration_file_message,
     format_success_comment,
+    format_target_file_exists_error,
+    format_unsupported_issue_action_message,
+    format_updated_pull_request_message,
     format_validation_comment,
-    prepare_registration,
 )
+from github_form_processor.github_api import GitHubClient
+from github_form_processor.processor import PreparedRegistration, prepare_registration
 
 app = typer.Typer(no_args_is_help=True)
 
@@ -113,7 +124,11 @@ def process_issue_form(
 
     action = event.get("action")
     default_branch = event.get("repository", {}).get("default_branch", "main")
-    branch = preparation.prepared.branch_name(issue_number)
+    branch = format_branch_name(
+        preparation.prepared.kind,
+        issue_number,
+        preparation.prepared.identifier,
+    )
 
     if action == "opened":
         raise typer.Exit(
@@ -136,7 +151,7 @@ def process_issue_form(
             )
         )
 
-    typer.echo(f"Ignoring unsupported issue action: {action}")
+    typer.echo(format_unsupported_issue_action_message(action))
     raise typer.Exit(0)
 
 
@@ -158,9 +173,9 @@ def _process_opened_issue(
 ) -> int:
     """Create the registration branch, commit and pull request."""
     if client.content_exists(prepared.output_path, default_branch):
-        message = (
-            f"Target file `{prepared.output_path}` already exists on "
-            f"`{default_branch}`."
+        message = format_target_file_exists_error(
+            prepared.output_path,
+            default_branch,
         )
         client.comment_issue(
             issue_number,
@@ -183,7 +198,7 @@ def _process_opened_issue(
         title=prepared.pull_request_title,
         head=branch,
         base=default_branch,
-        body=prepared.pull_request_body(issue_number),
+        body=format_pull_request_body(prepared.kind, issue_number),
     )
     pr_number = int(pull_request["number"])
     client.assign_issue(pr_number, ["znichollscr", "ltroussellier"])
@@ -193,7 +208,7 @@ def _process_opened_issue(
             pull_request["html_url"], pr_number, prepared.notes, updated=False
         ),
     )
-    typer.echo(f"Created pull request #{pr_number}.")
+    typer.echo(format_created_pull_request_message(pr_number))
     return 0
 
 
@@ -210,27 +225,17 @@ def _process_edited_issue(
         pulls = client.find_pull_requests_for_issue(issue_number)
     open_pulls = [pull for pull in pulls if pull.get("state") == "open"]
     if len(open_pulls) > 1:
-        pull_numbers = ", ".join(f"#{pull['number']}" for pull in open_pulls)
-        message = (
-            "Multiple open registration pull requests were found for this issue: "
-            f"{pull_numbers}. Please close the duplicates before editing the "
-            "registration issue again."
+        message = format_multiple_open_pull_requests_error(
+            [int(pull["number"]) for pull in open_pulls]
         )
         client.comment_issue(issue_number, format_edit_error_comment(message))
         raise RuntimeError(message)
 
     if not open_pulls:
         if pulls:
-            message = (
-                f"The registration pull request for branch `{branch}` exists but is "
-                "closed. "
-                "Please open a new registration issue."
-            )
+            message = format_closed_registration_pull_request_error(branch)
         else:
-            message = (
-                f"No open registration pull request was found for branch `{branch}`. "
-                "Please open a new registration issue."
-            )
+            message = format_missing_registration_pull_request_error(branch)
         client.comment_issue(issue_number, format_edit_error_comment(message))
         typer.echo(message, err=True)
         return 1
@@ -246,7 +251,7 @@ def _process_edited_issue(
         client.delete_file(
             path=previous_output_path,
             branch=target_branch,
-            message=f"Remove previous {prepared.kind} registration file",
+            message=format_remove_previous_registration_file_message(prepared.kind),
         )
 
     client.put_file(
@@ -263,7 +268,7 @@ def _process_edited_issue(
             pull_request["html_url"], pr_number, prepared.notes, updated=True
         ),
     )
-    typer.echo(f"Updated pull request #{pr_number}.")
+    typer.echo(format_updated_pull_request_message(pr_number))
     return 0
 
 
@@ -273,10 +278,10 @@ def _previous_output_path(
     issue_number: int,
     branch: str,
 ) -> str | None:
-    prefix = f"registration/{prepared.kind}-{issue_number}-"
+    prefix = format_branch_prefix(prepared.kind, issue_number)
     if not branch.startswith(prefix):
         return None
     previous_identifier = branch.removeprefix(prefix)
     if previous_identifier == prepared.identifier:
         return None
-    return prepared.output_path_for_identifier(previous_identifier)
+    return format_output_path_for_identifier(prepared.output_path, previous_identifier)
