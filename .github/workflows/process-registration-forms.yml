@@ -40,4 +40,4 @@ jobs:
           --experiment-output-dir experiment
           --activity-output-dir activity
           --wcrp-universe-url https://raw.githubusercontent.com/WCRP-CMIP/WCRP-universe/esgvoc
-          --cmip7-cvs-url https://raw.githubusercontent.com/WCRP-CMIP/CMIP7-CVs/esgvoc
+          --cmip7-cvs-path "${{ github.workspace }}"
