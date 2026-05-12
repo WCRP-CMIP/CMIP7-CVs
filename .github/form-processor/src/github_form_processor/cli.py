@@ -90,7 +90,10 @@ def process_issue_form(
     token = os.environ.get("GITHUB_TOKEN")
     repository = os.environ.get("GITHUB_REPOSITORY")
     if not token or not repository:
-        typer.echo("GITHUB_TOKEN and GITHUB_REPOSITORY are required.", err=True)
+        typer.echo(
+            "GITHUB_TOKEN and GITHUB_REPOSITORY environment variables must be set.",
+            err=True,
+        )
         raise typer.Exit(2)
 
     client = GitHubClient(repository=repository, token=token)
