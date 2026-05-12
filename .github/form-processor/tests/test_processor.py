@@ -204,6 +204,47 @@ def test_prepare_experiment_uses_configured_cv_client():
     assert result.notes == []
 
 
+def test_prepare_experiment_errors_missing_parent_activity_with_parent_experiment():
+    issue = {
+        "title": "[Experiment registration]: Test",
+        "labels": [{"name": "registration: experiment"}],
+        "body": _body(
+            {
+                "Experiment name": "My-Experiment",
+                "Experiment description": "A short experiment description.",
+                "Activity": "cmip",
+                "Tier": "1 - highest priority",
+                "Minimum ensemble size": "1",
+                "Minimum number of years per simulation": "1.0",
+                "Parent experiment": "piControl",
+            }
+        ),
+    }
+    cv_client = FakeCvClient(
+        {
+            ("cmip7", "activity", "cmip"): {"id": "cmip"},
+            ("wcrp-universe", "experiment", "picontrol"): {
+                "id": "picontrol",
+                "activity": "cmip",
+            },
+        }
+    )
+
+    result = prepare_registration(
+        issue=issue,
+        experiment_output_dir="experiment",
+        activity_output_dir="activity",
+        cv_client=cv_client,
+    )
+
+    assert result.prepared is None
+    assert result.validation_errors == [
+        "Parent activity must be supplied when parent experiment `picontrol` "
+        "is supplied."
+    ]
+    assert result.notes == []
+
+
 def test_prepare_experiment_allows_missing_required_model_components():
     issue = {
         "title": "[Experiment registration]: Test",
