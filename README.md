@@ -107,8 +107,14 @@ The easiest way to alter the CVs is via GitHub forms
 (specifically GitHub issue forms).
 At the moment we have forms available for:
 
-- [adding new experiments](TODO link)
-- [adding new activities](TODO link)
+<!--
+    REVIEWERS: Note that these links are dead.
+    They will go live when this is merged to main.
+    If you want to see this idea in action,
+    please see https://github.com/znichollscr/github-forms-scratch.
+-->
+- [adding new experiments](https://github.com/WCRP-CMIP/CMIP7-CVs/issues/new?template=register-experiment.yml)
+- [adding new activities](https://github.com/WCRP-CMIP/CMIP7-CVs/issues/new?template=register-activity.yml)
 
 For all other changes, please use either:
 
@@ -149,10 +155,67 @@ see the 'theory' header below.
 
 #### Examples
 
-- adding an experiment
-- adding an activity
-- adding lots of experiments and activities
-- adding lots of area labels: https://github.com/WCRP-CMIP/WCRP-universe/blob/esgvoc/scripts/generate-area-labels.py
+##### Adding a term to CMIP7 that is already in the universe
+
+Example pull request: [https://github.com/WCRP-CMIP/CMIP7-CVs/pull/371]()
+
+This is very simple, a single file is added to the CMIP7 CVs repository.
+
+This was done by simply copying an existing entry,
+then updating the filename and ID so they matched the entry in the universe CVs we wanted to add
+(in this case, https://github.com/WCRP-CMIP/WCRP-universe/blob/esgvoc/frequency/subhr.json).
+No overrides were needed in this case, so no fields were specified beyond the ones required
+to identify the universe CVs entry to use.
+
+##### Removing a term from the CMIP7 CVs
+
+Example pull request: [https://github.com/WCRP-CMIP/CMIP7-CVs/pull/352]()
+
+Simply delete the file that defines the term that needs to be removed.
+You do not need to (strictly speaking, must not)
+remove the term from the universe CVs
+(the universe CVs are intended to capture all known terms,
+whether they are used in any projects or not).
+
+##### Updating existing terms in the CMIP7 CVs
+
+Example CMIP7 CVs pull request: [https://github.com/WCRP-CMIP/CMIP7-CVs/pull/353]()
+Example universe CVs pull request: [https://github.com/WCRP-CMIP/WCRP-universe/pull/118]()
+
+For these changes, the fields we needed to update were split across both the CMIP7 CVs and the universe CVs.
+There currently aren't unambiguous rules for which fields go in which repository.
+The general guidance is that anything which can be re-used should be in the universe CVs repository,
+anything which is project specific goes in a project-specific CVs repository.
+
+The decision about where to alter the existing CMIP7 CVs entries and where to alter universe CVs entries was based on our own judgement.
+If you look at the [the universe CVs pull request](https://github.com/WCRP-CMIP/WCRP-universe/pull/118),
+then you will see that there are also alterations to `scripts/generate-experiments.py`.
+This is because we didn't update these entries by hand.
+Instead, we did this via a script.
+We do this because we find it simpler to use a script
+than try to ensure consistency across multiple files by hand.
+You don't have to follow this pattern, but you might find that it is necessary for anything
+except the most trivial edits.
+Your scripts can either be added in the `scripts` folder of the relevant CVs repository
+or kept separate, up to you.
+
+##### Updating existing terms in the CMIP7 CVs and adding new terms
+
+Example CMIP7 CVs pull request: [https://github.com/WCRP-CMIP/CMIP7-CVs/pull/381]()
+Example universe CVs pull request: [https://github.com/WCRP-CMIP/WCRP-universe/pull/133]()
+
+Like the example above, for these changes we need to make alterations in both the CMIP7 CVs and universe CVs repositories.
+As above, the decision about where to alter the existing CMIP7 CVs entries and where to alter universe CVs entries was based on our own judgement.
+
+If you look at the pull requests, you will see alterations to experiments, like in the example above.
+We also add two new experiments to the CMIP7 CVs experiments, namely `hist-piaer.json` and `hist-piaq.json`,
+effectively registering these as CMIP7 experiments.
+You will also notice that we added these new experiments to the list of experiments registered under AerChemMIP
+(see the modifications to the file `activity/aerchemmip.json`).
+Here you see another reason that we make these alterations using scripts
+(see the changes to `scripts/generate-experiments.py` in the [universe CVs pull request](https://github.com/WCRP-CMIP/WCRP-universe/pull/133)):
+there are couplings between different parts of the CVs
+and these couplings are much easier to manage using a script than trying to keep track of them all by hand.
 
 #### Theory
 
@@ -161,8 +224,10 @@ However, it is likely to leave you with some questions because:
 
 1. the system is evolving rapidly so this text may quickly become out of date
 1. this text is short and not exhaustive
-1. the system is custom, it is close to how JSON-LD works but it isn't JSON-LD,
-   so you can't google answers.
+1. the system is custom: it is close to how JSON-LD works but it isn't JSON-LD
+   (it can't be, because JSON-LD is a web technology,
+   but processing the CVs using web requests only is way too slow),
+   so you can't easily google answers.
    To get authoritative answers, you have to look at what the esgvoc code does
    (or ask an AI coding tool to explain, they seem to able to parse the logic quite well).
 
@@ -190,35 +255,77 @@ and only augmenting the fields shown in
 In order to determine which universe values are used as the basis for each CMIP7 CV entry,
 you must look at the `000_context.jsonld` file in the directory in which the CV is defined.
 Continuing with our `1pctCO2` example, we must look at the `000_context.jsonld` file
-in the same directory as the `1pctco2.json` file, i.e.
+that lives in the same directory as the `1pctco2.json` file, i.e.
 [https://github.com/WCRP-CMIP/CMIP7-CVs/tree/esgvoc/experiment/000_context.jsonld]().
 In this file, there is lots of information.
-The key bits are:
+The key bit for this match is the value of `"@context"` -> `"@base"`.
+This tells you which directory in the universe CVs repository
+is searched to find the universe CVs entry
+to combine with the CMIP7 CVs entry to create the 'full' CV entry.
+At the moment, you have to replace `"https://esgvoc.ipsl.fr/resource/universe/"`
+with `"https://github.com/WCRP-CMIP/CMIP7-CVs/tree/esgvoc/"`
+to get the right path, but otherwise it works.
+E.g. in [https://github.com/WCRP-CMIP/CMIP7-CVs/tree/esgvoc/experiment/000_context.jsonld]()
+you see that `"@context"` -> `"@base"` is equal to
+`"https://esgvoc.ipsl.fr/resource/universe/experiment/"`,
+so we know that we need to look in 
+`"https://github.com/WCRP-CMIP/WCRP-universe/tree/esgvoc/experiment"`
+for the 'matching' entry.
 
-1. the value of `["@context"]["@base"]`. This tells you which directory from the universe
-   are combined with the CMIP7 CVs entry to create the 'full' CV entry.
-   At the moment, you have to replace `"https://esgvoc.ipsl.fr/resource/universe/"`
-   with `"https://github.com/WCRP-CMIP/CMIP7-CVs/tree/esgvoc/"`
-   to get the right path, but otherwise it works.
-   E.g. in [https://github.com/WCRP-CMIP/CMIP7-CVs/tree/esgvoc/experiment/000_context.json]()
-   you see that `["@context"]["@base"]`  is equal to
-   `"https://esgvoc.ipsl.fr/resource/universe/experiment/"`,
-   so we know that we need to look in 
-   `"https://github.com/WCRP-CMIP/WCRP-universe/tree/esgvoc/experiment"`
-   for the 'matching' entries.
-    - In our example, this match is quite straightforward
-      as we just use experiments from the universe too.
-      However, the two names don't have to match.
-      For example, if we look at 
-      [https://github.com/WCRP-CMIP/CMIP7-CVs/tree/esgvoc/source/000_context.jsonld](),
-      we see that CMIP7 CVs sources
-      ([https://github.com/WCRP-CMIP/CMIP7-CVs/tree/esgvoc/source]())
-      are based on universe models
-      ([https://github.com/WCRP-CMIP/WCRP-universe/tree/esgvoc/model]()),
-      not universe sources
-      ([https://github.com/WCRP-CMIP/WCRP-universe/tree/esgvoc/source]()).
+(
+In our example, this match is quite straightforward
+as we just use experiments from the universe too.
+However, the two names don't have to match.
+For example, if we look at 
+[https://github.com/WCRP-CMIP/CMIP7-CVs/tree/esgvoc/source/000_context.jsonld](),
+we see that CMIP7 CVs sources
+([https://github.com/WCRP-CMIP/CMIP7-CVs/tree/esgvoc/source]())
+are based on universe models
+([https://github.com/WCRP-CMIP/WCRP-universe/tree/esgvoc/model]()),
+not universe sources
+([https://github.com/WCRP-CMIP/WCRP-universe/tree/esgvoc/source]()).
+)
 
-- from there, look at the model (normally comes from universe, but can come from project CVs, be careful)
-- then you should be able to see the structure and can mostly ignore 000_context.jsonld otherwise
-- if things explode or you can't understand, raise a [blank issue](https://github.com/WCRP-CMIP/CMIP7-CVs/issues/new?template=BLANK_ISSUE),
-  describe what happened and tag @ltroussellier and @glevava who can then help
+The 'matching' entry is then defined by the value of `"id"` in the JSON files.
+Again, using our `1pctCO2` example,
+we see that the value of `"id"` in
+[https://github.com/WCRP-CMIP/CMIP7-CVs/tree/esgvoc/experiment/000_context.json]()
+is `1pctco2`.
+Combining this with the directory information,
+we know that this file will be combined with 
+[https://github.com/WCRP-CMIP/WCRP-universe/tree/esgvoc/experiment/1pctco2.json]()
+from the universe CVs repository.
+
+To know what values can appear in the CVs, you need a few pieces of information.
+The first is that you always have to have the `"@context"` key with the value `"000_context.jsonld`.
+From there, you have to look at the `"type"` key in the JSON file
+or its universe CVs counterpart.
+This tells you which pydantic model will be used to with this JSON file,
+and therefore which keys are valid.
+(If you are not used to pydantic, the rest of this might be quite challenging.)
+Again, using our `1pctCO2` example,
+we see that the value of `"type"` in
+[https://github.com/WCRP-CMIP/CMIP7-CVs/tree/esgvoc/experiment/1pctco2.json]()
+is `experiment`.
+
+The pydantic models are defined in [esgvoc](https://github.com/ESGF/esgf-vocab),
+specifically [`src/esgvoc/api/data_descriptors`](https://github.com/ESGF/esgf-vocab/tree/main/src/esgvoc/api/data_descriptors).
+You need to look at the data descriptor that matches your type.
+Again, using our `1pctCO2` example,
+we would look at [https://github.com/ESGF/esgf-vocab/blob/main/src/esgvoc/api/data_descriptors/experiment.py]().
+From there, you can either read through the classes and their superclasses to determine the fields,
+or just install esgvoc and look at the class fields using pydantic's tooling.
+If you're not used to this way of working, this can be a challenge,
+so we would instead simply suggest looking at existing CVs entries to determine which keys are required,
+which keys are optional, which keys link to other fields and how the values are validated.
+
+Underneath all of this, esgvoc is creating and managing a relational database of terms
+(if you don't know about relational databases, but would like to learn,
+we can highly recommend working through [SQLModel's intro to databases](https://sqlmodel.tiangolo.com/databases/)).
+This way of working is the standard in web development and data management,
+but is new to CVs management in the context of CMIP.
+As a result, we expect there to be some teething issues as this way of working spreads through the community.
+If you can't understand how this CMIP7 CVs repository works,
+even after reading this guidance,
+please raise a [blank issue](https://github.com/WCRP-CMIP/CMIP7-CVs/issues/new?template=BLANK_ISSUE),
+describe your issue and tag @ltroussellier, @znichollscr and @glevava and we will do our best to help.
