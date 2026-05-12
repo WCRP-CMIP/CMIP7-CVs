@@ -2,6 +2,8 @@
 
 from __future__ import annotations
 
+from pathlib import Path
+
 from pydantic import ValidationError
 
 
@@ -17,19 +19,13 @@ def format_registration_commit_message(kind: str, identifier: str) -> str:
 
 def format_output_path(directory: str, identifier: str) -> str:
     """Format the output path for a registration identifier."""
-    clean_directory = directory.strip("/")
-    filename = f"{identifier}.json"
-    if not clean_directory:
-        return filename
-    return f"{clean_directory}/{filename}"
+    path = Path(directory) / f"{identifier}.json"
+    return path.as_posix()
 
 
-def format_output_path_for_identifier(output_path: str, identifier: str) -> str:
+def format_output_path_for_identifier(output_path: Path, identifier: str) -> str:
     """Format an output path using a different identifier."""
-    if "/" not in output_path:
-        return f"{identifier}.json"
-    directory = output_path.rsplit("/", maxsplit=1)[0]
-    return f"{directory}/{identifier}.json"
+    return (output_path.parent / f"{identifier}.json").as_posix()
 
 
 def format_validation_comment(errors: list[str], notes: list[str] | None = None) -> str:
