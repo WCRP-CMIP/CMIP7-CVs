@@ -109,7 +109,9 @@ At the moment we have forms available for:
     REVIEWERS: Note that these links are dead.
     They will go live when this is merged to main.
     If you want to see this idea in action,
-    please see https://github.com/znichollscr/github-forms-scratch.
+    please see https://github.com/znichollscr/github-forms-scratch
+    (I can't do a demo in this repository,
+    GitHub only renders forms that are in main.)
 -->
 - [adding new experiments](https://github.com/WCRP-CMIP/CMIP7-CVs/issues/new?template=register-experiment.yml)
 - [adding new activities](https://github.com/WCRP-CMIP/CMIP7-CVs/issues/new?template=register-activity.yml)
@@ -134,13 +136,15 @@ The values that underpin the CVs are kept in two separate repositories:
 1. https://github.com/WCRP-CMIP/WCRP-universe
 
 The full reasons for this are beyond the scope of this repository.
-In very short, this split allows the CVs community to maximise re-use of terms
+In very short, this split allows the CVs community to maximise (and encourage) re-use of terms
 while recognising that some projects use different terms to mean the same thing
 (or the same term to mean different things)
-so simply enforcing consistency across all projects was not an option.
+so simply enforcing consistency across all projects is not an option.
 This way of working allows us to meet this need,
 but it does complicate altering the CVs
 (or understanding where the CVs values you see come from).
+We are working on better ways to do this
+and better explanations of why we have chosen the solutions that we have.
 
 In order to alter the CVs,
 you will need to understand (at least to some degree)
@@ -148,16 +152,17 @@ both the repositories listed above
 as well as the interaction between them.
 
 We go through some examples here.
-If you want to understand the underlying structure,
+If you want to understand the underlying structure a bit more,
 see the 'theory' header below.
 
 #### Examples
 
-##### Adding a term to CMIP7 that is already in the universe
+##### Adding a term to the CMIP7 CVs that is already in the universe CVs
 
 Example pull request: [https://github.com/WCRP-CMIP/CMIP7-CVs/pull/371]()
 
 This is very simple, a single file is added to the CMIP7 CVs repository.
+This adds the term, which is already in the universe CVs, to the CMIP7 CVs.
 
 This was done by simply copying an existing entry,
 then updating the filename and ID so they matched the entry in the universe CVs we wanted to add
@@ -181,9 +186,11 @@ Example CMIP7 CVs pull request: [https://github.com/WCRP-CMIP/CMIP7-CVs/pull/353
 Example universe CVs pull request: [https://github.com/WCRP-CMIP/WCRP-universe/pull/118]()
 
 For these changes, the fields we needed to update were split across both the CMIP7 CVs and the universe CVs.
-There currently aren't unambiguous rules for which fields go in which repository.
+Currently, there aren't unambiguous rules for which fields go in which repository.
 The general guidance is that anything which can be re-used should be in the universe CVs repository,
 anything which is project specific goes in a project-specific CVs repository.
+If in doubt, put the field in the project-specific CVs repository
+(i.e. lean on the side of caution, if it's not obviously universal, don't guess that it is so).
 
 The decision about where to alter the existing CMIP7 CVs entries and where to alter universe CVs entries was based on our own judgement.
 If you look at the [the universe CVs pull request](https://github.com/WCRP-CMIP/WCRP-universe/pull/118),
@@ -232,7 +239,7 @@ However, it is likely to leave you with some questions because:
 In very short, for CMIP7 CVs, the CMIP7 CVs repository
 (https://github.com/WCRP-CMIP/WCRP-universe/)
 is the source with the highest priority.
-Values set in the CMIP7 CVs repository are never changed.
+Values set in the CMIP7 CVs repository are never overridden during the processing.
 The universe CVs repository
 (https://github.com/WCRP-CMIP/WCRP-universe)
 is an information source which the CMIP7 CVs repository can re-use.
@@ -247,7 +254,7 @@ the entry that describes the `1pctCO2` experiment is very thin,
 see [https://github.com/WCRP-CMIP/CMIP7-CVs/tree/esgvoc/experiment/1pctco2.json]().
 It is actually mostly relying on the 'universe' definition of `1pctco2`,
 see [https://github.com/WCRP-CMIP/WCRP-universe/tree/esgvoc/experiment/1pctco2.json](),
-and only augmenting the fields shown in
+and only augmenting/overriding the fields shown in
 [https://github.com/WCRP-CMIP/CMIP7-CVs/tree/esgvoc/experiment/1pctco2.json]().
 
 In order to determine which universe values are used as the basis for each CMIP7 CV entry,
@@ -267,7 +274,7 @@ E.g. in [https://github.com/WCRP-CMIP/CMIP7-CVs/tree/esgvoc/experiment/000_conte
 you see that `"@context"` -> `"@base"` is equal to
 `"https://esgvoc.ipsl.fr/resource/universe/experiment/"`,
 so we know that we need to look in 
-`"https://github.com/WCRP-CMIP/WCRP-universe/tree/esgvoc/experiment"`
+`"https://github.com/WCRP-CMIP/WCRP-universe/tree/esgvoc/experiment/"`
 for the 'matching' entry.
 
 (
@@ -297,14 +304,16 @@ from the universe CVs repository.
 To know what values can appear in the CVs, you need a few pieces of information.
 The first is that you always have to have the `"@context"` key with the value `"000_context.jsonld`.
 From there, you have to look at the `"type"` key in the JSON file
-or its universe CVs counterpart.
-This tells you which pydantic model will be used to with this JSON file,
+(or its universe CVs counterpart if the `"type"` key is missing in the project-specific CVs file).
+This tells you which pydantic model will be used with this JSON file,
 and therefore which keys are valid.
 (If you are not used to pydantic, the rest of this might be quite challenging.)
 Again, using our `1pctCO2` example,
 we see that the value of `"type"` in
 [https://github.com/WCRP-CMIP/CMIP7-CVs/tree/esgvoc/experiment/1pctco2.json]()
 is `experiment`.
+(There can actually be an extra layer to this, sometimes you also need to check the `DATA_DESCRIPTOR_CLASS_MAPPING` mapping
+in [https://github.com/ESGF/esgf-vocab/blob/main/src/esgvoc/api/data_descriptors/__init__.py]().)
 
 The pydantic models are defined in [esgvoc](https://github.com/ESGF/esgf-vocab),
 specifically [`src/esgvoc/api/data_descriptors`](https://github.com/ESGF/esgf-vocab/tree/main/src/esgvoc/api/data_descriptors).
@@ -312,10 +321,10 @@ You need to look at the data descriptor that matches your type.
 Again, using our `1pctCO2` example,
 we would look at [https://github.com/ESGF/esgf-vocab/blob/main/src/esgvoc/api/data_descriptors/experiment.py]().
 From there, you can either read through the classes and their superclasses to determine the fields,
+which ones are required, how they link to other classes and how the fields are validated,
 or just install esgvoc and look at the class fields using pydantic's tooling.
 If you're not used to this way of working, this can be a challenge,
-so we would instead simply suggest looking at existing CVs entries to determine which keys are required,
-which keys are optional, which keys link to other fields and how the values are validated.
+so we would instead simply suggest looking at existing CVs entries to see which fields are used.
 
 Underneath all of this, esgvoc is creating and managing a relational database of terms
 (if you don't know about relational databases, but would like to learn,
