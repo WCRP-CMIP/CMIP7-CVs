@@ -10,7 +10,6 @@ from pydantic import ValidationError
 
 from github_form_processor.cv import (
     CvClient,
-    CvRepositories,
     UrlChecker,
     check_activity_against_cvs,
     check_activity_urls,
@@ -71,7 +70,6 @@ def prepare_registration(
     activity_output_dir: str,
     external_checks: bool = True,
     cv_client: CvClient | None = None,
-    cv_repositories: CvRepositories | None = None,
     url_checker: UrlChecker | None = None,
 ) -> RegistrationPreparationResult:
     """Prepare a registration from a GitHub issue payload.
@@ -96,7 +94,6 @@ def prepare_registration(
     notes: list[str] = []
     validation_errors: list[str] = []
     cv_client = cv_client or CvClient()
-    cv_repositories = cv_repositories or CvRepositories()
     url_checker = url_checker or UrlChecker()
 
     try:
@@ -107,7 +104,6 @@ def prepare_registration(
                     check_experiment_against_cvs(
                         experiment,
                         cv_client,
-                        cv_repositories,
                     )
                 )
             prepared = PreparedRegistration(
@@ -129,7 +125,6 @@ def prepare_registration(
                     check_activity_against_cvs(
                         activity,
                         cv_client,
-                        cv_repositories,
                     )
                 )
             prepared = PreparedRegistration(
