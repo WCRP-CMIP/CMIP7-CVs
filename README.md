@@ -9,8 +9,7 @@ We hope to soon be able to "freeze" them,
 i.e. forbid alterations to values in the CVs
 and only allow new values to be added to the CVs.
 However, this is not currently the case so when you view the CVs,
-you will likely also want to specify which version of the CVs you are looking at
-in order to avoid confusion.
+you will also need to specify which version of the CVs you are looking at to avoid confusion.
 It is for exactly this reason that,
 when raising an [issue with the CVs values](https://github.com/WCRP-CMIP/CMIP7-CVs/issues/new?template=cv-value.md),
 we ask you to specify how you were looking at the CVs
@@ -83,8 +82,7 @@ see [the script used to create CMOR tables](https://github.com/WCRP-CMIP/cmip7-c
 
 ### CMOR tables
 
-A subset of the CVs are used with the [cmor](https://github.com/PCMDI/cmor)
-tool.
+A subset of the CVs are used with the [cmor](https://github.com/PCMDI/cmor) tool.
 The subset required are formatted for CMOR in
 [this repository](https://github.com/WCRP-CMIP/cmip7-cmor-tables),
 specifically in [this file](https://github.com/WCRP-CMIP/cmip7-cmor-tables/tree/main/tables-cvs/cmor-cvs.json).
@@ -96,7 +94,7 @@ if you want to see changes that are in the process of being incorporated.
 <!--
 ### JSON-LD represenation
 
-Add if we have a version of this we're happy with.
+Add when we have a version of this we're happy with.
 -->
 
 ## Altering (i.e. writing) the CVs
