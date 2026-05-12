@@ -15,7 +15,6 @@ from github_form_processor.cv import (
     check_experiment_against_cvs,
 )
 from github_form_processor.format import (
-    format_missing_parent_activity_error,
     format_output_path,
     format_pydantic_errors,
     format_registration_commit_message,
@@ -91,9 +90,8 @@ def prepare_registration(
                 and experiment.parent_activity is None
             ):
                 validation_errors.append(
-                    format_missing_parent_activity_error(
-                        experiment.parent_experiment
-                    )
+                    "Parent activity must be supplied when parent experiment "
+                    f"`{experiment.parent_experiment}` is supplied."
                 )
             if external_checks:
                 notes.extend(
