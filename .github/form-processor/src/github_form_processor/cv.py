@@ -178,11 +178,15 @@ def check_experiment_against_cvs(
                 "against the WCRP universe CVs"
             ),
         )
-        if parent_lookup.found and experiment.parent_activity:
+        if parent_lookup.found:
             parent_activity = (
                 str(parent_lookup.data.get("activity", "")).strip().lower()
             )  # type: ignore[union-attr]
-            if parent_activity and parent_activity != experiment.parent_activity:
+            if (
+                parent_activity
+                and experiment.parent_activity is not None
+                and parent_activity != experiment.parent_activity
+            ):
                 notes.append(
                     f"Parent activity `{experiment.parent_activity}` does not match "
                     f"the parent experiment entry, which uses `{parent_activity}`."

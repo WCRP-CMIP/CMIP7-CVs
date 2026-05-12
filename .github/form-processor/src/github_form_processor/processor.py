@@ -99,6 +99,14 @@ def prepare_registration(
     try:
         if kind == "experiment":
             experiment = _experiment_from_fields(fields)
+            if (
+                experiment.parent_experiment
+                and experiment.parent_activity is None
+            ):
+                validation_errors.append(
+                    "Parent activity must be supplied when parent experiment "
+                    f"`{experiment.parent_experiment}` is supplied."
+                )
             if external_checks:
                 notes.extend(
                     check_experiment_against_cvs(
