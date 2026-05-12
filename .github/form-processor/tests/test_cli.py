@@ -60,14 +60,11 @@ def test_process_accepts_output_directories_as_options(tmp_path, monkeypatch):
     assert result.exit_code == 0
     assert call["experiment_output_dir"] == "custom-experiments"
     assert call["activity_output_dir"] == "custom-activities"
-    assert (
-        call["cv_repositories"].wcrp_universe_url
-        == "https://example.test/wcrp-universe/custom"
+    assert call["cv_client"].wcrp_universe_url == (
+        "https://example.test/wcrp-universe/custom"
     )
-    assert (
-        call["cv_repositories"].cmip7_cvs_url == "https://example.test/cmip7-cvs/custom"
-    )
-    assert call["cv_repositories"].cmip7_cvs_path == tmp_path.resolve()
+    assert call["cv_client"].cmip7_cvs_url == "https://example.test/cmip7-cvs/custom"
+    assert call["cv_client"].cmip7_cvs_path == tmp_path.resolve()
 
 
 def test_opened_issue_raises_if_target_file_exists():

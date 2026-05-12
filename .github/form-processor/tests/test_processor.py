@@ -4,7 +4,7 @@ import json
 
 import pytest
 
-from github_form_processor.cv import CvClient, CvRepositories, JsonLookup, UrlCheck
+from github_form_processor.cv import CvClient, JsonLookup, UrlCheck
 from github_form_processor.processor import prepare_registration
 
 
@@ -14,8 +14,14 @@ class FakeCvClient:
     def __init__(self, entries):
         self.entries = entries
 
-    def fetch_json(self, base_url, folder, identifier):
-        entry = self.entries.get((base_url, folder, identifier))
+    def fetch_cmip7_json(self, folder, identifier):
+        entry = self.entries.get(("cmip7", folder, identifier))
+        if entry is None:
+            return JsonLookup(found=False)
+        return JsonLookup(found=True, data=entry)
+
+    def fetch_wcrp_universe_json(self, folder, identifier):
+        entry = self.entries.get(("wcrp-universe", folder, identifier))
         if entry is None:
             return JsonLookup(found=False)
         return JsonLookup(found=True, data=entry)
@@ -58,31 +64,11 @@ def test_prepare_experiment_registration_renders_superset_json():
     }
     cv_client = FakeCvClient(
         {
-            (
-                "https://raw.githubusercontent.com/WCRP-CMIP/CMIP7-CVs/esgvoc",
-                "activity",
-                "cmip",
-            ): {"id": "cmip"},
-            (
-                "https://raw.githubusercontent.com/WCRP-CMIP/WCRP-universe/esgvoc",
-                "source_type",
-                "aogcm",
-            ): {"id": "aogcm"},
-            (
-                "https://raw.githubusercontent.com/WCRP-CMIP/WCRP-universe/esgvoc",
-                "source_type",
-                "aer",
-            ): {"id": "aer"},
-            (
-                "https://raw.githubusercontent.com/WCRP-CMIP/WCRP-universe/esgvoc",
-                "source_type",
-                "bgc",
-            ): {"id": "bgc"},
-            (
-                "https://raw.githubusercontent.com/WCRP-CMIP/WCRP-universe/esgvoc",
-                "experiment",
-                "picontrol",
-            ): {
+            ("cmip7", "activity", "cmip"): {"id": "cmip"},
+            ("wcrp-universe", "source_type", "aogcm"): {"id": "aogcm"},
+            ("wcrp-universe", "source_type", "aer"): {"id": "aer"},
+            ("wcrp-universe", "source_type", "bgc"): {"id": "bgc"},
+            ("wcrp-universe", "experiment", "picontrol"): {
                 "id": "picontrol",
                 "activity": "cmip",
             },
@@ -183,7 +169,7 @@ def test_prepare_experiment_raises_for_non_calendar_year_date_span():
         )
 
 
-def test_prepare_experiment_uses_configured_remote_cv_repositories():
+def test_prepare_experiment_uses_configured_cv_client():
     issue = {
         "title": "[Experiment registration]: Test",
         "labels": [{"name": "registration: experiment"}],
@@ -201,12 +187,8 @@ def test_prepare_experiment_uses_configured_remote_cv_repositories():
     }
     cv_client = FakeCvClient(
         {
-            ("https://example.test/cmip7-cvs/custom", "activity", "cmip"): {
-                "id": "cmip"
-            },
-            ("https://example.test/universe/custom", "source_type", "aogcm"): {
-                "id": "aogcm"
-            },
+            ("cmip7", "activity", "cmip"): {"id": "cmip"},
+            ("wcrp-universe", "source_type", "aogcm"): {"id": "aogcm"},
         }
     )
 
@@ -215,10 +197,6 @@ def test_prepare_experiment_uses_configured_remote_cv_repositories():
         experiment_output_dir="experiment",
         activity_output_dir="activity",
         cv_client=cv_client,
-        cv_repositories=CvRepositories(
-            wcrp_universe_url="https://example.test/universe/custom",
-            cmip7_cvs_url="https://example.test/cmip7-cvs/custom",
-        ),
     )
 
     assert result.prepared is not None
@@ -270,11 +248,7 @@ def test_prepare_activity_blocks_inaccessible_reference_url():
     }
     cv_client = FakeCvClient(
         {
-            (
-                "https://raw.githubusercontent.com/WCRP-CMIP/CMIP7-CVs/esgvoc",
-                "experiment",
-                "known-exp",
-            ): {"id": "known-exp"},
+            ("cmip7", "experiment", "known-exp"): {"id": "known-exp"},
         }
     )
     url_checker = FakeUrlChecker(
@@ -356,10 +330,7 @@ def test_prepare_activity_can_check_cmip7_cvs_from_local_path(tmp_path):
         issue=issue,
         experiment_output_dir="experiment",
         activity_output_dir="activity",
-        cv_client=CvClient(),
-        cv_repositories=CvRepositories(
-            cmip7_cvs_path=tmp_path,
-        ),
+        cv_client=CvClient(cmip7_cvs_path=tmp_path),
     )
 
     assert result.prepared is not None

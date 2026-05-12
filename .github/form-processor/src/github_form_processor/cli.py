@@ -8,7 +8,7 @@ from pathlib import Path
 
 import typer
 
-from github_form_processor.cv import CvRepositories
+from github_form_processor.cv import CvClient
 from github_form_processor.github_api import GitHubClient
 from github_form_processor.processor import (
     PreparedRegistration,
@@ -41,7 +41,7 @@ def process_issue_form(
     skip_external_checks: bool = typer.Option(
         False,
         "--skip-external-checks",
-        help="Skip remote CV and URL checks.",
+        help="Skip CV and URL checks.",
     ),
     wcrp_universe_url: str = typer.Option(
         "https://raw.githubusercontent.com/WCRP-CMIP/WCRP-universe/esgvoc",
@@ -77,7 +77,7 @@ def process_issue_form(
         experiment_output_dir=experiment_output_dir,
         activity_output_dir=activity_output_dir,
         external_checks=not skip_external_checks,
-        cv_repositories=CvRepositories(
+        cv_client=CvClient(
             wcrp_universe_url=wcrp_universe_url,
             cmip7_cvs_url=cmip7_cvs_url,
             cmip7_cvs_path=cmip7_cvs_path,
