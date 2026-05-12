@@ -1,0 +1,43 @@
+name: Process registration forms
+
+on:
+  issues:
+    types:
+      - opened
+      - edited
+
+permissions:
+  contents: write
+  issues: write
+  pull-requests: write
+
+jobs:
+  process-registration-form:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Install form processor
+        run: python -m pip install .github/form-processor
+
+      - name: Process issue form
+        env:
+          # PAT with
+          # Contents: Read and write
+          # Issues: Read and write
+          # Pull requests: Read and write
+          GITHUB_TOKEN: "${{ secrets.FORM_ACCESS_TOKEN }}"
+          GITHUB_REPOSITORY: ${{ github.repository }}
+          GITHUB_EVENT_PATH: ${{ github.event_path }}
+        run: >
+          python -m github_form_processor
+          --experiment-output-dir experiment
+          --activity-output-dir activity
+          --wcrp-universe-url https://raw.githubusercontent.com/WCRP-CMIP/WCRP-universe/esgvoc
+          --cmip7-cvs-url https://raw.githubusercontent.com/WCRP-CMIP/CMIP7-CVs/esgvoc

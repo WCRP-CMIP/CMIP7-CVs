@@ -1,0 +1,116 @@
+name: Register an experiment
+description: Register a new experiment for review.
+title: "[Experiment registration]: "
+labels:
+  - "registration: experiment"
+body:
+  - type: input
+    id: experiment-name
+    attributes:
+      label: Experiment name
+      description: Use only letters, numbers and hyphens. The name must be fewer than 40 characters. For example, `piControl-spinup`.
+    validations:
+      required: true
+  - type: textarea
+    id: experiment-description
+    attributes:
+      label: Experiment description
+      description: Please describe the experiment briefly e.g. 1-4 sentences.
+    validations:
+      required: true
+  - type: input
+    id: activity
+    attributes:
+      label: Activity
+      description: Please provide the activity ID to which this experiment belongs. For example, `cmip`.
+    validations:
+      required: true
+  - type: dropdown
+    id: tier
+    attributes:
+      label: Tier
+      description: Tier 1 is highest priority and tier 3 is lowest priority.
+      options:
+        - "1"
+        - "2"
+        - "3"
+    validations:
+      required: true
+  - type: input
+    id: min-ensemble-size
+    attributes:
+      label: Minimum ensemble size
+      description: Minimum ensemble size required by teams that perform this experiment.
+      value: "1"
+    validations:
+      required: true
+  - type: input
+    id: start-date
+    attributes:
+      label: Start date
+      description: Please specify the date on which the experiment should start as YYYY-MM-DD. If modelling teams are free to choose the start date, then leave this empty.
+    validations:
+      required: false
+  - type: input
+    id: end-date
+    attributes:
+      label: End date
+      description: Please specify the date on which the experiment should end as YYYY-MM-DD. If modelling teams are free to choose the end date, then leave this empty.
+    validations:
+      required: false
+  - type: input
+    id: min-years-per-simulation
+    attributes:
+      label: Minimum number of years per simulation
+      description: Please provide this as a positive number.
+    validations:
+      required: true
+  - type: textarea
+    id: required-model-components
+    attributes:
+      label: Required model components
+      description: Please provide one component per line. See https://github.com/WCRP-CMIP/WCRP-universe/tree/esgvoc/source_type for existing options (if you need a new option, just write it and we will help with the process of registering it).
+      placeholder: |
+        aogcm
+        chem
+    validations:
+      required: false
+  - type: textarea
+    id: additional-allowed-model-components
+    attributes:
+      label: Additional allowed model components
+      description: Please provide one component per line. See https://github.com/WCRP-CMIP/WCRP-universe/tree/esgvoc/source_type for existing options (if you need a new option, just write it and we will help with the process of registering it).
+      placeholder: |
+        aer
+        bgc
+    validations:
+      required: false
+  - type: input
+    id: parent-experiment
+    attributes:
+      label: Parent experiment
+      description: Leave blank if there is no parent experiment.
+    validations:
+      required: false
+  - type: input
+    id: parent-activity
+    attributes:
+      label: Parent activity
+      description: Leave blank if there is no parent experiment.
+    validations:
+      required: false
+  - type: input
+    id: parent-mip-era
+    attributes:
+      label: Parent MIP era
+      description: Leave blank if there is no parent experiment.
+      placeholder: cmip7
+    validations:
+      required: false
+  - type: textarea
+    id: branch-information
+    attributes:
+      label: Branch information
+      description: Please specify how this experiment should branch from its parent experiment e.g. 'Branch from `experiment_name` at YYYY-MM-DD' or 'Branch from `experiment_name` at a time of your choosing', leave blank if this experiment does not have a parent experiment.
+    validations:
+      required: false

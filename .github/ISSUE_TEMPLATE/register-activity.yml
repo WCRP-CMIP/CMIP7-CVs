@@ -1,0 +1,40 @@
+name: Register an activity
+description: Register a new activity for review.
+title: "[Activity registration]: "
+labels:
+  - "registration: activity"
+body:
+  - type: input
+    id: activity-name
+    attributes:
+      label: Activity name
+      description: Use only letters, numbers and hyphens. The name must be fewer than 40 characters. For example, AerChemMIP.
+    validations:
+      required: true
+  - type: textarea
+    id: activity-description
+    attributes:
+      label: Activity description
+      description: Please describe the activity briefly e.g. 1-4 sentences.
+    validations:
+      required: true
+  - type: textarea
+    id: experiments
+    attributes:
+      label: Experiments
+      description: Please provide one experiment name (or ID) per line.
+      placeholder: |
+        exp-1
+        expbA
+    validations:
+      required: false
+  - type: textarea
+    id: reference-urls
+    attributes:
+      label: Reference URLs
+      description: Please provide one URL per line.
+      placeholder: |
+        http://link/to/paper
+        https://link/to/docs
+    validations:
+      required: false
