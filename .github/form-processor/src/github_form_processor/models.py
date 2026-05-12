@@ -2,6 +2,7 @@
 
 from __future__ import annotations
 
+import json
 import re
 from datetime import date
 from typing import Any
@@ -133,6 +134,35 @@ class ExperimentRegistration(RegistrationBase):
 
         return self
 
+    def render_json(self) -> str:
+        """Render the experiment registration as a JSON file."""
+        payload: dict[str, Any] = {
+            "@context": "000_context.jsonld",
+            "id": self.identifier,
+            "type": "experiment",
+            "description": self.description,
+            "drs_name": self.name,
+            "start_timestamp": self.start_date.isoformat()
+            if self.start_date
+            else None,
+            "end_timestamp": self.end_date.isoformat()
+            if self.end_date
+            else None,
+            "activity": self.activity,
+            "additional_allowed_model_components": (
+                self.additional_allowed_model_components
+            ),
+            "branch_information": self.branch_information,
+            "min_ensemble_size": self.min_ensemble_size,
+            "parent_activity": self.parent_activity,
+            "parent_experiment": self.parent_experiment,
+            "parent_mip_era": self.parent_mip_era,
+            "required_model_components": self.required_model_components,
+            "tier": self.tier,
+            "min_number_yrs_per_sim": self.min_number_yrs_per_sim,
+        }
+        return json.dumps(payload, indent=4) + "\n"
+
 
 class ActivityRegistration(RegistrationBase):
     """Validated activity registration submission."""
@@ -158,6 +188,19 @@ class ActivityRegistration(RegistrationBase):
             if parsed.scheme not in {"http", "https"} or not parsed.netloc:
                 raise ValueError(f"`{url}` must be an HTTP or HTTPS URL")
         return value
+
+    def render_json(self) -> str:
+        """Render the activity registration as a JSON file."""
+        payload: dict[str, Any] = {
+            "@context": "000_context.jsonld",
+            "id": self.identifier,
+            "type": "activity",
+            "description": self.description,
+            "drs_name": self.name,
+            "experiments": self.experiments,
+            "urls": self.urls,
+        }
+        return json.dumps(payload, indent=4) + "\n"
 
 
 def parse_list(value: Any) -> list[str]:

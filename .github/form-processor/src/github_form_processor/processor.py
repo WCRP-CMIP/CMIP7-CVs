@@ -17,7 +17,6 @@ from github_form_processor.cv import (
 )
 from github_form_processor.issue_body import parse_issue_form_body
 from github_form_processor.models import ActivityRegistration, ExperimentRegistration
-from github_form_processor.render import render_activity_json, render_experiment_json
 
 EXPERIMENT_LABEL = "registration: experiment"
 ACTIVITY_LABEL = "registration: activity"
@@ -120,7 +119,7 @@ def prepare_registration(
                 output_path=_join_output_path(
                     experiment_output_dir, experiment.identifier
                 ),
-                content=render_experiment_json(experiment),
+                content=experiment.render_json(),
                 pull_request_title=f"Register experiment {experiment.identifier}",
                 commit_message=f"Register experiment {experiment.identifier}",
                 notes=notes,
@@ -139,7 +138,7 @@ def prepare_registration(
                 kind=kind,
                 identifier=activity.identifier,
                 output_path=_join_output_path(activity_output_dir, activity.identifier),
-                content=render_activity_json(activity),
+                content=activity.render_json(),
                 pull_request_title=f"Register activity {activity.identifier}",
                 commit_message=f"Register activity {activity.identifier}",
                 notes=notes,
