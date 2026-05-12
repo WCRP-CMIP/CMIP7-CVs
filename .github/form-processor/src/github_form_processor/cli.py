@@ -286,4 +286,7 @@ def _previous_output_path(
     previous_identifier = branch.removeprefix(prefix)
     if previous_identifier == prepared.identifier:
         return None
-    return format_output_path_for_identifier(prepared.output_path, previous_identifier)
+    return format_output_path_for_identifier(
+        Path(prepared.output_path),
+        previous_identifier,
+    )
