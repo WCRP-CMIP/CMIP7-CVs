@@ -1,0 +1,19 @@
+schema_version: "1"
+project:
+  id: "cmip7"
+  name: "CMIP7 Controlled Vocabulary"
+cv_version: "1.1.0"
+universe_version: "1.0.2"
+esgvoc:
+  min_version: "4.0.0"
+release_notes: |
+  - fix(catalog_spec): replace organisation with institution
+  - fix(attr_spec): replace organisation with institution in spec
+  - Fix DAMIP definitions
+  - Write hist-pi* AerChemMIP
+  - Clarify ensemble size
+  - Set min ensemble size for other AerChemMIP experiments
+  - fix(type): change double to number
+  - Adjust min ensemble size (CMIP7-CVs#382)
+  - Add fixes and comments
+  - Revert changes to specs
