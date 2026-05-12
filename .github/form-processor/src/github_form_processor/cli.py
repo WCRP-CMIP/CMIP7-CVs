@@ -239,8 +239,7 @@ def _process_edited_issue(
                 "Please open a new registration issue."
             )
         client.comment_issue(issue_number, format_edit_error_comment(message))
-        typer.echo(message, err=True)
-        return 1
+        raise RuntimeError(message)
 
     pull_request = open_pulls[0]
     target_branch = str(pull_request.get("head", {}).get("ref") or branch)

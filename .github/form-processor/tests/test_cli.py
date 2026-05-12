@@ -125,6 +125,34 @@ def test_edited_issue_raises_if_multiple_open_pull_requests_exist():
     ]
 
 
+def test_edited_issue_raises_if_no_open_pull_request_exists():
+    client = FakeNoOpenPullsClient()
+    prepared = FakePreparedRegistration()
+
+    try:
+        _process_edited_issue(
+            client=client,
+            issue_number=1,
+            branch="registration/experiment-1-existing",
+            prepared=prepared,
+        )
+    except RuntimeError as exc:
+        assert "No open registration pull request" in str(exc)
+    else:
+        raise AssertionError("Expected RuntimeError")
+
+    assert client.comments == [
+        (
+            1,
+            "### Registration form processing failed\n"
+            "\n"
+            "No open registration pull request was found for branch "
+            "`registration/experiment-1-existing`. Please open a new registration "
+            "issue.",
+        )
+    ]
+
+
 class FakeDuplicateFileClient:
     def __init__(self):
         self.comments = []
@@ -155,6 +183,22 @@ class FakeMultipleOpenPullsClient:
             {"number": 2, "state": "open"},
             {"number": 3, "state": "open"},
         ]
+
+    def comment_issue(self, issue_number, body):
+        self.comments.append((issue_number, body))
+
+
+class FakeNoOpenPullsClient:
+    def __init__(self):
+        self.comments = []
+
+    def find_pull_requests_for_branch(self, branch):
+        assert branch == "registration/experiment-1-existing"
+        return []
+
+    def find_pull_requests_for_issue(self, issue_number):
+        assert issue_number == 1
+        return []
 
     def comment_issue(self, issue_number, body):
         self.comments.append((issue_number, body))
