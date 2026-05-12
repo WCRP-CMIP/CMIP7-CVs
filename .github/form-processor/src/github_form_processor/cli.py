@@ -110,10 +110,6 @@ def process_issue_form(
         typer.echo("Registration form has validation errors.")
         raise typer.Exit(0)
 
-    if preparation.prepared is None:
-        typer.echo("Issue does not match a known registration form.")
-        raise typer.Exit(0)
-
     action = event.get("action")
     default_branch = event.get("repository", {}).get("default_branch", "main")
     branch = (
