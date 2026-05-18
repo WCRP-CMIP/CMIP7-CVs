@@ -1,0 +1,6 @@
+{
+    "@context": "000_context.jsonld",
+    "id": "model-output",
+    "type": "product",
+    "description": "Output from a model simulation, in this context typically of the climate system or a component thereof."
+}

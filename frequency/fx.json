@@ -1,0 +1,6 @@
+{
+    "@context": "000_context.jsonld",
+    "id": "fx",
+    "type": "frequency",
+    "description": "Fixed field (i.e., time invariant)"
+}

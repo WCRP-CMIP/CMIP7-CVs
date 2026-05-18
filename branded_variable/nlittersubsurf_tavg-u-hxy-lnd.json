@@ -1,0 +1,5 @@
+{
+    "@context": "000_context.jsonld",
+    "id": "nlittersubsurf_tavg-u-hxy-lnd",
+    "type": "known_branded_variable"
+}

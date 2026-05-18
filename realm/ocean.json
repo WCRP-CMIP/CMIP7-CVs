@@ -1,0 +1,6 @@
+{
+    "@context": "000_context.jsonld",
+    "id": "ocean",
+    "type": "realm",
+    "description": "Dataset of primary interest in studying the dynamics and physic of the ocean."
+}

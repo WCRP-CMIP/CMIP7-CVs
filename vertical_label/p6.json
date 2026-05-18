@@ -1,0 +1,5 @@
+{
+    "@context": "000_context.jsonld",
+    "id": "p6",
+    "type": "vertical_label"
+}

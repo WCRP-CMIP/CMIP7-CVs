@@ -1,0 +1,26 @@
+{
+  "esgvoc_resolve_modes": {
+    "arrangement": "reference",
+    "horizontal_subgrids": "full"
+  },
+  "@context": {
+    "@base": "https://esgvoc.ipsl.fr/resource/universe/horizontal_computational_grid/",
+    "@vocab": "http://schema.org/",
+    "id": "@id",
+    "type": "@type",
+    "arrangement": {
+      "@id": "https://esgvoc.ipsl.fr/resource/universe/grid_arrangement/",
+      "@type": "@id",
+      "@context": {
+        "@base": "https://esgvoc.ipsl.fr/resource/universe/grid_arrangement/"
+      }
+    },
+    "horizontal_subgrids": {
+      "@id": "https://esgvoc.ipsl.fr/resource/universe/horizontal_subgrid/",
+      "@type": "@id",
+      "@context": {
+        "@base": "https://esgvoc.ipsl.fr/resource/universe/horizontal_subgrid/"
+      }
+    }
+  }
+}

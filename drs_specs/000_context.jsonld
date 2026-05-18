@@ -1,0 +1,8 @@
+{
+    "@context": {
+        "id": "@id",
+        "type": "@type",
+        "@base": "https://esgvoc.ipsl.fr/resource/universe/drs_specs/",
+        "drs_specs": "https://esgvoc.ipsl.fr/resource/universe/drs_specs"
+    }
+}

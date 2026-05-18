@@ -1,0 +1,8 @@
+{
+    "@context": {
+        "id": "@id",
+        "type": "@type",
+        "@base": "https://esgvoc.ipsl.fr/resource/universe/time_range/",
+        "time_range": "https://esgvoc.ipsl.fr/resource/universe/time_range/"
+    }
+}

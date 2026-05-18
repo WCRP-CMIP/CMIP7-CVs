@@ -1,0 +1,237 @@
+# STAC CATALOG SPECIFICATIONS
+
+version: v3.0.6
+
+catalog_properties:
+  name: stac
+  url_template: "https://stac-extensions.github.io/{extension_name}/{extension_version}/schema.json"
+  extensions:
+    - name: file
+      version: v2.1.0
+    - name: alternate-assets
+      version: v1.2.0
+  regex_id: '^MIP-DRS7\.CMIP7(\.[A-Za-z0-9-]+){10}\.v[0-9]{8}$'
+  regex_base_id: '^MIP-DRS7\.CMIP7(\.[A-Za-z0-9-]+){10}$'
+
+dataset_properties:
+  - source_collection: activity
+    catalog_field_name: activity_id
+    catalog_field_value_type: string
+    is_required: true
+
+  - source_collection: area_label
+    catalog_field_value_type: string
+    is_required: true
+
+  - source_collection: null
+    catalog_field_name: branch_time_in_child
+    catalog_field_value_type: number
+    is_required: false
+
+  - source_collection: null
+    catalog_field_name: branch_time_in_parent
+    catalog_field_value_type: number
+    is_required: false
+
+  - source_collection: Conventions
+    catalog_field_value_type: string_array
+    is_required: false
+
+  - source_collection: data_specs_version
+    catalog_field_value_type: string
+    is_required: true
+
+  - source_collection: drs_specs
+    catalog_field_value_type: string
+    is_required: true
+
+  - source_collection: null
+    catalog_field_name: experiment
+    catalog_field_value_type: string
+    is_required: false
+
+  - source_collection: experiment
+    catalog_field_name: experiment_id
+    catalog_field_value_type: string
+    is_required: true
+
+  - source_collection: forcing_index
+    catalog_field_value_type: string
+    is_required: true
+
+  - source_collection: frequency
+    catalog_field_value_type: string
+    is_required: true
+
+  - source_collection: grid_label
+    catalog_field_value_type: string
+    is_required: true
+
+  - source_collection: horizontal_label
+    catalog_field_value_type: string
+    is_required: true
+
+  - source_collection: initialization_index
+    catalog_field_value_type: string
+    is_required: true
+
+  - source_collection: institution
+    source_collection_key: description
+    catalog_field_name: institution
+    catalog_field_value_type: string
+    is_required: false
+
+  - source_collection: institution
+    catalog_field_name: institution_id
+    catalog_field_value_type: string
+    is_required: true
+
+  - source_collection: null
+    catalog_field_name: license
+    catalog_field_value_type: string
+    is_required: false
+
+  - source_collection: license
+    catalog_field_name: license_id
+    catalog_field_value_type: string
+    is_required: true
+
+  - source_collection: mip_era
+    catalog_field_value_type: string
+    is_required: true
+
+  - source_collection: nominal_resolution
+    catalog_field_value_type: string
+    is_required: true
+
+  - source_collection: activity
+    catalog_field_name: parent_activity_id
+    catalog_field_value_type: string
+    is_required: false
+
+  - source_collection: experiment
+    catalog_field_name: parent_experiment_id
+    catalog_field_value_type: string
+    is_required: false
+
+  - source_collection: mip_era
+    catalog_field_name: parent_mip_era
+    catalog_field_value_type: string
+    is_required: false
+
+  - source_collection: source
+    catalog_field_name: parent_source_id
+    catalog_field_value_type: string
+    is_required: false
+
+  - source_collection: time_unit
+    catalog_field_name: parent_time_units
+    catalog_field_value_type: string
+    is_required: false
+
+  - source_collection: variant_label
+    catalog_field_name: parent_variant_label
+    catalog_field_value_type: string
+    is_required: false
+
+  - source_collection: physics_index
+    catalog_field_value_type: string
+    is_required: true
+
+  - source_collection: tracking_id
+    catalog_field_name: pid
+    catalog_field_value_type: string
+    is_required: true
+
+  - source_collection: product
+    catalog_field_value_type: string
+    is_required: true
+
+  - source_collection: realization_index
+    catalog_field_value_type: string
+    is_required: true
+
+  - source_collection: realm
+    catalog_field_value_type: string_array
+    is_required: true
+
+  - source_collection: region
+    catalog_field_value_type: string
+    is_required: true
+
+  - source_collection: null
+    catalog_field_name: source
+    catalog_field_value_type: string
+    is_required: false
+
+  - source_collection: source
+    catalog_field_name: source_id
+    catalog_field_value_type: string
+    is_required: true
+
+  - source_collection: temporal_label
+    catalog_field_value_type: string
+    is_required: true
+
+  - source_collection: branded_variable
+    catalog_field_name: variable_branded_name
+    catalog_field_value_type: string
+    is_required: true
+
+  - source_collection: branded_variable
+    source_collection_key: branding_suffix_name
+    catalog_field_name: variable_branding_suffix
+    catalog_field_value_type: string
+    is_required: true
+
+  - source_collection: branded_variable
+    source_collection_key: cf_standard_name
+    catalog_field_name: variable_cf_standard_name
+    catalog_field_value_type: string
+    is_required: true
+
+  - source_collection: branded_variable
+    source_collection_key: variable_root_name
+    catalog_field_name: variable_id
+    catalog_field_value_type: string
+    is_required: true
+
+  - source_collection: null
+    catalog_field_name: variable_long_name
+    catalog_field_value_type: string
+    is_required: true
+
+  - source_collection: branded_variable
+    source_collection_key: cf_units
+    catalog_field_name: variable_units
+    catalog_field_value_type: string
+    is_required: true
+
+  - source_collection: variant_label
+    catalog_field_value_type: string
+    is_required: true
+
+  - source_collection: vertical_label
+    catalog_field_value_type: string
+    is_required: true
+
+file_properties:
+  - source_collection: tracking_id
+    catalog_field_value_type: string
+    is_required: false
+
+link_properties:
+  - rel: cite-as
+    link_type: "application/json"
+    title: "Citation URL"
+    is_required: false
+
+  - rel: describedby
+    title: "Essential Model Documentation URL"
+    is_required: false
+
+  - rel: related
+    link_pattern: "^https?://errata.esgf.io/.*$"
+    link_type: "text/html"
+    title: "Errata issue"
+    is_required: false

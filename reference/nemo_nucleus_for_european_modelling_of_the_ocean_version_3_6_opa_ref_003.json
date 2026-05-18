@@ -1,0 +1,5 @@
+{
+  "@context": "000_context.jsonld",
+  "id": "nemo_nucleus_for_european_modelling_of_the_ocean_version_3_6_opa_ref_003",
+  "type": "reference"
+}

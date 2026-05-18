@@ -1,0 +1,10 @@
+{
+    "@context": "000_context.jsonld",
+    "id": "piclim-histaer",
+    "type": "experiment",
+    "description": "Simulation of the historical and future period with prescribed sea-surface temperatures and sea-ice concentrations (the slightly confusing name is a legacy thing). Aerosol emissions follow the `historical` experiment then the `scen7-m` or `esm-scen7-m` experiment (whichever is relevant to your model setup) while all other forcings follow `piControl` to allow for a (approximate) diagnosis of transient historical aerosol effective radiative forcing (ERF) (can be compared with `piClim-aer` which provides a more precise quantification of present-day aerosol ERF).",
+    "start_timestamp": "1850-01-01",
+    "end_timestamp": "2100-12-31",
+    "min_number_yrs_per_sim": 251.0,
+    "tier": 1
+}

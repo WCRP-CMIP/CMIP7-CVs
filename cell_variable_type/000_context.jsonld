@@ -1,0 +1,8 @@
+{
+  "@context": {
+    "id": "@id",
+    "type": "@type",
+    "@base": "https://esgvoc.ipsl.fr/resource/universe/cell_variable_type/",
+    "cell_variable_type": "https://esgvoc.ipsl.fr/resource/universe/cell_variable_type"
+  }
+}

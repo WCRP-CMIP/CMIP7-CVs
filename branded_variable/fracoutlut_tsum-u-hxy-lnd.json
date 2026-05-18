@@ -1,0 +1,5 @@
+{
+    "@context": "000_context.jsonld",
+    "id": "fracoutlut_tsum-u-hxy-lnd",
+    "type": "known_branded_variable"
+}

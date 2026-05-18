@@ -1,0 +1,5 @@
+{
+    "@context": "000_context.jsonld",
+    "id": "limfecalc_tavg-u-hxy-sea",
+    "type": "known_branded_variable"
+}

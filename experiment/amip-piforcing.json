@@ -1,0 +1,10 @@
+{
+    "@context": "000_context.jsonld",
+    "id": "amip-piforcing",
+    "type": "experiment",
+    "start_timestamp": "1870-01-01",
+    "end_timestamp": "2021-12-31",
+    "min_number_yrs_per_sim": 152.0,
+    "parent_mip_era": "cmip7",
+    "tier": 1
+}

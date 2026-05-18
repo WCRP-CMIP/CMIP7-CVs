@@ -1,0 +1,8 @@
+{
+  "@context": {
+    "id": "@id",
+    "type": "@type",
+    "@base": "https://esgvoc.ipsl.fr/resource/universe/component_type/",
+    "component_type": "https://esgvoc.ipsl.fr/resource/universe/component_type"
+  }
+}

@@ -1,0 +1,17 @@
+{
+    "@context": "000_context.jsonld",
+    "id": "c4mip",
+    "type": "activity",
+    "experiments": [
+        "1pctco2-bgc",
+        "1pctco2-rad",
+        "esm-flat10",
+        "esm-flat10-cdr",
+        "esm-flat10-zec"
+    ],
+    "urls": [
+        "https://doi.org/10.5194/egusphere-2024-3356",
+        "https://doi.org/10.5194/gmd-17-8141-2024",
+        "https://doi.org/10.5194/gmd-9-2853-2016"
+    ]
+}

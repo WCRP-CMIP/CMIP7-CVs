@@ -1,0 +1,8 @@
+{
+    "@context": {
+        "id": "@id",
+        "type": "@type",
+        "@base": "https://esgvoc.ipsl.fr/resource/universe/vertical_label/",
+        "vertical_label": "https://esgvoc.ipsl.fr/resource/universe/vertical_label"
+    }
+}

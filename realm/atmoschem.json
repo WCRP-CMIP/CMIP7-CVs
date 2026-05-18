@@ -1,0 +1,6 @@
+{
+    "@context": "000_context.jsonld",
+    "id": "atmoschem",
+    "type": "realm",
+    "description": "Dataset of primary interest in studying the chemical composition and processes in the atmosphere."
+}

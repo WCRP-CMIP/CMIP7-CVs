@@ -1,0 +1,5 @@
+{
+  "@context": "000_context.jsonld",
+  "id": "h100",
+  "type": "horizontal_computational_grid"
+}

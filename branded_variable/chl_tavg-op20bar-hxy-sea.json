@@ -1,0 +1,5 @@
+{
+    "@context": "000_context.jsonld",
+    "id": "chl_tavg-op20bar-hxy-sea",
+    "type": "known_branded_variable"
+}

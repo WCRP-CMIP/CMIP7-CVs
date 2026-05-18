@@ -1,0 +1,5 @@
+{
+  "@context": "000_context.jsonld",
+  "id": "atmospheric_chemistry",
+  "type": "component_type"
+}

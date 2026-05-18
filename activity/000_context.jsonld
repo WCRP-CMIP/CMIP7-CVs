@@ -1,0 +1,11 @@
+{
+    "esgvoc_resolve_modes": {
+        "experiments": "reference"
+    },
+    "@context": {
+        "id": "@id",
+        "type": "@type",
+        "@base": "https://esgvoc.ipsl.fr/resource/universe/activity/",
+        "activity": "https://esgvoc.ipsl.fr/resource/universe/activity"
+    }
+}

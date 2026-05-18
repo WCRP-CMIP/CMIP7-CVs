@@ -1,0 +1,6 @@
+{
+    "@context": "000_context.jsonld",
+    "id": "aerosol",
+    "type": "realm",
+    "description": "Dataset of primary interest in studying atmospheric aerosols."
+}

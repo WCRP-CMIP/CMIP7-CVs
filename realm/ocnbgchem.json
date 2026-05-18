@@ -1,0 +1,6 @@
+{
+    "@context": "000_context.jsonld",
+    "id": "ocnbgchem",
+    "type": "realm",
+    "description": "Dataset of primary interest in studying the biogeochemical composition and processes in the ocean."
+}

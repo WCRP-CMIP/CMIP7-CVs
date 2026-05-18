@@ -1,0 +1,5 @@
+{
+    "@context": "000_context.jsonld",
+    "id": "i-int-or-year-month",
+    "type": "initialization_index"
+}

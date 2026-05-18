@@ -1,0 +1,8 @@
+{
+  "@context": {
+    "id": "@id",
+    "type": "@type",
+    "@base": "https://esgvoc.ipsl.fr/resource/universe/vertical_coordinate/",
+    "vertical_coordinate": "https://esgvoc.ipsl.fr/resource/universe/vertical_coordinate"
+  }
+}

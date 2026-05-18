@@ -1,0 +1,8 @@
+{
+    "@context": {
+        "id": "@id",
+        "type": "@type",
+        "@base": "https://esgvoc.ipsl.fr/resource/universe/temporal_label/",
+        "temporal_label": "https://esgvoc.ipsl.fr/resource/universe/temporal_label"
+    }
+}

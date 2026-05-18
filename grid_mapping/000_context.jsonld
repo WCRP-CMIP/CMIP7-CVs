@@ -1,0 +1,8 @@
+{
+  "@context": {
+    "id": "@id",
+    "type": "@type",
+    "@base": "https://esgvoc.ipsl.fr/resource/universe/grid_mapping/",
+    "grid_mapping": "https://esgvoc.ipsl.fr/resource/universe/grid_mapping"
+  }
+}

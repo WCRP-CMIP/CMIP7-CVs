@@ -1,0 +1,5 @@
+{
+  "@context": "000_context.jsonld",
+  "id": "depth",
+  "type": "vertical_coordinate"
+}

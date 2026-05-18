@@ -1,0 +1,6 @@
+{
+    "@context": "000_context.jsonld",
+    "id": "seaice",
+    "type": "realm",
+    "description": "Dataset of primary interest in studying sea ice."
+}

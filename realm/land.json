@@ -1,0 +1,6 @@
+{
+    "@context": "000_context.jsonld",
+    "id": "land",
+    "type": "realm",
+    "description": "Dataset of primary interest in studying the land surface and/or sub-surface part of the earth system."
+}

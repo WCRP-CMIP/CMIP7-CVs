@@ -1,0 +1,5 @@
+{
+  "@context": "000_context.jsonld",
+  "id": "ocean_sigma_z_coordinate",
+  "type": "vertical_coordinate"
+}

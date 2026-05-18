@@ -1,0 +1,8 @@
+{
+    "@context": {
+        "id": "@id",
+        "type": "@type",
+        "@base": "https://esgvoc.ipsl.fr/resource/universe/variant_label/",
+        "variant_label": "https://esgvoc.ipsl.fr/resource/universe/variant_label"
+    }
+}

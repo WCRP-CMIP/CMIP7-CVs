@@ -1,0 +1,8 @@
+{
+    "@context": {
+        "id": "@id",
+        "type": "@type",
+        "@base": "https://esgvoc.ipsl.fr/resource/universe/directory_date/",
+        "directory_date": "https://esgvoc.ipsl.fr/resource/universe/directory_date"
+    }
+}
