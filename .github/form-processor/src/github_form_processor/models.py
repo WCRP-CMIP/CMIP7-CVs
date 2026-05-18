@@ -34,16 +34,6 @@ class RegistrationBase(BaseModel):
         """Return the lower-case identifier used in CV filenames."""
         return self.name.lower()
 
-    @field_validator("name")
-    @classmethod
-    def _validate_name(cls, value: str) -> str:
-        value = value.strip()
-        if not NAME_PATTERN.fullmatch(value):
-            raise ValueError("must contain only letters, numbers and hyphens")
-        if len(value) >= 40:
-            raise ValueError("must be fewer than 40 characters")
-        return value
-
     @field_validator("description")
     @classmethod
     def _validate_description(cls, value: str) -> str:
@@ -96,6 +86,18 @@ class ExperimentRegistration(RegistrationBase):
                 "branch_information": _optional_field(fields, "Branch information"),
             }
         )
+
+    @field_validator("name")
+    @classmethod
+    def _validate_name(cls, value: str) -> str:
+        value = value.strip()
+        if not NAME_PATTERN.fullmatch(value):
+            raise ValueError("must contain only letters, numbers and hyphens")
+        if len(value) >= 20:
+            raise ValueError(
+                "must be fewer than 20 characters, see https://zenodo.org/records/14929769"
+            )
+        return value
 
     @field_validator(
         "activity",
@@ -177,12 +179,8 @@ class ExperimentRegistration(RegistrationBase):
             "type": "experiment",
             "description": self.description,
             "drs_name": self.name,
-            "start_timestamp": self.start_date.isoformat()
-            if self.start_date
-            else None,
-            "end_timestamp": self.end_date.isoformat()
-            if self.end_date
-            else None,
+            "start_timestamp": self.start_date.isoformat() if self.start_date else None,
+            "end_timestamp": self.end_date.isoformat() if self.end_date else None,
             "activity": self.activity,
             "additional_allowed_model_components": (
                 self.additional_allowed_model_components
@@ -216,6 +214,16 @@ class ActivityRegistration(RegistrationBase):
                 "urls": _optional_field(fields, "Reference URLs"),
             }
         )
+
+    @field_validator("name")
+    @classmethod
+    def _validate_name(cls, value: str) -> str:
+        value = value.strip()
+        if not NAME_PATTERN.fullmatch(value):
+            raise ValueError("must contain only letters, numbers and hyphens")
+        if len(value) >= 12:
+            raise ValueError("must be fewer than 12 characters")
+        return value
 
     @field_validator("experiments", mode="before")
     @classmethod

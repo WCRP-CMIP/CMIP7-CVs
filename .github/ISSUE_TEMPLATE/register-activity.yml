@@ -8,7 +8,7 @@ body:
     id: activity-name
     attributes:
       label: Activity name
-      description: Use only letters, numbers and hyphens. The name must be fewer than 40 characters. For example, AerChemMIP.
+      description: Use only letters, numbers and hyphens. The name must be fewer than 12 characters. For example, AerChemMIP.
     validations:
       required: true
   - type: textarea
