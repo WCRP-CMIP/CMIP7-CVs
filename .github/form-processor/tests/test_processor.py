@@ -315,6 +315,60 @@ def test_prepare_experiment_allows_missing_required_model_components():
     assert json.loads(result.prepared.content)["required_model_components"] == []
 
 
+@pytest.mark.parametrize(
+    ("kind", "name_label", "name_value", "expected_error"),
+    [
+        (
+            "experiment",
+            "Experiment name",
+            "ABCDEFGHIJKLMNOPQRSTU",
+            "name: Value error, must be fewer than 20 characters, see "
+            "https://zenodo.org/records/14929769",
+        ),
+        (
+            "activity",
+            "Activity name",
+            "ABCDEFGHIJKLM",
+            "name: Value error, must be fewer than 12 characters",
+        ),
+    ],
+)
+def test_prepare_registration_rejects_overlong_names(
+    kind, name_label, name_value, expected_error
+):
+    issue = {
+        "title": f"[{kind.title()} registration]: Test",
+        "labels": [{"name": f"registration: {kind}"}],
+        "body": _body(
+            {
+                name_label: name_value,
+                f"{kind.title()} description": f"A short {kind} description.",
+                **(
+                    {
+                        "Activity": "cmip",
+                        "Tier": "1",
+                        "Minimum ensemble size": "1",
+                        "Minimum number of years per simulation": "1.0",
+                    }
+                    if kind == "experiment"
+                    else {"Experiments": "known-exp"}
+                ),
+            }
+        ),
+    }
+
+    result = prepare_registration(
+        issue=issue,
+        experiment_output_dir="experiment",
+        activity_output_dir="activity",
+        external_checks=False,
+    )
+
+    assert result.prepared is None
+    assert result.notes == []
+    assert result.validation_errors == [expected_error]
+
+
 def test_prepare_activity_blocks_inaccessible_reference_url():
     issue = {
         "title": "[Activity registration]: Test",
