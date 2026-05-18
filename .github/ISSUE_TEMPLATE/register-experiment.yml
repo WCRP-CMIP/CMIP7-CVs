@@ -8,7 +8,7 @@ body:
     id: experiment-name
     attributes:
       label: Experiment name
-      description: Use only letters, numbers and hyphens. The name must be fewer than 40 characters. For example, `piControl-spinup`.
+      description: Use only letters, numbers and hyphens. The name must be fewer than 20 characters (see https://zenodo.org/records/14929769). For example, `piControl-spinup`.
     validations:
       required: true
   - type: textarea
