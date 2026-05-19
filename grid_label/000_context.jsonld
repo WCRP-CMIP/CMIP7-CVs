@@ -3,6 +3,6 @@
         "id": "@id",
         "type": "@type",
         "@base": "https://esgvoc.ipsl.fr/resource/universe/horizontal_grid_cell/",
-        "horizontal_cell_grid": "https://esgvoc.ipsl.fr/resource/universe/horizontal_grid_cell"
+        "grid_label": "https://esgvoc.ipsl.fr/resource/universe/grid"
     }
 }
