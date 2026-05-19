@@ -1,0 +1,11 @@
+{
+    "@context": "000_context.jsonld",
+    "id": "lmip",
+    "type": "activity",
+    "experiments": [
+        "land-hist"
+    ],
+    "urls": [
+        "https://doi.org/10.5194/gmd-9-2809-2016"
+    ]
+}
