@@ -1,8 +1,0 @@
-{
-  "@context": {
-    "id": "@id",
-    "type": "@type",
-    "@base": "https://esgvoc.ipsl.fr/resource/universe/grid_arrangement/",
-    "grid_arrangement": "https://esgvoc.ipsl.fr/resource/universe/grid_arrangement"
-  }
-}
