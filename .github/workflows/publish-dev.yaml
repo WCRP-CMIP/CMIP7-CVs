@@ -1,0 +1,50 @@
+name: Test dev-latest snapshot
+
+on:
+  push:
+    branches: [esgvoc_dev]
+  pull_request:
+    branches: [esgvoc_dev]
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      # -----------------------------------------------------------------
+      # 1. Setup
+      # -----------------------------------------------------------------
+      - name: Set up Python
+        uses: actions/setup-python@v5.4.0
+        with:
+          python-version: "3.12"
+
+      - name: Install uv
+        run: pip install uv
+
+      - name: Install esgvoc
+        run: uv pip install --system "esgvoc>=4.0.0"
+
+      # -----------------------------------------------------------------
+      # 2. Test with esgvoc test run
+      # -----------------------------------------------------------------
+      - name: Test cmip7 build
+        run: |
+          esgvoc test run cmip7 \
+            --branch esgvoc_dev \
+            --universe-branch esgvoc_dev
+
+      # -----------------------------------------------------------------
+      # 3. Print publish command for admins
+      # -----------------------------------------------------------------
+      - name: Print publish command
+        run: |
+          echo "============================================"
+          echo "  Test passed!"
+          echo "  To publish, run manually:"
+          echo ""
+          echo "  gh workflow run publish.yml \\"
+          echo "    -R WCRP-CMIP/esgvoc_registry \\"
+          echo "    -f project_id=cmip7 \\"
+          echo "    -f bump_type=dev-latest \\"
+          echo "    -f project_repo=WCRP-CMIP/CMIP7_CVs"
+          echo "============================================"
