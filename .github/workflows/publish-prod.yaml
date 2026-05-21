@@ -254,6 +254,9 @@ jobs:
           PYEOF
           )
 
+          # Remove blank lines from changelog
+          CHANGELOG=$(echo "${CHANGELOG}" | sed '/^$/d')
+
           {
             echo "changelog<<CHANGELOG_EOF"
             echo "${CHANGELOG}"

@@ -246,6 +246,8 @@ jobs:
           PYEOF
           )
 
+          CHANGELOG=$(echo "${CHANGELOG}" | sed '/^$/d')
+
           {
             echo "changelog<<CHANGELOG_EOF"
             echo "${CHANGELOG}"
