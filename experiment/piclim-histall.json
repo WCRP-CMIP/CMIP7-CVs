@@ -2,7 +2,7 @@
     "@context": "000_context.jsonld",
     "id": "piclim-histall",
     "type": "experiment",
-    "description": "In combination with `piClim-control`, quantifies transient effective radiative forcing (ERF) over the historical period and the `scen7-m` or `esm-scen7-m` experiment (whichever is relevant to your model setup). This can be compared with `piClim-aer` which provides a more precise quantification of present-day ERF.",
+    "description": "In combination with `piClim-control`, quantifies transient effective radiative forcing (ERF) over the historical period and the `scen7-m` or `esm-scen7-m` experiment (whichever is relevant to your model setup). This complements the `piClim-*` experiments which provide a more precise quantification of present-day ERF for various forcing components.",
     "start_timestamp": "1850-01-01",
     "end_timestamp": "2100-12-31",
     "min_number_yrs_per_sim": 251.0,
