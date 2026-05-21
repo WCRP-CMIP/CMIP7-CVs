@@ -52,12 +52,12 @@
 
 - source_collection: experiment
   attr_field_name: experiment
+  source_collection_key: description
   attr_field_value_type: string
   is_required: false
 
 - source_collection: experiment
   attr_field_name: experiment_id
-  source_collection_key: description
   attr_field_value_type: string
   is_required: true
 
