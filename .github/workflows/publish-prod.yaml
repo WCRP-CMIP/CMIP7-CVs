@@ -57,9 +57,9 @@ jobs:
           echo "Comparing ${PREV_SHA}..HEAD"
 
           CHANGED=$(git diff --name-only --diff-filter=ACDMR "${PREV_SHA}..HEAD" -- \
-            ':!_src' ':!_tests' ':!_archive' ':!scripts' ':!*.md' ':!*.toml' \
-            ':!*.lock' ':!*.py' ':!.github' ':!LICENSE*' ':!.gitignore' \
-            ':!.pre-commit-config.yaml' ':!esgvoc_manifest.yaml' || true)
+            ':(exclude)_src' ':(exclude)_tests' ':(exclude)_archive' ':(exclude)scripts' ':(exclude)*.md' ':(exclude)*.toml' \
+            ':(exclude)*.lock' ':(exclude)*.py' ':(exclude).github' ':(exclude)LICENSE*' ':(exclude).gitignore' \
+            ':(exclude).pre-commit-config.yaml' ':(exclude)esgvoc_manifest.yaml' || true)
 
           if [ -z "${CHANGED}" ]; then
             echo "No CV files changed"
@@ -189,9 +189,9 @@ jobs:
 
           diff = subprocess.check_output(
               ["git", "diff", "--name-status", "--diff-filter=ACDMR", f"{prev}..HEAD",
-               "--", ":!_src", ":!_tests", ":!_archive", ":!scripts", ":!*.md",
-               ":!*.toml", ":!*.lock", ":!*.py", ":!.github", ":!LICENSE*",
-               ":!.gitignore", ":!.pre-commit-config.yaml", ":!esgvoc_manifest.yaml"],
+               "--", ":(exclude)_src", ":(exclude)_tests", ":(exclude)_archive", ":(exclude)scripts", ":(exclude)*.md",
+               ":(exclude)*.toml", ":(exclude)*.lock", ":(exclude)*.py", ":(exclude).github", ":(exclude)LICENSE*",
+               ":(exclude).gitignore", ":(exclude).pre-commit-config.yaml", ":(exclude)esgvoc_manifest.yaml"],
               text=True
           ).strip()
 
