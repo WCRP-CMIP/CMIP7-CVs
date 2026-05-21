@@ -1,19 +1,51 @@
-schema_version: "1"
+schema_version: '1'
 project:
-  id: "cmip7"
-  name: "CMIP7 Controlled Vocabulary"
-cv_version: "1.1.0"
-universe_version: "1.0.2"
+  id: cmip7
+  name: CMIP7 Controlled Vocabulary
+cv_version: 1.2.0
+universe_version: 1.0.2
 esgvoc:
-  min_version: "4.0.0"
-release_notes: |
-  - fix(catalog_spec): replace organisation with institution
-  - fix(attr_spec): replace organisation with institution in spec
-  - Fix DAMIP definitions
-  - Write hist-pi* AerChemMIP
-  - Clarify ensemble size
-  - Set min ensemble size for other AerChemMIP experiments
-  - fix(type): change double to number
-  - Adjust min ensemble size (CMIP7-CVs#382)
-  - Add fixes and comments
-  - Revert changes to specs
+  min_version: 4.0.0
+release_notes: '- attr_specs.yaml: updated
+
+  - grid_arrangement: updated collection model
+
+  - grid_label: updated collection model
+
+  - grid_mapping: updated collection model
+
+  - grid_temporal_refinement: updated collection model
+
+  - grid_type: updated collection model
+
+  - horizontal_computational_grid: updated collection model
+
+  - horizontal_grid_cell: updated collection model
+
+  - horizontal_subgrid: updated collection model
+
+  - model_componentEMD: updated collection model
+
+  - activity: 1 modified
+
+  - experiment: 2 modified
+
+  - grid_arrangement: 2 removed
+
+  - grid_label: 31 added, 6 modified
+
+  - grid_mapping: 1 removed
+
+  - grid_temporal_refinement: 1 removed
+
+  - grid_type: 3 removed
+
+  - horizontal_computational_grid: 2 removed
+
+  - horizontal_grid_cell: 5 removed
+
+  - horizontal_subgrid: 5 removed
+
+  - model_componentEMD: 7 removed
+
+  '
