@@ -53,7 +53,7 @@ jobs:
         id: bump
         run: |
           set -e
-          PREV_SHA=$(git log --first-parent --format=%H -n 2 HEAD | tail -1)
+          PREV_SHA=$(git log -1 --format=%H -- esgvoc_manifest.yaml)
 
           echo "Comparing ${PREV_SHA}..HEAD"
 
@@ -178,15 +178,15 @@ jobs:
         id: changelog
         run: |
           set -e
-          PREV_SHA=$(git log --first-parent --format=%H -n 2 HEAD | tail -1)
+          PREV_SHA=$(git log -1 --format=%H -- esgvoc_manifest.yaml)
 
           CHANGELOG=$(python3 - <<'PYEOF'
           import subprocess, collections
 
           prev = subprocess.check_output(
-              ["git", "log", "--first-parent", "--format=%H", "-n", "2", "HEAD"],
+              ["git", "log", "-1", "--format=%H", "--", "esgvoc_manifest.yaml"],
               text=True
-          ).strip().split("\n")[-1]
+          ).strip()
 
           diff = subprocess.check_output(
               ["git", "diff", "--name-status", "--diff-filter=ACDMR", f"{prev}..HEAD",
