@@ -6,14 +6,18 @@
         "scenariomip"
     ],
     "alias": [],
+    "end_timestamp": "2100-12-31",
+    "min_number_yrs_per_sim": 79.0,
     "minimum_number_of_years": 75,
     "model_realms_additional_allowed": [],
     "model_realms_required": [],
     "parent_experiment": [
         "none"
     ],
+    "parent_mip_era": "cmip7",
     "references": [],
     "start_date": "none",
+    "start_timestamp": "2022-01-01",
     "tier": 1,
     "@context": "_context",
     "@type": [
@@ -21,9 +25,5 @@
         "esgvoc:Experiment",
         "cmip7"
     ],
-    "@id": "esm-scen7-l",
-    "parent_mip_era": "cmip7",
-    "start_timestamp": "2022-01-01",
-    "end_timestamp": "2100-12-31",
-    "min_number_yrs_per_sim": 79.0
+    "@id": "esm-scen7-l"
 }

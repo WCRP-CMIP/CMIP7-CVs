@@ -20,6 +20,7 @@
     "parent_experiment": [
         "none"
     ],
+    "parent_mip_era": "cmip7",
     "references": [],
     "start": -999,
     "start_date": "none",
@@ -30,6 +31,5 @@
         "esgvoc:Experiment",
         "cmip7"
     ],
-    "@id": "picontrol",
-    "parent_mip_era": "cmip7"
+    "@id": "picontrol"
 }

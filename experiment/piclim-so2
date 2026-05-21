@@ -6,6 +6,7 @@
         "aerchemmip"
     ],
     "alias": [],
+    "branch_information": "Same as `piClim-control`",
     "minimum_number_of_years": 30,
     "model_realms_additional_allowed": [
         "chem"
@@ -14,9 +15,11 @@
         "aer",
         "agcm"
     ],
+    "parent_activity": "cmip",
     "parent_experiment": [
         "picontrol"
     ],
+    "parent_mip_era": "cmip7",
     "references": [],
     "start_date": "none",
     "tier": 1,
@@ -26,8 +29,5 @@
         "esgvoc:Experiment",
         "cmip7"
     ],
-    "@id": "piclim-so2",
-    "parent_mip_era": "cmip7",
-    "parent_activity": "cmip",
-    "branch_information": "Same as `piClim-control`"
+    "@id": "piclim-so2"
 }

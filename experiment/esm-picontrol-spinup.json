@@ -13,10 +13,10 @@
     "parent_experiment": [
         "none"
     ],
+    "parent_mip_era": null,
     "references": [],
     "start_date": "none",
     "tier": 3,
-    "parent_mip_era": null,
     "@context": "_context",
     "@type": [
         "wcrp:experiment",

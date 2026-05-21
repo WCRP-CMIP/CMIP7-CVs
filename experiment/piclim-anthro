@@ -6,14 +6,17 @@
         "cmip"
     ],
     "alias": [],
+    "branch_information": "Same as `piClim-control`",
     "end": -999,
     "min_number_yrs_per_sim": 30,
     "minimum_number_of_years": 30,
     "model_realms_additional_allowed": [],
     "model_realms_required": [],
+    "parent_activity": "cmip",
     "parent_experiment": [
         "picontrol"
     ],
+    "parent_mip_era": "cmip7",
     "references": [],
     "start": -999,
     "start_date": "none",
@@ -24,8 +27,5 @@
         "esgvoc:Experiment",
         "cmip7"
     ],
-    "@id": "piclim-anthro",
-    "parent_mip_era": "cmip7",
-    "parent_activity": "cmip",
-    "branch_information": "Same as `piClim-control`"
+    "@id": "piclim-anthro"
 }
