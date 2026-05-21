@@ -74,6 +74,7 @@ jobs:
           cat esgvoc_manifest.yaml
 
       - name: Create manifest PR
+        id: manifest_pr
         if: steps.skip_check.outputs.skip != 'true' && steps.changes.outputs.bump_type != 'none'
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
@@ -116,13 +117,30 @@ jobs:
           EOF
           )
 
-          gh pr create \
+          PR_URL=$(gh pr create \
             --title "chore: update manifest to ${NEXT_VERSION}" \
             --body "${BODY}" \
             --base main \
-            --head "${BRANCH}"
+            --head "${BRANCH}")
 
-          gh pr merge "${BRANCH}" --auto --squash
+          echo "pr_url=${PR_URL}" >> "$GITHUB_OUTPUT"
+          echo "Manifest PR created: ${PR_URL}"
+
+      # Post manifest PR link on the PR that triggered this workflow
+      - name: Notify source PR
+        if: steps.manifest_pr.outputs.pr_url
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          REPO: ${{ github.repository }}
+          COMMIT_SHA: ${{ github.sha }}
+          PR_URL: ${{ steps.manifest_pr.outputs.pr_url }}
+        run: |
+          # Find the PR that was just merged (by merge commit SHA)
+          SOURCE_PR=$(gh api "repos/${REPO}/commits/${COMMIT_SHA}/pulls" --jq '.[0].number // empty')
+
+          if [ -n "${SOURCE_PR}" ]; then
+            gh pr comment "${SOURCE_PR}" --body "Manifest PR created: ${PR_URL}"
+          fi
 
       - name: No CV changes
         if: steps.skip_check.outputs.skip != 'true' && steps.changes.outputs.bump_type == 'none'
