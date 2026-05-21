@@ -290,48 +290,65 @@ jobs:
           cat esgvoc_manifest.yaml
 
       # -----------------------------------------------------------------
-      # 9. Commit manifest [skip ci]
+      # 9. Create manifest PR with auto-merge
       # -----------------------------------------------------------------
-      - name: Commit manifest
+      - name: Create manifest PR
         if: steps.bump.outputs.bump_type != 'none'
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
+          NEXT="${{ steps.next.outputs.next_version }}"
+          BUMP="${{ steps.bump.outputs.bump_type }}"
+          BRANCH="chore/manifest-${NEXT}"
+
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
+
+          git checkout -b "${BRANCH}"
           git add esgvoc_manifest.yaml
           git diff --cached --quiet && echo "No manifest changes" && exit 0
-          git commit -m "chore: update manifest to ${{ steps.next.outputs.next_version }} [skip ci]"
-          git push origin main
+          git commit -m "chore: update manifest to ${NEXT}"
+          git push origin "${BRANCH}"
 
-      # -----------------------------------------------------------------
-      # 10. Print publish command
-      # -----------------------------------------------------------------
-      - name: Print publish command
-        if: steps.bump.outputs.bump_type != 'none'
-        run: |
-          echo "============================================"
-          echo "  Build & validation passed!"
-          echo "  Manifest updated: ${{ steps.registry.outputs.current_version }} -> ${{ steps.next.outputs.next_version }}"
-          echo ""
-          echo "  Changelog:"
-          echo "${{ steps.changelog.outputs.changelog }}"
-          echo ""
-          echo "  To publish, run manually:"
-          echo ""
-          echo "  gh workflow run publish.yml \\"
-          echo "    -R WCRP-CMIP/esgvoc_registry \\"
-          echo "    -f project_id=cmip7 \\"
-          echo "    -f bump_type=${{ steps.bump.outputs.bump_type }} \\"
-          echo "    -f project_repo=WCRP-CMIP/CMIP7_CVs"
-          echo ""
-          echo "  If you need to override the bump type"
-          echo "  (e.g. spec changes warrant major instead of minor):"
-          echo ""
-          echo "  gh workflow run publish.yml \\"
-          echo "    -R WCRP-CMIP/esgvoc_registry \\"
-          echo "    -f project_id=cmip7 \\"
-          echo "    -f bump_type=major \\"
-          echo "    -f project_repo=WCRP-CMIP/CMIP7_CVs"
-          echo "============================================"
+          PR_BODY=$(cat <<EOF
+          ## Manifest update
+
+          **Version:** ${{ steps.registry.outputs.current_version }} → ${NEXT} (${BUMP})
+
+          ### Changelog
+          ${{ steps.changelog.outputs.changelog }}
+
+          ---
+
+          Once merged, publish the release:
+
+          \`\`\`bash
+          gh workflow run publish.yml \\
+            -R WCRP-CMIP/esgvoc_registry \\
+            -f project_id=cmip7 \\
+            -f bump_type=${BUMP} \\
+            -f project_repo=WCRP-CMIP/CMIP7_CVs
+          \`\`\`
+
+          To override the bump type (e.g. spec changes warrant major):
+
+          \`\`\`bash
+          gh workflow run publish.yml \\
+            -R WCRP-CMIP/esgvoc_registry \\
+            -f project_id=cmip7 \\
+            -f bump_type=major \\
+            -f project_repo=WCRP-CMIP/CMIP7_CVs
+          \`\`\`
+          EOF
+          )
+
+          gh pr create \
+            --title "chore: update manifest to ${NEXT}" \
+            --body "${PR_BODY}" \
+            --base main \
+            --head "${BRANCH}"
+
+          gh pr merge "${BRANCH}" --auto --squash
 
       - name: No CV changes
         if: steps.bump.outputs.bump_type == 'none'
