@@ -1,5 +1,0 @@
-{
-  "@context": "000_context.jsonld",
-  "id": "surfex_v8_modeling_platform",
-  "type": "model_componentEMD"
-}

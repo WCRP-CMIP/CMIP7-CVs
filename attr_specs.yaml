@@ -50,8 +50,9 @@
   attr_field_value_type: string
   is_required: true
 
-- source_collection: null
+- source_collection: experiment
   attr_field_name: experiment
+  source_collection_key: description
   attr_field_value_type: string
   is_required: false
 

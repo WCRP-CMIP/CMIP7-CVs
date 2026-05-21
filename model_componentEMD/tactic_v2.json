@@ -1,5 +1,0 @@
-{
-  "@context": "000_context.jsonld",
-  "id": "tactic_v2",
-  "type": "model_componentEMD"
-}
