@@ -1,0 +1,338 @@
+name: Prepare release (merge to main)
+
+on:
+  push:
+    branches: [main]
+
+permissions:
+  contents: write
+
+jobs:
+  prepare-release:
+    # Skip if this is the manifest auto-commit
+    if: "!contains(github.event.head_commit.message, '[skip ci]')"
+    runs-on: ubuntu-latest
+    steps:
+      # -----------------------------------------------------------------
+      # 1. Checkout with full history
+      # -----------------------------------------------------------------
+      - name: Checkout
+        uses: actions/checkout@v4.2.2
+        with:
+          fetch-depth: 0
+          token: ${{ secrets.GITHUB_TOKEN }}
+
+      # -----------------------------------------------------------------
+      # 2. Setup
+      # -----------------------------------------------------------------
+      - name: Set up Python
+        uses: actions/setup-python@v5.4.0
+        with:
+          python-version: "3.12"
+
+      - name: Install uv
+        run: pip install uv
+
+      - name: Install esgvoc
+        run: uv pip install --system "esgvoc>=4.0.0" pyyaml
+
+      # -----------------------------------------------------------------
+      # 3. Test build
+      # -----------------------------------------------------------------
+      - name: Test cmip7 build
+        run: |
+          esgvoc test run cmip7 \
+            --branch ${{ github.ref_name }} \
+            --universe-branch main
+
+      # -----------------------------------------------------------------
+      # 4. Detect bump type from diff
+      # -----------------------------------------------------------------
+      - name: Detect bump type
+        id: bump
+        run: |
+          set -e
+          PREV_SHA=$(git log --first-parent --format=%H -n 2 HEAD | tail -1)
+
+          echo "Comparing ${PREV_SHA}..HEAD"
+
+          CHANGED=$(git diff --name-only --diff-filter=ACDMR "${PREV_SHA}..HEAD" -- \
+            ':!_src' ':!_tests' ':!_archive' ':!scripts' ':!*.md' ':!*.toml' \
+            ':!*.lock' ':!*.py' ':!.github' ':!LICENSE*' ':!.gitignore' \
+            ':!.pre-commit-config.yaml' ':!esgvoc_manifest.yaml' || true)
+
+          if [ -z "${CHANGED}" ]; then
+            echo "No CV files changed"
+            echo "bump_type=none" >> "$GITHUB_OUTPUT"
+            exit 0
+          fi
+
+          echo "Changed files:"
+          echo "${CHANGED}"
+
+          BUMP="patch"
+
+          # Check for new collections (major)
+          NEW_CONTEXTS=$(git diff --name-only --diff-filter=A "${PREV_SHA}..HEAD" -- '*/000_context.jsonld' || true)
+          if [ -n "${NEW_CONTEXTS}" ]; then
+            BUMP="major"
+          fi
+
+          # Check for spec changes (minor minimum)
+          if [ "${BUMP}" != "major" ]; then
+            SPEC_CHANGES=$(git diff --name-only --diff-filter=ACDMR "${PREV_SHA}..HEAD" -- '*_specs.yaml' || true)
+            if [ -n "${SPEC_CHANGES}" ]; then
+              BUMP="minor"
+            fi
+          fi
+
+          # Check for modified models (minor)
+          if [ "${BUMP}" = "patch" ]; then
+            MOD_CONTEXTS=$(git diff --name-only --diff-filter=M "${PREV_SHA}..HEAD" -- '*/000_context.jsonld' || true)
+            if [ -n "${MOD_CONTEXTS}" ]; then
+              BUMP="minor"
+            fi
+          fi
+
+          echo "bump_type=${BUMP}" >> "$GITHUB_OUTPUT"
+          echo "Detected bump type: ${BUMP}"
+
+      # -----------------------------------------------------------------
+      # 5. Fetch current version from registry
+      # -----------------------------------------------------------------
+      - name: Fetch registry version
+        if: steps.bump.outputs.bump_type != 'none'
+        id: registry
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          set -e
+
+          REGISTRY_JSON=$(gh api repos/WCRP-CMIP/esgvoc_registry/contents/cmip7.json \
+            --jq '.content' | base64 -d)
+
+          CURRENT=$(echo "${REGISTRY_JSON}" | python3 -c "
+          import json, sys
+          idx = json.load(sys.stdin)
+          for r in idx['releases']:
+              v = r.get('version', '')
+              if v != 'dev-latest' and not r.get('is_prerelease'):
+                  print(v.lstrip('v'))
+                  break
+          else:
+              print('0.0.0')
+          ")
+
+          # Also get latest universe version from registry
+          UNIVERSE_JSON=$(gh api repos/WCRP-CMIP/esgvoc_registry/contents/universe.json \
+            --jq '.content' | base64 -d)
+
+          UNIVERSE_VER=$(echo "${UNIVERSE_JSON}" | python3 -c "
+          import json, sys
+          idx = json.load(sys.stdin)
+          for r in idx['releases']:
+              v = r.get('version', '')
+              if v != 'dev-latest' and not r.get('is_prerelease'):
+                  print(v.lstrip('v'))
+                  break
+          else:
+              print('0.0.0')
+          ")
+
+          echo "current_version=${CURRENT}" >> "$GITHUB_OUTPUT"
+          echo "universe_version=${UNIVERSE_VER}" >> "$GITHUB_OUTPUT"
+          echo "Current registry version: ${CURRENT}"
+          echo "Universe version: ${UNIVERSE_VER}"
+
+      # -----------------------------------------------------------------
+      # 6. Compute next version
+      # -----------------------------------------------------------------
+      - name: Compute next version
+        if: steps.bump.outputs.bump_type != 'none'
+        id: next
+        run: |
+          CURRENT="${{ steps.registry.outputs.current_version }}"
+          BUMP="${{ steps.bump.outputs.bump_type }}"
+
+          NEXT=$(python3 -c "
+          parts = [int(x) for x in '${CURRENT}'.split('.')]
+          bump = '${BUMP}'
+          if bump == 'major':
+              parts[0] += 1; parts[1] = 0; parts[2] = 0
+          elif bump == 'minor':
+              parts[1] += 1; parts[2] = 0
+          else:
+              parts[2] += 1
+          print('.'.join(str(p) for p in parts))
+          ")
+
+          echo "next_version=${NEXT}" >> "$GITHUB_OUTPUT"
+          echo "Next version: ${NEXT}"
+
+      # -----------------------------------------------------------------
+      # 7. Generate changelog
+      # -----------------------------------------------------------------
+      - name: Generate changelog
+        if: steps.bump.outputs.bump_type != 'none'
+        id: changelog
+        run: |
+          set -e
+          PREV_SHA=$(git log --first-parent --format=%H -n 2 HEAD | tail -1)
+
+          CHANGELOG=$(python3 - <<'PYEOF'
+          import subprocess, collections
+
+          prev = subprocess.check_output(
+              ["git", "log", "--first-parent", "--format=%H", "-n", "2", "HEAD"],
+              text=True
+          ).strip().split("\n")[-1]
+
+          diff = subprocess.check_output(
+              ["git", "diff", "--name-status", "--diff-filter=ACDMR", f"{prev}..HEAD",
+               "--", ":!_src", ":!_tests", ":!_archive", ":!scripts", ":!*.md",
+               ":!*.toml", ":!*.lock", ":!*.py", ":!.github", ":!LICENSE*",
+               ":!.gitignore", ":!.pre-commit-config.yaml", ":!esgvoc_manifest.yaml"],
+              text=True
+          ).strip()
+
+          if not diff:
+              print("No CV changes.")
+              raise SystemExit(0)
+
+          changes = collections.defaultdict(lambda: {"A": [], "M": [], "D": []})
+          model_changes = []
+          spec_changes = []
+
+          for line in diff.split("\n"):
+              if not line.strip():
+                  continue
+              parts = line.split("\t", 1)
+              status, path = parts[0], parts[1]
+              segments = path.split("/")
+              filename = segments[-1]
+
+              # Spec files at root level
+              if len(segments) == 1 and filename.endswith("_specs.yaml"):
+                  action = "new" if status == "A" else "updated"
+                  spec_changes.append(f"- {filename}: {action}")
+                  continue
+
+              if len(segments) < 2:
+                  continue
+
+              collection = segments[0]
+
+              if filename == "000_context.jsonld":
+                  action = "new" if status == "A" else "updated"
+                  model_changes.append(f"- {collection}: {action} collection model")
+              else:
+                  term_id = filename.replace(".json", "")
+                  changes[collection][status[0]].append(term_id)
+
+          lines = []
+
+          if spec_changes:
+              lines.extend(spec_changes)
+
+          if model_changes:
+              lines.extend(model_changes)
+
+          for coll in sorted(changes):
+              parts = []
+              c = changes[coll]
+              if c["A"]:
+                  parts.append(f'{len(c["A"])} added')
+              if c["M"]:
+                  parts.append(f'{len(c["M"])} modified')
+              if c["D"]:
+                  parts.append(f'{len(c["D"])} removed')
+              if parts:
+                  lines.append(f"- {coll}: {', '.join(parts)}")
+
+          print("\n".join(lines))
+          PYEOF
+          )
+
+          {
+            echo "changelog<<CHANGELOG_EOF"
+            echo "${CHANGELOG}"
+            echo "CHANGELOG_EOF"
+          } >> "$GITHUB_OUTPUT"
+
+          echo "Changelog:"
+          echo "${CHANGELOG}"
+
+      # -----------------------------------------------------------------
+      # 8. Update manifest
+      # -----------------------------------------------------------------
+      - name: Update manifest
+        if: steps.bump.outputs.bump_type != 'none'
+        run: |
+          python3 - <<'PYEOF'
+          import yaml
+
+          next_version = "${{ steps.next.outputs.next_version }}"
+          universe_version = "${{ steps.registry.outputs.universe_version }}"
+          changelog = """${{ steps.changelog.outputs.changelog }}"""
+
+          with open("esgvoc_manifest.yaml") as f:
+              manifest = yaml.safe_load(f)
+
+          manifest["cv_version"] = next_version
+          manifest["universe_version"] = universe_version
+          manifest["release_notes"] = changelog.strip() + "\n"
+
+          with open("esgvoc_manifest.yaml", "w") as f:
+              yaml.dump(manifest, f, default_flow_style=False, sort_keys=False, allow_unicode=True)
+          PYEOF
+
+          echo "Updated manifest:"
+          cat esgvoc_manifest.yaml
+
+      # -----------------------------------------------------------------
+      # 9. Commit manifest [skip ci]
+      # -----------------------------------------------------------------
+      - name: Commit manifest
+        if: steps.bump.outputs.bump_type != 'none'
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add esgvoc_manifest.yaml
+          git diff --cached --quiet && echo "No manifest changes" && exit 0
+          git commit -m "chore: update manifest to ${{ steps.next.outputs.next_version }} [skip ci]"
+          git push origin main
+
+      # -----------------------------------------------------------------
+      # 10. Print publish command
+      # -----------------------------------------------------------------
+      - name: Print publish command
+        if: steps.bump.outputs.bump_type != 'none'
+        run: |
+          echo "============================================"
+          echo "  Build & validation passed!"
+          echo "  Manifest updated: ${{ steps.registry.outputs.current_version }} -> ${{ steps.next.outputs.next_version }}"
+          echo ""
+          echo "  Changelog:"
+          echo "${{ steps.changelog.outputs.changelog }}"
+          echo ""
+          echo "  To publish, run manually:"
+          echo ""
+          echo "  gh workflow run publish.yml \\"
+          echo "    -R WCRP-CMIP/esgvoc_registry \\"
+          echo "    -f project_id=cmip7 \\"
+          echo "    -f bump_type=${{ steps.bump.outputs.bump_type }} \\"
+          echo "    -f project_repo=WCRP-CMIP/CMIP7_CVs"
+          echo ""
+          echo "  If you need to override the bump type"
+          echo "  (e.g. spec changes warrant major instead of minor):"
+          echo ""
+          echo "  gh workflow run publish.yml \\"
+          echo "    -R WCRP-CMIP/esgvoc_registry \\"
+          echo "    -f project_id=cmip7 \\"
+          echo "    -f bump_type=major \\"
+          echo "    -f project_repo=WCRP-CMIP/CMIP7_CVs"
+          echo "============================================"
+
+      - name: No CV changes
+        if: steps.bump.outputs.bump_type == 'none'
+        run: echo "No CV files changed — no release needed."

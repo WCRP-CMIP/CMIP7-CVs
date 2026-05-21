@@ -29,8 +29,9 @@ jobs:
       # -----------------------------------------------------------------
       - name: Test cmip7 build
         run: |
+          BRANCH="${{ github.head_ref || github.ref_name }}"
           esgvoc test run cmip7 \
-            --branch esgvoc_dev \
+            --branch "$BRANCH" \
             --universe-branch esgvoc_dev
 
       # -----------------------------------------------------------------
