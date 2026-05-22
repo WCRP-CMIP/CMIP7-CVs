@@ -14,6 +14,16 @@ import sys
 import yaml
 
 
+def _literal_str_representer(dumper, data):
+    """Force multi-line strings to use YAML literal block scalar (|)."""
+    if "\n" in data:
+        return dumper.represent_scalar("tag:yaml.org,2002:str", data, style="|")
+    return dumper.represent_scalar("tag:yaml.org,2002:str", data)
+
+
+yaml.add_representer(str, _literal_str_representer)
+
+
 def main():
     parser = argparse.ArgumentParser(description="Update esgvoc manifest")
     parser.add_argument("--version", required=True, help="New CV version")

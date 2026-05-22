@@ -41,13 +41,43 @@ jobs:
           BRANCH: ${{ github.ref_name }}
         run: esgvoc test run cmip7 --branch "$BRANCH" --universe-branch main
 
-      - name: Get manifest base SHA
+      - name: Get last published source SHA
         if: steps.skip_check.outputs.skip != 'true'
         id: base
+        env:
+          GH_TOKEN: ${{ github.token }}
         run: |
-          PREV_SHA=$(git log -1 --format=%H -- esgvoc_manifest.yaml)
-          echo "sha=${PREV_SHA}" >> "$GITHUB_OUTPUT"
-          echo "Base SHA: ${PREV_SHA}"
+          set -e
+          # Fetch source_sha of the latest stable release from the registry
+          SOURCE_SHA=$(gh api repos/WCRP-CMIP/esgvoc_registry/contents/cmip7.json \
+            --jq '.content' | base64 -d | python3 -c "
+          import json, sys
+          idx = json.load(sys.stdin)
+          for r in idx['releases']:
+              v = r.get('version', '')
+              if v != 'dev-latest' and not r.get('is_prerelease'):
+                  sha = r.get('source_sha', '')
+                  if sha:
+                      print(sha)
+                  else:
+                      # Fallback: find nearest commit by publication date
+                      print(r.get('published_at', ''))
+                  break
+          else:
+              print('')
+          ")
+
+          if [ -z "${SOURCE_SHA}" ]; then
+            echo "::warning::No source_sha in registry, falling back to manifest history"
+            SOURCE_SHA=$(git log -1 --format=%H -- esgvoc_manifest.yaml)
+          elif [[ "${SOURCE_SHA}" == *"T"* ]]; then
+            # It's a date (fallback), find nearest commit before that date
+            echo "::warning::No source_sha in registry, using publication date ${SOURCE_SHA} to find base commit"
+            SOURCE_SHA=$(git log --before="${SOURCE_SHA}" -1 --format=%H)
+          fi
+
+          echo "sha=${SOURCE_SHA}" >> "$GITHUB_OUTPUT"
+          echo "Base SHA: ${SOURCE_SHA}"
 
       - name: Detect changes
         if: steps.skip_check.outputs.skip != 'true'
