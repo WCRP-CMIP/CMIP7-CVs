@@ -19,6 +19,7 @@ from github_form_processor.github_api import GitHubClient
 from github_form_processor.processor import PreparedRegistration, prepare_registration
 
 app = typer.Typer(no_args_is_help=True)
+PR_BASE_BRANCH = "esgvoc_dev"
 
 
 @app.command("process")
@@ -111,7 +112,6 @@ def process_issue_form(
         raise typer.Exit(0)
 
     action = event.get("action")
-    default_branch = event.get("repository", {}).get("default_branch", "main")
     branch = (
         f"registration/{preparation.prepared.kind}-{issue_number}-"
         f"{preparation.prepared.identifier}"
@@ -122,7 +122,7 @@ def process_issue_form(
             _process_opened_issue(
                 client=client,
                 issue_number=issue_number,
-                default_branch=default_branch,
+                base_branch=PR_BASE_BRANCH,
                 branch=branch,
                 prepared=preparation.prepared,
             )
@@ -154,15 +154,15 @@ def _process_opened_issue(
     *,
     client: GitHubClient,
     issue_number: int,
-    default_branch: str,
+    base_branch: str,
     branch: str,
     prepared: PreparedRegistration,
 ) -> int:
     """Create the registration branch, commit and pull request."""
-    if client.content_exists(prepared.output_path, default_branch):
+    if client.content_exists(prepared.output_path, base_branch):
         message = (
             f"Target file `{prepared.output_path}` already exists on "
-            f"`{default_branch}`."
+            f"`{base_branch}`."
         )
         client.comment_issue(
             issue_number,
@@ -171,7 +171,7 @@ def _process_opened_issue(
         raise RuntimeError(message)
 
     if not client.branch_exists(branch):
-        base_sha = client.get_ref_sha(default_branch)
+        base_sha = client.get_ref_sha(base_branch)
         client.create_branch(branch, base_sha)
 
     client.put_file(
@@ -184,7 +184,7 @@ def _process_opened_issue(
     pull_request = client.create_pull_request(
         title=prepared.pull_request_title,
         head=branch,
-        base=default_branch,
+        base=base_branch,
         body=(
             f"Automated {prepared.kind} registration generated from #{issue_number}."
             f"\n\nCloses #{issue_number}"

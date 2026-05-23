@@ -41,6 +41,7 @@ The workflow uses deterministic branches of the form
 registration/{experiment|activity}-{issue-number}-{id}
 ```
 
-New issue submissions create a pull request. Edits update the existing pull
-request branch. If an edited issue has no open registration pull request, the
-processor comments on the issue and exits with an error.
+New issue submissions create a pull request into the `esgvoc_dev` branch.
+Edits update existing branches.
+If an edited issue has no open registration pull request,
+the processor comments on the issue and exits with an error.
