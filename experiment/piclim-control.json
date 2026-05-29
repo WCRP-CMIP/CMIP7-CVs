@@ -2,6 +2,7 @@
     "@context": "000_context.jsonld",
     "id": "piclim-control",
     "type": "experiment",
+    "description": "Baseline for effective radiative forcing (ERF) calculations. `piControl` with prescribed sea-surface temperatures and sea-ice concentrations from a climatology of the model's `piControl` simulation.",
     "branch_information": "Branch from `piControl` at a time of your choosing. Given that you are using a climatology from your own model as boundary conditions, we recommended branching from the mid-point of the period over which you calculated the climatology (but this recommendation may not be appropriate for all models, so ultimately it is up to you to decide what introduces the smallest 'shock'/'jump' at the branch time).",
     "min_ensemble_size": 1,
     "parent_activity": "cmip",
