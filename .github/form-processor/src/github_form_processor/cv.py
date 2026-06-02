@@ -4,14 +4,18 @@ from __future__ import annotations
 
 import json
 from collections.abc import Mapping
-from dataclasses import dataclass
+from dataclasses import dataclass, field
 from pathlib import Path
 from typing import Any
 from urllib.error import HTTPError, URLError
 from urllib.parse import quote
 from urllib.request import Request, urlopen
 
-from github_form_processor.models import ActivityRegistration, ExperimentRegistration
+from github_form_processor.models import (
+    ActivityRegistration,
+    ExperimentRegistration,
+    InstitutionRegistration,
+)
 
 CMIP7_CVS_URL = "https://raw.githubusercontent.com/WCRP-CMIP/CMIP7-CVs/esgvoc"
 WCRP_UNIVERSE_URL = "https://raw.githubusercontent.com/WCRP-CMIP/WCRP-universe/esgvoc"
@@ -32,6 +36,18 @@ class UrlCheck:
 
     accessible: bool
     status: int | None = None
+    error: str | None = None
+
+
+@dataclass(frozen=True)
+class RorLookup:
+    """Result from looking up a ROR entry."""
+
+    found: bool
+    locations: list[dict[str, Any]] = field(default_factory=list)
+    labels: list[str] = field(default_factory=list)
+    acronyms: list[str] = field(default_factory=list)
+    links: list[str] = field(default_factory=list)
     error: str | None = None
 
 
@@ -118,6 +134,81 @@ class UrlChecker:
             return UrlCheck(accessible=False, error=f"{type(exc).__name__}: {exc}")
 
         return UrlCheck(accessible=200 <= status < 400, status=status)
+
+
+class RorClient:
+    """Client for looking up institution metadata from the ROR API."""
+
+    _API_URL = "https://api.ror.org/v2/organizations"
+
+    def __init__(self, timeout: int = 15) -> None:
+        self.timeout = timeout
+
+    def fetch_location(self, ror_id: str) -> RorLookup:
+        """Fetch metadata for a ROR ID.
+
+        Returns the locations, names and links recorded for the ROR entry.
+
+        Parameters
+        ----------
+        ror_id:
+            Full ROR URL, e.g. ``https://ror.org/02feahw73``.
+        """
+        short_id = ror_id.removeprefix("https://ror.org/")
+        url = f"{self._API_URL}/{quote(short_id, safe='')}"
+        request = Request(url, headers={"User-Agent": "github-form-processor"})
+        try:
+            with urlopen(request, timeout=self.timeout) as response:
+                payload = json.loads(response.read().decode("utf-8"))
+        except HTTPError as exc:
+            if exc.code == 404:
+                return RorLookup(found=False)
+            return RorLookup(
+                found=False, error=f"HTTP {exc.code} while reading ROR entry"
+            )
+        except (URLError, TimeoutError, json.JSONDecodeError) as exc:
+            return RorLookup(found=False, error=f"{type(exc).__name__}: {exc}")
+
+        locations: list[dict[str, Any]] = []
+        required_keys = ("name", "country_name", "lat", "lng")
+        for entry in payload.get("locations", []):
+            details = entry.get("geonames_details") or {}
+            if all(key in details for key in required_keys):
+                locations.append(
+                    {
+                        "city": details["name"],
+                        "country": details["country_name"],
+                        "lat": details["lat"],
+                        "lon": details["lng"],
+                    }
+                )
+
+        labels: list[str] = []
+        acronyms: list[str] = []
+        label_types = {"label", "alias", "ror_display"}
+        for entry in payload.get("names", []):
+            value = entry.get("value")
+            if not value:
+                continue
+            types = set(entry.get("types", []))
+            if "acronym" in types:
+                acronyms.append(value)
+            if types & label_types:
+                labels.append(value)
+
+        links = [
+            entry["value"]
+            for entry in payload.get("links", [])
+            if entry.get("value")
+        ]
+
+        return RorLookup(
+            found=True,
+            locations=locations,
+            labels=labels,
+            acronyms=acronyms,
+            links=links,
+        )
 
 
 def check_experiment_against_cvs(
@@ -242,6 +333,25 @@ def check_activity_urls(
             errors.append(f"Reference URL `{url}` could not be reached: {check.error}.")
 
     return errors
+
+
+def check_institution_against_cvs(
+    institution: InstitutionRegistration,
+    cv_client: CvClient,
+) -> list[str]:
+    """Return non-blocking notes from checking an institution against CVs."""
+    notes: list[str] = []
+
+    for member_id in institution.members:
+        member_lookup = cv_client.fetch_wcrp_universe_json("institution", member_id)
+        _append_missing_or_error_note(
+            notes,
+            member_lookup,
+            f"Member `{member_id}` is not already part of the WCRP universe CVs.",
+            f"Could not check member `{member_id}` against the WCRP universe CVs",
+        )
+
+    return notes
 
 
 def _append_missing_or_error_note(

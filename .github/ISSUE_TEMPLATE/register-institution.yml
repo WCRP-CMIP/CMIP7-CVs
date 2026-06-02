@@ -1,0 +1,31 @@
+name: Register an institution
+description: Register a new institution (organisation or consortium) for review.
+title: "[Institution registration]: "
+labels:
+  - "registration: institution"
+body:
+  - type: input
+    id: institution-drs-name
+    attributes:
+      label: Institution DRS name
+      description: This is the value that will be used in file and folder names (i.e. the DRS). Use only letters, numbers and hyphens. The name must be at most 20 characters. For example, CNRM-CERFACS.
+    validations:
+      required: true
+  - type: textarea
+    id: institution-description
+    attributes:
+      label: Institution description
+      description: Please describe the institution briefly e.g. 1-4 sentences.
+    validations:
+      required: true
+  - type: textarea
+    id: members
+    attributes:
+      label: Members
+      # TODO: refer to member registration form here
+      description: Please provide one member ID per line. All institutions must have members, even if there is only one. Members will be checked against the WCRP universe CV institutions list (https://github.com/WCRP-CMIP/WCRP-universe/tree/main/institution). If they're not in the universe CV list, please list them anyway and we will help you get them registered.
+      placeholder: |
+        cnrm
+        cerfacs
+    validations:
+      required: false
