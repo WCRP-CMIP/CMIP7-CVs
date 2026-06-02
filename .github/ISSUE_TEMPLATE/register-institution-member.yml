@@ -1,0 +1,56 @@
+name: Register an institution member
+description: Register a new institution member for review.
+title: "[Institution member registration]: "
+labels:
+  - "registration: institution-member"
+body:
+  - type: input
+    id: member-drs-name
+    attributes:
+      label: Member DRS name
+      description: This is the value that will be used in file and folder names (i.e. the DRS). Use only letters, numbers and hyphens. The name must be at most 20 characters. For example, CNRM.
+    validations:
+      required: true
+  - type: textarea
+    id: acronyms
+    attributes:
+      label: Acronyms
+      description: Please provide one acronym per line. If left blank, acronyms are auto-populated from the ROR entry.
+      placeholder: |
+        CNRM
+        Météo-France/CNRM
+    validations:
+      required: false
+  - type: textarea
+    id: labels
+    attributes:
+      label: Labels
+      description: Please provide one label (full name) per line. If left blank, labels are auto-populated from the ROR entry.
+      placeholder: |
+        Centre National de Recherches Météorologiques
+    validations:
+      required: false
+  - type: textarea
+    id: member-description
+    attributes:
+      label: Member description
+      description: Please describe the member briefly e.g. 1-4 sentences.
+    validations:
+      required: true
+  - type: textarea
+    id: reference-urls
+    attributes:
+      label: Reference URLs
+      description: Please provide one URL per line.
+      placeholder: |
+        https://www.cnrm.meteo.fr/
+    validations:
+      required: false
+  - type: input
+    id: ror-id
+    attributes:
+      label: ROR ID
+      description: The Research Organization Registry (https://ror.org/) identifier or full link. For example, 02feahw73 or https://ror.org/02feahw73.
+      placeholder: "02feahw73"
+    validations:
+      required: true

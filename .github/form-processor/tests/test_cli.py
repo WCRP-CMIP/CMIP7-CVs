@@ -48,6 +48,10 @@ def test_process_accepts_output_directories_as_options(tmp_path, monkeypatch):
             "custom-experiments",
             "--activity-output-dir",
             "custom-activities",
+            "--institution-output-dir",
+            "custom-institutions",
+            "--institution-member-output-dir",
+            "custom-members",
             "--wcrp-universe-url",
             "https://example.test/wcrp-universe/custom",
             "--cmip7-cvs-url",
@@ -60,6 +64,8 @@ def test_process_accepts_output_directories_as_options(tmp_path, monkeypatch):
     assert result.exit_code == 0
     assert call["experiment_output_dir"] == "custom-experiments"
     assert call["activity_output_dir"] == "custom-activities"
+    assert call["institution_output_dir"] == "custom-institutions"
+    assert call["institution_member_output_dir"] == "custom-members"
     assert call["cv_client"].wcrp_universe_url == (
         "https://example.test/wcrp-universe/custom"
     )
