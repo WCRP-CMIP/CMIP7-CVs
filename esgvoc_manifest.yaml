@@ -3,7 +3,7 @@ project:
   id: cmip7
   name: CMIP7 Controlled Vocabulary
 cv_version: 1.2.2
-universe_version: 1.0.7
+universe_version: 1.0.8
 esgvoc:
   min_version: 4.1.0
 release_notes: |
