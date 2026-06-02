@@ -2,6 +2,7 @@
     "@context": "000_context.jsonld",
     "id": "piclim-n2o",
     "type": "experiment",
+    "description": "In combination with `piClim-control`, quantifies present-day nitrous oxide effective radiative forcing (ERF). Same as `piClim-control`, except nitrous oxide concentrations or emissions (as appropriate for the model) use present-day values (2021 values for CMIP7).",
     "branch_information": "Same as `piClim-control`",
     "min_ensemble_size": 1,
     "parent_activity": "cmip",

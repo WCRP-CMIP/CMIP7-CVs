@@ -191,8 +191,6 @@ For all other changes, please use either:
 - [a blank issue](https://github.com/WCRP-CMIP/CMIP7-CVs/issues/new?template=BLANK_ISSUE)
   for anything else (e.g. a request for a new form)
 
-## Altering (i.e. writing) the CVs
-
 ### Editing the CVs directly
 
 It is possible to edit the CVs yourself.

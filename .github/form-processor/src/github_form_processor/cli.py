@@ -28,6 +28,11 @@ def process_issue_form(
         "--event-path",
         help="Path to the GitHub event JSON payload. Defaults to GITHUB_EVENT_PATH.",
     ),
+    pr_base_branch: str = typer.Option(
+        "esgvoc_dev",
+        "--pr-base-branch",
+        help="Base branch for generated pull requests.",
+    ),
     experiment_output_dir: str = typer.Option(
         "experiment",
         "--experiment-output-dir",
@@ -37,6 +42,16 @@ def process_issue_form(
         "activity",
         "--activity-output-dir",
         help="Directory for generated activity JSON files.",
+    ),
+    institution_output_dir: str = typer.Option(
+        "institution",
+        "--institution-output-dir",
+        help="Directory for generated institution JSON files.",
+    ),
+    institution_member_output_dir: str = typer.Option(
+        "institution_member",
+        "--institution-member-output-dir",
+        help="Directory for generated institution member JSON files.",
     ),
     skip_external_checks: bool = typer.Option(
         False,
@@ -76,6 +91,8 @@ def process_issue_form(
         issue=issue,
         experiment_output_dir=experiment_output_dir,
         activity_output_dir=activity_output_dir,
+        institution_output_dir=institution_output_dir,
+        institution_member_output_dir=institution_member_output_dir,
         external_checks=not skip_external_checks,
         cv_client=CvClient(
             wcrp_universe_url=wcrp_universe_url,
@@ -111,7 +128,6 @@ def process_issue_form(
         raise typer.Exit(0)
 
     action = event.get("action")
-    default_branch = event.get("repository", {}).get("default_branch", "main")
     branch = (
         f"registration/{preparation.prepared.kind}-{issue_number}-"
         f"{preparation.prepared.identifier}"
@@ -122,7 +138,7 @@ def process_issue_form(
             _process_opened_issue(
                 client=client,
                 issue_number=issue_number,
-                default_branch=default_branch,
+                base_branch=pr_base_branch,
                 branch=branch,
                 prepared=preparation.prepared,
             )
@@ -154,15 +170,15 @@ def _process_opened_issue(
     *,
     client: GitHubClient,
     issue_number: int,
-    default_branch: str,
+    base_branch: str,
     branch: str,
     prepared: PreparedRegistration,
 ) -> int:
     """Create the registration branch, commit and pull request."""
-    if client.content_exists(prepared.output_path, default_branch):
+    if client.content_exists(prepared.output_path, base_branch):
         message = (
             f"Target file `{prepared.output_path}` already exists on "
-            f"`{default_branch}`."
+            f"`{base_branch}`."
         )
         client.comment_issue(
             issue_number,
@@ -171,7 +187,7 @@ def _process_opened_issue(
         raise RuntimeError(message)
 
     if not client.branch_exists(branch):
-        base_sha = client.get_ref_sha(default_branch)
+        base_sha = client.get_ref_sha(base_branch)
         client.create_branch(branch, base_sha)
 
     client.put_file(
@@ -184,7 +200,7 @@ def _process_opened_issue(
     pull_request = client.create_pull_request(
         title=prepared.pull_request_title,
         head=branch,
-        base=default_branch,
+        base=base_branch,
         body=(
             f"Automated {prepared.kind} registration generated from #{issue_number}."
             f"\n\nCloses #{issue_number}"

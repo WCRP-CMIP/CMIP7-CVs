@@ -4,8 +4,18 @@ import json
 
 import pytest
 
-from github_form_processor.cv import CvClient, JsonLookup, UrlCheck
+from github_form_processor.cv import CvClient, JsonLookup, RorLookup, UrlCheck
 from github_form_processor.processor import prepare_registration
+
+
+class FakeRorClient:
+    """Fake ROR client for deterministic tests."""
+
+    def __init__(self, result=None):
+        self.result = result or RorLookup(found=False)
+
+    def fetch_location(self, ror_id):
+        return self.result
 
 
 class FakeCvClient:
@@ -474,6 +484,227 @@ def test_prepare_activity_can_check_cmip7_cvs_from_local_path(tmp_path):
     assert result.notes == [
         "Experiment `missing-exp` is not already part of the CMIP7 CVs."
     ]
+
+
+def test_prepare_institution_renders_json():
+    issue = {
+        "title": "[Institution registration]: Test",
+        "labels": [{"name": "registration: institution"}],
+        "body": _body(
+            {
+                "Institution DRS name": "CNRM-CERFACS",
+                "Institution description": "A short institution description.",
+                "Members": "cnrm\ncerfacs",
+            }
+        ),
+    }
+
+    result = prepare_registration(
+        issue=issue,
+        experiment_output_dir="experiment",
+        activity_output_dir="activity",
+        external_checks=False,
+    )
+
+    assert result.validation_errors == []
+    assert result.notes == []
+    assert result.prepared is not None
+    assert result.prepared.output_path == "institution/cnrm-cerfacs.json"
+    assert json.loads(result.prepared.content) == {
+        "@context": "000_context.jsonld",
+        "id": "cnrm-cerfacs",
+        "type": "organisation",
+        "drs_name": "CNRM-CERFACS",
+        "members": ["cnrm", "cerfacs"],
+        "description": "A short institution description.",
+    }
+
+
+def test_prepare_institution_notes_missing_member():
+    issue = {
+        "title": "[Institution registration]: Test",
+        "labels": [{"name": "registration: institution"}],
+        "body": _body(
+            {
+                "Institution DRS name": "CNRM-CERFACS",
+                "Institution description": "A short institution description.",
+                "Members": "cnrm\ncerfacs",
+            }
+        ),
+    }
+    cv_client = FakeCvClient(
+        {
+            ("wcrp-universe", "institution", "cnrm"): {"id": "cnrm"},
+        }
+    )
+
+    result = prepare_registration(
+        issue=issue,
+        experiment_output_dir="experiment",
+        activity_output_dir="activity",
+        cv_client=cv_client,
+    )
+
+    assert result.prepared is not None
+    assert result.validation_errors == []
+    assert result.notes == [
+        "Member `cerfacs` is not already part of the WCRP universe CVs."
+    ]
+
+
+def test_prepare_institution_member_renders_json_with_ror_location():
+    issue = {
+        "title": "[Institution member registration]: Test",
+        "labels": [{"name": "registration: institution-member"}],
+        "body": _body(
+            {
+                "Member DRS name": "CNRM",
+                "Acronyms": "CNRM\nMétéo-France/CNRM",
+                "Labels": "Centre National de Recherches Météorologiques",
+                "Member description": "A short member description.",
+                "Reference URLs": "https://www.cnrm.meteo.fr/",
+                "ROR ID": "https://ror.org/02feahw73",
+            }
+        ),
+    }
+    ror_client = FakeRorClient(
+        RorLookup(
+            found=True,
+            locations=[
+                {
+                    "city": "Toulouse",
+                    "country": "France",
+                    "lat": 43.6047,
+                    "lon": 1.4442,
+                }
+            ],
+        )
+    )
+
+    result = prepare_registration(
+        issue=issue,
+        experiment_output_dir="experiment",
+        activity_output_dir="activity",
+        ror_client=ror_client,
+    )
+
+    assert result.validation_errors == []
+    assert result.notes == [
+        "1 location auto-populated from ROR: Toulouse, France (43.6047, 1.4442)."
+    ]
+    assert result.prepared is not None
+    assert result.prepared.output_path == "institution_member/cnrm.json"
+    payload = json.loads(result.prepared.content)
+    assert payload == {
+        "@context": "000_context.jsonld",
+        "id": "cnrm",
+        "type": "institution",
+        "drs_name": "CNRM",
+        "acronyms": ["CNRM", "Météo-France/CNRM"],
+        "labels": ["Centre National de Recherches Météorologiques"],
+        "description": "A short member description.",
+        "location": [
+            {
+                "city": "Toulouse",
+                "country": "France",
+                "lat": 43.6047,
+                "lon": 1.4442,
+            }
+        ],
+        "ror": "02feahw73",
+        "urls": ["https://www.cnrm.meteo.fr/"],
+    }
+
+
+def test_prepare_institution_member_adds_ror_names_and_links_without_duplicates():
+    issue = {
+        "title": "[Institution member registration]: Test",
+        "labels": [{"name": "registration: institution-member"}],
+        "body": _body(
+            {
+                "Member DRS name": "CNRM",
+                "Acronyms": "CNRM",
+                "Labels": "Centre National de Recherches Météorologiques",
+                "Member description": "A short member description.",
+                "Reference URLs": "https://www.cnrm.meteo.fr/",
+                "ROR ID": "https://ror.org/02feahw73",
+            }
+        ),
+    }
+    ror_client = FakeRorClient(
+        RorLookup(
+            found=True,
+            labels=[
+                "Centre National de Recherches Météorologiques",
+                "National Centre for Meteorological Research",
+            ],
+            acronyms=["CNRM", "MF/CNRM"],
+            links=[
+                "https://www.cnrm.meteo.fr/",
+                "https://en.wikipedia.org/wiki/CNRM",
+            ],
+        )
+    )
+
+    result = prepare_registration(
+        issue=issue,
+        experiment_output_dir="experiment",
+        activity_output_dir="activity",
+        ror_client=ror_client,
+    )
+
+    assert result.validation_errors == []
+    assert result.notes == [
+        "ROR entry `https://ror.org/02feahw73` does not include location data.",
+        "1 label auto-populated from ROR: "
+        "National Centre for Meteorological Research.",
+        "1 acronym auto-populated from ROR: MF/CNRM.",
+        "1 reference URL auto-populated from ROR: "
+        "https://en.wikipedia.org/wiki/CNRM.",
+    ]
+    assert result.prepared is not None
+    payload = json.loads(result.prepared.content)
+    assert payload["labels"] == [
+        "Centre National de Recherches Météorologiques",
+        "National Centre for Meteorological Research",
+    ]
+    assert payload["acronyms"] == ["CNRM", "MF/CNRM"]
+    assert payload["urls"] == [
+        "https://www.cnrm.meteo.fr/",
+        "https://en.wikipedia.org/wiki/CNRM",
+    ]
+
+
+def test_prepare_institution_member_notes_ror_not_found():
+    issue = {
+        "title": "[Institution member registration]: Test",
+        "labels": [{"name": "registration: institution-member"}],
+        "body": _body(
+            {
+                "Member DRS name": "CNRM",
+                "Acronyms": "CNRM",
+                "Labels": "Centre National de Recherches Météorologiques",
+                "Member description": "A short member description.",
+                "ROR ID": "https://ror.org/02feahw73",
+            }
+        ),
+    }
+    ror_client = FakeRorClient(RorLookup(found=False))
+
+    result = prepare_registration(
+        issue=issue,
+        experiment_output_dir="experiment",
+        activity_output_dir="activity",
+        ror_client=ror_client,
+    )
+
+    assert result.validation_errors == []
+    assert result.notes == [
+        "ROR entry `https://ror.org/02feahw73` was not found. "
+        "Metadata could not be auto-populated."
+    ]
+    assert result.prepared is not None
+    assert json.loads(result.prepared.content)["location"] == []
 
 
 def _body(fields):
