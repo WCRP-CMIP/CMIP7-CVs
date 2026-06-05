@@ -165,8 +165,8 @@ To explore the terms via the web API, no installation is required — you can qu
   e.g. [the historical experiment](https://esgvoc.ipsl.fr/api/v1/projects/cmip7/collections/experiment/terms/historical)
 
 - **A specific term in the universe:**
-  `https://esgvoc.ipsl.fr/api/v1/universe/collections/{collection_id}/terms/{term_id}`
-  e.g. [the historical experiment in the universe](https://esgvoc.ipsl.fr/api/v1/universe/collections/experiment/terms/historical)
+  `https://esgvoc.ipsl.fr/api/v1/universe/data_descriptors/{data_descriptor_id}/terms/{term_id}`
+  e.g. [the historical experiment in the universe](https://esgvoc.ipsl.fr/api/v1/universe/data_descriptors/experiment/terms/historical)
 
 Full API documentation is available at [esgvoc.ipsl.fr/api/v1/docs](https://esgvoc.ipsl.fr/api/v1/docs).
 
