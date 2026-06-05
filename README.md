@@ -148,6 +148,76 @@ see [their docs](https://esgf.github.io/esgf-vocab/).
 If you want an example of working with esgvoc's Python API to create a derived product,
 see [the script used to create CMOR tables](https://github.com/WCRP-CMIP/cmip7-cmor-tables/tree/main/tables-cvs/generate-cmor-cvs-table.py).
 
+### Via the web API
+
+To explore the terms via the web API, no installation is required — you can query directly from your browser or any HTTP client.
+
+- **All collections in a project:**
+  `https://esgvoc.ipsl.fr/api/v1/projects/{project_id}/collections`
+  e.g. [all CMIP7 collections](https://esgvoc.ipsl.fr/api/v1/projects/cmip7/collections)
+
+- **All terms in a collection:**
+  `https://esgvoc.ipsl.fr/api/v1/projects/{project_id}/collections/{collection_id}/terms`
+  e.g. [all CMIP7 institutions](https://esgvoc.ipsl.fr/api/v1/projects/cmip7/collections/institution/terms)
+
+- **A specific term in a project collection:**
+  `https://esgvoc.ipsl.fr/api/v1/projects/{project_id}/collections/{collection_id}/terms/{term_id}`
+  e.g. [the historical experiment](https://esgvoc.ipsl.fr/api/v1/projects/cmip7/collections/experiment/terms/historical)
+
+- **A specific term in the universe:**
+  `https://esgvoc.ipsl.fr/api/v1/universe/collections/{collection_id}/terms/{term_id}`
+  e.g. [the historical experiment in the universe](https://esgvoc.ipsl.fr/api/v1/universe/collections/experiment/terms/historical)
+
+Full API documentation is available at [esgvoc.ipsl.fr/api/v1/docs](https://esgvoc.ipsl.fr/api/v1/docs).
+
+### Quick lookup via the CLI (no esgvoc install required)
+
+If you just want to quickly check whether a term exists in the CVs,
+you can use [`uvx`](https://docs.astral.sh/uv/) to run esgvoc without installing it into your environment.
+The current working directory doesn't matter.
+
+**Prerequisites:**
+
+1. Install [uv](https://docs.astral.sh/uv/) (macOS and Linux):
+   ```sh
+   curl -LsSf https://astral.sh/uv/install.sh | sh
+   ```
+
+2. Fetch the latest CMIP7 snapshot:
+   ```sh
+   uvx esgvoc use cmip7@latest
+   ```
+
+**Usage:**
+
+```sh
+# Check whether a term ID exists and see its DRS name
+$ uvx esgvoc get cmip7:<collection>:<term_id> --select drs_name
+
+# For example, check institution "ipsl"
+$ uvx esgvoc get cmip7:institution:ipsl --select drs_name
+
+# View all information about a term (omit --select)
+$ uvx esgvoc get cmip7:institution:ipsl
+```
+
+Note: term IDs are always lowercase.
+
+### Via the Python API
+
+For scripting or more advanced queries,
+esgvoc provides a Python API.
+For example, to retrieve all institutions:
+
+```python
+import esgvoc.api as ev
+
+cmip7_institutions = ev.get_all_terms_in_collection("cmip7", "institution_id")
+# Then filter, search, or process as needed
+```
+
+See the [esgvoc Python API docs](https://esgf.github.io/esgf-vocab/) for full details.
+
 ### CMOR tables
 
 A subset of the CVs are used with the [cmor](https://github.com/PCMDI/cmor) tool.
