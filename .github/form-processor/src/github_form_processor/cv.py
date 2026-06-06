@@ -149,10 +149,7 @@ class RorClient:
 
         Returns the locations, names and links recorded for the ROR entry.
 
-        Parameters
-        ----------
-        ror_id:
-            Full ROR URL, e.g. ``https://ror.org/02feahw73``.
+        `ror_id` is the full ROR URL, e.g. `https://ror.org/02feahw73`.
         """
         short_id = ror_id.removeprefix("https://ror.org/")
         url = f"{self._API_URL}/{quote(short_id, safe='')}"

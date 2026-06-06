@@ -141,6 +141,7 @@ def test_edited_issue_raises_if_multiple_open_pull_requests_exist():
         _process_edited_issue(
             client=client,
             issue_number=1,
+            base_branch="esgvoc_dev",
             branch="registration/experiment-1-existing",
             prepared=prepared,
         )
@@ -161,31 +162,31 @@ def test_edited_issue_raises_if_multiple_open_pull_requests_exist():
     ]
 
 
-def test_edited_issue_raises_if_no_open_pull_request_exists():
+def test_edited_issue_opens_pull_request_when_none_exists():
     client = FakeNoOpenPullsClient()
     prepared = FakePreparedRegistration()
+    prepared.output_path = "experiment/new.json"
 
-    try:
-        _process_edited_issue(
-            client=client,
-            issue_number=1,
-            branch="registration/experiment-1-existing",
-            prepared=prepared,
-        )
-    except RuntimeError as exc:
-        assert "No open registration pull request" in str(exc)
-    else:
-        raise AssertionError("Expected RuntimeError")
+    result = _process_edited_issue(
+        client=client,
+        issue_number=1,
+        base_branch="esgvoc_dev",
+        branch="registration/experiment-1-new",
+        prepared=prepared,
+    )
 
-    assert client.comments == [
-        (
-            1,
-            "### Registration form processing failed\n"
-            "\n"
-            "No open registration pull request was found for branch "
-            "`registration/experiment-1-existing`. Please open a new registration "
-            "issue.",
-        )
+    assert result == 0
+    assert client.calls == [
+        ("find_pull_requests_for_branch", "registration/experiment-1-new"),
+        ("find_pull_requests_for_issue", 1),
+        ("content_exists", "experiment/new.json", "esgvoc_dev"),
+        ("branch_exists", "registration/experiment-1-new"),
+        ("get_ref_sha", "esgvoc_dev"),
+        ("create_branch", "registration/experiment-1-new", "sha-esgvoc_dev"),
+        ("put_file", "experiment/new.json", "registration/experiment-1-new"),
+        ("create_pull_request", "registration/experiment-1-new", "esgvoc_dev"),
+        ("assign_issue", 10, ["znichollscr", "ltroussellier"]),
+        ("comment_issue", 1),
     ]
 
 
@@ -263,15 +264,40 @@ class FakeOpenedIssueClient:
 
 class FakeNoOpenPullsClient:
     def __init__(self):
-        self.comments = []
+        self.calls = []
 
     def find_pull_requests_for_branch(self, branch):
-        assert branch == "registration/experiment-1-existing"
+        self.calls.append(("find_pull_requests_for_branch", branch))
         return []
 
     def find_pull_requests_for_issue(self, issue_number):
-        assert issue_number == 1
+        self.calls.append(("find_pull_requests_for_issue", issue_number))
         return []
 
+    def content_exists(self, path, branch):
+        self.calls.append(("content_exists", path, branch))
+        return False
+
+    def branch_exists(self, branch):
+        self.calls.append(("branch_exists", branch))
+        return False
+
+    def get_ref_sha(self, branch):
+        self.calls.append(("get_ref_sha", branch))
+        return f"sha-{branch}"
+
+    def create_branch(self, branch, sha):
+        self.calls.append(("create_branch", branch, sha))
+
+    def put_file(self, path, branch, content, message):
+        self.calls.append(("put_file", path, branch))
+
+    def create_pull_request(self, title, head, base, body):
+        self.calls.append(("create_pull_request", head, base))
+        return {"number": 10, "html_url": "https://example.test/pr/10"}
+
+    def assign_issue(self, issue_number, assignees):
+        self.calls.append(("assign_issue", issue_number, assignees))
+
     def comment_issue(self, issue_number, body):
-        self.comments.append((issue_number, body))
+        self.calls.append(("comment_issue", issue_number))

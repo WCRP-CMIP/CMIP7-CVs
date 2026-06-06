@@ -74,13 +74,11 @@ def prepare_registration(
 ) -> RegistrationPreparationResult:
     """Prepare a registration from a GitHub issue payload.
 
-    Returns
-    -------
-    RegistrationPreparationResult
-        The prepared registration, blocking validation errors, and non-blocking
-        notes. If the issue is not a recognised registration form, ``prepared``
-        is ``None`` and both lists are empty. If blocking validation errors are
-        found, ``prepared`` is ``None`` and ``validation_errors`` is populated.
+    Returns a `RegistrationPreparationResult` with the prepared registration,
+    blocking validation errors, and non-blocking notes. If the issue is not a
+    recognised registration form, `prepared` is `None` and both lists are empty.
+    If blocking validation errors are found, `prepared` is `None` and
+    `validation_errors` is populated.
     """
     fields = parse_issue_form_body(str(issue.get("body") or ""))
     kind = detect_form_kind(issue, fields)
@@ -228,12 +226,12 @@ def prepare_registration(
 
 
 def _pluralise(count: int, noun: str) -> str:
-    """Return ``count`` followed by ``noun``, pluralised when not one."""
+    """Return `count` followed by `noun`, pluralised when not one."""
     return f"{count} {noun}" if count == 1 else f"{count} {noun}s"
 
 
 def _new_items(candidates: list[str], existing: list[str]) -> list[str]:
-    """Return ``candidates`` not already in ``existing``, without duplicates."""
+    """Return `candidates` not already in `existing`, without duplicates."""
     new_items: list[str] = []
     for item in candidates:
         if item not in existing and item not in new_items:

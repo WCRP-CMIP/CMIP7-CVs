@@ -149,6 +149,7 @@ def process_issue_form(
             _process_edited_issue(
                 client=client,
                 issue_number=issue_number,
+                base_branch=pr_base_branch,
                 branch=branch,
                 prepared=preparation.prepared,
             )
@@ -222,10 +223,17 @@ def _process_edited_issue(
     *,
     client: GitHubClient,
     issue_number: int,
+    base_branch: str,
     branch: str,
     prepared: PreparedRegistration,
 ) -> int:
-    """Update the existing registration pull request for an edited issue."""
+    """Update the existing registration pull request for an edited issue.
+
+    When the original `opened` event failed (for example because the form had
+    validation errors), no registration pull request exists yet. In that case the
+    edit is treated like a fresh submission and a new pull request is opened
+    instead of raising an error.
+    """
     pulls = client.find_pull_requests_for_branch(branch)
     if not pulls:
         pulls = client.find_pull_requests_for_issue(issue_number)
@@ -242,19 +250,13 @@ def _process_edited_issue(
         raise RuntimeError(message)
 
     if not open_pulls:
-        if pulls:
-            message = (
-                f"The registration pull request for branch `{branch}` exists but is "
-                "closed. "
-                "Please open a new registration issue."
-            )
-        else:
-            message = (
-                f"No open registration pull request was found for branch `{branch}`. "
-                "Please open a new registration issue."
-            )
-        client.comment_issue(issue_number, format_edit_error_comment(message))
-        raise RuntimeError(message)
+        return _process_opened_issue(
+            client=client,
+            issue_number=issue_number,
+            base_branch=base_branch,
+            branch=branch,
+            prepared=prepared,
+        )
 
     pull_request = open_pulls[0]
     target_branch = str(pull_request.get("head", {}).get("ref") or branch)
