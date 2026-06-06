@@ -156,9 +156,16 @@ To explore the terms via the web API, no installation is required — you can qu
   `https://esgvoc.ipsl.fr/api/v1/projects/{project_id}/collections`
   e.g. [all CMIP7 collections](https://esgvoc.ipsl.fr/api/v1/projects/cmip7/collections)
 
+- **All data descriptors in the universe:** (not quite the same as collections in a project, but the closest concept in the universe)
+  [https://esgvoc.ipsl.fr/api/v1/universe/data_descriptors](https://esgvoc.ipsl.fr/api/v1/universe/data_descriptors)
+
 - **All terms in a collection:**
   `https://esgvoc.ipsl.fr/api/v1/projects/{project_id}/collections/{collection_id}/terms`
   e.g. [all CMIP7 institutions](https://esgvoc.ipsl.fr/api/v1/projects/cmip7/collections/institution/terms)
+
+- **All terms in a collection in the universe:**
+  `https://esgvoc.ipsl.fr/api/v1/universe/data_descriptors/{data_descriptor_id}/terms`
+  e.g. [all universe organisations](https://esgvoc.ipsl.fr/api/v1/universe/data_descriptors/organisation/terms)
 
 - **A specific term in a project collection:**
   `https://esgvoc.ipsl.fr/api/v1/projects/{project_id}/collections/{collection_id}/terms/{term_id}`
