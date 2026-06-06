@@ -1,0 +1,29 @@
+{
+    "@context": "000_context.jsonld",
+    "id": "tuc",
+    "type": "institution",
+    "drs_name": "TUC",
+    "acronyms": [
+        "TUC"
+    ],
+    "labels": [
+        "Technical University of Crete",
+        "Universit\u00e9 technique de cr\u00e8te",
+        "\u03a0\u03bf\u03bb\u03c5\u03c4\u03b5\u03c7\u03bd\u03b5\u03af\u03bf \u039a\u03c1\u03ae\u03c4\u03b7\u03c2"
+    ],
+    "description": "Technical University of Crete",
+    "location": [
+        {
+            "city": "Chania",
+            "country": "Greece",
+            "lat": 35.51124,
+            "lon": 24.02921
+        }
+    ],
+    "ror": "03f8bz564",
+    "urls": [
+        "https://www.tuc.gr/",
+        "https://www.tuc.gr",
+        "http://en.wikipedia.org/wiki/Technical_University_of_Crete"
+    ]
+}
