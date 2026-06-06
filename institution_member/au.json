@@ -1,0 +1,28 @@
+{
+    "@context": "000_context.jsonld",
+    "id": "au",
+    "type": "institution",
+    "drs_name": "AU",
+    "acronyms": [
+        "AU"
+    ],
+    "labels": [
+        "Aarhus Universitet",
+        "Aarhus University"
+    ],
+    "description": "Aarhus University",
+    "location": [
+        {
+            "city": "Aarhus",
+            "country": "Denmark",
+            "lat": 56.15674,
+            "lon": 10.21076
+        }
+    ],
+    "ror": "01aj84f44",
+    "urls": [
+        "https://www.au.dk/",
+        "https://www.au.dk",
+        "http://en.wikipedia.org/wiki/Aarhus_University"
+    ]
+}
