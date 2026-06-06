@@ -28,11 +28,18 @@ jobs:
 
       - name: Process issue form
         env:
-          # PAT with
-          # Contents: Read and write
-          # Issues: Read and write
-          # Pull requests: Read and write
-          GITHUB_TOKEN: "${{ secrets.FORM_ACCESS_TOKEN }}"
+          # The workflow's own `permissions:` block already grants
+          # contents/issues/pull-requests write, so the built-in
+          # GITHUB_TOKEN is sufficient. A PAT (`FORM_ACCESS_TOKEN`) was
+          # used previously but it fails with HTTP 403
+          # "Resource not accessible by personal access token" whenever
+          # it expires, loses its SSO grant for WCRP-CMIP, or drops
+          # CMIP7-CVs from its selected-repo list -- producing silent
+          # registration-pipeline outages (see issue queue 2026-06-05+).
+          # Trade-off: PRs opened by GITHUB_TOKEN do not retrigger
+          # workflows by default; if registration PRs need automatic CI,
+          # use a `pull_request_target` workflow or a deploy-key push.
+          GITHUB_TOKEN: "${{ secrets.GITHUB_TOKEN }}"
           GITHUB_REPOSITORY: ${{ github.repository }}
           GITHUB_EVENT_PATH: ${{ github.event_path }}
         run: >
