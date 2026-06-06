@@ -28,11 +28,10 @@ jobs:
 
       - name: Process issue form
         env:
-          # PAT with
-          # Contents: Read and write
-          # Issues: Read and write
-          # Pull requests: Read and write
-          GITHUB_TOKEN: "${{ secrets.FORM_ACCESS_TOKEN }}"
+          # If we want more control, revert to this.
+          # Try the below for now.
+          # GITHUB_TOKEN: "${{ secrets.FORM_ACCESS_TOKEN }}"
+          GITHUB_TOKEN: "${{ secrets.GITHUB_TOKEN }}"
           GITHUB_REPOSITORY: ${{ github.repository }}
           GITHUB_EVENT_PATH: ${{ github.event_path }}
         run: >
