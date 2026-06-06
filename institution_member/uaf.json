@@ -1,0 +1,28 @@
+{
+    "@context": "000_context.jsonld",
+    "id": "uaf",
+    "type": "institution",
+    "drs_name": "UAF",
+    "acronyms": [
+        "UAF"
+    ],
+    "labels": [
+        "Universidad de Alaska Fairbanks",
+        "University of Alaska Fairbanks",
+        "Universit\u00e9 de l'alaska \u00e0 fairbanks"
+    ],
+    "description": "University of Alaska Fairbanks",
+    "location": [
+        {
+            "city": "Fairbanks",
+            "country": "United States",
+            "lat": 64.83778,
+            "lon": -147.71639
+        }
+    ],
+    "ror": "01j7nq853",
+    "urls": [
+        "http://www.uaf.edu/",
+        "http://en.wikipedia.org/wiki/University_of_Alaska_Fairbanks"
+    ]
+}
