@@ -1,0 +1,10 @@
+{
+    "@context": "000_context.jsonld",
+    "id": "uaf",
+    "type": "organisation",
+    "drs_name": "UAF",
+    "members": [
+        "uaf"
+    ],
+    "description": "University of Alaska Fairbanks"
+}
