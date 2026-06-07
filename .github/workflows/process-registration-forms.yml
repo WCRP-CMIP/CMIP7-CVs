@@ -33,14 +33,22 @@ jobs:
           # GITHUB_TOKEN: "${{ secrets.FORM_ACCESS_TOKEN }}"
           GITHUB_TOKEN: "${{ secrets.GITHUB_TOKEN }}"
           # Token authorising pull requests into the WCRP universe repository.
-          UNIVERSE_ACCESS_TOKEN: "${{ secrets.UNIVERSE_ACCESS_TOKEN }}"
+          # UNIVERSE_ACCESS_TOKEN: "${{ secrets.UNIVERSE_ACCESS_TOKEN }}"
+          # TODO: switch back to the above once I can push to WCRP-CMIP universe
+          # using my fork for testing
+          UNIVERSE_ACCESS_TOKEN: "${{ secrets.UNIVERSE_ZNICHOLLSCR_ACCESS_TOKEN }}"
           GITHUB_REPOSITORY: ${{ github.repository }}
           GITHUB_EVENT_PATH: ${{ github.event_path }}
         run: >
+          # For testing, open the universe pull request in a fork (write access to
+          # WCRP-CMIP/WCRP-universe is not yet available). Swap the commented lines
+          # back once that access exists.
+          UNIVERSE_REPOSITORY="https://github.com/znichollscr/WCRP-universe"
+          # UNIVERSE_REPOSITORY="https://github.com/WCRP-CMIP/WCRP-universe"
           python -m github_form_processor
           --cmip7-repository "${{ github.server_url }}/${{ github.repository }}"
           --pr-base-branch esgvoc_dev
-          --universe-repository https://github.com/WCRP-CMIP/WCRP-universe
+          --universe-repository "${UNIVERSE_REPOSITORY}"
           --universe-base-branch esgvoc_dev
           --experiment-output-dir experiment
           --activity-output-dir activity

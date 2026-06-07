@@ -70,6 +70,9 @@ jobs:
 
       - name: Process issue form
         env:
+          # If we want more control, revert to this.
+          # Try the below for now.
+          # GITHUB_TOKEN: "${{ secrets.FORM_ACCESS_TOKEN }}"
           GITHUB_TOKEN: "${{ secrets.GITHUB_TOKEN }}"
           # Token authorising pull requests into the WCRP universe repository.
           # UNIVERSE_ACCESS_TOKEN: "${{ secrets.UNIVERSE_ACCESS_TOKEN }}"
