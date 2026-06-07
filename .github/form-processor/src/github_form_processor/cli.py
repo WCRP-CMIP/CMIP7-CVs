@@ -30,11 +30,11 @@ ASSIGNEES = ["znichollscr", "ltroussellier"]
 
 
 def repository_slug(value: str) -> str:
-    """Normalise a repository reference to an ``owner/name`` slug.
+    """Normalise a repository reference to an `owner/name` slug.
 
-    Accepts either an ``owner/name`` slug or a full URL such as
-    ``https://github.com/owner/name`` (optionally with a trailing slash or a
-    ``.git`` suffix).
+    Accepts either an `owner/name` slug or a full URL such as
+    `https://github.com/owner/name` (optionally with a trailing slash or a
+    `.git` suffix).
     """
     text = value.strip().rstrip("/").removesuffix(".git")
     if "://" in text:

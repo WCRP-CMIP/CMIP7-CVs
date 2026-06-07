@@ -1,33 +1,31 @@
 name: Test registration form processing
 
 # This mirrors `process-registration-forms.yml`, but instead of reacting to a real
-# issue event it reconstructs the event payload for a single, hard-coded issue. This
-# makes it possible to exercise the form processor from a pull request (before merging
-# into `main`) and to trigger a run on demand rather than waiting for an issue to be
-# created or edited.
+# issue event it reconstructs the event payload for a single issue. This makes it
+# possible to exercise the form processor on demand rather than waiting for an issue
+# to be created or edited.
 #
-# To test a different issue either edit `DEFAULT_ISSUE_NUMBER` below, or run the
-# workflow manually from the Actions tab (or `gh workflow run`) and supply the
-# `issue_number` input.
+# Run it manually from the Actions tab, or with the GitHub CLI. Use `--ref` to pick
+# which branch's version of the workflow runs, and `-f` to supply the input, e.g. to
+# run the `update-forms` branch's workflow against issue 444:
+#
+#   gh workflow run test-registration-forms.yml --ref update-forms -f issue_number=444
+#
+# Note: GitHub only exposes the workflow_dispatch trigger once this file exists on the
+# repository's default branch; `--ref` then selects which branch's version is run.
 
 on:
-  pull_request:
   workflow_dispatch:
     inputs:
       issue_number:
-        description: "Issue number to process (overrides DEFAULT_ISSUE_NUMBER)."
-        required: false
+        description: "Issue number to process."
+        required: true
         type: string
 
 permissions:
   contents: write
   issues: write
   pull-requests: write
-
-env:
-  # The issue processed by automatic pull_request runs. Change this by hand to
-  # point the test at a different registration issue.
-  DEFAULT_ISSUE_NUMBER: "444"
 
 jobs:
   test-registration-form:
@@ -47,10 +45,9 @@ jobs:
       - name: Build event payload for the issue
         env:
           GH_TOKEN: "${{ secrets.GITHUB_TOKEN }}"
-          INPUT_ISSUE_NUMBER: "${{ github.event.inputs.issue_number }}"
+          ISSUE_NUMBER: "${{ inputs.issue_number }}"
         run: |
           set -euo pipefail
-          ISSUE_NUMBER="${INPUT_ISSUE_NUMBER:-$DEFAULT_ISSUE_NUMBER}"
           echo "Processing issue #${ISSUE_NUMBER}"
           # Fetch the issue and wrap it in an event payload. Treat the run like an
           # "edited" event so re-running updates the existing registration pull
