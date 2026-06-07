@@ -47,18 +47,22 @@ def format_validation_comment(errors: list[str], notes: list[str] | None = None)
 
 
 def format_success_comment(
-    pull_request_url: str,
-    pull_request_number: int,
+    pull_requests: list[dict[str, object]],
     notes: list[str],
-    *,
-    updated: bool,
 ) -> str:
-    """Format a success comment for the source issue."""
-    action = "Updated" if updated else "Created"
-    lines = [
-        f"{action} [pull request #{pull_request_number}]({pull_request_url}) "
-        "for further review and iteration.",
-    ]
+    """Format a success comment for the source issue.
+
+    `pull_requests` is a list of mappings, one per opened or updated pull
+    request, each with `repository`, `number`, `html_url` and `updated` keys.
+    """
+    lines: list[str] = []
+    for pull_request in pull_requests:
+        action = "Updated" if pull_request["updated"] else "Created"
+        lines.append(
+            f"{action} [pull request #{pull_request['number']}]"
+            f"({pull_request['html_url']}) in `{pull_request['repository']}` "
+            "for further review and iteration."
+        )
     if notes:
         lines.extend(["", "Notes:"])
         lines.extend(f"- {note}" for note in notes)

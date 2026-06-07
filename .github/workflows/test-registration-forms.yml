@@ -1,0 +1,82 @@
+name: Test registration form processing
+
+# This mirrors `process-registration-forms.yml`, but instead of reacting to a real
+# issue event it reconstructs the event payload for a single, hard-coded issue. This
+# makes it possible to exercise the form processor on a branch (before merging into
+# `main`) and to trigger a run on demand rather than waiting for an issue to be
+# created or edited.
+#
+# To test a different issue either edit `DEFAULT_ISSUE_NUMBER` below, or run the
+# workflow manually from the Actions tab (or `gh workflow run`) and supply the
+# `issue_number` input.
+
+on:
+  push:
+    branches-ignore:
+      - main
+  pull_request:
+  workflow_dispatch:
+    inputs:
+      issue_number:
+        description: "Issue number to process (overrides DEFAULT_ISSUE_NUMBER)."
+        required: false
+        type: string
+
+permissions:
+  contents: write
+  issues: write
+  pull-requests: write
+
+env:
+  # The issue processed by automatic push/pull_request runs. Change this by hand to
+  # point the test at a different registration issue.
+  DEFAULT_ISSUE_NUMBER: "1"
+
+jobs:
+  test-registration-form:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Install form processor
+        run: python -m pip install .github/form-processor
+
+      - name: Build event payload for the issue
+        env:
+          GH_TOKEN: "${{ secrets.GITHUB_TOKEN }}"
+          INPUT_ISSUE_NUMBER: "${{ github.event.inputs.issue_number }}"
+        run: |
+          ISSUE_NUMBER="${INPUT_ISSUE_NUMBER:-$DEFAULT_ISSUE_NUMBER}"
+          echo "Processing issue #${ISSUE_NUMBER}"
+          gh api "repos/${GITHUB_REPOSITORY}/issues/${ISSUE_NUMBER}" > issue.json
+          # Treat the run like an "edited" event so re-running updates the existing
+          # registration pull request instead of failing once it exists.
+          jq -n --slurpfile issue issue.json \
+            '{action: "edited", issue: $issue[0]}' > event.json
+
+      - name: Process issue form
+        env:
+          GITHUB_TOKEN: "${{ secrets.GITHUB_TOKEN }}"
+          # Token authorising pull requests into the WCRP universe repository.
+          UNIVERSE_ACCESS_TOKEN: "${{ secrets.UNIVERSE_ACCESS_TOKEN }}"
+          GITHUB_REPOSITORY: ${{ github.repository }}
+          GITHUB_EVENT_PATH: ${{ github.workspace }}/event.json
+        run: >
+          python -m github_form_processor
+          --cmip7-repository "${{ github.repository }}"
+          --pr-base-branch esgvoc_dev
+          --universe-repository WCRP-CMIP/WCRP-universe
+          --universe-base-branch main
+          --experiment-output-dir experiment
+          --activity-output-dir activity
+          --institution-output-dir institution
+          --universe-organisation-dir organisation
+          --universe-institution-dir institution
+          --wcrp-universe-url https://raw.githubusercontent.com/WCRP-CMIP/WCRP-universe/main
+          --cmip7-cvs-path "${{ github.workspace }}"

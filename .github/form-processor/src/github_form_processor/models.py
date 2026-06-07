@@ -302,7 +302,7 @@ class InstitutionRegistration(RegistrationBase):
         return [_normalise_identifier(item) for item in parse_list(value)]
 
     def render_json(self) -> str:
-        """Render the institution registration as a JSON file."""
+        """Render the institution registration as a WCRP universe organisation file."""
         payload: dict[str, Any] = {
             "@context": "000_context.jsonld",
             "id": self.identifier,
@@ -310,6 +310,19 @@ class InstitutionRegistration(RegistrationBase):
             "drs_name": self.name,
             "members": self.members,
             "description": self.description,
+        }
+        return json.dumps(payload, indent=4) + "\n"
+
+    def render_cmip7_stub_json(self) -> str:
+        """Render the CMIP7-CVs institution stub referencing the organisation.
+
+        Mirrors the minimal entries already stored in the CMIP7-CVs `institution`
+        directory, which only point at the WCRP universe organisation.
+        """
+        payload: dict[str, Any] = {
+            "@context": "000_context.jsonld",
+            "id": self.identifier,
+            "type": "organisation",
         }
         return json.dumps(payload, indent=4) + "\n"
 

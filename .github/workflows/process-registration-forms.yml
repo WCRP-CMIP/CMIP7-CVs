@@ -32,14 +32,20 @@ jobs:
           # Try the below for now.
           # GITHUB_TOKEN: "${{ secrets.FORM_ACCESS_TOKEN }}"
           GITHUB_TOKEN: "${{ secrets.GITHUB_TOKEN }}"
+          # Token authorising pull requests into the WCRP universe repository.
+          UNIVERSE_ACCESS_TOKEN: "${{ secrets.UNIVERSE_ACCESS_TOKEN }}"
           GITHUB_REPOSITORY: ${{ github.repository }}
           GITHUB_EVENT_PATH: ${{ github.event_path }}
         run: >
           python -m github_form_processor
+          --cmip7-repository "${{ github.repository }}"
           --pr-base-branch esgvoc_dev
+          --universe-repository WCRP-CMIP/WCRP-universe
+          --universe-base-branch main
           --experiment-output-dir experiment
           --activity-output-dir activity
           --institution-output-dir institution
-          --institution-member-output-dir institution_member
-          --wcrp-universe-url https://raw.githubusercontent.com/WCRP-CMIP/WCRP-universe/esgvoc
+          --universe-organisation-dir organisation
+          --universe-institution-dir institution
+          --wcrp-universe-url https://raw.githubusercontent.com/WCRP-CMIP/WCRP-universe/main
           --cmip7-cvs-path "${{ github.workspace }}"
