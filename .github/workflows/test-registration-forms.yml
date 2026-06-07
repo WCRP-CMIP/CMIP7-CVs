@@ -2,8 +2,8 @@ name: Test registration form processing
 
 # This mirrors `process-registration-forms.yml`, but instead of reacting to a real
 # issue event it reconstructs the event payload for a single, hard-coded issue. This
-# makes it possible to exercise the form processor on a branch (before merging into
-# `main`) and to trigger a run on demand rather than waiting for an issue to be
+# makes it possible to exercise the form processor from a pull request (before merging
+# into `main`) and to trigger a run on demand rather than waiting for an issue to be
 # created or edited.
 #
 # To test a different issue either edit `DEFAULT_ISSUE_NUMBER` below, or run the
@@ -11,9 +11,6 @@ name: Test registration form processing
 # `issue_number` input.
 
 on:
-  push:
-    branches-ignore:
-      - main
   pull_request:
   workflow_dispatch:
     inputs:
@@ -28,7 +25,7 @@ permissions:
   pull-requests: write
 
 env:
-  # The issue processed by automatic push/pull_request runs. Change this by hand to
+  # The issue processed by automatic pull_request runs. Change this by hand to
   # point the test at a different registration issue.
   DEFAULT_ISSUE_NUMBER: "441"
 
