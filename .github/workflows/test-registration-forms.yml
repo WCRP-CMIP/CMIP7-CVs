@@ -52,13 +52,24 @@ jobs:
           GH_TOKEN: "${{ secrets.GITHUB_TOKEN }}"
           INPUT_ISSUE_NUMBER: "${{ github.event.inputs.issue_number }}"
         run: |
+          set -euo pipefail
           ISSUE_NUMBER="${INPUT_ISSUE_NUMBER:-$DEFAULT_ISSUE_NUMBER}"
           echo "Processing issue #${ISSUE_NUMBER}"
-          gh api "repos/${GITHUB_REPOSITORY}/issues/${ISSUE_NUMBER}" > issue.json
-          # Treat the run like an "edited" event so re-running updates the existing
-          # registration pull request instead of failing once it exists.
-          jq -n --slurpfile issue issue.json \
-            '{action: "edited", issue: $issue[0]}' > event.json
+          # Fetch the issue and wrap it in an event payload. Treat the run like an
+          # "edited" event so re-running updates the existing registration pull
+          # request instead of failing once it exists. pipefail ensures a failed
+          # fetch aborts the step rather than producing an empty payload.
+          gh api "repos/${GITHUB_REPOSITORY}/issues/${ISSUE_NUMBER}" \
+            | jq '{action: "edited", issue: .}' > "${GITHUB_WORKSPACE}/event.json"
+          echo "::group::event.json"
+          cat "${GITHUB_WORKSPACE}/event.json"
+          echo "::endgroup::"
+          # Fail loudly if the issue did not come through as expected.
+          got="$(jq -r '.issue.number // empty' "${GITHUB_WORKSPACE}/event.json")"
+          if [ "${got}" != "${ISSUE_NUMBER}" ]; then
+            echo "Failed to build event payload for issue #${ISSUE_NUMBER}" >&2
+            exit 1
+          fi
 
       - name: Process issue form
         env:
@@ -66,9 +77,9 @@ jobs:
           # Token authorising pull requests into the WCRP universe repository.
           UNIVERSE_ACCESS_TOKEN: "${{ secrets.UNIVERSE_ACCESS_TOKEN }}"
           GITHUB_REPOSITORY: ${{ github.repository }}
-          GITHUB_EVENT_PATH: ${{ github.workspace }}/event.json
         run: >
           python -m github_form_processor
+          --event-path "${{ github.workspace }}/event.json"
           --cmip7-repository "${{ github.repository }}"
           --pr-base-branch esgvoc_dev
           --universe-repository WCRP-CMIP/WCRP-universe
