@@ -1,0 +1,28 @@
+{
+    "@context": "000_context.jsonld",
+    "id": "crst",
+    "type": "institution",
+    "drs_name": "CRST",
+    "acronyms": [
+        "CR"
+    ],
+    "labels": [
+        "Climate Resource",
+        "Climate Resource (Australia)",
+        "Climate Resource Ltd",
+        "Climate Resource Pty Ltd"
+    ],
+    "description": "CR test registration (for testing workflows0.",
+    "location": [
+        {
+            "city": "Melbourne",
+            "country": "Australia",
+            "lat": -37.814,
+            "lon": 144.96332
+        }
+    ],
+    "ror": "01kk86953",
+    "urls": [
+        "https://www.climate-resource.com"
+    ]
+}
