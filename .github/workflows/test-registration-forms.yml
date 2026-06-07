@@ -30,7 +30,7 @@ permissions:
 env:
   # The issue processed by automatic push/pull_request runs. Change this by hand to
   # point the test at a different registration issue.
-  DEFAULT_ISSUE_NUMBER: "1"
+  DEFAULT_ISSUE_NUMBER: "441"
 
 jobs:
   test-registration-form:
