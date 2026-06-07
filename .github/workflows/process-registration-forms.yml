@@ -38,14 +38,13 @@ jobs:
           GITHUB_EVENT_PATH: ${{ github.event_path }}
         run: >
           python -m github_form_processor
-          --cmip7-repository "${{ github.repository }}"
+          --cmip7-repository "${{ github.server_url }}/${{ github.repository }}"
           --pr-base-branch esgvoc_dev
-          --universe-repository WCRP-CMIP/WCRP-universe
-          --universe-base-branch main
+          --universe-repository https://github.com/WCRP-CMIP/WCRP-universe
+          --universe-base-branch esgvoc_dev
           --experiment-output-dir experiment
           --activity-output-dir activity
           --institution-output-dir institution
           --universe-organisation-dir organisation
           --universe-institution-dir institution
-          --wcrp-universe-url https://raw.githubusercontent.com/WCRP-CMIP/WCRP-universe/main
           --cmip7-cvs-path "${{ github.workspace }}"

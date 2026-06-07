@@ -21,28 +21,31 @@ The GitHub Actions workflow installs this package and runs
 
 ```sh
 python -m github_form_processor \
-  --cmip7-repository "${GITHUB_REPOSITORY}" \
+  --cmip7-repository https://github.com/WCRP-CMIP/CMIP7-CVs \
   --pr-base-branch esgvoc_dev \
-  --universe-repository WCRP-CMIP/WCRP-universe \
-  --universe-base-branch main \
+  --universe-repository https://github.com/WCRP-CMIP/WCRP-universe \
+  --universe-base-branch esgvoc_dev \
   --experiment-output-dir experiment \
   --activity-output-dir activity \
   --institution-output-dir institution \
   --universe-organisation-dir organisation \
   --universe-institution-dir institution \
-  --wcrp-universe-url https://raw.githubusercontent.com/WCRP-CMIP/WCRP-universe/main \
   --cmip7-cvs-path "${GITHUB_WORKSPACE}"
 ```
 
 against the issue event payload supplied by GitHub.
 
 The repositories and base branches are passed in from the workflow so that no
-repository identity is hard-coded in this package. `GITHUB_TOKEN` authorises
-pull requests into the CMIP7-CVs repository, while `UNIVERSE_ACCESS_TOKEN`
-authorises pull requests into the WCRP universe repository.
+repository identity is hard-coded in this package. `--cmip7-repository` and
+`--universe-repository` accept either a full URL or an `owner/name` slug.
+`GITHUB_TOKEN` authorises pull requests into the CMIP7-CVs repository, while
+`UNIVERSE_ACCESS_TOKEN` authorises pull requests into the WCRP universe
+repository.
 
-To check CMIP7 CV entries from a remote URL instead of a local checkout, use
-`--cmip7-cvs-url https://example.test/CMIP7-CVs`. That option is ignored when
+The WCRP universe CV lookup URL is derived from `--universe-repository` and
+`--universe-base-branch`, so the universe repository is configured in a single
+place. To check CMIP7 CV entries from a remote URL instead of a local checkout,
+use `--cmip7-cvs-url https://example.test/CMIP7-CVs`. That option is ignored when
 `--cmip7-cvs-path` is set.
 
 ## Registration targets
@@ -69,8 +72,8 @@ registration/{experiment|activity|institution|institution-member}-{issue-number}
 ```
 
 New issue submissions create a pull request per target repository. CMIP7-CVs
-pull requests target the `esgvoc_dev` branch and WCRP universe pull requests
-target `main`. Edits update the existing branches and pull requests.
+and WCRP universe pull requests both target the `esgvoc_dev` branch. Edits
+update the existing branches and pull requests.
 If an edited issue has no open registration pull request,
 the processor opens a new one.
 

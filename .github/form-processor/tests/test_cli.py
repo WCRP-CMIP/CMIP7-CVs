@@ -9,6 +9,7 @@ from github_form_processor.cli import (
     RepoTarget,
     _process_registration,
     app,
+    repository_slug,
 )
 from github_form_processor.github_api import GitHubApiError
 from github_form_processor.processor import (
@@ -58,9 +59,11 @@ def test_process_accepts_repository_and_directory_options(tmp_path, monkeypatch)
             "--event-path",
             str(event_path),
             "--cmip7-repository",
-            CMIP7_REPO,
+            "https://github.com/WCRP-CMIP/CMIP7-CVs",
             "--universe-repository",
-            UNIVERSE_REPO,
+            "https://github.com/WCRP-CMIP/WCRP-universe",
+            "--universe-base-branch",
+            "esgvoc_dev",
             "--experiment-output-dir",
             "custom-experiments",
             "--activity-output-dir",
@@ -71,8 +74,6 @@ def test_process_accepts_repository_and_directory_options(tmp_path, monkeypatch)
             "custom-organisations",
             "--universe-institution-dir",
             "custom-members",
-            "--wcrp-universe-url",
-            "https://example.test/wcrp-universe/custom",
             "--cmip7-cvs-url",
             "https://example.test/cmip7-cvs/custom",
             "--cmip7-cvs-path",
@@ -81,6 +82,7 @@ def test_process_accepts_repository_and_directory_options(tmp_path, monkeypatch)
     )
 
     assert result.exit_code == 0
+    # Full URLs are normalised to owner/name slugs.
     assert call["cmip7_repository"] == CMIP7_REPO
     assert call["universe_repository"] == UNIVERSE_REPO
     assert call["experiment_output_dir"] == "custom-experiments"
@@ -88,11 +90,30 @@ def test_process_accepts_repository_and_directory_options(tmp_path, monkeypatch)
     assert call["institution_output_dir"] == "custom-institutions"
     assert call["universe_organisation_dir"] == "custom-organisations"
     assert call["universe_institution_dir"] == "custom-members"
+    # The universe CV URL is derived from the universe repository and base branch.
     assert call["cv_client"].wcrp_universe_url == (
-        "https://example.test/wcrp-universe/custom"
+        "https://raw.githubusercontent.com/WCRP-CMIP/WCRP-universe/esgvoc_dev"
     )
     assert call["cv_client"].cmip7_cvs_url == "https://example.test/cmip7-cvs/custom"
     assert call["cv_client"].cmip7_cvs_path == tmp_path.resolve()
+
+
+@pytest.mark.parametrize(
+    ("value", "expected"),
+    [
+        ("WCRP-CMIP/WCRP-universe", "WCRP-CMIP/WCRP-universe"),
+        ("https://github.com/WCRP-CMIP/WCRP-universe", "WCRP-CMIP/WCRP-universe"),
+        ("https://github.com/WCRP-CMIP/WCRP-universe/", "WCRP-CMIP/WCRP-universe"),
+        ("https://github.com/WCRP-CMIP/WCRP-universe.git", "WCRP-CMIP/WCRP-universe"),
+    ],
+)
+def test_repository_slug_normalises_urls_and_slugs(value, expected):
+    assert repository_slug(value) == expected
+
+
+def test_repository_slug_rejects_unparseable_value():
+    with pytest.raises(ValueError, match="repository slug"):
+        repository_slug("not-a-repository")
 
 
 def test_opened_registration_opens_single_pull_request():

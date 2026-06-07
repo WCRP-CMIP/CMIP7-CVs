@@ -6,6 +6,7 @@ import json
 import os
 from dataclasses import dataclass
 from pathlib import Path
+from urllib.parse import urlsplit
 
 import typer
 
@@ -28,6 +29,22 @@ app = typer.Typer(no_args_is_help=True)
 ASSIGNEES = ["znichollscr", "ltroussellier"]
 
 
+def repository_slug(value: str) -> str:
+    """Normalise a repository reference to an ``owner/name`` slug.
+
+    Accepts either an ``owner/name`` slug or a full URL such as
+    ``https://github.com/owner/name`` (optionally with a trailing slash or a
+    ``.git`` suffix).
+    """
+    text = value.strip().rstrip("/").removesuffix(".git")
+    if "://" in text:
+        text = urlsplit(text).path
+    segments = [segment for segment in text.split("/") if segment]
+    if len(segments) < 2:
+        raise ValueError(f"Could not parse a repository slug from {value!r}.")
+    return f"{segments[-2]}/{segments[-1]}"
+
+
 @dataclass(frozen=True)
 class RepoTarget:
     """A resolved repository to open a registration pull request in."""
@@ -47,7 +64,7 @@ def process_issue_form(
         None,
         "--cmip7-repository",
         help=(
-            "Full owner/name slug of the CMIP7-CVs repository. "
+            "URL or owner/name slug of the CMIP7-CVs repository. "
             "Defaults to GITHUB_REPOSITORY."
         ),
     ),
@@ -57,14 +74,18 @@ def process_issue_form(
         help="Base branch for pull requests opened in the CMIP7-CVs repository.",
     ),
     universe_repository: str = typer.Option(
-        "WCRP-CMIP/WCRP-universe",
+        "https://github.com/WCRP-CMIP/WCRP-universe",
         "--universe-repository",
-        help="Full owner/name slug of the WCRP universe repository.",
+        help="URL or owner/name slug of the WCRP universe repository.",
     ),
     universe_base_branch: str = typer.Option(
-        "main",
+        "esgvoc_dev",
         "--universe-base-branch",
-        help="Base branch for pull requests opened in the WCRP universe repository.",
+        help=(
+            "Base branch for pull requests opened in the WCRP universe repository. "
+            "The WCRP universe CV lookup URL is derived from --universe-repository "
+            "and this branch."
+        ),
     ),
     experiment_output_dir: str = typer.Option(
         "experiment",
@@ -95,11 +116,6 @@ def process_issue_form(
         False,
         "--skip-external-checks",
         help="Skip CV and URL checks.",
-    ),
-    wcrp_universe_url: str = typer.Option(
-        "https://raw.githubusercontent.com/WCRP-CMIP/WCRP-universe/main",
-        "--wcrp-universe-url",
-        help="URL root for WCRP universe CV JSON files.",
     ),
     cmip7_cvs_url: str = typer.Option(
         "https://raw.githubusercontent.com/WCRP-CMIP/CMIP7-CVs/esgvoc",
@@ -133,6 +149,20 @@ def process_issue_form(
             err=True,
         )
         raise typer.Exit(2)
+
+    try:
+        cmip7_repository = repository_slug(cmip7_repository)
+        universe_repository = repository_slug(universe_repository)
+    except ValueError as exc:
+        typer.echo(str(exc), err=True)
+        raise typer.Exit(2) from exc
+
+    # The WCRP universe CV lookup URL is derived from the universe repository and
+    # its base branch, so the repository is configured in a single place.
+    wcrp_universe_url = (
+        f"https://raw.githubusercontent.com/{universe_repository}/"
+        f"{universe_base_branch}"
+    )
 
     preparation = prepare_registration(
         issue=issue,
