@@ -15,6 +15,8 @@ name: Test registration form processing
 # repository's default branch; `--ref` then selects which branch's version is run.
 
 on:
+  # Can be helpful for testing
+  pull_request:
   workflow_dispatch:
     inputs:
       issue_number:
@@ -26,6 +28,12 @@ permissions:
   contents: write
   issues: write
   pull-requests: write
+
+env:
+  # The issue processed by automatic pull_request runs. Change this by hand to
+  # point the test at a different registration issue.
+  DEFAULT_ISSUE_NUMBER: "441"
+  # DEFAULT_ISSUE_NUMBER: "444"
 
 jobs:
   test-registration-form:
@@ -45,9 +53,10 @@ jobs:
       - name: Build event payload for the issue
         env:
           GH_TOKEN: "${{ secrets.GITHUB_TOKEN }}"
-          ISSUE_NUMBER: "${{ inputs.issue_number }}"
+          INPUT_ISSUE_NUMBER: "${{ github.event.inputs.issue_number }}"
         run: |
           set -euo pipefail
+          ISSUE_NUMBER="${INPUT_ISSUE_NUMBER:-$DEFAULT_ISSUE_NUMBER}"
           echo "Processing issue #${ISSUE_NUMBER}"
           # Fetch the issue and wrap it in an event payload. Treat the run like an
           # "edited" event so re-running updates the existing registration pull
@@ -72,17 +81,16 @@ jobs:
           # GITHUB_TOKEN: "${{ secrets.FORM_ACCESS_TOKEN }}"
           GITHUB_TOKEN: "${{ secrets.GITHUB_TOKEN }}"
           # Token authorising pull requests into the WCRP universe repository.
-          # UNIVERSE_ACCESS_TOKEN: "${{ secrets.UNIVERSE_ACCESS_TOKEN }}"
-          # TODO: switch back to the above once I can push to WCRP-CMIP universe
-          # using my fork for testing
-          UNIVERSE_ACCESS_TOKEN: "${{ secrets.UNIVERSE_ZNICHOLLSCR_ACCESS_TOKEN }}"
+          UNIVERSE_ACCESS_TOKEN: "${{ secrets.UNIVERSE_ACCESS_TOKEN }}"
+          # Use the fork for testing if universe access token isn't working
+          # UNIVERSE_ACCESS_TOKEN: "${{ secrets.UNIVERSE_ZNICHOLLSCR_ACCESS_TOKEN }}"
           GITHUB_REPOSITORY: ${{ github.repository }}
         run: |
           # For testing, open the universe pull request in a fork (write access to
           # WCRP-CMIP/WCRP-universe is not yet available). Swap the commented lines
           # back once that access exists.
-          UNIVERSE_REPOSITORY="https://github.com/znichollscr/WCRP-universe"
-          # UNIVERSE_REPOSITORY="https://github.com/WCRP-CMIP/WCRP-universe"
+          # UNIVERSE_REPOSITORY="https://github.com/znichollscr/WCRP-universe"
+          UNIVERSE_REPOSITORY="https://github.com/WCRP-CMIP/WCRP-universe"
           python -m github_form_processor \
             --event-path "${{ github.workspace }}/event.json" \
             --cmip7-repository "${{ github.server_url }}/${{ github.repository }}" \
