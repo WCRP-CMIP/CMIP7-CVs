@@ -39,13 +39,32 @@ INSTITUTION_MEMBER_LABEL = "registration: institution-member"
 
 
 @dataclass(frozen=True)
+class RegistrationOutput:
+    """A single file to commit, and the repository it belongs in.
+
+    `repository` is the full GitHub `owner/name` slug. It is supplied by the
+    caller (ultimately the workflow, via the CLI) so that no repository identity
+    is hard-coded in this package.
+    """
+
+    repository: str
+    path: str
+    content: str
+
+
+@dataclass(frozen=True)
 class PreparedRegistration:
-    """A validated registration ready to commit to a pull request."""
+    """A validated registration ready to commit to one or more pull requests.
+
+    A registration may produce files in more than one repository (for example an
+    institution writes the organisation entry to the WCRP universe and a stub to
+    the CMIP7-CVs `institution` directory). The CLI groups `outputs` by
+    repository and opens one pull request per repository.
+    """
 
     kind: str
     identifier: str
-    output_path: str
-    content: str
+    outputs: list[RegistrationOutput]
     pull_request_title: str
     commit_message: str
     notes: list[str]
@@ -63,16 +82,24 @@ class RegistrationPreparationResult:
 def prepare_registration(
     *,
     issue: dict[str, Any],
+    cmip7_repository: str,
+    universe_repository: str,
     experiment_output_dir: str,
     activity_output_dir: str,
     institution_output_dir: str = "institution",
-    institution_member_output_dir: str = "institution_member",
+    universe_organisation_dir: str = "organisation",
+    universe_institution_dir: str = "institution",
     external_checks: bool = True,
     cv_client: CvClient | None = None,
     url_checker: UrlChecker | None = None,
     ror_client: RorClient | None = None,
 ) -> RegistrationPreparationResult:
     """Prepare a registration from a GitHub issue payload.
+
+    `cmip7_repository` and `universe_repository` are the full `owner/name` slugs
+    of the CMIP7-CVs and WCRP universe repositories. They are supplied by the
+    caller so that registrations can be routed to the right repository without
+    hard-coding repository identity here.
 
     Returns a `RegistrationPreparationResult` with the prepared registration,
     blocking validation errors, and non-blocking notes. If the issue is not a
@@ -116,10 +143,15 @@ def prepare_registration(
             prepared = PreparedRegistration(
                 kind=kind,
                 identifier=experiment.identifier,
-                output_path=format_output_path(
-                    experiment_output_dir, experiment.identifier
-                ),
-                content=experiment.render_json(),
+                outputs=[
+                    RegistrationOutput(
+                        repository=cmip7_repository,
+                        path=format_output_path(
+                            experiment_output_dir, experiment.identifier
+                        ),
+                        content=experiment.render_json(),
+                    )
+                ],
                 pull_request_title=format_registration_title(
                     kind, experiment.identifier
                 ),
@@ -141,10 +173,15 @@ def prepare_registration(
             prepared = PreparedRegistration(
                 kind=kind,
                 identifier=activity.identifier,
-                output_path=format_output_path(
-                    activity_output_dir, activity.identifier
-                ),
-                content=activity.render_json(),
+                outputs=[
+                    RegistrationOutput(
+                        repository=cmip7_repository,
+                        path=format_output_path(
+                            activity_output_dir, activity.identifier
+                        ),
+                        content=activity.render_json(),
+                    )
+                ],
                 pull_request_title=format_registration_title(kind, activity.identifier),
                 commit_message=format_registration_commit_message(
                     kind, activity.identifier
@@ -158,10 +195,22 @@ def prepare_registration(
             prepared = PreparedRegistration(
                 kind=kind,
                 identifier=institution.identifier,
-                output_path=format_output_path(
-                    institution_output_dir, institution.identifier
-                ),
-                content=institution.render_json(),
+                outputs=[
+                    RegistrationOutput(
+                        repository=universe_repository,
+                        path=format_output_path(
+                            universe_organisation_dir, institution.identifier
+                        ),
+                        content=institution.render_json(),
+                    ),
+                    RegistrationOutput(
+                        repository=cmip7_repository,
+                        path=format_output_path(
+                            institution_output_dir, institution.identifier
+                        ),
+                        content=institution.render_cmip7_stub_json(),
+                    ),
+                ],
                 pull_request_title=format_registration_title(
                     kind, institution.identifier
                 ),
@@ -190,10 +239,15 @@ def prepare_registration(
             prepared = PreparedRegistration(
                 kind=kind,
                 identifier=member.identifier,
-                output_path=format_output_path(
-                    institution_member_output_dir, member.identifier
-                ),
-                content=member.render_json(),
+                outputs=[
+                    RegistrationOutput(
+                        repository=universe_repository,
+                        path=format_output_path(
+                            universe_institution_dir, member.identifier
+                        ),
+                        content=member.render_json(),
+                    )
+                ],
                 pull_request_title=format_registration_title(
                     kind, member.identifier
                 ),

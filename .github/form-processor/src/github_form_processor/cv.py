@@ -17,9 +17,6 @@ from github_form_processor.models import (
     InstitutionRegistration,
 )
 
-CMIP7_CVS_URL = "https://raw.githubusercontent.com/WCRP-CMIP/CMIP7-CVs/esgvoc"
-WCRP_UNIVERSE_URL = "https://raw.githubusercontent.com/WCRP-CMIP/WCRP-universe/esgvoc"
-
 
 @dataclass(frozen=True)
 class JsonLookup:
@@ -55,8 +52,10 @@ class RorLookup:
 class CvClient:
     """Client for reading JSON files from configured CV repositories."""
 
-    wcrp_universe_url: str = WCRP_UNIVERSE_URL
-    cmip7_cvs_url: str = CMIP7_CVS_URL
+    wcrp_universe_url: str = (
+        "https://raw.githubusercontent.com/WCRP-CMIP/WCRP-universe/esgvoc_dev"
+    )
+    cmip7_cvs_url: str = "https://raw.githubusercontent.com/WCRP-CMIP/CMIP7-CVs/esgvoc"
     cmip7_cvs_path: Path | None = None
     timeout: int = 15
 

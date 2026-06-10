@@ -7,6 +7,9 @@ import pytest
 from github_form_processor.cv import CvClient, JsonLookup, RorLookup, UrlCheck
 from github_form_processor.processor import prepare_registration
 
+CMIP7_REPO = "WCRP-CMIP/CMIP7-CVs"
+UNIVERSE_REPO = "WCRP-CMIP/WCRP-universe"
+
 
 class FakeRorClient:
     """Fake ROR client for deterministic tests."""
@@ -87,6 +90,8 @@ def test_prepare_experiment_registration_renders_superset_json():
 
     result = prepare_registration(
         issue=issue,
+        cmip7_repository=CMIP7_REPO,
+        universe_repository=UNIVERSE_REPO,
         experiment_output_dir="experiment",
         activity_output_dir="activity",
         cv_client=cv_client,
@@ -95,8 +100,10 @@ def test_prepare_experiment_registration_renders_superset_json():
     assert result.validation_errors == []
     assert result.notes == []
     assert result.prepared is not None
-    assert result.prepared.output_path == "experiment/my-experiment.json"
-    payload = json.loads(result.prepared.content)
+    assert len(result.prepared.outputs) == 1
+    assert result.prepared.outputs[0].repository == CMIP7_REPO
+    assert result.prepared.outputs[0].path == "experiment/my-experiment.json"
+    payload = json.loads(result.prepared.outputs[0].content)
     assert payload == {
         "@context": "000_context.jsonld",
         "id": "my-experiment",
@@ -139,6 +146,8 @@ def test_prepare_experiment_rejects_min_years_longer_than_date_span():
 
     result = prepare_registration(
         issue=issue,
+        cmip7_repository=CMIP7_REPO,
+        universe_repository=UNIVERSE_REPO,
         experiment_output_dir="experiment",
         activity_output_dir="activity",
         external_checks=False,
@@ -173,6 +182,8 @@ def test_prepare_experiment_raises_for_non_calendar_year_date_span():
     with pytest.raises(NotImplementedError, match=r"1 January.*31 December"):
         prepare_registration(
             issue=issue,
+            cmip7_repository=CMIP7_REPO,
+            universe_repository=UNIVERSE_REPO,
             experiment_output_dir="experiment",
             activity_output_dir="activity",
             external_checks=False,
@@ -204,6 +215,8 @@ def test_prepare_experiment_uses_configured_cv_client():
 
     result = prepare_registration(
         issue=issue,
+        cmip7_repository=CMIP7_REPO,
+        universe_repository=UNIVERSE_REPO,
         experiment_output_dir="experiment",
         activity_output_dir="activity",
         cv_client=cv_client,
@@ -242,6 +255,8 @@ def test_prepare_experiment_errors_missing_parent_activity_with_parent_experimen
 
     result = prepare_registration(
         issue=issue,
+        cmip7_repository=CMIP7_REPO,
+        universe_repository=UNIVERSE_REPO,
         experiment_output_dir="experiment",
         activity_output_dir="activity",
         cv_client=cv_client,
@@ -283,6 +298,8 @@ def test_prepare_experiment_notes_parent_cv_entry_missing_activity():
 
     result = prepare_registration(
         issue=issue,
+        cmip7_repository=CMIP7_REPO,
+        universe_repository=UNIVERSE_REPO,
         experiment_output_dir="experiment",
         activity_output_dir="activity",
         cv_client=cv_client,
@@ -314,6 +331,8 @@ def test_prepare_experiment_allows_missing_required_model_components():
 
     result = prepare_registration(
         issue=issue,
+        cmip7_repository=CMIP7_REPO,
+        universe_repository=UNIVERSE_REPO,
         experiment_output_dir="experiment",
         activity_output_dir="activity",
         external_checks=False,
@@ -322,7 +341,10 @@ def test_prepare_experiment_allows_missing_required_model_components():
     assert result.validation_errors == []
     assert result.notes == []
     assert result.prepared is not None
-    assert json.loads(result.prepared.content)["required_model_components"] == []
+    assert (
+        json.loads(result.prepared.outputs[0].content)["required_model_components"]
+        == []
+    )
 
 
 @pytest.mark.parametrize(
@@ -369,6 +391,8 @@ def test_prepare_registration_rejects_overlong_names(
 
     result = prepare_registration(
         issue=issue,
+        cmip7_repository=CMIP7_REPO,
+        universe_repository=UNIVERSE_REPO,
         experiment_output_dir="experiment",
         activity_output_dir="activity",
         external_checks=False,
@@ -405,6 +429,8 @@ def test_prepare_activity_blocks_inaccessible_reference_url():
 
     result = prepare_registration(
         issue=issue,
+        cmip7_repository=CMIP7_REPO,
+        universe_repository=UNIVERSE_REPO,
         experiment_output_dir="experiment",
         activity_output_dir="activity",
         cv_client=cv_client,
@@ -436,6 +462,8 @@ def test_prepare_activity_renders_json():
 
     result = prepare_registration(
         issue=issue,
+        cmip7_repository=CMIP7_REPO,
+        universe_repository=UNIVERSE_REPO,
         experiment_output_dir="experiment",
         activity_output_dir="activity",
         external_checks=False,
@@ -444,8 +472,10 @@ def test_prepare_activity_renders_json():
     assert result.validation_errors == []
     assert result.notes == []
     assert result.prepared is not None
-    assert result.prepared.output_path == "activity/myactivity.json"
-    assert json.loads(result.prepared.content) == {
+    assert len(result.prepared.outputs) == 1
+    assert result.prepared.outputs[0].repository == CMIP7_REPO
+    assert result.prepared.outputs[0].path == "activity/myactivity.json"
+    assert json.loads(result.prepared.outputs[0].content) == {
         "@context": "000_context.jsonld",
         "id": "myactivity",
         "type": "activity",
@@ -474,6 +504,8 @@ def test_prepare_activity_can_check_cmip7_cvs_from_local_path(tmp_path):
 
     result = prepare_registration(
         issue=issue,
+        cmip7_repository=CMIP7_REPO,
+        universe_repository=UNIVERSE_REPO,
         experiment_output_dir="experiment",
         activity_output_dir="activity",
         cv_client=CvClient(cmip7_cvs_path=tmp_path),
@@ -501,6 +533,8 @@ def test_prepare_institution_renders_json():
 
     result = prepare_registration(
         issue=issue,
+        cmip7_repository=CMIP7_REPO,
+        universe_repository=UNIVERSE_REPO,
         experiment_output_dir="experiment",
         activity_output_dir="activity",
         external_checks=False,
@@ -509,14 +543,27 @@ def test_prepare_institution_renders_json():
     assert result.validation_errors == []
     assert result.notes == []
     assert result.prepared is not None
-    assert result.prepared.output_path == "institution/cnrm-cerfacs.json"
-    assert json.loads(result.prepared.content) == {
+    assert len(result.prepared.outputs) == 2
+
+    universe_output = result.prepared.outputs[0]
+    assert universe_output.repository == UNIVERSE_REPO
+    assert universe_output.path == "organisation/cnrm-cerfacs.json"
+    assert json.loads(universe_output.content) == {
         "@context": "000_context.jsonld",
         "id": "cnrm-cerfacs",
         "type": "organisation",
         "drs_name": "CNRM-CERFACS",
         "members": ["cnrm", "cerfacs"],
         "description": "A short institution description.",
+    }
+
+    cmip7_output = result.prepared.outputs[1]
+    assert cmip7_output.repository == CMIP7_REPO
+    assert cmip7_output.path == "institution/cnrm-cerfacs.json"
+    assert json.loads(cmip7_output.content) == {
+        "@context": "000_context.jsonld",
+        "id": "cnrm-cerfacs",
+        "type": "organisation",
     }
 
 
@@ -540,6 +587,8 @@ def test_prepare_institution_notes_missing_member():
 
     result = prepare_registration(
         issue=issue,
+        cmip7_repository=CMIP7_REPO,
+        universe_repository=UNIVERSE_REPO,
         experiment_output_dir="experiment",
         activity_output_dir="activity",
         cv_client=cv_client,
@@ -583,6 +632,8 @@ def test_prepare_institution_member_renders_json_with_ror_location():
 
     result = prepare_registration(
         issue=issue,
+        cmip7_repository=CMIP7_REPO,
+        universe_repository=UNIVERSE_REPO,
         experiment_output_dir="experiment",
         activity_output_dir="activity",
         ror_client=ror_client,
@@ -593,8 +644,10 @@ def test_prepare_institution_member_renders_json_with_ror_location():
         "1 location auto-populated from ROR: Toulouse, France (43.6047, 1.4442)."
     ]
     assert result.prepared is not None
-    assert result.prepared.output_path == "institution_member/cnrm.json"
-    payload = json.loads(result.prepared.content)
+    assert len(result.prepared.outputs) == 1
+    assert result.prepared.outputs[0].repository == UNIVERSE_REPO
+    assert result.prepared.outputs[0].path == "institution/cnrm.json"
+    payload = json.loads(result.prepared.outputs[0].content)
     assert payload == {
         "@context": "000_context.jsonld",
         "id": "cnrm",
@@ -648,6 +701,8 @@ def test_prepare_institution_member_adds_ror_names_and_links_without_duplicates(
 
     result = prepare_registration(
         issue=issue,
+        cmip7_repository=CMIP7_REPO,
+        universe_repository=UNIVERSE_REPO,
         experiment_output_dir="experiment",
         activity_output_dir="activity",
         ror_client=ror_client,
@@ -663,7 +718,7 @@ def test_prepare_institution_member_adds_ror_names_and_links_without_duplicates(
         "https://en.wikipedia.org/wiki/CNRM.",
     ]
     assert result.prepared is not None
-    payload = json.loads(result.prepared.content)
+    payload = json.loads(result.prepared.outputs[0].content)
     assert payload["labels"] == [
         "Centre National de Recherches Météorologiques",
         "National Centre for Meteorological Research",
@@ -693,6 +748,8 @@ def test_prepare_institution_member_notes_ror_not_found():
 
     result = prepare_registration(
         issue=issue,
+        cmip7_repository=CMIP7_REPO,
+        universe_repository=UNIVERSE_REPO,
         experiment_output_dir="experiment",
         activity_output_dir="activity",
         ror_client=ror_client,
@@ -704,7 +761,7 @@ def test_prepare_institution_member_notes_ror_not_found():
         "Metadata could not be auto-populated."
     ]
     assert result.prepared is not None
-    assert json.loads(result.prepared.content)["location"] == []
+    assert json.loads(result.prepared.outputs[0].content)["location"] == []
 
 
 def _body(fields):

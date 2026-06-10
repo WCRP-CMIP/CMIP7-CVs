@@ -32,14 +32,26 @@ jobs:
           # Try the below for now.
           # GITHUB_TOKEN: "${{ secrets.FORM_ACCESS_TOKEN }}"
           GITHUB_TOKEN: "${{ secrets.GITHUB_TOKEN }}"
+          # Token authorising pull requests into the WCRP universe repository.
+          UNIVERSE_ACCESS_TOKEN: "${{ secrets.UNIVERSE_ACCESS_TOKEN }}"
+          # Use the fork for testing if universe access token isn't working
+          # UNIVERSE_ACCESS_TOKEN: "${{ secrets.UNIVERSE_ZNICHOLLSCR_ACCESS_TOKEN }}"
           GITHUB_REPOSITORY: ${{ github.repository }}
-          GITHUB_EVENT_PATH: ${{ github.event_path }}
-        run: >
-          python -m github_form_processor
-          --pr-base-branch esgvoc_dev
-          --experiment-output-dir experiment
-          --activity-output-dir activity
-          --institution-output-dir institution
-          --institution-member-output-dir institution_member
-          --wcrp-universe-url https://raw.githubusercontent.com/WCRP-CMIP/WCRP-universe/esgvoc
-          --cmip7-cvs-path "${{ github.workspace }}"
+        run: |
+          # For testing, open the universe pull request in a fork (write access to
+          # WCRP-CMIP/WCRP-universe is not yet available). Swap the commented lines
+          # back once that access exists.
+          # UNIVERSE_REPOSITORY="https://github.com/znichollscr/WCRP-universe"
+          UNIVERSE_REPOSITORY="https://github.com/WCRP-CMIP/WCRP-universe"
+          python -m github_form_processor \
+            --event-path "${{ github.event_path }}" \
+            --cmip7-repository "${{ github.server_url }}/${{ github.repository }}" \
+            --pr-base-branch esgvoc_dev \
+            --universe-repository "${UNIVERSE_REPOSITORY}" \
+            --universe-base-branch esgvoc_dev \
+            --experiment-output-dir experiment \
+            --activity-output-dir activity \
+            --institution-output-dir institution \
+            --universe-organisation-dir organisation \
+            --universe-institution-dir institution \
+            --cmip7-cvs-path "${{ github.workspace }}"
