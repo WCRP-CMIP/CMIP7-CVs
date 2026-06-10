@@ -6,10 +6,8 @@
     "drs_name": "eocene-5x",
     "start_timestamp": null,
     "end_timestamp": null,
-    "activity": "cmip / pmip",
-    "additional_allowed_model_components": [
-        "none"
-    ],
+    "activity": "pmip",
+    "additional_allowed_model_components": [],
     "branch_information": "no branching info",
     "min_ensemble_size": 1,
     "parent_activity": null,
