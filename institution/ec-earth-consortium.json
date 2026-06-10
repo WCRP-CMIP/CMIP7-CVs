@@ -1,5 +1,24 @@
 {
     "@context": "000_context.jsonld",
     "id": "ec-earth-consortium",
-    "type": "organisation"
+    "type": "organisation",
+    "members": [
+        "aemet",
+        "bsc",
+        "cnr-isac",
+        "dmi",
+        "fmi",
+        "met-eireann",
+        "knmi",
+        "smhi",
+        "au",
+        "awi",
+        "enea",
+        "ichec",
+        "polito",
+        "meteorologiska-institutionen",
+        "tuc",
+        "uclouvain",
+        "lund-university"
+    ]
 }
