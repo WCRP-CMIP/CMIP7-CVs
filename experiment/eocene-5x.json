@@ -2,20 +2,9 @@
     "@context": "000_context.jsonld",
     "id": "eocene-5x",
     "type": "experiment",
-    "description": "A detailed experimental design and motivation is provided in Lunt et al (in review, GMD) : https://egusphere.copernicus.org/preprints/2026/egusphere-2025-6135\n\nThe experiment is designed to represent the Early Eocene Climatic Optimum (EECO), ~50 million years ago. The Eocene was a time period of high CO2, and plate tectonic movements meant that the continents were in different positions compared to today. Vegetation was also different to today. Because paleoclimate proxy data exist for this period, it provides a test of how well a model can represent a high CO2 world. Compared to piControl, the topography, CO2, and land-surface types (vegetation and ice sheets) are modified. The experiment can be initialised from previous Eocene simulations, or from idealised initial states which are provided. The experiment should be run for as long as possible, and equilibration criteria are stipulated. However, only the final 100 years are uploaded to the ESGF.  This is part of PMIP.\n\nSee also https://github.com/WCRP-CMIP/CMIP7-CVs/issues/380 - I was asked to resubmit here.",
-    "drs_name": "eocene-5x",
     "start_timestamp": null,
     "end_timestamp": null,
-    "activity": "pmip",
-    "additional_allowed_model_components": [],
-    "branch_information": "no branching info",
-    "min_ensemble_size": 1,
-    "parent_activity": null,
-    "parent_experiment": null,
+    "min_number_yrs_per_sim": 100.0,
     "parent_mip_era": null,
-    "required_model_components": [
-        "aogcm"
-    ],
-    "tier": 2,
-    "min_number_yrs_per_sim": 100.0
+    "tier": 2
 }
