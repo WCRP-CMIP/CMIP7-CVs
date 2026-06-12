@@ -49,11 +49,20 @@ def parse_diff(diff_output):
         if not line.strip():
             continue
 
-        parts = line.split("\t", 1)
-        if len(parts) != 2:
+        parts = line.split("\t")
+
+        if parts[0].startswith(("R", "C")):
+            # Renames/copies: "R100\told/path\tnew/path" — treat as add of the new path
+            if len(parts) < 3:
+                continue
+            status = "A"
+            path = parts[2]
+        elif len(parts) >= 2:
+            status = parts[0]
+            path = parts[1]
+        else:
             continue
 
-        status, path = parts
         segments = path.split("/")
         filename = segments[-1]
 
