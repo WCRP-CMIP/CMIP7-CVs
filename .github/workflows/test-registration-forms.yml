@@ -15,8 +15,8 @@ name: Test registration form processing
 # repository's default branch; `--ref` then selects which branch's version is run.
 
 on:
-  # Can be helpful for testing
-  pull_request:
+  # # Can be helpful for testing
+  # pull_request:
   workflow_dispatch:
     inputs:
       issue_number:
