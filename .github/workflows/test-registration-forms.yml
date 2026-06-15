@@ -15,8 +15,8 @@ name: Test registration form processing
 # repository's default branch; `--ref` then selects which branch's version is run.
 
 on:
-  # # Can be helpful for testing
-  # pull_request:
+  # Can be helpful for testing
+  pull_request:
   workflow_dispatch:
     inputs:
       issue_number:
@@ -33,7 +33,7 @@ env:
   # The issue processed by automatic pull_request runs. Change this by hand to
   # point the test at a different registration issue.
   # DEFAULT_ISSUE_NUMBER: "441"
-  DEFAULT_ISSUE_NUMBER: "444"
+  DEFAULT_ISSUE_NUMBER: "458"
 
 jobs:
   test-registration-form:

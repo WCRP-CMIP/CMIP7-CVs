@@ -432,18 +432,6 @@ def _open_pull_request(
     client = target.client
     base_branch = target.base_branch
 
-    for output in outputs:
-        if client.content_exists(output.path, base_branch):
-            message = (
-                f"Target file `{output.path}` already exists on `{base_branch}` "
-                f"in `{client.repository}`."
-            )
-            issue_client.comment_issue(
-                issue_number,
-                format_validation_comment([message], prepared.notes),
-            )
-            raise RuntimeError(message)
-
     if not client.branch_exists(branch):
         base_sha = client.get_ref_sha(base_branch)
         client.create_branch(branch, base_sha)
