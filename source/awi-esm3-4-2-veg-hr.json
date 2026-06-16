@@ -1,0 +1,5 @@
+{
+  "@context": "000_context.jsonld",
+  "id": "awi-esm3-4-2-veg-hr",
+  "type": "model"
+}
