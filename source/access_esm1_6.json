@@ -1,0 +1,5 @@
+{
+  "@context": "000_context.jsonld",
+  "id": "access_esm1_6",
+  "type": "model"
+}
