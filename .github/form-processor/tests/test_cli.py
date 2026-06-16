@@ -130,7 +130,6 @@ def test_opened_registration_opens_single_pull_request():
     )
 
     assert result == 0
-    assert ("content_exists", "experiment/new.json", "esgvoc_dev") in client.calls
     assert ("create_branch", "registration/experiment-1-new", "sha-esgvoc_dev") in (
         client.calls
     )
@@ -147,22 +146,25 @@ def test_opened_registration_opens_single_pull_request():
     assert f"`{CMIP7_REPO}`" in client.comments[0][1]
 
 
-def test_opened_registration_raises_if_target_file_exists():
+def test_opened_registration_overwrites_existing_target_file():
     client = FakeClient(CMIP7_REPO, existing_paths={"experiment/new.json"})
     prepared = _make_prepared()
 
-    with pytest.raises(RuntimeError, match="already exists"):
-        _process_registration(
-            action="opened",
-            issue_client=client,
-            issue_number=1,
-            branch="registration/experiment-1-new",
-            prepared=prepared,
-            targets={CMIP7_REPO: RepoTarget(client=client, base_branch="esgvoc_dev")},
-        )
+    result = _process_registration(
+        action="opened",
+        issue_client=client,
+        issue_number=1,
+        branch="registration/experiment-1-new",
+        prepared=prepared,
+        targets={CMIP7_REPO: RepoTarget(client=client, base_branch="esgvoc_dev")},
+    )
 
-    assert len(client.comments) == 1
-    assert "already exists" in client.comments[0][1]
+    assert result == 0
+    assert ("put_file", "experiment/new.json", "registration/experiment-1-new") in (
+        client.calls
+    )
+    assert not any(call[0] == "content_exists" for call in client.calls)
+    assert _find_call(client, "create_pull_request") is not None
 
 
 def test_edited_registration_raises_if_multiple_open_pull_requests_exist():
