@@ -1,0 +1,25 @@
+{
+    "@context": "000_context.jsonld",
+    "id": "piclim-ghg",
+    "type": "experiment",
+    "description": "An atmosphere only experiment following piClim-control but using present day (2021) well-mixed (non-ozone) greenhouse gas concentrations. All other forcings should be set to pre-industrial (1850) conditions as in piClim-control.  Sea Surface Temperatures and Sea Ice Concentrations should be prescribed with the same climatology used in piClim-control.",
+    "drs_name": "piClim-ghg",
+    "start_timestamp": null,
+    "end_timestamp": null,
+    "activity": "rfmip",
+    "additional_allowed_model_components": [
+        "aer",
+        "chem",
+        "bgc"
+    ],
+    "branch_information": null,
+    "min_ensemble_size": 1,
+    "parent_activity": "rfmip",
+    "parent_experiment": "piclim-control",
+    "parent_mip_era": "cmip7",
+    "required_model_components": [
+        "agcm"
+    ],
+    "tier": 1,
+    "min_number_yrs_per_sim": 30.0
+}
