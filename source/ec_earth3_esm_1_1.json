@@ -1,0 +1,5 @@
+{
+  "@context": "000_context.jsonld",
+  "id": "ec_earth3_esm_1_1",
+  "type": "model"
+}
