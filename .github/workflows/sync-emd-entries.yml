@@ -9,6 +9,7 @@ name: Sync EMD entries
 # requests that would be created without touching any repository.
 
 on:
+  pull_request:
   workflow_dispatch:
     inputs:
       dry_run:
@@ -42,5 +43,12 @@ jobs:
           # Pull requests into the WCRP universe repository.
           UNIVERSE_ACCESS_TOKEN: "${{ secrets.UNIVERSE_ACCESS_TOKEN }}"
         run: |
-          python .github/scripts/sync_emd_entries.py \
-            ${{ inputs.dry_run && '--dry-run' || '' }}
+          # Pull request events always run as a dry run; manual runs honour the
+          # workflow_dispatch input.
+          if [ "${{ github.event_name }}" = "pull_request" ] || \
+             [ "${{ inputs.dry_run }}" = "true" ]; then
+            DRY_RUN="--dry-run"
+          else
+            DRY_RUN=""
+          fi
+          python .github/scripts/sync_emd_entries.py $DRY_RUN
