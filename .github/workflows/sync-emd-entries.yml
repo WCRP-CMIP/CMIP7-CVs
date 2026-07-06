@@ -1,0 +1,46 @@
+name: Sync EMD entries
+
+# Reads the Essential-Model-Documentation `model` and `horizontal_grid_cell`
+# entries and opens the pull requests that add the equivalent entries into:
+#   * CMIP7-CVs `source` / `grid_label`   (authorised with GITHUB_TOKEN)
+#   * WCRP-universe `model` / `grid`       (authorised with UNIVERSE_ACCESS_TOKEN)
+#
+# Run it manually from the Actions tab. Enable "dry run" to print the pull
+# requests that would be created without touching any repository.
+
+on:
+  workflow_dispatch:
+    inputs:
+      dry_run:
+        description: "Dry run (print the PRs that would be made, create nothing)"
+        type: boolean
+        default: true
+
+permissions:
+  contents: write
+  pull-requests: write
+
+jobs:
+  sync-emd-entries:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Install form processor
+        run: python -m pip install .github/form-processor
+
+      - name: Sync EMD entries
+        env:
+          # Pull requests into this repository.
+          GITHUB_TOKEN: "${{ secrets.GITHUB_TOKEN }}"
+          # Pull requests into the WCRP universe repository.
+          UNIVERSE_ACCESS_TOKEN: "${{ secrets.UNIVERSE_ACCESS_TOKEN }}"
+        run: |
+          python .github/scripts/sync_emd_entries.py \
+            ${{ inputs.dry_run && '--dry-run' || '' }}
