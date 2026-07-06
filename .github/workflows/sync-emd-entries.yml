@@ -9,7 +9,8 @@ name: Sync EMD entries
 # requests that would be created without touching any repository.
 
 on:
-  pull_request:
+  # # Can be useful for testing
+  # pull_request:
   workflow_dispatch:
     inputs:
       dry_run:
