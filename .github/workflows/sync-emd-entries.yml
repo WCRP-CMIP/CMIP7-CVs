@@ -17,6 +17,10 @@ on:
         description: "Dry run (print the PRs that would be made, create nothing)"
         type: boolean
         default: true
+      strict:
+        description: "Strict (raise on the first entry-building error instead of collecting them)"
+        type: boolean
+        default: false
 
 permissions:
   contents: write
@@ -52,4 +56,13 @@ jobs:
           else
             DRY_RUN=""
           fi
-          python .github/scripts/sync_emd_entries.py $DRY_RUN
+          echo "DRY_RUN=${DRY_RUN}"
+
+          if [ "${{ inputs.strict }}" = "true" ]; then
+            STRICT="--strict"
+          else
+            STRICT=""
+          fi
+          echo "STRICT=${STRICT}"
+
+          python .github/scripts/sync_emd_entries.py $DRY_RUN $STRICT

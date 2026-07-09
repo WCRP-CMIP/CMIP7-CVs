@@ -235,6 +235,7 @@ class PlannedPullRequest:
     body: str
     new_files: list[PlannedFile] = field(default_factory=list)
     existing: list[str] = field(default_factory=list)
+    errors: list[str] = field(default_factory=list)
 
 
 def read_emd_entries(
@@ -266,8 +267,14 @@ def plan_pull_request(
     body: str,
     builder: Callable[[Any], tuple[str, str]],
     emd_entries: list[Any],
+    strict: bool = False,
 ) -> PlannedPullRequest:
-    """Work out which entries are missing from ``directory`` on ``base_branch``."""
+    """Work out which entries are missing from ``directory`` on ``base_branch``.
+
+    If ``builder`` raises for an entry the behaviour depends on ``strict``: when
+    ``strict`` is ``True`` the error propagates and planning stops; otherwise the
+    error is collected on ``plan.errors`` and the entry is skipped.
+    """
     plan = PlannedPullRequest(
         client=client,
         repo=repo,
@@ -279,7 +286,16 @@ def plan_pull_request(
     )
     present = client.existing_filenames(directory, base_branch)
     for emd in emd_entries:
-        filename, content = builder(emd)
+        try:
+            filename, content = builder(emd)
+        except Exception as error:
+            if strict:
+                raise
+            plan.errors.append(
+                f"[{repo}] failed to build {directory}/ entry for "
+                f"{getattr(emd, 'id', emd)!r}: {error}"
+            )
+            continue
         if filename in present:
             plan.existing.append(filename)
         else:
@@ -396,6 +412,13 @@ def sync(
     dry_run: bool = typer.Option(
         False, help="Print the pull requests that would be made without creating them."
     ),
+    strict: bool = typer.Option(
+        False,
+        help=(
+            "Raise on the first error encountered while building an entry. "
+            "Without --strict, such errors are collected and printed instead."
+        ),
+    ),
 ) -> None:
     """Open the CMIP7-CVs and WCRP-universe pull requests for the EMD entries."""
     # Pull requests into CMIP7-CVs are authorised with GITHUB_TOKEN and pull
@@ -434,6 +457,7 @@ def sync(
             body=body(cvs_source_dir, emd_model_dir),
             builder=build_source_entry,
             emd_entries=models,
+            strict=strict,
         ),
         plan_pull_request(
             client=universe_client,
@@ -445,6 +469,7 @@ def sync(
             body=body(universe_model_dir, emd_model_dir),
             builder=build_universe_model_entry,
             emd_entries=models,
+            strict=strict,
         ),
         plan_pull_request(
             client=cvs_client,
@@ -456,6 +481,7 @@ def sync(
             body=body(cvs_grid_label_dir, emd_grid_dir),
             builder=build_grid_label_entry,
             emd_entries=grids,
+            strict=strict,
         ),
         plan_pull_request(
             client=universe_client,
@@ -467,8 +493,17 @@ def sync(
             body=body(universe_grid_dir, emd_grid_dir),
             builder=build_universe_grid_entry,
             emd_entries=grids,
+            strict=strict,
         ),
     ]
+
+    # Without --strict, errors raised while building entries are collected on
+    # each plan rather than raised; report them before describing the plans.
+    errors = [error for plan in plans for error in plan.errors]
+    if errors:
+        typer.echo(f"\n{len(errors)} error(s) while building entries:")
+        for error in errors:
+            typer.echo(f"  {error}")
 
     if dry_run:
         typer.echo(
