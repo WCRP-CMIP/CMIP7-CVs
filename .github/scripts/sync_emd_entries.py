@@ -235,6 +235,7 @@ class PlannedPullRequest:
     body: str
     new_files: list[PlannedFile] = field(default_factory=list)
     existing: list[str] = field(default_factory=list)
+    errors: list[str] = field(default_factory=list)
 
 
 def read_emd_entries(
@@ -255,38 +256,77 @@ def read_emd_entries(
     return entries
 
 
-def plan_pull_request(
+@dataclass
+class PullRequestTarget:
+    """A single directory an EMD entry is synchronised into."""
+
+    client: EmdSyncClient
+    repo: str
+    base_branch: str
+    head_branch: str
+    directory: str
+    title: str
+    body: str
+    builder: Callable[[Any], tuple[str, str]]
+
+
+def plan_pull_requests(
     *,
-    client: EmdSyncClient,
-    repo: str,
-    base_branch: str,
-    head_branch: str,
-    directory: str,
-    title: str,
-    body: str,
-    builder: Callable[[Any], tuple[str, str]],
+    targets: list[PullRequestTarget],
     emd_entries: list[Any],
-) -> PlannedPullRequest:
-    """Work out which entries are missing from ``directory`` on ``base_branch``."""
-    plan = PlannedPullRequest(
-        client=client,
-        repo=repo,
-        base_branch=base_branch,
-        head_branch=head_branch,
-        directory=directory,
-        title=title,
-        body=body,
-    )
-    present = client.existing_filenames(directory, base_branch)
+    strict: bool = False,
+) -> list[PlannedPullRequest]:
+    """Plan a group of coupled pull requests from the same EMD entries.
+
+    The ``targets`` are coupled: every target's entry for a given EMD entry is
+    built together, and if building *any* of them fails the entry is skipped for
+    *every* target in the group. That keeps the paired repositories (for example
+    CMIP7-CVs ``source`` and WCRP-universe ``model``) in step -- a failure on one
+    side never leaves a half-synchronised entry on the other.
+
+    If a builder raises for an entry the behaviour depends on ``strict``: when
+    ``strict`` is ``True`` the error propagates and planning stops; otherwise the
+    error is collected on the first plan's ``errors`` and the entry is skipped
+    for the whole group.
+    """
+    plans = [
+        PlannedPullRequest(
+            client=target.client,
+            repo=target.repo,
+            base_branch=target.base_branch,
+            head_branch=target.head_branch,
+            directory=target.directory,
+            title=target.title,
+            body=target.body,
+        )
+        for target in targets
+    ]
+    present = [
+        target.client.existing_filenames(target.directory, target.base_branch)
+        for target in targets
+    ]
     for emd in emd_entries:
-        filename, content = builder(emd)
-        if filename in present:
-            plan.existing.append(filename)
-        else:
-            plan.new_files.append(
-                PlannedFile(path=f"{directory}/{filename}", content=content)
+        try:
+            built = [target.builder(emd) for target in targets]
+        except Exception as error:
+            if strict:
+                raise
+            repos = " and ".join(target.repo for target in targets)
+            plans[0].errors.append(
+                f"failed to build entry for {getattr(emd, 'id', emd)!r}; "
+                f"skipping it for {repos}: {error}"
             )
-    return plan
+            continue
+        for plan, target_present, (filename, content) in zip(plans, present, built):
+            if filename in target_present:
+                plan.existing.append(filename)
+            else:
+                plan.new_files.append(
+                    PlannedFile(
+                        path=f"{plan.directory}/{filename}", content=content
+                    )
+                )
+    return plans
 
 
 def describe_plan(plan: PlannedPullRequest, *, show_content: bool) -> None:
@@ -396,6 +436,13 @@ def sync(
     dry_run: bool = typer.Option(
         False, help="Print the pull requests that would be made without creating them."
     ),
+    strict: bool = typer.Option(
+        False,
+        help=(
+            "Raise on the first error encountered while building an entry. "
+            "Without --strict, such errors are collected and printed instead."
+        ),
+    ),
 ) -> None:
     """Open the CMIP7-CVs and WCRP-universe pull requests for the EMD entries."""
     # Pull requests into CMIP7-CVs are authorised with GITHUB_TOKEN and pull
@@ -423,52 +470,69 @@ def sync(
             emd_branch=emd_branch,
         )
 
-    plans = [
-        plan_pull_request(
-            client=cvs_client,
-            repo=cvs_repo,
-            base_branch=cvs_base_branch,
-            head_branch=f"{branch_prefix}/source",
-            directory=cvs_source_dir,
-            title="Add EMD model entries to `source`",
-            body=body(cvs_source_dir, emd_model_dir),
-            builder=build_source_entry,
-            emd_entries=models,
-        ),
-        plan_pull_request(
-            client=universe_client,
-            repo=universe_repo,
-            base_branch=universe_base_branch,
-            head_branch=f"{branch_prefix}/model",
-            directory=universe_model_dir,
-            title="Add EMD model entries to `model`",
-            body=body(universe_model_dir, emd_model_dir),
-            builder=build_universe_model_entry,
-            emd_entries=models,
-        ),
-        plan_pull_request(
-            client=cvs_client,
-            repo=cvs_repo,
-            base_branch=cvs_base_branch,
-            head_branch=f"{branch_prefix}/grid_label",
-            directory=cvs_grid_label_dir,
-            title="Add EMD horizontal grid cell entries to `grid_label`",
-            body=body(cvs_grid_label_dir, emd_grid_dir),
-            builder=build_grid_label_entry,
-            emd_entries=grids,
-        ),
-        plan_pull_request(
-            client=universe_client,
-            repo=universe_repo,
-            base_branch=universe_base_branch,
-            head_branch=f"{branch_prefix}/grid",
-            directory=universe_grid_dir,
-            title="Add EMD horizontal grid cell entries to `grid`",
-            body=body(universe_grid_dir, emd_grid_dir),
-            builder=build_universe_grid_entry,
-            emd_entries=grids,
-        ),
-    ]
+    # The CMIP7-CVs and WCRP-universe entries derived from the same EMD entries
+    # are planned together so a build failure on one side skips the entry on the
+    # other side too -- the paired repositories never drift out of sync.
+    plans = plan_pull_requests(
+        targets=[
+            PullRequestTarget(
+                client=cvs_client,
+                repo=cvs_repo,
+                base_branch=cvs_base_branch,
+                head_branch=f"{branch_prefix}/source",
+                directory=cvs_source_dir,
+                title="Add EMD model entries to `source`",
+                body=body(cvs_source_dir, emd_model_dir),
+                builder=build_source_entry,
+            ),
+            PullRequestTarget(
+                client=universe_client,
+                repo=universe_repo,
+                base_branch=universe_base_branch,
+                head_branch=f"{branch_prefix}/model",
+                directory=universe_model_dir,
+                title="Add EMD model entries to `model`",
+                body=body(universe_model_dir, emd_model_dir),
+                builder=build_universe_model_entry,
+            ),
+        ],
+        emd_entries=models,
+        strict=strict,
+    )
+    plans += plan_pull_requests(
+        targets=[
+            PullRequestTarget(
+                client=cvs_client,
+                repo=cvs_repo,
+                base_branch=cvs_base_branch,
+                head_branch=f"{branch_prefix}/grid_label",
+                directory=cvs_grid_label_dir,
+                title="Add EMD horizontal grid cell entries to `grid_label`",
+                body=body(cvs_grid_label_dir, emd_grid_dir),
+                builder=build_grid_label_entry,
+            ),
+            PullRequestTarget(
+                client=universe_client,
+                repo=universe_repo,
+                base_branch=universe_base_branch,
+                head_branch=f"{branch_prefix}/grid",
+                directory=universe_grid_dir,
+                title="Add EMD horizontal grid cell entries to `grid`",
+                body=body(universe_grid_dir, emd_grid_dir),
+                builder=build_universe_grid_entry,
+            ),
+        ],
+        emd_entries=grids,
+        strict=strict,
+    )
+
+    # Without --strict, errors raised while building entries are collected on
+    # each plan rather than raised; report them before describing the plans.
+    errors = [error for plan in plans for error in plan.errors]
+    if errors:
+        typer.echo(f"\n{len(errors)} error(s) while building entries:")
+        for error in errors:
+            typer.echo(f"  {error}")
 
     if dry_run:
         typer.echo(
