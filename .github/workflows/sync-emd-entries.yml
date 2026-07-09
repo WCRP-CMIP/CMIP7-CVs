@@ -17,6 +17,15 @@ on:
         description: "Dry run (print the PRs that would be made, create nothing)"
         type: boolean
         default: true
+      strict:
+        description: "Strict (raise on the first entry-building error instead of collecting them)"
+        type: boolean
+        default: false
+    # No schedule while we wait for this translation to stabilise
+    # schedule:
+    # # * is a special character in YAML so you have to quote this string
+    # # See https://crontab.guru to understand what this means exactly.
+    # - cron: '0 18 * * *'
 
 permissions:
   contents: write
@@ -52,4 +61,13 @@ jobs:
           else
             DRY_RUN=""
           fi
-          python .github/scripts/sync_emd_entries.py $DRY_RUN
+          echo "DRY_RUN=${DRY_RUN}"
+
+          if [ "${{ inputs.strict }}" = "true" ]; then
+            STRICT="--strict"
+          else
+            STRICT=""
+          fi
+          echo "STRICT=${STRICT}"
+
+          python .github/scripts/sync_emd_entries.py $DRY_RUN $STRICT
