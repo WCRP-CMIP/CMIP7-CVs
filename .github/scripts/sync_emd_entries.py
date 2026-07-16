@@ -12,6 +12,10 @@ For every ``horizontal_grid_cell`` entry in the EMD source branch this opens:
 * a pull request into CMIP7-CVs adding the equivalent ``grid_label`` entry, and
 * a pull request into WCRP-universe adding the equivalent ``grid`` entry.
 
+Grid cells that span more than one region are skipped: they cannot be used for
+model output, so they do not belong in the CVs
+(https://github.com/WCRP-CMIP/CMIP7-CVs/issues/503).
+
 Existing target entries are left untouched, so re-running the script only ever
 adds the entries that are still missing. Pass ``--dry-run`` to print the pull
 requests (and the exact file content) that *would* be created without touching
@@ -138,15 +142,27 @@ class EmdHorizontalGridCell(BaseModel):
         return list(value)
 
     @property
+    def usable_for_model_output(self) -> bool:
+        """Whether this grid can be used for model output, hence belongs in the CVs.
+
+        A grid cell with more than one region cannot be used for model output,
+        so it is left out of the CVs rather than treated as an error
+        (see https://github.com/WCRP-CMIP/CMIP7-CVs/issues/503).
+        """
+        return len(self.region) <= 1
+
+    @property
     def region_string(self) -> str:
         """Collapse ``region`` to a single string for the universe CV entry.
 
-        Raises if more than one region is present.
+        Only meaningful for grids that are usable for model output, i.e. those
+        with at most one region.
         """
-        if len(self.region) > 1:
+        if not self.usable_for_model_output:
             raise ValueError(
-                f"EMD grid cell {self.id!r} has multiple regions {self.region!r}; "
-                "expected at most one so it can be stored as a string."
+                f"EMD grid cell {self.id!r} has multiple regions {self.region!r}, "
+                "so it is not usable for model output and has no region string "
+                "(see https://github.com/WCRP-CMIP/CMIP7-CVs/issues/503)."
             )
         return self.region[0] if self.region else ""
 
@@ -461,6 +477,19 @@ def sync(
         emd_client, emd_grid_dir, emd_branch, EmdHorizontalGridCell
     )
     typer.echo(f"  {len(models)} model entries, {len(grids)} grid entries.")
+
+    # Grid cells spanning more than one region cannot be used for model output,
+    # so they do not belong in the CVs at all -- skip them rather than reporting
+    # them as errors (https://github.com/WCRP-CMIP/CMIP7-CVs/issues/503).
+    unusable_grids = [grid for grid in grids if not grid.usable_for_model_output]
+    grids = [grid for grid in grids if grid.usable_for_model_output]
+    if unusable_grids:
+        typer.echo(
+            f"  skipping {len(unusable_grids)} grid entries that span multiple "
+            "regions, hence cannot be used for model output:"
+        )
+        for grid in unusable_grids:
+            typer.echo(f"    {grid.id} (regions: {', '.join(grid.region)})")
 
     def body(directory: str, emd_directory: str) -> str:
         return PR_BODY.format(
