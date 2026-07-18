@@ -21,10 +21,10 @@ on:
         description: "Strict (raise on the first entry-building error instead of collecting them)"
         type: boolean
         default: false
-    schedule:
-    # * is a special character in YAML so you have to quote this string
-    # See https://crontab.guru to understand what this means exactly.
-    - cron: '0 18 * * *'
+  schedule:
+  # * is a special character in YAML so you have to quote this string
+  # See https://crontab.guru to understand what this means exactly.
+  - cron: '0 18 * * *'
 
 permissions:
   contents: write
