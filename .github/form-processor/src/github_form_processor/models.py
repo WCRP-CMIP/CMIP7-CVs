@@ -417,7 +417,11 @@ class InstitutionMemberRegistration(RegistrationBase):
 
 
 def parse_list(value: Any) -> list[str]:
-    """Parse a text area or list-like value into clean list items."""
+    """Parse a text area or list-like value into clean list items.
+
+    The registration issue forms instruct submitters to provide "one X per
+    line", so items are split on line breaks only.
+    """
     if value is None:
         return []
     if isinstance(value, list):
@@ -426,7 +430,7 @@ def parse_list(value: Any) -> list[str]:
         text = str(value).strip()
         if text in BLANK_VALUES:
             return []
-        raw_items = re.split(r"[\n,]", text)
+        raw_items = text.splitlines()
 
     items: list[str] = []
     for raw_item in raw_items:

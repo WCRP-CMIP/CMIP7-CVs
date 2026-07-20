@@ -119,6 +119,48 @@ def test_institution_member_accepts_empty_acronyms_and_labels():
     assert member.labels == []
 
 
+def test_institution_member_label_with_commas_is_kept_as_one_label():
+    member = InstitutionMemberRegistration.from_fields(
+        {
+            "Member DRS name": "AAD-DCCEEW",
+            "Acronyms": "AAD",
+            "Labels": (
+                "Australian Antarctic Division of the Department of Climate "
+                "Change, Energy, the Environment and Water"
+            ),
+            "Member description": "A short member description.",
+            "Reference URLs": "http://www.antarctica.gov.au/",
+            "ROR ID": "https://ror.org/05e89k615",
+        }
+    )
+
+    assert member.labels == [
+        "Australian Antarctic Division of the Department of Climate "
+        "Change, Energy, the Environment and Water"
+    ]
+
+
+def test_institution_member_multiline_labels_split_per_line():
+    member = InstitutionMemberRegistration.from_fields(
+        {
+            "Member DRS name": "CNRM",
+            "Acronyms": "CNRM",
+            "Labels": (
+                "Centre National de Recherches Météorologiques\n"
+                "National Centre for Meteorological Research"
+            ),
+            "Member description": "A short member description.",
+            "Reference URLs": "https://www.cnrm.meteo.fr/",
+            "ROR ID": "https://ror.org/02feahw73",
+        }
+    )
+
+    assert member.labels == [
+        "Centre National de Recherches Météorologiques",
+        "National Centre for Meteorological Research",
+    ]
+
+
 def test_institution_registration_name_exactly_20_chars_is_valid():
     inst = InstitutionRegistration.model_validate(
         {
