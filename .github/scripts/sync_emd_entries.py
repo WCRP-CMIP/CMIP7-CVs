@@ -254,20 +254,37 @@ class PlannedPullRequest:
     errors: list[str] = field(default_factory=list)
 
 
+def _is_temp_entry(entry: Any) -> bool:
+    """Whether an EMD entry is a temporary placeholder to be ignored.
+
+    Entries whose id starts with ``temp`` (case-insensitively) are scratch or
+    placeholder entries in the EMD source and must not be synchronised into the
+    CVs.
+    """
+    return str(getattr(entry, "id", "")).lower().startswith("temp")
+
+
 def read_emd_entries(
     client: EmdSyncClient,
     directory: str,
     ref: str,
     model_cls: type[BaseModel],
 ) -> list[Any]:
-    """Read and validate every ``*.json`` entry in an EMD source directory."""
+    """Read and validate every ``*.json`` entry in an EMD source directory.
+
+    Entries whose id starts with ``temp`` are ignored (see ``_is_temp_entry``).
+    """
     entries = []
     for item in client.list_directory(directory, ref):
         name = item["name"]
         if item["type"] != "file" or not name.endswith(".json"):
             continue
         raw = client.get_file_text(f"{directory}/{name}", ref)
-        entries.append(model_cls.model_validate(json.loads(raw)))
+        entry = model_cls.model_validate(json.loads(raw))
+        if _is_temp_entry(entry):
+            typer.echo(f"  ignoring temporary EMD entry {entry.id!r} in {directory}/")
+            continue
+        entries.append(entry)
     entries.sort(key=lambda entry: entry.id)
     return entries
 
