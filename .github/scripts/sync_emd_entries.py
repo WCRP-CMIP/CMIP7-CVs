@@ -30,6 +30,12 @@ nothing is hard-coded. Pull requests into CMIP7-CVs are authorised with
 This reuses the ``github_form_processor`` package (installed from
 ``.github/form-processor``), so run it from an environment where that package
 and its dependencies (``typer``, ``pydantic``) are installed.
+
+Run locally with
+
+```
+GITHUB_TOKEN="$(gh auth token)" .github/form-processor/.venv/bin/python .github/scripts/sync_emd_entries.py --dry-run
+```
 """
 
 from __future__ import annotations
@@ -139,7 +145,13 @@ class EmdHorizontalGridCell(BaseModel):
             return []
         if isinstance(value, str):
             return [value]
-        return list(value)
+
+        clean = []
+        for v in list(value):
+            # Guard against https://github.com/WCRP-CMIP/Essential-Model-Documentation/issues/1196
+            clean.extend(vv.strip() for vv in v.split(","))
+
+        return clean
 
     @property
     def usable_for_model_output(self) -> bool:
@@ -338,9 +350,7 @@ def plan_pull_requests(
                 plan.existing.append(filename)
             else:
                 plan.new_files.append(
-                    PlannedFile(
-                        path=f"{plan.directory}/{filename}", content=content
-                    )
+                    PlannedFile(path=f"{plan.directory}/{filename}", content=content)
                 )
     return plans
 
