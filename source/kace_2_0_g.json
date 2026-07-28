@@ -1,0 +1,5 @@
+{
+  "@context": "000_context.jsonld",
+  "id": "kace_2_0_g",
+  "type": "model"
+}
