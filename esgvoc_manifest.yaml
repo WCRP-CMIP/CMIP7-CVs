@@ -9,4 +9,3 @@ esgvoc:
 release_notes: |
   - grid_label: 3 added
   - source: 1 added, 1 modified (ukesm_1_3_ll became ukesm1_3_ll and its DRS name went from UKESM-1-3-LL to UKESM1-3-LL)
-
