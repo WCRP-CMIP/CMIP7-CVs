@@ -1,0 +1,25 @@
+{
+    "@context": "000_context.jsonld",
+    "id": "esm-vl-cf-ext",
+    "type": "experiment",
+    "description": "Extension of `esm-vl-cf` beyond 2100.",
+    "drs_name": "esm-vl-cf-ext",
+    "start_timestamp": "2101-01-01",
+    "end_timestamp": "2500-12-31",
+    "activity": "polmip",
+    "additional_allowed_model_components": [
+        "aer",
+        "chem"
+    ],
+    "branch_information": "Branch from `esm-vl-cf` at 2100-12-31.",
+    "min_ensemble_size": 1,
+    "parent_activity": "polmip",
+    "parent_experiment": "esm-vl-cf",
+    "parent_mip_era": "cmip7",
+    "required_model_components": [
+        "aogcm",
+        "bgc"
+    ],
+    "tier": 1,
+    "min_number_yrs_per_sim": 100.0
+}
