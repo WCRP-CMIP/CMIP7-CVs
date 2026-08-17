@@ -6,6 +6,8 @@
     "drs_name": "PolMIP",
     "experiments": [
         "ssp2-com",
+        "esm-vl-cf",
+        "esm-vl-cf-ext",
         "vl-cf",
         "vl-cf-ext"
     ],
