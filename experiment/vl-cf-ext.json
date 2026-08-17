@@ -3,7 +3,7 @@
     "id": "vl-cf-ext",
     "type": "experiment",
     "description": "Extension of `vl-cf` beyond 2100.",
-    "drs_name": "VL-CF-EXT",
+    "drs_name": "vl-cf-ext",
     "start_timestamp": "2101-01-01",
     "end_timestamp": "2500-12-31",
     "activity": "polmip",
@@ -11,10 +11,10 @@
         "aer",
         "chem"
     ],
-    "branch_information": "Branch from `vl-ext` at 2100-12-31.",
+    "branch_information": "Branch from `vl-cf` at 2100-12-31.",
     "min_ensemble_size": 1,
     "parent_activity": "polmip",
-    "parent_experiment": "vl-ext",
+    "parent_experiment": "vl-cf",
     "parent_mip_era": "cmip7",
     "required_model_components": [
         "aogcm",
