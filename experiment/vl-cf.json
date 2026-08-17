@@ -1,0 +1,25 @@
+{
+    "@context": "000_context.jsonld",
+    "id": "vl-cf",
+    "type": "experiment",
+    "description": "\u201cvl-cf\u201d is a counterfactual emissions pathway that is as physically consistent as possible, while aiming for global surface air temperature to peak at 1.5\u00b0C and stabilise or slowly decline.",
+    "drs_name": "vl-cf",
+    "start_timestamp": "2016-01-01",
+    "end_timestamp": "2100-12-31",
+    "activity": "polmip",
+    "additional_allowed_model_components": [
+        "aer",
+        "chem",
+        "bgc"
+    ],
+    "branch_information": "Branch from historical at 2016-01-01.",
+    "min_ensemble_size": 1,
+    "parent_activity": "cmip",
+    "parent_experiment": "historical",
+    "parent_mip_era": "cmip7",
+    "required_model_components": [
+        "aogcm"
+    ],
+    "tier": 1,
+    "min_number_yrs_per_sim": 85.0
+}
