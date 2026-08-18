@@ -6,5 +6,5 @@
     "end_timestamp": "2100-12-31",
     "min_number_yrs_per_sim": 85.0,
     "parent_mip_era": "cmip7",
-    "tier": 1
+    "tier": 2
 }
