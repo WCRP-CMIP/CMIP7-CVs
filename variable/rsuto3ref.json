@@ -1,5 +1,6 @@
 {
     "@context": "000_context.jsonld",
     "id": "rsuto3ref",
-    "type": "variable"
+    "type": "variable",
+    "long_name": "Top of atmosphere shortwave flux from diagnostic call to radiation scheme using a reference ozone field"
 }

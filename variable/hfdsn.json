@@ -1,5 +1,6 @@
 {
     "@context": "000_context.jsonld",
     "id": "hfdsn",
-    "type": "variable"
+    "type": "variable",
+    "long_name": "Downward Heat Flux into Snow Where Land over Land"
 }

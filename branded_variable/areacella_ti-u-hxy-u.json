@@ -1,5 +1,17 @@
 {
     "@context": "000_context.jsonld",
     "id": "areacella_ti-u-hxy-u",
-    "type": "known_branded_variable"
+    "type": "known_branded_variable",
+    "description": "Cell areas for any grid used to report atmospheric variables and any other variable using that grid (e.g., soil moisture content). These cell areas should be defined to enable exact calculation of global integrals (e.g., of vertical fluxes of energy at the surface and top of the atmosphere).",
+    "long_name": "Grid-Cell Area for Atmospheric Grid Variables",
+    "table_id": [
+        "atmos"
+    ],
+    "compound_name": [
+        "atmos.areacella.ti-u-hxy-u.fx.glb"
+    ],
+    "frequency": [
+        "fx"
+    ],
+    "realm": "atmos"
 }

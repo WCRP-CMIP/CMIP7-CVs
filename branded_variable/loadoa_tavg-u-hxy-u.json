@@ -1,5 +1,18 @@
 {
     "@context": "000_context.jsonld",
     "id": "loadoa_tavg-u-hxy-u",
-    "type": "known_branded_variable"
+    "type": "known_branded_variable",
+    "description": "atmosphere dry organic content: This is the vertically integrated sum of atmosphere_primary_organic_content and atmosphere_secondary_organic_content (see next two table entries).",
+    "long_name": "Load of Dry Aerosol Organic Matter",
+    "table_id": [
+        "atmos"
+    ],
+    "compound_name": [
+        "atmos.loadoa.tavg-u-hxy-u.day.glb"
+    ],
+    "frequency": [
+        "day"
+    ],
+    "cell_measures": "area: areacella",
+    "realm": "atmos"
 }

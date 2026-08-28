@@ -1,5 +1,17 @@
 {
     "@context": "000_context.jsonld",
     "id": "hfss_tpt-u-hs-u",
-    "type": "known_branded_variable"
+    "type": "known_branded_variable",
+    "description": "The surface sensible heat flux, also called turbulent heat flux, is the exchange of heat between the surface and the air by motion of air.",
+    "long_name": "Surface Upward Sensible Heat Flux",
+    "table_id": [
+        "atmos"
+    ],
+    "compound_name": [
+        "atmos.hfss.tpt-u-hs-u.subhr.glb"
+    ],
+    "frequency": [
+        "subhr"
+    ],
+    "realm": "atmos"
 }

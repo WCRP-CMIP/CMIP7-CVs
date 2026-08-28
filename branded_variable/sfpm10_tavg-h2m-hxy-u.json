@@ -1,5 +1,20 @@
 {
     "@context": "000_context.jsonld",
     "id": "sfpm10_tavg-h2m-hxy-u",
-    "type": "known_branded_variable"
+    "type": "known_branded_variable",
+    "description": "Daily mean PM10 mass mixing ratio near surface.",
+    "long_name": "Near-surface PM10 Mixing Ratio",
+    "table_id": [
+        "aerosol"
+    ],
+    "compound_name": [
+        "aerosol.sfpm10.tavg-h2m-hxy-u.1hr.glb",
+        "aerosol.sfpm10.tavg-h2m-hxy-u.day.glb"
+    ],
+    "frequency": [
+        "1hr",
+        "day"
+    ],
+    "cell_measures": "area: areacella",
+    "realm": "aerosol"
 }

@@ -1,0 +1,7 @@
+{
+    "@context": "000_context.jsonld",
+    "id": "plev7h",
+    "type": "data_coordinate",
+    "long_name": "Pressure Levels (7, Tropospheric)",
+    "tolerance": 1.0
+}

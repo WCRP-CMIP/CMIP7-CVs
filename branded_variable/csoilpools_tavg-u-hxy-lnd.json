@@ -1,5 +1,18 @@
 {
     "@context": "000_context.jsonld",
     "id": "csoilpools_tavg-u-hxy-lnd",
-    "type": "known_branded_variable"
+    "type": "known_branded_variable",
+    "description": "For models with multiple soil carbon pools, report each pool here. If models also have vertical discretisation these should be aggregated",
+    "long_name": "Carbon Mass in Each Model Soil Pool (Summed over Vertical Levels)",
+    "table_id": [
+        "land"
+    ],
+    "compound_name": [
+        "land.cSoilPools.tavg-u-hxy-lnd.mon.glb"
+    ],
+    "frequency": [
+        "mon"
+    ],
+    "cell_measures": "area: areacella",
+    "realm": "land"
 }

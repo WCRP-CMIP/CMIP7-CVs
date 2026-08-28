@@ -1,5 +1,6 @@
 {
     "@context": "000_context.jsonld",
     "id": "siitdsnthick",
-    "type": "variable"
+    "type": "variable",
+    "long_name": "Snow Thickness in Ice Thickness Categories"
 }

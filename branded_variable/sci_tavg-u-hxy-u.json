@@ -1,5 +1,18 @@
 {
     "@context": "000_context.jsonld",
     "id": "sci_tavg-u-hxy-u",
-    "type": "known_branded_variable"
+    "type": "known_branded_variable",
+    "description": "Fraction of time that convection occurs in the grid cell. If native cell data is regridded, the area-weighted mean of the contributing cells should be reported.",
+    "long_name": "Fraction of Time Shallow Convection Occurs",
+    "table_id": [
+        "atmos"
+    ],
+    "compound_name": [
+        "atmos.sci.tavg-u-hxy-u.mon.glb"
+    ],
+    "frequency": [
+        "mon"
+    ],
+    "cell_measures": "area: areacella",
+    "realm": "atmos"
 }

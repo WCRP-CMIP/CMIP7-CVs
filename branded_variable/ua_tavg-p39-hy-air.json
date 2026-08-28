@@ -1,5 +1,19 @@
 {
     "@context": "000_context.jsonld",
     "id": "ua_tavg-p39-hy-air",
-    "type": "known_branded_variable"
+    "type": "known_branded_variable",
+    "description": "Zonal wind (positive in a eastward direction).",
+    "long_name": "Eastward Wind",
+    "table_id": [
+        "atmos"
+    ],
+    "compound_name": [
+        "atmos.ua.tavg-p39-hy-air.mon.glb",
+        "atmos.ua.tavg-p39-hy-air.day.glb"
+    ],
+    "frequency": [
+        "mon",
+        "day"
+    ],
+    "realm": "atmos"
 }

@@ -1,5 +1,6 @@
 {
     "@context": "000_context.jsonld",
     "id": "clittersubsurf",
-    "type": "variable"
+    "type": "variable",
+    "long_name": "Carbon Mass in Below-Ground Litter"
 }

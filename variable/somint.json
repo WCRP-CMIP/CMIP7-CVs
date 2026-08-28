@@ -1,5 +1,6 @@
 {
     "@context": "000_context.jsonld",
     "id": "somint",
-    "type": "variable"
+    "type": "variable",
+    "long_name": "Depth Integral of Product of Sea Water Density and Prognostic Salinity"
 }

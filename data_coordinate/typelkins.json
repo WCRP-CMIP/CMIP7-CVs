@@ -1,0 +1,6 @@
+{
+    "@context": "000_context.jsonld",
+    "id": "typelkins",
+    "type": "data_coordinate",
+    "long_name": "Lake and inland sea area type"
+}

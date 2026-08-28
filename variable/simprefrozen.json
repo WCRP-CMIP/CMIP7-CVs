@@ -1,5 +1,6 @@
 {
     "@context": "000_context.jsonld",
     "id": "simprefrozen",
-    "type": "variable"
+    "type": "variable",
+    "long_name": "Thickness of Refrozen Ice on Melt Pond"
 }

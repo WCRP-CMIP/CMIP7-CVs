@@ -1,5 +1,18 @@
 {
     "@context": "000_context.jsonld",
     "id": "intpn2_tavg-u-hxy-sea",
-    "type": "known_branded_variable"
+    "type": "known_branded_variable",
+    "description": "Vertically integrated nitrogen fixation",
+    "long_name": "Nitrogen Fixation Rate in Ocean",
+    "table_id": [
+        "ocnbgchem"
+    ],
+    "compound_name": [
+        "ocnBgchem.intpn2.tavg-u-hxy-sea.mon.30S-90S"
+    ],
+    "frequency": [
+        "mon"
+    ],
+    "cell_measures": "area: areacello",
+    "realm": "ocnbgchem"
 }

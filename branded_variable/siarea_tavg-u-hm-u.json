@@ -1,5 +1,21 @@
 {
     "@context": "000_context.jsonld",
     "id": "siarea_tavg-u-hm-u",
-    "type": "known_branded_variable"
+    "type": "known_branded_variable",
+    "description": "Total integrated area of sea ice in the Northern Hemisphere (where siconc > 0). Does not include grid cells partially covered by land.",
+    "long_name": "Sea-Ice Area",
+    "table_id": [
+        "seaice"
+    ],
+    "compound_name": [
+        "seaIce.siarea.tavg-u-hm-u.mon.nh",
+        "seaIce.siarea.tavg-u-hm-u.day.sh",
+        "seaIce.siarea.tavg-u-hm-u.day.nh",
+        "seaIce.siarea.tavg-u-hm-u.mon.sh"
+    ],
+    "frequency": [
+        "mon",
+        "day"
+    ],
+    "realm": "seaice"
 }

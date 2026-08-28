@@ -1,5 +1,18 @@
 {
     "@context": "000_context.jsonld",
     "id": "dyuo_ti-u-hxy-u",
-    "type": "known_branded_variable"
+    "type": "known_branded_variable",
+    "description": "The linear extent of the cell in the y direction of the horizontal grid centered at u-points (points for velocity in the x-direction). Not applicable to unstructured grids.",
+    "long_name": "Cell Length in the Y Direction at u-points",
+    "table_id": [
+        "ocean"
+    ],
+    "compound_name": [
+        "ocean.dyuo.ti-u-hxy-u.fx.glb"
+    ],
+    "frequency": [
+        "fx"
+    ],
+    "cell_measures": "--MODEL",
+    "realm": "ocean"
 }

@@ -1,5 +1,18 @@
 {
     "@context": "000_context.jsonld",
     "id": "o3_tpt-al-hxy-u",
-    "type": "known_branded_variable"
+    "type": "known_branded_variable",
+    "description": "This is the mole fraction of ozone in air, sampled on the first day of the month as an instantaneous field.",
+    "long_name": "O3 volume mixing ratio",
+    "table_id": [
+        "atmoschem"
+    ],
+    "compound_name": [
+        "atmosChem.o3.tpt-al-hxy-u.mon.glb"
+    ],
+    "frequency": [
+        "mon"
+    ],
+    "cell_measures": "area: areacella",
+    "realm": "atmoschem"
 }

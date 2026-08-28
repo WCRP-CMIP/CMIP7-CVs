@@ -1,5 +1,18 @@
 {
     "@context": "000_context.jsonld",
     "id": "sfcwind_tmax-h10m-hxy-u",
-    "type": "known_branded_variable"
+    "type": "known_branded_variable",
+    "description": "Daily maximum near-surface (usually, 10 meters) wind speed.",
+    "long_name": "Daily Maximum Near-Surface Wind Speed",
+    "table_id": [
+        "atmos"
+    ],
+    "compound_name": [
+        "atmos.sfcWind.tmax-h10m-hxy-u.day.glb"
+    ],
+    "frequency": [
+        "day"
+    ],
+    "cell_measures": "area: areacella",
+    "realm": "atmos"
 }

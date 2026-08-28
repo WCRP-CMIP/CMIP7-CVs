@@ -1,5 +1,6 @@
 {
     "@context": "000_context.jsonld",
     "id": "tslut",
-    "type": "variable"
+    "type": "variable",
+    "long_name": "Surface Temperature on Landuse Tile"
 }

@@ -1,5 +1,18 @@
 {
     "@context": "000_context.jsonld",
     "id": "emilnox_tavg-u-hxy-u",
-    "type": "known_branded_variable"
+    "type": "known_branded_variable",
+    "description": "Integrate the NOx production for lightning over model layer.",
+    "long_name": "Layer-Integrated Lightning Production of NOx",
+    "table_id": [
+        "aerosol"
+    ],
+    "compound_name": [
+        "aerosol.emilnox.tavg-u-hxy-u.mon.glb"
+    ],
+    "frequency": [
+        "mon"
+    ],
+    "cell_measures": "area: areacella",
+    "realm": "aerosol"
 }

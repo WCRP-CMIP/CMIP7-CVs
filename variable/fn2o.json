@@ -1,5 +1,6 @@
 {
     "@context": "000_context.jsonld",
     "id": "fn2o",
-    "type": "variable"
+    "type": "variable",
+    "long_name": "Total Land N2O Flux"
 }

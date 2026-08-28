@@ -1,5 +1,6 @@
 {
     "@context": "000_context.jsonld",
     "id": "bacc",
-    "type": "variable"
+    "type": "variable",
+    "long_name": "Surface Bacterial Carbon Concentration"
 }

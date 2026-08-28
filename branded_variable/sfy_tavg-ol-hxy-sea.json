@@ -1,5 +1,18 @@
 {
     "@context": "000_context.jsonld",
     "id": "sfy_tavg-ol-hxy-sea",
-    "type": "known_branded_variable"
+    "type": "known_branded_variable",
+    "description": "Contains all contributions to 'y-ward' salt mass transport from resolved and parameterized processes. Report on native horizontal grid.",
+    "long_name": "3D Ocean Salt Mass Y Transport",
+    "table_id": [
+        "ocean"
+    ],
+    "compound_name": [
+        "ocean.sfy.tavg-ol-hxy-sea.mon.glb"
+    ],
+    "frequency": [
+        "mon"
+    ],
+    "cell_measures": "area: areacello volume: volcello",
+    "realm": "ocean"
 }

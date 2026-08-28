@@ -1,5 +1,20 @@
 {
     "@context": "000_context.jsonld",
     "id": "intpoc_tavg-u-hxy-sea",
-    "type": "known_branded_variable"
+    "type": "known_branded_variable",
+    "description": "Vertically integrated POC",
+    "long_name": "Particulate Organic Carbon Content",
+    "table_id": [
+        "ocnbgchem"
+    ],
+    "compound_name": [
+        "ocnBgchem.intpoc.tavg-u-hxy-sea.day.glb",
+        "ocnBgchem.intpoc.tavg-u-hxy-sea.mon.30S-90S"
+    ],
+    "frequency": [
+        "day",
+        "mon"
+    ],
+    "cell_measures": "area: areacello",
+    "realm": "ocnbgchem"
 }

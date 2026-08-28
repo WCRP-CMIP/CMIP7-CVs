@@ -1,5 +1,18 @@
 {
     "@context": "000_context.jsonld",
     "id": "snmsl_tavg-u-hxy-lnd",
-    "type": "known_branded_variable"
+    "type": "known_branded_variable",
+    "description": "surface_snow_melt_flux_into_soil_layer",
+    "long_name": "Water Flowing out of Snowpack",
+    "table_id": [
+        "atmos"
+    ],
+    "compound_name": [
+        "atmos.snmsl.tavg-u-hxy-lnd.day.glb"
+    ],
+    "frequency": [
+        "day"
+    ],
+    "cell_measures": "area: areacella",
+    "realm": "atmos"
 }

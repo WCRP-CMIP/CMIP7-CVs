@@ -1,0 +1,6 @@
+{
+    "@context": "000_context.jsonld",
+    "id": "ap_bnds",
+    "type": "formula_term",
+    "long_name": "vertical coordinate formula term: ap(k+1/2)"
+}

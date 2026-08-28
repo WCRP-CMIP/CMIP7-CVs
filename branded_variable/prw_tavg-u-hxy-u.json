@@ -1,5 +1,23 @@
 {
     "@context": "000_context.jsonld",
     "id": "prw_tavg-u-hxy-u",
-    "type": "known_branded_variable"
+    "type": "known_branded_variable",
+    "description": "Vertically integrated mass of water vapour through the atmospheric column",
+    "long_name": "Water Vapor Path",
+    "table_id": [
+        "atmos"
+    ],
+    "compound_name": [
+        "atmos.prw.tavg-u-hxy-u.day.glb",
+        "atmos.prw.tavg-u-hxy-u.mon.glb",
+        "atmos.prw.tavg-u-hxy-u.mon.30S-90S",
+        "atmos.prw.tavg-u-hxy-u.3hr.glb"
+    ],
+    "frequency": [
+        "day",
+        "mon",
+        "3hr"
+    ],
+    "cell_measures": "area: areacella",
+    "realm": "atmos"
 }

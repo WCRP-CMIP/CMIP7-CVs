@@ -1,5 +1,17 @@
 {
     "@context": "000_context.jsonld",
     "id": "utendvtem_tavg-p39-hy-air",
-    "type": "known_branded_variable"
+    "type": "known_branded_variable",
+    "description": "Zonal mean tendency of eastward wind due to TEM northward advection and Coriolis term",
+    "long_name": "Tendency of Eastward Wind Due to TEM Northward Advection and Coriolis Term",
+    "table_id": [
+        "atmos"
+    ],
+    "compound_name": [
+        "atmos.utendvtem.tavg-p39-hy-air.day.glb"
+    ],
+    "frequency": [
+        "day"
+    ],
+    "realm": "atmos"
 }

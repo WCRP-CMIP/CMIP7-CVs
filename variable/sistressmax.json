@@ -1,5 +1,6 @@
 {
     "@context": "000_context.jsonld",
     "id": "sistressmax",
-    "type": "variable"
+    "type": "variable",
+    "long_name": "Maximum Shear Stress in Sea Ice"
 }

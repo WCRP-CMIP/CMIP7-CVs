@@ -1,0 +1,18 @@
+{
+    "@context": {
+        "@base": "https://esgvoc.ipsl.fr/resource/universe/formula_term/",
+        "@vocab": "http://schema.org/",
+        "id": "@id",
+        "type": "@type",
+        "dimensions": {
+            "@id": "https://esgvoc.ipsl.fr/resource/universe/data_coordinate/",
+            "@type": "@id",
+            "@context": {
+                "@base": "https://esgvoc.ipsl.fr/resource/universe/data_coordinate/"
+            }
+        }
+    },
+    "esgvoc_resolve_modes": {
+        "dimensions": "full"
+    }
+}

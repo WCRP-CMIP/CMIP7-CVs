@@ -1,5 +1,6 @@
 {
     "@context": "000_context.jsonld",
     "id": "fvegfire",
-    "type": "variable"
+    "type": "variable",
+    "long_name": "Carbon Mass Flux from Vegetation into Atmosphere Due to CO2 Emission from All Fire [kgC m-2 s-1]"
 }

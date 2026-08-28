@@ -1,5 +1,6 @@
 {
     "@context": "000_context.jsonld",
     "id": "fndep",
-    "type": "variable"
+    "type": "variable",
+    "long_name": "Dry and Wet Deposition of Reactive Nitrogen onto Land"
 }

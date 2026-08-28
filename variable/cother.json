@@ -1,5 +1,6 @@
 {
     "@context": "000_context.jsonld",
     "id": "cother",
-    "type": "variable"
+    "type": "variable",
+    "long_name": "Carbon Mass in Vegetation Components Other than Leaves, Stems and Roots"
 }

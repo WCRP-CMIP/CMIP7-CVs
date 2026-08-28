@@ -1,5 +1,6 @@
 {
     "@context": "000_context.jsonld",
     "id": "siu",
-    "type": "variable"
+    "type": "variable",
+    "long_name": "X-Component of Sea-Ice Velocity"
 }

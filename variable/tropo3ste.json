@@ -1,5 +1,6 @@
 {
     "@context": "000_context.jsonld",
     "id": "tropo3ste",
-    "type": "variable"
+    "type": "variable",
+    "long_name": "Tropospheric ozone volume mixing ratio due to stratosphere-troposphere exchange (STE)"
 }

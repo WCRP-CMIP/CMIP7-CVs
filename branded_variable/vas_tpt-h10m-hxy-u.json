@@ -1,5 +1,22 @@
 {
     "@context": "000_context.jsonld",
     "id": "vas_tpt-h10m-hxy-u",
-    "type": "known_branded_variable"
+    "type": "known_branded_variable",
+    "description": "Meridional wind (positive in a northward direction) at 10 meters above the surface.",
+    "long_name": "Northward Near-Surface Wind",
+    "table_id": [
+        "atmos"
+    ],
+    "compound_name": [
+        "atmos.vas.tpt-h10m-hxy-u.3hr.glb",
+        "atmos.vas.tpt-h10m-hxy-u.1hr.glb",
+        "atmos.vas.tpt-h10m-hxy-u.6hr.glb"
+    ],
+    "frequency": [
+        "3hr",
+        "1hr",
+        "6hr"
+    ],
+    "cell_measures": "area: areacella",
+    "realm": "atmos"
 }

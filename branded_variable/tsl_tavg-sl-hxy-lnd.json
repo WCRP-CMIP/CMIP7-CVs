@@ -1,5 +1,20 @@
 {
     "@context": "000_context.jsonld",
     "id": "tsl_tavg-sl-hxy-lnd",
-    "type": "known_branded_variable"
+    "type": "known_branded_variable",
+    "description": "Temperature of each soil layer.  Reported as \"missing\" for grid cells occupied entirely by \"sea\".",
+    "long_name": "Temperature of Soil",
+    "table_id": [
+        "land"
+    ],
+    "compound_name": [
+        "land.tsl.tavg-sl-hxy-lnd.day.glb",
+        "land.tsl.tavg-sl-hxy-lnd.mon.glb"
+    ],
+    "frequency": [
+        "day",
+        "mon"
+    ],
+    "cell_measures": "area: areacella",
+    "realm": "land"
 }

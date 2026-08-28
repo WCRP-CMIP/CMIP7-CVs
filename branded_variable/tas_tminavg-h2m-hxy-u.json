@@ -1,5 +1,19 @@
 {
     "@context": "000_context.jsonld",
     "id": "tas_tminavg-h2m-hxy-u",
-    "type": "known_branded_variable"
+    "type": "known_branded_variable",
+    "description": "monthly mean of the daily-minimum near-surface air temperature.",
+    "long_name": "Daily Minimum Near-Surface Air Temperature",
+    "table_id": [
+        "atmos"
+    ],
+    "compound_name": [
+        "atmos.tas.tminavg-h2m-hxy-u.mon.30S-90S",
+        "atmos.tas.tminavg-h2m-hxy-u.mon.glb"
+    ],
+    "frequency": [
+        "mon"
+    ],
+    "cell_measures": "area: areacella",
+    "realm": "atmos"
 }

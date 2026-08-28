@@ -1,5 +1,18 @@
 {
     "@context": "000_context.jsonld",
     "id": "lim_tavg-u-hm-is",
-    "type": "known_branded_variable"
+    "type": "known_branded_variable",
+    "description": "Antarctica",
+    "long_name": "Ice Sheet Mass",
+    "table_id": [
+        "landice"
+    ],
+    "compound_name": [
+        "landIce.lim.tavg-u-hm-is.yr.grl",
+        "landIce.lim.tavg-u-hm-is.yr.ata"
+    ],
+    "frequency": [
+        "yr"
+    ],
+    "realm": "landice"
 }

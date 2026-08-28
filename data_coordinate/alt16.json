@@ -1,0 +1,7 @@
+{
+    "@context": "000_context.jsonld",
+    "id": "alt16",
+    "type": "data_coordinate",
+    "long_name": "Altitude (16 Levels for MISR)",
+    "tolerance": 1.0
+}

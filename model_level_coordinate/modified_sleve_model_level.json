@@ -1,0 +1,6 @@
+{
+    "@context": "000_context.jsonld",
+    "id": "modified_sleve_model_level",
+    "type": "model_level_coordinate",
+    "long_name": "Atmosphere Modified SLEVE Model Full-Levels (index; associated with 3D time-independent zfull and time-dependent pfull)"
+}

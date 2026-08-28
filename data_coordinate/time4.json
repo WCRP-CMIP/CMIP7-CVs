@@ -1,0 +1,6 @@
+{
+    "@context": "000_context.jsonld",
+    "id": "time4",
+    "type": "data_coordinate",
+    "long_name": "Monthly Mean Daily Statistics"
+}

@@ -1,5 +1,6 @@
 {
     "@context": "000_context.jsonld",
     "id": "gppc14",
-    "type": "variable"
+    "type": "variable",
+    "long_name": "Carbon-14 Mass Flux out of Atmosphere Due to Gross Primary Production on Land [kgC m-2 s-1]"
 }

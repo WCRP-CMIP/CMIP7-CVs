@@ -1,5 +1,6 @@
 {
     "@context": "000_context.jsonld",
     "id": "nland",
-    "type": "variable"
+    "type": "variable",
+    "long_name": "Total Nitrogen in All Terrestrial Nitrogen Pools"
 }

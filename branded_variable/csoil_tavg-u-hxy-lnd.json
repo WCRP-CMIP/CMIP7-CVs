@@ -1,5 +1,18 @@
 {
     "@context": "000_context.jsonld",
     "id": "csoil_tavg-u-hxy-lnd",
-    "type": "known_branded_variable"
+    "type": "known_branded_variable",
+    "description": "Carbon mass in the full depth of the soil model.",
+    "long_name": "Carbon Mass in Model Soil Pool",
+    "table_id": [
+        "land"
+    ],
+    "compound_name": [
+        "land.cSoil.tavg-u-hxy-lnd.mon.glb"
+    ],
+    "frequency": [
+        "mon"
+    ],
+    "cell_measures": "area: areacella",
+    "realm": "land"
 }

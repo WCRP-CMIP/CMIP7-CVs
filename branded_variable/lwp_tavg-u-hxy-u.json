@@ -1,5 +1,18 @@
 {
     "@context": "000_context.jsonld",
     "id": "lwp_tavg-u-hxy-u",
-    "type": "known_branded_variable"
+    "type": "known_branded_variable",
+    "description": "The total mass of liquid water in cloud per unit area.",
+    "long_name": "Liquid Water Path",
+    "table_id": [
+        "aerosol"
+    ],
+    "compound_name": [
+        "aerosol.lwp.tavg-u-hxy-u.mon.glb"
+    ],
+    "frequency": [
+        "mon"
+    ],
+    "cell_measures": "area: areacella",
+    "realm": "aerosol"
 }

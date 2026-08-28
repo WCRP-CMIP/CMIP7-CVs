@@ -1,5 +1,6 @@
 {
     "@context": "000_context.jsonld",
     "id": "siflfwbot",
-    "type": "variable"
+    "type": "variable",
+    "long_name": "Freshwater Flux from Sea Ice"
 }

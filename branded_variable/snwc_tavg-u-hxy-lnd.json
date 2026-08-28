@@ -1,5 +1,18 @@
 {
     "@context": "000_context.jsonld",
     "id": "snwc_tavg-u-hxy-lnd",
-    "type": "known_branded_variable"
+    "type": "known_branded_variable",
+    "description": "canopy_snow_amount",
+    "long_name": "Snow Water Equivalent Intercepted by the Vegetation",
+    "table_id": [
+        "atmos"
+    ],
+    "compound_name": [
+        "atmos.snwc.tavg-u-hxy-lnd.day.glb"
+    ],
+    "frequency": [
+        "day"
+    ],
+    "cell_measures": "area: areacella",
+    "realm": "atmos"
 }

@@ -1,5 +1,17 @@
 {
     "@context": "000_context.jsonld",
     "id": "tnhusscp_tpt-al-hs-u",
-    "type": "known_branded_variable"
+    "type": "known_branded_variable",
+    "description": "alevel site time1",
+    "long_name": "Tendency of Specific Humidity Due to Stratiform Clouds and Precipitation",
+    "table_id": [
+        "atmos"
+    ],
+    "compound_name": [
+        "atmos.tnhusscp.tpt-al-hs-u.subhr.glb"
+    ],
+    "frequency": [
+        "subhr"
+    ],
+    "realm": "atmos"
 }

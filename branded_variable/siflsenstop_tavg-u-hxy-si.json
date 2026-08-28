@@ -1,5 +1,20 @@
 {
     "@context": "000_context.jsonld",
     "id": "siflsenstop_tavg-u-hxy-si",
-    "type": "known_branded_variable"
+    "type": "known_branded_variable",
+    "description": "Net sensible heat flux over sea ice (energy flow per sea ice area). Positive for a downward heat flux.",
+    "long_name": "Net Downward Sensible Heat Flux over Sea Ice",
+    "table_id": [
+        "seaice"
+    ],
+    "compound_name": [
+        "seaIce.siflsenstop.tavg-u-hxy-si.day.glb",
+        "seaIce.siflsenstop.tavg-u-hxy-si.mon.glb"
+    ],
+    "frequency": [
+        "day",
+        "mon"
+    ],
+    "cell_measures": "area: areacella",
+    "realm": "seaice"
 }

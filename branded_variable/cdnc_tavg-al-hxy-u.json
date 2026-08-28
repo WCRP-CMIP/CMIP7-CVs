@@ -1,5 +1,19 @@
 {
     "@context": "000_context.jsonld",
     "id": "cdnc_tavg-al-hxy-u",
-    "type": "known_branded_variable"
+    "type": "known_branded_variable",
+    "description": "Cloud Droplet Number Concentration in liquid water clouds.",
+    "long_name": "Cloud Liquid Droplet Number Concentration",
+    "table_id": [
+        "aerosol"
+    ],
+    "compound_name": [
+        "aerosol.cdnc.tavg-al-hxy-u.mon.glb",
+        "aerosol.cdnc.tavg-al-hxy-u.mon.30S-90S"
+    ],
+    "frequency": [
+        "mon"
+    ],
+    "cell_measures": "area: areacella",
+    "realm": "aerosol"
 }

@@ -1,5 +1,18 @@
 {
     "@context": "000_context.jsonld",
     "id": "pfull_tpt-al-hxy-u",
-    "type": "known_branded_variable"
+    "type": "known_branded_variable",
+    "description": "Air pressure on model levels",
+    "long_name": "Pressure at Model Full-Levels",
+    "table_id": [
+        "atmos"
+    ],
+    "compound_name": [
+        "atmos.pfull.tpt-al-hxy-u.3hr.glb"
+    ],
+    "frequency": [
+        "3hr"
+    ],
+    "cell_measures": "area: areacella",
+    "realm": "atmos"
 }

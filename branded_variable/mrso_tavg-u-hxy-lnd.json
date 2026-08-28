@@ -1,5 +1,20 @@
 {
     "@context": "000_context.jsonld",
     "id": "mrso_tavg-u-hxy-lnd",
-    "type": "known_branded_variable"
+    "type": "known_branded_variable",
+    "description": "the mass per unit area  (summed over all soil layers) of water in all phases.",
+    "long_name": "Total Soil Moisture Content",
+    "table_id": [
+        "land"
+    ],
+    "compound_name": [
+        "land.mrso.tavg-u-hxy-lnd.day.glb",
+        "land.mrso.tavg-u-hxy-lnd.mon.glb"
+    ],
+    "frequency": [
+        "day",
+        "mon"
+    ],
+    "cell_measures": "area: areacella",
+    "realm": "land"
 }

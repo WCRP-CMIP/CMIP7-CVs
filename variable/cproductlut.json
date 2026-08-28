@@ -1,5 +1,6 @@
 {
     "@context": "000_context.jsonld",
     "id": "cproductlut",
-    "type": "variable"
+    "type": "variable",
+    "long_name": "Wood and Agricultural Product Pool Carbon Associated with Land-Use Tiles"
 }

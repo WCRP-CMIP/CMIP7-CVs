@@ -1,5 +1,18 @@
 {
     "@context": "000_context.jsonld",
     "id": "fharvesttogeologicstorage_tavg-u-hxy-lnd",
-    "type": "known_branded_variable"
+    "type": "known_branded_variable",
+    "description": "Flux of carbon harvested from biomass that goes into geologic storage for the purposes of intentional carbon dioxide removal, via efforts such as bioenergy with carbon capture and storage (BECCS) or biomass removal and storage (BiCRS). The definition of geologic storage here is that the resulting carbon be  stored for a period of time that is long relative to that of the simulation.",
+    "long_name": "Harvested Biomass That Goes into Geological Storage",
+    "table_id": [
+        "land"
+    ],
+    "compound_name": [
+        "land.fHarvestToGeologicStorage.tavg-u-hxy-lnd.mon.glb"
+    ],
+    "frequency": [
+        "mon"
+    ],
+    "cell_measures": "area: areacella",
+    "realm": "land"
 }

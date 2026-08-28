@@ -1,5 +1,18 @@
 {
     "@context": "000_context.jsonld",
     "id": "sisi_tavg-u-hxy-si",
-    "type": "known_branded_variable"
+    "type": "known_branded_variable",
+    "description": "Vertically-integrated amount of silicate in ice algae, expressed in moles of silicon per square meter of sea ice.",
+    "long_name": "Dissolved Silicon Amount in Sea Ice",
+    "table_id": [
+        "ocnbgchem"
+    ],
+    "compound_name": [
+        "ocnBgchem.sisi.tavg-u-hxy-si.mon.glb"
+    ],
+    "frequency": [
+        "mon"
+    ],
+    "cell_measures": "area: areacello",
+    "realm": "ocnbgchem"
 }

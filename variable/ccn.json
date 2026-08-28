@@ -1,5 +1,6 @@
 {
     "@context": "000_context.jsonld",
     "id": "ccn",
-    "type": "variable"
+    "type": "variable",
+    "long_name": "Cloud Condensation Nuclei Concentration at Liquid Cloud Top"
 }

@@ -1,5 +1,6 @@
 {
     "@context": "000_context.jsonld",
     "id": "emioa",
-    "type": "variable"
+    "type": "variable",
+    "long_name": "Primary Emission and Chemical Production of Dry Aerosol Organic Matter"
 }

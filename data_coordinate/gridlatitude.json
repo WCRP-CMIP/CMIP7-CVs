@@ -1,0 +1,8 @@
+{
+    "@context": "000_context.jsonld",
+    "id": "gridlatitude",
+    "type": "data_coordinate",
+    "long_name": "Grid Latitude",
+    "valid_min": -90.0,
+    "valid_max": 90.0
+}

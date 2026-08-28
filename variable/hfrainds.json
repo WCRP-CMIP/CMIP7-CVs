@@ -1,5 +1,6 @@
 {
     "@context": "000_context.jsonld",
     "id": "hfrainds",
-    "type": "variable"
+    "type": "variable",
+    "long_name": "Temperature Flux Due to Rainfall Expressed as Heat Flux into Sea Water"
 }

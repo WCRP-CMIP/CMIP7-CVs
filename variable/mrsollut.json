@@ -1,5 +1,6 @@
 {
     "@context": "000_context.jsonld",
     "id": "mrsollut",
-    "type": "variable"
+    "type": "variable",
+    "long_name": "Moisture in Upper Portion of Soil Column of Land-Use Tile"
 }

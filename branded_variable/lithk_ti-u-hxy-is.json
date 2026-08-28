@@ -1,5 +1,19 @@
 {
     "@context": "000_context.jsonld",
     "id": "lithk_ti-u-hxy-is",
-    "type": "known_branded_variable"
+    "type": "known_branded_variable",
+    "description": "The thickness of the ice sheet",
+    "long_name": "Ice Sheet Thickness",
+    "table_id": [
+        "landice"
+    ],
+    "compound_name": [
+        "landIce.lithk.ti-u-hxy-is.fx.grl",
+        "landIce.lithk.ti-u-hxy-is.fx.ata"
+    ],
+    "frequency": [
+        "fx"
+    ],
+    "cell_measures": "area: areacellg",
+    "realm": "landice"
 }

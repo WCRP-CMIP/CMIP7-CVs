@@ -1,5 +1,6 @@
 {
     "@context": "000_context.jsonld",
     "id": "flulccatmlut",
-    "type": "variable"
+    "type": "variable",
+    "long_name": "Carbon Transferred Directly to Atmosphere Due to any Land-Use or Land-Cover Change Activities [kgC m-2 s-1]"
 }

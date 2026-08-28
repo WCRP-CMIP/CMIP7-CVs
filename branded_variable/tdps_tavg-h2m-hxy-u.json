@@ -1,5 +1,20 @@
 {
     "@context": "000_context.jsonld",
     "id": "tdps_tavg-h2m-hxy-u",
-    "type": "known_branded_variable"
+    "type": "known_branded_variable",
+    "description": "Dew point temperature is the temperature at which a parcel of air reaches saturation upon being cooled at constant pressure and specific humidity.",
+    "long_name": "2m Dewpoint Temperature",
+    "table_id": [
+        "atmos"
+    ],
+    "compound_name": [
+        "atmos.tdps.tavg-h2m-hxy-u.mon.glb",
+        "atmos.tdps.tavg-h2m-hxy-u.day.glb"
+    ],
+    "frequency": [
+        "mon",
+        "day"
+    ],
+    "cell_measures": "area: areacella",
+    "realm": "atmos"
 }

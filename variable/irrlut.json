@@ -1,5 +1,6 @@
 {
     "@context": "000_context.jsonld",
     "id": "irrlut",
-    "type": "variable"
+    "type": "variable",
+    "long_name": "Irrigation Flux Including any Irrigation for Crops, Trees, Pasture, or Urban Lawns"
 }

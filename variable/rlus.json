@@ -1,5 +1,6 @@
 {
     "@context": "000_context.jsonld",
     "id": "rlus",
-    "type": "variable"
+    "type": "variable",
+    "long_name": "Surface Upwelling Longwave Radiation"
 }

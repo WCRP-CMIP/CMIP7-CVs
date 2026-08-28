@@ -1,5 +1,22 @@
 {
     "@context": "000_context.jsonld",
     "id": "libmassbf_tavg-u-hxy-gis",
-    "type": "known_branded_variable"
+    "type": "known_branded_variable",
+    "description": "quantity averaged over grounded ice sheet",
+    "long_name": "Basal Specific Mass Balance Flux of Grounded Ice Sheet",
+    "table_id": [
+        "landice"
+    ],
+    "compound_name": [
+        "landIce.libmassbf.tavg-u-hxy-gis.mon.grl",
+        "landIce.libmassbf.tavg-u-hxy-gis.yr.ata",
+        "landIce.libmassbf.tavg-u-hxy-gis.yr.grl",
+        "landIce.libmassbf.tavg-u-hxy-gis.mon.ata"
+    ],
+    "frequency": [
+        "mon",
+        "yr"
+    ],
+    "cell_measures": "area: areacellg",
+    "realm": "landice"
 }

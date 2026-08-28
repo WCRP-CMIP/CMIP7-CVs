@@ -1,5 +1,18 @@
 {
     "@context": "000_context.jsonld",
     "id": "va_tpt-h100m-hxy-u",
-    "type": "known_branded_variable"
+    "type": "known_branded_variable",
+    "description": "Meridional wind (positive in a northward direction) at 100m above the surface.",
+    "long_name": "Northward Wind at 100m",
+    "table_id": [
+        "atmos"
+    ],
+    "compound_name": [
+        "atmos.va.tpt-h100m-hxy-u.1hr.glb"
+    ],
+    "frequency": [
+        "1hr"
+    ],
+    "cell_measures": "area: areacella",
+    "realm": "atmos"
 }

@@ -1,5 +1,6 @@
 {
     "@context": "000_context.jsonld",
     "id": "sino3",
-    "type": "variable"
+    "type": "variable",
+    "long_name": "Dissolved Nitrate Amount in Sea Ice"
 }

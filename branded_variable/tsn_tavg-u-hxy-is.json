@@ -1,5 +1,20 @@
 {
     "@context": "000_context.jsonld",
     "id": "tsn_tavg-u-hxy-is",
-    "type": "known_branded_variable"
+    "type": "known_branded_variable",
+    "description": "quantity averaged over ice_sheet (meaning grounded ice sheet and floating ice shelf) only, to avoid contamination from other surfaces (eg: permafrost)",
+    "long_name": "Ice Sheet Snow Internal Temperature",
+    "table_id": [
+        "landice"
+    ],
+    "compound_name": [
+        "landIce.tsn.tavg-u-hxy-is.mon.ata",
+        "landIce.tsn.tavg-u-hxy-is.mon.grl",
+        "landIce.tsn.tavg-u-hxy-is.mon.glb"
+    ],
+    "frequency": [
+        "mon"
+    ],
+    "cell_measures": "area: areacella",
+    "realm": "landice"
 }

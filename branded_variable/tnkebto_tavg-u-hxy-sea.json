@@ -1,5 +1,18 @@
 {
     "@context": "000_context.jsonld",
     "id": "tnkebto_tavg-u-hxy-sea",
-    "type": "known_branded_variable"
+    "type": "known_branded_variable",
+    "description": "Depth integrated impacts on kinetic energy arising from parameterized eddy-induced advection. For CMIP5, this diagnostic was 3d, whereas the CMIP6 depth integrated diagnostic is sufficient for many purposes and reduces archive requirements.",
+    "long_name": "Tendency of Ocean Eddy Kinetic Energy Content Due to Parameterized Eddy Advection",
+    "table_id": [
+        "ocean"
+    ],
+    "compound_name": [
+        "ocean.tnkebto.tavg-u-hxy-sea.yr.glb"
+    ],
+    "frequency": [
+        "yr"
+    ],
+    "cell_measures": "area: areacello",
+    "realm": "ocean"
 }

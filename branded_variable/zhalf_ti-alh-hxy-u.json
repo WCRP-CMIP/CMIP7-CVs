@@ -1,0 +1,18 @@
+{
+    "@context": "000_context.jsonld",
+    "id": "zhalf_ti-alh-hxy-u",
+    "type": "known_branded_variable",
+    "description": "Provide only if altitude of full model levels is fixed",
+    "long_name": "Altitude of Model Half-Levels",
+    "table_id": [
+        "atmos"
+    ],
+    "compound_name": [
+        "atmos.zhalf.ti-alh-hxy-u.fx.glb"
+    ],
+    "frequency": [
+        "fx"
+    ],
+    "cell_measures": "area: areacella",
+    "realm": "atmos"
+}

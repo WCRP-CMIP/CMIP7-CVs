@@ -1,5 +1,6 @@
 {
     "@context": "000_context.jsonld",
     "id": "libmassbf",
-    "type": "variable"
+    "type": "variable",
+    "long_name": "Basal Specific Mass Balance Flux of Floating Ice Shelf"
 }

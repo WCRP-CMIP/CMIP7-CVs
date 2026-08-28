@@ -1,5 +1,18 @@
 {
     "@context": "000_context.jsonld",
     "id": "limnsw_tavg-u-hm-is",
-    "type": "known_branded_variable"
+    "type": "known_branded_variable",
+    "description": "Antarctica",
+    "long_name": "Ice Sheet Mass That Does not Displace Sea Water",
+    "table_id": [
+        "landice"
+    ],
+    "compound_name": [
+        "landIce.limnsw.tavg-u-hm-is.yr.ata",
+        "landIce.limnsw.tavg-u-hm-is.yr.grl"
+    ],
+    "frequency": [
+        "yr"
+    ],
+    "realm": "landice"
 }

@@ -1,5 +1,18 @@
 {
     "@context": "000_context.jsonld",
     "id": "mmrnh4_tavg-h2m-hxy-u",
-    "type": "known_branded_variable"
+    "type": "known_branded_variable",
+    "description": "Daily mean NH4 mass mixing ratio near surface.",
+    "long_name": "Daily mean near-surface NH4",
+    "table_id": [
+        "aerosol"
+    ],
+    "compound_name": [
+        "aerosol.mmrnh4.tavg-h2m-hxy-u.day.glb"
+    ],
+    "frequency": [
+        "day"
+    ],
+    "cell_measures": "area: areacella",
+    "realm": "aerosol"
 }

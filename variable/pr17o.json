@@ -1,5 +1,6 @@
 {
     "@context": "000_context.jsonld",
     "id": "pr17o",
-    "type": "variable"
+    "type": "variable",
+    "long_name": "Precipitation Flux of Water Containing Oxygen-17 (H2 17O)"
 }

@@ -1,5 +1,17 @@
 {
     "@context": "000_context.jsonld",
     "id": "va_tpt-al-hs-u",
-    "type": "known_branded_variable"
+    "type": "known_branded_variable",
+    "description": "Meridional wind (positive in a northward direction).",
+    "long_name": "Northward Wind",
+    "table_id": [
+        "atmos"
+    ],
+    "compound_name": [
+        "atmos.va.tpt-al-hs-u.subhr.glb"
+    ],
+    "frequency": [
+        "subhr"
+    ],
+    "realm": "atmos"
 }

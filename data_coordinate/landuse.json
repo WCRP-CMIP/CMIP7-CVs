@@ -1,0 +1,6 @@
+{
+    "@context": "000_context.jsonld",
+    "id": "landuse",
+    "type": "data_coordinate",
+    "long_name": "Land use type"
+}

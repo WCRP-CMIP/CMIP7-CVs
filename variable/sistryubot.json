@@ -1,5 +1,6 @@
 {
     "@context": "000_context.jsonld",
     "id": "sistryubot",
-    "type": "variable"
+    "type": "variable",
+    "long_name": "Y-Component of Ocean Stress on Sea Ice"
 }

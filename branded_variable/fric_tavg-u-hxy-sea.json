@@ -1,5 +1,18 @@
 {
     "@context": "000_context.jsonld",
     "id": "fric_tavg-u-hxy-sea",
-    "type": "known_branded_variable"
+    "type": "known_branded_variable",
+    "description": "Inorganic Carbon loss to sediments",
+    "long_name": "Downward Inorganic Carbon Flux at Ocean Bottom",
+    "table_id": [
+        "ocnbgchem"
+    ],
+    "compound_name": [
+        "ocnBgchem.fric.tavg-u-hxy-sea.mon.glb"
+    ],
+    "frequency": [
+        "mon"
+    ],
+    "cell_measures": "area: areacello",
+    "realm": "ocnbgchem"
 }

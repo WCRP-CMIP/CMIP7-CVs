@@ -1,5 +1,20 @@
 {
     "@context": "000_context.jsonld",
     "id": "tossq_tavg-u-hxy-sea",
-    "type": "known_branded_variable"
+    "type": "known_branded_variable",
+    "description": "Square of temperature of liquid ocean, averaged over the day.",
+    "long_name": "Square of Sea Surface Temperature",
+    "table_id": [
+        "ocean"
+    ],
+    "compound_name": [
+        "ocean.tossq.tavg-u-hxy-sea.mon.glb",
+        "ocean.tossq.tavg-u-hxy-sea.day.glb"
+    ],
+    "frequency": [
+        "mon",
+        "day"
+    ],
+    "cell_measures": "area: areacello",
+    "realm": "ocean"
 }

@@ -1,5 +1,18 @@
 {
     "@context": "000_context.jsonld",
     "id": "e90inst_tpt-al-hxy-u",
-    "type": "known_branded_variable"
+    "type": "known_branded_variable",
+    "description": "Mole fraction of an artificial tracer with a 90-day lifetime (e90)",
+    "long_name": "Artificial tracer with 90 day lifetime",
+    "table_id": [
+        "atmoschem"
+    ],
+    "compound_name": [
+        "atmosChem.e90inst.tpt-al-hxy-u.mon.glb"
+    ],
+    "frequency": [
+        "mon"
+    ],
+    "cell_measures": "area: areacella",
+    "realm": "atmoschem"
 }

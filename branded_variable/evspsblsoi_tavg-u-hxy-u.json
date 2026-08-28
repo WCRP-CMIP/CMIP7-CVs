@@ -1,5 +1,20 @@
 {
     "@context": "000_context.jsonld",
     "id": "evspsblsoi_tavg-u-hxy-u",
-    "type": "known_branded_variable"
+    "type": "known_branded_variable",
+    "description": "Water evaporation flux from soil but for daily averages i.e., the evspsblsoi variable, which is only currently defined for monthly averages",
+    "long_name": "Water Evaporation from Soil",
+    "table_id": [
+        "land"
+    ],
+    "compound_name": [
+        "land.evspsblsoi.tavg-u-hxy-u.day.glb",
+        "land.evspsblsoi.tavg-u-hxy-u.3hr.glb"
+    ],
+    "frequency": [
+        "day",
+        "3hr"
+    ],
+    "cell_measures": "area: areacella",
+    "realm": "land"
 }

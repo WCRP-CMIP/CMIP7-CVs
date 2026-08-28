@@ -1,5 +1,20 @@
 {
     "@context": "000_context.jsonld",
     "id": "phalf_tavg-alh-hxy-u",
-    "type": "known_branded_variable"
+    "type": "known_branded_variable",
+    "description": "The atmospheric pressure at the model layer interfaces for all times and levels in the associated output variables",
+    "long_name": "Pressure on Model Half-Levels",
+    "table_id": [
+        "atmos"
+    ],
+    "compound_name": [
+        "atmos.phalf.tavg-alh-hxy-u.day.glb",
+        "atmos.phalf.tavg-alh-hxy-u.mon.glb"
+    ],
+    "frequency": [
+        "day",
+        "mon"
+    ],
+    "cell_measures": "area: areacella",
+    "realm": "atmos"
 }

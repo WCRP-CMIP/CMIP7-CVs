@@ -1,0 +1,18 @@
+{
+    "@context": {
+        "@base": "https://esgvoc.ipsl.fr/resource/universe/data_coordinate/",
+        "@vocab": "http://schema.org/",
+        "id": "@id",
+        "type": "@type",
+        "coordinate_type": {
+            "@id": "https://esgvoc.ipsl.fr/resource/universe/coordinate_type/",
+            "@type": "@id",
+            "@context": {
+                "@base": "https://esgvoc.ipsl.fr/resource/universe/coordinate_type/"
+            }
+        }
+    },
+    "esgvoc_resolve_modes": {
+        "coordinate_type": "full"
+    }
+}

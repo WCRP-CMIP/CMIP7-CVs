@@ -1,5 +1,20 @@
 {
     "@context": "000_context.jsonld",
     "id": "siflsensbot_tavg-u-hxy-si",
-    "type": "known_branded_variable"
+    "type": "known_branded_variable",
+    "description": "Net sensible heat flux under sea ice from or to the ocean (energy flow per sea ice area). Per sign convention, heat from the ocean is counted as negative since it describes an upward heat flux.",
+    "long_name": "Net Upward Sensible Heat Flux under Sea Ice",
+    "table_id": [
+        "seaice"
+    ],
+    "compound_name": [
+        "seaIce.siflsensbot.tavg-u-hxy-si.mon.glb",
+        "seaIce.siflsensbot.tavg-u-hxy-si.day.glb"
+    ],
+    "frequency": [
+        "mon",
+        "day"
+    ],
+    "cell_measures": "area: areacello",
+    "realm": "seaice"
 }

@@ -1,5 +1,18 @@
 {
     "@context": "000_context.jsonld",
     "id": "mrrob_tavg-u-hxy-lnd",
-    "type": "known_branded_variable"
+    "type": "known_branded_variable",
+    "description": "subsurface_runoff_flux",
+    "long_name": "Subsurface Runoff",
+    "table_id": [
+        "land"
+    ],
+    "compound_name": [
+        "land.mrrob.tavg-u-hxy-lnd.day.glb"
+    ],
+    "frequency": [
+        "day"
+    ],
+    "cell_measures": "area: areacella",
+    "realm": "land"
 }

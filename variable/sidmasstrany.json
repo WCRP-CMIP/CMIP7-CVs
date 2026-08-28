@@ -1,5 +1,6 @@
 {
     "@context": "000_context.jsonld",
     "id": "sidmasstrany",
-    "type": "variable"
+    "type": "variable",
+    "long_name": "Y-Component of Sea-Ice Mass Transport"
 }

@@ -1,5 +1,6 @@
 {
     "@context": "000_context.jsonld",
     "id": "rhlitter",
-    "type": "variable"
+    "type": "variable",
+    "long_name": "Carbon Mass Flux into Atmosphere Due to Heterotrophic Respiration from Litter on Land"
 }

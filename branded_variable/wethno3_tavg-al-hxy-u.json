@@ -1,5 +1,18 @@
 {
     "@context": "000_context.jsonld",
     "id": "wethno3_tavg-al-hxy-u",
-    "type": "known_branded_variable"
+    "type": "known_branded_variable",
+    "description": "This is the loss rate of nitric acid (HNO3) from the atmosphere due to wet deposition",
+    "long_name": "wet deposition of HNO3",
+    "table_id": [
+        "atmoschem"
+    ],
+    "compound_name": [
+        "atmosChem.wethno3.tavg-al-hxy-u.mon.glb"
+    ],
+    "frequency": [
+        "mon"
+    ],
+    "cell_measures": "area: areacella",
+    "realm": "atmoschem"
 }

@@ -1,5 +1,18 @@
 {
     "@context": "000_context.jsonld",
     "id": "flittersoil_tavg-u-hxy-lnd",
-    "type": "known_branded_variable"
+    "type": "known_branded_variable",
+    "description": "Carbon mass flux per unit area into soil from litter (dead plant material in or above the soil).",
+    "long_name": "Total Carbon Mass Flux from Litter to Soil",
+    "table_id": [
+        "land"
+    ],
+    "compound_name": [
+        "land.fLitterSoil.tavg-u-hxy-lnd.mon.glb"
+    ],
+    "frequency": [
+        "mon"
+    ],
+    "cell_measures": "area: areacella",
+    "realm": "land"
 }

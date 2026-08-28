@@ -1,5 +1,18 @@
 {
     "@context": "000_context.jsonld",
     "id": "rsds_tavg-u-hxy-ifs",
-    "type": "known_branded_variable"
+    "type": "known_branded_variable",
+    "description": "Surface Downwelling Shortwave Radiation over the portion of an ocean grid cell not covered by sea ice. Can be used for computation of surface albedo.",
+    "long_name": "Surface Downwelling Shortwave Radiation over Ocean Not Covered by Sea Ice",
+    "table_id": [
+        "ocean"
+    ],
+    "compound_name": [
+        "ocean.rsds.tavg-u-hxy-ifs.mon.glb"
+    ],
+    "frequency": [
+        "mon"
+    ],
+    "cell_measures": "area: areacello",
+    "realm": "ocean"
 }

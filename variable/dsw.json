@@ -1,5 +1,6 @@
 {
     "@context": "000_context.jsonld",
     "id": "dsw",
-    "type": "variable"
+    "type": "variable",
+    "long_name": "Change in Surface Water Storage"
 }

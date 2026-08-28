@@ -1,0 +1,8 @@
+{
+    "@context": "000_context.jsonld",
+    "id": "ocean_sigma_half",
+    "type": "model_level_coordinate",
+    "long_name": "ocean sigma coordinate",
+    "valid_min": -1.0,
+    "valid_max": 0.0
+}

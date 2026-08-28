@@ -1,5 +1,20 @@
 {
     "@context": "000_context.jsonld",
     "id": "utendogw_tavg-p19-hxy-air",
-    "type": "known_branded_variable"
+    "type": "known_branded_variable",
+    "description": "Tendency of eastward wind induced by the parameterized orographic gravity wave drag",
+    "long_name": "Tendency of eastward wind due to orographic gravity waves",
+    "table_id": [
+        "atmos"
+    ],
+    "compound_name": [
+        "atmos.utendogw.tavg-p19-hxy-air.day.glb",
+        "atmos.utendogw.tavg-p19-hxy-air.mon.glb"
+    ],
+    "frequency": [
+        "day",
+        "mon"
+    ],
+    "cell_measures": "area: areacella",
+    "realm": "atmos"
 }

@@ -1,5 +1,19 @@
 {
     "@context": "000_context.jsonld",
     "id": "zostoga_tavg-u-hm-sea",
-    "type": "known_branded_variable"
+    "type": "known_branded_variable",
+    "description": "There is no CMIP6 request for zosga nor zossga.",
+    "long_name": "Global Average Thermosteric Sea Level Change",
+    "table_id": [
+        "ocean"
+    ],
+    "compound_name": [
+        "ocean.zostoga.tavg-u-hm-sea.mon.glb",
+        "ocean.zostoga.tavg-u-hm-sea.day.glb"
+    ],
+    "frequency": [
+        "mon",
+        "day"
+    ],
+    "realm": "ocean"
 }

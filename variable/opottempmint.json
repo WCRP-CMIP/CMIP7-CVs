@@ -1,5 +1,6 @@
 {
     "@context": "000_context.jsonld",
     "id": "opottempmint",
-    "type": "variable"
+    "type": "variable",
+    "long_name": "Integral with Respect to Depth of Product of Sea Water Density and Potential Temperature"
 }

@@ -1,5 +1,6 @@
 {
     "@context": "000_context.jsonld",
     "id": "tob",
-    "type": "variable"
+    "type": "variable",
+    "long_name": "Sea Water Potential Temperature at Sea Floor"
 }

@@ -1,5 +1,6 @@
 {
     "@context": "000_context.jsonld",
     "id": "abs550ss",
-    "type": "variable"
+    "type": "variable",
+    "long_name": "Ambient Seasalt Aerosol Absorption Optical Thickness at 550nm"
 }

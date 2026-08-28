@@ -1,5 +1,20 @@
 {
     "@context": "000_context.jsonld",
     "id": "simpeffconc_tavg-u-hxy-si",
-    "type": "known_branded_variable"
+    "type": "known_branded_variable",
+    "description": "Area fraction of sea-ice surface that is covered by open melt ponds, that is melt ponds that are not covered by snow or ice lids. This represents the effective (i.e. radiatively-active) melt pond area fraction.",
+    "long_name": "Fraction of Sea Ice Covered by Effective Melt Pond",
+    "table_id": [
+        "seaice"
+    ],
+    "compound_name": [
+        "seaIce.simpeffconc.tavg-u-hxy-si.day.glb",
+        "seaIce.simpeffconc.tavg-u-hxy-si.mon.glb"
+    ],
+    "frequency": [
+        "day",
+        "mon"
+    ],
+    "cell_measures": "area: areacello",
+    "realm": "seaice"
 }

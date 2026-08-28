@@ -1,5 +1,18 @@
 {
     "@context": "000_context.jsonld",
     "id": "ch3oh_tavg-al-hxy-u",
-    "type": "known_branded_variable"
+    "type": "known_branded_variable",
+    "description": "Mole fraction of methanol (CH3OH) in air",
+    "long_name": "CH3OH  volume mixing ratio",
+    "table_id": [
+        "atmoschem"
+    ],
+    "compound_name": [
+        "atmosChem.ch3oh.tavg-al-hxy-u.mon.glb"
+    ],
+    "frequency": [
+        "mon"
+    ],
+    "cell_measures": "area: areacella",
+    "realm": "atmoschem"
 }

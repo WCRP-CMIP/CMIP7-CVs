@@ -1,5 +1,18 @@
 {
     "@context": "000_context.jsonld",
     "id": "swhswell_tavg-u-hxy-sea",
-    "type": "known_branded_variable"
+    "type": "known_branded_variable",
+    "description": "Average height of the highest one-third of waves present in the sea state, incorporating just swell waves (i.e., waves that have propagated away from their generation area). This parameter is derived from all swell partitions of the wave spectrum using spectral moments. Specifically, this parameter is four times the square root of the integral over all directions and all frequencies of the components of the two-dimensional wave spectrum that are not under the influence of local wind.",
+    "long_name": "Swell Significant Wave Height",
+    "table_id": [
+        "ocean"
+    ],
+    "compound_name": [
+        "ocean.swhswell.tavg-u-hxy-sea.mon.glb"
+    ],
+    "frequency": [
+        "mon"
+    ],
+    "cell_measures": "area: areacello",
+    "realm": "ocean"
 }

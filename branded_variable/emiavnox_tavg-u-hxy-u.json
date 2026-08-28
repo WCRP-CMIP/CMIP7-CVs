@@ -1,5 +1,18 @@
 {
     "@context": "000_context.jsonld",
     "id": "emiavnox_tavg-u-hxy-u",
-    "type": "known_branded_variable"
+    "type": "known_branded_variable",
+    "description": "Emission rate of NOx from aircraft",
+    "long_name": "Emission rate of NOx from aviation",
+    "table_id": [
+        "atmoschem"
+    ],
+    "compound_name": [
+        "atmosChem.emiavnox.tavg-u-hxy-u.mon.glb"
+    ],
+    "frequency": [
+        "mon"
+    ],
+    "cell_measures": "area: areacella",
+    "realm": "atmoschem"
 }

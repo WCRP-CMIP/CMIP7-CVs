@@ -1,5 +1,18 @@
 {
     "@context": "000_context.jsonld",
     "id": "rldscs_tpt-u-hxy-u",
-    "type": "known_branded_variable"
+    "type": "known_branded_variable",
+    "description": "Surface downwelling clear-sky longwave radiation",
+    "long_name": "Surface Downwelling Clear-Sky Longwave Radiation",
+    "table_id": [
+        "atmos"
+    ],
+    "compound_name": [
+        "atmos.rldscs.tpt-u-hxy-u.3hr.glb"
+    ],
+    "frequency": [
+        "3hr"
+    ],
+    "cell_measures": "area: areacella",
+    "realm": "atmos"
 }

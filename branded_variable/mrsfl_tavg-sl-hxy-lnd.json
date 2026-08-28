@@ -1,5 +1,20 @@
 {
     "@context": "000_context.jsonld",
     "id": "mrsfl_tavg-sl-hxy-lnd",
-    "type": "known_branded_variable"
+    "type": "known_branded_variable",
+    "description": "in each soil layer, the mass of water in ice phase.  Reported as \"missing\" for grid cells occupied entirely by \"sea\"",
+    "long_name": "Frozen Water Content of Soil Layer",
+    "table_id": [
+        "land"
+    ],
+    "compound_name": [
+        "land.mrsfl.tavg-sl-hxy-lnd.day.glb",
+        "land.mrsfl.tavg-sl-hxy-lnd.mon.glb"
+    ],
+    "frequency": [
+        "day",
+        "mon"
+    ],
+    "cell_measures": "area: areacella",
+    "realm": "land"
 }

@@ -1,5 +1,6 @@
 {
     "@context": "000_context.jsonld",
     "id": "mmrno3",
-    "type": "variable"
+    "type": "variable",
+    "long_name": "NO3 Aerosol Mass Mixing Ratio"
 }

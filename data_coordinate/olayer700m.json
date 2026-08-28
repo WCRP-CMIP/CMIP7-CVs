@@ -1,0 +1,8 @@
+{
+    "@context": "000_context.jsonld",
+    "id": "olayer700m",
+    "type": "data_coordinate",
+    "long_name": "depth",
+    "valid_min": 0.0,
+    "valid_max": 700.0
+}

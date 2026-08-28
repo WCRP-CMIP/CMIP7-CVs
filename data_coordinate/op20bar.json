@@ -1,0 +1,8 @@
+{
+    "@context": "000_context.jsonld",
+    "id": "op20bar",
+    "type": "data_coordinate",
+    "long_name": "Hydrostatic Pressure 20.2 bar",
+    "valid_min": 18.0,
+    "valid_max": 22.0
+}

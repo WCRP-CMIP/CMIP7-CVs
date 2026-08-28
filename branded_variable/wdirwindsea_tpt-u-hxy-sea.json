@@ -1,5 +1,18 @@
 {
     "@context": "000_context.jsonld",
     "id": "wdirwindsea_tpt-u-hxy-sea",
-    "type": "known_branded_variable"
+    "type": "known_branded_variable",
+    "description": "Mean direction of wave propagation (direction from which the wave is coming) derived from the wind-sea component of the wave energy spectrum (i.e., local wind waves). This variable is usually expressed in degrees relative to true north.",
+    "long_name": "Sea Wave Direction",
+    "table_id": [
+        "ocean"
+    ],
+    "compound_name": [
+        "ocean.wdirwindsea.tpt-u-hxy-sea.3hr.glb"
+    ],
+    "frequency": [
+        "3hr"
+    ],
+    "cell_measures": "area: areacello",
+    "realm": "ocean"
 }

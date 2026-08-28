@@ -1,5 +1,6 @@
 {
     "@context": "000_context.jsonld",
     "id": "snrefr",
-    "type": "variable"
+    "type": "variable",
+    "long_name": "Refreezing of Water in the Snow"
 }

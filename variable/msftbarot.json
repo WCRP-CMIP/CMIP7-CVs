@@ -1,5 +1,6 @@
 {
     "@context": "000_context.jsonld",
     "id": "msftbarot",
-    "type": "variable"
+    "type": "variable",
+    "long_name": "Ocean Barotropic Mass Streamfunction"
 }

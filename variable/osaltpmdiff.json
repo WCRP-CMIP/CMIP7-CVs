@@ -1,5 +1,6 @@
 {
     "@context": "000_context.jsonld",
     "id": "osaltpmdiff",
-    "type": "variable"
+    "type": "variable",
+    "long_name": "Tendency of Sea Water Salinity Expressed as Salt Content Due to Parameterized Mesoscale Diffusion"
 }

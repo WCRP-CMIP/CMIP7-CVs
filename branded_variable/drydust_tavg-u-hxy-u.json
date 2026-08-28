@@ -1,5 +1,18 @@
 {
     "@context": "000_context.jsonld",
     "id": "drydust_tavg-u-hxy-u",
-    "type": "known_branded_variable"
+    "type": "known_branded_variable",
+    "description": "Dry Deposition Rate of Dust",
+    "long_name": "Dry Deposition Rate of Dust",
+    "table_id": [
+        "aerosol"
+    ],
+    "compound_name": [
+        "aerosol.drydust.tavg-u-hxy-u.mon.glb"
+    ],
+    "frequency": [
+        "mon"
+    ],
+    "cell_measures": "area: areacella",
+    "realm": "aerosol"
 }

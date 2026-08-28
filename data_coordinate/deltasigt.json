@@ -1,0 +1,6 @@
+{
+    "@context": "000_context.jsonld",
+    "id": "deltasigt",
+    "type": "data_coordinate",
+    "long_name": "sigma_t criterion that determines layer thickness"
+}

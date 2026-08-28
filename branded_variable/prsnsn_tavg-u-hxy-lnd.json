@@ -1,5 +1,18 @@
 {
     "@context": "000_context.jsonld",
     "id": "prsnsn_tavg-u-hxy-lnd",
-    "type": "known_branded_variable"
+    "type": "known_branded_variable",
+    "description": "mass_fraction_of_snowfall_onto_snow",
+    "long_name": "Fraction of Snowfall (Including Hail and Graupel) on Snow",
+    "table_id": [
+        "atmos"
+    ],
+    "compound_name": [
+        "atmos.prsnsn.tavg-u-hxy-lnd.day.glb"
+    ],
+    "frequency": [
+        "day"
+    ],
+    "cell_measures": "area: areacella",
+    "realm": "atmos"
 }

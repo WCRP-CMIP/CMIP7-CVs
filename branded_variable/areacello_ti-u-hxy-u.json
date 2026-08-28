@@ -1,5 +1,17 @@
 {
     "@context": "000_context.jsonld",
     "id": "areacello_ti-u-hxy-u",
-    "type": "known_branded_variable"
+    "type": "known_branded_variable",
+    "description": "Cell areas for any grid used to report ocean variables and variables which are requested as used on the model ocean grid (e.g. hfsso, which is a downward heat flux from the atmosphere interpolated onto the ocean grid). These cell areas should be defined to enable exact calculation of global integrals (e.g., of vertical fluxes of energy at the surface and top of the atmosphere).",
+    "long_name": "Grid-Cell Area for Ocean Variables",
+    "table_id": [
+        "ocean"
+    ],
+    "compound_name": [
+        "ocean.areacello.ti-u-hxy-u.fx.glb"
+    ],
+    "frequency": [
+        "fx"
+    ],
+    "realm": "ocean"
 }

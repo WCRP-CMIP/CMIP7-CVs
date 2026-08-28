@@ -1,5 +1,18 @@
 {
     "@context": "000_context.jsonld",
     "id": "hfdsnb_tavg-u-hxy-lnd",
-    "type": "known_branded_variable"
+    "type": "known_branded_variable",
+    "description": "Downward heat flux at snow botton",
+    "long_name": "Downward Heat Flux at Snow Base",
+    "table_id": [
+        "atmos"
+    ],
+    "compound_name": [
+        "atmos.hfdsnb.tavg-u-hxy-lnd.day.glb"
+    ],
+    "frequency": [
+        "day"
+    ],
+    "cell_measures": "area: areacella",
+    "realm": "atmos"
 }

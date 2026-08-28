@@ -1,5 +1,6 @@
 {
     "@context": "000_context.jsonld",
     "id": "fngasfire",
-    "type": "variable"
+    "type": "variable",
+    "long_name": "Total Nitrogen Lost to the Atmosphere (Including NHx, NOx, N2O, N2) from Fire"
 }

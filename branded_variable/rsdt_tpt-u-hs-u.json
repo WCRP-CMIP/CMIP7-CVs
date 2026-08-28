@@ -1,5 +1,17 @@
 {
     "@context": "000_context.jsonld",
     "id": "rsdt_tpt-u-hs-u",
-    "type": "known_branded_variable"
+    "type": "known_branded_variable",
+    "description": "at the top of the atmosphere",
+    "long_name": "TOA Incident Shortwave Radiation",
+    "table_id": [
+        "atmos"
+    ],
+    "compound_name": [
+        "atmos.rsdt.tpt-u-hs-u.subhr.glb"
+    ],
+    "frequency": [
+        "subhr"
+    ],
+    "realm": "atmos"
 }

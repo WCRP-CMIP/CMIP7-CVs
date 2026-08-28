@@ -1,5 +1,18 @@
 {
     "@context": "000_context.jsonld",
     "id": "wetss_tavg-u-hxy-u",
-    "type": "known_branded_variable"
+    "type": "known_branded_variable",
+    "description": "Deposition rate of sea salt aerosols (measured by the dry mass) due to wet processes",
+    "long_name": "Wet Deposition Rate of Sea-Salt Aerosol",
+    "table_id": [
+        "aerosol"
+    ],
+    "compound_name": [
+        "aerosol.wetss.tavg-u-hxy-u.mon.glb"
+    ],
+    "frequency": [
+        "mon"
+    ],
+    "cell_measures": "area: areacella",
+    "realm": "aerosol"
 }

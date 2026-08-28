@@ -1,5 +1,18 @@
 {
     "@context": "000_context.jsonld",
     "id": "siforcetilty_tavg-u-hxy-si",
-    "type": "known_branded_variable"
+    "type": "known_branded_variable",
+    "description": "Y-component of the force on sea ice caused by sea-surface tilt divided by sea ice area.",
+    "long_name": "Sea-Surface Tilt Term in Force Balance (Y-Component)",
+    "table_id": [
+        "seaice"
+    ],
+    "compound_name": [
+        "seaIce.siforcetilty.tavg-u-hxy-si.mon.glb"
+    ],
+    "frequency": [
+        "mon"
+    ],
+    "cell_measures": "--MODEL",
+    "realm": "seaice"
 }

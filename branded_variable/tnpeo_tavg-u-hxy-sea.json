@@ -1,5 +1,18 @@
 {
     "@context": "000_context.jsonld",
     "id": "tnpeo_tavg-u-hxy-sea",
-    "type": "known_branded_variable"
+    "type": "known_branded_variable",
+    "description": "Rate that work is done against vertical stratification, as measured by the vertical heat and salt diffusivity. Report here as depth integrated two-dimensional field.",
+    "long_name": "Tendency of Ocean Potential Energy Content",
+    "table_id": [
+        "ocean"
+    ],
+    "compound_name": [
+        "ocean.tnpeo.tavg-u-hxy-sea.yr.glb"
+    ],
+    "frequency": [
+        "yr"
+    ],
+    "cell_measures": "area: areacello",
+    "realm": "ocean"
 }
