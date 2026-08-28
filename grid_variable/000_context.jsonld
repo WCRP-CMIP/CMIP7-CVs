@@ -4,6 +4,7 @@
         "@vocab": "http://schema.org/",
         "id": "@id",
         "type": "@type",
+        "grid_variable": "https://esgvoc.ipsl.fr/resource/universe/grid_variable",
         "dimensions": {
             "@id": "https://esgvoc.ipsl.fr/resource/universe/data_coordinate/",
             "@type": "@id",

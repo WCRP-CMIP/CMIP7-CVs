@@ -3,6 +3,7 @@
         "@base": "https://esgvoc.ipsl.fr/resource/universe/grid_axis/",
         "@vocab": "http://schema.org/",
         "id": "@id",
-        "type": "@type"
+        "type": "@type",
+        "grid_axis": "https://esgvoc.ipsl.fr/resource/universe/grid_axis"
     }
 }

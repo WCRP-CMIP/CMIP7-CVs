@@ -4,6 +4,7 @@
         "@vocab": "http://schema.org/",
         "id": "@id",
         "type": "@type",
+        "data_coordinate": "https://esgvoc.ipsl.fr/resource/universe/data_coordinate",
         "coordinate_type": {
             "@id": "https://esgvoc.ipsl.fr/resource/universe/coordinate_type/",
             "@type": "@id",
