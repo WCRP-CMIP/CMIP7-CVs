@@ -1,9 +1,8 @@
 {
     "@context": {
         "@base": "https://esgvoc.ipsl.fr/resource/universe/table/",
-        "@vocab": "http://schema.org/",
         "id": "@id",
         "type": "@type",
-        "table": "https://esgvoc.ipsl.fr/resource/universe/table"
+        "table": "https://esgvoc.ipsl.fr/resource/universe/table/"
     }
 }

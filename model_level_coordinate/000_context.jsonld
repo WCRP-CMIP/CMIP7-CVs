@@ -1,10 +1,9 @@
 {
     "@context": {
         "@base": "https://esgvoc.ipsl.fr/resource/universe/model_level_coordinate/",
-        "@vocab": "http://schema.org/",
         "id": "@id",
         "type": "@type",
-        "model_level_coordinate": "https://esgvoc.ipsl.fr/resource/universe/model_level_coordinate",
+        "model_level_coordinate": "https://esgvoc.ipsl.fr/resource/universe/model_level_coordinate/",
         "generic_level_name": {
             "@id": "https://esgvoc.ipsl.fr/resource/universe/data_coordinate/",
             "@type": "@id",

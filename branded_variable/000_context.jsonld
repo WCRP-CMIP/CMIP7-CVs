@@ -1,10 +1,9 @@
 {
     "@context": {
         "@base": "https://esgvoc.ipsl.fr/resource/universe/known_branded_variable/",
-        "@vocab": "http://schema.org/",
         "id": "@id",
         "type": "@type",
-        "known_branded_variable": "https://esgvoc.ipsl.fr/resource/universe/known_branded_variable",
+        "known_branded_variable": "https://esgvoc.ipsl.fr/resource/universe/known_branded_variable/",
         "variable_root_name": {
             "@id": "https://esgvoc.ipsl.fr/resource/universe/variable/",
             "@type": "@id",

@@ -1,9 +1,8 @@
 {
     "@context": {
         "@base": "https://esgvoc.ipsl.fr/resource/universe/frequency/",
-        "@vocab": "http://schema.org/",
         "id": "@id",
         "type": "@type",
-        "frequency": "https://esgvoc.ipsl.fr/resource/universe/frequency"
+        "frequency": "https://esgvoc.ipsl.fr/resource/universe/frequency/"
     }
 }
