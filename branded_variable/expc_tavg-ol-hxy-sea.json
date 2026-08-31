@@ -1,5 +1,18 @@
 {
     "@context": "000_context.jsonld",
     "id": "expc_tavg-ol-hxy-sea",
-    "type": "known_branded_variable"
+    "type": "known_branded_variable",
+    "description": "Downward flux of particulate organic carbon",
+    "long_name": "Downward Flux of Particulate Organic Carbon",
+    "table_id": [
+        "ocnbgchem"
+    ],
+    "compound_name": [
+        "ocnBgchem.expc.tavg-ol-hxy-sea.mon.glb"
+    ],
+    "frequency": [
+        "mon"
+    ],
+    "cell_measures": "area: areacello volume: volcello",
+    "realm": "ocnbgchem"
 }

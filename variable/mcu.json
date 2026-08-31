@@ -1,5 +1,6 @@
 {
     "@context": "000_context.jsonld",
     "id": "mcu",
-    "type": "variable"
+    "type": "variable",
+    "long_name": "Convective Updraft Mass Flux"
 }

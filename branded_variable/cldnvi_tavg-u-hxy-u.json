@@ -1,5 +1,20 @@
 {
     "@context": "000_context.jsonld",
     "id": "cldnvi_tavg-u-hxy-u",
-    "type": "known_branded_variable"
+    "type": "known_branded_variable",
+    "description": "Droplets are liquid only.  Values are weighted by liquid cloud fraction in each layer when vertically integrating, and for monthly means the samples are weighted by total liquid cloud fraction (as seen from TOA).",
+    "long_name": "Column Integrated Cloud Droplet Number",
+    "table_id": [
+        "atmos"
+    ],
+    "compound_name": [
+        "atmos.cldnvi.tavg-u-hxy-u.day.glb",
+        "atmos.cldnvi.tavg-u-hxy-u.mon.glb"
+    ],
+    "frequency": [
+        "day",
+        "mon"
+    ],
+    "cell_measures": "area: areacella",
+    "realm": "atmos"
 }

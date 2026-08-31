@@ -1,5 +1,19 @@
 {
     "@context": "000_context.jsonld",
     "id": "so2_tavg-al-hxy-u",
-    "type": "known_branded_variable"
+    "type": "known_branded_variable",
+    "description": "Mole fraction is used in the construction mole_fraction_of_X_in_Y, where X is a material constituent of Y.",
+    "long_name": "SO2 Volume Mixing Ratio",
+    "table_id": [
+        "aerosol"
+    ],
+    "compound_name": [
+        "aerosol.so2.tavg-al-hxy-u.mon.30S-90S",
+        "aerosol.so2.tavg-al-hxy-u.mon.glb"
+    ],
+    "frequency": [
+        "mon"
+    ],
+    "cell_measures": "area: areacella",
+    "realm": "aerosol"
 }

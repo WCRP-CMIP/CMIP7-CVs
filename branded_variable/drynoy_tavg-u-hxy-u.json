@@ -1,5 +1,20 @@
 {
     "@context": "000_context.jsonld",
     "id": "drynoy_tavg-u-hxy-u",
-    "type": "known_branded_variable"
+    "type": "known_branded_variable",
+    "description": "Daily Dry Deposition Rate of NOy at surface. Vertically integrated throughout the column to the surface.",
+    "long_name": "Dry Deposition Rate of NOy",
+    "table_id": [
+        "atmoschem"
+    ],
+    "compound_name": [
+        "atmosChem.drynoy.tavg-u-hxy-u.mon.glb",
+        "atmosChem.drynoy.tavg-u-hxy-u.day.glb"
+    ],
+    "frequency": [
+        "mon",
+        "day"
+    ],
+    "cell_measures": "area: areacella",
+    "realm": "atmoschem"
 }

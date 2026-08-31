@@ -1,5 +1,18 @@
 {
     "@context": "000_context.jsonld",
     "id": "vos_tavg-u-hxy-sea",
-    "type": "known_branded_variable"
+    "type": "known_branded_variable",
+    "description": "Daily surface prognostic y-ward velocity component resolved by the model.",
+    "long_name": "Daily Surface Sea Water Y Velocity",
+    "table_id": [
+        "ocean"
+    ],
+    "compound_name": [
+        "ocean.vos.tavg-u-hxy-sea.day.glb"
+    ],
+    "frequency": [
+        "day"
+    ],
+    "cell_measures": "area: areacello",
+    "realm": "ocean"
 }

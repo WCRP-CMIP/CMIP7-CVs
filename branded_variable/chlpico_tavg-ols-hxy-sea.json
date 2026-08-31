@@ -1,5 +1,18 @@
 {
     "@context": "000_context.jsonld",
     "id": "chlpico_tavg-ols-hxy-sea",
-    "type": "known_branded_variable"
+    "type": "known_branded_variable",
+    "description": "chlorophyll concentration from the picophytoplankton (<2 um) component alone",
+    "long_name": "Surface Mass Concentration of Picophytoplankton Expressed as Chlorophyll in Sea Water",
+    "table_id": [
+        "ocnbgchem"
+    ],
+    "compound_name": [
+        "ocnBgchem.chlpico.tavg-ols-hxy-sea.mon.30S-90S"
+    ],
+    "frequency": [
+        "mon"
+    ],
+    "cell_measures": "area: areacello",
+    "realm": "ocnbgchem"
 }

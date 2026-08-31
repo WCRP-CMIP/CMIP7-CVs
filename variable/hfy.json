@@ -1,5 +1,6 @@
 {
     "@context": "000_context.jsonld",
     "id": "hfy",
-    "type": "variable"
+    "type": "variable",
+    "long_name": "Ocean Heat Y Transport"
 }

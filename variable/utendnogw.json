@@ -1,5 +1,6 @@
 {
     "@context": "000_context.jsonld",
     "id": "utendnogw",
-    "type": "variable"
+    "type": "variable",
+    "long_name": "Eastward Acceleration Due to Non-Orographic Gravity Wave Drag"
 }

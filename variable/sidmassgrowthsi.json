@@ -1,5 +1,6 @@
 {
     "@context": "000_context.jsonld",
     "id": "sidmassgrowthsi",
-    "type": "variable"
+    "type": "variable",
+    "long_name": "Sea-Ice Mass Change Through Snow-to-Ice Conversion"
 }

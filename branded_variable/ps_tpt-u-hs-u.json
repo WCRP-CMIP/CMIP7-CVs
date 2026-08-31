@@ -1,5 +1,17 @@
 {
     "@context": "000_context.jsonld",
     "id": "ps_tpt-u-hs-u",
-    "type": "known_branded_variable"
+    "type": "known_branded_variable",
+    "description": "not, in general, the same as mean sea-level pressure",
+    "long_name": "Surface Air Pressure",
+    "table_id": [
+        "atmos"
+    ],
+    "compound_name": [
+        "atmos.ps.tpt-u-hs-u.subhr.glb"
+    ],
+    "frequency": [
+        "subhr"
+    ],
+    "realm": "atmos"
 }

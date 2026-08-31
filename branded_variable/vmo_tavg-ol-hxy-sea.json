@@ -1,5 +1,19 @@
 {
     "@context": "000_context.jsonld",
     "id": "vmo_tavg-ol-hxy-sea",
-    "type": "known_branded_variable"
+    "type": "known_branded_variable",
+    "description": "Y-ward mass transport from residual mean (resolved plus parameterized) advective transport.",
+    "long_name": "Ocean Mass Y Transport",
+    "table_id": [
+        "ocean"
+    ],
+    "compound_name": [
+        "ocean.vmo.tavg-ol-hxy-sea.mon.30S-90S",
+        "ocean.vmo.tavg-ol-hxy-sea.mon.glb"
+    ],
+    "frequency": [
+        "mon"
+    ],
+    "cell_measures": "area: areacello volume: volcello",
+    "realm": "ocean"
 }

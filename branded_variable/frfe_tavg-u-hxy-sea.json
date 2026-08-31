@@ -1,5 +1,18 @@
 {
     "@context": "000_context.jsonld",
     "id": "frfe_tavg-u-hxy-sea",
-    "type": "known_branded_variable"
+    "type": "known_branded_variable",
+    "description": "\"Content\" indicates a quantity per unit area.  The specification of a physical process by the phrase due_to_process means that the quantity named is a  single term in a sum of terms which together compose the general quantity  named by omitting the phrase.  \"tendency_of_X\" means derivative of X with respect to time.",
+    "long_name": "Iron Loss to Sediments",
+    "table_id": [
+        "ocnbgchem"
+    ],
+    "compound_name": [
+        "ocnBgchem.frfe.tavg-u-hxy-sea.mon.glb"
+    ],
+    "frequency": [
+        "mon"
+    ],
+    "cell_measures": "area: areacello",
+    "realm": "ocnbgchem"
 }

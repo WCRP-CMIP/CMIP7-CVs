@@ -1,5 +1,6 @@
 {
     "@context": "000_context.jsonld",
     "id": "htovovrt",
-    "type": "variable"
+    "type": "variable",
+    "long_name": "Northward Ocean Heat Transport Due to Overturning"
 }

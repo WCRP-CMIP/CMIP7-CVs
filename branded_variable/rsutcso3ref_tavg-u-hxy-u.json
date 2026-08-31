@@ -1,5 +1,18 @@
 {
     "@context": "000_context.jsonld",
     "id": "rsutcso3ref_tavg-u-hxy-u",
-    "type": "known_branded_variable"
+    "type": "known_branded_variable",
+    "description": "This represents the top-of-atmosphere outgoing shortwave radiative flux assuming clear-sky conditions when a reference ozone field is used in a diagnostic call to the radiation scheme",
+    "long_name": "TOA shortwave flux assuming clear sky and reference ozone",
+    "table_id": [
+        "atmoschem"
+    ],
+    "compound_name": [
+        "atmosChem.rsutcso3ref.tavg-u-hxy-u.mon.glb"
+    ],
+    "frequency": [
+        "mon"
+    ],
+    "cell_measures": "area: areacella",
+    "realm": "atmoschem"
 }

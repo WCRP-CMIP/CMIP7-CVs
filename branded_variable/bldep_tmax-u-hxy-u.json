@@ -1,5 +1,18 @@
 {
     "@context": "000_context.jsonld",
     "id": "bldep_tmax-u-hxy-u",
-    "type": "known_branded_variable"
+    "type": "known_branded_variable",
+    "description": "maximum boundary layer height during the day (add cell_methods attribute: \"time: maximum\")",
+    "long_name": "Maximum PBL Height",
+    "table_id": [
+        "atmos"
+    ],
+    "compound_name": [
+        "atmos.bldep.tmax-u-hxy-u.day.glb"
+    ],
+    "frequency": [
+        "day"
+    ],
+    "cell_measures": "area: areacella",
+    "realm": "atmos"
 }

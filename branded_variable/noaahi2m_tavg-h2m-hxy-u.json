@@ -1,5 +1,18 @@
 {
     "@context": "000_context.jsonld",
     "id": "noaahi2m_tavg-h2m-hxy-u",
-    "type": "known_branded_variable"
+    "type": "known_branded_variable",
+    "description": "mean 2m daily NOAA heat index.\nThe perceived air temperature when relative humidity is taken into consideration (which makes it feel hotter than the actual air temperature).\nThe heat index is only defined when the ambient air temperature is at or above 299.817 K.\nNOAA heat index = -42.379 + 2.04901523(T) + 10.14333127(R) - 0.22475541(T)(R) - 6.83783e-3 sqr(T) - 5.481717e-2 sqr(R) + 1.22874e-3 sqr(T) (R) + 8.5282e-4 (T) sqr(R) - 1.99e-6 sqr(T) sqr(R)\nwhere T is 2 m temperature (degrees F), R is relative humidity (%)",
+    "long_name": "mean 2m daily NOAA heat index",
+    "table_id": [
+        "atmos"
+    ],
+    "compound_name": [
+        "atmos.noaahi2m.tavg-h2m-hxy-u.day.glb"
+    ],
+    "frequency": [
+        "day"
+    ],
+    "cell_measures": "area: areacella",
+    "realm": "atmos"
 }

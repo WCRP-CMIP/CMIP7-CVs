@@ -1,5 +1,6 @@
 {
     "@context": "000_context.jsonld",
     "id": "irrsurf",
-    "type": "variable"
+    "type": "variable",
+    "long_name": "Irrigation water withdrawal from surface water"
 }

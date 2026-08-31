@@ -1,5 +1,22 @@
 {
     "@context": "000_context.jsonld",
     "id": "tauvo_tavg-u-hxy-sea",
-    "type": "known_branded_variable"
+    "type": "known_branded_variable",
+    "description": "The stress on the liquid ocean from interactions with overlying atmosphere, sea ice, ice shelf, etc.",
+    "long_name": "Sea Water Surface Downward Y Stress",
+    "table_id": [
+        "ocean"
+    ],
+    "compound_name": [
+        "ocean.tauvo.tavg-u-hxy-sea.dec.glb",
+        "ocean.tauvo.tavg-u-hxy-sea.mon.glb",
+        "ocean.tauvo.tavg-u-hxy-sea.3hr.glb"
+    ],
+    "frequency": [
+        "dec",
+        "mon",
+        "3hr"
+    ],
+    "cell_measures": "area: areacello",
+    "realm": "ocean"
 }

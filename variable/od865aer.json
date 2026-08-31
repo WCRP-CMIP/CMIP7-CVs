@@ -1,5 +1,6 @@
 {
     "@context": "000_context.jsonld",
     "id": "od865aer",
-    "type": "variable"
+    "type": "variable",
+    "long_name": "Ambient Aerosol Optical Depth at 865nm"
 }

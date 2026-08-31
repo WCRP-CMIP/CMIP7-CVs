@@ -1,5 +1,21 @@
 {
     "@context": "000_context.jsonld",
     "id": "zos_tavg-u-hxy-sea",
-    "type": "known_branded_variable"
+    "type": "known_branded_variable",
+    "description": "This is the effective dynamic sea level, so should have zero global area mean. zos is the effective sea level as if sea ice (and snow) at a grid cell were converted to liquid seawater (Campin et al., 2008). For OMIP, do _not _record inverse barometer responses from sea-ice (and snow) loading in zos. See (Griffies et al, 2016, https://doi.org/10.5194/gmd-9-3231-2016).",
+    "long_name": "Sea Surface Height Above Geoid",
+    "table_id": [
+        "ocean"
+    ],
+    "compound_name": [
+        "ocean.zos.tavg-u-hxy-sea.mon.glb",
+        "ocean.zos.tavg-u-hxy-sea.day.glb",
+        "ocean.zos.tavg-u-hxy-sea.mon.30S-90S"
+    ],
+    "frequency": [
+        "mon",
+        "day"
+    ],
+    "cell_measures": "area: areacello",
+    "realm": "ocean"
 }

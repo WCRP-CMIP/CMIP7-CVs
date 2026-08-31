@@ -1,5 +1,6 @@
 {
     "@context": "000_context.jsonld",
     "id": "loadsoa",
-    "type": "variable"
+    "type": "variable",
+    "long_name": "Load of Dry Aerosol Secondary Organic Matter"
 }

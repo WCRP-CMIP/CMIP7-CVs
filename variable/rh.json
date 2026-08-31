@@ -1,5 +1,6 @@
 {
     "@context": "000_context.jsonld",
     "id": "rh",
-    "type": "variable"
+    "type": "variable",
+    "long_name": "Total Heterotrophic Respiration on Land as Carbon Mass Flux [kgC m-2 s-1]"
 }

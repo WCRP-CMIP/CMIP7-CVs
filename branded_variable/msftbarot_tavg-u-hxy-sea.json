@@ -1,5 +1,18 @@
 {
     "@context": "000_context.jsonld",
     "id": "msftbarot_tavg-u-hxy-sea",
-    "type": "known_branded_variable"
+    "type": "known_branded_variable",
+    "description": "Streamfunction or its approximation for free surface models. See OMDP document for details.",
+    "long_name": "Ocean Barotropic Mass Streamfunction",
+    "table_id": [
+        "ocean"
+    ],
+    "compound_name": [
+        "ocean.msftbarot.tavg-u-hxy-sea.mon.glb"
+    ],
+    "frequency": [
+        "mon"
+    ],
+    "cell_measures": "area: areacello",
+    "realm": "ocean"
 }

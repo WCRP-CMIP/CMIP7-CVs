@@ -1,5 +1,20 @@
 {
     "@context": "000_context.jsonld",
     "id": "ccldncl_tavg-u-hxy-ccl",
-    "type": "known_branded_variable"
+    "type": "known_branded_variable",
+    "description": "Droplets are liquid only.  Report concentration 'as seen from space' over convective liquid cloudy portion of grid cell.  This is the value from uppermost model layer with liquid cloud or, if available, it is better to sum over all liquid cloud tops, no matter where they occur, as long as they are seen from the top of the atmosphere. Weight by total liquid cloud top fraction of  (as seen from TOA) each time sample when computing monthly mean.",
+    "long_name": "Cloud Droplet Number Concentration of Convective Cloud Tops",
+    "table_id": [
+        "aerosol"
+    ],
+    "compound_name": [
+        "aerosol.ccldncl.tavg-u-hxy-ccl.mon.glb",
+        "aerosol.ccldncl.tavg-u-hxy-ccl.day.glb"
+    ],
+    "frequency": [
+        "mon",
+        "day"
+    ],
+    "cell_measures": "area: areacella",
+    "realm": "aerosol"
 }

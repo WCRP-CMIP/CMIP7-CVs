@@ -1,5 +1,18 @@
 {
     "@context": "000_context.jsonld",
     "id": "ec550aer_tpt-al-hxy-u",
-    "type": "known_branded_variable"
+    "type": "known_branded_variable",
+    "description": "Aerosol Extinction @550nm",
+    "long_name": "Aerosol Extinction Coefficient",
+    "table_id": [
+        "aerosol"
+    ],
+    "compound_name": [
+        "aerosol.ec550aer.tpt-al-hxy-u.6hr.glb"
+    ],
+    "frequency": [
+        "6hr"
+    ],
+    "cell_measures": "area: areacella",
+    "realm": "aerosol"
 }

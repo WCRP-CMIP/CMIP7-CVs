@@ -1,5 +1,18 @@
 {
     "@context": "000_context.jsonld",
     "id": "fracoutlut_tsum-u-hxy-lnd",
-    "type": "known_branded_variable"
+    "type": "known_branded_variable",
+    "description": "Cumulative percentage transitions over the year; note that percentage should be reported as percentage of atmospheric grid cell",
+    "long_name": "Annual Gross Percentage of Land-Use Tile That Was Transferred into Other Land-Use Tiles",
+    "table_id": [
+        "land"
+    ],
+    "compound_name": [
+        "land.fracOutLut.tsum-u-hxy-lnd.yr.glb"
+    ],
+    "frequency": [
+        "yr"
+    ],
+    "cell_measures": "area: areacella",
+    "realm": "land"
 }

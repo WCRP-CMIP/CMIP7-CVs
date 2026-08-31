@@ -1,5 +1,24 @@
 {
     "@context": "000_context.jsonld",
     "id": "orog_tavg-u-hxy-is",
-    "type": "known_branded_variable"
+    "type": "known_branded_variable",
+    "description": "The surface called \"surface\" means the lower boundary of the atmosphere. Altitude is the (geometric) height above the geoid, which is the reference geopotential surface. The geoid is similar to mean sea level.",
+    "long_name": "Surface Altitude",
+    "table_id": [
+        "land",
+        "landice"
+    ],
+    "compound_name": [
+        "land.orog.tavg-u-hxy-is.mon.grl",
+        "land.orog.tavg-u-hxy-is.yr.grl",
+        "land.orog.tavg-u-hxy-is.mon.ata",
+        "land.orog.tavg-u-hxy-is.yr.ata",
+        "landIce.orog.tavg-u-hxy-is.mon.glb"
+    ],
+    "frequency": [
+        "mon",
+        "yr"
+    ],
+    "cell_measures": "area: areacella",
+    "realm": "land"
 }

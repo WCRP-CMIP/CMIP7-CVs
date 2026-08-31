@@ -1,5 +1,6 @@
 {
     "@context": "000_context.jsonld",
     "id": "fharvesttoatmos",
-    "type": "variable"
+    "type": "variable",
+    "long_name": "Harvested Biomass That Goes Straight into Atmosphere as Carbon Mass Flux [kgC m-2 s-1]"
 }

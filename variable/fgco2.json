@@ -1,5 +1,6 @@
 {
     "@context": "000_context.jsonld",
     "id": "fgco2",
-    "type": "variable"
+    "type": "variable",
+    "long_name": "Surface Downward Mass Flux of Carbon as CO2 [kgC m-2 s-1]"
 }

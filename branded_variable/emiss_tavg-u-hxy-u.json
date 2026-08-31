@@ -1,5 +1,19 @@
 {
     "@context": "000_context.jsonld",
     "id": "emiss_tavg-u-hxy-u",
-    "type": "known_branded_variable"
+    "type": "known_branded_variable",
+    "description": "Integrate 3D emission field vertically to 2d field.",
+    "long_name": "Total Emission Rate of Sea-Salt Aerosol",
+    "table_id": [
+        "aerosol"
+    ],
+    "compound_name": [
+        "aerosol.emiss.tavg-u-hxy-u.mon.glb",
+        "aerosol.emiss.tavg-u-hxy-u.mon.30S-90S"
+    ],
+    "frequency": [
+        "mon"
+    ],
+    "cell_measures": "area: areacella",
+    "realm": "aerosol"
 }

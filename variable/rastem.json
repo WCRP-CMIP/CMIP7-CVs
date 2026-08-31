@@ -1,5 +1,6 @@
 {
     "@context": "000_context.jsonld",
     "id": "rastem",
-    "type": "variable"
+    "type": "variable",
+    "long_name": "Total Respiration from Stem as Carbon Mass Flux [kgC m-2 s-1]"
 }

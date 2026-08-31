@@ -1,5 +1,21 @@
 {
     "@context": "000_context.jsonld",
     "id": "wo_tavg-ol-hxy-sea",
-    "type": "known_branded_variable"
+    "type": "known_branded_variable",
+    "description": "Prognostic z-ward velocity component resolved by the model.",
+    "long_name": "Sea Water Vertical Velocity",
+    "table_id": [
+        "ocean"
+    ],
+    "compound_name": [
+        "ocean.wo.tavg-ol-hxy-sea.mon.glb",
+        "ocean.wo.tavg-ol-hxy-sea.mon.30S-90S",
+        "ocean.wo.tavg-ol-hxy-sea.day.glb"
+    ],
+    "frequency": [
+        "mon",
+        "day"
+    ],
+    "cell_measures": "area: areacello volume: volcello",
+    "realm": "ocean"
 }

@@ -1,5 +1,18 @@
 {
     "@context": "000_context.jsonld",
     "id": "hfy_tavg-ol-hxy-sea",
-    "type": "known_branded_variable"
+    "type": "known_branded_variable",
+    "description": "Contains all contributions to 'y-ward' heat transport from resolved and parameterized processes. Use Celsius for temperature scale.",
+    "long_name": "3D Ocean Heat Y Transport",
+    "table_id": [
+        "ocean"
+    ],
+    "compound_name": [
+        "ocean.hfy.tavg-ol-hxy-sea.mon.glb"
+    ],
+    "frequency": [
+        "mon"
+    ],
+    "cell_measures": "area: areacello volume: volcello",
+    "realm": "ocean"
 }

@@ -1,5 +1,17 @@
 {
     "@context": "000_context.jsonld",
     "id": "hfbasinpmdiff_tavg-u-hyb-sea",
-    "type": "known_branded_variable"
+    "type": "known_branded_variable",
+    "description": "Contributions to heat transport from parameterized mesoscale eddy-induced diffusive transport (i.e., neutral diffusion). Diagnosed here as a function of latitude and basin.",
+    "long_name": "Northward Ocean Heat Transport Due to Parameterized Mesoscale Diffusion",
+    "table_id": [
+        "ocean"
+    ],
+    "compound_name": [
+        "ocean.hfbasinpmdiff.tavg-u-hyb-sea.mon.glb"
+    ],
+    "frequency": [
+        "mon"
+    ],
+    "realm": "ocean"
 }

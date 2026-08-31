@@ -1,5 +1,6 @@
 {
     "@context": "000_context.jsonld",
     "id": "fveglittersenescence",
-    "type": "variable"
+    "type": "variable",
+    "long_name": "Total Carbon Mass Flux from Vegetation to Litter as a Result of Leaf, Branch, and Root Senescence"
 }

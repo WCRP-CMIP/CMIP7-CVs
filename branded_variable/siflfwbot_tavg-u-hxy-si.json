@@ -1,5 +1,18 @@
 {
     "@context": "000_context.jsonld",
     "id": "siflfwbot_tavg-u-hxy-si",
-    "type": "known_branded_variable"
+    "type": "known_branded_variable",
+    "description": "Total flux of fresh water from water into sea ice. This flux is positive when fresh water enters the ocean, and is therefore negative during ice growth and positive during ice melt.",
+    "long_name": "Freshwater Flux from Sea Ice",
+    "table_id": [
+        "seaice"
+    ],
+    "compound_name": [
+        "seaIce.siflfwbot.tavg-u-hxy-si.mon.glb"
+    ],
+    "frequency": [
+        "mon"
+    ],
+    "cell_measures": "area: areacello",
+    "realm": "seaice"
 }

@@ -1,5 +1,18 @@
 {
     "@context": "000_context.jsonld",
     "id": "mmrbc_tpt-h2m-hs-u",
-    "type": "known_branded_variable"
+    "type": "known_branded_variable",
+    "description": "This variable represents the instantaneous near surface elemental carbon Aerosol Mass Mixing Ratio at CF sites, sampled every 3 hours",
+    "long_name": "Elemental carbon mass mixing ratio",
+    "table_id": [
+        "aerosol"
+    ],
+    "compound_name": [
+        "aerosol.mmrbc.tpt-h2m-hs-u.3hr.glb"
+    ],
+    "frequency": [
+        "3hr"
+    ],
+    "cell_measures": "--MODEL",
+    "realm": "aerosol"
 }

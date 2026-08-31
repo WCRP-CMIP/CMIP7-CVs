@@ -1,5 +1,18 @@
 {
     "@context": "000_context.jsonld",
     "id": "sw17o_tavg-ol-hxy-sea",
-    "type": "known_branded_variable"
+    "type": "known_branded_variable",
+    "description": "Ratio of abundance of oxygen-17 (17O) atoms to oxygen-16 (16O) atoms in sea water",
+    "long_name": "Isotopic Ratio of Oxygen-17 in Sea Water",
+    "table_id": [
+        "ocean"
+    ],
+    "compound_name": [
+        "ocean.sw17O.tavg-ol-hxy-sea.mon.glb"
+    ],
+    "frequency": [
+        "mon"
+    ],
+    "cell_measures": "area: areacello volume: volcello",
+    "realm": "ocean"
 }

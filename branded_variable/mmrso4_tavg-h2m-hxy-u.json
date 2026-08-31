@@ -1,5 +1,18 @@
 {
     "@context": "000_context.jsonld",
     "id": "mmrso4_tavg-h2m-hxy-u",
-    "type": "known_branded_variable"
+    "type": "known_branded_variable",
+    "description": "Daily mean sulfate aerosol mass mixing ratio near surface.",
+    "long_name": "Daily mean near-surface sulfate aerosol",
+    "table_id": [
+        "aerosol"
+    ],
+    "compound_name": [
+        "aerosol.mmrso4.tavg-h2m-hxy-u.day.glb"
+    ],
+    "frequency": [
+        "day"
+    ],
+    "cell_measures": "area: areacella",
+    "realm": "aerosol"
 }

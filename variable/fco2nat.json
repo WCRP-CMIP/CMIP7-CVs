@@ -1,5 +1,6 @@
 {
     "@context": "000_context.jsonld",
     "id": "fco2nat",
-    "type": "variable"
+    "type": "variable",
+    "long_name": "Surface Carbon Mass Flux into the Atmosphere Due to Natural Sources [kgC m-2 s-1]"
 }

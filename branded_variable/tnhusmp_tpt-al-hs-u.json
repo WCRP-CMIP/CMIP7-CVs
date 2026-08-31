@@ -1,5 +1,17 @@
 {
     "@context": "000_context.jsonld",
     "id": "tnhusmp_tpt-al-hs-u",
-    "type": "known_branded_variable"
+    "type": "known_branded_variable",
+    "description": "This includes sources and sinks from parametrized moist physics (e.g. convection, boundary layer, stratiform condensation/evaporation, etc.) and excludes sources and sinks from resolved dynamics or from horizontal or vertical numerical diffusion not associated with model physicsl.  For example any diffusive mixing by the boundary layer scheme would be included.",
+    "long_name": "Tendency of Specific Humidity Due to Model Physics",
+    "table_id": [
+        "atmos"
+    ],
+    "compound_name": [
+        "atmos.tnhusmp.tpt-al-hs-u.subhr.glb"
+    ],
+    "frequency": [
+        "subhr"
+    ],
+    "realm": "atmos"
 }

@@ -1,5 +1,6 @@
 {
     "@context": "000_context.jsonld",
     "id": "abs550dust",
-    "type": "variable"
+    "type": "variable",
+    "long_name": "dust absorption aerosol optical depth @550nm"
 }

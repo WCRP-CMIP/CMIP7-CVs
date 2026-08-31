@@ -1,5 +1,18 @@
 {
     "@context": "000_context.jsonld",
     "id": "h2loss_tavg-al-hxy-u",
-    "type": "known_branded_variable"
+    "type": "known_branded_variable",
+    "description": "This is the loss rate of molecular hydrogen (H2) from the atmosphere due to chemical destruction",
+    "long_name": "Chemical destruction of atmospheric H2",
+    "table_id": [
+        "atmoschem"
+    ],
+    "compound_name": [
+        "atmosChem.h2loss.tavg-al-hxy-u.mon.glb"
+    ],
+    "frequency": [
+        "mon"
+    ],
+    "cell_measures": "area: areacella",
+    "realm": "atmoschem"
 }

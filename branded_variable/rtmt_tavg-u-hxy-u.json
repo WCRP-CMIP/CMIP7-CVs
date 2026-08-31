@@ -1,5 +1,18 @@
 {
     "@context": "000_context.jsonld",
     "id": "rtmt_tavg-u-hxy-u",
-    "type": "known_branded_variable"
+    "type": "known_branded_variable",
+    "description": "i.e., at the top of that portion of the atmosphere where dynamics are explicitly treated by the model. This is reported only if it differs from the net downward radiative flux at the top of the atmosphere.",
+    "long_name": "Net Downward Radiative Flux at Top of Model",
+    "table_id": [
+        "atmos"
+    ],
+    "compound_name": [
+        "atmos.rtmt.tavg-u-hxy-u.mon.glb"
+    ],
+    "frequency": [
+        "mon"
+    ],
+    "cell_measures": "area: areacella",
+    "realm": "atmos"
 }

@@ -1,0 +1,6 @@
+{
+    "@context": "000_context.jsonld",
+    "id": "typeburnt",
+    "type": "data_coordinate",
+    "long_name": "Burnt vegetation area type"
+}

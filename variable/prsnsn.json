@@ -1,5 +1,6 @@
 {
     "@context": "000_context.jsonld",
     "id": "prsnsn",
-    "type": "variable"
+    "type": "variable",
+    "long_name": "Fraction of Snowfall (Including Hail and Graupel) on Snow"
 }

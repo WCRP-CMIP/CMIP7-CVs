@@ -1,5 +1,6 @@
 {
     "@context": "000_context.jsonld",
     "id": "expfeob",
-    "type": "variable"
+    "type": "variable",
+    "long_name": "Sinking Flux of Particulate Iron Reaching the Ocean Bottom"
 }

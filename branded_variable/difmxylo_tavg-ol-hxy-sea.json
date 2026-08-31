@@ -1,5 +1,18 @@
 {
     "@context": "000_context.jsonld",
     "id": "difmxylo_tavg-ol-hxy-sea",
-    "type": "known_branded_variable"
+    "type": "known_branded_variable",
+    "description": "Lateral Laplacian viscosity applied to the momentum equations.",
+    "long_name": "Ocean Momentum XY Laplacian Diffusivity",
+    "table_id": [
+        "ocean"
+    ],
+    "compound_name": [
+        "ocean.difmxylo.tavg-ol-hxy-sea.yr.glb"
+    ],
+    "frequency": [
+        "yr"
+    ],
+    "cell_measures": "area: areacello volume: volcello",
+    "realm": "ocean"
 }

@@ -1,5 +1,18 @@
 {
     "@context": "000_context.jsonld",
     "id": "c4pftfrac_tavg-u-hxy-u",
-    "type": "known_branded_variable"
+    "type": "known_branded_variable",
+    "description": "Percentage of entire grid cell  that is covered by C4 PFTs (including grass and crops).",
+    "long_name": "Percentage Cover by C4 Plant Functional Type",
+    "table_id": [
+        "land"
+    ],
+    "compound_name": [
+        "land.c4PftFrac.tavg-u-hxy-u.mon.glb"
+    ],
+    "frequency": [
+        "mon"
+    ],
+    "cell_measures": "area: areacella",
+    "realm": "land"
 }

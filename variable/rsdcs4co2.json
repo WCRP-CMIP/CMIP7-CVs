@@ -1,5 +1,6 @@
 {
     "@context": "000_context.jsonld",
     "id": "rsdcs4co2",
-    "type": "variable"
+    "type": "variable",
+    "long_name": "Downwelling Clear-Sky Shortwave Radiation 4XCO2 Atmosphere"
 }

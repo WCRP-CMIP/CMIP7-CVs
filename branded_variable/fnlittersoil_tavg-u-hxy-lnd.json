@@ -1,5 +1,18 @@
 {
     "@context": "000_context.jsonld",
     "id": "fnlittersoil_tavg-u-hxy-lnd",
-    "type": "known_branded_variable"
+    "type": "known_branded_variable",
+    "description": "In accordance with common usage in geophysical disciplines, \"flux\" implies per unit area, called \"flux density\" in physics. \"Litter\" is dead plant material in or above the soil.",
+    "long_name": "Total Nitrogen Mass Flux from Litter to Soil",
+    "table_id": [
+        "land"
+    ],
+    "compound_name": [
+        "land.fNLitterSoil.tavg-u-hxy-lnd.mon.glb"
+    ],
+    "frequency": [
+        "mon"
+    ],
+    "cell_measures": "area: areacella",
+    "realm": "land"
 }

@@ -1,5 +1,6 @@
 {
     "@context": "000_context.jsonld",
     "id": "loadbc",
-    "type": "variable"
+    "type": "variable",
+    "long_name": "Load of Black Carbon Aerosol"
 }

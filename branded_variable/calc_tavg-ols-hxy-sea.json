@@ -1,5 +1,19 @@
 {
     "@context": "000_context.jsonld",
     "id": "calc_tavg-ols-hxy-sea",
-    "type": "known_branded_variable"
+    "type": "known_branded_variable",
+    "description": "sum of particulate calcite component concentrations (e.g. Phytoplankton, Detrital, etc.)",
+    "long_name": "Surface Calcite Concentration",
+    "table_id": [
+        "ocnbgchem"
+    ],
+    "compound_name": [
+        "ocnBgchem.calc.tavg-ols-hxy-sea.mon.30S-90S",
+        "ocnBgchem.calc.tavg-ols-hxy-sea.mon.glb"
+    ],
+    "frequency": [
+        "mon"
+    ],
+    "cell_measures": "area: areacello",
+    "realm": "ocnbgchem"
 }

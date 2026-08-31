@@ -1,5 +1,18 @@
 {
     "@context": "000_context.jsonld",
     "id": "sfriver_tavg-u-hxy-sea",
-    "type": "known_branded_variable"
+    "type": "known_branded_variable",
+    "description": "This field is physical, and it arises when rivers carry a nonzero salt content.  Often this is zero, with rivers assumed to be fresh.",
+    "long_name": "Salt Flux into Sea Water from Rivers",
+    "table_id": [
+        "ocean"
+    ],
+    "compound_name": [
+        "ocean.sfriver.tavg-u-hxy-sea.mon.glb"
+    ],
+    "frequency": [
+        "mon"
+    ],
+    "cell_measures": "area: areacello",
+    "realm": "ocean"
 }

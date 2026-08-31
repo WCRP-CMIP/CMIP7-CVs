@@ -1,5 +1,18 @@
 {
     "@context": "000_context.jsonld",
     "id": "sisndmasssi_tavg-u-hxy-si",
-    "type": "known_branded_variable"
+    "type": "known_branded_variable",
+    "description": "Rate of change of snow mass due to transformation of snow to sea ice divided by grid-cell area. Always negative or zero.",
+    "long_name": "Snow Mass Rate of Change Through Snow-to-Ice Conversion",
+    "table_id": [
+        "seaice"
+    ],
+    "compound_name": [
+        "seaIce.sisndmasssi.tavg-u-hxy-si.mon.glb"
+    ],
+    "frequency": [
+        "mon"
+    ],
+    "cell_measures": "area: areacello",
+    "realm": "seaice"
 }

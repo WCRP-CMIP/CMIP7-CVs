@@ -1,5 +1,21 @@
 {
     "@context": "000_context.jsonld",
     "id": "clcalipso_tavg-560hpa-hxy-air",
-    "type": "known_branded_variable"
+    "type": "known_branded_variable",
+    "description": "Percentage cloud cover in layer centred on 560hPa",
+    "long_name": "CALIPSO Mid Level Cloud Cover Percentage",
+    "table_id": [
+        "atmos"
+    ],
+    "compound_name": [
+        "atmos.clcalipso.tavg-560hPa-hxy-air.mon.30S-90S",
+        "atmos.clcalipso.tavg-560hPa-hxy-air.mon.glb",
+        "atmos.clcalipso.tavg-560hPa-hxy-air.day.glb"
+    ],
+    "frequency": [
+        "mon",
+        "day"
+    ],
+    "cell_measures": "area: areacella",
+    "realm": "atmos"
 }

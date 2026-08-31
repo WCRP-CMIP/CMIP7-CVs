@@ -1,5 +1,6 @@
 {
     "@context": "000_context.jsonld",
     "id": "od550lt1aer",
-    "type": "variable"
+    "type": "variable",
+    "long_name": "Ambient Fine Aerosol Optical Depth at 550nm"
 }

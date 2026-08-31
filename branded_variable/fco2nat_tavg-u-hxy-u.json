@@ -1,5 +1,18 @@
 {
     "@context": "000_context.jsonld",
     "id": "fco2nat_tavg-u-hxy-u",
-    "type": "known_branded_variable"
+    "type": "known_branded_variable",
+    "description": "This is what the atmosphere sees (on its own grid).  This field should be equivalent to the combined natural fluxes of carbon (requested in the L_mon and O_mon tables) that account for natural exchanges between the atmosphere and land or ocean reservoirs (i.e., \"net ecosystem biospheric productivity\", for land, and \"air to sea CO2 flux\", for ocean.)",
+    "long_name": "Surface Carbon Mass Flux into the Atmosphere Due to Natural Sources [kgC m-2 s-1]",
+    "table_id": [
+        "atmos"
+    ],
+    "compound_name": [
+        "atmos.fco2nat.tavg-u-hxy-u.mon.glb"
+    ],
+    "frequency": [
+        "mon"
+    ],
+    "cell_measures": "area: areacella",
+    "realm": "atmos"
 }

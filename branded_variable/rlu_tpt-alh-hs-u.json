@@ -1,5 +1,17 @@
 {
     "@context": "000_context.jsonld",
     "id": "rlu_tpt-alh-hs-u",
-    "type": "known_branded_variable"
+    "type": "known_branded_variable",
+    "description": "Upwelling longwave radiation (includes the fluxes at the surface and TOA)",
+    "long_name": "Upwelling Longwave Radiation",
+    "table_id": [
+        "atmos"
+    ],
+    "compound_name": [
+        "atmos.rlu.tpt-alh-hs-u.subhr.glb"
+    ],
+    "frequency": [
+        "subhr"
+    ],
+    "realm": "atmos"
 }

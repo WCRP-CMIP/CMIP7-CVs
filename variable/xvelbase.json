@@ -1,5 +1,6 @@
 {
     "@context": "000_context.jsonld",
     "id": "xvelbase",
-    "type": "variable"
+    "type": "variable",
+    "long_name": "X-Component of Land Ice Basal Velocity"
 }

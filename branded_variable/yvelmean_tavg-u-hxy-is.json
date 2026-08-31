@@ -1,5 +1,19 @@
 {
     "@context": "000_context.jsonld",
     "id": "yvelmean_tavg-u-hxy-is",
-    "type": "known_branded_variable"
+    "type": "known_branded_variable",
+    "description": "The vertical mean land ice velocity is the average from the bedrock to the surface of the ice",
+    "long_name": "Y-Component of Land Ice Vertical Mean Velocity",
+    "table_id": [
+        "landice"
+    ],
+    "compound_name": [
+        "landIce.yvelmean.tavg-u-hxy-is.yr.ata",
+        "landIce.yvelmean.tavg-u-hxy-is.yr.grl"
+    ],
+    "frequency": [
+        "yr"
+    ],
+    "cell_measures": "area: areacellg",
+    "realm": "landice"
 }

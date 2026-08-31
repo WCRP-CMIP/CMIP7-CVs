@@ -1,5 +1,19 @@
 {
     "@context": "000_context.jsonld",
     "id": "vo_tavg-ol-hxy-sea",
-    "type": "known_branded_variable"
+    "type": "known_branded_variable",
+    "description": "Prognostic y-ward velocity component resolved by the model.",
+    "long_name": "Sea Water Y Velocity",
+    "table_id": [
+        "ocean"
+    ],
+    "compound_name": [
+        "ocean.vo.tavg-ol-hxy-sea.mon.30S-90S",
+        "ocean.vo.tavg-ol-hxy-sea.mon.glb"
+    ],
+    "frequency": [
+        "mon"
+    ],
+    "cell_measures": "area: areacello volume: volcello",
+    "realm": "ocean"
 }

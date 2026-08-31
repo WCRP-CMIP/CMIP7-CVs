@@ -1,5 +1,18 @@
 {
     "@context": "000_context.jsonld",
     "id": "albc_tavg-u-hxy-veg",
-    "type": "known_branded_variable"
+    "type": "known_branded_variable",
+    "description": "Canopy Albedo",
+    "long_name": "Canopy Albedo",
+    "table_id": [
+        "land"
+    ],
+    "compound_name": [
+        "land.albc.tavg-u-hxy-veg.mon.glb"
+    ],
+    "frequency": [
+        "mon"
+    ],
+    "cell_measures": "area: areacella",
+    "realm": "land"
 }

@@ -1,5 +1,6 @@
 {
     "@context": "000_context.jsonld",
     "id": "fproductdecomp",
-    "type": "variable"
+    "type": "variable",
+    "long_name": "Decomposition out of Product Pools to CO2 in Atmosphere as Carbon Mass Flux [kgC m-2 s-1]"
 }

@@ -1,5 +1,18 @@
 {
     "@context": "000_context.jsonld",
     "id": "o2min_tavg-u-hxy-sea",
-    "type": "known_branded_variable"
+    "type": "known_branded_variable",
+    "description": "mole concentration of oxygen at the local minimum in the concentration profile that occurs closest to the sea surface.",
+    "long_name": "Oxygen Minimum Concentration",
+    "table_id": [
+        "ocnbgchem"
+    ],
+    "compound_name": [
+        "ocnBgchem.o2min.tavg-u-hxy-sea.day.glb"
+    ],
+    "frequency": [
+        "day"
+    ],
+    "cell_measures": "area: areacello",
+    "realm": "ocnbgchem"
 }

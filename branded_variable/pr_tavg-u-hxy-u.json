@@ -1,5 +1,27 @@
 {
     "@context": "000_context.jsonld",
     "id": "pr_tavg-u-hxy-u",
-    "type": "known_branded_variable"
+    "type": "known_branded_variable",
+    "description": "at surface; includes both liquid and solid phases from all types of clouds (both large-scale and convective)",
+    "long_name": "Precipitation",
+    "table_id": [
+        "atmos"
+    ],
+    "compound_name": [
+        "atmos.pr.tavg-u-hxy-u.3hr.glb",
+        "atmos.pr.tavg-u-hxy-u.day.glb",
+        "atmos.pr.tavg-u-hxy-u.mon.glb",
+        "atmos.pr.tavg-u-hxy-u.1hr.glb",
+        "atmos.pr.tavg-u-hxy-u.6hr.glb",
+        "atmos.pr.tavg-u-hxy-u.mon.30S-90S"
+    ],
+    "frequency": [
+        "3hr",
+        "day",
+        "mon",
+        "1hr",
+        "6hr"
+    ],
+    "cell_measures": "area: areacella",
+    "realm": "atmos"
 }

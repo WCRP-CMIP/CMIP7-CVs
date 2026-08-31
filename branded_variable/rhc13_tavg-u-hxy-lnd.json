@@ -1,5 +1,18 @@
 {
     "@context": "000_context.jsonld",
     "id": "rhc13_tavg-u-hxy-lnd",
-    "type": "known_branded_variable"
+    "type": "known_branded_variable",
+    "description": "Heterotrophic respiration is respiration by heterotrophs (\"consumers\"), which are organisms (including animals and decomposers) that consume other organisms or dead organic material, rather than synthesising organic material from inorganic precursors using energy from the environment (especially sunlight) as autotrophs (\"producers\") do. Heterotrophic respiration goes on within both the soil and litter pools.",
+    "long_name": "Carbon-13 Mass Flux into Atmosphere Due to Heterotrophic Respiration on Land [kgC m-2 s-1]",
+    "table_id": [
+        "land"
+    ],
+    "compound_name": [
+        "land.rhc13.tavg-u-hxy-lnd.mon.glb"
+    ],
+    "frequency": [
+        "mon"
+    ],
+    "cell_measures": "area: areacella",
+    "realm": "land"
 }

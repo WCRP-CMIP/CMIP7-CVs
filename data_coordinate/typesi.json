@@ -1,0 +1,6 @@
+{
+    "@context": "000_context.jsonld",
+    "id": "typesi",
+    "type": "data_coordinate",
+    "long_name": "Sea Ice area type"
+}

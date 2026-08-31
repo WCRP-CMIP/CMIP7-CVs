@@ -1,5 +1,18 @@
 {
     "@context": "000_context.jsonld",
     "id": "intpbn_tavg-u-hxy-sea",
-    "type": "known_branded_variable"
+    "type": "known_branded_variable",
+    "description": "Vertically integrated biogenic nitrogen production",
+    "long_name": "Nitrogen Production",
+    "table_id": [
+        "ocnbgchem"
+    ],
+    "compound_name": [
+        "ocnBgchem.intpbn.tavg-u-hxy-sea.mon.30S-90S"
+    ],
+    "frequency": [
+        "mon"
+    ],
+    "cell_measures": "area: areacello",
+    "realm": "ocnbgchem"
 }

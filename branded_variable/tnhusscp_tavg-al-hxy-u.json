@@ -1,5 +1,18 @@
 {
     "@context": "000_context.jsonld",
     "id": "tnhusscp_tavg-al-hxy-u",
-    "type": "known_branded_variable"
+    "type": "known_branded_variable",
+    "description": "The phrase \"tendency_of_X\" means derivative of X with respect to time. \"Specific\" means per unit mass. Specific humidity is the mass fraction of water vapor in (moist) air. The specification of a physical process by the phrase \"due_to_\" process means that the quantity named is a single term in a sum of terms which together compose the general quantity named by omitting the phrase. A variable with the standard name of tendency_of_specific_humidity_due_to_stratiform_cloud_and_precipitation should contain the effects of all processes which convert stratiform clouds and precipitation to or from water vapor. In an atmosphere model, stratiform cloud is that produced by large-scale convergence (not the convection schemes).",
+    "long_name": "Tendency of Specific Humidity Due to Stratiform Clouds and Precipitation",
+    "table_id": [
+        "atmos"
+    ],
+    "compound_name": [
+        "atmos.tnhusscp.tavg-al-hxy-u.mon.glb"
+    ],
+    "frequency": [
+        "mon"
+    ],
+    "cell_measures": "area: areacella",
+    "realm": "atmos"
 }

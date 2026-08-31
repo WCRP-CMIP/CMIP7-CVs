@@ -1,5 +1,18 @@
 {
     "@context": "000_context.jsonld",
     "id": "sistressave_tpt-u-hxy-si",
-    "type": "known_branded_variable"
+    "type": "known_branded_variable",
+    "description": "Average normal stress in sea ice (first stress invariant). Report the instantaneous value at the beginning of each month (i.e., 0Z on the first day of each month)",
+    "long_name": "Average Normal Stress in Sea Ice",
+    "table_id": [
+        "seaice"
+    ],
+    "compound_name": [
+        "seaIce.sistressave.tpt-u-hxy-si.mon.glb"
+    ],
+    "frequency": [
+        "mon"
+    ],
+    "cell_measures": "area: areacello",
+    "realm": "seaice"
 }

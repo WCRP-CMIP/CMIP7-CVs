@@ -1,5 +1,18 @@
 {
     "@context": "000_context.jsonld",
     "id": "o3ref_ti-al-hxy-u",
-    "type": "known_branded_variable"
+    "type": "known_branded_variable",
+    "description": "This is the ozone mole fraction that is used in a diagnostic call to the model's radiation scheme. It is only applicable when an ozone double call is active in the model.",
+    "long_name": "Fixed Reference Mole Fraction of Ozone in Air",
+    "table_id": [
+        "atmoschem"
+    ],
+    "compound_name": [
+        "atmosChem.o3ref.ti-al-hxy-u.fx.glb"
+    ],
+    "frequency": [
+        "fx"
+    ],
+    "cell_measures": "area: areacella",
+    "realm": "atmoschem"
 }

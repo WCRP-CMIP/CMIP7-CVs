@@ -1,5 +1,17 @@
 {
     "@context": "000_context.jsonld",
     "id": "tntrlcs_tavg-p39-hy-air",
-    "type": "known_branded_variable"
+    "type": "known_branded_variable",
+    "description": "zonal mean; hence YZT",
+    "long_name": "Tendency of Air Temperature Due to Clear Sky Longwave Radiative Heating",
+    "table_id": [
+        "atmos"
+    ],
+    "compound_name": [
+        "atmos.tntrlcs.tavg-p39-hy-air.mon.glb"
+    ],
+    "frequency": [
+        "mon"
+    ],
+    "realm": "atmos"
 }

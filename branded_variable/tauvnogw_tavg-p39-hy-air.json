@@ -1,5 +1,17 @@
 {
     "@context": "000_context.jsonld",
     "id": "tauvnogw_tavg-p39-hy-air",
-    "type": "known_branded_variable"
+    "type": "known_branded_variable",
+    "description": "Zonal mean vertical wave flux of meridional momentum within the non-orographic gravity wave parameterization",
+    "long_name": "Zonal mean northward Reynolds stress from non-orographic gravity wave parameterization",
+    "table_id": [
+        "atmos"
+    ],
+    "compound_name": [
+        "atmos.tauvnogw.tavg-p39-hy-air.day.glb"
+    ],
+    "frequency": [
+        "day"
+    ],
+    "realm": "atmos"
 }

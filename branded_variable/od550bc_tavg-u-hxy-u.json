@@ -1,5 +1,18 @@
 {
     "@context": "000_context.jsonld",
     "id": "od550bc_tavg-u-hxy-u",
-    "type": "known_branded_variable"
+    "type": "known_branded_variable",
+    "description": "Total aerosol AOD due to black carbon aerosol at a wavelength of 550 nanometres.",
+    "long_name": "Black Carbon Optical Thickness at 550nm",
+    "table_id": [
+        "aerosol"
+    ],
+    "compound_name": [
+        "aerosol.od550bc.tavg-u-hxy-u.mon.glb"
+    ],
+    "frequency": [
+        "mon"
+    ],
+    "cell_measures": "area: areacella",
+    "realm": "aerosol"
 }

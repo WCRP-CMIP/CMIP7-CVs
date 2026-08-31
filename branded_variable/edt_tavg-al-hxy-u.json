@@ -1,5 +1,19 @@
 {
     "@context": "000_context.jsonld",
     "id": "edt_tavg-al-hxy-u",
-    "type": "known_branded_variable"
+    "type": "known_branded_variable",
+    "description": "Vertical diffusion coefficient for temperature due to parametrised eddies",
+    "long_name": "Eddy Diffusivity Coefficient for Temperature",
+    "table_id": [
+        "atmos"
+    ],
+    "compound_name": [
+        "atmos.edt.tavg-al-hxy-u.mon.glb",
+        "atmos.edt.tavg-al-hxy-u.mon.30S-90S"
+    ],
+    "frequency": [
+        "mon"
+    ],
+    "cell_measures": "area: areacella",
+    "realm": "atmos"
 }

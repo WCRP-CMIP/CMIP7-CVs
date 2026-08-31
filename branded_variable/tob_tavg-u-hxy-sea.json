@@ -1,5 +1,18 @@
 {
     "@context": "000_context.jsonld",
     "id": "tob_tavg-u-hxy-sea",
-    "type": "known_branded_variable"
+    "type": "known_branded_variable",
+    "description": "Potential temperature at the ocean bottom-most grid cell.",
+    "long_name": "Sea Water Potential Temperature at Sea Floor",
+    "table_id": [
+        "ocean"
+    ],
+    "compound_name": [
+        "ocean.tob.tavg-u-hxy-sea.mon.glb"
+    ],
+    "frequency": [
+        "mon"
+    ],
+    "cell_measures": "area: areacello",
+    "realm": "ocean"
 }

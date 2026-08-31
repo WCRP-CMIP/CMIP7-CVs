@@ -1,5 +1,6 @@
 {
     "@context": "000_context.jsonld",
     "id": "abs550bc",
-    "type": "variable"
+    "type": "variable",
+    "long_name": "ambient black carbon aerosol absorption optical depth at 550nm"
 }

@@ -1,0 +1,6 @@
+{
+    "@context": "000_context.jsonld",
+    "id": "grid_latitude",
+    "type": "grid_axis",
+    "long_name": "latitude in rotated pole grid"
+}

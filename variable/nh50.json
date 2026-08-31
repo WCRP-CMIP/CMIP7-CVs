@@ -1,5 +1,6 @@
 {
     "@context": "000_context.jsonld",
     "id": "nh50",
-    "type": "variable"
+    "type": "variable",
+    "long_name": "Artificial Tracer with 50 Day Lifetime"
 }

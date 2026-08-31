@@ -1,5 +1,18 @@
 {
     "@context": "000_context.jsonld",
     "id": "lailut_tavg-u-hxy-multi",
-    "type": "known_branded_variable"
+    "type": "known_branded_variable",
+    "description": "A ratio obtained by dividing the total upper leaf surface area of vegetation by the (horizontal) surface area of the land on which it grows.",
+    "long_name": "Leaf Area Index on Land-Use Tile",
+    "table_id": [
+        "land"
+    ],
+    "compound_name": [
+        "land.laiLut.tavg-u-hxy-multi.mon.glb"
+    ],
+    "frequency": [
+        "mon"
+    ],
+    "cell_measures": "area: areacella",
+    "realm": "land"
 }

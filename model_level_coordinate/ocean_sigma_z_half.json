@@ -1,0 +1,6 @@
+{
+    "@context": "000_context.jsonld",
+    "id": "ocean_sigma_z_half",
+    "type": "model_level_coordinate",
+    "long_name": "ocean sigma over z coordinate"
+}

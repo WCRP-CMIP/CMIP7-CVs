@@ -1,5 +1,18 @@
 {
     "@context": "000_context.jsonld",
     "id": "hfibthermds_tavg-ol-hxy-sea",
-    "type": "known_branded_variable"
+    "type": "known_branded_variable",
+    "description": "Heat Flux into Sea Water Due to Iceberg Thermodynamics",
+    "long_name": "Heat Flux into Sea Water Due to Iceberg Thermodynamics",
+    "table_id": [
+        "ocean"
+    ],
+    "compound_name": [
+        "ocean.hfibthermds.tavg-ol-hxy-sea.mon.glb"
+    ],
+    "frequency": [
+        "mon"
+    ],
+    "cell_measures": "area: areacello volume: volcello",
+    "realm": "ocean"
 }

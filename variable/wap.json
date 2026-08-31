@@ -1,5 +1,6 @@
 {
     "@context": "000_context.jsonld",
     "id": "wap",
-    "type": "variable"
+    "type": "variable",
+    "long_name": "Omega (=dp/dt)"
 }

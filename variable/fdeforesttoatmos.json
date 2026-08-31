@@ -1,5 +1,6 @@
 {
     "@context": "000_context.jsonld",
     "id": "fdeforesttoatmos",
-    "type": "variable"
+    "type": "variable",
+    "long_name": "Deforested Biomass That Goes into Atmosphere as a Result of Anthropogenic Land-Use Change [kgC m-2 s-1]"
 }

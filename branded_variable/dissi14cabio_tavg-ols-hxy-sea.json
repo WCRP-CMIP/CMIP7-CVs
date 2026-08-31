@@ -1,5 +1,18 @@
 {
     "@context": "000_context.jsonld",
     "id": "dissi14cabio_tavg-ols-hxy-sea",
-    "type": "known_branded_variable"
+    "type": "known_branded_variable",
+    "description": "Abiotic Dissolved inorganic 14carbon (CO3+HCO3+H2CO3) concentration",
+    "long_name": "Surface Abiotic Dissolved Inorganic Carbon-14 Concentration",
+    "table_id": [
+        "ocnbgchem"
+    ],
+    "compound_name": [
+        "ocnBgchem.dissi14cabio.tavg-ols-hxy-sea.mon.glb"
+    ],
+    "frequency": [
+        "mon"
+    ],
+    "cell_measures": "area: areacello",
+    "realm": "ocnbgchem"
 }

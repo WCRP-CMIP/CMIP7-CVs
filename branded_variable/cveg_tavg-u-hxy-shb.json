@@ -1,5 +1,18 @@
 {
     "@context": "000_context.jsonld",
     "id": "cveg_tavg-u-hxy-shb",
-    "type": "known_branded_variable"
+    "type": "known_branded_variable",
+    "description": "\"Content\" indicates a quantity per unit area. \"Vegetation\" means any plants e.g. trees, shrubs, grass. Plants are autotrophs i.e. \"producers\" of biomass using carbon obtained from carbon dioxide.",
+    "long_name": "Carbon Mass in Vegetation on Shrub Tiles",
+    "table_id": [
+        "land"
+    ],
+    "compound_name": [
+        "land.cVeg.tavg-u-hxy-shb.mon.glb"
+    ],
+    "frequency": [
+        "mon"
+    ],
+    "cell_measures": "area: areacella",
+    "realm": "land"
 }

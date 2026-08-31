@@ -1,5 +1,18 @@
 {
     "@context": "000_context.jsonld",
     "id": "nproduct_tavg-u-hxy-lnd",
-    "type": "known_branded_variable"
+    "type": "known_branded_variable",
+    "description": "Report missing data over ocean grid cells. For fractional land report value averaged over the land fraction.",
+    "long_name": "Nitrogen Mass in Products of Land-Use Change",
+    "table_id": [
+        "land"
+    ],
+    "compound_name": [
+        "land.nProduct.tavg-u-hxy-lnd.mon.glb"
+    ],
+    "frequency": [
+        "mon"
+    ],
+    "cell_measures": "area: areacella",
+    "realm": "land"
 }

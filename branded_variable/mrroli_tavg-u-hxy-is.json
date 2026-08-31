@@ -1,5 +1,19 @@
 {
     "@context": "000_context.jsonld",
     "id": "mrroli_tavg-u-hxy-is",
-    "type": "known_branded_variable"
+    "type": "known_branded_variable",
+    "description": "Runoff flux over land ice is the difference between any available liquid water in the snowpack less any refreezing. Computed as the sum of rainfall and melt of snow or ice less any refreezing or water retained in the snowpack",
+    "long_name": "Land Ice Runoff Flux",
+    "table_id": [
+        "landice"
+    ],
+    "compound_name": [
+        "landIce.mrroLi.tavg-u-hxy-is.mon.grl",
+        "landIce.mrroLi.tavg-u-hxy-is.mon.ata"
+    ],
+    "frequency": [
+        "mon"
+    ],
+    "cell_measures": "area: areacellg",
+    "realm": "landice"
 }

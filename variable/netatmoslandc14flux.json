@@ -1,5 +1,6 @@
 {
     "@context": "000_context.jsonld",
     "id": "netatmoslandc14flux",
-    "type": "variable"
+    "type": "variable",
+    "long_name": "Net Mass Flux of 14C Between Atmosphere and Land (Positive into Land) as a Result of All Processes [kgC m-2 s-1]"
 }

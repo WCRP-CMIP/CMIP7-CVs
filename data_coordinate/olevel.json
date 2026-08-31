@@ -1,0 +1,6 @@
+{
+    "@context": "000_context.jsonld",
+    "id": "olevel",
+    "type": "data_coordinate",
+    "long_name": "Ocean Model Levels"
+}

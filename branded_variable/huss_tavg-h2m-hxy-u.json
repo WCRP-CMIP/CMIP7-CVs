@@ -1,5 +1,23 @@
 {
     "@context": "000_context.jsonld",
     "id": "huss_tavg-h2m-hxy-u",
-    "type": "known_branded_variable"
+    "type": "known_branded_variable",
+    "description": "Near-surface (usually, 2 meter) specific humidity.",
+    "long_name": "Near-Surface Specific Humidity",
+    "table_id": [
+        "atmos"
+    ],
+    "compound_name": [
+        "atmos.huss.tavg-h2m-hxy-u.mon.glb",
+        "atmos.huss.tavg-h2m-hxy-u.6hr.glb",
+        "atmos.huss.tavg-h2m-hxy-u.day.glb",
+        "atmos.huss.tavg-h2m-hxy-u.mon.30S-90S"
+    ],
+    "frequency": [
+        "mon",
+        "6hr",
+        "day"
+    ],
+    "cell_measures": "area: areacella",
+    "realm": "atmos"
 }

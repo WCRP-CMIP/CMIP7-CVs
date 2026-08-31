@@ -1,5 +1,6 @@
 {
     "@context": "000_context.jsonld",
     "id": "rsutcsch4ref",
-    "type": "variable"
+    "type": "variable",
+    "long_name": "Top of atmosphere shortwave outgoing radiative flux under clear sky conditions from diagnostic radiation call with reference methane"
 }

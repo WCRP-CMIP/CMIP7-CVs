@@ -1,5 +1,6 @@
 {
     "@context": "000_context.jsonld",
     "id": "xvelmean",
-    "type": "variable"
+    "type": "variable",
+    "long_name": "X-Component of Land Ice Vertical Mean Velocity"
 }

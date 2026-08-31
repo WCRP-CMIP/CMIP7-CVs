@@ -1,5 +1,6 @@
 {
     "@context": "000_context.jsonld",
     "id": "rsutcsaf",
-    "type": "variable"
+    "type": "variable",
+    "long_name": "TOA Outgoing Clear-Sky, Aerosol-Free Shortwave Radiation"
 }

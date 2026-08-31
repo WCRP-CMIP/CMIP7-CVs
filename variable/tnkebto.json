@@ -1,5 +1,6 @@
 {
     "@context": "000_context.jsonld",
     "id": "tnkebto",
-    "type": "variable"
+    "type": "variable",
+    "long_name": "Tendency of Ocean Eddy Kinetic Energy Content Due to Parameterized Eddy Advection"
 }

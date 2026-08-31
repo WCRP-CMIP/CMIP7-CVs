@@ -1,5 +1,21 @@
 {
     "@context": "000_context.jsonld",
     "id": "sitimefrac_tavg-u-hxy-sea",
-    "type": "known_branded_variable"
+    "type": "known_branded_variable",
+    "description": "Fraction of time steps of the averaging period during which sea ice is present (siconc > 0) in a grid cell.",
+    "long_name": "Fraction of Time Steps with Sea Ice",
+    "table_id": [
+        "seaice"
+    ],
+    "compound_name": [
+        "seaIce.sitimefrac.tavg-u-hxy-sea.mon.30S-90S",
+        "seaIce.sitimefrac.tavg-u-hxy-sea.mon.glb",
+        "seaIce.sitimefrac.tavg-u-hxy-sea.day.glb"
+    ],
+    "frequency": [
+        "mon",
+        "day"
+    ],
+    "cell_measures": "area: areacello",
+    "realm": "seaice"
 }

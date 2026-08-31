@@ -1,5 +1,18 @@
 {
     "@context": "000_context.jsonld",
     "id": "tendlicalvf_tavg-u-hm-is",
-    "type": "known_branded_variable"
+    "type": "known_branded_variable",
+    "description": "Antarctica",
+    "long_name": "Total Calving Flux",
+    "table_id": [
+        "landice"
+    ],
+    "compound_name": [
+        "landIce.tendlicalvf.tavg-u-hm-is.yr.ata",
+        "landIce.tendlicalvf.tavg-u-hm-is.yr.grl"
+    ],
+    "frequency": [
+        "yr"
+    ],
+    "realm": "landice"
 }

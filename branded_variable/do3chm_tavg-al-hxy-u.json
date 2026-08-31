@@ -1,5 +1,18 @@
 {
     "@context": "000_context.jsonld",
     "id": "do3chm_tavg-al-hxy-u",
-    "type": "known_branded_variable"
+    "type": "known_branded_variable",
+    "description": "Net chemical production of ozone in the atmosphere",
+    "long_name": "Net Chemistry Tendency of O3",
+    "table_id": [
+        "atmoschem"
+    ],
+    "compound_name": [
+        "atmosChem.do3chm.tavg-al-hxy-u.mon.glb"
+    ],
+    "frequency": [
+        "mon"
+    ],
+    "cell_measures": "area: areacella",
+    "realm": "atmoschem"
 }

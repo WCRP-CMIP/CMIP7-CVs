@@ -1,5 +1,6 @@
 {
     "@context": "000_context.jsonld",
     "id": "abs550so4",
-    "type": "variable"
+    "type": "variable",
+    "long_name": "Ambient Sulfate Aerosol Absorption Optical Thickness at 550nm"
 }

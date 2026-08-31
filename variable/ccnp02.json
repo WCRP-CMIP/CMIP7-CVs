@@ -1,5 +1,6 @@
 {
     "@context": "000_context.jsonld",
     "id": "ccnp02",
-    "type": "variable"
+    "type": "variable",
+    "long_name": "CCN concentration at 0.2 percent supersaturation, based on aerosol chemical composition and size"
 }

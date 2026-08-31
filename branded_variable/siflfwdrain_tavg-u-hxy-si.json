@@ -1,5 +1,18 @@
 {
     "@context": "000_context.jsonld",
     "id": "siflfwdrain_tavg-u-hxy-si",
-    "type": "known_branded_variable"
+    "type": "known_branded_variable",
+    "description": "Total flux of fresh water from sea-ice surface into underlying ocean. This combines both surface meltwater that drains directly into the ocean and the drainage of surface melt ponds. By definition, this flux is always positive.",
+    "long_name": "Freshwater Flux from Sea-Ice Surface",
+    "table_id": [
+        "seaice"
+    ],
+    "compound_name": [
+        "seaIce.siflfwdrain.tavg-u-hxy-si.mon.glb"
+    ],
+    "frequency": [
+        "mon"
+    ],
+    "cell_measures": "area: areacello",
+    "realm": "seaice"
 }

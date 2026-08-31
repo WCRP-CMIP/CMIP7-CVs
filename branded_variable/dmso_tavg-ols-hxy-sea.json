@@ -1,5 +1,19 @@
 {
     "@context": "000_context.jsonld",
     "id": "dmso_tavg-ols-hxy-sea",
-    "type": "known_branded_variable"
+    "type": "known_branded_variable",
+    "description": "Mole concentration of dimethyl sulphide in water in the near surface layer",
+    "long_name": "Surface Mole Concentration of Dimethyl Sulphide in Sea Water",
+    "table_id": [
+        "ocnbgchem"
+    ],
+    "compound_name": [
+        "ocnBgchem.dmso.tavg-ols-hxy-sea.mon.glb",
+        "ocnBgchem.dmso.tavg-ols-hxy-sea.mon.30S-90S"
+    ],
+    "frequency": [
+        "mon"
+    ],
+    "cell_measures": "area: areacello",
+    "realm": "ocnbgchem"
 }

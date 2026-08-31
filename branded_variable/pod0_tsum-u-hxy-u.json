@@ -1,5 +1,18 @@
 {
     "@context": "000_context.jsonld",
     "id": "pod0_tsum-u-hxy-u",
-    "type": "known_branded_variable"
+    "type": "known_branded_variable",
+    "description": "Accumulated stomatal ozone flux over the threshold of 0 mol m-2 s-1; Computation: Time Integral of (hourly above canopy ozone concentration * stomatal conductance * Rc/(Rb+Rc) )",
+    "long_name": "Phytotoxic Ozone Dose",
+    "table_id": [
+        "aerosol"
+    ],
+    "compound_name": [
+        "aerosol.pod0.tsum-u-hxy-u.mon.glb"
+    ],
+    "frequency": [
+        "mon"
+    ],
+    "cell_measures": "area: areacella",
+    "realm": "aerosol"
 }

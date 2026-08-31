@@ -1,5 +1,18 @@
 {
     "@context": "000_context.jsonld",
     "id": "wetbc_tavg-u-hxy-u",
-    "type": "known_branded_variable"
+    "type": "known_branded_variable",
+    "description": "Surface deposition rate of black carbon (dry mass) due to wet processes",
+    "long_name": "Wet Deposition Rate of Black Carbon Aerosol Mass",
+    "table_id": [
+        "aerosol"
+    ],
+    "compound_name": [
+        "aerosol.wetbc.tavg-u-hxy-u.mon.glb"
+    ],
+    "frequency": [
+        "mon"
+    ],
+    "cell_measures": "area: areacella",
+    "realm": "aerosol"
 }

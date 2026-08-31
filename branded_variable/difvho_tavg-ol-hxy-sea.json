@@ -1,5 +1,18 @@
 {
     "@context": "000_context.jsonld",
     "id": "difvho_tavg-ol-hxy-sea",
-    "type": "known_branded_variable"
+    "type": "known_branded_variable",
+    "description": "Vertical/dianeutral diffusivity applied to prognostic temperature field.",
+    "long_name": "Ocean Vertical Heat Diffusivity",
+    "table_id": [
+        "ocean"
+    ],
+    "compound_name": [
+        "ocean.difvho.tavg-ol-hxy-sea.yr.glb"
+    ],
+    "frequency": [
+        "yr"
+    ],
+    "cell_measures": "area: areacello volume: volcello",
+    "realm": "ocean"
 }

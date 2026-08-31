@@ -1,5 +1,18 @@
 {
     "@context": "000_context.jsonld",
     "id": "nep_tavg-u-hxy-lnd",
-    "type": "known_branded_variable"
+    "type": "known_branded_variable",
+    "description": "Net Ecosystem Exchange",
+    "long_name": "Net Carbon Mass Flux out of Atmosphere Due to Net Ecosystem Productivity on Land [kgC m-2 s-1]",
+    "table_id": [
+        "land"
+    ],
+    "compound_name": [
+        "land.nep.tavg-u-hxy-lnd.mon.glb"
+    ],
+    "frequency": [
+        "mon"
+    ],
+    "cell_measures": "area: areacella",
+    "realm": "land"
 }

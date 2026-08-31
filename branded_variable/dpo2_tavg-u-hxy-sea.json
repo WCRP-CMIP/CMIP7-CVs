@@ -1,5 +1,18 @@
 {
     "@context": "000_context.jsonld",
     "id": "dpo2_tavg-u-hxy-sea",
-    "type": "known_branded_variable"
+    "type": "known_branded_variable",
+    "description": "The partial pressure of a dissolved gas in sea water is the partial pressure in air with which it would be in equilibrium.  The partial pressure of a gaseous constituent of air is the pressure which it alone would exert with unchanged temperature and number of moles per unit volume.  The surface called \"surface\" means the lower boundary of the atmosphere.",
+    "long_name": "Delta O2 Partial Pressure",
+    "table_id": [
+        "ocnbgchem"
+    ],
+    "compound_name": [
+        "ocnBgchem.dpo2.tavg-u-hxy-sea.mon.glb"
+    ],
+    "frequency": [
+        "mon"
+    ],
+    "cell_measures": "area: areacello",
+    "realm": "ocnbgchem"
 }

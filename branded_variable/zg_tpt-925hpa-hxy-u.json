@@ -1,5 +1,18 @@
 {
     "@context": "000_context.jsonld",
     "id": "zg_tpt-925hpa-hxy-u",
-    "type": "known_branded_variable"
+    "type": "known_branded_variable",
+    "description": "Geopotential Height at 925 hPa, 6 hourly instantaneous",
+    "long_name": "zg925",
+    "table_id": [
+        "atmos"
+    ],
+    "compound_name": [
+        "atmos.zg.tpt-925hPa-hxy-u.6hr.glb"
+    ],
+    "frequency": [
+        "6hr"
+    ],
+    "cell_measures": "area: areacella",
+    "realm": "atmos"
 }

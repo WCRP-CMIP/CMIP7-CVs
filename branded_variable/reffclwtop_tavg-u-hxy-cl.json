@@ -1,5 +1,19 @@
 {
     "@context": "000_context.jsonld",
     "id": "reffclwtop_tavg-u-hxy-cl",
-    "type": "known_branded_variable"
+    "type": "known_branded_variable",
+    "description": "Droplets are liquid only.  This is the effective radius \"as seen from space\" over liquid cloudy portion of grid cell. This is the value from uppermost model layer with liquid cloud or, if available, or for some models it is the sum over all liquid cloud tops, no matter where they occur, as long as they are seen from the top of the atmosphere.TOA) each time sample when computing monthly mean. Reported values are weighted by total liquid cloud top fraction of  (as seen from TOA) each time sample when computing monthly mean.",
+    "long_name": "Cloud-Top Effective Droplet Radius",
+    "table_id": [
+        "aerosol"
+    ],
+    "compound_name": [
+        "aerosol.reffclwtop.tavg-u-hxy-cl.mon.30S-90S",
+        "aerosol.reffclwtop.tavg-u-hxy-cl.mon.glb"
+    ],
+    "frequency": [
+        "mon"
+    ],
+    "cell_measures": "area: areacella",
+    "realm": "aerosol"
 }

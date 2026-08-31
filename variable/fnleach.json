@@ -1,5 +1,6 @@
 {
     "@context": "000_context.jsonld",
     "id": "fnleach",
-    "type": "variable"
+    "type": "variable",
+    "long_name": "Total Nitrogen Loss to Leaching or Runoff (Sum of Ammonium, Nitrite and Nitrate)"
 }

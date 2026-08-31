@@ -1,5 +1,6 @@
 {
     "@context": "000_context.jsonld",
     "id": "emilkch4",
-    "type": "variable"
+    "type": "variable",
+    "long_name": "Freshwater lake emissions of CH4"
 }

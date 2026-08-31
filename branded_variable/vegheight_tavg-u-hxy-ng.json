@@ -1,5 +1,18 @@
 {
     "@context": "000_context.jsonld",
     "id": "vegheight_tavg-u-hxy-ng",
-    "type": "known_branded_variable"
+    "type": "known_branded_variable",
+    "description": "Vegetation height averaged over the grass fraction of a grid cell.",
+    "long_name": "Height of Grass",
+    "table_id": [
+        "land"
+    ],
+    "compound_name": [
+        "land.vegHeight.tavg-u-hxy-ng.mon.glb"
+    ],
+    "frequency": [
+        "mon"
+    ],
+    "cell_measures": "area: areacella",
+    "realm": "land"
 }

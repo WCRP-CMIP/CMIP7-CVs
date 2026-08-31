@@ -1,5 +1,18 @@
 {
     "@context": "000_context.jsonld",
     "id": "areacellg_ti-u-hxy-u",
-    "type": "known_branded_variable"
+    "type": "known_branded_variable",
+    "description": "Cell areas any grid used to report ice sheet variables. These cell areas should be defined to enable exact calculation of area integrals (e.g., of vertical fluxes of energy at the surface and top of the atmosphere)",
+    "long_name": "Grid-Cell Area for Ice Sheet Variables",
+    "table_id": [
+        "land"
+    ],
+    "compound_name": [
+        "land.areacellg.ti-u-hxy-u.fx.grl",
+        "land.areacellg.ti-u-hxy-u.fx.ata"
+    ],
+    "frequency": [
+        "fx"
+    ],
+    "realm": "land"
 }

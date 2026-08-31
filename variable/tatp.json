@@ -1,5 +1,6 @@
 {
     "@context": "000_context.jsonld",
     "id": "tatp",
-    "type": "variable"
+    "type": "variable",
+    "long_name": "Tropopause Air Temperature"
 }

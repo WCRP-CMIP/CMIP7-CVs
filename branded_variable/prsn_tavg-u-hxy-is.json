@@ -1,5 +1,21 @@
 {
     "@context": "000_context.jsonld",
     "id": "prsn_tavg-u-hxy-is",
-    "type": "known_branded_variable"
+    "type": "known_branded_variable",
+    "description": "quantity averaged over ice_sheet (meaning grounded ice sheet and floating ice shelf) only, to avoid contamination from other surfaces (eg: permafrost)",
+    "long_name": "Ice Sheet Snowfall Flux",
+    "table_id": [
+        "atmos",
+        "landice"
+    ],
+    "compound_name": [
+        "atmos.prsn.tavg-u-hxy-is.mon.grl",
+        "landIce.prsn.tavg-u-hxy-is.mon.glb",
+        "atmos.prsn.tavg-u-hxy-is.mon.ata"
+    ],
+    "frequency": [
+        "mon"
+    ],
+    "cell_measures": "area: areacella",
+    "realm": "atmos"
 }

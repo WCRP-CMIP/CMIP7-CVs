@@ -1,5 +1,18 @@
 {
     "@context": "000_context.jsonld",
     "id": "wetso2_tavg-u-hxy-u",
-    "type": "known_branded_variable"
+    "type": "known_branded_variable",
+    "description": "Deposition rate of sulfur dioxide due to wet processes",
+    "long_name": "Wet Deposition Rate of SO2",
+    "table_id": [
+        "aerosol"
+    ],
+    "compound_name": [
+        "aerosol.wetso2.tavg-u-hxy-u.mon.glb"
+    ],
+    "frequency": [
+        "mon"
+    ],
+    "cell_measures": "area: areacella",
+    "realm": "aerosol"
 }

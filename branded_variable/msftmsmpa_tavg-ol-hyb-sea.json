@@ -1,5 +1,17 @@
 {
     "@context": "000_context.jsonld",
     "id": "msftmsmpa_tavg-ol-hyb-sea",
-    "type": "known_branded_variable"
+    "type": "known_branded_variable",
+    "description": "Report only if there is a submesoscale eddy parameterization.",
+    "long_name": "Ocean Meridional Overturning Mass Streamfunction Due to Parameterized Submesoscale Advection",
+    "table_id": [
+        "ocean"
+    ],
+    "compound_name": [
+        "ocean.msftmsmpa.tavg-ol-hyb-sea.mon.glb"
+    ],
+    "frequency": [
+        "mon"
+    ],
+    "realm": "ocean"
 }

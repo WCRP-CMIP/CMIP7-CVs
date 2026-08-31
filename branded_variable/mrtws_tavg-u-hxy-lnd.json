@@ -1,5 +1,20 @@
 {
     "@context": "000_context.jsonld",
     "id": "mrtws_tavg-u-hxy-lnd",
-    "type": "known_branded_variable"
+    "type": "known_branded_variable",
+    "description": "requested for C4MIP, OCMIP/OMIP, LUMIP, ScenarioMIP, DECK, DAMIP, GeoMIP, LS3MIP, ??",
+    "long_name": "Terrestrial Water Storage",
+    "table_id": [
+        "land"
+    ],
+    "compound_name": [
+        "land.mrtws.tavg-u-hxy-lnd.mon.glb",
+        "land.mrtws.tavg-u-hxy-lnd.day.glb"
+    ],
+    "frequency": [
+        "mon",
+        "day"
+    ],
+    "cell_measures": "area: areacella",
+    "realm": "land"
 }

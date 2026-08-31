@@ -1,5 +1,19 @@
 {
     "@context": "000_context.jsonld",
     "id": "dmc_tavg-alh-hxy-u",
-    "type": "known_branded_variable"
+    "type": "known_branded_variable",
+    "description": "The net mass flux  represents the difference between the updraft and downdraft components.   This is calculated as the convective mass flux divided by the area of the whole grid cell (not just the area of the cloud).",
+    "long_name": "Deep Convective Mass Flux",
+    "table_id": [
+        "atmos"
+    ],
+    "compound_name": [
+        "atmos.dmc.tavg-alh-hxy-u.mon.glb",
+        "atmos.dmc.tavg-alh-hxy-u.mon.30S-90S"
+    ],
+    "frequency": [
+        "mon"
+    ],
+    "cell_measures": "area: areacella",
+    "realm": "atmos"
 }

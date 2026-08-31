@@ -1,5 +1,18 @@
 {
     "@context": "000_context.jsonld",
     "id": "tslsi_tpt-u-hxy-lsi",
-    "type": "known_branded_variable"
+    "type": "known_branded_variable",
+    "description": "Surface temperature of all surfaces except open ocean, sampled synoptically.",
+    "long_name": "Surface Temperature Where Land or Sea Ice",
+    "table_id": [
+        "land"
+    ],
+    "compound_name": [
+        "land.tslsi.tpt-u-hxy-lsi.3hr.glb"
+    ],
+    "frequency": [
+        "3hr"
+    ],
+    "cell_measures": "area: areacella",
+    "realm": "land"
 }

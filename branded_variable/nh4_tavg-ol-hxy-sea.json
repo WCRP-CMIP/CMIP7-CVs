@@ -1,5 +1,18 @@
 {
     "@context": "000_context.jsonld",
     "id": "nh4_tavg-ol-hxy-sea",
-    "type": "known_branded_variable"
+    "type": "known_branded_variable",
+    "description": "Mole concentration means moles (amount of substance) per unit volume and is used in the construction mole_concentration_of_X_in_Y, where X is a material constituent of Y.",
+    "long_name": "Dissolved Ammonium Concentration",
+    "table_id": [
+        "ocnbgchem"
+    ],
+    "compound_name": [
+        "ocnBgchem.nh4.tavg-ol-hxy-sea.mon.glb"
+    ],
+    "frequency": [
+        "mon"
+    ],
+    "cell_measures": "area: areacello volume: volcello",
+    "realm": "ocnbgchem"
 }

@@ -1,5 +1,18 @@
 {
     "@context": "000_context.jsonld",
     "id": "hfrainds_tavg-u-hxy-ifs",
-    "type": "known_branded_variable"
+    "type": "known_branded_variable",
+    "description": "This is defined as \"where ice_free_sea over sea\"; i.e., the total flux (considered here) entering the ice-free portion of the grid cell divided by the area of the ocean portion of the grid cell.  All such heat fluxes are computed based on Celsius scale.",
+    "long_name": "Temperature Flux Due to Rainfall Expressed as Heat Flux into Sea Water",
+    "table_id": [
+        "ocean"
+    ],
+    "compound_name": [
+        "ocean.hfrainds.tavg-u-hxy-ifs.mon.glb"
+    ],
+    "frequency": [
+        "mon"
+    ],
+    "cell_measures": "area: areacello",
+    "realm": "ocean"
 }

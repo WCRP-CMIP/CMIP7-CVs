@@ -1,5 +1,20 @@
 {
     "@context": "000_context.jsonld",
     "id": "hfdsn_tavg-u-hxy-lnd",
-    "type": "known_branded_variable"
+    "type": "known_branded_variable",
+    "description": "the net downward heat flux from the atmosphere into the snow that lies on land divided by the land area in the grid cell; reported as missing for snow-free land regions or where the land fraction is 0.",
+    "long_name": "Downward Heat Flux into Snow Where Land over Land",
+    "table_id": [
+        "landice"
+    ],
+    "compound_name": [
+        "landIce.hfdsn.tavg-u-hxy-lnd.mon.glb",
+        "landIce.hfdsn.tavg-u-hxy-lnd.day.glb"
+    ],
+    "frequency": [
+        "mon",
+        "day"
+    ],
+    "cell_measures": "area: areacella",
+    "realm": "landice"
 }

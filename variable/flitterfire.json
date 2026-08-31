@@ -1,5 +1,6 @@
 {
     "@context": "000_context.jsonld",
     "id": "flitterfire",
-    "type": "variable"
+    "type": "variable",
+    "long_name": "Carbon Mass Flux from Litter, CWD or any non-Living Pool into Atmosphere Due to CO2 Emission from All Fire [kgC m-2 s-1]"
 }

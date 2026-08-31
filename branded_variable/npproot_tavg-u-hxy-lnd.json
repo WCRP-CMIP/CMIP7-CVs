@@ -1,5 +1,18 @@
 {
     "@context": "000_context.jsonld",
     "id": "npproot_tavg-u-hxy-lnd",
-    "type": "known_branded_variable"
+    "type": "known_branded_variable",
+    "description": "This is the rate of carbon uptake by roots due to NPP",
+    "long_name": "Net Primary Production Allocated to Roots as Carbon Mass Flux [kgC m-2 s-1]",
+    "table_id": [
+        "land"
+    ],
+    "compound_name": [
+        "land.nppRoot.tavg-u-hxy-lnd.mon.glb"
+    ],
+    "frequency": [
+        "mon"
+    ],
+    "cell_measures": "area: areacella",
+    "realm": "land"
 }

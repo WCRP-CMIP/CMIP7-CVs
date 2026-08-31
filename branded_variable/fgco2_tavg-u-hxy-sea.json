@@ -1,5 +1,18 @@
 {
     "@context": "000_context.jsonld",
     "id": "fgco2_tavg-u-hxy-sea",
-    "type": "known_branded_variable"
+    "type": "known_branded_variable",
+    "description": "Gas exchange flux of CO2 (positive into ocean)",
+    "long_name": "Surface Downward Mass Flux of Carbon as CO2 [kgC m-2 s-1]",
+    "table_id": [
+        "ocnbgchem"
+    ],
+    "compound_name": [
+        "ocnBgchem.fgco2.tavg-u-hxy-sea.mon.glb"
+    ],
+    "frequency": [
+        "mon"
+    ],
+    "cell_measures": "area: areacello",
+    "realm": "ocnbgchem"
 }

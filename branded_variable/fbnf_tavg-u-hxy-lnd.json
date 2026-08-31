@@ -1,5 +1,18 @@
 {
     "@context": "000_context.jsonld",
     "id": "fbnf_tavg-u-hxy-lnd",
-    "type": "known_branded_variable"
+    "type": "known_branded_variable",
+    "description": "The fixation (uptake of nitrogen gas directly from the atmosphere) of nitrogen due to biological processes.",
+    "long_name": "Biological Nitrogen Fixation",
+    "table_id": [
+        "land"
+    ],
+    "compound_name": [
+        "land.fBNF.tavg-u-hxy-lnd.mon.glb"
+    ],
+    "frequency": [
+        "mon"
+    ],
+    "cell_measures": "area: areacella",
+    "realm": "land"
 }

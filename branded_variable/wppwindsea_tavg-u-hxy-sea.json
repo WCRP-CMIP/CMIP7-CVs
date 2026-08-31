@@ -1,5 +1,18 @@
 {
     "@context": "000_context.jsonld",
     "id": "wppwindsea_tavg-u-hxy-sea",
-    "type": "known_branded_variable"
+    "type": "known_branded_variable",
+    "description": "Wave period associated with the most energetic wind-sea waves (i.e., local wind waves). In spectral wind wave models, this represents the spectral peak across part of the two-dimensional wave spectrum, incorporating just wind-sea waves.",
+    "long_name": "Wind Sea Wave Peak Period",
+    "table_id": [
+        "ocean"
+    ],
+    "compound_name": [
+        "ocean.wppwindsea.tavg-u-hxy-sea.mon.glb"
+    ],
+    "frequency": [
+        "mon"
+    ],
+    "cell_measures": "area: areacello",
+    "realm": "ocean"
 }
