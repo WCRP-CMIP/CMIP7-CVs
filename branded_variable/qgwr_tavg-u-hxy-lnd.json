@@ -1,5 +1,18 @@
 {
     "@context": "000_context.jsonld",
     "id": "qgwr_tavg-u-hxy-lnd",
-    "type": "known_branded_variable"
+    "type": "known_branded_variable",
+    "description": "water_flux_from_soil_layer_to_groundwater",
+    "long_name": "Groundwater Recharge from Soil Layer",
+    "table_id": [
+        "land"
+    ],
+    "compound_name": [
+        "land.qgwr.tavg-u-hxy-lnd.day.glb"
+    ],
+    "frequency": [
+        "day"
+    ],
+    "cell_measures": "area: areacellr",
+    "realm": "land"
 }

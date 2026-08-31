@@ -1,5 +1,17 @@
 {
     "@context": "000_context.jsonld",
     "id": "cct_tpt-u-hs-u",
-    "type": "known_branded_variable"
+    "type": "known_branded_variable",
+    "description": "Where convective cloud is present in the grid cell, the instantaneous cloud top altitude should be that of the top of the highest level containing convective cloud. Missing data should be reported in the absence of convective cloud. The time mean should be calculated from these quantities averaging over occasions when convective cloud is present only, and should contain missing data for occasions when no convective cloud is present during the meaning period.",
+    "long_name": "Air Pressure at Convective Cloud Top",
+    "table_id": [
+        "atmos"
+    ],
+    "compound_name": [
+        "atmos.cct.tpt-u-hs-u.subhr.glb"
+    ],
+    "frequency": [
+        "subhr"
+    ],
+    "realm": "atmos"
 }

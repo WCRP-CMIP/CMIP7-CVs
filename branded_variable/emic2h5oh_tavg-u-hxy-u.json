@@ -1,5 +1,18 @@
 {
     "@context": "000_context.jsonld",
     "id": "emic2h5oh_tavg-u-hxy-u",
-    "type": "known_branded_variable"
+    "type": "known_branded_variable",
+    "description": "This is the total emission rate of ethanol (C2H5OH) into the atmosphere",
+    "long_name": "total emission rate of C2H5OH",
+    "table_id": [
+        "atmoschem"
+    ],
+    "compound_name": [
+        "atmosChem.emic2h5oh.tavg-u-hxy-u.mon.glb"
+    ],
+    "frequency": [
+        "mon"
+    ],
+    "cell_measures": "area: areacella",
+    "realm": "atmoschem"
 }

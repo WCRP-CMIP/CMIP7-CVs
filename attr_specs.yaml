@@ -194,7 +194,7 @@
   is_required: true
 
 - source_collection: branded_variable
-  source_collection_key: variable_root_name
+  source_collection_key: out_name
   attr_field_name: variable_id
   attr_field_value_type: string
   is_required: true

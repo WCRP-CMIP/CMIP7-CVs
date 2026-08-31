@@ -1,5 +1,21 @@
 {
     "@context": "000_context.jsonld",
     "id": "sftflf_tavg-u-hxy-u",
-    "type": "known_branded_variable"
+    "type": "known_branded_variable",
+    "description": "Percentage of grid cell covered by floating ice shelf, the component of the ice sheet that is flowing over sea water",
+    "long_name": "Floating Ice Shelf Area Percentage",
+    "table_id": [
+        "landice"
+    ],
+    "compound_name": [
+        "landIce.sftflf.tavg-u-hxy-u.yr.grl",
+        "landIce.sftflf.tavg-u-hxy-u.mon.glb",
+        "landIce.sftflf.tavg-u-hxy-u.yr.ata"
+    ],
+    "frequency": [
+        "yr",
+        "mon"
+    ],
+    "cell_measures": "area: areacella",
+    "realm": "landice"
 }

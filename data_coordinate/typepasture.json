@@ -1,0 +1,6 @@
+{
+    "@context": "000_context.jsonld",
+    "id": "typepasture",
+    "type": "data_coordinate",
+    "long_name": "Pasture area type"
+}

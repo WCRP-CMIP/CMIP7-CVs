@@ -1,5 +1,6 @@
 {
     "@context": "000_context.jsonld",
     "id": "intvaw",
-    "type": "variable"
+    "type": "variable",
+    "long_name": "Vertically Integrated Northward Moisture Transport"
 }

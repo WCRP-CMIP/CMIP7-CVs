@@ -1,5 +1,20 @@
 {
     "@context": "000_context.jsonld",
     "id": "snw_tavg-u-hxy-lnd",
-    "type": "known_branded_variable"
+    "type": "known_branded_variable",
+    "description": "Computed as the mass of surface snow on the land portion of the grid cell divided by the land area in the grid cell; reported as missing where the land fraction is 0; excluded is snow on vegetation canopy or on sea ice.",
+    "long_name": "Surface Snow Amount",
+    "table_id": [
+        "landice"
+    ],
+    "compound_name": [
+        "landIce.snw.tavg-u-hxy-lnd.mon.glb",
+        "landIce.snw.tavg-u-hxy-lnd.day.glb"
+    ],
+    "frequency": [
+        "mon",
+        "day"
+    ],
+    "cell_measures": "area: areacella",
+    "realm": "landice"
 }

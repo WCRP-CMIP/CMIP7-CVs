@@ -1,5 +1,18 @@
 {
     "@context": "000_context.jsonld",
     "id": "prveg_tavg-u-hxy-lnd",
-    "type": "known_branded_variable"
+    "type": "known_branded_variable",
+    "description": "the precipitation flux that is intercepted by the vegetation canopy (if present in model) before reaching the ground.",
+    "long_name": "Precipitation onto Canopy",
+    "table_id": [
+        "land"
+    ],
+    "compound_name": [
+        "land.prveg.tavg-u-hxy-lnd.mon.glb"
+    ],
+    "frequency": [
+        "mon"
+    ],
+    "cell_measures": "area: areacella",
+    "realm": "land"
 }

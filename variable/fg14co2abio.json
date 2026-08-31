@@ -1,5 +1,6 @@
 {
     "@context": "000_context.jsonld",
     "id": "fg14co2abio",
-    "type": "variable"
+    "type": "variable",
+    "long_name": "Surface Downward Mass Flux of Carbon-14 as Abiotic 14CO2 [kgC m-2 s-1]"
 }

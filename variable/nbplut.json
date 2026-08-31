@@ -1,5 +1,6 @@
 {
     "@context": "000_context.jsonld",
     "id": "nbplut",
-    "type": "variable"
+    "type": "variable",
+    "long_name": "Net Carbon Mass Flux into Land-Use Tile [kgC m-2 s-1]"
 }

@@ -1,5 +1,18 @@
 {
     "@context": "000_context.jsonld",
     "id": "chepno3_tavg-al-hxy-u",
-    "type": "known_branded_variable"
+    "type": "known_branded_variable",
+    "description": "Net chemical production rate of nitrate aerosol in the atmosphere",
+    "long_name": "Net chemical production of nitrate aerosol",
+    "table_id": [
+        "atmoschem"
+    ],
+    "compound_name": [
+        "atmosChem.chepno3.tavg-al-hxy-u.mon.glb"
+    ],
+    "frequency": [
+        "mon"
+    ],
+    "cell_measures": "area: areacella",
+    "realm": "atmoschem"
 }

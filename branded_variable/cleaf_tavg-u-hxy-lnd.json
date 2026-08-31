@@ -1,5 +1,18 @@
 {
     "@context": "000_context.jsonld",
     "id": "cleaf_tavg-u-hxy-lnd",
-    "type": "known_branded_variable"
+    "type": "known_branded_variable",
+    "description": "Carbon mass per unit area in leaves.",
+    "long_name": "Carbon Mass in Leaves",
+    "table_id": [
+        "land"
+    ],
+    "compound_name": [
+        "land.cLeaf.tavg-u-hxy-lnd.mon.glb"
+    ],
+    "frequency": [
+        "mon"
+    ],
+    "cell_measures": "area: areacella",
+    "realm": "land"
 }

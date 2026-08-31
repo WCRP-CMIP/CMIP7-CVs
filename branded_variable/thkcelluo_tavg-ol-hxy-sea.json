@@ -1,5 +1,18 @@
 {
     "@context": "000_context.jsonld",
     "id": "thkcelluo_tavg-ol-hxy-sea",
-    "type": "known_branded_variable"
+    "type": "known_branded_variable",
+    "description": "The time varying thickness of ocean cells centered at u-points (points for velocity in the x-direction). \"Thickness\" means the vertical extent of a layer. \"Cell\" refers to a model grid-cell.",
+    "long_name": "Ocean Model Cell Thickness at u-points",
+    "table_id": [
+        "ocean"
+    ],
+    "compound_name": [
+        "ocean.thkcelluo.tavg-ol-hxy-sea.mon.glb"
+    ],
+    "frequency": [
+        "mon"
+    ],
+    "cell_measures": "area: areacello volume: volcello",
+    "realm": "ocean"
 }

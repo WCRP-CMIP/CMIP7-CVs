@@ -1,5 +1,17 @@
 {
     "@context": "000_context.jsonld",
     "id": "hfbasinpadv_tavg-u-hyb-sea",
-    "type": "known_branded_variable"
+    "type": "known_branded_variable",
+    "description": "Contributions to heat transport from parameterized eddy-induced advective transport due to any subgrid advective process. Diagnosed here as a function of latitude and basin.  Use Celsius for temperature scale.",
+    "long_name": "Northward Ocean Heat Transport Due to Parameterized Eddy Advection",
+    "table_id": [
+        "ocean"
+    ],
+    "compound_name": [
+        "ocean.hfbasinpadv.tavg-u-hyb-sea.mon.glb"
+    ],
+    "frequency": [
+        "mon"
+    ],
+    "realm": "ocean"
 }

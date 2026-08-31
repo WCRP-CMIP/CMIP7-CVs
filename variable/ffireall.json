@@ -1,5 +1,6 @@
 {
     "@context": "000_context.jsonld",
     "id": "ffireall",
-    "type": "variable"
+    "type": "variable",
+    "long_name": "Carbon Mass Flux into Atmosphere Due to CO2 Emission from Fire Including All Sources [kgC m-2 s-1]"
 }

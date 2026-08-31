@@ -1,5 +1,18 @@
 {
     "@context": "000_context.jsonld",
     "id": "loadbc_tavg-u-hxy-u",
-    "type": "known_branded_variable"
+    "type": "known_branded_variable",
+    "description": "The total dry mass of black carbon aerosol particles per unit area.",
+    "long_name": "Load of Black Carbon Aerosol",
+    "table_id": [
+        "atmos"
+    ],
+    "compound_name": [
+        "atmos.loadbc.tavg-u-hxy-u.day.glb"
+    ],
+    "frequency": [
+        "day"
+    ],
+    "cell_measures": "area: areacella",
+    "realm": "atmos"
 }

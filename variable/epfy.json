@@ -1,5 +1,6 @@
 {
     "@context": "000_context.jsonld",
     "id": "epfy",
-    "type": "variable"
+    "type": "variable",
+    "long_name": "Northward Component of the Eliassen-Palm Flux"
 }

@@ -1,5 +1,18 @@
 {
     "@context": "000_context.jsonld",
     "id": "pr2h_tavg-u-hxy-u",
-    "type": "known_branded_variable"
+    "type": "known_branded_variable",
+    "description": "Precipitation mass flux of water molecules that contain one atom of the hydrogen-2 isotope (1H 2H O), including solid and liquid phases.",
+    "long_name": "Precipitation Flux of Water Containing Deuterium (1H 2H O)",
+    "table_id": [
+        "atmos"
+    ],
+    "compound_name": [
+        "atmos.pr2h.tavg-u-hxy-u.mon.glb"
+    ],
+    "frequency": [
+        "mon"
+    ],
+    "cell_measures": "area: areacella",
+    "realm": "atmos"
 }

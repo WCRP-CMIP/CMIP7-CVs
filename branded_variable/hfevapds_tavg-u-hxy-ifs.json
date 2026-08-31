@@ -1,5 +1,18 @@
 {
     "@context": "000_context.jsonld",
     "id": "hfevapds_tavg-u-hxy-ifs",
-    "type": "known_branded_variable"
+    "type": "known_branded_variable",
+    "description": "This is defined as \"where ice_free_sea over sea\"",
+    "long_name": "Temperature Flux Due to Evaporation Expressed as Heat Flux out of Sea Water",
+    "table_id": [
+        "ocean"
+    ],
+    "compound_name": [
+        "ocean.hfevapds.tavg-u-hxy-ifs.mon.glb"
+    ],
+    "frequency": [
+        "mon"
+    ],
+    "cell_measures": "area: areacello",
+    "realm": "ocean"
 }

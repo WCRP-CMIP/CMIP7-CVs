@@ -1,5 +1,17 @@
 {
     "@context": "000_context.jsonld",
     "id": "mfo_tavg-u-ht-sea",
-    "type": "known_branded_variable"
+    "type": "known_branded_variable",
+    "description": "Transport across_line means that which crosses a particular line on the Earth's surface (based on appendix J and table J1 of Griffies et al, 2016 (<https://doi.org/10.5194/gmd-9-3231-2016>). Formally this means the integral along the line of the normal component of the transport. The transport should be evaluated for the full depth of the ocean, except for the Pacific Equatorial Undercurrent, which is averaged from the surface to 350m.",
+    "long_name": "Sea Water Transport",
+    "table_id": [
+        "ocean"
+    ],
+    "compound_name": [
+        "ocean.mfo.tavg-u-ht-sea.mon.glb"
+    ],
+    "frequency": [
+        "mon"
+    ],
+    "realm": "ocean"
 }

@@ -1,5 +1,18 @@
 {
     "@context": "000_context.jsonld",
     "id": "clivi_tpt-u-hxy-u",
-    "type": "known_branded_variable"
+    "type": "known_branded_variable",
+    "description": "mass of ice water in the column divided by the area of the column (not just the area of the cloudy portion of the column). Includes precipitating frozen hydrometeors ONLY if the precipitating hydrometeor affects the calculation of radiative transfer in model.",
+    "long_name": "Ice Water Path",
+    "table_id": [
+        "atmos"
+    ],
+    "compound_name": [
+        "atmos.clivi.tpt-u-hxy-u.3hr.glb"
+    ],
+    "frequency": [
+        "3hr"
+    ],
+    "cell_measures": "area: areacella",
+    "realm": "atmos"
 }

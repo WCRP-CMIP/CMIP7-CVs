@@ -1,5 +1,18 @@
 {
     "@context": "000_context.jsonld",
     "id": "dcw_tavg-u-hxy-lnd",
-    "type": "known_branded_variable"
+    "type": "known_branded_variable",
+    "description": "change_over_time_in_canopy_water_amount",
+    "long_name": "Change in Interception Storage",
+    "table_id": [
+        "land"
+    ],
+    "compound_name": [
+        "land.dcw.tavg-u-hxy-lnd.day.glb"
+    ],
+    "frequency": [
+        "day"
+    ],
+    "cell_measures": "area: areacella",
+    "realm": "land"
 }

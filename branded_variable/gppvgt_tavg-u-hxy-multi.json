@@ -1,5 +1,18 @@
 {
     "@context": "000_context.jsonld",
     "id": "gppvgt_tavg-u-hxy-multi",
-    "type": "known_branded_variable"
+    "type": "known_branded_variable",
+    "description": "The rate of synthesis of biomass from inorganic precursors by autotrophs (\"producers\") expressed as the mass of carbon which it contains. For example, photosynthesis in plants or phytoplankton. The producers also respire some of this biomass and the difference is referred to as the net primary production. Reported on land-use tiles.",
+    "long_name": "Gross Primary Production on Vegetation type as Carbon Mass Flux [kgC m-2 s-1]",
+    "table_id": [
+        "land"
+    ],
+    "compound_name": [
+        "land.gppVgt.tavg-u-hxy-multi.day.glb"
+    ],
+    "frequency": [
+        "day"
+    ],
+    "cell_measures": "area: areacella",
+    "realm": "land"
 }

@@ -1,5 +1,17 @@
 {
     "@context": "000_context.jsonld",
     "id": "tauunowgw_tavg-p39-hy-air",
-    "type": "known_branded_variable"
+    "type": "known_branded_variable",
+    "description": "Zonal mean vertical wave flux of zonal momentum within the non-orographic gravity wave parameterization associated with the westward propagating modes.",
+    "long_name": "Zonal mean eastward Reynolds stress from non-orographic westward gravity wave parameterization",
+    "table_id": [
+        "atmos"
+    ],
+    "compound_name": [
+        "atmos.tauunowgw.tavg-p39-hy-air.day.glb"
+    ],
+    "frequency": [
+        "day"
+    ],
+    "realm": "atmos"
 }

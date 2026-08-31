@@ -1,5 +1,22 @@
 {
     "@context": "000_context.jsonld",
     "id": "libmassbf_tavg-u-hxy-fis",
-    "type": "known_branded_variable"
+    "type": "known_branded_variable",
+    "description": "quantity averaged over floating ice shelf",
+    "long_name": "Basal Specific Mass Balance Flux of Floating Ice Shelf",
+    "table_id": [
+        "landice"
+    ],
+    "compound_name": [
+        "landIce.libmassbf.tavg-u-hxy-fis.mon.grl",
+        "landIce.libmassbf.tavg-u-hxy-fis.yr.ata",
+        "landIce.libmassbf.tavg-u-hxy-fis.yr.grl",
+        "landIce.libmassbf.tavg-u-hxy-fis.mon.ata"
+    ],
+    "frequency": [
+        "mon",
+        "yr"
+    ],
+    "cell_measures": "area: areacellg",
+    "realm": "landice"
 }

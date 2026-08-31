@@ -1,5 +1,18 @@
 {
     "@context": "000_context.jsonld",
     "id": "hfgeou_ti-u-hxy-sea",
-    "type": "known_branded_variable"
+    "type": "known_branded_variable",
+    "description": "Upward geothermal heat flux per unit area on the sea floor",
+    "long_name": "Upward Geothermal Heat Flux at Sea Floor",
+    "table_id": [
+        "ocean"
+    ],
+    "compound_name": [
+        "ocean.hfgeou.ti-u-hxy-sea.fx.glb"
+    ],
+    "frequency": [
+        "fx"
+    ],
+    "cell_measures": "area: areacello",
+    "realm": "ocean"
 }

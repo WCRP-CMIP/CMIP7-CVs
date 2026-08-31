@@ -1,5 +1,6 @@
 {
     "@context": "000_context.jsonld",
     "id": "fric",
-    "type": "variable"
+    "type": "variable",
+    "long_name": "Downward Inorganic Carbon Flux at Ocean Bottom"
 }

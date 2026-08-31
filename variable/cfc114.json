@@ -1,5 +1,6 @@
 {
     "@context": "000_context.jsonld",
     "id": "cfc114",
-    "type": "variable"
+    "type": "variable",
+    "long_name": "Mole Fraction of cfc114"
 }

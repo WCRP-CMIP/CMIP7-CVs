@@ -1,5 +1,19 @@
 {
     "@context": "000_context.jsonld",
     "id": "wmo_tavg-ol-hxy-sea",
-    "type": "known_branded_variable"
+    "type": "known_branded_variable",
+    "description": "Upward mass transport from residual mean (resolved plus parameterized) advective transport.",
+    "long_name": "Upward Ocean Mass Transport",
+    "table_id": [
+        "ocean"
+    ],
+    "compound_name": [
+        "ocean.wmo.tavg-ol-hxy-sea.mon.glb",
+        "ocean.wmo.tavg-ol-hxy-sea.mon.30S-90S"
+    ],
+    "frequency": [
+        "mon"
+    ],
+    "cell_measures": "area: areacello volume: volcello",
+    "realm": "ocean"
 }

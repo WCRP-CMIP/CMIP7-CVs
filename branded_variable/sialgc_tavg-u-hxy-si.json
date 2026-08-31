@@ -1,5 +1,18 @@
 {
     "@context": "000_context.jsonld",
     "id": "sialgc_tavg-u-hxy-si",
-    "type": "known_branded_variable"
+    "type": "known_branded_variable",
+    "description": "Vertically-integrated content of carbon in ice algae, expressed as moles of carbon per square meter of sea ice.",
+    "long_name": "Total Ice Algal Carbon Amount in Sea Ice",
+    "table_id": [
+        "ocnbgchem"
+    ],
+    "compound_name": [
+        "ocnBgchem.sialgc.tavg-u-hxy-si.mon.glb"
+    ],
+    "frequency": [
+        "mon"
+    ],
+    "cell_measures": "area: areacello",
+    "realm": "ocnbgchem"
 }

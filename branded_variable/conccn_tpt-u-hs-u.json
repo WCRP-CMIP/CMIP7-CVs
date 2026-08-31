@@ -1,5 +1,18 @@
 {
     "@context": "000_context.jsonld",
     "id": "conccn_tpt-u-hs-u",
-    "type": "known_branded_variable"
+    "type": "known_branded_variable",
+    "description": "The variable represents the instantaneous Aerosol Number Concentration at CF sites, sampled every 3 hours",
+    "long_name": "Sub-daily Aerosol Number Concentration at CF sites",
+    "table_id": [
+        "aerosol"
+    ],
+    "compound_name": [
+        "aerosol.conccn.tpt-u-hs-u.3hr.glb"
+    ],
+    "frequency": [
+        "3hr"
+    ],
+    "cell_measures": "--MODEL",
+    "realm": "aerosol"
 }

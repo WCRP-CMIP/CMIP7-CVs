@@ -1,5 +1,18 @@
 {
     "@context": "000_context.jsonld",
     "id": "diftrelo_tavg-ol-hxy-sea",
-    "type": "known_branded_variable"
+    "type": "known_branded_variable",
+    "description": "Ocean tracer diffusivity associated with parameterized eddy-induced diffusive transport oriented along neutral or isopycnal directions. Sometimes this diffusivity is called the neutral diffusivity or isopycnal diffusivity or Redi diffusivity.",
+    "long_name": "Ocean Tracer Epineutral Laplacian Diffusivity",
+    "table_id": [
+        "ocean"
+    ],
+    "compound_name": [
+        "ocean.diftrelo.tavg-ol-hxy-sea.yr.glb"
+    ],
+    "frequency": [
+        "yr"
+    ],
+    "cell_measures": "area: areacello volume: volcello",
+    "realm": "ocean"
 }

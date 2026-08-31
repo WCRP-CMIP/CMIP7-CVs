@@ -1,5 +1,21 @@
 {
     "@context": "000_context.jsonld",
     "id": "cli_tavg-al-hxy-u",
-    "type": "known_branded_variable"
+    "type": "known_branded_variable",
+    "description": "Includes both large-scale and convective cloud.  This is calculated as the mass of cloud ice in the grid cell divided by the mass of air (including the water in all phases) in the grid cell. It includes precipitating hydrometeors ONLY if the precipitating hydrometeors affect the calculation of radiative transfer in model.",
+    "long_name": "Mass Fraction of Cloud Ice",
+    "table_id": [
+        "atmos"
+    ],
+    "compound_name": [
+        "atmos.cli.tavg-al-hxy-u.day.glb",
+        "atmos.cli.tavg-al-hxy-u.mon.30S-90S",
+        "atmos.cli.tavg-al-hxy-u.mon.glb"
+    ],
+    "frequency": [
+        "day",
+        "mon"
+    ],
+    "cell_measures": "area: areacella",
+    "realm": "atmos"
 }

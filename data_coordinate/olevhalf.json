@@ -1,0 +1,6 @@
+{
+    "@context": "000_context.jsonld",
+    "id": "olevhalf",
+    "type": "data_coordinate",
+    "long_name": "Ocean Model Half-levels"
+}

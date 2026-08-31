@@ -1,5 +1,18 @@
 {
     "@context": "000_context.jsonld",
     "id": "orog_ti-u-hxy-u",
-    "type": "known_branded_variable"
+    "type": "known_branded_variable",
+    "description": "height above the geoid; as defined here, \"the geoid\" is a surface of constant geopotential that, if the ocean were at rest, would coincide with mean sea level. Under this definition, the geoid changes as the mean volume of the ocean changes (e.g., due to glacial melt, or global warming of the ocean).  Reported here is the height above the present-day geoid (0.0 over ocean).",
+    "long_name": "Surface Altitude",
+    "table_id": [
+        "land"
+    ],
+    "compound_name": [
+        "land.orog.ti-u-hxy-u.fx.glb"
+    ],
+    "frequency": [
+        "fx"
+    ],
+    "cell_measures": "area: areacella",
+    "realm": "land"
 }

@@ -1,5 +1,6 @@
 {
     "@context": "000_context.jsonld",
     "id": "iareafl",
-    "type": "variable"
+    "type": "variable",
+    "long_name": "Area Covered by Floating Ice Shelves"
 }

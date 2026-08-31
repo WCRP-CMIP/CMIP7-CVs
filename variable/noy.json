@@ -1,5 +1,6 @@
 {
     "@context": "000_context.jsonld",
     "id": "noy",
-    "type": "variable"
+    "type": "variable",
+    "long_name": "Total Reactive Nitrogen Volume Mixing Ratio"
 }

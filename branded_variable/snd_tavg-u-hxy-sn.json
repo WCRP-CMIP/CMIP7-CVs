@@ -1,5 +1,21 @@
 {
     "@context": "000_context.jsonld",
     "id": "snd_tavg-u-hxy-sn",
-    "type": "known_branded_variable"
+    "type": "known_branded_variable",
+    "description": "Actual thickness of snow averaged over the snow-covered part of the sea ice. This thickness is usually directly available within the model formulation. It can also be derived by dividing the total volume of snow by the area of the snow.",
+    "long_name": "Snow Thickness",
+    "table_id": [
+        "seaice"
+    ],
+    "compound_name": [
+        "seaIce.snd.tavg-u-hxy-sn.mon.glb",
+        "seaIce.snd.tavg-u-hxy-sn.mon.30S-90S",
+        "seaIce.snd.tavg-u-hxy-sn.day.glb"
+    ],
+    "frequency": [
+        "mon",
+        "day"
+    ],
+    "cell_measures": "area: areacello",
+    "realm": "seaice"
 }

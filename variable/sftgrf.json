@@ -1,5 +1,6 @@
 {
     "@context": "000_context.jsonld",
     "id": "sftgrf",
-    "type": "variable"
+    "type": "variable",
+    "long_name": "Grounded Ice Sheet Area Percentage"
 }

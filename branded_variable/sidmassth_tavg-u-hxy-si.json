@@ -1,5 +1,18 @@
 {
     "@context": "000_context.jsonld",
     "id": "sidmassth_tavg-u-hxy-si",
-    "type": "known_branded_variable"
+    "type": "known_branded_variable",
+    "description": "Total rate of change in sea-ice mass from thermodynamic processes divided by grid-cell area.",
+    "long_name": "Sea-Ice Mass Change from Thermodynamics",
+    "table_id": [
+        "seaice"
+    ],
+    "compound_name": [
+        "seaIce.sidmassth.tavg-u-hxy-si.mon.glb"
+    ],
+    "frequency": [
+        "mon"
+    ],
+    "cell_measures": "area: areacello",
+    "realm": "seaice"
 }

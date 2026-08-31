@@ -1,5 +1,6 @@
 {
     "@context": "000_context.jsonld",
     "id": "c14veg",
-    "type": "variable"
+    "type": "variable",
+    "long_name": "Mass of 14C in Vegetation"
 }

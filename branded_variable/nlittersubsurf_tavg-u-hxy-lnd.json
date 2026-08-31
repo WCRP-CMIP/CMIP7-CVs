@@ -1,5 +1,18 @@
 {
     "@context": "000_context.jsonld",
     "id": "nlittersubsurf_tavg-u-hxy-lnd",
-    "type": "known_branded_variable"
+    "type": "known_branded_variable",
+    "description": "\"Content\" indicates a quantity per unit area. \"Litter\" is dead plant material in or above the soil. It is distinct from coarse wood debris. The precise distinction between \"fine\" and \"coarse\" is model dependent. \"Subsurface litter\" means the part of the litter mixed within the soil below the surface. The sum of the quantities with standard names wood_debris_mass_content_of_nitrogen, surface_litter_mass_content_of_nitrogen and subsurface_litter_mass_content_of_nitrogen is the total nitrogen mass content of dead plant material.",
+    "long_name": "Nitrogen Mass in Below-Ground Litter (non CWD)",
+    "table_id": [
+        "land"
+    ],
+    "compound_name": [
+        "land.nLitterSubSurf.tavg-u-hxy-lnd.mon.glb"
+    ],
+    "frequency": [
+        "mon"
+    ],
+    "cell_measures": "area: areacella",
+    "realm": "land"
 }

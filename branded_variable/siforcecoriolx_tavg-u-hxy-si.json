@@ -1,5 +1,18 @@
 {
     "@context": "000_context.jsonld",
     "id": "siforcecoriolx_tavg-u-hxy-si",
-    "type": "known_branded_variable"
+    "type": "known_branded_variable",
+    "description": "X-component of the force on sea ice caused by the Coriolis force divided by sea ice area.",
+    "long_name": "Coriolis Force Term in Force Balance (X-Component)",
+    "table_id": [
+        "seaice"
+    ],
+    "compound_name": [
+        "seaIce.siforcecoriolx.tavg-u-hxy-si.mon.glb"
+    ],
+    "frequency": [
+        "mon"
+    ],
+    "cell_measures": "--MODEL",
+    "realm": "seaice"
 }

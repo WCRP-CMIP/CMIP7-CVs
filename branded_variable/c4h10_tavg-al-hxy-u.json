@@ -1,5 +1,18 @@
 {
     "@context": "000_context.jsonld",
     "id": "c4h10_tavg-al-hxy-u",
-    "type": "known_branded_variable"
+    "type": "known_branded_variable",
+    "description": "Mole fraction of butane (C4H10) in air",
+    "long_name": "C4H10  volume mixing ratio",
+    "table_id": [
+        "atmoschem"
+    ],
+    "compound_name": [
+        "atmosChem.c4h10.tavg-al-hxy-u.mon.glb"
+    ],
+    "frequency": [
+        "mon"
+    ],
+    "cell_measures": "area: areacella",
+    "realm": "atmoschem"
 }

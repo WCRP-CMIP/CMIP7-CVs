@@ -1,0 +1,7 @@
+{
+    "@context": "000_context.jsonld",
+    "id": "plev8",
+    "type": "data_coordinate",
+    "long_name": "Pressure Levels (8)",
+    "tolerance": 1.0
+}

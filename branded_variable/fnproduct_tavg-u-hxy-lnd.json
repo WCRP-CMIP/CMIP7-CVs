@@ -1,5 +1,18 @@
 {
     "@context": "000_context.jsonld",
     "id": "fnproduct_tavg-u-hxy-lnd",
-    "type": "known_branded_variable"
+    "type": "known_branded_variable",
+    "description": "When land use change results in deforestation of natural vegetation (trees or grasslands) then natural biomass is removed. The treatment of deforested biomass differs significantly across models, but it should be straight-forward to compare deforested biomass across models.",
+    "long_name": "Deforested or Harvested Biomass as a Result of Anthropogenic Land-Use or Change",
+    "table_id": [
+        "land"
+    ],
+    "compound_name": [
+        "land.fNProduct.tavg-u-hxy-lnd.mon.glb"
+    ],
+    "frequency": [
+        "mon"
+    ],
+    "cell_measures": "area: areacella",
+    "realm": "land"
 }

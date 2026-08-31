@@ -1,5 +1,18 @@
 {
     "@context": "000_context.jsonld",
     "id": "irrgw_tavg-u-hxy-u",
-    "type": "known_branded_variable"
+    "type": "known_branded_variable",
+    "description": "the amount of water withdrawal for irrigation from ground water, including deep soil water, confined and unconfined aquifer, etc",
+    "long_name": "irrigation water withdrawal from groundwater",
+    "table_id": [
+        "land"
+    ],
+    "compound_name": [
+        "land.irrGw.tavg-u-hxy-u.day.glb"
+    ],
+    "frequency": [
+        "day"
+    ],
+    "cell_measures": "area: areacella",
+    "realm": "land"
 }

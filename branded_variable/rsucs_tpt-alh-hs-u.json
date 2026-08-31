@@ -1,5 +1,17 @@
 {
     "@context": "000_context.jsonld",
     "id": "rsucs_tpt-alh-hs-u",
-    "type": "known_branded_variable"
+    "type": "known_branded_variable",
+    "description": "Upwelling clear-sky shortwave radiation  (includes the fluxes at the surface and TOA)",
+    "long_name": "Upwelling Clear-Sky Shortwave Radiation",
+    "table_id": [
+        "atmos"
+    ],
+    "compound_name": [
+        "atmos.rsucs.tpt-alh-hs-u.subhr.glb"
+    ],
+    "frequency": [
+        "subhr"
+    ],
+    "realm": "atmos"
 }

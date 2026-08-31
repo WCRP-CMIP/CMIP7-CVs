@@ -1,5 +1,18 @@
 {
     "@context": "000_context.jsonld",
     "id": "sidivvel_tpt-u-hxy-si",
-    "type": "known_branded_variable"
+    "type": "known_branded_variable",
+    "description": "Divergence of sea-ice velocity field (first shear strain invariant). Report the instantaneous value at the beginning of each month (i.e., 0Z on the first day of each month)",
+    "long_name": "Divergence of the Sea-Ice Velocity Field",
+    "table_id": [
+        "seaice"
+    ],
+    "compound_name": [
+        "seaIce.sidivvel.tpt-u-hxy-si.mon.glb"
+    ],
+    "frequency": [
+        "mon"
+    ],
+    "cell_measures": "area: areacello",
+    "realm": "seaice"
 }

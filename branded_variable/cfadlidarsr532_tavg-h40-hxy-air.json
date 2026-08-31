@@ -1,5 +1,18 @@
 {
     "@context": "000_context.jsonld",
     "id": "cfadlidarsr532_tavg-h40-hxy-air",
-    "type": "known_branded_variable"
+    "type": "known_branded_variable",
+    "description": "CALIPSO Scattering Ratio",
+    "long_name": "CALIPSO Scattering Ratio CFAD",
+    "table_id": [
+        "atmos"
+    ],
+    "compound_name": [
+        "atmos.cfadLidarsr532.tavg-h40-hxy-air.mon.glb"
+    ],
+    "frequency": [
+        "mon"
+    ],
+    "cell_measures": "area: areacella",
+    "realm": "atmos"
 }

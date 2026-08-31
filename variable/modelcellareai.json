@@ -1,5 +1,6 @@
 {
     "@context": "000_context.jsonld",
     "id": "modelcellareai",
-    "type": "variable"
+    "type": "variable",
+    "long_name": "The Cell Area of the Ice Sheet Model"
 }

@@ -1,5 +1,6 @@
 {
     "@context": "000_context.jsonld",
     "id": "siforcecoriolx",
-    "type": "variable"
+    "type": "variable",
+    "long_name": "Coriolis Force Term in Force Balance (X-Component)"
 }

@@ -1,5 +1,6 @@
 {
     "@context": "000_context.jsonld",
     "id": "emibc",
-    "type": "variable"
+    "type": "variable",
+    "long_name": "Total Emission Rate of Black Carbon Aerosol Mass"
 }

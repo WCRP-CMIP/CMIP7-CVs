@@ -1,5 +1,18 @@
 {
     "@context": "000_context.jsonld",
     "id": "sftgrf_ti-u-hxy-u",
-    "type": "known_branded_variable"
+    "type": "known_branded_variable",
+    "description": "This is needed to distinguish between grounded glaciated ice (grounded = ice sheet and glacier) and ice shelves (floating over sea water), since land_ice is by definition ice sheet, glacier and ice shelves",
+    "long_name": "Grounded Ice Sheet Area Percentage",
+    "table_id": [
+        "landice"
+    ],
+    "compound_name": [
+        "landIce.sftgrf.ti-u-hxy-u.fx.glb"
+    ],
+    "frequency": [
+        "fx"
+    ],
+    "cell_measures": "area: areacella",
+    "realm": "landice"
 }

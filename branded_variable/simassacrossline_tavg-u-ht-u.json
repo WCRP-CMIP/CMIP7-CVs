@@ -1,5 +1,17 @@
 {
     "@context": "000_context.jsonld",
     "id": "simassacrossline_tavg-u-ht-u",
-    "type": "known_branded_variable"
+    "type": "known_branded_variable",
+    "description": "Net (sum of transport in all directions) sea ice mass transport through the following four passages, positive into the Arctic Ocean. Note that the definitions of the passages are for SIMIP purposes just meant as default values as given by the physical ocean MIP described in Griffies et al. (2016). Individual models might chose slightly different definitions as given by their grid geometry. 1. Fram Strait: (11.5W, 81.3N) to (10.5E, 79.6N). 2. Canadian Arctic Archipelago: (128.2W, 70.6N) to (59.3W, 82.1N). 3. Barents Sea Opening: (16.8E, 76.5N) to (19.2E, 70.2N). 4. Bering Strait: (171W, 66.2N) to (166W, 65N).",
+    "long_name": "Sea-Ice Mass Flux Through Straits",
+    "table_id": [
+        "seaice"
+    ],
+    "compound_name": [
+        "seaIce.simassacrossline.tavg-u-ht-u.mon.glb"
+    ],
+    "frequency": [
+        "mon"
+    ],
+    "realm": "seaice"
 }

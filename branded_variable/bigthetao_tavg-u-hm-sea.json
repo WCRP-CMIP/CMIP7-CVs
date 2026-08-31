@@ -1,5 +1,17 @@
 {
     "@context": "000_context.jsonld",
     "id": "bigthetao_tavg-u-hm-sea",
-    "type": "known_branded_variable"
+    "type": "known_branded_variable",
+    "description": "Diagnostic should be contributed only for models using conservative temperature as prognostic field.",
+    "long_name": "Global Average Sea Water Conservative Temperature",
+    "table_id": [
+        "ocean"
+    ],
+    "compound_name": [
+        "ocean.bigthetao.tavg-u-hm-sea.mon.glb"
+    ],
+    "frequency": [
+        "mon"
+    ],
+    "realm": "ocean"
 }

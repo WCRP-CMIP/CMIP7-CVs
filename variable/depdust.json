@@ -1,5 +1,6 @@
 {
     "@context": "000_context.jsonld",
     "id": "depdust",
-    "type": "variable"
+    "type": "variable",
+    "long_name": "Total Deposition Rate of Dust"
 }

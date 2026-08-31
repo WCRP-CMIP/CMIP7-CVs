@@ -1,5 +1,18 @@
 {
     "@context": "000_context.jsonld",
     "id": "ficeberg_tavg-u-hxy-sea",
-    "type": "known_branded_variable"
+    "type": "known_branded_variable",
+    "description": "computed as the iceberg melt water flux into the ocean divided by the area of the ocean portion of the grid cell.",
+    "long_name": "Water Flux into Sea Water from Icebergs",
+    "table_id": [
+        "ocean"
+    ],
+    "compound_name": [
+        "ocean.ficeberg.tavg-u-hxy-sea.mon.glb"
+    ],
+    "frequency": [
+        "mon"
+    ],
+    "cell_measures": "area: areacello",
+    "realm": "ocean"
 }

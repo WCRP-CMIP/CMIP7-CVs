@@ -1,5 +1,6 @@
 {
     "@context": "000_context.jsonld",
     "id": "tntpbl",
-    "type": "variable"
+    "type": "variable",
+    "long_name": "Tendency of Air Temperature Due to Boundary Layer Mixing"
 }

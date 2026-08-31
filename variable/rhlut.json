@@ -1,5 +1,6 @@
 {
     "@context": "000_context.jsonld",
     "id": "rhlut",
-    "type": "variable"
+    "type": "variable",
+    "long_name": "Heterotrophic Respiration on Land-Use Tile as Carbon Mass Flux [kgC m-2 s-1]"
 }

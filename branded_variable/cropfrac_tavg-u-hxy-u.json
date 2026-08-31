@@ -1,5 +1,20 @@
 {
     "@context": "000_context.jsonld",
     "id": "cropfrac_tavg-u-hxy-u",
-    "type": "known_branded_variable"
+    "type": "known_branded_variable",
+    "description": "Percentage of entire grid cell  that is covered by crop.",
+    "long_name": "Percentage Crop Cover",
+    "table_id": [
+        "land"
+    ],
+    "compound_name": [
+        "land.cropFrac.tavg-u-hxy-u.mon.glb",
+        "land.cropFrac.tavg-u-hxy-u.yr.glb"
+    ],
+    "frequency": [
+        "mon",
+        "yr"
+    ],
+    "cell_measures": "area: areacella",
+    "realm": "land"
 }

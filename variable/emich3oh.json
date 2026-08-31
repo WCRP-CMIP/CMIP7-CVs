@@ -1,5 +1,6 @@
 {
     "@context": "000_context.jsonld",
     "id": "emich3oh",
-    "type": "variable"
+    "type": "variable",
+    "long_name": "Total emission rate of methanol"
 }

@@ -1,5 +1,6 @@
 {
     "@context": "000_context.jsonld",
     "id": "sistressave",
-    "type": "variable"
+    "type": "variable",
+    "long_name": "Average Normal Stress in Sea Ice"
 }

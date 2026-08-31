@@ -1,5 +1,17 @@
 {
     "@context": "000_context.jsonld",
     "id": "tauu_tpt-u-hs-u",
-    "type": "known_branded_variable"
+    "type": "known_branded_variable",
+    "description": "Downward eastward wind stress at the surface",
+    "long_name": "Surface Downward Eastward Wind Stress",
+    "table_id": [
+        "atmos"
+    ],
+    "compound_name": [
+        "atmos.tauu.tpt-u-hs-u.subhr.glb"
+    ],
+    "frequency": [
+        "subhr"
+    ],
+    "realm": "atmos"
 }

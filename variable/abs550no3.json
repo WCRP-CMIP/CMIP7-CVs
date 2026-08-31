@@ -1,5 +1,6 @@
 {
     "@context": "000_context.jsonld",
     "id": "abs550no3",
-    "type": "variable"
+    "type": "variable",
+    "long_name": "Ambient nitrate aerosol absorption optical thickness at 550nm"
 }

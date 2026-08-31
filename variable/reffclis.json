@@ -1,5 +1,6 @@
 {
     "@context": "000_context.jsonld",
     "id": "reffclis",
-    "type": "variable"
+    "type": "variable",
+    "long_name": "Hydrometeor Effective Radius of Stratiform Cloud Ice"
 }

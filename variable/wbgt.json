@@ -1,5 +1,6 @@
 {
     "@context": "000_context.jsonld",
     "id": "wbgt",
-    "type": "variable"
+    "type": "variable",
+    "long_name": "mean 2m daily wet bulb globe temperature"
 }

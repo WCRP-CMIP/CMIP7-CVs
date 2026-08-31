@@ -1,5 +1,6 @@
 {
     "@context": "000_context.jsonld",
     "id": "dissi14c",
-    "type": "variable"
+    "type": "variable",
+    "long_name": "Dissolved Inorganic Carbon-14 Concentration"
 }

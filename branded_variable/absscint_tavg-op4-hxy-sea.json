@@ -1,5 +1,18 @@
 {
     "@context": "000_context.jsonld",
     "id": "absscint_tavg-op4-hxy-sea",
-    "type": "known_branded_variable"
+    "type": "known_branded_variable",
+    "description": "This is a fundamental aspect of the changes in the hydrological cycle and their impact on the oceans, and due to new numerical schemes and vertical discretizations, it is important to calculate it consistently with the model formulation.",
+    "long_name": "Integral wrt depth of seawater absolute salinity expressed as salt mass content",
+    "table_id": [
+        "ocean"
+    ],
+    "compound_name": [
+        "ocean.absscint.tavg-op4-hxy-sea.mon.glb"
+    ],
+    "frequency": [
+        "mon"
+    ],
+    "cell_measures": "area: areacello",
+    "realm": "ocean"
 }

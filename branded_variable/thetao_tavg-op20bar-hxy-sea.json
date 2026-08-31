@@ -1,5 +1,18 @@
 {
     "@context": "000_context.jsonld",
     "id": "thetao_tavg-op20bar-hxy-sea",
-    "type": "known_branded_variable"
+    "type": "known_branded_variable",
+    "description": "Diagnostic should be contributed even for models using conservative temperature as prognostic field.",
+    "long_name": "Sea Water Potential Temperature at 200 meters",
+    "table_id": [
+        "ocean"
+    ],
+    "compound_name": [
+        "ocean.thetao.tavg-op20bar-hxy-sea.day.glb"
+    ],
+    "frequency": [
+        "day"
+    ],
+    "cell_measures": "area: areacello",
+    "realm": "ocean"
 }

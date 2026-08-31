@@ -1,5 +1,6 @@
 {
     "@context": "000_context.jsonld",
     "id": "sisnmassacrossline",
-    "type": "variable"
+    "type": "variable",
+    "long_name": "Snow Mass Flux Through Straits"
 }

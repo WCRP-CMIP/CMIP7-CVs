@@ -1,5 +1,17 @@
 {
     "@context": "000_context.jsonld",
     "id": "tos_tavg-u-hm-sea",
-    "type": "known_branded_variable"
+    "type": "known_branded_variable",
+    "description": "This may differ from \"surface temperature\" in regions of sea ice or floating ice shelves. For models using conservative temperature as the prognostic field, they should report the top ocean layer as surface potential temperature, which is the same as surface in situ temperature.",
+    "long_name": "Global Average Sea Surface Temperature",
+    "table_id": [
+        "ocean"
+    ],
+    "compound_name": [
+        "ocean.tos.tavg-u-hm-sea.mon.glb"
+    ],
+    "frequency": [
+        "mon"
+    ],
+    "realm": "ocean"
 }

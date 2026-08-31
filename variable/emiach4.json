@@ -1,5 +1,6 @@
 {
     "@context": "000_context.jsonld",
     "id": "emiach4",
-    "type": "variable"
+    "type": "variable",
+    "long_name": "Anthropogenic emission rate of CH4"
 }

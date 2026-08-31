@@ -1,5 +1,6 @@
 {
     "@context": "000_context.jsonld",
     "id": "chepnh4",
-    "type": "variable"
+    "type": "variable",
+    "long_name": "Net chemical production of ammonium aerosol"
 }

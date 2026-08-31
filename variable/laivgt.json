@@ -1,5 +1,6 @@
 {
     "@context": "000_context.jsonld",
     "id": "laivgt",
-    "type": "variable"
+    "type": "variable",
+    "long_name": "Leaf Area Index on Vegetation type"
 }

@@ -1,5 +1,6 @@
 {
     "@context": "000_context.jsonld",
     "id": "fnloss",
-    "type": "variable"
+    "type": "variable",
+    "long_name": "Total Nitrogen Lost (Including NHx, NOx, N2O, N2 and Leaching)"
 }

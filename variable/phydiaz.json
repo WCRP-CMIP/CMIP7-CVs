@@ -1,5 +1,6 @@
 {
     "@context": "000_context.jsonld",
     "id": "phydiaz",
-    "type": "variable"
+    "type": "variable",
+    "long_name": "Mole Concentration of Diazotrophs Expressed as Carbon in Sea Water"
 }

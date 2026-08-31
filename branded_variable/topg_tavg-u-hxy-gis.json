@@ -1,5 +1,19 @@
 {
     "@context": "000_context.jsonld",
     "id": "topg_tavg-u-hxy-gis",
-    "type": "known_branded_variable"
+    "type": "known_branded_variable",
+    "description": "This is needed in case bed rock elevation changes in time",
+    "long_name": "Bedrock Altitude",
+    "table_id": [
+        "landice"
+    ],
+    "compound_name": [
+        "landIce.topg.tavg-u-hxy-gis.yr.ata",
+        "landIce.topg.tavg-u-hxy-gis.yr.grl"
+    ],
+    "frequency": [
+        "yr"
+    ],
+    "cell_measures": "area: areacellg",
+    "realm": "landice"
 }

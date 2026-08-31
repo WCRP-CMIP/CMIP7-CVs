@@ -1,5 +1,21 @@
 {
     "@context": "000_context.jsonld",
     "id": "prra_tavg-u-hxy-u",
-    "type": "known_branded_variable"
+    "type": "known_branded_variable",
+    "description": "Precipitation rate at surface: Includes precipitation of all forms of water in the liquid phase",
+    "long_name": "Rainfall Flux",
+    "table_id": [
+        "atmos"
+    ],
+    "compound_name": [
+        "atmos.prra.tavg-u-hxy-u.6hr.glb",
+        "atmos.prra.tavg-u-hxy-u.mon.30S-90S",
+        "atmos.prra.tavg-u-hxy-u.mon.glb"
+    ],
+    "frequency": [
+        "6hr",
+        "mon"
+    ],
+    "cell_measures": "area: areacella",
+    "realm": "atmos"
 }

@@ -1,5 +1,6 @@
 {
     "@context": "000_context.jsonld",
     "id": "fco2antt",
-    "type": "variable"
+    "type": "variable",
+    "long_name": "Carbon Mass Flux into Atmosphere Due to All Anthropogenic Emissions of CO2 [kgC m-2 s-1]"
 }

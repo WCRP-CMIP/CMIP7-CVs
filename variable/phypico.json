@@ -1,5 +1,6 @@
 {
     "@context": "000_context.jsonld",
     "id": "phypico",
-    "type": "variable"
+    "type": "variable",
+    "long_name": "Mole Concentration of Picophytoplankton Expressed as Carbon in Sea Water"
 }

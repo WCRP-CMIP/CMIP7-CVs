@@ -1,5 +1,6 @@
 {
     "@context": "000_context.jsonld",
     "id": "sbl",
-    "type": "variable"
+    "type": "variable",
+    "long_name": "Surface Snow and Ice Sublimation Flux"
 }

@@ -1,5 +1,6 @@
 {
     "@context": "000_context.jsonld",
     "id": "rac13",
-    "type": "variable"
+    "type": "variable",
+    "long_name": "Carbon-13 Mass Flux into Atmosphere Due to Autotrophic (Plant) Respiration on Land [kgC m-2 s-1]"
 }

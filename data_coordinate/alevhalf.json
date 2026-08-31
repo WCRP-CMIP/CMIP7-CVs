@@ -1,0 +1,6 @@
+{
+    "@context": "000_context.jsonld",
+    "id": "alevhalf",
+    "type": "data_coordinate",
+    "long_name": "Atmospheric Model Half-level"
+}

@@ -1,5 +1,20 @@
 {
     "@context": "000_context.jsonld",
     "id": "opottemptend_tavg-ol-hxy-sea",
-    "type": "known_branded_variable"
+    "type": "known_branded_variable",
+    "description": "Tendency of heat content for a grid cell from all processes. Reported only for models that use potential temperature as prognostic field.",
+    "long_name": "Tendency of Sea Water Potential Temperature Expressed as Heat Content",
+    "table_id": [
+        "ocean"
+    ],
+    "compound_name": [
+        "ocean.opottemptend.tavg-ol-hxy-sea.yr.glb",
+        "ocean.opottemptend.tavg-ol-hxy-sea.dec.glb"
+    ],
+    "frequency": [
+        "yr",
+        "dec"
+    ],
+    "cell_measures": "area: areacello volume: volcello",
+    "realm": "ocean"
 }

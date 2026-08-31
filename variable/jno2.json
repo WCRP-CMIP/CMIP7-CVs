@@ -1,5 +1,6 @@
 {
     "@context": "000_context.jsonld",
     "id": "jno2",
-    "type": "variable"
+    "type": "variable",
+    "long_name": "Photolysis Rate of NO2"
 }

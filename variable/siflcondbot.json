@@ -1,5 +1,6 @@
 {
     "@context": "000_context.jsonld",
     "id": "siflcondbot",
-    "type": "variable"
+    "type": "variable",
+    "long_name": "Net Conductive Heat Flux in Sea Ice at the Base"
 }

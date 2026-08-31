@@ -1,5 +1,6 @@
 {
     "@context": "000_context.jsonld",
     "id": "pr2h",
-    "type": "variable"
+    "type": "variable",
+    "long_name": "Precipitation Flux of Water Containing Deuterium (1H 2H O)"
 }

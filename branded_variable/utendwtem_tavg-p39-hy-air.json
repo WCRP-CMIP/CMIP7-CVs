@@ -1,5 +1,17 @@
 {
     "@context": "000_context.jsonld",
     "id": "utendwtem_tavg-p39-hy-air",
-    "type": "known_branded_variable"
+    "type": "known_branded_variable",
+    "description": "Zonal mean tendency of eastward wind due to TEM upward advection",
+    "long_name": "Tendency of Eastward Wind Due to TEM Upward Advection",
+    "table_id": [
+        "atmos"
+    ],
+    "compound_name": [
+        "atmos.utendwtem.tavg-p39-hy-air.day.glb"
+    ],
+    "frequency": [
+        "day"
+    ],
+    "realm": "atmos"
 }

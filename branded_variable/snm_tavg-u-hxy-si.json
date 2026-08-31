@@ -1,5 +1,18 @@
 {
     "@context": "000_context.jsonld",
     "id": "snm_tavg-u-hxy-si",
-    "type": "known_branded_variable"
+    "type": "known_branded_variable",
+    "description": "Rate of change of snow mass through melt divided by grid-cell area. Always negative or zero.",
+    "long_name": "Snow Mass Rate of Change Through Melt",
+    "table_id": [
+        "seaice"
+    ],
+    "compound_name": [
+        "seaIce.snm.tavg-u-hxy-si.mon.glb"
+    ],
+    "frequency": [
+        "mon"
+    ],
+    "cell_measures": "area: areacello",
+    "realm": "seaice"
 }

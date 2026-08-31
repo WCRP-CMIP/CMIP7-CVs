@@ -1,5 +1,6 @@
 {
     "@context": "000_context.jsonld",
     "id": "npp",
-    "type": "variable"
+    "type": "variable",
+    "long_name": "Net Primary Production on Land as Carbon Mass Flux [kgC m-2 s-1]"
 }

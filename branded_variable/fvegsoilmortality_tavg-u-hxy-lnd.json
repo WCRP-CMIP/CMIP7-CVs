@@ -1,5 +1,18 @@
 {
     "@context": "000_context.jsonld",
     "id": "fvegsoilmortality_tavg-u-hxy-lnd",
-    "type": "known_branded_variable"
+    "type": "known_branded_variable",
+    "description": "needed to separate changing vegetation C turnover times resulting from changing allocation versus changing mortality",
+    "long_name": "Total Carbon Mass Flux from Vegetation to Soil as a Result of Mortality",
+    "table_id": [
+        "land"
+    ],
+    "compound_name": [
+        "land.fVegSoilMortality.tavg-u-hxy-lnd.mon.glb"
+    ],
+    "frequency": [
+        "mon"
+    ],
+    "cell_measures": "area: areacella",
+    "realm": "land"
 }

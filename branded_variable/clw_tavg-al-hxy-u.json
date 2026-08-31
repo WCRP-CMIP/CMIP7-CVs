@@ -1,5 +1,21 @@
 {
     "@context": "000_context.jsonld",
     "id": "clw_tavg-al-hxy-u",
-    "type": "known_branded_variable"
+    "type": "known_branded_variable",
+    "description": "Includes both large-scale and convective cloud.  Calculate as the mass of cloud liquid water in the grid cell divided by the mass of air (including the water in all phases) in the grid cells. Precipitating hydrometeors are included ONLY if the precipitating hydrometeors affect the calculation of radiative transfer in model.",
+    "long_name": "Mass Fraction of Cloud Liquid Water",
+    "table_id": [
+        "atmos"
+    ],
+    "compound_name": [
+        "atmos.clw.tavg-al-hxy-u.day.glb",
+        "atmos.clw.tavg-al-hxy-u.mon.30S-90S",
+        "atmos.clw.tavg-al-hxy-u.mon.glb"
+    ],
+    "frequency": [
+        "day",
+        "mon"
+    ],
+    "cell_measures": "area: areacella",
+    "realm": "atmos"
 }

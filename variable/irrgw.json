@@ -1,5 +1,6 @@
 {
     "@context": "000_context.jsonld",
     "id": "irrgw",
-    "type": "variable"
+    "type": "variable",
+    "long_name": "Irrigation water withdrawal from groundwater"
 }

@@ -1,5 +1,6 @@
 {
     "@context": "000_context.jsonld",
     "id": "chlcalc",
-    "type": "variable"
+    "type": "variable",
+    "long_name": "Mass Concentration of Calcareous Phytoplankton Expressed as Chlorophyll in Sea Water"
 }

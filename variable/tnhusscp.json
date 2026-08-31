@@ -1,5 +1,6 @@
 {
     "@context": "000_context.jsonld",
     "id": "tnhusscp",
-    "type": "variable"
+    "type": "variable",
+    "long_name": "Tendency of Specific Humidity Due to Stratiform Clouds and Precipitation"
 }

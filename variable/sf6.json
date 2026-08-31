@@ -1,5 +1,6 @@
 {
     "@context": "000_context.jsonld",
     "id": "sf6",
-    "type": "variable"
+    "type": "variable",
+    "long_name": "Mole Concentration of SF6 in Sea Water"
 }

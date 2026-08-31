@@ -1,0 +1,6 @@
+{
+    "@context": "000_context.jsonld",
+    "id": "sigma_bnds",
+    "type": "formula_term",
+    "long_name": "vertical coordinate formula term: sigma(k+1/2)"
+}

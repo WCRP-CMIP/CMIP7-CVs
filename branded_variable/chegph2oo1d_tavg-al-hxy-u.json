@@ -1,5 +1,18 @@
 {
     "@context": "000_context.jsonld",
     "id": "chegph2oo1d_tavg-al-hxy-u",
-    "type": "known_branded_variable"
+    "type": "known_branded_variable",
+    "description": "Primary production rate of the hydroxy (OH) radical via H2O+O1D",
+    "long_name": "Primary production of OH (H2O+O1D)",
+    "table_id": [
+        "atmoschem"
+    ],
+    "compound_name": [
+        "atmosChem.chegph2oo1d.tavg-al-hxy-u.mon.glb"
+    ],
+    "frequency": [
+        "mon"
+    ],
+    "cell_measures": "area: areacella",
+    "realm": "atmoschem"
 }

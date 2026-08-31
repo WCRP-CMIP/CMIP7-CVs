@@ -1,5 +1,18 @@
 {
     "@context": "000_context.jsonld",
     "id": "cveg_tavg-u-hxy-lnd",
-    "type": "known_branded_variable"
+    "type": "known_branded_variable",
+    "description": "Carbon mass per unit area in vegetation.",
+    "long_name": "Carbon Mass in Vegetation",
+    "table_id": [
+        "land"
+    ],
+    "compound_name": [
+        "land.cVeg.tavg-u-hxy-lnd.mon.glb"
+    ],
+    "frequency": [
+        "mon"
+    ],
+    "cell_measures": "area: areacella",
+    "realm": "land"
 }

@@ -1,5 +1,6 @@
 {
     "@context": "000_context.jsonld",
     "id": "siflsensbot",
-    "type": "variable"
+    "type": "variable",
+    "long_name": "Net Upward Sensible Heat Flux under Sea Ice"
 }

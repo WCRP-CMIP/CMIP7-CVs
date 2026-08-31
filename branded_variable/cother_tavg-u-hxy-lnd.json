@@ -1,5 +1,18 @@
 {
     "@context": "000_context.jsonld",
     "id": "cother_tavg-u-hxy-lnd",
-    "type": "known_branded_variable"
+    "type": "known_branded_variable",
+    "description": "E.g. fruits, seeds, etc.",
+    "long_name": "Carbon Mass in Vegetation Components Other than Leaves, Stems and Roots",
+    "table_id": [
+        "land"
+    ],
+    "compound_name": [
+        "land.cOther.tavg-u-hxy-lnd.mon.glb"
+    ],
+    "frequency": [
+        "mon"
+    ],
+    "cell_measures": "area: areacella",
+    "realm": "land"
 }

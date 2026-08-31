@@ -1,5 +1,6 @@
 {
     "@context": "000_context.jsonld",
     "id": "pfscint",
-    "type": "variable"
+    "type": "variable",
+    "long_name": "Integral wrt depth of sea water preformed salinity expressed as salt mass content"
 }

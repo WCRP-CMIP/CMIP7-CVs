@@ -1,5 +1,18 @@
 {
     "@context": "000_context.jsonld",
     "id": "clittersurf_tavg-u-hxy-lnd",
-    "type": "known_branded_variable"
+    "type": "known_branded_variable",
+    "description": "Surface or near-surface litter pool fed by leaf and above-ground litterfall",
+    "long_name": "Carbon Mass in Above-Ground Litter",
+    "table_id": [
+        "land"
+    ],
+    "compound_name": [
+        "land.cLitterSurf.tavg-u-hxy-lnd.mon.glb"
+    ],
+    "frequency": [
+        "mon"
+    ],
+    "cell_measures": "area: areacella",
+    "realm": "land"
 }

@@ -1,0 +1,7 @@
+{
+    "@context": "000_context.jsonld",
+    "id": "sza5",
+    "type": "data_coordinate",
+    "long_name": "solar zenith angle",
+    "tolerance": 1.0
+}

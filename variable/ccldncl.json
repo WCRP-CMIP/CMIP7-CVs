@@ -1,5 +1,6 @@
 {
     "@context": "000_context.jsonld",
     "id": "ccldncl",
-    "type": "variable"
+    "type": "variable",
+    "long_name": "Cloud Droplet Number Concentration of Convective Cloud Tops"
 }

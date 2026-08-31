@@ -1,5 +1,18 @@
 {
     "@context": "000_context.jsonld",
     "id": "thetao_tavg-d300m-hxy-sea",
-    "type": "known_branded_variable"
+    "type": "known_branded_variable",
+    "description": "Upper 300m, 2D field",
+    "long_name": "Depth Average Potential Temperature of Upper 300m",
+    "table_id": [
+        "ocean"
+    ],
+    "compound_name": [
+        "ocean.thetao.tavg-d300m-hxy-sea.mon.glb"
+    ],
+    "frequency": [
+        "mon"
+    ],
+    "cell_measures": "area: areacello",
+    "realm": "ocean"
 }

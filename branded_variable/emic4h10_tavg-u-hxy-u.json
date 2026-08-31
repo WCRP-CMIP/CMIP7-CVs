@@ -1,5 +1,18 @@
 {
     "@context": "000_context.jsonld",
     "id": "emic4h10_tavg-u-hxy-u",
-    "type": "known_branded_variable"
+    "type": "known_branded_variable",
+    "description": "This is the total emission rate of butane (C4H10) into the atmosphere",
+    "long_name": "total emission rate of C4H10",
+    "table_id": [
+        "atmoschem"
+    ],
+    "compound_name": [
+        "atmosChem.emic4h10.tavg-u-hxy-u.mon.glb"
+    ],
+    "frequency": [
+        "mon"
+    ],
+    "cell_measures": "area: areacella",
+    "realm": "atmoschem"
 }

@@ -1,5 +1,18 @@
 {
     "@context": "000_context.jsonld",
     "id": "tntc_tavg-al-hxy-u",
-    "type": "known_branded_variable"
+    "type": "known_branded_variable",
+    "description": "Tendencies from cumulus convection scheme.",
+    "long_name": "Tendency of Air Temperature Due to Convection",
+    "table_id": [
+        "atmos"
+    ],
+    "compound_name": [
+        "atmos.tntc.tavg-al-hxy-u.mon.glb"
+    ],
+    "frequency": [
+        "mon"
+    ],
+    "cell_measures": "area: areacella",
+    "realm": "atmos"
 }

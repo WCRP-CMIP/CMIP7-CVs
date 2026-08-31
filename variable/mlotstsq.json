@@ -1,5 +1,6 @@
 {
     "@context": "000_context.jsonld",
     "id": "mlotstsq",
-    "type": "variable"
+    "type": "variable",
+    "long_name": "Square of Ocean Mixed Layer Thickness Defined by Sigma T"
 }

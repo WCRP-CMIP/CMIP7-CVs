@@ -1,5 +1,17 @@
 {
     "@context": "000_context.jsonld",
     "id": "edt_tpt-al-hs-u",
-    "type": "known_branded_variable"
+    "type": "known_branded_variable",
+    "description": "Vertical diffusion coefficient for temperature due to parametrised eddies",
+    "long_name": "Eddy Diffusivity Coefficient for Temperature",
+    "table_id": [
+        "atmos"
+    ],
+    "compound_name": [
+        "atmos.edt.tpt-al-hs-u.subhr.glb"
+    ],
+    "frequency": [
+        "subhr"
+    ],
+    "realm": "atmos"
 }

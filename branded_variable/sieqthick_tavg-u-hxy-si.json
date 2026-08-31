@@ -1,5 +1,18 @@
 {
     "@context": "000_context.jsonld",
     "id": "sieqthick_tavg-u-hxy-si",
-    "type": "known_branded_variable"
+    "type": "known_branded_variable",
+    "description": "Total volume of sea ice divided by grid-cell area, also known as the equivalent thickness of sea ice.",
+    "long_name": "Sea-Ice Volume per Area",
+    "table_id": [
+        "seaice"
+    ],
+    "compound_name": [
+        "seaIce.sieqthick.tavg-u-hxy-si.mon.glb"
+    ],
+    "frequency": [
+        "mon"
+    ],
+    "cell_measures": "area: areacello",
+    "realm": "seaice"
 }

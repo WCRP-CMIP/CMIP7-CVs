@@ -1,5 +1,6 @@
 {
     "@context": "000_context.jsonld",
     "id": "intpoc",
-    "type": "variable"
+    "type": "variable",
+    "long_name": "Particulate Organic Carbon Content"
 }

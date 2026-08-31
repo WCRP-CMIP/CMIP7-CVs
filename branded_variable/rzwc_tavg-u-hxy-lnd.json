@@ -1,5 +1,18 @@
 {
     "@context": "000_context.jsonld",
     "id": "rzwc_tavg-u-hxy-lnd",
-    "type": "known_branded_variable"
+    "type": "known_branded_variable",
+    "description": "water_content_of_root_zone",
+    "long_name": "Root Zone Soil Moisture",
+    "table_id": [
+        "land"
+    ],
+    "compound_name": [
+        "land.rzwc.tavg-u-hxy-lnd.day.glb"
+    ],
+    "frequency": [
+        "day"
+    ],
+    "cell_measures": "area: areacella",
+    "realm": "land"
 }

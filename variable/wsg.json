@@ -1,5 +1,6 @@
 {
     "@context": "000_context.jsonld",
     "id": "wsg",
-    "type": "variable"
+    "type": "variable",
+    "long_name": "Maximum Wind Speed of Gust at 100m"
 }

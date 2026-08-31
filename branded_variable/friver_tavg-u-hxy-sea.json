@@ -1,5 +1,20 @@
 {
     "@context": "000_context.jsonld",
     "id": "friver_tavg-u-hxy-sea",
-    "type": "known_branded_variable"
+    "type": "known_branded_variable",
+    "description": "computed as the river flux of water into the ocean divided by the area of the ocean portion of the grid cell.",
+    "long_name": "Water Flux into Sea Water from Rivers",
+    "table_id": [
+        "ocean"
+    ],
+    "compound_name": [
+        "ocean.friver.tavg-u-hxy-sea.mon.glb",
+        "ocean.friver.tavg-u-hxy-sea.3hr.glb"
+    ],
+    "frequency": [
+        "mon",
+        "3hr"
+    ],
+    "cell_measures": "area: areacello",
+    "realm": "ocean"
 }

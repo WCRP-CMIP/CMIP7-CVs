@@ -1,5 +1,20 @@
 {
     "@context": "000_context.jsonld",
     "id": "sitempsnic_tavg-u-hxy-si",
-    "type": "known_branded_variable"
+    "type": "known_branded_variable",
+    "description": "Mean temperature at the snow-ice interface. This is the surface temperature of ice where snow thickness is zero.",
+    "long_name": "Temperature at Snow-Ice Interface",
+    "table_id": [
+        "seaice"
+    ],
+    "compound_name": [
+        "seaIce.sitempsnic.tavg-u-hxy-si.mon.glb",
+        "seaIce.sitempsnic.tavg-u-hxy-si.day.glb"
+    ],
+    "frequency": [
+        "mon",
+        "day"
+    ],
+    "cell_measures": "area: areacello",
+    "realm": "seaice"
 }

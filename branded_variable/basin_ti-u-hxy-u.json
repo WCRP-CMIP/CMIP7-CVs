@@ -1,5 +1,44 @@
 {
     "@context": "000_context.jsonld",
     "id": "basin_ti-u-hxy-u",
-    "type": "known_branded_variable"
+    "type": "known_branded_variable",
+    "description": "A variable with the standard name of region contains strings which indicate geographical regions. These strings must be chosen from the standard region list.",
+    "long_name": "Region Selection Index",
+    "table_id": [
+        "ocean"
+    ],
+    "compound_name": [
+        "ocean.basin.ti-u-hxy-u.fx.glb"
+    ],
+    "frequency": [
+        "fx"
+    ],
+    "cell_measures": "area: areacello",
+    "realm": "ocean",
+    "flag_values": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10
+    ],
+    "flag_meanings": [
+        "global_land",
+        "southern_ocean",
+        "atlantic_ocean",
+        "pacific_ocean",
+        "arctic_ocean",
+        "indian_ocean",
+        "mediterranean_sea",
+        "black_sea",
+        "hudson_bay",
+        "baltic_sea",
+        "red_sea"
+    ]
 }

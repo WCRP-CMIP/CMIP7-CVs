@@ -1,0 +1,8 @@
+{
+    "@context": {
+        "@base": "https://esgvoc.ipsl.fr/resource/universe/table/",
+        "id": "@id",
+        "type": "@type",
+        "table": "https://esgvoc.ipsl.fr/resource/universe/table/"
+    }
+}

@@ -1,5 +1,18 @@
 {
     "@context": "000_context.jsonld",
     "id": "wpp_tavg-u-hxy-sea",
-    "type": "known_branded_variable"
+    "type": "known_branded_variable",
+    "description": "Wave period associated with the most energetic waves in total wave spectrum, incorporating both wind-sea and swell waves. In spectral wind wave models, this represents the spectral peak across the entire two-dimensional wave spectrum, incorporating both wind-sea and swell waves.",
+    "long_name": "Total Wave Peak Period",
+    "table_id": [
+        "ocean"
+    ],
+    "compound_name": [
+        "ocean.wpp.tavg-u-hxy-sea.mon.glb"
+    ],
+    "frequency": [
+        "mon"
+    ],
+    "cell_measures": "area: areacello",
+    "realm": "ocean"
 }

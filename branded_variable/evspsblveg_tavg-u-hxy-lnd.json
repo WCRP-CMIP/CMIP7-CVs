@@ -1,5 +1,18 @@
 {
     "@context": "000_context.jsonld",
     "id": "evspsblveg_tavg-u-hxy-lnd",
-    "type": "known_branded_variable"
+    "type": "known_branded_variable",
+    "description": "the canopy evaporation+sublimation (if present in model).",
+    "long_name": "Evaporation from Canopy",
+    "table_id": [
+        "land"
+    ],
+    "compound_name": [
+        "land.evspsblveg.tavg-u-hxy-lnd.mon.glb"
+    ],
+    "frequency": [
+        "mon"
+    ],
+    "cell_measures": "area: areacella",
+    "realm": "land"
 }

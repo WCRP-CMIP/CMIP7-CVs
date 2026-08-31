@@ -1,5 +1,18 @@
 {
     "@context": "000_context.jsonld",
     "id": "wpdirwindsea_tavg-u-hxy-sea",
-    "type": "known_branded_variable"
+    "type": "known_branded_variable",
+    "description": "Direction of wave propagation (direction from which the wave is coming) derived from the wind-sea component of the wave energy spectrum (i.e., local wind waves), by identifying the direction associated with the peak (maximum) energy density. This variable is typically expressed in degrees relative to true north.",
+    "long_name": "Wind Sea Peak Wave Direction",
+    "table_id": [
+        "ocean"
+    ],
+    "compound_name": [
+        "ocean.wpdirwindsea.tavg-u-hxy-sea.mon.glb"
+    ],
+    "frequency": [
+        "mon"
+    ],
+    "cell_measures": "area: areacello",
+    "realm": "ocean"
 }

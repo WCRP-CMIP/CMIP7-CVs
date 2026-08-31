@@ -1,5 +1,19 @@
 {
     "@context": "000_context.jsonld",
     "id": "reffclis_tavg-al-hxy-scl",
-    "type": "known_branded_variable"
+    "type": "known_branded_variable",
+    "description": "This is defined as the in-cloud ratio of the third moment over the second moment of the particle size distribution (obtained by considering only the cloudy portion of the grid cell).",
+    "long_name": "Hydrometeor Effective Radius of Stratiform Cloud Ice",
+    "table_id": [
+        "atmos"
+    ],
+    "compound_name": [
+        "atmos.reffclis.tavg-al-hxy-scl.mon.glb",
+        "atmos.reffclis.tavg-al-hxy-scl.mon.30S-90S"
+    ],
+    "frequency": [
+        "mon"
+    ],
+    "cell_measures": "area: areacella",
+    "realm": "atmos"
 }
