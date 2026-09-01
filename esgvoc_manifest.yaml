@@ -2,27 +2,9 @@ schema_version: '1'
 project:
   id: cmip7
   name: CMIP7 Controlled Vocabulary
-cv_version: 2.0.0
-universe_version: 2.0.0
+cv_version: 2.0.1
+universe_version: 2.0.2
 esgvoc:
   min_version: 4.1.0
 release_notes: |
-  - attr_specs.yaml: updated
-  - catalog_specs.yaml: updated
-  - branded_variable: updated collection model
-  - data_coordinate: new collection model
-  - formula_term: new collection model
-  - frequency: updated collection model
-  - grid_axis: new collection model
-  - grid_variable: new collection model
-  - model_level_coordinate: new collection model
-  - table: new collection model
-  - variable: updated collection model
-  - branded_variable: 1 added, 1430 modified, 2 removed
-  - data_coordinate: 106 added
-  - formula_term: 25 added
-  - grid_axis: 12 added
-  - grid_variable: 4 added
-  - model_level_coordinate: 18 added
-  - table: 8 added
-  - variable: 3 added, 985 modified, 2 removed
+  - institution: 1 added
