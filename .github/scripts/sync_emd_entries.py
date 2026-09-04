@@ -196,8 +196,55 @@ def build_source_entry(model: EmdModel) -> tuple[str, str]:
     return f"{model.cv_id}.json", _dumps(entry)
 
 
+def _build_reference_id(model_cv_id: str, index: int) -> str:
+    """Build the reference term ID for a model's Nth reference."""
+    return f"{model_cv_id}_ref_{index:03d}"
+
+
+def _build_reference_entry(ref_id: str, ref_value: str) -> dict[str, Any]:
+    """Build a single reference term dict from a DOI/URL/text value."""
+    if ref_value.startswith("https://doi"):
+        doi = ref_value
+        citation = ""
+    elif ref_value.startswith("http"):
+        doi = ref_value
+        citation = "Paper under review"
+    else:
+        doi = ""
+        citation = ref_value
+
+    return {
+        "@context": CONTEXT_FILE,
+        "id": ref_id,
+        "type": "reference",
+        "citation": citation,
+        "doi": doi,
+        "drs_name": ref_id,
+    }
+
+
+def build_universe_reference_entries(
+    model: EmdModel,
+) -> list[tuple[str, str]]:
+    """Build the WCRP-universe ``reference`` entries for an EMD model.
+
+    Returns a list of ``(filename, content)`` tuples, one per reference.
+    """
+    results = []
+    for i, ref_value in enumerate(model.references, 1):
+        ref_id = _build_reference_id(model.cv_id, i)
+        entry = _build_reference_entry(ref_id, ref_value)
+        results.append((f"{ref_id}.json", _dumps(entry)))
+    return results
+
+
 def build_universe_model_entry(model: EmdModel) -> tuple[str, str]:
     """Build the WCRP-universe ``model`` entry for an EMD model."""
+    # Use reference term IDs instead of raw DOI strings
+    ref_ids = [
+        _build_reference_id(model.cv_id, i)
+        for i in range(1, len(model.references) + 1)
+    ]
     entry = {
         "@context": CONTEXT_FILE,
         "id": model.cv_id,
@@ -210,7 +257,7 @@ def build_universe_model_entry(model: EmdModel) -> tuple[str, str]:
         "description": model.description,
         "calendar": [],
         "release_year": None,
-        "references": model.references,
+        "references": ref_ids,
         "model_components": [],
         "embedded_components": [],
         "coupled_components": [],
@@ -480,6 +527,9 @@ def sync(
         "esgvoc_dev", help="WCRP-universe PR base branch."
     ),
     universe_model_dir: str = typer.Option("model", help="WCRP-universe model dir."),
+    universe_reference_dir: str = typer.Option(
+        "reference", help="WCRP-universe reference dir."
+    ),
     universe_grid_dir: str = typer.Option("grid", help="WCRP-universe grid dir."),
     branch_prefix: str = typer.Option(
         "emd-sync", help="Prefix for the head branches created for the pull requests."
@@ -563,6 +613,32 @@ def sync(
         emd_entries=models,
         strict=strict,
     )
+    # Plan reference entries separately: one model produces multiple reference
+    # files, so we can't use the standard one-builder-per-entry flow.
+    ref_plan = PlannedPullRequest(
+        client=universe_client,
+        repo=universe_repo,
+        base_branch=universe_base_branch,
+        head_branch=f"{branch_prefix}/reference",
+        directory=universe_reference_dir,
+        title="Add EMD model reference entries to `reference`",
+        body=body(universe_reference_dir, emd_model_dir),
+    )
+    ref_present = universe_client.existing_filenames(
+        universe_reference_dir, universe_base_branch
+    )
+    for model in models:
+        for filename, content in build_universe_reference_entries(model):
+            if filename in ref_present:
+                ref_plan.existing.append(filename)
+            else:
+                ref_plan.new_files.append(
+                    PlannedFile(
+                        path=f"{universe_reference_dir}/{filename}", content=content
+                    )
+                )
+    plans.append(ref_plan)
+
     plans += plan_pull_requests(
         targets=[
             PullRequestTarget(
