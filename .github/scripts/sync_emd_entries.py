@@ -205,7 +205,7 @@ def _build_reference_entry(ref_id: str, ref_value: str) -> dict[str, Any]:
     """Build a single reference term dict from a DOI/URL/text value."""
     if ref_value.startswith("https://doi"):
         doi = ref_value
-        citation = ""
+        citation = "See DOI"
     elif ref_value.startswith("http"):
         doi = ref_value
         citation = "Paper under review"
