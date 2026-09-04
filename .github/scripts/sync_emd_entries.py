@@ -122,6 +122,7 @@ class EmdModel(BaseModel):
     id: str = Field(alias="@id")
     description: str = ""
     validation_key: str = ""
+    references: list[str] = Field(default_factory=list)
 
     @property
     def cv_id(self) -> str:
@@ -209,7 +210,7 @@ def build_universe_model_entry(model: EmdModel) -> tuple[str, str]:
         "description": model.description,
         "calendar": [],
         "release_year": None,
-        "references": [],
+        "references": model.references,
         "model_components": [],
         "embedded_components": [],
         "coupled_components": [],
@@ -289,6 +290,7 @@ def read_emd_entries(
     entries = []
     for item in client.list_directory(directory, ref):
         name = item["name"]
+        print(f"Processing {name}")
         if item["type"] != "file" or not name.endswith(".json"):
             continue
         raw = client.get_file_text(f"{directory}/{name}", ref)
@@ -364,7 +366,13 @@ def plan_pull_requests(
             continue
         for plan, target_present, (filename, content) in zip(plans, present, built):
             if filename in target_present:
-                plan.existing.append(filename)
+                # plan.existing.append(filename)
+                # Laurent doing it this way is a hack.
+                # I need to update the logic elsewhere so we write all the files,
+                # but only make a pull request if something changed.
+                plan.new_files.append(
+                    PlannedFile(path=f"{plan.directory}/{filename}", content=content)
+                )
             else:
                 plan.new_files.append(
                     PlannedFile(path=f"{plan.directory}/{filename}", content=content)
