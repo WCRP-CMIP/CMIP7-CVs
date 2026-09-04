@@ -210,7 +210,7 @@ def _build_reference_entry(ref_id: str, ref_value: str) -> dict[str, Any]:
         doi = ref_value
         citation = "Paper under review"
     else:
-        doi = ""
+        doi = "N/A"
         citation = ref_value
 
     return {
