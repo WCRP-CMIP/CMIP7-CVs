@@ -309,7 +309,8 @@ class PlannedPullRequest:
     title: str
     body: str
     new_files: list[PlannedFile] = field(default_factory=list)
-    existing: list[str] = field(default_factory=list)
+    changed: list[str] = field(default_factory=list)
+    unchanged: list[str] = field(default_factory=list)
     errors: list[str] = field(default_factory=list)
 
 
@@ -376,6 +377,15 @@ class PullRequestTarget:
     builder: Callable[[Any], tuple[str, str]]
 
 
+def get_file_changes(
+    filepath: str, client: EmdSyncClient, branch: str, proposed_content: str
+) -> str | None:
+    current_content = client.get_file_text(filepath, branch)
+    raise NotImplementedError
+    # compare to proposed_content
+    # return changes if any, otherwise None
+
+
 def plan_pull_requests(
     *,
     targets: list[PullRequestTarget],
@@ -425,9 +435,17 @@ def plan_pull_requests(
             continue
         for plan, target_present, (filename, content) in zip(plans, present, built):
             if filename in target_present:
-                # TODO: change how existing is handled so we don't skip,
-                # rather check content then skip if unchanged
-                plan.existing.append(filename)
+                changes = get_file_changes(
+                    f"{plan.directory}/{filename}",
+                    plan.client,
+                    plan.base_branch,
+                    proposed_content=content,
+                )
+                if changes:
+                    plan.changed.append(filename)
+                else:
+                    plan.unchanged.append(filename)
+
             else:
                 plan.new_files.append(
                     PlannedFile(path=f"{plan.directory}/{filename}", content=content)
@@ -442,7 +460,8 @@ def describe_plan(plan: PlannedPullRequest, *, show_content: bool) -> None:
     typer.echo(f"  title: {plan.title}")
     typer.echo(f"  directory: {plan.directory}/")
     typer.echo(f"  new entries: {len(plan.new_files)}")
-    typer.echo(f"  already present (skipped): {len(plan.existing)}")
+    typer.echo(f"  changed (skipped): {len(plan.changed)}")
+    typer.echo(f"  unchanged (skipped): {len(plan.unchanged)}")
     if not plan.new_files:
         typer.echo("  -> nothing to add; no pull request needed.")
         return
@@ -656,9 +675,15 @@ def sync(
     for model in models:
         print(f"Getting references for {model.id=}")
         for filename, content in build_universe_reference_entries(model):
-            print(f"Processing {filename}")
+            print(f"  Processing {filename}")
             if filename in ref_present:
-                plans[universe_source_target_idx].existing.append(filename)
+                changes = get_file_changes(filename)
+                if changes:
+                    plans[universe_source_target_idx].changed.append(filename)
+
+                else:
+                    plans[universe_source_target_idx].unchanged.append(filename)
+
             else:
                 plans[universe_source_target_idx].new_files.append(
                     PlannedFile(
