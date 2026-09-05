@@ -34,7 +34,7 @@ and its dependencies (``typer``, ``pydantic``) are installed.
 Run locally with
 
 ```
-GITHUB_TOKEN="$(gh auth token)" .github/form-processor/.venv/bin/python .github/scripts/sync_emd_entries.py --dry-run
+GITHUB_TOKEN="$(gh auth token)" .github/form-processor/.venv/bin/python .github/scripts/sync_emd_entries.py --dry-run --max-entries 5
 ```
 """
 
@@ -242,8 +242,7 @@ def build_universe_model_entry(model: EmdModel) -> tuple[str, str]:
     """Build the WCRP-universe ``model`` entry for an EMD model."""
     # Use reference term IDs instead of raw DOI strings
     ref_ids = [
-        _build_reference_id(model.cv_id, i)
-        for i in range(1, len(model.references) + 1)
+        _build_reference_id(model.cv_id, i) for i in range(1, len(model.references) + 1)
     ]
     entry = {
         "@context": CONTEXT_FILE,
@@ -329,15 +328,23 @@ def read_emd_entries(
     directory: str,
     ref: str,
     model_cls: type[BaseModel],
+    cap: int | None = None,
 ) -> list[Any]:
     """Read and validate every ``*.json`` entry in an EMD source directory.
 
     Entries whose id starts with ``temp`` are ignored (see ``_is_temp_entry``).
     """
     entries = []
-    for item in client.list_directory(directory, ref):
+    print(f"Getting items in {directory}")
+    items = client.list_directory(directory, ref)
+    print(f"{len(items)} items to read")
+    if cap:
+        print(f"Capping at {cap} processed items")
+
+    n_processed = 0
+    for i, item in enumerate(items):
         name = item["name"]
-        print(f"Processing {name}")
+        print(f"Processing item {i + 1}: {name}")
         if item["type"] != "file" or not name.endswith(".json"):
             continue
         raw = client.get_file_text(f"{directory}/{name}", ref)
@@ -346,6 +353,11 @@ def read_emd_entries(
             typer.echo(f"  ignoring temporary EMD entry {entry.id!r} in {directory}/")
             continue
         entries.append(entry)
+        n_processed += 1
+        if cap:
+            if n_processed >= cap:
+                break
+
     entries.sort(key=lambda entry: entry.id)
     return entries
 
@@ -534,6 +546,9 @@ def sync(
     branch_prefix: str = typer.Option(
         "emd-sync", help="Prefix for the head branches created for the pull requests."
     ),
+    max_entries: int | None = typer.Option(
+        None, help="Maximum number of entries to retrieve (handy for processing)"
+    ),
     dry_run: bool = typer.Option(
         False, help="Print the pull requests that would be made without creating them."
     ),
@@ -557,9 +572,11 @@ def sync(
     universe_client = EmdSyncClient(universe_repo, universe_token)
 
     typer.echo(f"Reading EMD entries from {emd_repo}@{emd_branch} ...")
-    models = read_emd_entries(emd_client, emd_model_dir, emd_branch, EmdModel)
+    models = read_emd_entries(
+        emd_client, emd_model_dir, emd_branch, EmdModel, cap=max_entries
+    )
     grids = read_emd_entries(
-        emd_client, emd_grid_dir, emd_branch, EmdHorizontalGridCell
+        emd_client, emd_grid_dir, emd_branch, EmdHorizontalGridCell, cap=max_entries
     )
     typer.echo(f"  {len(models)} model entries, {len(grids)} grid entries.")
 
