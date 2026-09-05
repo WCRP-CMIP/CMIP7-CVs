@@ -17,7 +17,7 @@
         "picontrol",
         "picontrol-spinup"
     ],
-    "urls": [
-        "https://doi.org/10.5194/gmd-18-6671-2025"
+    "references": [
+        "cmip_cmip7_ref_000"
     ]
 }
