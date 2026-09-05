@@ -425,13 +425,9 @@ def plan_pull_requests(
             continue
         for plan, target_present, (filename, content) in zip(plans, present, built):
             if filename in target_present:
-                # plan.existing.append(filename)
-                # Laurent doing it this way is a hack.
-                # I need to update the logic elsewhere so we write all the files,
-                # but only make a pull request if something changed.
-                plan.new_files.append(
-                    PlannedFile(path=f"{plan.directory}/{filename}", content=content)
-                )
+                # TODO: change how existing is handled so we don't skip,
+                # rather check content then skip if unchanged
+                plan.existing.append(filename)
             else:
                 plan.new_files.append(
                     PlannedFile(path=f"{plan.directory}/{filename}", content=content)
@@ -604,6 +600,7 @@ def sync(
     # The CMIP7-CVs and WCRP-universe entries derived from the same EMD entries
     # are planned together so a build failure on one side skips the entry on the
     # other side too -- the paired repositories never drift out of sync.
+    model_branch_name_universe = f"{branch_prefix}/source"
     plans = plan_pull_requests(
         targets=[
             PullRequestTarget(
@@ -620,7 +617,7 @@ def sync(
                 client=universe_client,
                 repo=universe_repo,
                 base_branch=universe_base_branch,
-                head_branch=f"{branch_prefix}/model",
+                head_branch=model_branch_name_universe,
                 directory=universe_model_dir,
                 title="Add EMD model entries to `model`",
                 body=body(universe_model_dir, emd_model_dir),
@@ -630,31 +627,44 @@ def sync(
         emd_entries=models,
         strict=strict,
     )
-    # Plan reference entries separately: one model produces multiple reference
+
+    # Plan reference entries.
+    # We have to do it like this because one model produces multiple reference
     # files, so we can't use the standard one-builder-per-entry flow.
-    ref_plan = PlannedPullRequest(
-        client=universe_client,
-        repo=universe_repo,
-        base_branch=universe_base_branch,
-        head_branch=f"{branch_prefix}/reference",
-        directory=universe_reference_dir,
-        title="Add EMD model reference entries to `reference`",
-        body=body(universe_reference_dir, emd_model_dir),
-    )
+    for i, plan in enumerate(plans):
+        if (plan.repo == universe_repo) and (
+            plan.head_branch == model_branch_name_universe
+        ):
+            universe_source_target_idx = i
+            break
+    else:
+        msg = f"Did not find universe source branch PR plan. {plans=}"
+        raise AssertionError(msg)
+
+    # ref_plan = PlannedPullRequest(
+    #     client=universe_client,
+    #     repo=universe_repo,
+    #     base_branch=universe_base_branch,
+    #     head_branch=f"{branch_prefix}/reference",
+    #     directory=universe_reference_dir,
+    #     title="Add EMD model reference entries to `reference`",
+    #     body=body(universe_reference_dir, emd_model_dir),
+    # )
     ref_present = universe_client.existing_filenames(
         universe_reference_dir, universe_base_branch
     )
     for model in models:
+        print(f"Getting references for {model.id=}")
         for filename, content in build_universe_reference_entries(model):
+            print(f"Processing {filename}")
             if filename in ref_present:
-                ref_plan.existing.append(filename)
+                plans[universe_source_target_idx].existing.append(filename)
             else:
-                ref_plan.new_files.append(
+                plans[universe_source_target_idx].new_files.append(
                     PlannedFile(
                         path=f"{universe_reference_dir}/{filename}", content=content
                     )
                 )
-    plans.append(ref_plan)
 
     plans += plan_pull_requests(
         targets=[
