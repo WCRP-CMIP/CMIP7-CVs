@@ -7,9 +7,9 @@
         "piclim-histaer",
         "piclim-histall"
     ],
-    "urls": [
-        "https://doi.org/10.5194/acp-20-9591-2020",
-        "https://doi.org/10.5194/gmd-19-4447-2026",
-        "https://doi.org/10.5194/gmd-9-3447-2016"
+    "references": [
+        "rfmip_cmip7_ref_000",
+        "rfmip_cmip7_ref_001",
+        "rfmip_cmip7_ref_002"
     ]
 }

@@ -5,7 +5,7 @@
     "experiments": [
         "dcppb-forecast-cmip6"
     ],
-    "urls": [
-        "https://doi.org/10.5194/gmd-9-3751-2016"
+    "references": [
+        "dcpp_cmip7_ref_000"
     ]
 }
