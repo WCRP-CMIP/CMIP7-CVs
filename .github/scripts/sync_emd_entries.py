@@ -49,6 +49,7 @@ from dataclasses import dataclass, field
 from typing import Any
 from urllib.parse import quote, urlencode
 
+import requests
 import typer
 from github_form_processor.github_api import GitHubApiError, GitHubClient
 from pydantic import BaseModel, ConfigDict, Field, field_validator
@@ -204,12 +205,16 @@ def _build_reference_id(model_cv_id: str, index: int) -> str:
 
 def _build_reference_entry(ref_id: str, ref_value: str) -> dict[str, Any]:
     """Build a single reference term dict from a DOI/URL/text value."""
-    if ref_value.startswith("https://doi"):
-        doi = ref_value
-        citation = "See DOI"
-    elif ref_value.startswith("http"):
-        doi = ref_value
-        citation = "Paper under review"
+    if ref_value.startswith("http"):
+        potential_citation = get_citation_for_doi(ref_value)
+        if potential_citation:
+            doi = ref_value
+            citation = potential_citation
+
+        else:
+            doi = "N/A"
+            citation = f"See {ref_value}"
+
     else:
         doi = "N/A"
         citation = ref_value
@@ -403,6 +408,20 @@ def get_file_changes(
     )
 
     return diff
+
+
+def get_citation_for_doi(doi: str, style: str = "apa") -> str | None:
+    url = f"https://doi.org/{doi}"
+    headers = {"Accept": f"text/x-bibliography; style={style}"}
+
+    response = requests.get(url, headers=headers)
+
+    if response.status_code == 200:
+        return response.text.strip()
+
+    print(f"Failed to retrieve citation. Status: {response.status_code}")
+
+    return None
 
 
 def plan_pull_requests(
@@ -701,15 +720,6 @@ def sync(
         msg = f"Did not find universe source branch PR plan. {plans=}"
         raise AssertionError(msg)
 
-    # ref_plan = PlannedPullRequest(
-    #     client=universe_client,
-    #     repo=universe_repo,
-    #     base_branch=universe_base_branch,
-    #     head_branch=f"{branch_prefix}/reference",
-    #     directory=universe_reference_dir,
-    #     title="Add EMD model reference entries to `reference`",
-    #     body=body(universe_reference_dir, emd_model_dir),
-    # )
     ref_present = universe_client.existing_filenames(
         universe_reference_dir, universe_base_branch
     )
