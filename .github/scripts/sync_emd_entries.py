@@ -41,6 +41,7 @@ GITHUB_TOKEN="$(gh auth token)" .github/form-processor/.venv/bin/python .github/
 from __future__ import annotations
 
 import base64
+import difflib
 import json
 import os
 from collections.abc import Callable
@@ -290,11 +291,20 @@ def build_universe_grid_entry(grid: EmdHorizontalGridCell) -> tuple[str, str]:
 
 
 @dataclass
-class PlannedFile:
-    """A single file that would be added to a target directory."""
+class NewFile:
+    """A single new file that would be added to a target directory."""
 
     path: str
     content: str
+
+
+@dataclass
+class ChangedFile:
+    """A change to a file."""
+
+    path: str
+    new_content: str
+    changes: str
 
 
 @dataclass
@@ -308,8 +318,8 @@ class PlannedPullRequest:
     directory: str
     title: str
     body: str
-    new_files: list[PlannedFile] = field(default_factory=list)
-    changed: list[str] = field(default_factory=list)
+    new_files: list[NewFile] = field(default_factory=list)
+    changed: list[ChangedFile] = field(default_factory=list)
     unchanged: list[str] = field(default_factory=list)
     errors: list[str] = field(default_factory=list)
 
@@ -380,10 +390,19 @@ class PullRequestTarget:
 def get_file_changes(
     filepath: str, client: EmdSyncClient, branch: str, proposed_content: str
 ) -> str | None:
+    print(f"Getting changes made to {filepath} relative to {branch=}")
     current_content = client.get_file_text(filepath, branch)
-    raise NotImplementedError
-    # compare to proposed_content
-    # return changes if any, otherwise None
+
+    diff = "".join(
+        difflib.unified_diff(
+            current_content.splitlines(keepends=True),
+            proposed_content.splitlines(keepends=True),
+            fromfile="current",
+            tofile="updated",
+        )
+    )
+
+    return diff
 
 
 def plan_pull_requests(
@@ -433,6 +452,7 @@ def plan_pull_requests(
                 f"skipping it for {repos}: {error}"
             )
             continue
+
         for plan, target_present, (filename, content) in zip(plans, present, built):
             if filename in target_present:
                 changes = get_file_changes(
@@ -442,13 +462,19 @@ def plan_pull_requests(
                     proposed_content=content,
                 )
                 if changes:
-                    plan.changed.append(filename)
+                    plan.changed.append(
+                        ChangedFile(
+                            path=f"{plan.directory}/{filename}",
+                            new_content=content,
+                            changes=changes,
+                        )
+                    )
                 else:
                     plan.unchanged.append(filename)
 
             else:
                 plan.new_files.append(
-                    PlannedFile(path=f"{plan.directory}/{filename}", content=content)
+                    NewFile(path=f"{plan.directory}/{filename}", content=content)
                 )
     return plans
 
@@ -462,21 +488,27 @@ def describe_plan(plan: PlannedPullRequest, *, show_content: bool) -> None:
     typer.echo(f"  new entries: {len(plan.new_files)}")
     typer.echo(f"  changed (skipped): {len(plan.changed)}")
     typer.echo(f"  unchanged (skipped): {len(plan.unchanged)}")
-    if not plan.new_files:
-        typer.echo("  -> nothing to add; no pull request needed.")
+    if not (plan.new_files or plan.changed):
+        typer.echo("  -> nothing to add or change; no pull request needed.")
         return
+
     for planned in plan.new_files:
         typer.echo(f"    + {planned.path}")
         if show_content:
             for line in planned.content.splitlines():
+                typer.echo(f"        {line}")
+    for planned in plan.changed:
+        typer.echo(f"    + {planned.path}")
+        if show_content:
+            for line in planned.changes.splitlines():
                 typer.echo(f"        {line}")
 
 
 def apply_plan(plan: PlannedPullRequest) -> None:
     """Create the branch, commit the new files and open the pull request."""
     client = plan.client
-    if not plan.new_files:
-        typer.echo(f"[{plan.repo}] nothing to add for {plan.directory}/ -- skipping.")
+    if not (plan.new_files or plan.changed):
+        typer.echo(f"[{plan.repo}] nothing to add or change -- skipping.")
         return
 
     if not client.branch_exists(plan.head_branch):
@@ -485,6 +517,15 @@ def apply_plan(plan: PlannedPullRequest) -> None:
         typer.echo(f"[{plan.repo}] created branch {plan.head_branch}")
     else:
         typer.echo(f"[{plan.repo}] reusing existing branch {plan.head_branch}")
+
+    for planned in plan.changed:
+        client.put_file(
+            planned.path,
+            plan.head_branch,
+            planned.content,
+            f"Updated {planned.path}",
+        )
+        typer.echo(f"[{plan.repo}] committed {planned.path}")
 
     for planned in plan.new_files:
         client.put_file(
@@ -677,16 +718,27 @@ def sync(
         for filename, content in build_universe_reference_entries(model):
             print(f"  Processing {filename}")
             if filename in ref_present:
-                changes = get_file_changes(filename)
+                changes = get_file_changes(
+                    filepath=f"{universe_reference_dir}/{filename}",
+                    client=plans[universe_source_target_idx].client,
+                    branch=plans[universe_source_target_idx].base_branch,
+                    proposed_content=content,
+                )
                 if changes:
-                    plans[universe_source_target_idx].changed.append(filename)
+                    plans[universe_source_target_idx].changed.append(
+                        ChangedFile(
+                            path=f"{universe_reference_dir}/{filename}",
+                            new_content=content,
+                            changes=changes,
+                        )
+                    )
 
                 else:
                     plans[universe_source_target_idx].unchanged.append(filename)
 
             else:
                 plans[universe_source_target_idx].new_files.append(
-                    PlannedFile(
+                    NewFile(
                         path=f"{universe_reference_dir}/{filename}", content=content
                     )
                 )
