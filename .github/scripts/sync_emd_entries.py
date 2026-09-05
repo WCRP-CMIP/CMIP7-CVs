@@ -411,6 +411,7 @@ def get_file_changes(
 
 
 def get_citation_for_doi(doi: str, style: str = "apa") -> str | None:
+    print(f"Trying to get citation for {doi=}")
     url = f"https://doi.org/{doi}"
     headers = {"Accept": f"text/x-bibliography; style={style}"}
 
