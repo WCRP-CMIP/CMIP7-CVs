@@ -44,12 +44,12 @@ import base64
 import difflib
 import json
 import os
+import urllib.request
 from collections.abc import Callable
 from dataclasses import dataclass, field
 from typing import Any
 from urllib.parse import quote, urlencode
 
-import requests
 import typer
 from github_form_processor.github_api import GitHubApiError, GitHubClient
 from pydantic import BaseModel, ConfigDict, Field, field_validator
@@ -206,12 +206,12 @@ def _build_reference_id(model_cv_id: str, index: int) -> str:
 def _build_reference_entry(ref_id: str, ref_value: str) -> dict[str, Any]:
     """Build a single reference term dict from a DOI/URL/text value."""
     if ref_value.startswith("http"):
-        potential_citation = get_citation_for_doi(ref_value)
-        if potential_citation:
+        try:
+            citation = get_citation_for_doi(ref_value)
             doi = ref_value
-            citation = potential_citation
 
-        else:
+        except urllib.error.HTTPError as exc:
+            print(f"Could not get DOI for {ref_value}. {exc.code=} {exc.reason=}")
             doi = "N/A"
             citation = f"See {ref_value}"
 
@@ -414,14 +414,11 @@ def get_citation_for_doi(doi: str, style: str = "apa") -> str | None:
     url = f"https://doi.org/{doi}"
     headers = {"Accept": f"text/x-bibliography; style={style}"}
 
-    response = requests.get(url, headers=headers)
+    req = urllib.request.Request(url, headers=headers)
+    with urllib.request.urlopen(req) as response:
+        res = response.read().decode("utf-8")
 
-    if response.status_code == 200:
-        return response.text.strip()
-
-    print(f"Failed to retrieve citation. Status: {response.status_code}")
-
-    return None
+    return res
 
 
 def plan_pull_requests(
@@ -511,15 +508,16 @@ def describe_plan(plan: PlannedPullRequest, *, show_content: bool) -> None:
         typer.echo("  -> nothing to add or change; no pull request needed.")
         return
 
-    for planned in plan.new_files:
-        typer.echo(f"    + {planned.path}")
-        if show_content:
-            for line in planned.content.splitlines():
-                typer.echo(f"        {line}")
     for planned in plan.changed:
         typer.echo(f"    + {planned.path}")
         if show_content:
             for line in planned.changes.splitlines():
+                typer.echo(f"        {line}")
+
+    for planned in plan.new_files:
+        typer.echo(f"    + {planned.path}")
+        if show_content:
+            for line in planned.content.splitlines():
                 typer.echo(f"        {line}")
 
 
@@ -541,7 +539,7 @@ def apply_plan(plan: PlannedPullRequest) -> None:
         client.put_file(
             planned.path,
             plan.head_branch,
-            planned.content,
+            planned.new_content,
             f"Updated {planned.path}",
         )
         typer.echo(f"[{plan.repo}] committed {planned.path}")
