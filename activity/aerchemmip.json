@@ -19,7 +19,7 @@
         "scen7-vl-aer",
         "scen7-vl-aq"
     ],
-    "urls": [
-        "https://doi.org/10.5194/gmd-10-585-2017"
+    "references": [
+        "aerchemmip_cmip7_ref_000"
     ]
 }
