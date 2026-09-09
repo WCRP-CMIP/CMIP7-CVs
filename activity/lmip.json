@@ -5,7 +5,7 @@
     "experiments": [
         "land-hist"
     ],
-    "urls": [
-        "https://doi.org/10.5194/gmd-9-2809-2016"
+    "references": [
+        "lmip_cmip7_ref_000"
     ]
 }
