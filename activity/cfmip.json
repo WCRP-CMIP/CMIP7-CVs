@@ -8,7 +8,7 @@
         "amip-p4k",
         "amip-piforcing"
     ],
-    "urls": [
-        "https://doi.org/10.5194/gmd-10-359-2017"
+    "references": [
+        "cfmip_cmip7_ref_000"
     ]
 }
