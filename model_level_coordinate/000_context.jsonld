@@ -12,14 +12,14 @@
             }
         },
         "z_factors": {
-            "@id": "https://esgvoc.ipsl.fr/resource/universe/formula_term/",
+            "@id": "https://esgvoc.ipsl.fr/resource/universe/z_factors",
             "@type": "@id",
             "@context": {
                 "@base": "https://esgvoc.ipsl.fr/resource/universe/formula_term/"
             }
         },
         "z_bounds_factors": {
-            "@id": "https://esgvoc.ipsl.fr/resource/universe/formula_term/",
+            "@id": "https://esgvoc.ipsl.fr/resource/universe/z_bounds_factors",
             "@type": "@id",
             "@context": {
                 "@base": "https://esgvoc.ipsl.fr/resource/universe/formula_term/"
