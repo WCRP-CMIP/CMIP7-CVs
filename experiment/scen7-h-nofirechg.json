@@ -1,0 +1,24 @@
+{
+    "@context": "000_context.jsonld",
+    "id": "scen7-h-nofirechg",
+    "type": "experiment",
+    "description": "the same as scen7-h, but with burned area and fire emissions fixed at their 2001\u20132020 average. It requires burned area to be prescribed as an input field using each model\u2019s own 2001\u20132020 average derived from its historical simulations, and in models without interactive fire emission modules, fire emissions in the 2022\u20132060 input\nfiles must likewise be replaced with the 2001\u20132020 average.",
+    "drs_name": "scen7-h-nofirechg",
+    "start_timestamp": "2022-01-01",
+    "end_timestamp": "2060-12-31",
+    "activity": "firemip/id31",
+    "additional_allowed_model_components": [
+        "aer",
+        "bgc"
+    ],
+    "branch_information": "Branch from scen7-h at 2022-01-01",
+    "min_ensemble_size": 3,
+    "parent_activity": "scenariomip",
+    "parent_experiment": "scen7-h",
+    "parent_mip_era": "cmip7",
+    "required_model_components": [
+        "aogcm"
+    ],
+    "tier": 2,
+    "min_number_yrs_per_sim": 39.0
+}
