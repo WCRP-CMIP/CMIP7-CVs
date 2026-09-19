@@ -1,5 +1,18 @@
 {
     "@context": "000_context.jsonld",
     "id": "chldiat_tavg-ol-hxy-sea",
-    "type": "known_branded_variable"
+    "type": "known_branded_variable",
+    "description": "chlorophyll from diatom phytoplankton component concentration alone",
+    "long_name": "Mass Concentration of Diatoms Expressed as Chlorophyll in Sea Water",
+    "table_id": [
+        "ocnbgchem"
+    ],
+    "compound_name": [
+        "ocnBgchem.chldiat.tavg-ol-hxy-sea.mon.glb"
+    ],
+    "frequency": [
+        "mon"
+    ],
+    "cell_measures": "area: areacello volume: volcello",
+    "realm": "ocnbgchem"
 }

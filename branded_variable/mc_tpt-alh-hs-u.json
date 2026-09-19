@@ -1,5 +1,17 @@
 {
     "@context": "000_context.jsonld",
     "id": "mc_tpt-alh-hs-u",
-    "type": "known_branded_variable"
+    "type": "known_branded_variable",
+    "description": "The net mass flux should represent the difference between the updraft and downdraft components.  This is calculated as the convective mass flux divided by the area of the whole grid cell (not just the area of the updrafts).",
+    "long_name": "Convective Mass Flux",
+    "table_id": [
+        "atmos"
+    ],
+    "compound_name": [
+        "atmos.mc.tpt-alh-hs-u.subhr.glb"
+    ],
+    "frequency": [
+        "subhr"
+    ],
+    "realm": "atmos"
 }

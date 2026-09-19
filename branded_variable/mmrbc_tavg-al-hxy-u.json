@@ -1,5 +1,19 @@
 {
     "@context": "000_context.jsonld",
     "id": "mmrbc_tavg-al-hxy-u",
-    "type": "known_branded_variable"
+    "type": "known_branded_variable",
+    "description": "Dry mass fraction of black carbon aerosol particles in air.",
+    "long_name": "Elemental Carbon Mass Mixing Ratio",
+    "table_id": [
+        "aerosol"
+    ],
+    "compound_name": [
+        "aerosol.mmrbc.tavg-al-hxy-u.mon.glb",
+        "aerosol.mmrbc.tavg-al-hxy-u.mon.30S-90S"
+    ],
+    "frequency": [
+        "mon"
+    ],
+    "cell_measures": "area: areacella",
+    "realm": "aerosol"
 }

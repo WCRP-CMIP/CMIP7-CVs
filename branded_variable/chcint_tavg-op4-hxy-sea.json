@@ -1,5 +1,18 @@
 {
     "@context": "000_context.jsonld",
     "id": "chcint_tavg-op4-hxy-sea",
-    "type": "known_branded_variable"
+    "type": "known_branded_variable",
+    "description": "This is the vertically-integrated heat content derived from conservative temperature (bigthetao).",
+    "long_name": "Depth Integrated Seawater Conservative Temperature Expressed As Heat Content",
+    "table_id": [
+        "ocean"
+    ],
+    "compound_name": [
+        "ocean.chcint.tavg-op4-hxy-sea.mon.glb"
+    ],
+    "frequency": [
+        "mon"
+    ],
+    "cell_measures": "area: areacello",
+    "realm": "ocean"
 }

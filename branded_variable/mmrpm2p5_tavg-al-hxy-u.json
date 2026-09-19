@@ -1,5 +1,19 @@
 {
     "@context": "000_context.jsonld",
     "id": "mmrpm2p5_tavg-al-hxy-u",
-    "type": "known_branded_variable"
+    "type": "known_branded_variable",
+    "description": "Mass fraction atmospheric particulate compounds with an aerodynamic diameter of less than or equal to 2.5 micrometers",
+    "long_name": "PM2.5 Mass Mixing Ratio",
+    "table_id": [
+        "aerosol"
+    ],
+    "compound_name": [
+        "aerosol.mmrpm2p5.tavg-al-hxy-u.mon.glb",
+        "aerosol.mmrpm2p5.tavg-al-hxy-u.mon.30S-90S"
+    ],
+    "frequency": [
+        "mon"
+    ],
+    "cell_measures": "area: areacella",
+    "realm": "aerosol"
 }

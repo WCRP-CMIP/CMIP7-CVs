@@ -1,5 +1,6 @@
 {
     "@context": "000_context.jsonld",
     "id": "rtmt",
-    "type": "variable"
+    "type": "variable",
+    "long_name": "Net Downward Radiative Flux at Top of Model"
 }

@@ -1,5 +1,6 @@
 {
     "@context": "000_context.jsonld",
     "id": "c2h6",
-    "type": "variable"
+    "type": "variable",
+    "long_name": "C2H6 Volume Mixing Ratio"
 }

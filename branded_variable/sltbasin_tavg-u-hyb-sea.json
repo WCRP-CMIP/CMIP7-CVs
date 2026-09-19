@@ -1,5 +1,17 @@
 {
     "@context": "000_context.jsonld",
     "id": "sltbasin_tavg-u-hyb-sea",
-    "type": "known_branded_variable"
+    "type": "known_branded_variable",
+    "description": "Northward Ocean Salt Transport from all physical processes affecting northward salt transport, resolved and parameterized. Diagnosed here as a function of latitude and basin.",
+    "long_name": "Northward Ocean Salt Transport",
+    "table_id": [
+        "ocean"
+    ],
+    "compound_name": [
+        "ocean.sltbasin.tavg-u-hyb-sea.mon.glb"
+    ],
+    "frequency": [
+        "mon"
+    ],
+    "realm": "ocean"
 }

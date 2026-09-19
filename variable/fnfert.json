@@ -1,5 +1,6 @@
 {
     "@context": "000_context.jsonld",
     "id": "fnfert",
-    "type": "variable"
+    "type": "variable",
+    "long_name": "Total Nitrogen Added for Cropland Fertilisation (Artificial and Manure)"
 }

@@ -1,5 +1,6 @@
 {
     "@context": "000_context.jsonld",
     "id": "difvso",
-    "type": "variable"
+    "type": "variable",
+    "long_name": "Ocean Vertical Salt Diffusivity"
 }

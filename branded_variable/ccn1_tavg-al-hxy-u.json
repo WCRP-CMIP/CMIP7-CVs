@@ -1,5 +1,19 @@
 {
     "@context": "000_context.jsonld",
     "id": "ccn1_tavg-al-hxy-u",
-    "type": "known_branded_variable"
+    "type": "known_branded_variable",
+    "description": "This is the concentration of cloud condensation nuclei (CCN) at 1.0 percent supersaturation, based on aerosol chemical composition and size",
+    "long_name": "CCN concentration at 1.0 percent supersaturation",
+    "table_id": [
+        "aerosol"
+    ],
+    "compound_name": [
+        "aerosol.ccn1.tavg-al-hxy-u.mon.glb",
+        "aerosol.ccn1.tavg-al-hxy-u.mon.30S-90S"
+    ],
+    "frequency": [
+        "mon"
+    ],
+    "cell_measures": "area: areacella",
+    "realm": "aerosol"
 }

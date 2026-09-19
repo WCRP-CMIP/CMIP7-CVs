@@ -1,5 +1,20 @@
 {
     "@context": "000_context.jsonld",
     "id": "siitdconc_tavg-u-hxy-si",
-    "type": "known_branded_variable"
+    "type": "known_branded_variable",
+    "description": "Percentage of grid cell covered by each ice thickness category (vector with one entry for each ice thickness category starting from the thinnest category, netcdf file should use thickness bounds of the categories as third coordinate axis).",
+    "long_name": "Sea-Ice Area Percentages in Ice Thickness Categories",
+    "table_id": [
+        "seaice"
+    ],
+    "compound_name": [
+        "seaIce.siitdconc.tavg-u-hxy-si.mon.glb",
+        "seaIce.siitdconc.tavg-u-hxy-si.day.glb"
+    ],
+    "frequency": [
+        "mon",
+        "day"
+    ],
+    "cell_measures": "area: areacello",
+    "realm": "seaice"
 }

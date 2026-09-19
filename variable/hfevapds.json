@@ -1,5 +1,6 @@
 {
     "@context": "000_context.jsonld",
     "id": "hfevapds",
-    "type": "variable"
+    "type": "variable",
+    "long_name": "Temperature Flux Due to Evaporation Expressed as Heat Flux out of Sea Water"
 }

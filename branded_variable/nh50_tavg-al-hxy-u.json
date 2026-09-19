@@ -1,5 +1,18 @@
 {
     "@context": "000_context.jsonld",
     "id": "nh50_tavg-al-hxy-u",
-    "type": "known_branded_variable"
+    "type": "known_branded_variable",
+    "description": "Fixed surface layer mixing ratio over 30o-50oN (100ppbv), uniform fixed 50-day exponential decay.",
+    "long_name": "Artificial Tracer with 50 Day Lifetime",
+    "table_id": [
+        "aerosol"
+    ],
+    "compound_name": [
+        "aerosol.nh50.tavg-al-hxy-u.mon.glb"
+    ],
+    "frequency": [
+        "mon"
+    ],
+    "cell_measures": "area: areacella",
+    "realm": "aerosol"
 }

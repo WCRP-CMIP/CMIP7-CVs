@@ -1,0 +1,8 @@
+{
+    "@context": "000_context.jsonld",
+    "id": "height10m",
+    "type": "data_coordinate",
+    "long_name": "height",
+    "valid_min": 1.0,
+    "valid_max": 30.0
+}

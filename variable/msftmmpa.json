@@ -1,5 +1,6 @@
 {
     "@context": "000_context.jsonld",
     "id": "msftmmpa",
-    "type": "variable"
+    "type": "variable",
+    "long_name": "Ocean Meridional Overturning Mass Streamfunction Due to Parameterized Mesoscale Advection"
 }

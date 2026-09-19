@@ -1,5 +1,6 @@
 {
     "@context": "000_context.jsonld",
     "id": "opottemptend",
-    "type": "variable"
+    "type": "variable",
+    "long_name": "Tendency of Sea Water Potential Temperature Expressed as Heat Content"
 }

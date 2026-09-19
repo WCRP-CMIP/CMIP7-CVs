@@ -1,5 +1,6 @@
 {
     "@context": "000_context.jsonld",
     "id": "rhsoil",
-    "type": "variable"
+    "type": "variable",
+    "long_name": "Carbon Mass Flux into Atmosphere Due to Heterotrophic Respiration from Soil on Land"
 }

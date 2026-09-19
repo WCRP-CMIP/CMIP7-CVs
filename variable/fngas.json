@@ -1,5 +1,6 @@
 {
     "@context": "000_context.jsonld",
     "id": "fngas",
-    "type": "variable"
+    "type": "variable",
+    "long_name": "Total Nitrogen Lost to the Atmosphere (Sum of NHx, NOx, N2O, N2)"
 }

@@ -1,5 +1,17 @@
 {
     "@context": "000_context.jsonld",
     "id": "vas_tpt-h10m-hs-u",
-    "type": "known_branded_variable"
+    "type": "known_branded_variable",
+    "description": "Northward component of the near surface wind",
+    "long_name": "Northward Near-Surface Wind",
+    "table_id": [
+        "atmos"
+    ],
+    "compound_name": [
+        "atmos.vas.tpt-h10m-hs-u.subhr.glb"
+    ],
+    "frequency": [
+        "subhr"
+    ],
+    "realm": "atmos"
 }

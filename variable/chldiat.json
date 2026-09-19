@@ -1,5 +1,6 @@
 {
     "@context": "000_context.jsonld",
     "id": "chldiat",
-    "type": "variable"
+    "type": "variable",
+    "long_name": "Mass Concentration of Diatoms Expressed as Chlorophyll in Sea Water"
 }

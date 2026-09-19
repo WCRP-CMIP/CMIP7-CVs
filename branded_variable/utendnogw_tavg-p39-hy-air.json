@@ -1,5 +1,19 @@
 {
     "@context": "000_context.jsonld",
     "id": "utendnogw_tavg-p39-hy-air",
-    "type": "known_branded_variable"
+    "type": "known_branded_variable",
+    "description": "Zonal mean tendency of eastward wind induced by the parameterized non-orographic gravity wave drag",
+    "long_name": "Eastward Acceleration Due to Non-Orographic Gravity Wave Drag",
+    "table_id": [
+        "atmos"
+    ],
+    "compound_name": [
+        "atmos.utendnogw.tavg-p39-hy-air.mon.glb",
+        "atmos.utendnogw.tavg-p39-hy-air.day.glb"
+    ],
+    "frequency": [
+        "mon",
+        "day"
+    ],
+    "realm": "atmos"
 }

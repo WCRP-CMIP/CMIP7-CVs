@@ -1,5 +1,6 @@
 {
     "@context": "000_context.jsonld",
     "id": "tntogw",
-    "type": "variable"
+    "type": "variable",
+    "long_name": "Temperature Tendency Due to Orographic Gravity Wave Dissipation"
 }

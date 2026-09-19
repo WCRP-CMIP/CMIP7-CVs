@@ -1,5 +1,18 @@
 {
     "@context": "000_context.jsonld",
     "id": "ra_tavg-u-hxy-ng",
-    "type": "known_branded_variable"
+    "type": "known_branded_variable",
+    "description": "Total RA of grass in the grid cell",
+    "long_name": "Autotrophic Respiration on Grass Tiles as Carbon Mass Flux [kgC m-2 s-1]",
+    "table_id": [
+        "land"
+    ],
+    "compound_name": [
+        "land.ra.tavg-u-hxy-ng.mon.glb"
+    ],
+    "frequency": [
+        "mon"
+    ],
+    "cell_measures": "area: areacella",
+    "realm": "land"
 }

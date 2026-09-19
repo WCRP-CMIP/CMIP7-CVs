@@ -1,5 +1,6 @@
 {
     "@context": "000_context.jsonld",
     "id": "bry",
-    "type": "variable"
+    "type": "variable",
+    "long_name": "Total Inorganic Bromine Volume Mixing Ratio"
 }

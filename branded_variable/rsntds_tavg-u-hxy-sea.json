@@ -1,5 +1,18 @@
 {
     "@context": "000_context.jsonld",
     "id": "rsntds_tavg-u-hxy-sea",
-    "type": "known_branded_variable"
+    "type": "known_branded_variable",
+    "description": "The radiative flux into the surface of liquid sea water only. This excludes shortwave flux absorbed by sea ice, but includes any light that passes through the ice and is absorbed by the ocean.",
+    "long_name": "Net Downward Shortwave Radiation at Sea Water Surface",
+    "table_id": [
+        "ocean"
+    ],
+    "compound_name": [
+        "ocean.rsntds.tavg-u-hxy-sea.3hr.glb"
+    ],
+    "frequency": [
+        "3hr"
+    ],
+    "cell_measures": "area: areacello",
+    "realm": "ocean"
 }

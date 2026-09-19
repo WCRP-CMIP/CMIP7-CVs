@@ -1,5 +1,22 @@
 {
     "@context": "000_context.jsonld",
     "id": "ps_tpt-u-hxy-u",
-    "type": "known_branded_variable"
+    "type": "known_branded_variable",
+    "description": "sampled synoptically to diagnose atmospheric tides, this is better than mean sea level pressure.",
+    "long_name": "Surface Air Pressure",
+    "table_id": [
+        "atmos"
+    ],
+    "compound_name": [
+        "atmos.ps.tpt-u-hxy-u.6hr.glb",
+        "atmos.ps.tpt-u-hxy-u.1hr.glb",
+        "atmos.ps.tpt-u-hxy-u.3hr.glb"
+    ],
+    "frequency": [
+        "6hr",
+        "1hr",
+        "3hr"
+    ],
+    "cell_measures": "area: areacella",
+    "realm": "atmos"
 }

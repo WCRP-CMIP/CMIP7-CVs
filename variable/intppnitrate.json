@@ -1,5 +1,6 @@
 {
     "@context": "000_context.jsonld",
     "id": "intppnitrate",
-    "type": "variable"
+    "type": "variable",
+    "long_name": "Primary Organic Carbon Production by Phytoplankton Based on Nitrate Uptake Alone"
 }

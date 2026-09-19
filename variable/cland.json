@@ -1,5 +1,6 @@
 {
     "@context": "000_context.jsonld",
     "id": "cland",
-    "type": "variable"
+    "type": "variable",
+    "long_name": "Total Carbon in All Terrestrial Carbon Pools"
 }

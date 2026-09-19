@@ -1,5 +1,18 @@
 {
     "@context": "000_context.jsonld",
     "id": "aoanh_tavg-al-hxy-u",
-    "type": "known_branded_variable"
+    "type": "known_branded_variable",
+    "description": "Fixed surface layer mixing ratio over 30o-50oN (0 ppbv), uniform fixed source (at all levels) everywhere else (source is unspecified but must be constant in space and time and documented). Note that the source could be 1yr/yr, so the tracer concentration provides mean age in years. For method using linearly increasing tracer include a method attribute: \"linearly increasing tracer\"For method using uniform source (1yr/yr) include a method attribute: \"uniform source\"",
+    "long_name": "Northern Hemisphere Tracer Lifetime",
+    "table_id": [
+        "aerosol"
+    ],
+    "compound_name": [
+        "aerosol.aoanh.tavg-al-hxy-u.mon.nh"
+    ],
+    "frequency": [
+        "mon"
+    ],
+    "cell_measures": "area: areacella",
+    "realm": "aerosol"
 }

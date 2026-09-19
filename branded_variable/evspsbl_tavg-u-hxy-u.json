@@ -1,5 +1,18 @@
 {
     "@context": "000_context.jsonld",
     "id": "evspsbl_tavg-u-hxy-u",
-    "type": "known_branded_variable"
+    "type": "known_branded_variable",
+    "description": "at surface; flux of water into the atmosphere due to conversion of both liquid and solid phases to vapor (from underlying surface and vegetation)",
+    "long_name": "Evaporation Including Sublimation and Transpiration",
+    "table_id": [
+        "atmos"
+    ],
+    "compound_name": [
+        "atmos.evspsbl.tavg-u-hxy-u.mon.glb"
+    ],
+    "frequency": [
+        "mon"
+    ],
+    "cell_measures": "area: areacella",
+    "realm": "atmos"
 }

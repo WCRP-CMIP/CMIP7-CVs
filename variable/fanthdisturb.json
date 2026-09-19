@@ -1,5 +1,6 @@
 {
     "@context": "000_context.jsonld",
     "id": "fanthdisturb",
-    "type": "variable"
+    "type": "variable",
+    "long_name": "Carbon Mass Flux from Vegetation, Litter or Soil Pools into the Atmosphere Due to any Human Activity [kgC m-2 s-1]"
 }

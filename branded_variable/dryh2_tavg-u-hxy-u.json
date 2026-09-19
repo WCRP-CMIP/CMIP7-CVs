@@ -1,5 +1,18 @@
 {
     "@context": "000_context.jsonld",
     "id": "dryh2_tavg-u-hxy-u",
-    "type": "known_branded_variable"
+    "type": "known_branded_variable",
+    "description": "This is the total loss rate of molecular hydrogen (H2) from the atmosphere via its soil sink due to bacterial consumption.",
+    "long_name": "Total loss rate of molecular hydrogen (H2) from the atmosphere via soil sink",
+    "table_id": [
+        "atmoschem"
+    ],
+    "compound_name": [
+        "atmosChem.dryh2.tavg-u-hxy-u.mon.glb"
+    ],
+    "frequency": [
+        "mon"
+    ],
+    "cell_measures": "area: areacella",
+    "realm": "atmoschem"
 }

@@ -1,5 +1,22 @@
 {
     "@context": "000_context.jsonld",
     "id": "litempbot_tavg-u-hxy-gis",
-    "type": "known_branded_variable"
+    "type": "known_branded_variable",
+    "description": "quantity averaged over grounded ice sheet",
+    "long_name": "Basal Temperature of Grounded Ice Sheet",
+    "table_id": [
+        "landice"
+    ],
+    "compound_name": [
+        "landIce.litempbot.tavg-u-hxy-gis.mon.ata",
+        "landIce.litempbot.tavg-u-hxy-gis.mon.grl",
+        "landIce.litempbot.tavg-u-hxy-gis.yr.ata",
+        "landIce.litempbot.tavg-u-hxy-gis.yr.grl"
+    ],
+    "frequency": [
+        "mon",
+        "yr"
+    ],
+    "cell_measures": "area: areacellg",
+    "realm": "landice"
 }

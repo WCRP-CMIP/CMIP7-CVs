@@ -1,5 +1,27 @@
 {
     "@context": "000_context.jsonld",
     "id": "rsds_tavg-u-hxy-u",
-    "type": "known_branded_variable"
+    "type": "known_branded_variable",
+    "description": "Hourly downward solar radiation flux at the surface",
+    "long_name": "Surface Downwelling Shortwave Radiation",
+    "table_id": [
+        "atmos"
+    ],
+    "compound_name": [
+        "atmos.rsds.tavg-u-hxy-u.3hr.glb",
+        "atmos.rsds.tavg-u-hxy-u.day.glb",
+        "atmos.rsds.tavg-u-hxy-u.mon.30S-90S",
+        "atmos.rsds.tavg-u-hxy-u.6hr.glb",
+        "atmos.rsds.tavg-u-hxy-u.mon.glb",
+        "atmos.rsds.tavg-u-hxy-u.1hr.glb"
+    ],
+    "frequency": [
+        "3hr",
+        "day",
+        "mon",
+        "6hr",
+        "1hr"
+    ],
+    "cell_measures": "area: areacella",
+    "realm": "atmos"
 }

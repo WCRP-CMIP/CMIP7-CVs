@@ -1,5 +1,6 @@
 {
     "@context": "000_context.jsonld",
     "id": "expnob",
-    "type": "variable"
+    "type": "variable",
+    "long_name": "Sinking Flux of Particulate Organic Nitrogen Reaching the Ocean Bottom"
 }

@@ -1,5 +1,18 @@
 {
     "@context": "000_context.jsonld",
     "id": "mrsol_tavg-d100cm-hxy-lnd",
-    "type": "known_branded_variable"
+    "type": "known_branded_variable",
+    "description": "Soil moisture at 3hr but for 0-1m",
+    "long_name": "Soil moisture in the top 1 m of the soil column",
+    "table_id": [
+        "land"
+    ],
+    "compound_name": [
+        "land.mrsol.tavg-d100cm-hxy-lnd.3hr.glb"
+    ],
+    "frequency": [
+        "3hr"
+    ],
+    "cell_measures": "area: areacella",
+    "realm": "land"
 }

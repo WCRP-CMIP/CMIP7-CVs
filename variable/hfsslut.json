@@ -1,5 +1,6 @@
 {
     "@context": "000_context.jsonld",
     "id": "hfsslut",
-    "type": "variable"
+    "type": "variable",
+    "long_name": "Sensible Heat Flux on Land-Use Tile"
 }

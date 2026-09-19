@@ -1,5 +1,6 @@
 {
     "@context": "000_context.jsonld",
     "id": "stratch4loss",
-    "type": "variable"
+    "type": "variable",
+    "long_name": "Loss of CH4 due to chemical destruction in the stratosphere"
 }

@@ -1,5 +1,6 @@
 {
     "@context": "000_context.jsonld",
     "id": "intdoc",
-    "type": "variable"
+    "type": "variable",
+    "long_name": "Dissolved Organic Carbon Content"
 }

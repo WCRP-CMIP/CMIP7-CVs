@@ -1,5 +1,20 @@
 {
     "@context": "000_context.jsonld",
     "id": "rsus_tavg-u-hxy-si",
-    "type": "known_branded_variable"
+    "type": "known_branded_variable",
+    "description": "Upward shortwave flux from the sea-ice surface to the atmosphere (energy flow per sea ice area). Always positive or zero.",
+    "long_name": "Upwelling Shortwave Flux over Sea Ice",
+    "table_id": [
+        "seaice"
+    ],
+    "compound_name": [
+        "seaIce.rsus.tavg-u-hxy-si.day.glb",
+        "seaIce.rsus.tavg-u-hxy-si.mon.glb"
+    ],
+    "frequency": [
+        "day",
+        "mon"
+    ],
+    "cell_measures": "area: areacella",
+    "realm": "seaice"
 }

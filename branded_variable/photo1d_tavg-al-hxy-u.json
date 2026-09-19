@@ -1,5 +1,18 @@
 {
     "@context": "000_context.jsonld",
     "id": "photo1d_tavg-al-hxy-u",
-    "type": "known_branded_variable"
+    "type": "known_branded_variable",
+    "description": "proposed name: photolysis_rate_of_ozone_to_O1D",
+    "long_name": "Photolysis Rate of Ozone (O3) to Excited Atomic Oxygen (the Singlet D State, O1D)",
+    "table_id": [
+        "aerosol"
+    ],
+    "compound_name": [
+        "aerosol.photo1d.tavg-al-hxy-u.mon.glb"
+    ],
+    "frequency": [
+        "mon"
+    ],
+    "cell_measures": "area: areacella",
+    "realm": "aerosol"
 }

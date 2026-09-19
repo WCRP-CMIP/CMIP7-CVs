@@ -1,5 +1,18 @@
 {
     "@context": "000_context.jsonld",
     "id": "fveglitter_tavg-u-hxy-lnd",
-    "type": "known_branded_variable"
+    "type": "known_branded_variable",
+    "description": "In accordance with common usage in geophysical disciplines, \"flux\" implies per unit area, called \"flux density\" in physics. \"Vegetation\" means any living plants e.g. trees, shrubs, grass. \"Litter\" is dead plant material in or above the soil. It is distinct from coarse wood debris. The precise distinction between \"fine\" and \"coarse\" is model dependent. The sum of the quantities with standard names mass_flux_of_carbon_into_litter_from_vegetation_due_to_mortality and mass_flux_of_carbon_into_litter_from_vegetation_due_to_senescence is mass_flux_of_carbon_into_litter_from_vegetation.",
+    "long_name": "Total Carbon Mass Flux from Vegetation to Litter",
+    "table_id": [
+        "land"
+    ],
+    "compound_name": [
+        "land.fVegLitter.tavg-u-hxy-lnd.mon.glb"
+    ],
+    "frequency": [
+        "mon"
+    ],
+    "cell_measures": "area: areacella",
+    "realm": "land"
 }

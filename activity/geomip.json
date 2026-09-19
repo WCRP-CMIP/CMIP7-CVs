@@ -5,8 +5,8 @@
     "experiments": [
         "g7-1p5k-sai"
     ],
-    "urls": [
-        "https://doi.org/10.1175/BAMS-D-25-0191.1",
-        "https://doi.org/10.5194/gmd-17-2583-2024"
+    "references": [
+        "geomip_cmip7_ref_000",
+        "geomip_cmip7_ref_001"
     ]
 }

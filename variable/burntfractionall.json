@@ -1,5 +1,6 @@
 {
     "@context": "000_context.jsonld",
     "id": "burntfractionall",
-    "type": "variable"
+    "type": "variable",
+    "long_name": "Percentage of Entire Grid Cell That Is Covered by Burnt Vegetation (All Classes)"
 }

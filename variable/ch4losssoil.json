@@ -1,5 +1,6 @@
 {
     "@context": "000_context.jsonld",
     "id": "ch4losssoil",
-    "type": "variable"
+    "type": "variable",
+    "long_name": "Loss of CH4 due to biological consumption in the soil"
 }

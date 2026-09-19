@@ -1,5 +1,17 @@
 {
     "@context": "000_context.jsonld",
     "id": "hcl_tavg-p39-hy-air",
-    "type": "known_branded_variable"
+    "type": "known_branded_variable",
+    "description": "Mole fraction is used in the construction mole_fraction_of_X_in_Y, where X is a material constituent of Y.  The chemical formula of hydrogen chloride is HCl.",
+    "long_name": "HCl Volume Mixing Ratio",
+    "table_id": [
+        "aerosol"
+    ],
+    "compound_name": [
+        "aerosol.hcl.tavg-p39-hy-air.mon.glb"
+    ],
+    "frequency": [
+        "mon"
+    ],
+    "realm": "aerosol"
 }

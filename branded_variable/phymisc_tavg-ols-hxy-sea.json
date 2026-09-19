@@ -1,5 +1,20 @@
 {
     "@context": "000_context.jsonld",
     "id": "phymisc_tavg-ols-hxy-sea",
-    "type": "known_branded_variable"
+    "type": "known_branded_variable",
+    "description": "Mole Concentration of Miscellaneous Phytoplankton Expressed as Carbon in Sea Water",
+    "long_name": "Surface Mole Concentration of Miscellaneous Phytoplankton Expressed as Carbon in Sea Water",
+    "table_id": [
+        "ocnbgchem"
+    ],
+    "compound_name": [
+        "ocnBgchem.phymisc.tavg-ols-hxy-sea.day.glb",
+        "ocnBgchem.phymisc.tavg-ols-hxy-sea.mon.30S-90S"
+    ],
+    "frequency": [
+        "day",
+        "mon"
+    ],
+    "cell_measures": "area: areacello",
+    "realm": "ocnbgchem"
 }

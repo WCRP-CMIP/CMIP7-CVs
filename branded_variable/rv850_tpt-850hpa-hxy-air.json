@@ -1,5 +1,18 @@
 {
     "@context": "000_context.jsonld",
     "id": "rv850_tpt-850hpa-hxy-air",
-    "type": "known_branded_variable"
+    "type": "known_branded_variable",
+    "description": "Relative vorticity is the upward component of the vorticity vector i.e. the component which arises from horizontal velocity.",
+    "long_name": "Relative Vorticity at 850hPa",
+    "table_id": [
+        "atmos"
+    ],
+    "compound_name": [
+        "atmos.rv850.tpt-850hPa-hxy-air.6hr.glb"
+    ],
+    "frequency": [
+        "6hr"
+    ],
+    "cell_measures": "area: areacella",
+    "realm": "atmos"
 }

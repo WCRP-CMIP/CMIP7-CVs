@@ -1,5 +1,18 @@
 {
     "@context": "000_context.jsonld",
     "id": "chldiaz_tavg-ol-hxy-sea",
-    "type": "known_branded_variable"
+    "type": "known_branded_variable",
+    "description": "chlorophyll concentration from the diazotrophic phytoplankton component alone",
+    "long_name": "Mass Concentration of Diazotrophs Expressed as Chlorophyll in Sea Water",
+    "table_id": [
+        "ocnbgchem"
+    ],
+    "compound_name": [
+        "ocnBgchem.chldiaz.tavg-ol-hxy-sea.mon.glb"
+    ],
+    "frequency": [
+        "mon"
+    ],
+    "cell_measures": "area: areacello volume: volcello",
+    "realm": "ocnbgchem"
 }

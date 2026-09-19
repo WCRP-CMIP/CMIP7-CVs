@@ -1,5 +1,6 @@
 {
     "@context": "000_context.jsonld",
     "id": "wtem",
-    "type": "variable"
+    "type": "variable",
+    "long_name": "Transformed Eulerian Mean Upward Wind"
 }

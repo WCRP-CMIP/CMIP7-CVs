@@ -1,5 +1,17 @@
 {
     "@context": "000_context.jsonld",
     "id": "pr_tpt-u-hs-u",
-    "type": "known_branded_variable"
+    "type": "known_branded_variable",
+    "description": "at surface; includes both liquid and solid phases from all types of clouds (both large-scale and convective)",
+    "long_name": "Precipitation",
+    "table_id": [
+        "atmos"
+    ],
+    "compound_name": [
+        "atmos.pr.tpt-u-hs-u.subhr.glb"
+    ],
+    "frequency": [
+        "subhr"
+    ],
+    "realm": "atmos"
 }

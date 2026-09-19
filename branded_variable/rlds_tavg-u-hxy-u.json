@@ -1,5 +1,27 @@
 {
     "@context": "000_context.jsonld",
     "id": "rlds_tavg-u-hxy-u",
-    "type": "known_branded_variable"
+    "type": "known_branded_variable",
+    "description": "The surface called \"surface\" means the lower boundary of the atmosphere. \"longwave\" means longwave radiation. Downwelling radiation is radiation from above. It does not mean \"net downward\". When thought of as being incident on a surface, a radiative flux is sometimes called \"irradiance\". In addition, it is identical with the quantity measured by a cosine-collector light-meter and sometimes called \"vector irradiance\". In accordance with common usage in geophysical disciplines, \"flux\" implies per unit area, called \"flux density\" in physics.",
+    "long_name": "Surface Downwelling Longwave Radiation",
+    "table_id": [
+        "atmos"
+    ],
+    "compound_name": [
+        "atmos.rlds.tavg-u-hxy-u.mon.30S-90S",
+        "atmos.rlds.tavg-u-hxy-u.6hr.glb",
+        "atmos.rlds.tavg-u-hxy-u.3hr.glb",
+        "atmos.rlds.tavg-u-hxy-u.day.glb",
+        "atmos.rlds.tavg-u-hxy-u.mon.glb",
+        "atmos.rlds.tavg-u-hxy-u.1hr.glb"
+    ],
+    "frequency": [
+        "mon",
+        "6hr",
+        "3hr",
+        "day",
+        "1hr"
+    ],
+    "cell_measures": "area: areacella",
+    "realm": "atmos"
 }

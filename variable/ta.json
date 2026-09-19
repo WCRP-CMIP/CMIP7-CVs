@@ -1,5 +1,6 @@
 {
     "@context": "000_context.jsonld",
     "id": "ta",
-    "type": "variable"
+    "type": "variable",
+    "long_name": "Air Temperature"
 }

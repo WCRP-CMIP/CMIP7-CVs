@@ -1,5 +1,6 @@
 {
     "@context": "000_context.jsonld",
     "id": "rlutcso3ref",
-    "type": "variable"
+    "type": "variable",
+    "long_name": "Top of atmosphere outgoing longwave radiative flux under clear-sky conditions from diagnostic call to radiation scheme with a reference ozone field"
 }

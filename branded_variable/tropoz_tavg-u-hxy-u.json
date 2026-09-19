@@ -1,5 +1,18 @@
 {
     "@context": "000_context.jsonld",
     "id": "tropoz_tavg-u-hxy-u",
-    "type": "known_branded_variable"
+    "type": "known_branded_variable",
+    "description": "Tropospheric ozone column, should be consistent with definition of tropopause used to calculate the pressure of the tropopause (ptp).",
+    "long_name": "Tropospheric Ozone Column",
+    "table_id": [
+        "aerosol"
+    ],
+    "compound_name": [
+        "aerosol.tropoz.tavg-u-hxy-u.mon.glb"
+    ],
+    "frequency": [
+        "mon"
+    ],
+    "cell_measures": "area: areacella",
+    "realm": "aerosol"
 }

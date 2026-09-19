@@ -1,5 +1,6 @@
 {
     "@context": "000_context.jsonld",
     "id": "reffclws",
-    "type": "variable"
+    "type": "variable",
+    "long_name": "Stratiform Cloud Liquid Droplet Effective Radius"
 }

@@ -1,5 +1,18 @@
 {
     "@context": "000_context.jsonld",
     "id": "arag_tavg-ol-hxy-sea",
-    "type": "known_branded_variable"
+    "type": "known_branded_variable",
+    "description": "sum of particulate aragonite components (e.g. Phytoplankton, Detrital, etc.)",
+    "long_name": "Aragonite Concentration",
+    "table_id": [
+        "ocnbgchem"
+    ],
+    "compound_name": [
+        "ocnBgchem.arag.tavg-ol-hxy-sea.mon.glb"
+    ],
+    "frequency": [
+        "mon"
+    ],
+    "cell_measures": "area: areacello volume: volcello",
+    "realm": "ocnbgchem"
 }

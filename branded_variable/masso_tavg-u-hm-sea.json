@@ -1,5 +1,19 @@
 {
     "@context": "000_context.jsonld",
     "id": "masso_tavg-u-hm-sea",
-    "type": "known_branded_variable"
+    "type": "known_branded_variable",
+    "description": "Total mass of liquid sea water. For Boussinesq models, report this diagnostic as Boussinesq reference density times total volume.",
+    "long_name": "Sea Water Mass",
+    "table_id": [
+        "ocean"
+    ],
+    "compound_name": [
+        "ocean.masso.tavg-u-hm-sea.mon.glb",
+        "ocean.masso.tavg-u-hm-sea.dec.glb"
+    ],
+    "frequency": [
+        "mon",
+        "dec"
+    ],
+    "realm": "ocean"
 }

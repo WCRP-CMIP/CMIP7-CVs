@@ -1,5 +1,6 @@
 {
     "@context": "000_context.jsonld",
     "id": "residualfrac",
-    "type": "variable"
+    "type": "variable",
+    "long_name": "Percentage of Grid Cell That Is Land but neither Vegetation Covered nor Bare Soil"
 }

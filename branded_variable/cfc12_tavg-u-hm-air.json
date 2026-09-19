@@ -1,5 +1,17 @@
 {
     "@context": "000_context.jsonld",
     "id": "cfc12_tavg-u-hm-air",
-    "type": "known_branded_variable"
+    "type": "known_branded_variable",
+    "description": "Mole fraction is used in the construction mole_fraction_of_X_in_Y, where X is a material constituent of Y.  The chemical formula of CFC12 is CF2Cl2.  The IUPAC name for CFC12 is dichloro-difluoro-methane.",
+    "long_name": "Global Mean Mole Fraction of CFC12",
+    "table_id": [
+        "atmoschem"
+    ],
+    "compound_name": [
+        "atmosChem.cfc12.tavg-u-hm-air.mon.glb"
+    ],
+    "frequency": [
+        "mon"
+    ],
+    "realm": "atmoschem"
 }

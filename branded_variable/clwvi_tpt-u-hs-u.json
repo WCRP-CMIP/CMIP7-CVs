@@ -1,5 +1,17 @@
 {
     "@context": "000_context.jsonld",
     "id": "clwvi_tpt-u-hs-u",
-    "type": "known_branded_variable"
+    "type": "known_branded_variable",
+    "description": "mass of condensed (liquid + ice) water in the column divided by the area of the column (not just the area of the cloudy portion of the column). Includes precipitating hydrometeors ONLY if the precipitating hydrometeor affects the calculation of radiative transfer in model.",
+    "long_name": "Condensed Water Path",
+    "table_id": [
+        "atmos"
+    ],
+    "compound_name": [
+        "atmos.clwvi.tpt-u-hs-u.subhr.glb"
+    ],
+    "frequency": [
+        "subhr"
+    ],
+    "realm": "atmos"
 }

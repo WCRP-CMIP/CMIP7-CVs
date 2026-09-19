@@ -1,5 +1,19 @@
 {
     "@context": "000_context.jsonld",
     "id": "ta_tavg-p39-hy-air",
-    "type": "known_branded_variable"
+    "type": "known_branded_variable",
+    "description": "Zonal mean temperature of air with the extended number of vertical levels.",
+    "long_name": "Zonal Mean Air Temperature",
+    "table_id": [
+        "atmos"
+    ],
+    "compound_name": [
+        "atmos.ta.tavg-p39-hy-air.mon.glb",
+        "atmos.ta.tavg-p39-hy-air.day.glb"
+    ],
+    "frequency": [
+        "mon",
+        "day"
+    ],
+    "realm": "atmos"
 }

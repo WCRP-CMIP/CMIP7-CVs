@@ -1,0 +1,6 @@
+{
+    "@context": "000_context.jsonld",
+    "id": "typec3natg",
+    "type": "data_coordinate",
+    "long_name": "C3 Natural grass area type"
+}

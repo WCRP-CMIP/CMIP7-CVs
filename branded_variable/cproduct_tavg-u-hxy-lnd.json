@@ -1,5 +1,18 @@
 {
     "@context": "000_context.jsonld",
     "id": "cproduct_tavg-u-hxy-lnd",
-    "type": "known_branded_variable"
+    "type": "known_branded_variable",
+    "description": "Carbon mass per unit area in that has been removed from the environment through  land use change.",
+    "long_name": "Carbon Mass in Products of Land-Use Change",
+    "table_id": [
+        "land"
+    ],
+    "compound_name": [
+        "land.cProduct.tavg-u-hxy-lnd.mon.glb"
+    ],
+    "frequency": [
+        "mon"
+    ],
+    "cell_measures": "area: areacella",
+    "realm": "land"
 }

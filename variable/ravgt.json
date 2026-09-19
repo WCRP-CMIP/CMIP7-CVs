@@ -1,5 +1,6 @@
 {
     "@context": "000_context.jsonld",
     "id": "ravgt",
-    "type": "variable"
+    "type": "variable",
+    "long_name": "Autotrophic Respiration on Vegetation type as Carbon Mass Flux [kgC m-2 s-1]"
 }

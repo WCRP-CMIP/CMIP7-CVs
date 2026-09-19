@@ -1,5 +1,6 @@
 {
     "@context": "000_context.jsonld",
     "id": "hfgeou",
-    "type": "variable"
+    "type": "variable",
+    "long_name": "Upward Geothermal Heat Flux at Sea Floor"
 }

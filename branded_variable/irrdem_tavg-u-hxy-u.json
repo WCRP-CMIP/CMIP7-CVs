@@ -1,5 +1,18 @@
 {
     "@context": "000_context.jsonld",
     "id": "irrdem_tavg-u-hxy-u",
-    "type": "known_branded_variable"
+    "type": "known_branded_variable",
+    "description": "the total amount of irrigation water demand",
+    "long_name": "irrigation water demand",
+    "table_id": [
+        "land"
+    ],
+    "compound_name": [
+        "land.irrDem.tavg-u-hxy-u.day.glb"
+    ],
+    "frequency": [
+        "day"
+    ],
+    "cell_measures": "area: areacella",
+    "realm": "land"
 }

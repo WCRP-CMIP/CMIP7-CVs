@@ -1,5 +1,6 @@
 {
     "@context": "000_context.jsonld",
     "id": "fraclut",
-    "type": "variable"
+    "type": "variable",
+    "long_name": "Percentage of Grid Cell for Each Land-Use Tile"
 }

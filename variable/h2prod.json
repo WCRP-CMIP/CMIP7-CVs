@@ -1,5 +1,6 @@
 {
     "@context": "000_context.jsonld",
     "id": "h2prod",
-    "type": "variable"
+    "type": "variable",
+    "long_name": "chemical production of atmospheric H2"
 }

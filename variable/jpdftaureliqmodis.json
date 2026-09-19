@@ -1,5 +1,6 @@
 {
     "@context": "000_context.jsonld",
     "id": "jpdftaureliqmodis",
-    "type": "variable"
+    "type": "variable",
+    "long_name": "MODIS Optical Thickness-Particle Size Joint Distribution, Liquid-Topped"
 }

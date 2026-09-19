@@ -1,5 +1,6 @@
 {
     "@context": "000_context.jsonld",
     "id": "sishearvel",
-    "type": "variable"
+    "type": "variable",
+    "long_name": "Maximum Shear of Sea-Ice Velocity Field"
 }

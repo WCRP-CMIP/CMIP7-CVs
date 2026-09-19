@@ -1,5 +1,6 @@
 {
     "@context": "000_context.jsonld",
     "id": "exppob",
-    "type": "variable"
+    "type": "variable",
+    "long_name": "Downward sinking flux of particulate organic phosphorus at sea floor"
 }

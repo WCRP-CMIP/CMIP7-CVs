@@ -1,5 +1,6 @@
 {
     "@context": "000_context.jsonld",
     "id": "fdeforesttoproduct",
-    "type": "variable"
+    "type": "variable",
+    "long_name": "Deforested Biomass That Goes into Product Pool as a Result of Anthropogenic Land-Use Change"
 }

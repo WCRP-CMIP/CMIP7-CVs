@@ -1,5 +1,6 @@
 {
     "@context": "000_context.jsonld",
     "id": "sfpm1",
-    "type": "variable"
+    "type": "variable",
+    "long_name": "PM1.0 mass mixing ratio in lowest model layer"
 }

@@ -1,5 +1,17 @@
 {
     "@context": "000_context.jsonld",
     "id": "tas_tpt-h2m-hs-u",
-    "type": "known_branded_variable"
+    "type": "known_branded_variable",
+    "description": "near-surface (usually, 2 meter) air temperature",
+    "long_name": "Near-Surface Air Temperature",
+    "table_id": [
+        "atmos"
+    ],
+    "compound_name": [
+        "atmos.tas.tpt-h2m-hs-u.subhr.glb"
+    ],
+    "frequency": [
+        "subhr"
+    ],
+    "realm": "atmos"
 }

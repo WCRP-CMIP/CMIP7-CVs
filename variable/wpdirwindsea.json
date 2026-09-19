@@ -1,5 +1,6 @@
 {
     "@context": "000_context.jsonld",
     "id": "wpdirwindsea",
-    "type": "variable"
+    "type": "variable",
+    "long_name": "Wind Sea Peak Wave Direction"
 }

@@ -1,5 +1,6 @@
 {
     "@context": "000_context.jsonld",
     "id": "reffcclwtop",
-    "type": "variable"
+    "type": "variable",
+    "long_name": "Cloud-Top Effective Droplet Radius in Convective Cloud"
 }

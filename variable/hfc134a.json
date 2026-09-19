@@ -1,5 +1,6 @@
 {
     "@context": "000_context.jsonld",
     "id": "hfc134a",
-    "type": "variable"
+    "type": "variable",
+    "long_name": "Mole Fraction of HFC134a"
 }

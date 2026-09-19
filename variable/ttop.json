@@ -1,5 +1,6 @@
 {
     "@context": "000_context.jsonld",
     "id": "ttop",
-    "type": "variable"
+    "type": "variable",
+    "long_name": "Air Temperature at Cloud Top"
 }

@@ -1,5 +1,23 @@
 {
     "@context": "000_context.jsonld",
     "id": "psl_tavg-u-hxy-u",
-    "type": "known_branded_variable"
+    "type": "known_branded_variable",
+    "description": "not, in general, the same as surface pressure",
+    "long_name": "Sea Level Pressure",
+    "table_id": [
+        "atmos"
+    ],
+    "compound_name": [
+        "atmos.psl.tavg-u-hxy-u.mon.30S-90S",
+        "atmos.psl.tavg-u-hxy-u.6hr.glb",
+        "atmos.psl.tavg-u-hxy-u.mon.glb",
+        "atmos.psl.tavg-u-hxy-u.day.glb"
+    ],
+    "frequency": [
+        "mon",
+        "6hr",
+        "day"
+    ],
+    "cell_measures": "area: areacella",
+    "realm": "atmos"
 }

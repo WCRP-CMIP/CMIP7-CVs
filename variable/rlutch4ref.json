@@ -1,5 +1,6 @@
 {
     "@context": "000_context.jsonld",
     "id": "rlutch4ref",
-    "type": "variable"
+    "type": "variable",
+    "long_name": "Top of atmosphere outgoing longwave radiative fluxes from diagnostic radiation call with reference methane"
 }

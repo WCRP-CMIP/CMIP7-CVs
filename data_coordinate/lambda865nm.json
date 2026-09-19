@@ -1,0 +1,6 @@
+{
+    "@context": "000_context.jsonld",
+    "id": "lambda865nm",
+    "type": "data_coordinate",
+    "long_name": "Radiation Wavelength 865 nanometers"
+}

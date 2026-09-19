@@ -1,5 +1,18 @@
 {
     "@context": "000_context.jsonld",
     "id": "pasturefracc3_tavg-u-hxy-u",
-    "type": "known_branded_variable"
+    "type": "known_branded_variable",
+    "description": "Percentage of entire grid cell covered by C3 pasture",
+    "long_name": "C3 Pasture Area Percentage",
+    "table_id": [
+        "land"
+    ],
+    "compound_name": [
+        "land.pastureFracC3.tavg-u-hxy-u.mon.glb"
+    ],
+    "frequency": [
+        "mon"
+    ],
+    "cell_measures": "area: areacella",
+    "realm": "land"
 }

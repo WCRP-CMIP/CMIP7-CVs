@@ -1,5 +1,19 @@
 {
     "@context": "000_context.jsonld",
     "id": "utendepfd_tavg-p39-hy-air",
-    "type": "known_branded_variable"
+    "type": "known_branded_variable",
+    "description": "Tendency of the zonal mean zonal wind due to the divergence of the Eliassen-Palm flux.",
+    "long_name": "Tendency of Eastward Wind Due to Eliassen-Palm Flux Divergence",
+    "table_id": [
+        "atmos"
+    ],
+    "compound_name": [
+        "atmos.utendepfd.tavg-p39-hy-air.mon.glb",
+        "atmos.utendepfd.tavg-p39-hy-air.day.glb"
+    ],
+    "frequency": [
+        "mon",
+        "day"
+    ],
+    "realm": "atmos"
 }

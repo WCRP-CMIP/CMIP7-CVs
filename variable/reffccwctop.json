@@ -1,5 +1,6 @@
 {
     "@context": "000_context.jsonld",
     "id": "reffccwctop",
-    "type": "variable"
+    "type": "variable",
+    "long_name": "Cloud-Top Effective Radius of Liquid or Ice Cloud at Liquid or Ice Cloud Top"
 }

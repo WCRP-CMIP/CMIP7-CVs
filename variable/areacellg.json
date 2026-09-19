@@ -1,5 +1,6 @@
 {
     "@context": "000_context.jsonld",
     "id": "areacellg",
-    "type": "variable"
+    "type": "variable",
+    "long_name": "Grid-Cell Area for Ice Sheet Variables"
 }

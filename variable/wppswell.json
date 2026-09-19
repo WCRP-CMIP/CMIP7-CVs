@@ -1,5 +1,6 @@
 {
     "@context": "000_context.jsonld",
     "id": "wppswell",
-    "type": "variable"
+    "type": "variable",
+    "long_name": "Swell Wave Peak Period"
 }

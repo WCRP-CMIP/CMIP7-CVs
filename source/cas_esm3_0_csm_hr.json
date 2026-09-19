@@ -1,0 +1,5 @@
+{
+  "@context": "000_context.jsonld",
+  "id": "cas_esm3_0_csm_hr",
+  "type": "model"
+}

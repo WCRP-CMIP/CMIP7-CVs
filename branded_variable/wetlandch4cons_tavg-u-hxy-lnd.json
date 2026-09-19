@@ -1,5 +1,18 @@
 {
     "@context": "000_context.jsonld",
     "id": "wetlandch4cons_tavg-u-hxy-lnd",
-    "type": "known_branded_variable"
+    "type": "known_branded_variable",
+    "description": "Biological consumption (methanotrophy) of methane (NH4) by wetlands (areas where water covers the soil, or is present either at or near the surface of the soil all year or for varying periods of time during the year, including during the growing season).",
+    "long_name": "Grid Averaged Methane Consumption (Methanotrophy) from Wetlands",
+    "table_id": [
+        "land"
+    ],
+    "compound_name": [
+        "land.wetlandCH4cons.tavg-u-hxy-lnd.mon.glb"
+    ],
+    "frequency": [
+        "mon"
+    ],
+    "cell_measures": "area: areacella",
+    "realm": "land"
 }

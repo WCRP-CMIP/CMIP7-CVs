@@ -1,5 +1,18 @@
 {
     "@context": "000_context.jsonld",
     "id": "nroot_tavg-u-hxy-lnd",
-    "type": "known_branded_variable"
+    "type": "known_branded_variable",
+    "description": "including fine and coarse roots.",
+    "long_name": "Nitrogen Mass in Roots",
+    "table_id": [
+        "land"
+    ],
+    "compound_name": [
+        "land.nRoot.tavg-u-hxy-lnd.mon.glb"
+    ],
+    "frequency": [
+        "mon"
+    ],
+    "cell_measures": "area: areacella",
+    "realm": "land"
 }

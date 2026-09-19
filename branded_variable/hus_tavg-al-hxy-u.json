@@ -1,5 +1,21 @@
 {
     "@context": "000_context.jsonld",
     "id": "hus_tavg-al-hxy-u",
-    "type": "known_branded_variable"
+    "type": "known_branded_variable",
+    "description": "Specific humidity is the mass fraction of water vapor in (moist) air.",
+    "long_name": "Specific Humidity",
+    "table_id": [
+        "atmos"
+    ],
+    "compound_name": [
+        "atmos.hus.tavg-al-hxy-u.mon.glb",
+        "atmos.hus.tavg-al-hxy-u.mon.30S-90S",
+        "atmos.hus.tavg-al-hxy-u.day.glb"
+    ],
+    "frequency": [
+        "mon",
+        "day"
+    ],
+    "cell_measures": "area: areacella",
+    "realm": "atmos"
 }

@@ -1,5 +1,6 @@
 {
     "@context": "000_context.jsonld",
     "id": "icfriver",
-    "type": "variable"
+    "type": "variable",
+    "long_name": "Flux of Inorganic Carbon into Ocean Surface by Runoff"
 }

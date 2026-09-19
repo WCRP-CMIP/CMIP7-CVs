@@ -1,5 +1,20 @@
 {
     "@context": "000_context.jsonld",
     "id": "wsg_tmax-h100m-hxy-u",
-    "type": "known_branded_variable"
+    "type": "known_branded_variable",
+    "description": "Wind speed gust maximum at 100m above surface",
+    "long_name": "Maximum Wind Speed of Gust at 100m",
+    "table_id": [
+        "atmos"
+    ],
+    "compound_name": [
+        "atmos.wsg.tmax-h100m-hxy-u.mon.glb",
+        "atmos.wsg.tmax-h100m-hxy-u.1hr.glb"
+    ],
+    "frequency": [
+        "mon",
+        "1hr"
+    ],
+    "cell_measures": "area: areacella",
+    "realm": "atmos"
 }

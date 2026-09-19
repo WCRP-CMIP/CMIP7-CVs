@@ -1,5 +1,18 @@
 {
     "@context": "000_context.jsonld",
     "id": "wetlandfrac_tavg-u-hxy-u",
-    "type": "known_branded_variable"
+    "type": "known_branded_variable",
+    "description": "Percentage of grid cell covered by wetland. Report only one year if  fixed percentage is used, or time series if values are determined dynamically.",
+    "long_name": "Wetland Percentage Cover",
+    "table_id": [
+        "land"
+    ],
+    "compound_name": [
+        "land.wetlandFrac.tavg-u-hxy-u.mon.glb"
+    ],
+    "frequency": [
+        "mon"
+    ],
+    "cell_measures": "area: areacella",
+    "realm": "land"
 }

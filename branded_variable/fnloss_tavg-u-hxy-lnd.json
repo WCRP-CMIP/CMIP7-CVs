@@ -1,5 +1,18 @@
 {
     "@context": "000_context.jsonld",
     "id": "fnloss_tavg-u-hxy-lnd",
-    "type": "known_branded_variable"
+    "type": "known_branded_variable",
+    "description": "Not all models split losses into gaseous and leaching",
+    "long_name": "Total Nitrogen Lost (Including NHx, NOx, N2O, N2 and Leaching)",
+    "table_id": [
+        "land"
+    ],
+    "compound_name": [
+        "land.fNloss.tavg-u-hxy-lnd.mon.glb"
+    ],
+    "frequency": [
+        "mon"
+    ],
+    "cell_measures": "area: areacella",
+    "realm": "land"
 }

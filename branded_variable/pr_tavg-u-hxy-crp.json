@@ -1,5 +1,18 @@
 {
     "@context": "000_context.jsonld",
     "id": "pr_tavg-u-hxy-crp",
-    "type": "known_branded_variable"
+    "type": "known_branded_variable",
+    "description": "includes both liquid and solid phases",
+    "long_name": "Precipitation over Crop Tile",
+    "table_id": [
+        "atmos"
+    ],
+    "compound_name": [
+        "atmos.pr.tavg-u-hxy-crp.day.glb"
+    ],
+    "frequency": [
+        "day"
+    ],
+    "cell_measures": "area: areacella",
+    "realm": "atmos"
 }

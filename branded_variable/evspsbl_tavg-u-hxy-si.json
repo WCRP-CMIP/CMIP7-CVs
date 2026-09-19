@@ -1,5 +1,18 @@
 {
     "@context": "000_context.jsonld",
     "id": "evspsbl_tavg-u-hxy-si",
-    "type": "known_branded_variable"
+    "type": "known_branded_variable",
+    "description": "Rate of change of sea-ice mass change through evaporation and sublimation divided by grid-cell area. If a model does not differentiate between the sublimation of snow and sea ice, we recommend to report sidmassevapsubl as zero as long as the ice is snow covered, and to report any sublimation within the variable sisndmasssubl.",
+    "long_name": "Sea-Ice Mass Change Through Evaporation and Sublimation",
+    "table_id": [
+        "seaice"
+    ],
+    "compound_name": [
+        "seaIce.evspsbl.tavg-u-hxy-si.mon.glb"
+    ],
+    "frequency": [
+        "mon"
+    ],
+    "cell_measures": "area: areacello",
+    "realm": "seaice"
 }

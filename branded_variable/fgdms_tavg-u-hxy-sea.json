@@ -1,5 +1,18 @@
 {
     "@context": "000_context.jsonld",
     "id": "fgdms_tavg-u-hxy-sea",
-    "type": "known_branded_variable"
+    "type": "known_branded_variable",
+    "description": "Gas exchange flux of DMS (positive into atmosphere)",
+    "long_name": "Surface Upward Flux of DMS",
+    "table_id": [
+        "ocnbgchem"
+    ],
+    "compound_name": [
+        "ocnBgchem.fgdms.tavg-u-hxy-sea.mon.glb"
+    ],
+    "frequency": [
+        "mon"
+    ],
+    "cell_measures": "area: areacello",
+    "realm": "ocnbgchem"
 }

@@ -1,5 +1,6 @@
 {
     "@context": "000_context.jsonld",
     "id": "co3satarag",
-    "type": "variable"
+    "type": "variable",
+    "long_name": "Mole Concentration of Carbonate Ion in Equilibrium with Pure Aragonite in Sea Water"
 }

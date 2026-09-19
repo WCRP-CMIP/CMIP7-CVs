@@ -1,5 +1,6 @@
 {
     "@context": "000_context.jsonld",
     "id": "fnlittersoil",
-    "type": "variable"
+    "type": "variable",
+    "long_name": "Total Nitrogen Mass Flux from Litter to Soil"
 }

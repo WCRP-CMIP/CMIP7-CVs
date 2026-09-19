@@ -1,5 +1,18 @@
 {
     "@context": "000_context.jsonld",
     "id": "o3loss_tavg-al-hxy-u",
-    "type": "known_branded_variable"
+    "type": "known_branded_variable",
+    "description": "ONLY provide the sum of the following reactions: (i) O(1D)+H2O; (ii) O3+HO2; (iii) O3+OH; (iv) O3+alkenes (isoprene, ethene, ...)",
+    "long_name": "O3 Destruction Rate",
+    "table_id": [
+        "aerosol"
+    ],
+    "compound_name": [
+        "aerosol.o3loss.tavg-al-hxy-u.mon.glb"
+    ],
+    "frequency": [
+        "mon"
+    ],
+    "cell_measures": "area: areacella",
+    "realm": "aerosol"
 }

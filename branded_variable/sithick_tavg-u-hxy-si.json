@@ -1,5 +1,21 @@
 {
     "@context": "000_context.jsonld",
     "id": "sithick_tavg-u-hxy-si",
-    "type": "known_branded_variable"
+    "type": "known_branded_variable",
+    "description": "Actual (floe) thickness of sea ice averaged over the ice-covered part of a given grid cell, NOT volume divided by grid area.",
+    "long_name": "Sea-Ice Thickness",
+    "table_id": [
+        "seaice"
+    ],
+    "compound_name": [
+        "seaIce.sithick.tavg-u-hxy-si.mon.glb",
+        "seaIce.sithick.tavg-u-hxy-si.mon.30S-90S",
+        "seaIce.sithick.tavg-u-hxy-si.day.glb"
+    ],
+    "frequency": [
+        "mon",
+        "day"
+    ],
+    "cell_measures": "area: areacello",
+    "realm": "seaice"
 }

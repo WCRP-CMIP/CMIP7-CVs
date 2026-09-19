@@ -1,5 +1,6 @@
 {
     "@context": "000_context.jsonld",
     "id": "emibbch4",
-    "type": "variable"
+    "type": "variable",
+    "long_name": "total emission of CH4 from all biomass burning"
 }

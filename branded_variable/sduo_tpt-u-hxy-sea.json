@@ -1,5 +1,18 @@
 {
     "@context": "000_context.jsonld",
     "id": "sduo_tpt-u-hxy-sea",
-    "type": "known_branded_variable"
+    "type": "known_branded_variable",
+    "description": "The eastward component of the net drift velocity of ocean water caused by surface wind-sea waves. The Stokes drift velocity could be defined as the difference between the average Lagrangian flow velocity of a fluid parcel, and the average Eulerian flow velocity of the fluid at a fixed position.",
+    "long_name": "Eastward Surface Stokes Drift",
+    "table_id": [
+        "ocean"
+    ],
+    "compound_name": [
+        "ocean.sduo.tpt-u-hxy-sea.3hr.glb"
+    ],
+    "frequency": [
+        "3hr"
+    ],
+    "cell_measures": "area: areacello",
+    "realm": "ocean"
 }

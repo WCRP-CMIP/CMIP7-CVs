@@ -1,5 +1,6 @@
 {
     "@context": "000_context.jsonld",
     "id": "sichl",
-    "type": "variable"
+    "type": "variable",
+    "long_name": "Amount of Total Ice Algae Expressed as Chlorophyll in Sea Ice"
 }

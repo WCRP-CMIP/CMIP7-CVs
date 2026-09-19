@@ -1,5 +1,18 @@
 {
     "@context": "000_context.jsonld",
     "id": "mmrnh4_tpt-h2m-hs-u",
-    "type": "known_branded_variable"
+    "type": "known_branded_variable",
+    "description": "This variable represents the instantaneous near surface NH4 Aerosol Mass Mixing Ratio at CF sites, sampled every 3 hours",
+    "long_name": "Instantaneous near-surface NH4 aerosol mass mixing ratio at CF sites",
+    "table_id": [
+        "aerosol"
+    ],
+    "compound_name": [
+        "aerosol.mmrnh4.tpt-h2m-hs-u.3hr.glb"
+    ],
+    "frequency": [
+        "3hr"
+    ],
+    "cell_measures": "--MODEL",
+    "realm": "aerosol"
 }

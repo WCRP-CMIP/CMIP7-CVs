@@ -1,5 +1,19 @@
 {
     "@context": "000_context.jsonld",
     "id": "graz_tavg-ol-hxy-sea",
-    "type": "known_branded_variable"
+    "type": "known_branded_variable",
+    "description": "Total grazing of phytoplankton by zooplankton defined as tendency of moles of carbon per cubic metre.",
+    "long_name": "Total Grazing of Phytoplankton by Zooplankton",
+    "table_id": [
+        "ocnbgchem"
+    ],
+    "compound_name": [
+        "ocnBgchem.graz.tavg-ol-hxy-sea.mon.glb",
+        "ocnBgchem.graz.tavg-ol-hxy-sea.mon.30S-90S"
+    ],
+    "frequency": [
+        "mon"
+    ],
+    "cell_measures": "area: areacello volume: volcello",
+    "realm": "ocnbgchem"
 }

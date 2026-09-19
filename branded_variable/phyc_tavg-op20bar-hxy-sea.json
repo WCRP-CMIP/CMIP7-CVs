@@ -1,5 +1,18 @@
 {
     "@context": "000_context.jsonld",
     "id": "phyc_tavg-op20bar-hxy-sea",
-    "type": "known_branded_variable"
+    "type": "known_branded_variable",
+    "description": "sum of phytoplankton carbon component concentrations. In most (all?) cases this is the sum of phycdiat and phycmisc (i.e., \"Diatom Carbon Concentration\" and \"Non-Diatom Phytoplankton Carbon Concentration\"",
+    "long_name": "Phytoplankton Carbon Concentration",
+    "table_id": [
+        "ocnbgchem"
+    ],
+    "compound_name": [
+        "ocnBgchem.phyc.tavg-op20bar-hxy-sea.day.glb"
+    ],
+    "frequency": [
+        "day"
+    ],
+    "cell_measures": "area: areacello",
+    "realm": "ocnbgchem"
 }

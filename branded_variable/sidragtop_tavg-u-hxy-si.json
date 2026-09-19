@@ -1,5 +1,18 @@
 {
     "@context": "000_context.jsonld",
     "id": "sidragtop_tavg-u-hxy-si",
-    "type": "known_branded_variable"
+    "type": "known_branded_variable",
+    "description": "Atmospheric drag coefficient that is used to calculate the atmospheric momentum drag on sea ice.",
+    "long_name": "Atmospheric Drag Coefficient",
+    "table_id": [
+        "seaice"
+    ],
+    "compound_name": [
+        "seaIce.sidragtop.tavg-u-hxy-si.mon.glb"
+    ],
+    "frequency": [
+        "mon"
+    ],
+    "cell_measures": "area: areacello",
+    "realm": "seaice"
 }

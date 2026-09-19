@@ -1,5 +1,21 @@
 {
     "@context": "000_context.jsonld",
     "id": "pctisccp_tavg-u-hxy-cl",
-    "type": "known_branded_variable"
+    "type": "known_branded_variable",
+    "description": "time-means are weighted by the ISCCP Total Cloud Fraction - see  <https://www.cfmip.org/tools-and-data/cosp>",
+    "long_name": "ISCCP Mean Cloud Top Pressure",
+    "table_id": [
+        "atmos"
+    ],
+    "compound_name": [
+        "atmos.pctisccp.tavg-u-hxy-cl.mon.30S-90S",
+        "atmos.pctisccp.tavg-u-hxy-cl.day.glb",
+        "atmos.pctisccp.tavg-u-hxy-cl.mon.glb"
+    ],
+    "frequency": [
+        "mon",
+        "day"
+    ],
+    "cell_measures": "area: areacella",
+    "realm": "atmos"
 }

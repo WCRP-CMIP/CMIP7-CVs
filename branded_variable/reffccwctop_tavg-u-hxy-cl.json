@@ -1,5 +1,18 @@
 {
     "@context": "000_context.jsonld",
     "id": "reffccwctop_tavg-u-hxy-cl",
-    "type": "known_branded_variable"
+    "type": "known_branded_variable",
+    "description": "Cloud-Top Effective Radius of Liquid or Ice Cloud at Liquid or Ice Cloud Top",
+    "long_name": "Cloud-Top Effective Radius of Liquid or Ice Cloud at Liquid or Ice Cloud Top",
+    "table_id": [
+        "aerosol"
+    ],
+    "compound_name": [
+        "aerosol.reffccwctop.tavg-u-hxy-cl.mon.glb"
+    ],
+    "frequency": [
+        "mon"
+    ],
+    "cell_measures": "area: areacella",
+    "realm": "aerosol"
 }

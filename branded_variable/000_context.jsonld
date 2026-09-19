@@ -1,8 +1,82 @@
 {
     "@context": {
+        "@base": "https://esgvoc.ipsl.fr/resource/universe/known_branded_variable/",
         "id": "@id",
         "type": "@type",
-        "@base": "https://esgvoc.ipsl.fr/resource/universe/known_branded_variable/",
-        "known_branded_variable": "https://esgvoc.ipsl.fr/resource/universe/known_branded_variable"
+        "known_branded_variable": "https://esgvoc.ipsl.fr/resource/universe/known_branded_variable/",
+        "variable_root_name": {
+            "@id": "https://esgvoc.ipsl.fr/resource/universe/variable/",
+            "@type": "@id",
+            "@context": {
+                "@base": "https://esgvoc.ipsl.fr/resource/universe/variable/"
+            }
+        },
+        "dimensions": {
+            "@id": "https://esgvoc.ipsl.fr/resource/universe/data_coordinate/",
+            "@type": "@id",
+            "@context": {
+                "@base": "https://esgvoc.ipsl.fr/resource/universe/data_coordinate/"
+            }
+        },
+        "temporal_label": {
+            "@id": "https://esgvoc.ipsl.fr/resource/universe/temporal_label/",
+            "@type": "@id",
+            "@context": {
+                "@base": "https://esgvoc.ipsl.fr/resource/universe/temporal_label/"
+            }
+        },
+        "vertical_label": {
+            "@id": "https://esgvoc.ipsl.fr/resource/universe/vertical_label/",
+            "@type": "@id",
+            "@context": {
+                "@base": "https://esgvoc.ipsl.fr/resource/universe/vertical_label/"
+            }
+        },
+        "horizontal_label": {
+            "@id": "https://esgvoc.ipsl.fr/resource/universe/horizontal_label/",
+            "@type": "@id",
+            "@context": {
+                "@base": "https://esgvoc.ipsl.fr/resource/universe/horizontal_label/"
+            }
+        },
+        "area_label": {
+            "@id": "https://esgvoc.ipsl.fr/resource/universe/area_label/",
+            "@type": "@id",
+            "@context": {
+                "@base": "https://esgvoc.ipsl.fr/resource/universe/area_label/"
+            }
+        },
+        "realm": {
+            "@id": "https://esgvoc.ipsl.fr/resource/universe/realm/",
+            "@type": "@id",
+            "@context": {
+                "@base": "https://esgvoc.ipsl.fr/resource/universe/realm/"
+            }
+        },
+        "table_id": {
+            "@id": "https://esgvoc.ipsl.fr/resource/universe/table/",
+            "@type": "@id",
+            "@context": {
+                "@base": "https://esgvoc.ipsl.fr/resource/universe/table/"
+            }
+        },
+        "frequency": {
+            "@id": "https://esgvoc.ipsl.fr/resource/universe/frequency/",
+            "@type": "@id",
+            "@context": {
+                "@base": "https://esgvoc.ipsl.fr/resource/universe/frequency/"
+            }
+        }
+    },
+    "esgvoc_resolve_modes": {
+        "variable_root_name": "full",
+        "dimensions": "full",
+        "temporal_label": "full",
+        "vertical_label": "full",
+        "horizontal_label": "full",
+        "area_label": "full",
+        "realm": "full",
+        "table_id": "full",
+        "frequency": "full"
     }
 }

@@ -1,5 +1,20 @@
 {
     "@context": "000_context.jsonld",
     "id": "bldep_tavg-u-hxy-u",
-    "type": "known_branded_variable"
+    "type": "known_branded_variable",
+    "description": "Boundary Layer depth",
+    "long_name": "Boundary Layer Depth",
+    "table_id": [
+        "atmos"
+    ],
+    "compound_name": [
+        "atmos.bldep.tavg-u-hxy-u.1hr.glb",
+        "atmos.bldep.tavg-u-hxy-u.mon.glb"
+    ],
+    "frequency": [
+        "1hr",
+        "mon"
+    ],
+    "cell_measures": "area: areacella",
+    "realm": "atmos"
 }

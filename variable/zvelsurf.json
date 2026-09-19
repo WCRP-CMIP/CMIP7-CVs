@@ -1,5 +1,6 @@
 {
     "@context": "000_context.jsonld",
     "id": "zvelsurf",
-    "type": "variable"
+    "type": "variable",
+    "long_name": "Upward Component of Land-Ice Surface Velocity"
 }

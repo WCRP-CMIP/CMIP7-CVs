@@ -1,5 +1,18 @@
 {
     "@context": "000_context.jsonld",
     "id": "loadno3_tavg-u-hxy-u",
-    "type": "known_branded_variable"
+    "type": "known_branded_variable",
+    "description": "The total dry mass of nitrate aerosol particles per unit area.",
+    "long_name": "Load of NO3",
+    "table_id": [
+        "atmos"
+    ],
+    "compound_name": [
+        "atmos.loadno3.tavg-u-hxy-u.day.glb"
+    ],
+    "frequency": [
+        "day"
+    ],
+    "cell_measures": "area: areacella",
+    "realm": "atmos"
 }

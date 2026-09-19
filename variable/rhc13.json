@@ -1,5 +1,6 @@
 {
     "@context": "000_context.jsonld",
     "id": "rhc13",
-    "type": "variable"
+    "type": "variable",
+    "long_name": "Carbon-13 Mass Flux into Atmosphere Due to Heterotrophic Respiration on Land [kgC m-2 s-1]"
 }

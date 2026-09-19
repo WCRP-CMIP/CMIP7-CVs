@@ -1,5 +1,18 @@
 {
     "@context": "000_context.jsonld",
     "id": "emivoc_tavg-u-hxy-u",
-    "type": "known_branded_variable"
+    "type": "known_branded_variable",
+    "description": "Integrate 3D emission field vertically to 2d field. _If_ fixed molecular weight of NMVOC is not available in model, please provide in units of kilomole m-2 s-1 (i.e. kg m-2 s-1 as if model NMVOC had molecular weight of 1) and add a comment to your file.",
+    "long_name": "Total Emission Rate of NMVOC",
+    "table_id": [
+        "aerosol"
+    ],
+    "compound_name": [
+        "aerosol.emivoc.tavg-u-hxy-u.mon.glb"
+    ],
+    "frequency": [
+        "mon"
+    ],
+    "cell_measures": "area: areacella",
+    "realm": "aerosol"
 }

@@ -1,5 +1,6 @@
 {
     "@context": "000_context.jsonld",
     "id": "h2loss",
-    "type": "variable"
+    "type": "variable",
+    "long_name": "Loss of H2 due to chemical destruction"
 }

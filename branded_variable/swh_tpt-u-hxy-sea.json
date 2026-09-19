@@ -1,5 +1,18 @@
 {
     "@context": "000_context.jsonld",
     "id": "swh_tpt-u-hxy-sea",
-    "type": "known_branded_variable"
+    "type": "known_branded_variable",
+    "description": "Average height of the highest one-third of waves present in the sea state, incorporating both wind-sea and swell waves. This is a key parameter for describing wave energy and is derived from the wave spectrum using spectral moments. Specifically, this parameter is four times the square root of the integral over all directions and all frequencies of the two-dimensional wave spectrum.",
+    "long_name": "Total Significant Wave Height",
+    "table_id": [
+        "ocean"
+    ],
+    "compound_name": [
+        "ocean.swh.tpt-u-hxy-sea.3hr.glb"
+    ],
+    "frequency": [
+        "3hr"
+    ],
+    "cell_measures": "area: areacello",
+    "realm": "ocean"
 }

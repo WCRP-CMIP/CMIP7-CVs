@@ -1,5 +1,17 @@
 {
     "@context": "000_context.jsonld",
     "id": "vt100_tavg-100hpa-hy-air",
-    "type": "known_branded_variable"
+    "type": "known_branded_variable",
+    "description": "Zonally averaged eddy temperature flux at 100hPa as monthly means derived from daily (or higher frequency) fields.",
+    "long_name": "Northward Eddy Temperature Flux",
+    "table_id": [
+        "aerosol"
+    ],
+    "compound_name": [
+        "aerosol.vt100.tavg-100hPa-hy-air.mon.glb"
+    ],
+    "frequency": [
+        "mon"
+    ],
+    "realm": "aerosol"
 }

@@ -1,0 +1,7 @@
+{
+    "@context": "000_context.jsonld",
+    "id": "plev5u",
+    "type": "data_coordinate",
+    "long_name": "Pressure Levels (5, UTLS)",
+    "tolerance": 1.0
+}

@@ -1,5 +1,6 @@
 {
     "@context": "000_context.jsonld",
     "id": "clmodisliquidreff",
-    "type": "variable"
+    "type": "variable",
+    "long_name": "MODIS Liquid-Topped Cloud Area Percentage reported on droplet effective radius dimensions"
 }

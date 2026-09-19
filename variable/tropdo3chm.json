@@ -1,5 +1,6 @@
 {
     "@context": "000_context.jsonld",
     "id": "tropdo3chm",
-    "type": "variable"
+    "type": "variable",
+    "long_name": "Net Chemistry Tendency of O3 in troposphere"
 }

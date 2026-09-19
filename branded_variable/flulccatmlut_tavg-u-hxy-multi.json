@@ -1,5 +1,18 @@
 {
     "@context": "000_context.jsonld",
     "id": "flulccatmlut_tavg-u-hxy-multi",
-    "type": "known_branded_variable"
+    "type": "known_branded_variable",
+    "description": "This annual mean flux refers to the transfer of carbon directly to the atmosphere due to any land-use or land-cover change activities.  Include carbon transferred due to deforestation or agricultural directly into atmosphere, and  emissions form anthropogenic pools into atmosphere",
+    "long_name": "Carbon Transferred Directly to Atmosphere Due to any Land-Use or Land-Cover Change Activities [kgC m-2 s-1]",
+    "table_id": [
+        "land"
+    ],
+    "compound_name": [
+        "land.fLulccAtmLut.tavg-u-hxy-multi.mon.glb"
+    ],
+    "frequency": [
+        "mon"
+    ],
+    "cell_measures": "area: areacella",
+    "realm": "land"
 }

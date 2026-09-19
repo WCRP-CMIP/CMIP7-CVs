@@ -1,5 +1,21 @@
 {
     "@context": "000_context.jsonld",
     "id": "sftgrf_tavg-u-hxy-u",
-    "type": "known_branded_variable"
+    "type": "known_branded_variable",
+    "description": "This is needed in case the grounded ice sheet area changes in time (NO floating ice shelf)",
+    "long_name": "Grounded Ice Sheet Area Percentage",
+    "table_id": [
+        "landice"
+    ],
+    "compound_name": [
+        "landIce.sftgrf.tavg-u-hxy-u.yr.grl",
+        "landIce.sftgrf.tavg-u-hxy-u.yr.ata",
+        "landIce.sftgrf.tavg-u-hxy-u.mon.glb"
+    ],
+    "frequency": [
+        "yr",
+        "mon"
+    ],
+    "cell_measures": "area: areacella",
+    "realm": "landice"
 }

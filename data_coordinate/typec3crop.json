@@ -1,0 +1,6 @@
+{
+    "@context": "000_context.jsonld",
+    "id": "typec3crop",
+    "type": "data_coordinate",
+    "long_name": "surface type"
+}

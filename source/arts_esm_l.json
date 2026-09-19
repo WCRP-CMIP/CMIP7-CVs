@@ -1,0 +1,5 @@
+{
+  "@context": "000_context.jsonld",
+  "id": "arts_esm_l",
+  "type": "model"
+}

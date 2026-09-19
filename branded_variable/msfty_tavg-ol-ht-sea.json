@@ -1,5 +1,17 @@
 {
     "@context": "000_context.jsonld",
     "id": "msfty_tavg-ol-ht-sea",
-    "type": "known_branded_variable"
+    "type": "known_branded_variable",
+    "description": "Overturning mass streamfunction arising from all advective mass transport processes, resolved and parameterized.",
+    "long_name": "Ocean Y Overturning Mass Streamfunction",
+    "table_id": [
+        "ocean"
+    ],
+    "compound_name": [
+        "ocean.msfty.tavg-ol-ht-sea.mon.glb"
+    ],
+    "frequency": [
+        "mon"
+    ],
+    "realm": "ocean"
 }

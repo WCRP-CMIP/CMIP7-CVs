@@ -1,5 +1,18 @@
 {
     "@context": "000_context.jsonld",
     "id": "rsds_tavg-u-hxy-sn",
-    "type": "known_branded_variable"
+    "type": "known_branded_variable",
+    "description": "Surface Downwelling Shortwave Radiation over the portion of a land grid cell covered by snow but not by ice. Can be used for computation of surface albedo.",
+    "long_name": "Surface Downwelling Shortwave Radiation over Snow",
+    "table_id": [
+        "land"
+    ],
+    "compound_name": [
+        "land.rsds.tavg-u-hxy-sn.mon.glb"
+    ],
+    "frequency": [
+        "mon"
+    ],
+    "cell_measures": "area: areacella",
+    "realm": "land"
 }

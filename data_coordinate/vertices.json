@@ -1,0 +1,6 @@
+{
+    "@context": "000_context.jsonld",
+    "id": "vertices",
+    "type": "data_coordinate",
+    "long_name": "Grid Cell Vertex Index"
+}

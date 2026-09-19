@@ -1,5 +1,18 @@
 {
     "@context": "000_context.jsonld",
     "id": "chlmisc_tavg-ol-hxy-sea",
-    "type": "known_branded_variable"
+    "type": "known_branded_variable",
+    "description": "chlorophyll from additional phytoplankton component concentrations alone",
+    "long_name": "Mass Concentration of Other Phytoplankton Expressed as Chlorophyll in Sea Water",
+    "table_id": [
+        "ocnbgchem"
+    ],
+    "compound_name": [
+        "ocnBgchem.chlmisc.tavg-ol-hxy-sea.mon.glb"
+    ],
+    "frequency": [
+        "mon"
+    ],
+    "cell_measures": "area: areacello volume: volcello",
+    "realm": "ocnbgchem"
 }

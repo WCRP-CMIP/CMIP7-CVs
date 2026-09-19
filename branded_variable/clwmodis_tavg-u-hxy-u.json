@@ -1,5 +1,18 @@
 {
     "@context": "000_context.jsonld",
     "id": "clwmodis_tavg-u-hxy-u",
-    "type": "known_branded_variable"
+    "type": "known_branded_variable",
+    "description": "MODIS Liquid Cloud Fraction",
+    "long_name": "MODIS Liquid Cloud Percentage",
+    "table_id": [
+        "atmos"
+    ],
+    "compound_name": [
+        "atmos.clwmodis.tavg-u-hxy-u.mon.glb"
+    ],
+    "frequency": [
+        "mon"
+    ],
+    "cell_measures": "area: areacella",
+    "realm": "atmos"
 }

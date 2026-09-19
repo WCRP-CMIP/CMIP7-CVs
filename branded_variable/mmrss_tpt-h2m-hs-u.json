@@ -1,5 +1,18 @@
 {
     "@context": "000_context.jsonld",
     "id": "mmrss_tpt-h2m-hs-u",
-    "type": "known_branded_variable"
+    "type": "known_branded_variable",
+    "description": "This variable represents instantaneous near surface sea salt aerosol mass mixing ratio at CF sites, sampled every 3 hours",
+    "long_name": "Sea salt Aerosol Mass Mixing Ratio at CF sites near-surface",
+    "table_id": [
+        "aerosol"
+    ],
+    "compound_name": [
+        "aerosol.mmrss.tpt-h2m-hs-u.3hr.glb"
+    ],
+    "frequency": [
+        "3hr"
+    ],
+    "cell_measures": "--MODEL",
+    "realm": "aerosol"
 }

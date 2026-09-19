@@ -1,5 +1,20 @@
 {
     "@context": "000_context.jsonld",
     "id": "siitdthick_tavg-u-hxy-si",
-    "type": "known_branded_variable"
+    "type": "known_branded_variable",
+    "description": "Actual (floe) thickness of sea ice in each ice thickness category, NOT volume divided by grid area (vector with one entry for each ice thickness category starting from the thinnest category, netcdf file should use thickness bounds of categories as third coordinate axis).",
+    "long_name": "Sea-Ice Thickness in Ice Thickness Categories",
+    "table_id": [
+        "seaice"
+    ],
+    "compound_name": [
+        "seaIce.siitdthick.tavg-u-hxy-si.day.glb",
+        "seaIce.siitdthick.tavg-u-hxy-si.mon.glb"
+    ],
+    "frequency": [
+        "day",
+        "mon"
+    ],
+    "cell_measures": "area: areacello",
+    "realm": "seaice"
 }

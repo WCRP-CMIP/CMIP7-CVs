@@ -1,5 +1,18 @@
 {
     "@context": "000_context.jsonld",
     "id": "simpthick_tavg-u-hxy-simp",
-    "type": "known_branded_variable"
+    "type": "known_branded_variable",
+    "description": "Average depth of melt ponds on sea ice, that is melt pond volume divided by melt pond area.",
+    "long_name": "Melt Pond Depth",
+    "table_id": [
+        "seaice"
+    ],
+    "compound_name": [
+        "seaIce.simpthick.tavg-u-hxy-simp.mon.glb"
+    ],
+    "frequency": [
+        "mon"
+    ],
+    "cell_measures": "area: areacello",
+    "realm": "seaice"
 }

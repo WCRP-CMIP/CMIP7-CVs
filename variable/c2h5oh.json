@@ -1,5 +1,6 @@
 {
     "@context": "000_context.jsonld",
     "id": "c2h5oh",
-    "type": "variable"
+    "type": "variable",
+    "long_name": "Ethanol volume mixing ratio"
 }

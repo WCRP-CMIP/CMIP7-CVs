@@ -1,5 +1,6 @@
 {
     "@context": "000_context.jsonld",
     "id": "tdps",
-    "type": "variable"
+    "type": "variable",
+    "long_name": "2m Dewpoint Temperature"
 }

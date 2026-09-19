@@ -1,5 +1,18 @@
 {
     "@context": "000_context.jsonld",
     "id": "vegheight_tavg-u-hxy-veg",
-    "type": "known_branded_variable"
+    "type": "known_branded_variable",
+    "description": "Vegetation height averaged over all vegetation types and over the vegetated fraction of a grid cell.",
+    "long_name": "Height of the Vegetation Canopy",
+    "table_id": [
+        "land"
+    ],
+    "compound_name": [
+        "land.vegHeight.tavg-u-hxy-veg.mon.glb"
+    ],
+    "frequency": [
+        "mon"
+    ],
+    "cell_measures": "area: areacella",
+    "realm": "land"
 }

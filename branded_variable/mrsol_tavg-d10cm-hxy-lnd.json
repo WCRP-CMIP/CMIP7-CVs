@@ -1,5 +1,20 @@
 {
     "@context": "000_context.jsonld",
     "id": "mrsol_tavg-d10cm-hxy-lnd",
-    "type": "known_branded_variable"
+    "type": "known_branded_variable",
+    "description": "the mass of water in all phases in a thin surface soil layer.",
+    "long_name": "Moisture in Upper Portion of Soil Column",
+    "table_id": [
+        "land"
+    ],
+    "compound_name": [
+        "land.mrsol.tavg-d10cm-hxy-lnd.mon.glb",
+        "land.mrsol.tavg-d10cm-hxy-lnd.day.glb"
+    ],
+    "frequency": [
+        "mon",
+        "day"
+    ],
+    "cell_measures": "area: areacella",
+    "realm": "land"
 }

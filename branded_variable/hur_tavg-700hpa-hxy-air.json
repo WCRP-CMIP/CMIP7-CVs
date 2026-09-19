@@ -1,5 +1,18 @@
 {
     "@context": "000_context.jsonld",
     "id": "hur_tavg-700hpa-hxy-air",
-    "type": "known_branded_variable"
+    "type": "known_branded_variable",
+    "description": "Relative humidity at 700 hPa",
+    "long_name": "Relative humidity at 700 hPa",
+    "table_id": [
+        "atmos"
+    ],
+    "compound_name": [
+        "atmos.hur.tavg-700hPa-hxy-air.day.glb"
+    ],
+    "frequency": [
+        "day"
+    ],
+    "cell_measures": "area: areacella",
+    "realm": "atmos"
 }

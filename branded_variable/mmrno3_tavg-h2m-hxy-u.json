@@ -1,5 +1,18 @@
 {
     "@context": "000_context.jsonld",
     "id": "mmrno3_tavg-h2m-hxy-u",
-    "type": "known_branded_variable"
+    "type": "known_branded_variable",
+    "description": "Daily mean NO3 aerosol mass mixing ratio near surface.",
+    "long_name": "Daily mean near-surface NO3 aerosol",
+    "table_id": [
+        "aerosol"
+    ],
+    "compound_name": [
+        "aerosol.mmrno3.tavg-h2m-hxy-u.day.glb"
+    ],
+    "frequency": [
+        "day"
+    ],
+    "cell_measures": "area: areacella",
+    "realm": "aerosol"
 }

@@ -1,5 +1,18 @@
 {
     "@context": "000_context.jsonld",
     "id": "treefracndlevg_tavg-u-hxy-u",
-    "type": "known_branded_variable"
+    "type": "known_branded_variable",
+    "description": "This is the percentage of the entire grid cell that is covered by needleleaf evergreen trees.",
+    "long_name": "Needleleaf Evergreen Tree Area Percentage",
+    "table_id": [
+        "land"
+    ],
+    "compound_name": [
+        "land.treeFracNdlEvg.tavg-u-hxy-u.mon.glb"
+    ],
+    "frequency": [
+        "mon"
+    ],
+    "cell_measures": "area: areacella",
+    "realm": "land"
 }

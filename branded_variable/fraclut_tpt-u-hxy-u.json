@@ -1,5 +1,20 @@
 {
     "@context": "000_context.jsonld",
     "id": "fraclut_tpt-u-hxy-u",
-    "type": "known_branded_variable"
+    "type": "known_branded_variable",
+    "description": "End of month values (not monthly mean); note that percentage should be reported as percentage of land grid cell (example: frac_lnd = 0.5, frac_ocn = 0.5, frac_crop_lnd = 0.2 (of land portion of grid cell), then frac_lut(crop) = 0.5*0.2 = 0.1)",
+    "long_name": "Percentage of Grid Cell for Each Land-Use Tile",
+    "table_id": [
+        "land"
+    ],
+    "compound_name": [
+        "land.fracLut.tpt-u-hxy-u.mon.glb",
+        "land.fracLut.tpt-u-hxy-u.yr.glb"
+    ],
+    "frequency": [
+        "mon",
+        "yr"
+    ],
+    "cell_measures": "area: areacella",
+    "realm": "land"
 }

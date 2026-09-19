@@ -1,5 +1,17 @@
 {
     "@context": "000_context.jsonld",
     "id": "hfbasin_tavg-u-hyb-sea",
-    "type": "known_branded_variable"
+    "type": "known_branded_variable",
+    "description": "Contains contributions from all physical processes affecting the northward heat transport, including resolved advection, parameterized advection, lateral diffusion, etc. Diagnosed here as a function of latitude and basin.   Use Celsius for temperature scale.",
+    "long_name": "Northward Ocean Heat Transport",
+    "table_id": [
+        "ocean"
+    ],
+    "compound_name": [
+        "ocean.hfbasin.tavg-u-hyb-sea.mon.glb"
+    ],
+    "frequency": [
+        "mon"
+    ],
+    "realm": "ocean"
 }

@@ -1,0 +1,6 @@
+{
+    "@context": "000_context.jsonld",
+    "id": "site",
+    "type": "data_coordinate",
+    "long_name": "site index"
+}

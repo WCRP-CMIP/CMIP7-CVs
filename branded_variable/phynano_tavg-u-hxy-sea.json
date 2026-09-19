@@ -1,5 +1,18 @@
 {
     "@context": "000_context.jsonld",
     "id": "phynano_tavg-u-hxy-sea",
-    "type": "known_branded_variable"
+    "type": "known_branded_variable",
+    "description": "Mole Concentration of Nanophytoplankton Expressed as Carbon in Sea Water",
+    "long_name": "Mole Concentration of Nanophytoplankton Expressed as Carbon in Sea Water",
+    "table_id": [
+        "ocnbgchem"
+    ],
+    "compound_name": [
+        "ocnBgchem.phynano.tavg-u-hxy-sea.day.glb"
+    ],
+    "frequency": [
+        "day"
+    ],
+    "cell_measures": "area: areacello volume: volcello",
+    "realm": "ocnbgchem"
 }

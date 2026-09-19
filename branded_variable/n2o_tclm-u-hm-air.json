@@ -1,5 +1,17 @@
 {
     "@context": "000_context.jsonld",
     "id": "n2o_tclm-u-hm-air",
-    "type": "known_branded_variable"
+    "type": "known_branded_variable",
+    "description": "Global mean Nitrous Oxide (N2O)",
+    "long_name": "Global Mean Mole Fraction of N2O",
+    "table_id": [
+        "atmoschem"
+    ],
+    "compound_name": [
+        "atmosChem.n2o.tclm-u-hm-air.mon.glb"
+    ],
+    "frequency": [
+        "mon"
+    ],
+    "realm": "atmoschem"
 }

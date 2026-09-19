@@ -1,5 +1,20 @@
 {
     "@context": "000_context.jsonld",
     "id": "snicem_tavg-u-hxy-is",
-    "type": "known_branded_variable"
+    "type": "known_branded_variable",
+    "description": "Loss of snow and ice mass resulting from surface melting. Computed as the total surface melt on the land ice portion of the grid cell divided by land ice area in the grid cell.",
+    "long_name": "Ice Sheet Surface Snow and Ice Melt Flux",
+    "table_id": [
+        "landice"
+    ],
+    "compound_name": [
+        "landIce.snicem.tavg-u-hxy-is.mon.ata",
+        "landIce.snicem.tavg-u-hxy-is.mon.grl",
+        "landIce.snicem.tavg-u-hxy-is.mon.glb"
+    ],
+    "frequency": [
+        "mon"
+    ],
+    "cell_measures": "area: areacella",
+    "realm": "landice"
 }

@@ -1,5 +1,6 @@
 {
     "@context": "000_context.jsonld",
     "id": "rsutcso3ref",
-    "type": "variable"
+    "type": "variable",
+    "long_name": "Top of atmosphere shortwave radiative flux under clear sky conditions from a diagnostic call to the radiation scheme using a reference ozone field"
 }

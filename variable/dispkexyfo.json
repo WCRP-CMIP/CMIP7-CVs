@@ -1,5 +1,6 @@
 {
     "@context": "000_context.jsonld",
     "id": "dispkexyfo",
-    "type": "variable"
+    "type": "variable",
+    "long_name": "Ocean Kinetic Energy Dissipation per Unit Area Due to XY Friction"
 }

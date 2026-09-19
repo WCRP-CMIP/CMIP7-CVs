@@ -1,0 +1,6 @@
+{
+    "@context": "000_context.jsonld",
+    "id": "hur100p2pct",
+    "type": "data_coordinate",
+    "long_name": "Relative Humidity 100.2 percent"
+}

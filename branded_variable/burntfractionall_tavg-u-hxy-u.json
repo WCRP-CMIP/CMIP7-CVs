@@ -1,5 +1,18 @@
 {
     "@context": "000_context.jsonld",
     "id": "burntfractionall_tavg-u-hxy-u",
-    "type": "known_branded_variable"
+    "type": "known_branded_variable",
+    "description": "Percentage of grid cell burned due to all fires including natural and anthropogenic fires and those associated with anthropogenic land use change",
+    "long_name": "Percentage of Entire Grid Cell That Is Covered by Burnt Vegetation (All Classes)",
+    "table_id": [
+        "land"
+    ],
+    "compound_name": [
+        "land.burntFractionAll.tavg-u-hxy-u.mon.glb"
+    ],
+    "frequency": [
+        "mon"
+    ],
+    "cell_measures": "area: areacella",
+    "realm": "land"
 }

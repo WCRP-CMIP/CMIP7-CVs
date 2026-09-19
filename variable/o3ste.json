@@ -1,5 +1,6 @@
 {
     "@context": "000_context.jsonld",
     "id": "o3ste",
-    "type": "variable"
+    "type": "variable",
+    "long_name": "Stratospheric Ozone Tracer Volume Mixing Ratio"
 }

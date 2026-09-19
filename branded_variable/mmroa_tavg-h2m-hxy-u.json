@@ -1,5 +1,18 @@
 {
     "@context": "000_context.jsonld",
     "id": "mmroa_tavg-h2m-hxy-u",
-    "type": "known_branded_variable"
+    "type": "known_branded_variable",
+    "description": "Daily mean total organic aerosol mass mixing ratio near surface.",
+    "long_name": "Total near-surface organic aerosol",
+    "table_id": [
+        "aerosol"
+    ],
+    "compound_name": [
+        "aerosol.mmroa.tavg-h2m-hxy-u.day.glb"
+    ],
+    "frequency": [
+        "day"
+    ],
+    "cell_measures": "area: areacella",
+    "realm": "aerosol"
 }

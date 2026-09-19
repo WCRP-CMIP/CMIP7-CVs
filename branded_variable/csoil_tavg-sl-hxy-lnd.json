@@ -1,5 +1,18 @@
 {
     "@context": "000_context.jsonld",
     "id": "csoil_tavg-sl-hxy-lnd",
-    "type": "known_branded_variable"
+    "type": "known_branded_variable",
+    "description": "for models with vertically discretised soil carbon, report total soil carbon for each level",
+    "long_name": "Carbon Mass in Each Model Soil Level (Summed over All Soil Carbon Pools in That Level)",
+    "table_id": [
+        "land"
+    ],
+    "compound_name": [
+        "land.cSoil.tavg-sl-hxy-lnd.mon.glb"
+    ],
+    "frequency": [
+        "mon"
+    ],
+    "cell_measures": "area: areacella",
+    "realm": "land"
 }

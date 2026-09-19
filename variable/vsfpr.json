@@ -1,5 +1,6 @@
 {
     "@context": "000_context.jsonld",
     "id": "vsfpr",
-    "type": "variable"
+    "type": "variable",
+    "long_name": "Virtual Salt Flux into Sea Water Due to Rainfall"
 }

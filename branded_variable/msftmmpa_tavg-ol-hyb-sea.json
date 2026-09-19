@@ -1,5 +1,17 @@
 {
     "@context": "000_context.jsonld",
     "id": "msftmmpa_tavg-ol-hyb-sea",
-    "type": "known_branded_variable"
+    "type": "known_branded_variable",
+    "description": "CMIP5 called this \"due to Bolus Advection\".  Name change respects the more general physics of the mesoscale parameterizations.",
+    "long_name": "Ocean Meridional Overturning Mass Streamfunction Due to Parameterized Mesoscale Advection",
+    "table_id": [
+        "ocean"
+    ],
+    "compound_name": [
+        "ocean.msftmmpa.tavg-ol-hyb-sea.mon.glb"
+    ],
+    "frequency": [
+        "mon"
+    ],
+    "realm": "ocean"
 }

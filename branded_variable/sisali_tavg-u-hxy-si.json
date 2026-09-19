@@ -1,5 +1,20 @@
 {
     "@context": "000_context.jsonld",
     "id": "sisali_tavg-u-hxy-si",
-    "type": "known_branded_variable"
+    "type": "known_branded_variable",
+    "description": "Mean sea-ice salinity of all sea ice in grid cell. Sometimes, models implicitly or explicitly assume a different salinity of the ice for thermodynamic considerations than they do for closing the salt budget with the ocean. In these cases, the mean salinity used in the calculation of the salt budget should be reported.",
+    "long_name": "Sea-Ice Salinity",
+    "table_id": [
+        "seaice"
+    ],
+    "compound_name": [
+        "seaIce.sisali.tavg-u-hxy-si.day.glb",
+        "seaIce.sisali.tavg-u-hxy-si.mon.glb"
+    ],
+    "frequency": [
+        "day",
+        "mon"
+    ],
+    "cell_measures": "area: areacello",
+    "realm": "seaice"
 }

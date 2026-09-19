@@ -1,5 +1,17 @@
 {
     "@context": "000_context.jsonld",
     "id": "hfbasinpmadv_tavg-u-hyb-sea",
-    "type": "known_branded_variable"
+    "type": "known_branded_variable",
+    "description": "Contributions to heat transport from parameterized mesoscale eddy-induced advective transport. Diagnosed here as a function of latitude and basin.  Use Celsius for temperature scale.",
+    "long_name": "Northward Ocean Heat Transport Due to Parameterized Mesoscale Advection",
+    "table_id": [
+        "ocean"
+    ],
+    "compound_name": [
+        "ocean.hfbasinpmadv.tavg-u-hyb-sea.mon.glb"
+    ],
+    "frequency": [
+        "mon"
+    ],
+    "realm": "ocean"
 }

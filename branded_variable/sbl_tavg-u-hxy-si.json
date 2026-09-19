@@ -1,5 +1,18 @@
 {
     "@context": "000_context.jsonld",
     "id": "sbl_tavg-u-hxy-si",
-    "type": "known_branded_variable"
+    "type": "known_branded_variable",
+    "description": "Rate of change of snow mass through sublimation divided by grid-cell area. If a model does not differentiate between the sublimation of snow and sea ice, we recommend to report all sublimation within sisndmasssubl as long as the ice is snow covered.",
+    "long_name": "Snow Mass Rate of Change Through Evaporation or Sublimation",
+    "table_id": [
+        "seaice"
+    ],
+    "compound_name": [
+        "seaIce.sbl.tavg-u-hxy-si.mon.glb"
+    ],
+    "frequency": [
+        "mon"
+    ],
+    "cell_measures": "area: areacello",
+    "realm": "seaice"
 }

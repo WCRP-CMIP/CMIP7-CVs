@@ -1,5 +1,18 @@
 {
     "@context": "000_context.jsonld",
     "id": "thetao_tavg-d700m-hxy-sea",
-    "type": "known_branded_variable"
+    "type": "known_branded_variable",
+    "description": "Upper 700m, 2D field",
+    "long_name": "Depth Average Potential Temperature of Upper 700m",
+    "table_id": [
+        "ocean"
+    ],
+    "compound_name": [
+        "ocean.thetao.tavg-d700m-hxy-sea.mon.glb"
+    ],
+    "frequency": [
+        "mon"
+    ],
+    "cell_measures": "area: areacello",
+    "realm": "ocean"
 }

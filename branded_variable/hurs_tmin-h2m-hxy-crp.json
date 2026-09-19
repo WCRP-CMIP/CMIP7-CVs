@@ -1,5 +1,18 @@
 {
     "@context": "000_context.jsonld",
     "id": "hurs_tmin-h2m-hxy-crp",
-    "type": "known_branded_variable"
+    "type": "known_branded_variable",
+    "description": "The relative humidity with respect to liquid water for T> 0 C, and with respect to ice for T<0 C.",
+    "long_name": "Daily Minimum Near-Surface Relative Humidity over Crop Tile",
+    "table_id": [
+        "atmos"
+    ],
+    "compound_name": [
+        "atmos.hurs.tmin-h2m-hxy-crp.day.glb"
+    ],
+    "frequency": [
+        "day"
+    ],
+    "cell_measures": "area: areacella",
+    "realm": "atmos"
 }

@@ -1,5 +1,6 @@
 {
     "@context": "000_context.jsonld",
     "id": "sisndmassdyn",
-    "type": "variable"
+    "type": "variable",
+    "long_name": "Snow Mass Rate of Change Through Advection by Sea-Ice Dynamics"
 }

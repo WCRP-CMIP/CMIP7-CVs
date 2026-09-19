@@ -1,5 +1,21 @@
 {
     "@context": "000_context.jsonld",
     "id": "ta_tavg-p19-hxy-air",
-    "type": "known_branded_variable"
+    "type": "known_branded_variable",
+    "description": "Air Temperature",
+    "long_name": "Air Temperature",
+    "table_id": [
+        "atmos"
+    ],
+    "compound_name": [
+        "atmos.ta.tavg-p19-hxy-air.day.glb",
+        "atmos.ta.tavg-p19-hxy-air.mon.30S-90S",
+        "atmos.ta.tavg-p19-hxy-air.mon.glb"
+    ],
+    "frequency": [
+        "day",
+        "mon"
+    ],
+    "cell_measures": "area: areacella",
+    "realm": "atmos"
 }

@@ -1,5 +1,18 @@
 {
     "@context": "000_context.jsonld",
     "id": "siflfwbot_tavg-u-hxy-sea",
-    "type": "known_branded_variable"
+    "type": "known_branded_variable",
+    "description": "computed as the sea ice thermodynamic water flux into the ocean divided by the area of the ocean portion of the grid cell.",
+    "long_name": "Water Flux into Sea Water Due to Sea Ice Thermodynamics",
+    "table_id": [
+        "ocean"
+    ],
+    "compound_name": [
+        "ocean.siflfwbot.tavg-u-hxy-sea.mon.glb"
+    ],
+    "frequency": [
+        "mon"
+    ],
+    "cell_measures": "area: areacello",
+    "realm": "ocean"
 }

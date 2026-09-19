@@ -1,5 +1,22 @@
 {
     "@context": "000_context.jsonld",
     "id": "mrro_tavg-u-hxy-lnd",
-    "type": "known_branded_variable"
+    "type": "known_branded_variable",
+    "description": "the total runoff (including \"drainage\" through the base of the soil model) leaving the land portion of the grid cell divided by the land area in the grid cell, averaged over the 3-hour interval.",
+    "long_name": "Total Runoff",
+    "table_id": [
+        "land"
+    ],
+    "compound_name": [
+        "land.mrro.tavg-u-hxy-lnd.mon.glb",
+        "land.mrro.tavg-u-hxy-lnd.day.glb",
+        "land.mrro.tavg-u-hxy-lnd.3hr.glb"
+    ],
+    "frequency": [
+        "mon",
+        "day",
+        "3hr"
+    ],
+    "cell_measures": "area: areacella",
+    "realm": "land"
 }

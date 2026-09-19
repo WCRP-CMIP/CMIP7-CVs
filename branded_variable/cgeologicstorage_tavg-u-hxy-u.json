@@ -1,5 +1,18 @@
 {
     "@context": "000_context.jsonld",
     "id": "cgeologicstorage_tavg-u-hxy-u",
-    "type": "known_branded_variable"
+    "type": "known_branded_variable",
+    "description": "Mass of carbon that has been intentionally sequestered in geologic storage. The definition of geologic storage here is that it be stored for periods of time that are long as compared to the simulation.",
+    "long_name": "Carbon Mass in Geologic Storage",
+    "table_id": [
+        "land"
+    ],
+    "compound_name": [
+        "land.cGeologicStorage.tavg-u-hxy-u.mon.glb"
+    ],
+    "frequency": [
+        "mon"
+    ],
+    "cell_measures": "area: areacella",
+    "realm": "land"
 }

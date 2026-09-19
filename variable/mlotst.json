@@ -1,5 +1,6 @@
 {
     "@context": "000_context.jsonld",
     "id": "mlotst",
-    "type": "variable"
+    "type": "variable",
+    "long_name": "Ocean Mixed Layer Thickness Defined by Sigma T of 0.03 kg m-3"
 }

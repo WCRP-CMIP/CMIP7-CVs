@@ -1,5 +1,18 @@
 {
     "@context": "000_context.jsonld",
     "id": "clitterlut_tpt-u-hxy-multi",
-    "type": "known_branded_variable"
+    "type": "known_branded_variable",
+    "description": "end of year values (not annual mean)",
+    "long_name": "Carbon  in Above and Below-Ground Litter Pools on Land-Use Tiles",
+    "table_id": [
+        "land"
+    ],
+    "compound_name": [
+        "land.cLitterLut.tpt-u-hxy-multi.yr.glb"
+    ],
+    "frequency": [
+        "yr"
+    ],
+    "cell_measures": "area: areacella",
+    "realm": "land"
 }

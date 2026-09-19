@@ -1,5 +1,18 @@
 {
     "@context": "000_context.jsonld",
     "id": "dslw_tavg-u-hxy-lnd",
-    "type": "known_branded_variable"
+    "type": "known_branded_variable",
+    "description": "Change in Soil Moisture",
+    "long_name": "Change in Soil Moisture",
+    "table_id": [
+        "land"
+    ],
+    "compound_name": [
+        "land.dslw.tavg-u-hxy-lnd.day.glb"
+    ],
+    "frequency": [
+        "day"
+    ],
+    "cell_measures": "area: areacella",
+    "realm": "land"
 }

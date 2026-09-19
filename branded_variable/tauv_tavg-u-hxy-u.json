@@ -1,5 +1,20 @@
 {
     "@context": "000_context.jsonld",
     "id": "tauv_tavg-u-hxy-u",
-    "type": "known_branded_variable"
+    "type": "known_branded_variable",
+    "description": "Downward northward wind stress at the surface",
+    "long_name": "Surface Downward Northward Wind Stress",
+    "table_id": [
+        "atmos"
+    ],
+    "compound_name": [
+        "atmos.tauv.tavg-u-hxy-u.day.glb",
+        "atmos.tauv.tavg-u-hxy-u.mon.glb"
+    ],
+    "frequency": [
+        "day",
+        "mon"
+    ],
+    "cell_measures": "area: areacella",
+    "realm": "atmos"
 }

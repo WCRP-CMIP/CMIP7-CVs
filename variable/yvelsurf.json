@@ -1,5 +1,6 @@
 {
     "@context": "000_context.jsonld",
     "id": "yvelsurf",
-    "type": "variable"
+    "type": "variable",
+    "long_name": "Y-Component of Land Ice Surface Velocity"
 }

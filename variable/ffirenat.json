@@ -1,5 +1,6 @@
 {
     "@context": "000_context.jsonld",
     "id": "ffirenat",
-    "type": "variable"
+    "type": "variable",
+    "long_name": "Carbon Mass Flux into Atmosphere Due to CO2 Emission from Natural Fire [kgC m-2 s-1]"
 }

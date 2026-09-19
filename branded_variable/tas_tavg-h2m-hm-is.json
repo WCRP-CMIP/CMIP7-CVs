@@ -1,5 +1,18 @@
 {
     "@context": "000_context.jsonld",
     "id": "tas_tavg-h2m-hm-is",
-    "type": "known_branded_variable"
+    "type": "known_branded_variable",
+    "description": "quantity averaged over ice sheet (grounded ice sheet and floating ice shelf) only. Needed to analyse the impact of downscaling methods",
+    "long_name": "Near-Surface Air Temperature",
+    "table_id": [
+        "atmos"
+    ],
+    "compound_name": [
+        "atmos.tas.tavg-h2m-hm-is.mon.grl",
+        "atmos.tas.tavg-h2m-hm-is.mon.ata"
+    ],
+    "frequency": [
+        "mon"
+    ],
+    "realm": "atmos"
 }

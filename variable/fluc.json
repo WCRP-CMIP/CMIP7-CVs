@@ -1,5 +1,6 @@
 {
     "@context": "000_context.jsonld",
     "id": "fluc",
-    "type": "variable"
+    "type": "variable",
+    "long_name": "Net Carbon Mass Flux into Atmosphere Due to Land-Use Change [kgC m-2 s-1]"
 }

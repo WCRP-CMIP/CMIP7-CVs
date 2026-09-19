@@ -1,5 +1,18 @@
 {
     "@context": "000_context.jsonld",
     "id": "loadsoa_tavg-u-hxy-u",
-    "type": "known_branded_variable"
+    "type": "known_branded_variable",
+    "description": "The total dry mass of secondary particulate organic aerosol particles per unit area.",
+    "long_name": "Load of Dry Aerosol Secondary Organic Matter",
+    "table_id": [
+        "atmos"
+    ],
+    "compound_name": [
+        "atmos.loadsoa.tavg-u-hxy-u.day.glb"
+    ],
+    "frequency": [
+        "day"
+    ],
+    "cell_measures": "area: areacella",
+    "realm": "atmos"
 }

@@ -1,5 +1,6 @@
 {
     "@context": "000_context.jsonld",
     "id": "tauvnogw",
-    "type": "variable"
+    "type": "variable",
+    "long_name": "Northward Reynolds stress from non-orographic gravity wave parameterization"
 }

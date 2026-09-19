@@ -1,8 +1,8 @@
 {
     "@context": {
+        "@base": "https://esgvoc.ipsl.fr/resource/universe/frequency/",
         "id": "@id",
         "type": "@type",
-        "@base": "https://esgvoc.ipsl.fr/resource/universe/frequency/",
-        "frequency": "https://esgvoc.ipsl.fr/resource/universe/frequency"
+        "frequency": "https://esgvoc.ipsl.fr/resource/universe/frequency/"
     }
 }

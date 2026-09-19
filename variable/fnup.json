@@ -1,5 +1,6 @@
 {
     "@context": "000_context.jsonld",
     "id": "fnup",
-    "type": "variable"
+    "type": "variable",
+    "long_name": "Total Plant Nitrogen Uptake (Sum of Ammonium and Nitrate) Irrespective of the Source of Nitrogen"
 }

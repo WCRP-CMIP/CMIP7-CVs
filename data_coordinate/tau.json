@@ -1,0 +1,7 @@
+{
+    "@context": "000_context.jsonld",
+    "id": "tau",
+    "type": "data_coordinate",
+    "long_name": "cloud optical thickness",
+    "tolerance": 1.0
+}

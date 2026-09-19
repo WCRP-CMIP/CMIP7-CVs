@@ -1,5 +1,6 @@
 {
     "@context": "000_context.jsonld",
     "id": "hurs",
-    "type": "variable"
+    "type": "variable",
+    "long_name": "Near-Surface Relative Humidity"
 }

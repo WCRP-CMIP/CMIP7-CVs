@@ -1,5 +1,20 @@
 {
     "@context": "000_context.jsonld",
     "id": "siitdsnthick_tavg-u-hxy-si",
-    "type": "known_branded_variable"
+    "type": "known_branded_variable",
+    "description": "Actual thickness of snow in each ice thickness category, NOT snow volume divided by grid area (vector with one entry for each ice thickness category starting from the thinnest category, netcdf file should use thickness bounds of categories as third coordinate axis). It can also be derived by dividing the volume of snow by the area of snow in each thickness category.",
+    "long_name": "Snow Thickness in Ice Thickness Categories",
+    "table_id": [
+        "seaice"
+    ],
+    "compound_name": [
+        "seaIce.siitdsnthick.tavg-u-hxy-si.mon.glb",
+        "seaIce.siitdsnthick.tavg-u-hxy-si.day.glb"
+    ],
+    "frequency": [
+        "mon",
+        "day"
+    ],
+    "cell_measures": "area: areacello",
+    "realm": "seaice"
 }

@@ -1,5 +1,18 @@
 {
     "@context": "000_context.jsonld",
     "id": "rldcs4co2_tavg-alh-hxy-u",
-    "type": "known_branded_variable"
+    "type": "known_branded_variable",
+    "description": "Downwelling clear-sky longwave radiation calculated using carbon dioxide concentrations increased fourfold (includes the fluxes at the surface and TOA)",
+    "long_name": "Downwelling Clear-Sky Longwave Radiation 4XCO2 Atmosphere",
+    "table_id": [
+        "atmos"
+    ],
+    "compound_name": [
+        "atmos.rldcs4co2.tavg-alh-hxy-u.mon.glb"
+    ],
+    "frequency": [
+        "mon"
+    ],
+    "cell_measures": "area: areacella",
+    "realm": "atmos"
 }

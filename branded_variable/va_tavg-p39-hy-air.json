@@ -1,5 +1,17 @@
 {
     "@context": "000_context.jsonld",
     "id": "va_tavg-p39-hy-air",
-    "type": "known_branded_variable"
+    "type": "known_branded_variable",
+    "description": "Meridional wind (positive in a northward direction).",
+    "long_name": "Northward Wind",
+    "table_id": [
+        "atmos"
+    ],
+    "compound_name": [
+        "atmos.va.tavg-p39-hy-air.mon.glb"
+    ],
+    "frequency": [
+        "mon"
+    ],
+    "realm": "atmos"
 }

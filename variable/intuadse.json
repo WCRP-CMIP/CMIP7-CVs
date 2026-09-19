@@ -1,5 +1,6 @@
 {
     "@context": "000_context.jsonld",
     "id": "intuadse",
-    "type": "variable"
+    "type": "variable",
+    "long_name": "Vertically Integrated Eastward Dry Static Energy Transport"
 }

@@ -1,5 +1,6 @@
 {
     "@context": "000_context.jsonld",
     "id": "chlpico",
-    "type": "variable"
+    "type": "variable",
+    "long_name": "Mass Concentration of Picophytoplankton Expressed as Chlorophyll in Sea Water"
 }

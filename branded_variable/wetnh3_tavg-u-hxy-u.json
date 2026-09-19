@@ -1,5 +1,20 @@
 {
     "@context": "000_context.jsonld",
     "id": "wetnh3_tavg-u-hxy-u",
-    "type": "known_branded_variable"
+    "type": "known_branded_variable",
+    "description": "Daily Wet Deposition Rate of NH3 at surface. Vertically integrated throughout the column to the surface.",
+    "long_name": "Wet Deposition Rate of NH3",
+    "table_id": [
+        "atmoschem"
+    ],
+    "compound_name": [
+        "atmosChem.wetnh3.tavg-u-hxy-u.mon.glb",
+        "atmosChem.wetnh3.tavg-u-hxy-u.day.glb"
+    ],
+    "frequency": [
+        "mon",
+        "day"
+    ],
+    "cell_measures": "area: areacella",
+    "realm": "atmoschem"
 }

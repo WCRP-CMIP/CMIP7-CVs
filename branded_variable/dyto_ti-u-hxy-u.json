@@ -1,5 +1,18 @@
 {
     "@context": "000_context.jsonld",
     "id": "dyto_ti-u-hxy-u",
-    "type": "known_branded_variable"
+    "type": "known_branded_variable",
+    "description": "The linear extent of the cell in the y direction of the horizontal grid centered at t-points (points for tracers such as temperature, salinity, etc.). Not applicable to unstructured grids.",
+    "long_name": "Cell Length in the Y Direction at t-points",
+    "table_id": [
+        "ocean"
+    ],
+    "compound_name": [
+        "ocean.dyto.ti-u-hxy-u.fx.glb"
+    ],
+    "frequency": [
+        "fx"
+    ],
+    "cell_measures": "--MODEL",
+    "realm": "ocean"
 }

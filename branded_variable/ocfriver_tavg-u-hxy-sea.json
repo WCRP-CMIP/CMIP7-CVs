@@ -1,5 +1,18 @@
 {
     "@context": "000_context.jsonld",
     "id": "ocfriver_tavg-u-hxy-sea",
-    "type": "known_branded_variable"
+    "type": "known_branded_variable",
+    "description": "Organic Carbon supply to ocean through runoff (separate from gas exchange)",
+    "long_name": "Flux of Organic Carbon into Ocean Surface by Runoff",
+    "table_id": [
+        "ocnbgchem"
+    ],
+    "compound_name": [
+        "ocnBgchem.ocfriver.tavg-u-hxy-sea.mon.glb"
+    ],
+    "frequency": [
+        "mon"
+    ],
+    "cell_measures": "area: areacello",
+    "realm": "ocnbgchem"
 }

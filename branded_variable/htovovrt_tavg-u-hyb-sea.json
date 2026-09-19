@@ -1,5 +1,17 @@
 {
     "@context": "000_context.jsonld",
     "id": "htovovrt_tavg-u-hyb-sea",
-    "type": "known_branded_variable"
+    "type": "known_branded_variable",
+    "description": "From all advective mass transport processes, resolved and parameterized.",
+    "long_name": "Northward Ocean Heat Transport Due to Overturning",
+    "table_id": [
+        "ocean"
+    ],
+    "compound_name": [
+        "ocean.htovovrt.tavg-u-hyb-sea.mon.glb"
+    ],
+    "frequency": [
+        "mon"
+    ],
+    "realm": "ocean"
 }

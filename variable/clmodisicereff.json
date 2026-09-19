@@ -1,5 +1,6 @@
 {
     "@context": "000_context.jsonld",
     "id": "clmodisicereff",
-    "type": "variable"
+    "type": "variable",
+    "long_name": "MODIS Ice-Topped Cloud Area Percentage reported on droplet effective radius dimensions"
 }

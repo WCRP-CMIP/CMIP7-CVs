@@ -34,15 +34,17 @@ and its dependencies (``typer``, ``pydantic``) are installed.
 Run locally with
 
 ```
-GITHUB_TOKEN="$(gh auth token)" .github/form-processor/.venv/bin/python .github/scripts/sync_emd_entries.py --dry-run
+GITHUB_TOKEN="$(gh auth token)" .github/form-processor/.venv/bin/python .github/scripts/sync_emd_entries.py --dry-run --max-entries 5
 ```
 """
 
 from __future__ import annotations
 
 import base64
+import difflib
 import json
 import os
+import urllib.request
 from collections.abc import Callable
 from dataclasses import dataclass, field
 from typing import Any
@@ -122,6 +124,7 @@ class EmdModel(BaseModel):
     id: str = Field(alias="@id")
     description: str = ""
     validation_key: str = ""
+    references: list[str] = Field(default_factory=list)
 
     @property
     def cv_id(self) -> str:
@@ -195,8 +198,58 @@ def build_source_entry(model: EmdModel) -> tuple[str, str]:
     return f"{model.cv_id}.json", _dumps(entry)
 
 
+def _build_reference_id(model_cv_id: str, index: int) -> str:
+    """Build the reference term ID for a model's Nth reference."""
+    return f"{model_cv_id}_ref_{index:03d}"
+
+
+def _build_reference_entry(ref_id: str, ref_value: str) -> dict[str, Any]:
+    """Build a single reference term dict from a DOI/URL/text value."""
+    if ref_value.startswith("http"):
+        try:
+            citation = get_citation_for_doi(ref_value)
+            doi = ref_value
+
+        except urllib.error.HTTPError as exc:
+            print(f"Could not get DOI for {ref_value}. {exc.code=} {exc.reason=}")
+            doi = "N/A"
+            citation = f"See {ref_value}"
+
+    else:
+        doi = "N/A"
+        citation = ref_value
+
+    return {
+        "@context": CONTEXT_FILE,
+        "id": ref_id,
+        "type": "reference",
+        "citation": citation,
+        "doi": doi,
+        "drs_name": ref_id,
+    }
+
+
+def build_universe_reference_entries(
+    model: EmdModel,
+) -> list[tuple[str, str]]:
+    """Build the WCRP-universe ``reference`` entries for an EMD model.
+
+    Returns a list of ``(filename, content)`` tuples, one per reference.
+    """
+    results = []
+    for i, ref_value in enumerate(model.references, 1):
+        ref_id = _build_reference_id(model.cv_id, i)
+        entry = _build_reference_entry(ref_id, ref_value)
+        results.append((f"{ref_id}.json", _dumps(entry)))
+    return results
+
+
 def build_universe_model_entry(model: EmdModel) -> tuple[str, str]:
     """Build the WCRP-universe ``model`` entry for an EMD model."""
+    # Use reference term IDs instead of raw DOI strings
+    ref_ids = [
+        _build_reference_id(model.cv_id, i) for i in range(1, len(model.references) + 1)
+    ]
     entry = {
         "@context": CONTEXT_FILE,
         "id": model.cv_id,
@@ -209,7 +262,7 @@ def build_universe_model_entry(model: EmdModel) -> tuple[str, str]:
         "description": model.description,
         "calendar": [],
         "release_year": None,
-        "references": [],
+        "references": ref_ids,
         "model_components": [],
         "embedded_components": [],
         "coupled_components": [],
@@ -243,11 +296,20 @@ def build_universe_grid_entry(grid: EmdHorizontalGridCell) -> tuple[str, str]:
 
 
 @dataclass
-class PlannedFile:
-    """A single file that would be added to a target directory."""
+class NewFile:
+    """A single new file that would be added to a target directory."""
 
     path: str
     content: str
+
+
+@dataclass
+class ChangedFile:
+    """A change to a file."""
+
+    path: str
+    new_content: str
+    changes: str
 
 
 @dataclass
@@ -261,8 +323,9 @@ class PlannedPullRequest:
     directory: str
     title: str
     body: str
-    new_files: list[PlannedFile] = field(default_factory=list)
-    existing: list[str] = field(default_factory=list)
+    new_files: list[NewFile] = field(default_factory=list)
+    changed: list[ChangedFile] = field(default_factory=list)
+    unchanged: list[str] = field(default_factory=list)
     errors: list[str] = field(default_factory=list)
 
 
@@ -281,14 +344,23 @@ def read_emd_entries(
     directory: str,
     ref: str,
     model_cls: type[BaseModel],
+    cap: int | None = None,
 ) -> list[Any]:
     """Read and validate every ``*.json`` entry in an EMD source directory.
 
     Entries whose id starts with ``temp`` are ignored (see ``_is_temp_entry``).
     """
     entries = []
-    for item in client.list_directory(directory, ref):
+    print(f"Getting items in {directory}")
+    items = client.list_directory(directory, ref)
+    print(f"{len(items)} items to read")
+    if cap:
+        print(f"Capping at {cap} processed items")
+
+    n_processed = 0
+    for i, item in enumerate(items):
         name = item["name"]
+        print(f"Processing item {i + 1}: {name}")
         if item["type"] != "file" or not name.endswith(".json"):
             continue
         raw = client.get_file_text(f"{directory}/{name}", ref)
@@ -297,6 +369,11 @@ def read_emd_entries(
             typer.echo(f"  ignoring temporary EMD entry {entry.id!r} in {directory}/")
             continue
         entries.append(entry)
+        n_processed += 1
+        if cap:
+            if n_processed >= cap:
+                break
+
     entries.sort(key=lambda entry: entry.id)
     return entries
 
@@ -313,6 +390,36 @@ class PullRequestTarget:
     title: str
     body: str
     builder: Callable[[Any], tuple[str, str]]
+
+
+def get_file_changes(
+    filepath: str, client: EmdSyncClient, branch: str, proposed_content: str
+) -> str | None:
+    print(f"Getting changes made to {filepath} relative to {branch=}")
+    current_content = client.get_file_text(filepath, branch)
+
+    diff = "".join(
+        difflib.unified_diff(
+            current_content.splitlines(keepends=True),
+            proposed_content.splitlines(keepends=True),
+            fromfile="current",
+            tofile="updated",
+        )
+    )
+
+    return diff
+
+
+def get_citation_for_doi(doi: str, style: str = "apa") -> str | None:
+    print(f"Trying to get citation for {doi=}")
+    url = f"https://doi.org/{doi}"
+    headers = {"Accept": f"text/x-bibliography; style={style}"}
+
+    req = urllib.request.Request(url, headers=headers)
+    with urllib.request.urlopen(req) as response:
+        res = response.read().decode("utf-8")
+
+    return res
 
 
 def plan_pull_requests(
@@ -362,12 +469,29 @@ def plan_pull_requests(
                 f"skipping it for {repos}: {error}"
             )
             continue
+
         for plan, target_present, (filename, content) in zip(plans, present, built):
             if filename in target_present:
-                plan.existing.append(filename)
+                changes = get_file_changes(
+                    f"{plan.directory}/{filename}",
+                    plan.client,
+                    plan.base_branch,
+                    proposed_content=content,
+                )
+                if changes:
+                    plan.changed.append(
+                        ChangedFile(
+                            path=f"{plan.directory}/{filename}",
+                            new_content=content,
+                            changes=changes,
+                        )
+                    )
+                else:
+                    plan.unchanged.append(filename)
+
             else:
                 plan.new_files.append(
-                    PlannedFile(path=f"{plan.directory}/{filename}", content=content)
+                    NewFile(path=f"{plan.directory}/{filename}", content=content)
                 )
     return plans
 
@@ -379,10 +503,18 @@ def describe_plan(plan: PlannedPullRequest, *, show_content: bool) -> None:
     typer.echo(f"  title: {plan.title}")
     typer.echo(f"  directory: {plan.directory}/")
     typer.echo(f"  new entries: {len(plan.new_files)}")
-    typer.echo(f"  already present (skipped): {len(plan.existing)}")
-    if not plan.new_files:
-        typer.echo("  -> nothing to add; no pull request needed.")
+    typer.echo(f"  changed (skipped): {len(plan.changed)}")
+    typer.echo(f"  unchanged (skipped): {len(plan.unchanged)}")
+    if not (plan.new_files or plan.changed):
+        typer.echo("  -> nothing to add or change; no pull request needed.")
         return
+
+    for planned in plan.changed:
+        typer.echo(f"    + {planned.path}")
+        if show_content:
+            for line in planned.changes.splitlines():
+                typer.echo(f"        {line}")
+
     for planned in plan.new_files:
         typer.echo(f"    + {planned.path}")
         if show_content:
@@ -393,8 +525,8 @@ def describe_plan(plan: PlannedPullRequest, *, show_content: bool) -> None:
 def apply_plan(plan: PlannedPullRequest) -> None:
     """Create the branch, commit the new files and open the pull request."""
     client = plan.client
-    if not plan.new_files:
-        typer.echo(f"[{plan.repo}] nothing to add for {plan.directory}/ -- skipping.")
+    if not (plan.new_files or plan.changed):
+        typer.echo(f"[{plan.repo}] nothing to add or change -- skipping.")
         return
 
     if not client.branch_exists(plan.head_branch):
@@ -403,6 +535,15 @@ def apply_plan(plan: PlannedPullRequest) -> None:
         typer.echo(f"[{plan.repo}] created branch {plan.head_branch}")
     else:
         typer.echo(f"[{plan.repo}] reusing existing branch {plan.head_branch}")
+
+    for planned in plan.changed:
+        client.put_file(
+            planned.path,
+            plan.head_branch,
+            planned.new_content,
+            f"Updated {planned.path}",
+        )
+        typer.echo(f"[{plan.repo}] committed {planned.path}")
 
     for planned in plan.new_files:
         client.put_file(
@@ -472,9 +613,15 @@ def sync(
         "esgvoc_dev", help="WCRP-universe PR base branch."
     ),
     universe_model_dir: str = typer.Option("model", help="WCRP-universe model dir."),
+    universe_reference_dir: str = typer.Option(
+        "reference", help="WCRP-universe reference dir."
+    ),
     universe_grid_dir: str = typer.Option("grid", help="WCRP-universe grid dir."),
     branch_prefix: str = typer.Option(
         "emd-sync", help="Prefix for the head branches created for the pull requests."
+    ),
+    max_entries: int | None = typer.Option(
+        None, help="Maximum number of entries to retrieve (handy for processing)"
     ),
     dry_run: bool = typer.Option(
         False, help="Print the pull requests that would be made without creating them."
@@ -499,9 +646,11 @@ def sync(
     universe_client = EmdSyncClient(universe_repo, universe_token)
 
     typer.echo(f"Reading EMD entries from {emd_repo}@{emd_branch} ...")
-    models = read_emd_entries(emd_client, emd_model_dir, emd_branch, EmdModel)
+    models = read_emd_entries(
+        emd_client, emd_model_dir, emd_branch, EmdModel, cap=max_entries
+    )
     grids = read_emd_entries(
-        emd_client, emd_grid_dir, emd_branch, EmdHorizontalGridCell
+        emd_client, emd_grid_dir, emd_branch, EmdHorizontalGridCell, cap=max_entries
     )
     typer.echo(f"  {len(models)} model entries, {len(grids)} grid entries.")
 
@@ -529,6 +678,7 @@ def sync(
     # The CMIP7-CVs and WCRP-universe entries derived from the same EMD entries
     # are planned together so a build failure on one side skips the entry on the
     # other side too -- the paired repositories never drift out of sync.
+    model_branch_name_universe = f"{branch_prefix}/source"
     plans = plan_pull_requests(
         targets=[
             PullRequestTarget(
@@ -545,7 +695,7 @@ def sync(
                 client=universe_client,
                 repo=universe_repo,
                 base_branch=universe_base_branch,
-                head_branch=f"{branch_prefix}/model",
+                head_branch=model_branch_name_universe,
                 directory=universe_model_dir,
                 title="Add EMD model entries to `model`",
                 body=body(universe_model_dir, emd_model_dir),
@@ -555,6 +705,53 @@ def sync(
         emd_entries=models,
         strict=strict,
     )
+
+    # Plan reference entries.
+    # We have to do it like this because one model produces multiple reference
+    # files, so we can't use the standard one-builder-per-entry flow.
+    for i, plan in enumerate(plans):
+        if (plan.repo == universe_repo) and (
+            plan.head_branch == model_branch_name_universe
+        ):
+            universe_source_target_idx = i
+            break
+    else:
+        msg = f"Did not find universe source branch PR plan. {plans=}"
+        raise AssertionError(msg)
+
+    ref_present = universe_client.existing_filenames(
+        universe_reference_dir, universe_base_branch
+    )
+    for model in models:
+        print(f"Getting references for {model.id=}")
+        for filename, content in build_universe_reference_entries(model):
+            print(f"  Processing {filename}")
+            if filename in ref_present:
+                changes = get_file_changes(
+                    filepath=f"{universe_reference_dir}/{filename}",
+                    client=plans[universe_source_target_idx].client,
+                    branch=plans[universe_source_target_idx].base_branch,
+                    proposed_content=content,
+                )
+                if changes:
+                    plans[universe_source_target_idx].changed.append(
+                        ChangedFile(
+                            path=f"{universe_reference_dir}/{filename}",
+                            new_content=content,
+                            changes=changes,
+                        )
+                    )
+
+                else:
+                    plans[universe_source_target_idx].unchanged.append(filename)
+
+            else:
+                plans[universe_source_target_idx].new_files.append(
+                    NewFile(
+                        path=f"{universe_reference_dir}/{filename}", content=content
+                    )
+                )
+
     plans += plan_pull_requests(
         targets=[
             PullRequestTarget(

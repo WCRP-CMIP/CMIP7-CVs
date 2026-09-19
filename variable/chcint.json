@@ -1,5 +1,6 @@
 {
     "@context": "000_context.jsonld",
     "id": "chcint",
-    "type": "variable"
+    "type": "variable",
+    "long_name": "integral wrt depth of sea water conservative temperature expressed as heat content"
 }

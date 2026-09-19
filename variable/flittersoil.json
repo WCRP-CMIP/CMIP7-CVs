@@ -1,5 +1,6 @@
 {
     "@context": "000_context.jsonld",
     "id": "flittersoil",
-    "type": "variable"
+    "type": "variable",
+    "long_name": "Total Carbon Mass Flux from Litter to Soil"
 }

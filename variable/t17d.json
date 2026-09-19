@@ -1,5 +1,6 @@
 {
     "@context": "000_context.jsonld",
     "id": "t17d",
-    "type": "variable"
+    "type": "variable",
+    "long_name": "Depth of 17 degree Celsius Isotherm"
 }

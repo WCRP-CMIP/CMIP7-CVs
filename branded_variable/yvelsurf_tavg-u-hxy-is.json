@@ -1,5 +1,19 @@
 {
     "@context": "000_context.jsonld",
     "id": "yvelsurf_tavg-u-hxy-is",
-    "type": "known_branded_variable"
+    "type": "known_branded_variable",
+    "description": "A velocity is a vector quantity. \"y\" indicates a vector component along the grid y-axis, positive with increasing y. \"Land ice\" means glaciers, ice-caps and ice-sheets resting on bedrock and also includes ice-shelves. The surface called \"surface\" means the lower boundary of the atmosphere.'",
+    "long_name": "Y-Component of Land Ice Surface Velocity",
+    "table_id": [
+        "landice"
+    ],
+    "compound_name": [
+        "landIce.yvelsurf.tavg-u-hxy-is.yr.ata",
+        "landIce.yvelsurf.tavg-u-hxy-is.yr.grl"
+    ],
+    "frequency": [
+        "yr"
+    ],
+    "cell_measures": "area: areacellg",
+    "realm": "landice"
 }

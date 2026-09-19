@@ -1,5 +1,6 @@
 {
     "@context": "000_context.jsonld",
     "id": "wetlandch4cons",
-    "type": "variable"
+    "type": "variable",
+    "long_name": "Grid Averaged Methane Consumption (Methanotrophy) from Wetlands"
 }

@@ -1,5 +1,18 @@
 {
     "@context": "000_context.jsonld",
     "id": "pso_tavg-u-hxy-sea",
-    "type": "known_branded_variable"
+    "type": "known_branded_variable",
+    "description": "The phrase \"sea water surface\" means the upper boundary of the liquid portion of an ocean or sea, including the boundary to floating ice if present. \"Sea water pressure\" is the pressure that exists in the medium of sea water. It includes the pressure due to overlying sea water, sea ice, air and any other medium that may be present.",
+    "long_name": "Sea Water Pressure at Sea Water Surface",
+    "table_id": [
+        "ocean"
+    ],
+    "compound_name": [
+        "ocean.pso.tavg-u-hxy-sea.mon.glb"
+    ],
+    "frequency": [
+        "mon"
+    ],
+    "cell_measures": "area: areacello",
+    "realm": "ocean"
 }

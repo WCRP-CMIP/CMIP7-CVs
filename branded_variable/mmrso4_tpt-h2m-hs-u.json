@@ -1,5 +1,18 @@
 {
     "@context": "000_context.jsonld",
     "id": "mmrso4_tpt-h2m-hs-u",
-    "type": "known_branded_variable"
+    "type": "known_branded_variable",
+    "description": "This variable is for instantaneous near surface mass mixing ratio of sulfate aerosol at CF sites, sampled every 3 hours",
+    "long_name": "Instantaneous near-surface Aerosol Sulfate Mass Mixing Ratio at CF sites",
+    "table_id": [
+        "aerosol"
+    ],
+    "compound_name": [
+        "aerosol.mmrso4.tpt-h2m-hs-u.3hr.glb"
+    ],
+    "frequency": [
+        "3hr"
+    ],
+    "cell_measures": "--MODEL",
+    "realm": "aerosol"
 }

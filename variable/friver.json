@@ -1,5 +1,6 @@
 {
     "@context": "000_context.jsonld",
     "id": "friver",
-    "type": "variable"
+    "type": "variable",
+    "long_name": "Water Flux into Sea Water from Rivers"
 }

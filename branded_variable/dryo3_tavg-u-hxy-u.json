@@ -1,5 +1,18 @@
 {
     "@context": "000_context.jsonld",
     "id": "dryo3_tavg-u-hxy-u",
-    "type": "known_branded_variable"
+    "type": "known_branded_variable",
+    "description": "Dry Deposition Rate of O3",
+    "long_name": "Dry Deposition Rate of O3",
+    "table_id": [
+        "aerosol"
+    ],
+    "compound_name": [
+        "aerosol.dryo3.tavg-u-hxy-u.mon.glb"
+    ],
+    "frequency": [
+        "mon"
+    ],
+    "cell_measures": "area: areacella",
+    "realm": "aerosol"
 }

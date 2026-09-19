@@ -1,5 +1,6 @@
 {
     "@context": "000_context.jsonld",
     "id": "cveglut",
-    "type": "variable"
+    "type": "variable",
+    "long_name": "Carbon in Vegetation on Land-Use Tiles"
 }

@@ -1,5 +1,18 @@
 {
     "@context": "000_context.jsonld",
     "id": "snc_tavg-u-hxy-si",
-    "type": "known_branded_variable"
+    "type": "known_branded_variable",
+    "description": "Percentage of the sea-ice surface that is covered by snow. In many models that do not explicitly resolve an areal fraction of snow, this variable will always be either 0 or 1.",
+    "long_name": "Snow Area Percentage",
+    "table_id": [
+        "seaice"
+    ],
+    "compound_name": [
+        "seaIce.snc.tavg-u-hxy-si.mon.glb"
+    ],
+    "frequency": [
+        "mon"
+    ],
+    "cell_measures": "area: areacello",
+    "realm": "seaice"
 }

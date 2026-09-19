@@ -1,5 +1,18 @@
 {
     "@context": "000_context.jsonld",
     "id": "intdic_tavg-u-hxy-sea",
-    "type": "known_branded_variable"
+    "type": "known_branded_variable",
+    "description": "Vertically integrated DIC",
+    "long_name": "Dissolved Inorganic Carbon Content",
+    "table_id": [
+        "ocnbgchem"
+    ],
+    "compound_name": [
+        "ocnBgchem.intdic.tavg-u-hxy-sea.mon.30S-90S"
+    ],
+    "frequency": [
+        "mon"
+    ],
+    "cell_measures": "area: areacello",
+    "realm": "ocnbgchem"
 }

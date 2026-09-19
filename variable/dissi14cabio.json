@@ -1,5 +1,6 @@
 {
     "@context": "000_context.jsonld",
     "id": "dissi14cabio",
-    "type": "variable"
+    "type": "variable",
+    "long_name": "Abiotic Dissolved Inorganic Carbon-14 Concentration"
 }

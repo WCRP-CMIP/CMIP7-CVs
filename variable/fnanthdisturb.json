@@ -1,5 +1,6 @@
 {
     "@context": "000_context.jsonld",
     "id": "fnanthdisturb",
-    "type": "variable"
+    "type": "variable",
+    "long_name": "Nitrogen Mass Flux out of Land Due to any Human Activity"
 }

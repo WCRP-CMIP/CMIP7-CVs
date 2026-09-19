@@ -1,5 +1,18 @@
 {
     "@context": "000_context.jsonld",
     "id": "grassfracc4_tavg-u-hxy-u",
-    "type": "known_branded_variable"
+    "type": "known_branded_variable",
+    "description": "Percentage of entire grid cell covered by C4 natural grass.",
+    "long_name": "C4 Natural Grass Area Percentage",
+    "table_id": [
+        "land"
+    ],
+    "compound_name": [
+        "land.grassFracC4.tavg-u-hxy-u.mon.glb"
+    ],
+    "frequency": [
+        "mon"
+    ],
+    "cell_measures": "area: areacella",
+    "realm": "land"
 }

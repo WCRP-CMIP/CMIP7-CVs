@@ -1,5 +1,18 @@
 {
     "@context": "000_context.jsonld",
     "id": "tendlibmassbf_tavg-u-hm-is",
-    "type": "known_branded_variable"
+    "type": "known_branded_variable",
+    "description": "Antarctica",
+    "long_name": "Total Basal Mass Balance Flux",
+    "table_id": [
+        "landice"
+    ],
+    "compound_name": [
+        "landIce.tendlibmassbf.tavg-u-hm-is.yr.grl",
+        "landIce.tendlibmassbf.tavg-u-hm-is.yr.ata"
+    ],
+    "frequency": [
+        "yr"
+    ],
+    "realm": "landice"
 }

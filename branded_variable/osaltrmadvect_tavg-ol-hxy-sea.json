@@ -1,5 +1,18 @@
 {
     "@context": "000_context.jsonld",
     "id": "osaltrmadvect_tavg-ol-hxy-sea",
-    "type": "known_branded_variable"
+    "type": "known_branded_variable",
+    "description": "Tendency of salt content for a grid cell from residual mean  (sum of Eulerian mean + parameterized eddy-induced)  advection.",
+    "long_name": "Tendency of Sea Water Salinity Expressed as Salt Content Due to Residual Mean Advection",
+    "table_id": [
+        "ocean"
+    ],
+    "compound_name": [
+        "ocean.osaltrmadvect.tavg-ol-hxy-sea.yr.glb"
+    ],
+    "frequency": [
+        "yr"
+    ],
+    "cell_measures": "area: areacello volume: volcello",
+    "realm": "ocean"
 }

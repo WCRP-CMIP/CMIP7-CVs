@@ -1,0 +1,6 @@
+{
+    "@context": "000_context.jsonld",
+    "id": "rho",
+    "type": "data_coordinate",
+    "long_name": "potential density referenced to 2000 dbar"
+}

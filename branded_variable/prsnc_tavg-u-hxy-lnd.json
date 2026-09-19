@@ -1,5 +1,18 @@
 {
     "@context": "000_context.jsonld",
     "id": "prsnc_tavg-u-hxy-lnd",
-    "type": "known_branded_variable"
+    "type": "known_branded_variable",
+    "description": "convective_snowfall_flux",
+    "long_name": "Convective Snowfall Flux",
+    "table_id": [
+        "atmos"
+    ],
+    "compound_name": [
+        "atmos.prsnc.tavg-u-hxy-lnd.day.glb"
+    ],
+    "frequency": [
+        "day"
+    ],
+    "cell_measures": "area: areacella",
+    "realm": "atmos"
 }

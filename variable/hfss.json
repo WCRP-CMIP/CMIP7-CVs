@@ -1,5 +1,6 @@
 {
     "@context": "000_context.jsonld",
     "id": "hfss",
-    "type": "variable"
+    "type": "variable",
+    "long_name": "Surface Upward Sensible Heat Flux"
 }

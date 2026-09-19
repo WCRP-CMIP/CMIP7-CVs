@@ -1,0 +1,6 @@
+{
+    "@context": "000_context.jsonld",
+    "id": "soilpools",
+    "type": "data_coordinate",
+    "long_name": "Soil Pools"
+}

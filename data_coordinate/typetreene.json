@@ -1,0 +1,6 @@
+{
+    "@context": "000_context.jsonld",
+    "id": "typetreene",
+    "type": "data_coordinate",
+    "long_name": "Tree area type (Needleleaf Evergreen)"
+}

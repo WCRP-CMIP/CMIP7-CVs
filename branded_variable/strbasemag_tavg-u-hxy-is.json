@@ -1,5 +1,19 @@
 {
     "@context": "000_context.jsonld",
     "id": "strbasemag_tavg-u-hxy-is",
-    "type": "known_branded_variable"
+    "type": "known_branded_variable",
+    "description": "Magnitude of basal drag at land ice base",
+    "long_name": "Land Ice Basal Drag",
+    "table_id": [
+        "landice"
+    ],
+    "compound_name": [
+        "landIce.strbasemag.tavg-u-hxy-is.yr.grl",
+        "landIce.strbasemag.tavg-u-hxy-is.yr.ata"
+    ],
+    "frequency": [
+        "yr"
+    ],
+    "cell_measures": "area: areacellg",
+    "realm": "landice"
 }

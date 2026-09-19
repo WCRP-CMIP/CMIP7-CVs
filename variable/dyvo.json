@@ -1,5 +1,6 @@
 {
     "@context": "000_context.jsonld",
     "id": "dyvo",
-    "type": "variable"
+    "type": "variable",
+    "long_name": "Cell Length in the Y Direction at v-points"
 }

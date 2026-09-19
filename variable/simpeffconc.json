@@ -1,5 +1,6 @@
 {
     "@context": "000_context.jsonld",
     "id": "simpeffconc",
-    "type": "variable"
+    "type": "variable",
+    "long_name": "Fraction of Sea Ice Covered by Effective Melt Pond"
 }

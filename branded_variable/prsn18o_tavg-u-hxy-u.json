@@ -1,5 +1,18 @@
 {
     "@context": "000_context.jsonld",
     "id": "prsn18o_tavg-u-hxy-u",
-    "type": "known_branded_variable"
+    "type": "known_branded_variable",
+    "description": "Precipitation mass flux of water molecules that contain the oxygen-18 isotope (H2 18O), including solid phase only.",
+    "long_name": "Precipitation Flux of Snow and Ice Containing Oxygen-18 (H2 18O)",
+    "table_id": [
+        "atmos"
+    ],
+    "compound_name": [
+        "atmos.prsn18O.tavg-u-hxy-u.mon.glb"
+    ],
+    "frequency": [
+        "mon"
+    ],
+    "cell_measures": "area: areacella",
+    "realm": "atmos"
 }

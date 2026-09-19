@@ -1,5 +1,6 @@
 {
     "@context": "000_context.jsonld",
     "id": "hfibthermds",
-    "type": "variable"
+    "type": "variable",
+    "long_name": "Heat Flux into Sea Water Due to Iceberg Thermodynamics"
 }

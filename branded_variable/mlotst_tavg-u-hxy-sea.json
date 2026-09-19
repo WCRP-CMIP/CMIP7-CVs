@@ -1,5 +1,21 @@
 {
     "@context": "000_context.jsonld",
     "id": "mlotst_tavg-u-hxy-sea",
-    "type": "known_branded_variable"
+    "type": "known_branded_variable",
+    "description": "Sigma T is potential density referenced to ocean surface. Defined by Sigma T of 0.03 kg m-3 wrt to model level closest to 10 m depth.",
+    "long_name": "Ocean Mixed Layer Thickness Defined by Delta Sigma T of 0.03 kg m-3 referenced to the model level closest to 10 m depth",
+    "table_id": [
+        "ocean"
+    ],
+    "compound_name": [
+        "ocean.mlotst.tavg-u-hxy-sea.mon.glb",
+        "ocean.mlotst.tavg-u-hxy-sea.mon.30S-90S",
+        "ocean.mlotst.tavg-u-hxy-sea.day.glb"
+    ],
+    "frequency": [
+        "mon",
+        "day"
+    ],
+    "cell_measures": "area: areacello",
+    "realm": "ocean"
 }

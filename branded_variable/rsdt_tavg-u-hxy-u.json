@@ -1,5 +1,21 @@
 {
     "@context": "000_context.jsonld",
     "id": "rsdt_tavg-u-hxy-u",
-    "type": "known_branded_variable"
+    "type": "known_branded_variable",
+    "description": "Shortwave radiation incident at the top of the atmosphere",
+    "long_name": "TOA Incident Shortwave Radiation",
+    "table_id": [
+        "atmos"
+    ],
+    "compound_name": [
+        "atmos.rsdt.tavg-u-hxy-u.day.glb",
+        "atmos.rsdt.tavg-u-hxy-u.mon.glb",
+        "atmos.rsdt.tavg-u-hxy-u.mon.30S-90S"
+    ],
+    "frequency": [
+        "day",
+        "mon"
+    ],
+    "cell_measures": "area: areacella",
+    "realm": "atmos"
 }

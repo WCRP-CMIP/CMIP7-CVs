@@ -1,5 +1,6 @@
 {
     "@context": "000_context.jsonld",
     "id": "litempbot",
-    "type": "variable"
+    "type": "variable",
+    "long_name": "Basal Temperature of Floating Ice Shelf"
 }

@@ -1,5 +1,18 @@
 {
     "@context": "000_context.jsonld",
     "id": "sichl_tavg-u-hxy-si",
-    "type": "known_branded_variable"
+    "type": "known_branded_variable",
+    "description": "Vertically-integrated content of Chl-a in ice algae, expressed as kg of Chl-a per square meter of sea ice.",
+    "long_name": "Amount of Total Ice Algae Expressed as Chlorophyll in Sea Ice",
+    "table_id": [
+        "ocnbgchem"
+    ],
+    "compound_name": [
+        "ocnBgchem.sichl.tavg-u-hxy-si.mon.glb"
+    ],
+    "frequency": [
+        "mon"
+    ],
+    "cell_measures": "area: areacello",
+    "realm": "ocnbgchem"
 }

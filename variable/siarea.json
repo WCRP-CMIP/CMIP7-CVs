@@ -1,5 +1,6 @@
 {
     "@context": "000_context.jsonld",
     "id": "siarea",
-    "type": "variable"
+    "type": "variable",
+    "long_name": "Sea-Ice Area North"
 }

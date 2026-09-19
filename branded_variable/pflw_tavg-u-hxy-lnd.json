@@ -1,5 +1,20 @@
 {
     "@context": "000_context.jsonld",
     "id": "pflw_tavg-u-hxy-lnd",
-    "type": "known_branded_variable"
+    "type": "known_branded_variable",
+    "description": "\"where land over land\", i.e., this is the total mass of liquid water contained within the permafrost layer within the land portion of a grid cell divided by the area of the land portion of the cell.",
+    "long_name": "Liquid Water Content of Permafrost Layer",
+    "table_id": [
+        "landice"
+    ],
+    "compound_name": [
+        "landIce.pflw.tavg-u-hxy-lnd.day.glb",
+        "landIce.pflw.tavg-u-hxy-lnd.mon.glb"
+    ],
+    "frequency": [
+        "day",
+        "mon"
+    ],
+    "cell_measures": "area: areacella",
+    "realm": "landice"
 }

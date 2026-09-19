@@ -1,5 +1,18 @@
 {
     "@context": "000_context.jsonld",
     "id": "mpwwindsea_tavg-u-hxy-sea",
-    "type": "known_branded_variable"
+    "type": "known_branded_variable",
+    "description": "Average wave period (i.e., time in-between two wave crests) of wind-sea waves only (i.e., local wind waves). In spectral wind wave models, it is calculated using spectral moments, mathematical measures that describe the shape and characteristics of the wave spectrum.",
+    "long_name": "Wind Sea Wave Mean Period",
+    "table_id": [
+        "ocean"
+    ],
+    "compound_name": [
+        "ocean.mpwwindsea.tavg-u-hxy-sea.mon.glb"
+    ],
+    "frequency": [
+        "mon"
+    ],
+    "cell_measures": "area: areacello",
+    "realm": "ocean"
 }

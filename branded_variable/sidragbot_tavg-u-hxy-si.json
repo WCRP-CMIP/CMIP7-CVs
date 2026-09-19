@@ -1,5 +1,18 @@
 {
     "@context": "000_context.jsonld",
     "id": "sidragbot_tavg-u-hxy-si",
-    "type": "known_branded_variable"
+    "type": "known_branded_variable",
+    "description": "Oceanic drag coefficient that is used to calculate the oceanic momentum drag on sea ice.",
+    "long_name": "Ocean Drag Coefficient",
+    "table_id": [
+        "seaice"
+    ],
+    "compound_name": [
+        "seaIce.sidragbot.tavg-u-hxy-si.mon.glb"
+    ],
+    "frequency": [
+        "mon"
+    ],
+    "cell_measures": "area: areacello",
+    "realm": "seaice"
 }

@@ -1,5 +1,19 @@
 {
     "@context": "000_context.jsonld",
     "id": "mmrnh4_tavg-al-hxy-u",
-    "type": "known_branded_variable"
+    "type": "known_branded_variable",
+    "description": "Dry mass fraction of ammonium aerosol particles in air.",
+    "long_name": "NH4 Mass Mixing Ratio",
+    "table_id": [
+        "aerosol"
+    ],
+    "compound_name": [
+        "aerosol.mmrnh4.tavg-al-hxy-u.mon.30S-90S",
+        "aerosol.mmrnh4.tavg-al-hxy-u.mon.glb"
+    ],
+    "frequency": [
+        "mon"
+    ],
+    "cell_measures": "area: areacella",
+    "realm": "aerosol"
 }

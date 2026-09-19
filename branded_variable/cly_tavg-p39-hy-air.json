@@ -1,5 +1,17 @@
 {
     "@context": "000_context.jsonld",
     "id": "cly_tavg-p39-hy-air",
-    "type": "known_branded_variable"
+    "type": "known_branded_variable",
+    "description": "Total family (the sum of all appropriate species in the model) ; list the species in the netCDF header, e.g. Cly = HCl + ClONO2 + HOCl + ClO + Cl + 2*Cl2O2 +2Cl2 + OClO + BrCl Definition: Total inorganic stratospheric chlorine (e.g., HCl, ClO) resulting from degradation of chlorine-containing source gases (CFCs, HCFCs, VSLS), and natural inorganic chlorine sources (e.g., sea salt and other aerosols) add comment attribute with detailed description about how the model calculates these fields",
+    "long_name": "Total Inorganic Chlorine Volume Mixing Ratio",
+    "table_id": [
+        "aerosol"
+    ],
+    "compound_name": [
+        "aerosol.cly.tavg-p39-hy-air.mon.glb"
+    ],
+    "frequency": [
+        "mon"
+    ],
+    "realm": "aerosol"
 }

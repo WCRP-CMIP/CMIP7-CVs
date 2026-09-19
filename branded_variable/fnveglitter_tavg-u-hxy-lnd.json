@@ -1,5 +1,18 @@
 {
     "@context": "000_context.jsonld",
     "id": "fnveglitter_tavg-u-hxy-lnd",
-    "type": "known_branded_variable"
+    "type": "known_branded_variable",
+    "description": "In accordance with common usage in geophysical disciplines, \"flux\" implies per unit area, called \"flux density\" in physics. \"Litter\" is dead plant material in or above the soil. \"Vegetation\" means any living plants e.g. trees, shrubs, grass.",
+    "long_name": "Total Nitrogen Mass Flux from Vegetation to Litter",
+    "table_id": [
+        "land"
+    ],
+    "compound_name": [
+        "land.fNVegLitter.tavg-u-hxy-lnd.mon.glb"
+    ],
+    "frequency": [
+        "mon"
+    ],
+    "cell_measures": "area: areacella",
+    "realm": "land"
 }

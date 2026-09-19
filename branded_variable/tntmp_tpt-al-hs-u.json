@@ -1,5 +1,17 @@
 {
     "@context": "000_context.jsonld",
     "id": "tntmp_tpt-al-hs-u",
-    "type": "known_branded_variable"
+    "type": "known_branded_variable",
+    "description": "This includes sources and sinks from parametrized physics (e.g. radiation, convection, boundary layer, stratiform condensation/evaporation, etc.). It excludes sources and sinks from resolved dynamics and numerical diffusion not associated with parametrized physics.  For example, any vertical diffusion which is part of the boundary layer mixing scheme should be included, while numerical diffusion applied in addition to physics or resolved dynamics should be excluded.  This term is required to check the closure of the heat budget.",
+    "long_name": "Tendency of Air Temperature Due to Model Physics",
+    "table_id": [
+        "atmos"
+    ],
+    "compound_name": [
+        "atmos.tntmp.tpt-al-hs-u.subhr.glb"
+    ],
+    "frequency": [
+        "subhr"
+    ],
+    "realm": "atmos"
 }

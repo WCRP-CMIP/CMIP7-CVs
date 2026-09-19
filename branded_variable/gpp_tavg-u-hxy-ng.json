@@ -1,5 +1,18 @@
 {
     "@context": "000_context.jsonld",
     "id": "gpp_tavg-u-hxy-ng",
-    "type": "known_branded_variable"
+    "type": "known_branded_variable",
+    "description": "Total GPP of grass in the grid cell",
+    "long_name": "Gross Primary Production on Grass Tiles as Carbon Mass Flux [kgC m-2 s-1]",
+    "table_id": [
+        "land"
+    ],
+    "compound_name": [
+        "land.gpp.tavg-u-hxy-ng.mon.glb"
+    ],
+    "frequency": [
+        "mon"
+    ],
+    "cell_measures": "area: areacella",
+    "realm": "land"
 }

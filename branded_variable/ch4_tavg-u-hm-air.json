@@ -1,5 +1,17 @@
 {
     "@context": "000_context.jsonld",
     "id": "ch4_tavg-u-hm-air",
-    "type": "known_branded_variable"
+    "type": "known_branded_variable",
+    "description": "Global Mean Mole Fraction of CH4",
+    "long_name": "Global Mean Mole Fraction of CH4",
+    "table_id": [
+        "atmoschem"
+    ],
+    "compound_name": [
+        "atmosChem.ch4.tavg-u-hm-air.mon.glb"
+    ],
+    "frequency": [
+        "mon"
+    ],
+    "realm": "atmoschem"
 }

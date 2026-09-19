@@ -1,5 +1,6 @@
 {
     "@context": "000_context.jsonld",
     "id": "mmrdust",
-    "type": "variable"
+    "type": "variable",
+    "long_name": "Dust Aerosol Mass Mixing Ratio"
 }

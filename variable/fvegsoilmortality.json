@@ -1,5 +1,6 @@
 {
     "@context": "000_context.jsonld",
     "id": "fvegsoilmortality",
-    "type": "variable"
+    "type": "variable",
+    "long_name": "Total Carbon Mass Flux from Vegetation to Soil as a Result of Mortality"
 }

@@ -1,5 +1,6 @@
 {
     "@context": "000_context.jsonld",
     "id": "intpp",
-    "type": "variable"
+    "type": "variable",
+    "long_name": "Primary Organic Carbon Production by All Types of Phytoplankton"
 }

@@ -1,5 +1,20 @@
 {
     "@context": "000_context.jsonld",
     "id": "intuadse_tavg-u-hxy-u",
-    "type": "known_branded_variable"
+    "type": "known_branded_variable",
+    "description": "Vertically integrated eastward dry static energy transport (cp.T +zg).v (Mass_weighted_vertical integral of the product of eastward wind by dry static_energy per mass unit)",
+    "long_name": "Vertically Integrated Eastward Dry Static Energy Transport",
+    "table_id": [
+        "atmos"
+    ],
+    "compound_name": [
+        "atmos.intuadse.tavg-u-hxy-u.day.glb",
+        "atmos.intuadse.tavg-u-hxy-u.mon.glb"
+    ],
+    "frequency": [
+        "day",
+        "mon"
+    ],
+    "cell_measures": "area: areacella",
+    "realm": "atmos"
 }

@@ -1,5 +1,17 @@
 {
     "@context": "000_context.jsonld",
     "id": "h2o_tavg-p39-hy-air",
-    "type": "known_branded_variable"
+    "type": "known_branded_variable",
+    "description": "includes all phases of water",
+    "long_name": "Mass Fraction of Water",
+    "table_id": [
+        "aerosol"
+    ],
+    "compound_name": [
+        "aerosol.h2o.tavg-p39-hy-air.mon.glb"
+    ],
+    "frequency": [
+        "mon"
+    ],
+    "realm": "aerosol"
 }

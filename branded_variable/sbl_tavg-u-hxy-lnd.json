@@ -1,5 +1,18 @@
 {
     "@context": "000_context.jsonld",
     "id": "sbl_tavg-u-hxy-lnd",
-    "type": "known_branded_variable"
+    "type": "known_branded_variable",
+    "description": "The snow and ice sublimation flux is the loss of snow and ice mass resulting from their conversion to water vapor.  Computed as the total sublimation on the land portion of the grid cell divided by the land area in the grid cell; reported as missing for snow-free land regions; reported as missing where the land fraction is 0.",
+    "long_name": "Surface Snow and Ice Sublimation Flux",
+    "table_id": [
+        "landice"
+    ],
+    "compound_name": [
+        "landIce.sbl.tavg-u-hxy-lnd.mon.glb"
+    ],
+    "frequency": [
+        "mon"
+    ],
+    "cell_measures": "area: areacella",
+    "realm": "landice"
 }

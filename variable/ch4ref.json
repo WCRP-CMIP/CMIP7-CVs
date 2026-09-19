@@ -1,5 +1,6 @@
 {
     "@context": "000_context.jsonld",
     "id": "ch4ref",
-    "type": "variable"
+    "type": "variable",
+    "long_name": "Reference CH4 volume mixing ratio"
 }

@@ -1,5 +1,21 @@
 {
     "@context": "000_context.jsonld",
     "id": "cod_tavg-u-hxy-u",
-    "type": "known_branded_variable"
+    "type": "known_branded_variable",
+    "description": "The optical thickness is the integral along the path of radiation of a volume scattering/absorption/attenuation coefficient. The radiative flux is reduced by a factor exp(-optical_thickness) on traversing the path. A coordinate variable of radiation_wavelength or radiation_frequency can be specified to indicate that the optical thickness applies at specific wavelengths or frequencies. The atmosphere optical thickness applies to radiation passing through the entire atmosphere. \"Cloud\" means the component of extinction owing to the presence of liquid or ice water particles. The specification of a physical process by the phrase due_to_process means that the quantity named is a  single term in a sum of terms which together compose the general quantity named by omitting the phrase.",
+    "long_name": "Cloud Optical Depth",
+    "table_id": [
+        "aerosol"
+    ],
+    "compound_name": [
+        "aerosol.cod.tavg-u-hxy-u.mon.30S-90S",
+        "aerosol.cod.tavg-u-hxy-u.day.glb",
+        "aerosol.cod.tavg-u-hxy-u.mon.glb"
+    ],
+    "frequency": [
+        "mon",
+        "day"
+    ],
+    "cell_measures": "area: areacella",
+    "realm": "aerosol"
 }

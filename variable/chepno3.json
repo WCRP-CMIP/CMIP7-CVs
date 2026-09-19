@@ -1,5 +1,6 @@
 {
     "@context": "000_context.jsonld",
     "id": "chepno3",
-    "type": "variable"
+    "type": "variable",
+    "long_name": "Net chemical production of nitrate aerosol"
 }

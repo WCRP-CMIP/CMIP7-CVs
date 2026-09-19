@@ -1,0 +1,7 @@
+{
+    "@context": "000_context.jsonld",
+    "id": "oplayer4",
+    "type": "data_coordinate",
+    "long_name": "Hydrostatic Pressure Layers",
+    "tolerance": 1.0
+}

@@ -1,5 +1,6 @@
 {
     "@context": "000_context.jsonld",
     "id": "fracoutlut",
-    "type": "variable"
+    "type": "variable",
+    "long_name": "Annual Gross Percentage of Land-Use Tile That Was Transferred into Other Land-Use Tiles"
 }

@@ -1,5 +1,6 @@
 {
     "@context": "000_context.jsonld",
     "id": "mrsow",
-    "type": "variable"
+    "type": "variable",
+    "long_name": "Total Soil Wetness"
 }

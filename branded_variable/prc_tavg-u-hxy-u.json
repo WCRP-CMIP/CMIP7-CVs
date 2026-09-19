@@ -1,5 +1,21 @@
 {
     "@context": "000_context.jsonld",
     "id": "prc_tavg-u-hxy-u",
-    "type": "known_branded_variable"
+    "type": "known_branded_variable",
+    "description": "at surface; includes both liquid and solid phases.",
+    "long_name": "Convective Precipitation",
+    "table_id": [
+        "atmos"
+    ],
+    "compound_name": [
+        "atmos.prc.tavg-u-hxy-u.mon.glb",
+        "atmos.prc.tavg-u-hxy-u.day.glb",
+        "atmos.prc.tavg-u-hxy-u.mon.30S-90S"
+    ],
+    "frequency": [
+        "mon",
+        "day"
+    ],
+    "cell_measures": "area: areacella",
+    "realm": "atmos"
 }

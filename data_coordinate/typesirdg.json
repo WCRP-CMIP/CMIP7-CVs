@@ -1,0 +1,6 @@
+{
+    "@context": "000_context.jsonld",
+    "id": "typesirdg",
+    "type": "data_coordinate",
+    "long_name": "Sea Ice Ridge  area type"
+}

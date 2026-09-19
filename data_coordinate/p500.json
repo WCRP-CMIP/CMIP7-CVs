@@ -1,0 +1,6 @@
+{
+    "@context": "000_context.jsonld",
+    "id": "p500",
+    "type": "data_coordinate",
+    "long_name": "pressure"
+}

@@ -1,5 +1,6 @@
 {
     "@context": "000_context.jsonld",
     "id": "mmrnh4",
-    "type": "variable"
+    "type": "variable",
+    "long_name": "NH4 Mass Mixing Ratio"
 }

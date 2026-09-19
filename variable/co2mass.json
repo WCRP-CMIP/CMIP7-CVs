@@ -1,5 +1,6 @@
 {
     "@context": "000_context.jsonld",
     "id": "co2mass",
-    "type": "variable"
+    "type": "variable",
+    "long_name": "Total Atmospheric Mass of CO2"
 }

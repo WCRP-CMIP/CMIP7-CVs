@@ -1,5 +1,17 @@
 {
     "@context": "000_context.jsonld",
     "id": "prsn_tpt-u-hs-u",
-    "type": "known_branded_variable"
+    "type": "known_branded_variable",
+    "description": "at surface; includes precipitation of all forms of water in the solid phase",
+    "long_name": "Snowfall Flux",
+    "table_id": [
+        "atmos"
+    ],
+    "compound_name": [
+        "atmos.prsn.tpt-u-hs-u.subhr.glb"
+    ],
+    "frequency": [
+        "subhr"
+    ],
+    "realm": "atmos"
 }

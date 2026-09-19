@@ -1,5 +1,18 @@
 {
     "@context": "000_context.jsonld",
     "id": "drivw_tavg-u-hxy-lnd",
-    "type": "known_branded_variable"
+    "type": "known_branded_variable",
+    "description": "Change in River Storage",
+    "long_name": "Change in River Storage",
+    "table_id": [
+        "land"
+    ],
+    "compound_name": [
+        "land.drivw.tavg-u-hxy-lnd.day.glb"
+    ],
+    "frequency": [
+        "day"
+    ],
+    "cell_measures": "area: areacellr",
+    "realm": "land"
 }

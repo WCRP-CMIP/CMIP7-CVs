@@ -1,5 +1,18 @@
 {
     "@context": "000_context.jsonld",
     "id": "od550csaer_tavg-u-hxy-u",
-    "type": "known_branded_variable"
+    "type": "known_branded_variable",
+    "description": "AOD from the ambient aerosols in clear skies if od550aer is for all-sky (i.e., includes aerosol water).  Does not include AOD from stratospheric aerosols if these are prescribed but includes other possible background aerosol types. Needs a comment attribute \"wavelength: 550 nm\"",
+    "long_name": "Ambient Aerosol Optical Thickness at 550nm",
+    "table_id": [
+        "aerosol"
+    ],
+    "compound_name": [
+        "aerosol.od550csaer.tavg-u-hxy-u.mon.glb"
+    ],
+    "frequency": [
+        "mon"
+    ],
+    "cell_measures": "area: areacella",
+    "realm": "aerosol"
 }

@@ -1,5 +1,19 @@
 {
     "@context": "000_context.jsonld",
     "id": "evu_tavg-al-hxy-u",
-    "type": "known_branded_variable"
+    "type": "known_branded_variable",
+    "description": "Vertical diffusion coefficient for momentum due to parametrised eddies",
+    "long_name": "Eddy Viscosity Coefficient for Momentum",
+    "table_id": [
+        "atmos"
+    ],
+    "compound_name": [
+        "atmos.evu.tavg-al-hxy-u.mon.glb",
+        "atmos.evu.tavg-al-hxy-u.mon.30S-90S"
+    ],
+    "frequency": [
+        "mon"
+    ],
+    "cell_measures": "area: areacella",
+    "realm": "atmos"
 }

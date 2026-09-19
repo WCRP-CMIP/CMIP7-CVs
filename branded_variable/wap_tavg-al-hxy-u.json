@@ -1,5 +1,18 @@
 {
     "@context": "000_context.jsonld",
     "id": "wap_tavg-al-hxy-u",
-    "type": "known_branded_variable"
+    "type": "known_branded_variable",
+    "description": "commonly referred to as \"omega\", this represents the vertical component of velocity in pressure coordinates (positive down)",
+    "long_name": "Omega (=dp/dt)",
+    "table_id": [
+        "atmos"
+    ],
+    "compound_name": [
+        "atmos.wap.tavg-al-hxy-u.day.glb"
+    ],
+    "frequency": [
+        "day"
+    ],
+    "cell_measures": "area: areacella",
+    "realm": "atmos"
 }

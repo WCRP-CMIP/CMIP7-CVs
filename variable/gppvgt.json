@@ -1,5 +1,6 @@
 {
     "@context": "000_context.jsonld",
     "id": "gppvgt",
-    "type": "variable"
+    "type": "variable",
+    "long_name": "Gross Primary Production on Vegetation type as Carbon Mass Flux"
 }

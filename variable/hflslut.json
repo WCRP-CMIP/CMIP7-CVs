@@ -1,5 +1,6 @@
 {
     "@context": "000_context.jsonld",
     "id": "hflslut",
-    "type": "variable"
+    "type": "variable",
+    "long_name": "Latent Heat Flux on Land-Use Tile"
 }

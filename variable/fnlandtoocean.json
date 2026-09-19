@@ -1,5 +1,6 @@
 {
     "@context": "000_context.jsonld",
     "id": "fnlandtoocean",
-    "type": "variable"
+    "type": "variable",
+    "long_name": "Lateral Transfer of Nitrogen out of Grid Cell That Eventually Goes into Ocean"
 }

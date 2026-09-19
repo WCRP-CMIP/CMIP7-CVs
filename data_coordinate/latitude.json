@@ -1,0 +1,8 @@
+{
+    "@context": "000_context.jsonld",
+    "id": "latitude",
+    "type": "data_coordinate",
+    "long_name": "Latitude",
+    "valid_min": -90.0,
+    "valid_max": 90.0
+}

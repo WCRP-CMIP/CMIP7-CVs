@@ -1,5 +1,18 @@
 {
     "@context": "000_context.jsonld",
     "id": "rld_tavg-alh-hxy-u",
-    "type": "known_branded_variable"
+    "type": "known_branded_variable",
+    "description": "Includes also the fluxes at the surface and TOA.",
+    "long_name": "Downwelling Longwave Radiation",
+    "table_id": [
+        "atmos"
+    ],
+    "compound_name": [
+        "atmos.rld.tavg-alh-hxy-u.mon.glb"
+    ],
+    "frequency": [
+        "mon"
+    ],
+    "cell_measures": "area: areacella",
+    "realm": "atmos"
 }

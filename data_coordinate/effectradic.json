@@ -1,0 +1,6 @@
+{
+    "@context": "000_context.jsonld",
+    "id": "effectradic",
+    "type": "data_coordinate",
+    "long_name": "Effective Radius for Ice Aerosol"
+}

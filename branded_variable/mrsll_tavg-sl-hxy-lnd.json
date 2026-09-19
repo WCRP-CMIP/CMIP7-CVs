@@ -1,5 +1,20 @@
 {
     "@context": "000_context.jsonld",
     "id": "mrsll_tavg-sl-hxy-lnd",
-    "type": "known_branded_variable"
+    "type": "known_branded_variable",
+    "description": "in each soil layer, the mass of water in liquid phase.  Reported as \"missing\" for grid cells occupied entirely by \"sea\"",
+    "long_name": "Liquid Water Content of Soil Layer",
+    "table_id": [
+        "land"
+    ],
+    "compound_name": [
+        "land.mrsll.tavg-sl-hxy-lnd.mon.glb",
+        "land.mrsll.tavg-sl-hxy-lnd.day.glb"
+    ],
+    "frequency": [
+        "mon",
+        "day"
+    ],
+    "cell_measures": "area: areacella",
+    "realm": "land"
 }

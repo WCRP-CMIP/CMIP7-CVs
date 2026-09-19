@@ -1,5 +1,6 @@
 {
     "@context": "000_context.jsonld",
     "id": "expcalcob",
-    "type": "variable"
+    "type": "variable",
+    "long_name": "Sinking Flux of Calcite Reaching the Ocean Bottom"
 }

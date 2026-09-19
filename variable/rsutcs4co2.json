@@ -1,5 +1,6 @@
 {
     "@context": "000_context.jsonld",
     "id": "rsutcs4co2",
-    "type": "variable"
+    "type": "variable",
+    "long_name": "TOA Outgoing Clear-Sky Shortwave Radiation 4XCO2 Atmosphere"
 }

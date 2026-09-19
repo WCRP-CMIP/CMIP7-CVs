@@ -1,5 +1,17 @@
 {
     "@context": "000_context.jsonld",
     "id": "co2_tclm-u-hm-u",
-    "type": "known_branded_variable"
+    "type": "known_branded_variable",
+    "description": "Total atmospheric mass of Carbon Dioxide",
+    "long_name": "Total Atmospheric Mass of CO2",
+    "table_id": [
+        "atmos"
+    ],
+    "compound_name": [
+        "atmos.co2.tclm-u-hm-u.mon.glb"
+    ],
+    "frequency": [
+        "mon"
+    ],
+    "realm": "atmos"
 }

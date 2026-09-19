@@ -1,5 +1,20 @@
 {
     "@context": "000_context.jsonld",
     "id": "phypico_tavg-ol-hxy-sea",
-    "type": "known_branded_variable"
+    "type": "known_branded_variable",
+    "description": "Mole Concentration of Picophytoplankton Expressed as Carbon in Sea Water",
+    "long_name": "Mole Concentration of Picophytoplankton Expressed as Carbon in Sea Water",
+    "table_id": [
+        "ocnbgchem"
+    ],
+    "compound_name": [
+        "ocnBgchem.phypico.tavg-ol-hxy-sea.day.glb",
+        "ocnBgchem.phypico.tavg-ol-hxy-sea.mon.glb"
+    ],
+    "frequency": [
+        "day",
+        "mon"
+    ],
+    "cell_measures": "area: areacello volume: volcello",
+    "realm": "ocnbgchem"
 }

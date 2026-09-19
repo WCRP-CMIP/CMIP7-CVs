@@ -1,5 +1,18 @@
 {
     "@context": "000_context.jsonld",
     "id": "co23d_tavg-al-hxy-u",
-    "type": "known_branded_variable"
+    "type": "known_branded_variable",
+    "description": "requested for all Emissions-driven runs",
+    "long_name": "3D-Field of Transported CO2",
+    "table_id": [
+        "atmos"
+    ],
+    "compound_name": [
+        "atmos.co23D.tavg-al-hxy-u.mon.glb"
+    ],
+    "frequency": [
+        "mon"
+    ],
+    "cell_measures": "area: areacella",
+    "realm": "atmos"
 }

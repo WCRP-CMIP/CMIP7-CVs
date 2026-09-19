@@ -1,5 +1,18 @@
 {
     "@context": "000_context.jsonld",
     "id": "fnvegsoil_tavg-u-hxy-lnd",
-    "type": "known_branded_variable"
+    "type": "known_branded_variable",
+    "description": "In some models part of nitrogen (e.g., root exudate) can go directly into the soil pool without entering litter.",
+    "long_name": "Total Nitrogen Mass Flux from Vegetation Directly to Soil",
+    "table_id": [
+        "land"
+    ],
+    "compound_name": [
+        "land.fNVegSoil.tavg-u-hxy-lnd.mon.glb"
+    ],
+    "frequency": [
+        "mon"
+    ],
+    "cell_measures": "area: areacella",
+    "realm": "land"
 }

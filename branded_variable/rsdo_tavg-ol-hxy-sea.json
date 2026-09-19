@@ -1,5 +1,18 @@
 {
     "@context": "000_context.jsonld",
     "id": "rsdo_tavg-ol-hxy-sea",
-    "type": "known_branded_variable"
+    "type": "known_branded_variable",
+    "description": "Downwelling Shortwave Radiation in Sea Water",
+    "long_name": "Downwelling Shortwave Radiation in Sea Water",
+    "table_id": [
+        "ocean"
+    ],
+    "compound_name": [
+        "ocean.rsdo.tavg-ol-hxy-sea.day.glb"
+    ],
+    "frequency": [
+        "day"
+    ],
+    "cell_measures": "area: areacello volume: volcello",
+    "realm": "ocean"
 }

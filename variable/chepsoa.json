@@ -1,5 +1,6 @@
 {
     "@context": "000_context.jsonld",
     "id": "chepsoa",
-    "type": "variable"
+    "type": "variable",
+    "long_name": "Chemical Production of Dry Aerosol Secondary Organic Matter"
 }

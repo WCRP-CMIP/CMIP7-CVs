@@ -1,0 +1,8 @@
+{
+    "@context": "000_context.jsonld",
+    "id": "depth1000m",
+    "type": "data_coordinate",
+    "long_name": "depth",
+    "valid_min": 800.0,
+    "valid_max": 1200.0
+}

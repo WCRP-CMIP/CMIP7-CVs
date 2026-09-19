@@ -1,5 +1,18 @@
 {
     "@context": "000_context.jsonld",
     "id": "siforceintstry_tavg-u-hxy-si",
-    "type": "known_branded_variable"
+    "type": "known_branded_variable",
+    "description": "Y-component of the force on sea ice caused by internal stress (divergence of sigma) divided by sea ice area.",
+    "long_name": "Internal Stress Term in Force Balance (Y-Component)",
+    "table_id": [
+        "seaice"
+    ],
+    "compound_name": [
+        "seaIce.siforceintstry.tavg-u-hxy-si.mon.glb"
+    ],
+    "frequency": [
+        "mon"
+    ],
+    "cell_measures": "--MODEL",
+    "realm": "seaice"
 }

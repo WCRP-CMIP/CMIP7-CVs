@@ -1,5 +1,20 @@
 {
     "@context": "000_context.jsonld",
     "id": "snm_tavg-u-hxy-is",
-    "type": "known_branded_variable"
+    "type": "known_branded_variable",
+    "description": "Loss of snow mass resulting from surface melting. Computed as the surface melt water from snow on the ice sheet portion of the grid cell divided by the ice_sheet area in the grid cell; report as 0.0 for snow-free land_ice regions; report as missing where the land fraction is 0.",
+    "long_name": "Ice Sheet Surface Snow Melt",
+    "table_id": [
+        "landice"
+    ],
+    "compound_name": [
+        "landIce.snm.tavg-u-hxy-is.mon.glb",
+        "landIce.snm.tavg-u-hxy-is.mon.grl",
+        "landIce.snm.tavg-u-hxy-is.mon.ata"
+    ],
+    "frequency": [
+        "mon"
+    ],
+    "cell_measures": "area: areacella",
+    "realm": "landice"
 }

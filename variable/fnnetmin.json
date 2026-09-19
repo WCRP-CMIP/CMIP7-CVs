@@ -1,5 +1,6 @@
 {
     "@context": "000_context.jsonld",
     "id": "fnnetmin",
-    "type": "variable"
+    "type": "variable",
+    "long_name": "Net Nitrogen Release from Soil and Litter as the Outcome of Nitrogen Immobilisation and Gross Mineralisation"
 }

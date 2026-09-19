@@ -1,5 +1,20 @@
 {
     "@context": "000_context.jsonld",
     "id": "simprefrozen_tavg-u-hxy-simp",
-    "type": "known_branded_variable"
+    "type": "known_branded_variable",
+    "description": "Volume of refrozen ice on melt ponds divided by melt pond covered area.",
+    "long_name": "Thickness of Refrozen Ice on Melt Pond",
+    "table_id": [
+        "seaice"
+    ],
+    "compound_name": [
+        "seaIce.simprefrozen.tavg-u-hxy-simp.day.glb",
+        "seaIce.simprefrozen.tavg-u-hxy-simp.mon.glb"
+    ],
+    "frequency": [
+        "day",
+        "mon"
+    ],
+    "cell_measures": "area: areacello",
+    "realm": "seaice"
 }

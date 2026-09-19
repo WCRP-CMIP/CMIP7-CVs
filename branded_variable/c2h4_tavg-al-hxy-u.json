@@ -1,5 +1,18 @@
 {
     "@context": "000_context.jsonld",
     "id": "c2h4_tavg-al-hxy-u",
-    "type": "known_branded_variable"
+    "type": "known_branded_variable",
+    "description": "Mole fraction of ethene (C2H4) in air",
+    "long_name": "C2H4  volume mixing ratio",
+    "table_id": [
+        "atmoschem"
+    ],
+    "compound_name": [
+        "atmosChem.c2h4.tavg-al-hxy-u.mon.glb"
+    ],
+    "frequency": [
+        "mon"
+    ],
+    "cell_measures": "area: areacella",
+    "realm": "atmoschem"
 }

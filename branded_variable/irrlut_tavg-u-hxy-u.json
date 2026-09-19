@@ -1,5 +1,18 @@
 {
     "@context": "000_context.jsonld",
     "id": "irrlut_tavg-u-hxy-u",
-    "type": "known_branded_variable"
+    "type": "known_branded_variable",
+    "description": "the total amount of water withdrawal from multiple sources",
+    "long_name": "irrigation water withdrawal",
+    "table_id": [
+        "land"
+    ],
+    "compound_name": [
+        "land.irrLut.tavg-u-hxy-u.day.glb"
+    ],
+    "frequency": [
+        "day"
+    ],
+    "cell_measures": "area: areacella",
+    "realm": "land"
 }

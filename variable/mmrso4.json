@@ -1,5 +1,6 @@
 {
     "@context": "000_context.jsonld",
     "id": "mmrso4",
-    "type": "variable"
+    "type": "variable",
+    "long_name": "Aerosol Sulfate Mass Mixing Ratio"
 }

@@ -1,5 +1,6 @@
 {
     "@context": "000_context.jsonld",
     "id": "clmisr",
-    "type": "variable"
+    "type": "variable",
+    "long_name": "Percentage Cloud Cover as Calculated by the MISR Simulator (Including Error Flag)"
 }

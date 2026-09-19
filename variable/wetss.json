@@ -1,5 +1,6 @@
 {
     "@context": "000_context.jsonld",
     "id": "wetss",
-    "type": "variable"
+    "type": "variable",
+    "long_name": "Wet Deposition Rate of Sea-Salt Aerosol"
 }

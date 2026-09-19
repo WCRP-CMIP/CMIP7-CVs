@@ -1,8 +1,8 @@
 {
     "@context": {
+        "@base": "https://esgvoc.ipsl.fr/resource/universe/variable/",
         "id": "@id",
         "type": "@type",
-        "@base": "https://esgvoc.ipsl.fr/resource/universe/variable/",
-        "variable": "https://esgvoc.ipsl.fr/resource/universe/variable"
+        "variable": "https://esgvoc.ipsl.fr/resource/universe/variable/"
     }
 }

@@ -1,0 +1,8 @@
+{
+    "@context": {
+        "@base": "https://esgvoc.ipsl.fr/resource/universe/grid_axis/",
+        "id": "@id",
+        "type": "@type",
+        "grid_axis": "https://esgvoc.ipsl.fr/resource/universe/grid_axis/"
+    }
+}

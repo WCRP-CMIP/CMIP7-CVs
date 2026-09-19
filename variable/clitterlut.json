@@ -1,5 +1,6 @@
 {
     "@context": "000_context.jsonld",
     "id": "clitterlut",
-    "type": "variable"
+    "type": "variable",
+    "long_name": "Carbon  in Above and Below-Ground Litter Pools on Land-Use Tiles"
 }

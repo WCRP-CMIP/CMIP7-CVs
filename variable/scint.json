@@ -1,5 +1,6 @@
 {
     "@context": "000_context.jsonld",
     "id": "scint",
-    "type": "variable"
+    "type": "variable",
+    "long_name": "Integral wrt depth of sea water practical salinity expressed as salt mass content"
 }

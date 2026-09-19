@@ -1,5 +1,6 @@
 {
     "@context": "000_context.jsonld",
     "id": "sfx",
-    "type": "variable"
+    "type": "variable",
+    "long_name": "3D Ocean Salt Mass X Transport"
 }

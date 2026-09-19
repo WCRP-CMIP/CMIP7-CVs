@@ -1,5 +1,18 @@
 {
     "@context": "000_context.jsonld",
     "id": "swhwindsea_tavg-u-hxy-sea",
-    "type": "known_branded_variable"
+    "type": "known_branded_variable",
+    "description": "Average height of the highest one-third of waves present in the sea state, incorporating just wind-sea waves (i.e., local wind waves). It is derived from the wind-sea wave spectrum using spectral moments. Specifically, this parameter is four times the square root of the integral over all directions and all frequencies of the two-dimensional wind-sea wave spectrum.",
+    "long_name": "Wind Sea Significant Wave Height",
+    "table_id": [
+        "ocean"
+    ],
+    "compound_name": [
+        "ocean.swhwindsea.tavg-u-hxy-sea.mon.glb"
+    ],
+    "frequency": [
+        "mon"
+    ],
+    "cell_measures": "area: areacello",
+    "realm": "ocean"
 }

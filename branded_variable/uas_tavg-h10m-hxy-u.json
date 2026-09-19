@@ -1,5 +1,23 @@
 {
     "@context": "000_context.jsonld",
     "id": "uas_tavg-h10m-hxy-u",
-    "type": "known_branded_variable"
+    "type": "known_branded_variable",
+    "description": "Eastward component of the near-surface (usually, 10 meters)  wind",
+    "long_name": "Eastward Near-Surface Wind",
+    "table_id": [
+        "atmos"
+    ],
+    "compound_name": [
+        "atmos.uas.tavg-h10m-hxy-u.6hr.glb",
+        "atmos.uas.tavg-h10m-hxy-u.mon.30S-90S",
+        "atmos.uas.tavg-h10m-hxy-u.day.glb",
+        "atmos.uas.tavg-h10m-hxy-u.mon.glb"
+    ],
+    "frequency": [
+        "6hr",
+        "mon",
+        "day"
+    ],
+    "cell_measures": "area: areacella",
+    "realm": "atmos"
 }

@@ -1,5 +1,6 @@
 {
     "@context": "000_context.jsonld",
     "id": "wppwindsea",
-    "type": "variable"
+    "type": "variable",
+    "long_name": "Wind Sea Wave Peak Period"
 }

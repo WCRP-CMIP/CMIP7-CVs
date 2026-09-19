@@ -1,5 +1,18 @@
 {
     "@context": "000_context.jsonld",
     "id": "rluscsaf_tavg-u-hxy-u",
-    "type": "known_branded_variable"
+    "type": "known_branded_variable",
+    "description": "Flux corresponding to rluscs resulting from an aerosol-free call to radiation",
+    "long_name": "Surface Upwelling Clear-Sky, Aerosol-Free Longwave Radiation",
+    "table_id": [
+        "aerosol"
+    ],
+    "compound_name": [
+        "aerosol.rluscsaf.tavg-u-hxy-u.mon.glb"
+    ],
+    "frequency": [
+        "mon"
+    ],
+    "cell_measures": "area: areacella",
+    "realm": "aerosol"
 }

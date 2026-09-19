@@ -1,5 +1,18 @@
 {
     "@context": "000_context.jsonld",
     "id": "hus_tpt-p7h-hxy-air",
-    "type": "known_branded_variable"
+    "type": "known_branded_variable",
+    "description": "Extra levels - 925, 700, 600, 300, 50",
+    "long_name": "Specific Humidity",
+    "table_id": [
+        "atmos"
+    ],
+    "compound_name": [
+        "atmos.hus.tpt-p7h-hxy-air.6hr.glb"
+    ],
+    "frequency": [
+        "6hr"
+    ],
+    "cell_measures": "area: areacella",
+    "realm": "atmos"
 }

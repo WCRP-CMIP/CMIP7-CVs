@@ -1,5 +1,22 @@
 {
     "@context": "000_context.jsonld",
     "id": "mrros_tavg-u-hxy-lnd",
-    "type": "known_branded_variable"
+    "type": "known_branded_variable",
+    "description": "the total surface runoff leaving the land portion of the grid cell.",
+    "long_name": "Surface Runoff",
+    "table_id": [
+        "land"
+    ],
+    "compound_name": [
+        "land.mrros.tavg-u-hxy-lnd.3hr.glb",
+        "land.mrros.tavg-u-hxy-lnd.mon.glb",
+        "land.mrros.tavg-u-hxy-lnd.day.glb"
+    ],
+    "frequency": [
+        "3hr",
+        "mon",
+        "day"
+    ],
+    "cell_measures": "area: areacella",
+    "realm": "land"
 }

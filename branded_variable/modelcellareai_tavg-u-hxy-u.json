@@ -1,5 +1,19 @@
 {
     "@context": "000_context.jsonld",
     "id": "modelcellareai_tavg-u-hxy-u",
-    "type": "known_branded_variable"
+    "type": "known_branded_variable",
+    "description": "When interpolated to a regular grid, it should be interpolated (not summed) with a conservative scheme to preserve total area",
+    "long_name": "The Cell Area of the Ice Sheet Model",
+    "table_id": [
+        "landice"
+    ],
+    "compound_name": [
+        "landIce.modelcellareai.tavg-u-hxy-u.yr.ata",
+        "landIce.modelcellareai.tavg-u-hxy-u.yr.grl"
+    ],
+    "frequency": [
+        "yr"
+    ],
+    "cell_measures": "area: areacellg",
+    "realm": "landice"
 }

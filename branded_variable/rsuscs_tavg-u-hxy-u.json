@@ -1,5 +1,21 @@
 {
     "@context": "000_context.jsonld",
     "id": "rsuscs_tavg-u-hxy-u",
-    "type": "known_branded_variable"
+    "type": "known_branded_variable",
+    "description": "Surface Upwelling Clear-sky Shortwave Radiation",
+    "long_name": "Surface Upwelling Clear-Sky Shortwave Radiation",
+    "table_id": [
+        "atmos"
+    ],
+    "compound_name": [
+        "atmos.rsuscs.tavg-u-hxy-u.mon.glb",
+        "atmos.rsuscs.tavg-u-hxy-u.mon.30S-90S",
+        "atmos.rsuscs.tavg-u-hxy-u.day.glb"
+    ],
+    "frequency": [
+        "mon",
+        "day"
+    ],
+    "cell_measures": "area: areacella",
+    "realm": "atmos"
 }

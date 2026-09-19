@@ -1,5 +1,6 @@
 {
     "@context": "000_context.jsonld",
     "id": "o3ref",
-    "type": "variable"
+    "type": "variable",
+    "long_name": "Reference ozone mole fraction used in diagnostic call to radiation scheme"
 }

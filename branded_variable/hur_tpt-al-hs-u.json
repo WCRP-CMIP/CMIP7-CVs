@@ -1,5 +1,17 @@
 {
     "@context": "000_context.jsonld",
     "id": "hur_tpt-al-hs-u",
-    "type": "known_branded_variable"
+    "type": "known_branded_variable",
+    "description": "This is the relative humidity with respect to liquid water for T> 0 C, and with respect to ice for T<0 C.",
+    "long_name": "Relative Humidity",
+    "table_id": [
+        "atmos"
+    ],
+    "compound_name": [
+        "atmos.hur.tpt-al-hs-u.subhr.glb"
+    ],
+    "frequency": [
+        "subhr"
+    ],
+    "realm": "atmos"
 }

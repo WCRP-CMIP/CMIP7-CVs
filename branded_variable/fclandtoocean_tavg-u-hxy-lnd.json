@@ -1,5 +1,18 @@
 {
     "@context": "000_context.jsonld",
     "id": "fclandtoocean_tavg-u-hxy-lnd",
-    "type": "known_branded_variable"
+    "type": "known_branded_variable",
+    "description": "leached carbon etc that goes into run off or river routing and finds its way into ocean should be reported here.",
+    "long_name": "Lateral Transfer of Carbon out of Grid Cell That Eventually Goes into Ocean",
+    "table_id": [
+        "land"
+    ],
+    "compound_name": [
+        "land.fCLandToOcean.tavg-u-hxy-lnd.mon.glb"
+    ],
+    "frequency": [
+        "mon"
+    ],
+    "cell_measures": "area: areacellr",
+    "realm": "land"
 }

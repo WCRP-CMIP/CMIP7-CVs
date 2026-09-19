@@ -1,5 +1,20 @@
 {
     "@context": "000_context.jsonld",
     "id": "sbl_tavg-u-hxy-is",
-    "type": "known_branded_variable"
+    "type": "known_branded_variable",
+    "description": "The snow and ice sublimation flux is the loss of snow and ice mass per unit area from the surface resulting from their direct conversion to water vapor that enters the atmosphere.",
+    "long_name": "Ice Sheet Surface Snow and Ice Sublimation Flux",
+    "table_id": [
+        "landice"
+    ],
+    "compound_name": [
+        "landIce.sbl.tavg-u-hxy-is.mon.glb",
+        "landIce.sbl.tavg-u-hxy-is.mon.grl",
+        "landIce.sbl.tavg-u-hxy-is.mon.ata"
+    ],
+    "frequency": [
+        "mon"
+    ],
+    "cell_measures": "area: areacella",
+    "realm": "landice"
 }

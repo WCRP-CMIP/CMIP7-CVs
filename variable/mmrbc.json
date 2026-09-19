@@ -1,5 +1,6 @@
 {
     "@context": "000_context.jsonld",
     "id": "mmrbc",
-    "type": "variable"
+    "type": "variable",
+    "long_name": "Elemental Carbon Mass Mixing Ratio"
 }

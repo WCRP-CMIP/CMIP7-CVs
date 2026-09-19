@@ -1,5 +1,22 @@
 {
     "@context": "000_context.jsonld",
     "id": "pr_tmax-u-hxy-u",
-    "type": "known_branded_variable"
+    "type": "known_branded_variable",
+    "description": "In accordance with common usage in geophysical disciplines, \"flux\" implies per unit area, called \"flux density\" in physics.",
+    "long_name": "Maximum Hourly Precipitation Rate",
+    "table_id": [
+        "atmos"
+    ],
+    "compound_name": [
+        "atmos.pr.tmax-u-hxy-u.day.glb",
+        "atmos.pr.tmax-u-hxy-u.6hr.glb",
+        "atmos.pr.tmax-u-hxy-u.mon.glb"
+    ],
+    "frequency": [
+        "day",
+        "6hr",
+        "mon"
+    ],
+    "cell_measures": "area: areacella",
+    "realm": "atmos"
 }

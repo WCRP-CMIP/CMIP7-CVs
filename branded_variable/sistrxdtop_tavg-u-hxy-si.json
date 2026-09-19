@@ -1,5 +1,18 @@
 {
     "@context": "000_context.jsonld",
     "id": "sistrxdtop_tavg-u-hxy-si",
-    "type": "known_branded_variable"
+    "type": "known_branded_variable",
+    "description": "X-component of the atmospheric stress on the surface of sea ice divided by grid-cell area.",
+    "long_name": "X-Component of Atmospheric Stress on Sea Ice",
+    "table_id": [
+        "seaice"
+    ],
+    "compound_name": [
+        "seaIce.sistrxdtop.tavg-u-hxy-si.mon.glb"
+    ],
+    "frequency": [
+        "mon"
+    ],
+    "cell_measures": "--MODEL",
+    "realm": "seaice"
 }

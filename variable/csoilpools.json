@@ -1,5 +1,6 @@
 {
     "@context": "000_context.jsonld",
     "id": "csoilpools",
-    "type": "variable"
+    "type": "variable",
+    "long_name": "Carbon Mass in Each Model Soil Pool (Summed over Vertical Levels)"
 }

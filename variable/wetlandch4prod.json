@@ -1,5 +1,6 @@
 {
     "@context": "000_context.jsonld",
     "id": "wetlandch4prod",
-    "type": "variable"
+    "type": "variable",
+    "long_name": "Grid Averaged Methane Production (Methanogenesis) from Wetlands"
 }

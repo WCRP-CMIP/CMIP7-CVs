@@ -1,5 +1,6 @@
 {
     "@context": "000_context.jsonld",
     "id": "gpplut",
-    "type": "variable"
+    "type": "variable",
+    "long_name": "Gross Primary Production on Land-Use Tile as Carbon Mass Flux [kgC m-2 s-1]"
 }

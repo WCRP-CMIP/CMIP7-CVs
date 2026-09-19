@@ -1,5 +1,18 @@
 {
     "@context": "000_context.jsonld",
     "id": "nstem_tavg-u-hxy-lnd",
-    "type": "known_branded_variable"
+    "type": "known_branded_variable",
+    "description": "including sapwood and hardwood.",
+    "long_name": "Nitrogen Mass in Stem",
+    "table_id": [
+        "land"
+    ],
+    "compound_name": [
+        "land.nStem.tavg-u-hxy-lnd.mon.glb"
+    ],
+    "frequency": [
+        "mon"
+    ],
+    "cell_measures": "area: areacella",
+    "realm": "land"
 }

@@ -1,5 +1,6 @@
 {
     "@context": "000_context.jsonld",
     "id": "tropch4lossoh",
-    "type": "variable"
+    "type": "variable",
+    "long_name": "Loss of CH4 due to tropospheric loss by OH"
 }

@@ -1,5 +1,18 @@
 {
     "@context": "000_context.jsonld",
     "id": "wetno3_tavg-al-hxy-u",
-    "type": "known_branded_variable"
+    "type": "known_branded_variable",
+    "description": "This is the loss rate of nitrate aerosol from the atmosphere due to wet deposition",
+    "long_name": "Wet deposition of nitrate aerosol",
+    "table_id": [
+        "atmoschem"
+    ],
+    "compound_name": [
+        "atmosChem.wetno3.tavg-al-hxy-u.mon.glb"
+    ],
+    "frequency": [
+        "mon"
+    ],
+    "cell_measures": "area: areacella",
+    "realm": "atmoschem"
 }

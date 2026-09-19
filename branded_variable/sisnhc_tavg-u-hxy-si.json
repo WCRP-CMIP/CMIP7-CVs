@@ -1,5 +1,20 @@
 {
     "@context": "000_context.jsonld",
     "id": "sisnhc_tavg-u-hxy-si",
-    "type": "known_branded_variable"
+    "type": "known_branded_variable",
+    "description": "Heat content of all snow in grid cell divided by grid-cell area. This includes both the latent and sensible heat content contributions. Snow-water equivalent at 0 C is assumed to have a heat content of 0 J. Does not include the heat content of sea ice.",
+    "long_name": "Snow Heat Content",
+    "table_id": [
+        "seaice"
+    ],
+    "compound_name": [
+        "seaIce.sisnhc.tavg-u-hxy-si.mon.glb",
+        "seaIce.sisnhc.tavg-u-hxy-si.day.glb"
+    ],
+    "frequency": [
+        "mon",
+        "day"
+    ],
+    "cell_measures": "area: areacello",
+    "realm": "seaice"
 }

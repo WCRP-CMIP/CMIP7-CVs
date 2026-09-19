@@ -1,5 +1,18 @@
 {
     "@context": "000_context.jsonld",
     "id": "mrsollut_tavg-d10cm-hxy-multi",
-    "type": "known_branded_variable"
+    "type": "known_branded_variable",
+    "description": "the mass of water in all phases in a thin surface layer; integrate over uppermost 10cm",
+    "long_name": "Moisture in Upper Portion of Soil Column of Land-Use Tile",
+    "table_id": [
+        "land"
+    ],
+    "compound_name": [
+        "land.mrsolLut.tavg-d10cm-hxy-multi.mon.glb"
+    ],
+    "frequency": [
+        "mon"
+    ],
+    "cell_measures": "area: areacella",
+    "realm": "land"
 }

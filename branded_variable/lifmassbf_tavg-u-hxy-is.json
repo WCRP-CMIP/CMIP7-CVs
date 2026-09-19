@@ -1,5 +1,22 @@
 {
     "@context": "000_context.jsonld",
     "id": "lifmassbf_tavg-u-hxy-is",
-    "type": "known_branded_variable"
+    "type": "known_branded_variable",
+    "description": "Total mass balance at the ice front (or vertical margin). It includes both iceberg calving and melt on vertical ice front",
+    "long_name": "Land Ice Vertical Front Mass Balance Flux",
+    "table_id": [
+        "landice"
+    ],
+    "compound_name": [
+        "landIce.lifmassbf.tavg-u-hxy-is.mon.ata",
+        "landIce.lifmassbf.tavg-u-hxy-is.yr.grl",
+        "landIce.lifmassbf.tavg-u-hxy-is.yr.ata",
+        "landIce.lifmassbf.tavg-u-hxy-is.mon.grl"
+    ],
+    "frequency": [
+        "mon",
+        "yr"
+    ],
+    "cell_measures": "area: areacellg",
+    "realm": "landice"
 }

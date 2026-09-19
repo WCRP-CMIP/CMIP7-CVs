@@ -1,5 +1,20 @@
 {
     "@context": "000_context.jsonld",
     "id": "osaltpsmadvect_tavg-ol-hxy-sea",
-    "type": "known_branded_variable"
+    "type": "known_branded_variable",
+    "description": "Tendency of salt content for a grid cell from parameterized submesoscale eddy advection.",
+    "long_name": "Tendency of Sea Water Salinity Expressed as Salt Content Due to Parameterized Submesoscale Advection",
+    "table_id": [
+        "ocean"
+    ],
+    "compound_name": [
+        "ocean.osaltpsmadvect.tavg-ol-hxy-sea.yr.glb",
+        "ocean.osaltpsmadvect.tavg-ol-hxy-sea.mon.glb"
+    ],
+    "frequency": [
+        "yr",
+        "mon"
+    ],
+    "cell_measures": "area: areacello volume: volcello",
+    "realm": "ocean"
 }

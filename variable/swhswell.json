@@ -1,5 +1,6 @@
 {
     "@context": "000_context.jsonld",
     "id": "swhswell",
-    "type": "variable"
+    "type": "variable",
+    "long_name": "Swell Significant Wave Height"
 }

@@ -1,5 +1,6 @@
 {
     "@context": "000_context.jsonld",
     "id": "exparagob",
-    "type": "variable"
+    "type": "variable",
+    "long_name": "Sinking Flux of Aragonite Reaching the Ocean Bottom"
 }

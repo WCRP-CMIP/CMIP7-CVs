@@ -1,5 +1,18 @@
 {
     "@context": "000_context.jsonld",
     "id": "rsds_tavg-u-hxy-lnd",
-    "type": "known_branded_variable"
+    "type": "known_branded_variable",
+    "description": "Surface Downwelling Shortwave Radiation over land. Can be used for computation of surface albedo.",
+    "long_name": "Surface Downwelling Shortwave Radiation over Land",
+    "table_id": [
+        "land"
+    ],
+    "compound_name": [
+        "land.rsds.tavg-u-hxy-lnd.mon.glb"
+    ],
+    "frequency": [
+        "mon"
+    ],
+    "cell_measures": "area: areacella",
+    "realm": "land"
 }

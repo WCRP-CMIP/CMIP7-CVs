@@ -1,5 +1,6 @@
 {
     "@context": "000_context.jsonld",
     "id": "vmo",
-    "type": "variable"
+    "type": "variable",
+    "long_name": "Ocean Mass Y Transport"
 }

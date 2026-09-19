@@ -1,5 +1,21 @@
 {
     "@context": "000_context.jsonld",
     "id": "sisnmass_tavg-u-hm-si",
-    "type": "known_branded_variable"
+    "type": "known_branded_variable",
+    "description": "Total integrated mass of snow on sea ice in the Northern Hemisphere.",
+    "long_name": "Snow Mass on Sea Ice",
+    "table_id": [
+        "seaice"
+    ],
+    "compound_name": [
+        "seaIce.sisnmass.tavg-u-hm-si.day.nh",
+        "seaIce.sisnmass.tavg-u-hm-si.mon.sh",
+        "seaIce.sisnmass.tavg-u-hm-si.mon.nh",
+        "seaIce.sisnmass.tavg-u-hm-si.day.sh"
+    ],
+    "frequency": [
+        "day",
+        "mon"
+    ],
+    "realm": "seaice"
 }

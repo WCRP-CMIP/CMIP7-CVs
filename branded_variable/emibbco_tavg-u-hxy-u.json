@@ -1,5 +1,18 @@
 {
     "@context": "000_context.jsonld",
     "id": "emibbco_tavg-u-hxy-u",
-    "type": "known_branded_variable"
+    "type": "known_branded_variable",
+    "description": "Total emission rate of carbon monoxide (CO) into the atmosphere from all biomass burning (natural and anthropogenic)",
+    "long_name": "total emission rate of CO from all biomass burning",
+    "table_id": [
+        "aerosol"
+    ],
+    "compound_name": [
+        "aerosol.emibbco.tavg-u-hxy-u.mon.glb"
+    ],
+    "frequency": [
+        "mon"
+    ],
+    "cell_measures": "area: areacella",
+    "realm": "aerosol"
 }

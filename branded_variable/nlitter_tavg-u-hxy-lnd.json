@@ -1,5 +1,18 @@
 {
     "@context": "000_context.jsonld",
     "id": "nlitter_tavg-u-hxy-lnd",
-    "type": "known_branded_variable"
+    "type": "known_branded_variable",
+    "description": "Report missing data over ocean grid cells. For fractional land report value averaged over the land fraction.",
+    "long_name": "Nitrogen Mass in Litter Pool",
+    "table_id": [
+        "land"
+    ],
+    "compound_name": [
+        "land.nLitter.tavg-u-hxy-lnd.mon.glb"
+    ],
+    "frequency": [
+        "mon"
+    ],
+    "cell_measures": "area: areacella",
+    "realm": "land"
 }

@@ -1,5 +1,20 @@
 {
     "@context": "000_context.jsonld",
     "id": "drynh3_tavg-u-hxy-u",
-    "type": "known_branded_variable"
+    "type": "known_branded_variable",
+    "description": "Daily Dry Deposition Rate of NH3 at surface. Vertically integrated throughout the column to the surface.",
+    "long_name": "Dry Deposition Rate of NH3",
+    "table_id": [
+        "atmoschem"
+    ],
+    "compound_name": [
+        "atmosChem.drynh3.tavg-u-hxy-u.mon.glb",
+        "atmosChem.drynh3.tavg-u-hxy-u.day.glb"
+    ],
+    "frequency": [
+        "mon",
+        "day"
+    ],
+    "cell_measures": "area: areacella",
+    "realm": "atmoschem"
 }

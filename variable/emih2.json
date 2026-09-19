@@ -1,5 +1,6 @@
 {
     "@context": "000_context.jsonld",
     "id": "emih2",
-    "type": "variable"
+    "type": "variable",
+    "long_name": "Total emission rate of H2"
 }

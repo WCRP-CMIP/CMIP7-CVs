@@ -1,5 +1,18 @@
 {
     "@context": "000_context.jsonld",
     "id": "rhvgt_tavg-u-hxy-multi",
-    "type": "known_branded_variable"
+    "type": "known_branded_variable",
+    "description": "Carbon mass flux per unit area into atmosphere due to heterotrophic respiration on land (respiration by consumers), calculated on vegetation type.",
+    "long_name": "Heterotrophic Respiration on Vegetation type as Carbon Mass Flux [kgC m-2 s-1]",
+    "table_id": [
+        "land"
+    ],
+    "compound_name": [
+        "land.rhVgt.tavg-u-hxy-multi.day.glb"
+    ],
+    "frequency": [
+        "day"
+    ],
+    "cell_measures": "area: areacella",
+    "realm": "land"
 }

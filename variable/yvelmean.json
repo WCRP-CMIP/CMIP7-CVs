@@ -1,5 +1,6 @@
 {
     "@context": "000_context.jsonld",
     "id": "yvelmean",
-    "type": "variable"
+    "type": "variable",
+    "long_name": "Y-Component of Land Ice Vertical Mean Velocity"
 }

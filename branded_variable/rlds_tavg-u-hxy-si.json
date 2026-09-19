@@ -1,5 +1,20 @@
 {
     "@context": "000_context.jsonld",
     "id": "rlds_tavg-u-hxy-si",
-    "type": "known_branded_variable"
+    "type": "known_branded_variable",
+    "description": "Downwelling longwave flux from the atmosphere to the sea-ice surface (energy flow per sea ice area). Always positive or zero.",
+    "long_name": "Downwelling Longwave Flux over Sea Ice",
+    "table_id": [
+        "seaice"
+    ],
+    "compound_name": [
+        "seaIce.rlds.tavg-u-hxy-si.day.glb",
+        "seaIce.rlds.tavg-u-hxy-si.mon.glb"
+    ],
+    "frequency": [
+        "day",
+        "mon"
+    ],
+    "cell_measures": "area: areacella",
+    "realm": "seaice"
 }

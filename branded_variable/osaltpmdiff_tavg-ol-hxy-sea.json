@@ -1,5 +1,18 @@
 {
     "@context": "000_context.jsonld",
     "id": "osaltpmdiff_tavg-ol-hxy-sea",
-    "type": "known_branded_variable"
+    "type": "known_branded_variable",
+    "description": "Tendency of salt content for a grid cell from parameterized mesoscale eddy diffusion.",
+    "long_name": "Tendency of Sea Water Salinity Expressed as Salt Content Due to Parameterized Mesoscale Diffusion",
+    "table_id": [
+        "ocean"
+    ],
+    "compound_name": [
+        "ocean.osaltpmdiff.tavg-ol-hxy-sea.yr.glb"
+    ],
+    "frequency": [
+        "yr"
+    ],
+    "cell_measures": "area: areacello volume: volcello",
+    "realm": "ocean"
 }

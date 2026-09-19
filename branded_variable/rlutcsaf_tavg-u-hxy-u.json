@@ -1,5 +1,18 @@
 {
     "@context": "000_context.jsonld",
     "id": "rlutcsaf_tavg-u-hxy-u",
-    "type": "known_branded_variable"
+    "type": "known_branded_variable",
+    "description": "Flux corresponding to rlutcs resulting fom aerosol-free call to radiation",
+    "long_name": "TOA Outgoing Clear-Sky, Aerosol-Free Longwave Radiation",
+    "table_id": [
+        "aerosol"
+    ],
+    "compound_name": [
+        "aerosol.rlutcsaf.tavg-u-hxy-u.mon.glb"
+    ],
+    "frequency": [
+        "mon"
+    ],
+    "cell_measures": "area: areacella",
+    "realm": "aerosol"
 }

@@ -1,5 +1,18 @@
 {
     "@context": "000_context.jsonld",
     "id": "dissic_tavg-ol-hxy-sea",
-    "type": "known_branded_variable"
+    "type": "known_branded_variable",
+    "description": "Dissolved inorganic carbon (CO3+HCO3+H2CO3) concentration",
+    "long_name": "Dissolved Inorganic Carbon Concentration",
+    "table_id": [
+        "ocnbgchem"
+    ],
+    "compound_name": [
+        "ocnBgchem.dissic.tavg-ol-hxy-sea.mon.glb"
+    ],
+    "frequency": [
+        "mon"
+    ],
+    "cell_measures": "area: areacello volume: volcello",
+    "realm": "ocnbgchem"
 }

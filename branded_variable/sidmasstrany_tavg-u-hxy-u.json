@@ -1,5 +1,18 @@
 {
     "@context": "000_context.jsonld",
     "id": "sidmasstrany_tavg-u-hxy-u",
-    "type": "known_branded_variable"
+    "type": "known_branded_variable",
+    "description": "Y-component of the sea-ice drift-induced transport of snow and sea ice mass.",
+    "long_name": "Y-Component of Sea-Ice Mass Transport",
+    "table_id": [
+        "seaice"
+    ],
+    "compound_name": [
+        "seaIce.sidmasstrany.tavg-u-hxy-u.mon.glb"
+    ],
+    "frequency": [
+        "mon"
+    ],
+    "cell_measures": "--MODEL",
+    "realm": "seaice"
 }

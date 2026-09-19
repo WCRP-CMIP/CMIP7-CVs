@@ -1,5 +1,21 @@
 {
     "@context": "000_context.jsonld",
     "id": "ts_tavg-u-hxy-si",
-    "type": "known_branded_variable"
+    "type": "known_branded_variable",
+    "description": "Mean surface temperature of the sea-ice covered part of the grid cell. Wherever snow covers the ice, the surface temperature of the snow is used for the averaging, otherwise the surface temperature of the ice is used.",
+    "long_name": "Surface Temperature of Sea Ice",
+    "table_id": [
+        "seaice"
+    ],
+    "compound_name": [
+        "seaIce.ts.tavg-u-hxy-si.day.glb",
+        "seaIce.ts.tavg-u-hxy-si.mon.glb",
+        "seaIce.ts.tavg-u-hxy-si.mon.30S-90S"
+    ],
+    "frequency": [
+        "day",
+        "mon"
+    ],
+    "cell_measures": "area: areacello",
+    "realm": "seaice"
 }

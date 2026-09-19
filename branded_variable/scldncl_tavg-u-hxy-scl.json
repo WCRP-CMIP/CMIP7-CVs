@@ -1,5 +1,20 @@
 {
     "@context": "000_context.jsonld",
     "id": "scldncl_tavg-u-hxy-scl",
-    "type": "known_branded_variable"
+    "type": "known_branded_variable",
+    "description": "Droplets are liquid only.  Report concentration \"as seen from space\" over stratiform liquid cloudy portion of grid cell.  This is the value from uppermost model layer with liquid cloud or, if available, it is better to sum over all liquid cloud tops, no matter where they occur, as long as they are seen from the top of the atmosphere. Weight by total liquid cloud top fraction of  (as seen from TOA) each time sample when computing monthly mean.",
+    "long_name": "Cloud Droplet Number Concentration of Stratiform Cloud Tops",
+    "table_id": [
+        "atmos"
+    ],
+    "compound_name": [
+        "atmos.scldncl.tavg-u-hxy-scl.day.glb",
+        "atmos.scldncl.tavg-u-hxy-scl.mon.glb"
+    ],
+    "frequency": [
+        "day",
+        "mon"
+    ],
+    "cell_measures": "area: areacella",
+    "realm": "atmos"
 }

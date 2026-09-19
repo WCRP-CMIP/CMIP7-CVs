@@ -1,5 +1,18 @@
 {
     "@context": "000_context.jsonld",
     "id": "deptho_ti-u-hxy-sea",
-    "type": "known_branded_variable"
+    "type": "known_branded_variable",
+    "description": "Ocean bathymetry. Reported here is the sea floor depth for present day relative to z=0 geoid. Reported as missing for land grid cells.",
+    "long_name": "Sea Floor Depth Below Geoid",
+    "table_id": [
+        "ocean"
+    ],
+    "compound_name": [
+        "ocean.deptho.ti-u-hxy-sea.fx.glb"
+    ],
+    "frequency": [
+        "fx"
+    ],
+    "cell_measures": "area: areacello",
+    "realm": "ocean"
 }

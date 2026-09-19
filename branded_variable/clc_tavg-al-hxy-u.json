@@ -1,5 +1,19 @@
 {
     "@context": "000_context.jsonld",
     "id": "clc_tavg-al-hxy-u",
-    "type": "known_branded_variable"
+    "type": "known_branded_variable",
+    "description": "Include only convective cloud.",
+    "long_name": "Convective Cloud Area Percentage",
+    "table_id": [
+        "atmos"
+    ],
+    "compound_name": [
+        "atmos.clc.tavg-al-hxy-u.mon.30S-90S",
+        "atmos.clc.tavg-al-hxy-u.mon.glb"
+    ],
+    "frequency": [
+        "mon"
+    ],
+    "cell_measures": "area: areacella",
+    "realm": "atmos"
 }

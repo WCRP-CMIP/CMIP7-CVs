@@ -1,0 +1,6 @@
+{
+    "@context": "000_context.jsonld",
+    "id": "time",
+    "type": "data_coordinate",
+    "long_name": "Time Intervals"
+}

@@ -1,5 +1,6 @@
 {
     "@context": "000_context.jsonld",
     "id": "nppstem",
-    "type": "variable"
+    "type": "variable",
+    "long_name": "Net Primary Production Allocated to Stem as Carbon Mass Flux [kgC m-2 s-1]"
 }

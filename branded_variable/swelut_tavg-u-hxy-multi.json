@@ -1,5 +1,18 @@
 {
     "@context": "000_context.jsonld",
     "id": "swelut_tavg-u-hxy-multi",
-    "type": "known_branded_variable"
+    "type": "known_branded_variable",
+    "description": "The surface called \"surface\" means the lower boundary of the atmosphere. \"lwe\" means liquid water equivalent. \"Amount\" means mass per unit area. The construction lwe_thickness_of_X_amount or _content means the vertical extent of a layer of liquid water having the same mass per unit area. Surface amount refers to the amount on the ground, excluding that on the plant or vegetation canopy.",
+    "long_name": "Snow Water Equivalent on Land-Use Tile",
+    "table_id": [
+        "land"
+    ],
+    "compound_name": [
+        "land.sweLut.tavg-u-hxy-multi.mon.glb"
+    ],
+    "frequency": [
+        "mon"
+    ],
+    "cell_measures": "area: areacella",
+    "realm": "land"
 }

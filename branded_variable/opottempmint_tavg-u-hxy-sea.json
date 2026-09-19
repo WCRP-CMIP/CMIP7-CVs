@@ -1,5 +1,18 @@
 {
     "@context": "000_context.jsonld",
     "id": "opottempmint_tavg-u-hxy-sea",
-    "type": "known_branded_variable"
+    "type": "known_branded_variable",
+    "description": "Full column sum of density*cell thickness*potential temperature. If the model is Boussinesq, then use Boussinesq reference density for the density factor.",
+    "long_name": "Integral with Respect to Depth of Product of Sea Water Density and Potential Temperature",
+    "table_id": [
+        "ocean"
+    ],
+    "compound_name": [
+        "ocean.opottempmint.tavg-u-hxy-sea.yr.glb"
+    ],
+    "frequency": [
+        "yr"
+    ],
+    "cell_measures": "area: areacello",
+    "realm": "ocean"
 }

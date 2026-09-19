@@ -1,5 +1,6 @@
 {
     "@context": "000_context.jsonld",
     "id": "reffclic",
-    "type": "variable"
+    "type": "variable",
+    "long_name": "Hydrometeor Effective Radius of Convective Cloud Ice"
 }

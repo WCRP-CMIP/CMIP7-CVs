@@ -1,5 +1,20 @@
 {
     "@context": "000_context.jsonld",
     "id": "masscello_tavg-ol-hxy-sea",
-    "type": "known_branded_variable"
+    "type": "known_branded_variable",
+    "description": "For Boussinesq models, report this diagnostic as Boussinesq reference density times grid celll volume.",
+    "long_name": "Ocean Grid-Cell Mass per Area",
+    "table_id": [
+        "ocean"
+    ],
+    "compound_name": [
+        "ocean.masscello.tavg-ol-hxy-sea.mon.glb",
+        "ocean.masscello.tavg-ol-hxy-sea.dec.glb"
+    ],
+    "frequency": [
+        "mon",
+        "dec"
+    ],
+    "cell_measures": "area: areacello volume: volcello",
+    "realm": "ocean"
 }

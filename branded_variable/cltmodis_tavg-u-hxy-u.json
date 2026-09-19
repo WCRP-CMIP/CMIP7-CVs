@@ -1,5 +1,19 @@
 {
     "@context": "000_context.jsonld",
     "id": "cltmodis_tavg-u-hxy-u",
-    "type": "known_branded_variable"
+    "type": "known_branded_variable",
+    "description": "Percentage of total cloud cover as seen by the MODIS instrument simulator.",
+    "long_name": "MODIS Total Cloud Area Percentage",
+    "table_id": [
+        "atmos"
+    ],
+    "compound_name": [
+        "atmos.cltmodis.tavg-u-hxy-u.mon.30S-90S",
+        "atmos.cltmodis.tavg-u-hxy-u.mon.glb"
+    ],
+    "frequency": [
+        "mon"
+    ],
+    "cell_measures": "area: areacella",
+    "realm": "atmos"
 }

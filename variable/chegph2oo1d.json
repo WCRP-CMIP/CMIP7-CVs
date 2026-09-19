@@ -1,5 +1,6 @@
 {
     "@context": "000_context.jsonld",
     "id": "chegph2oo1d",
-    "type": "variable"
+    "type": "variable",
+    "long_name": "Chemical production of OH by reaction of O1D+H2O"
 }

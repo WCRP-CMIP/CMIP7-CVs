@@ -1,5 +1,18 @@
 {
     "@context": "000_context.jsonld",
     "id": "csoil_tavg-d100cm-hxy-lnd",
-    "type": "known_branded_variable"
+    "type": "known_branded_variable",
+    "description": "Report missing data over ocean grid cells. For fractional land report value averaged over the land fraction.",
+    "long_name": "Carbon Mass in Soil Pool Above 1m Depth",
+    "table_id": [
+        "land"
+    ],
+    "compound_name": [
+        "land.cSoil.tavg-d100cm-hxy-lnd.mon.glb"
+    ],
+    "frequency": [
+        "mon"
+    ],
+    "cell_measures": "area: areacella",
+    "realm": "land"
 }

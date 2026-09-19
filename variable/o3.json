@@ -1,5 +1,6 @@
 {
     "@context": "000_context.jsonld",
     "id": "o3",
-    "type": "variable"
+    "type": "variable",
+    "long_name": "Mole Fraction of O3"
 }

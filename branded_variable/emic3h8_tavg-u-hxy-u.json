@@ -1,5 +1,18 @@
 {
     "@context": "000_context.jsonld",
     "id": "emic3h8_tavg-u-hxy-u",
-    "type": "known_branded_variable"
+    "type": "known_branded_variable",
+    "description": "This is the total emission rate of propane (C3H8) into the atmosphere",
+    "long_name": "total emission rate of C3H8",
+    "table_id": [
+        "atmoschem"
+    ],
+    "compound_name": [
+        "atmosChem.emic3h8.tavg-u-hxy-u.mon.glb"
+    ],
+    "frequency": [
+        "mon"
+    ],
+    "cell_measures": "area: areacella",
+    "realm": "atmoschem"
 }

@@ -1,5 +1,18 @@
 {
     "@context": "000_context.jsonld",
     "id": "zg_tavg-500hpa-hxy-air",
-    "type": "known_branded_variable"
+    "type": "known_branded_variable",
+    "description": "geopotential height on the 500 hPa surface",
+    "long_name": "Geopotential Height at 500hPa",
+    "table_id": [
+        "atmos"
+    ],
+    "compound_name": [
+        "atmos.zg.tavg-500hPa-hxy-air.day.glb"
+    ],
+    "frequency": [
+        "day"
+    ],
+    "cell_measures": "area: areacella",
+    "realm": "atmos"
 }

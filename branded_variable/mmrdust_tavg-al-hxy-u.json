@@ -1,5 +1,19 @@
 {
     "@context": "000_context.jsonld",
     "id": "mmrdust_tavg-al-hxy-u",
-    "type": "known_branded_variable"
+    "type": "known_branded_variable",
+    "description": "Dry mass fraction of dust aerosol particles in air.",
+    "long_name": "Dust Aerosol Mass Mixing Ratio",
+    "table_id": [
+        "aerosol"
+    ],
+    "compound_name": [
+        "aerosol.mmrdust.tavg-al-hxy-u.mon.30S-90S",
+        "aerosol.mmrdust.tavg-al-hxy-u.mon.glb"
+    ],
+    "frequency": [
+        "mon"
+    ],
+    "cell_measures": "area: areacella",
+    "realm": "aerosol"
 }

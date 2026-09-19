@@ -1,5 +1,6 @@
 {
     "@context": "000_context.jsonld",
     "id": "rsdoabsorb",
-    "type": "variable"
+    "type": "variable",
+    "long_name": "Net Rate of Absorption of Shortwave Energy in Ocean Layer"
 }

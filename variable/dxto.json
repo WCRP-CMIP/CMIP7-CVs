@@ -1,5 +1,6 @@
 {
     "@context": "000_context.jsonld",
     "id": "dxto",
-    "type": "variable"
+    "type": "variable",
+    "long_name": "Cell Length in the X Direction at t-points"
 }

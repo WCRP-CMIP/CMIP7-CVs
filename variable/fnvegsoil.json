@@ -1,5 +1,6 @@
 {
     "@context": "000_context.jsonld",
     "id": "fnvegsoil",
-    "type": "variable"
+    "type": "variable",
+    "long_name": "Total Nitrogen Mass Flux from Vegetation Directly to Soil"
 }

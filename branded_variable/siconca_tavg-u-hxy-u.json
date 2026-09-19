@@ -1,5 +1,20 @@
 {
     "@context": "000_context.jsonld",
     "id": "siconca_tavg-u-hxy-u",
-    "type": "known_branded_variable"
+    "type": "known_branded_variable",
+    "description": "Percentage of a given grid cell that is covered by sea ice on the atmosphere grid, independent of the thickness of that ice.",
+    "long_name": "Sea-Ice Area Percentage (Atmospheric Grid)",
+    "table_id": [
+        "seaice"
+    ],
+    "compound_name": [
+        "seaIce.siconca.tavg-u-hxy-u.mon.glb",
+        "seaIce.siconca.tavg-u-hxy-u.day.glb"
+    ],
+    "frequency": [
+        "mon",
+        "day"
+    ],
+    "cell_measures": "area: areacella",
+    "realm": "seaice"
 }

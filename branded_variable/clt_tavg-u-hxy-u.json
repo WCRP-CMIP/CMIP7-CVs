@@ -1,5 +1,25 @@
 {
     "@context": "000_context.jsonld",
     "id": "clt_tavg-u-hxy-u",
-    "type": "known_branded_variable"
+    "type": "known_branded_variable",
+    "description": "Total cloud area fraction (reported as a percentage) for the whole atmospheric column, as seen from the surface or the top of the atmosphere. Includes both large-scale and convective cloud.",
+    "long_name": "Total Cloud Cover Percentage",
+    "table_id": [
+        "atmos"
+    ],
+    "compound_name": [
+        "atmos.clt.tavg-u-hxy-u.1hr.30S-90S",
+        "atmos.clt.tavg-u-hxy-u.mon.glb",
+        "atmos.clt.tavg-u-hxy-u.3hr.glb",
+        "atmos.clt.tavg-u-hxy-u.day.glb",
+        "atmos.clt.tavg-u-hxy-u.mon.30S-90S"
+    ],
+    "frequency": [
+        "1hr",
+        "mon",
+        "3hr",
+        "day"
+    ],
+    "cell_measures": "area: areacella",
+    "realm": "atmos"
 }

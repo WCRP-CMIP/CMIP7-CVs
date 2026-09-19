@@ -1,5 +1,19 @@
 {
     "@context": "000_context.jsonld",
     "id": "tntrs_tavg-p39-hy-air",
-    "type": "known_branded_variable"
+    "type": "known_branded_variable",
+    "description": "Zonal mean tendency of air temperature due to shortwave heating, all sky, with the extended number of vertical levels.",
+    "long_name": "Zonal Mean Tendency of Air Temperature Due to Shortwave Radiative Heating",
+    "table_id": [
+        "atmos"
+    ],
+    "compound_name": [
+        "atmos.tntrs.tavg-p39-hy-air.day.glb",
+        "atmos.tntrs.tavg-p39-hy-air.mon.glb"
+    ],
+    "frequency": [
+        "day",
+        "mon"
+    ],
+    "realm": "atmos"
 }

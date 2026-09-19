@@ -1,5 +1,6 @@
 {
     "@context": "000_context.jsonld",
     "id": "emibbnh3",
-    "type": "variable"
+    "type": "variable",
+    "long_name": "total emission rate of NH3 from all biomass burning"
 }

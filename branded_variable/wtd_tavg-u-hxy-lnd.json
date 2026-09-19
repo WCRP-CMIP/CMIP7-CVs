@@ -1,5 +1,18 @@
 {
     "@context": "000_context.jsonld",
     "id": "wtd_tavg-u-hxy-lnd",
-    "type": "known_branded_variable"
+    "type": "known_branded_variable",
+    "description": "depth_of_soil_moisture_saturation",
+    "long_name": "Water Table Depth",
+    "table_id": [
+        "land"
+    ],
+    "compound_name": [
+        "land.wtd.tavg-u-hxy-lnd.day.glb"
+    ],
+    "frequency": [
+        "day"
+    ],
+    "cell_measures": "area: areacellr",
+    "realm": "land"
 }

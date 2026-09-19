@@ -1,5 +1,18 @@
 {
     "@context": "000_context.jsonld",
     "id": "mrsofc_ti-u-hxy-lnd",
-    "type": "known_branded_variable"
+    "type": "known_branded_variable",
+    "description": "reported \"where land\": divide the total water holding capacity of all the soil in the grid cell by the land area in the grid cell;  reported as \"missing\" where the land fraction is 0.",
+    "long_name": "Capacity of Soil to Store Water (Field Capacity)",
+    "table_id": [
+        "land"
+    ],
+    "compound_name": [
+        "land.mrsofc.ti-u-hxy-lnd.fx.glb"
+    ],
+    "frequency": [
+        "fx"
+    ],
+    "cell_measures": "area: areacella",
+    "realm": "land"
 }

@@ -1,5 +1,6 @@
 {
     "@context": "000_context.jsonld",
     "id": "sisi",
-    "type": "variable"
+    "type": "variable",
+    "long_name": "Dissolved Silicon Amount in Sea Ice"
 }

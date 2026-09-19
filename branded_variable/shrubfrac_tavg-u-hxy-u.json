@@ -1,5 +1,20 @@
 {
     "@context": "000_context.jsonld",
     "id": "shrubfrac_tavg-u-hxy-u",
-    "type": "known_branded_variable"
+    "type": "known_branded_variable",
+    "description": "Percentage of entire grid cell  that is covered by shrub.",
+    "long_name": "Percentage Cover by Shrub",
+    "table_id": [
+        "land"
+    ],
+    "compound_name": [
+        "land.shrubFrac.tavg-u-hxy-u.yr.glb",
+        "land.shrubFrac.tavg-u-hxy-u.mon.glb"
+    ],
+    "frequency": [
+        "yr",
+        "mon"
+    ],
+    "cell_measures": "area: areacella",
+    "realm": "land"
 }

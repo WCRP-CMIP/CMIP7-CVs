@@ -1,5 +1,18 @@
 {
     "@context": "000_context.jsonld",
     "id": "rlutcs_tclmdc-u-hxy-u",
-    "type": "known_branded_variable"
+    "type": "known_branded_variable",
+    "description": "Upwelling clear-sky longwave radiation at top of atmosphere",
+    "long_name": "TOA Outgoing Clear-Sky Longwave Radiation",
+    "table_id": [
+        "atmos"
+    ],
+    "compound_name": [
+        "atmos.rlutcs.tclmdc-u-hxy-u.1hr.glb"
+    ],
+    "frequency": [
+        "1hr"
+    ],
+    "cell_measures": "area: areacella",
+    "realm": "atmos"
 }

@@ -1,0 +1,7 @@
+{
+    "@context": "000_context.jsonld",
+    "id": "hybrid_height",
+    "type": "model_level_coordinate",
+    "long_name": "hybrid height coordinate",
+    "valid_min": 0.0
+}

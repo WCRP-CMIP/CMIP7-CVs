@@ -1,0 +1,6 @@
+{
+    "@context": "000_context.jsonld",
+    "id": "typeveg",
+    "type": "data_coordinate",
+    "long_name": "Vegetation area type"
+}

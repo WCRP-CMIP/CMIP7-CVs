@@ -1,5 +1,6 @@
 {
     "@context": "000_context.jsonld",
     "id": "snw",
-    "type": "variable"
+    "type": "variable",
+    "long_name": "Surface Snow Amount"
 }

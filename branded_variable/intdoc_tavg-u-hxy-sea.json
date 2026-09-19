@@ -1,5 +1,18 @@
 {
     "@context": "000_context.jsonld",
     "id": "intdoc_tavg-u-hxy-sea",
-    "type": "known_branded_variable"
+    "type": "known_branded_variable",
+    "description": "Vertically integrated DOC (explicit pools only)",
+    "long_name": "Dissolved Organic Carbon Content",
+    "table_id": [
+        "ocnbgchem"
+    ],
+    "compound_name": [
+        "ocnBgchem.intdoc.tavg-u-hxy-sea.mon.30S-90S"
+    ],
+    "frequency": [
+        "mon"
+    ],
+    "cell_measures": "area: areacello",
+    "realm": "ocnbgchem"
 }

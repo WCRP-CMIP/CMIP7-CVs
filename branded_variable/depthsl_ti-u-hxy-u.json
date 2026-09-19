@@ -1,5 +1,18 @@
 {
     "@context": "000_context.jsonld",
     "id": "depthsl_ti-u-hxy-u",
-    "type": "known_branded_variable"
+    "type": "known_branded_variable",
+    "description": "Total (cumulative) thickness of all soil layers. This is the sum of individual thicknesses of all soil layers.",
+    "long_name": "Total (Cumulative) Thickness of All Soil Layers",
+    "table_id": [
+        "land"
+    ],
+    "compound_name": [
+        "land.depthsl.ti-u-hxy-u.fx.glb"
+    ],
+    "frequency": [
+        "fx"
+    ],
+    "cell_measures": "area: areacella",
+    "realm": "land"
 }

@@ -1,0 +1,7 @@
+{
+    "@context": "000_context.jsonld",
+    "id": "alt40",
+    "type": "data_coordinate",
+    "long_name": "Altitude (40 Levels for CloudSat)",
+    "tolerance": 1.0
+}

@@ -1,5 +1,18 @@
 {
     "@context": "000_context.jsonld",
     "id": "chepsoa_tavg-u-hxy-u",
-    "type": "known_branded_variable"
+    "type": "known_branded_variable",
+    "description": "If model lumps SOA emissions with POA, then the sum of POA and SOA emissions is reported as OA emissions. \"mass\" refers to the mass of primary organic matter, not mass of organic carbon alone.",
+    "long_name": "Chemical Production of Dry Aerosol Secondary Organic Matter",
+    "table_id": [
+        "aerosol"
+    ],
+    "compound_name": [
+        "aerosol.chepsoa.tavg-u-hxy-u.mon.glb"
+    ],
+    "frequency": [
+        "mon"
+    ],
+    "cell_measures": "area: areacella",
+    "realm": "aerosol"
 }

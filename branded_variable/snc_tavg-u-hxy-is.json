@@ -1,5 +1,23 @@
 {
     "@context": "000_context.jsonld",
     "id": "snc_tavg-u-hxy-is",
-    "type": "known_branded_variable"
+    "type": "known_branded_variable",
+    "description": "quantity averaged over ice_sheet (meaning grounded ice sheet and floating ice shelf) only, to avoid contamination from other surfaces (eg: permafrost)",
+    "long_name": "Ice Sheet Snow Cover Percentage",
+    "table_id": [
+        "landice"
+    ],
+    "compound_name": [
+        "landIce.snc.tavg-u-hxy-is.mon.ata",
+        "landIce.snc.tavg-u-hxy-is.yr.grl",
+        "landIce.snc.tavg-u-hxy-is.yr.ata",
+        "landIce.snc.tavg-u-hxy-is.mon.grl",
+        "landIce.snc.tavg-u-hxy-is.mon.glb"
+    ],
+    "frequency": [
+        "mon",
+        "yr"
+    ],
+    "cell_measures": "area: areacella",
+    "realm": "landice"
 }

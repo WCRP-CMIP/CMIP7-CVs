@@ -1,5 +1,17 @@
 {
     "@context": "000_context.jsonld",
     "id": "rldscs_tpt-u-hs-u",
-    "type": "known_branded_variable"
+    "type": "known_branded_variable",
+    "description": "Surface downwelling clear-sky longwave radiation",
+    "long_name": "Surface Downwelling Clear-Sky Longwave Radiation",
+    "table_id": [
+        "atmos"
+    ],
+    "compound_name": [
+        "atmos.rldscs.tpt-u-hs-u.subhr.glb"
+    ],
+    "frequency": [
+        "subhr"
+    ],
+    "realm": "atmos"
 }

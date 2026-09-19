@@ -1,5 +1,18 @@
 {
     "@context": "000_context.jsonld",
     "id": "eminh3_tavg-u-hxy-u",
-    "type": "known_branded_variable"
+    "type": "known_branded_variable",
+    "description": "Integrate 3D emission field vertically to 2d field.",
+    "long_name": "Total Emission Rate of NH3",
+    "table_id": [
+        "aerosol"
+    ],
+    "compound_name": [
+        "aerosol.eminh3.tavg-u-hxy-u.mon.glb"
+    ],
+    "frequency": [
+        "mon"
+    ],
+    "cell_measures": "area: areacella",
+    "realm": "aerosol"
 }

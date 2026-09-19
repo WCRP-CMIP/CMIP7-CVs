@@ -1,5 +1,6 @@
 {
     "@context": "000_context.jsonld",
     "id": "sci",
-    "type": "variable"
+    "type": "variable",
+    "long_name": "Fraction of Time Shallow Convection Occurs"
 }

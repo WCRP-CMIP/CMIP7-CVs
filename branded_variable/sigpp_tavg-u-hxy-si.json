@@ -1,5 +1,18 @@
 {
     "@context": "000_context.jsonld",
     "id": "sigpp_tavg-u-hxy-si",
-    "type": "known_branded_variable"
+    "type": "known_branded_variable",
+    "description": "Change in ice algal carbon mass due to photosynthesis per sea ice unit area per unit time.",
+    "long_name": "Gross Primary Productivity in Sea Ice as Carbon Amount Flux",
+    "table_id": [
+        "ocnbgchem"
+    ],
+    "compound_name": [
+        "ocnBgchem.sigpp.tavg-u-hxy-si.mon.glb"
+    ],
+    "frequency": [
+        "mon"
+    ],
+    "cell_measures": "area: areacello",
+    "realm": "ocnbgchem"
 }

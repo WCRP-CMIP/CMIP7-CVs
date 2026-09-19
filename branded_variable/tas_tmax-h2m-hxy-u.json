@@ -1,5 +1,18 @@
 {
     "@context": "000_context.jsonld",
     "id": "tas_tmax-h2m-hxy-u",
-    "type": "known_branded_variable"
+    "type": "known_branded_variable",
+    "description": "maximum near-surface (usually, 2 meter) air temperature (add cell_method attribute \"time: max\")",
+    "long_name": "Daily Maximum Near-Surface Air Temperature",
+    "table_id": [
+        "atmos"
+    ],
+    "compound_name": [
+        "atmos.tas.tmax-h2m-hxy-u.day.glb"
+    ],
+    "frequency": [
+        "day"
+    ],
+    "cell_measures": "area: areacella",
+    "realm": "atmos"
 }

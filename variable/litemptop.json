@@ -1,5 +1,6 @@
 {
     "@context": "000_context.jsonld",
     "id": "litemptop",
-    "type": "variable"
+    "type": "variable",
+    "long_name": "Temperature at Top of Ice Sheet Model"
 }

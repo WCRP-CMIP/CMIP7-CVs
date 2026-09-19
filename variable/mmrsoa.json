@@ -1,5 +1,6 @@
 {
     "@context": "000_context.jsonld",
     "id": "mmrsoa",
-    "type": "variable"
+    "type": "variable",
+    "long_name": "Secondary Organic Aerosol Mass Mixing Ratio"
 }

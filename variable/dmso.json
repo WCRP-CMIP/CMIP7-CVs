@@ -1,5 +1,6 @@
 {
     "@context": "000_context.jsonld",
     "id": "dmso",
-    "type": "variable"
+    "type": "variable",
+    "long_name": "Mole Concentration of Dimethyl Sulphide in Sea Water"
 }

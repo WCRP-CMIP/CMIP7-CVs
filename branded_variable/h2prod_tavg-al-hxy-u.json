@@ -1,5 +1,18 @@
 {
     "@context": "000_context.jsonld",
     "id": "h2prod_tavg-al-hxy-u",
-    "type": "known_branded_variable"
+    "type": "known_branded_variable",
+    "description": "This is the production of molecular hydrogen (H2) in the atmosphere due to chemical production",
+    "long_name": "chemical production of atmospheric H2",
+    "table_id": [
+        "atmoschem"
+    ],
+    "compound_name": [
+        "atmosChem.h2prod.tavg-al-hxy-u.mon.glb"
+    ],
+    "frequency": [
+        "mon"
+    ],
+    "cell_measures": "area: areacella",
+    "realm": "atmoschem"
 }

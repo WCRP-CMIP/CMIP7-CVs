@@ -1,5 +1,20 @@
 {
     "@context": "000_context.jsonld",
     "id": "wetnoy_tavg-u-hxy-u",
-    "type": "known_branded_variable"
+    "type": "known_branded_variable",
+    "description": "NOy is the sum of all simulated oxidized nitrogen species, out of NO, NO2, HNO3, HNO4, NO3aerosol, NO3(radical), N2O5, PAN, other organic nitrates.",
+    "long_name": "Wet Deposition Rate of NOy Including Aerosol Nitrate",
+    "table_id": [
+        "atmoschem"
+    ],
+    "compound_name": [
+        "atmosChem.wetnoy.tavg-u-hxy-u.day.glb",
+        "atmosChem.wetnoy.tavg-u-hxy-u.mon.glb"
+    ],
+    "frequency": [
+        "day",
+        "mon"
+    ],
+    "cell_measures": "area: areacella",
+    "realm": "atmoschem"
 }

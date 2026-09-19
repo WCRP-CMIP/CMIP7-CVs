@@ -1,5 +1,17 @@
 {
     "@context": "000_context.jsonld",
     "id": "tnt_tpt-al-hs-u",
-    "type": "known_branded_variable"
+    "type": "known_branded_variable",
+    "description": "Tendency of Air Temperature",
+    "long_name": "Tendency of Air Temperature",
+    "table_id": [
+        "atmos"
+    ],
+    "compound_name": [
+        "atmos.tnt.tpt-al-hs-u.subhr.glb"
+    ],
+    "frequency": [
+        "subhr"
+    ],
+    "realm": "atmos"
 }

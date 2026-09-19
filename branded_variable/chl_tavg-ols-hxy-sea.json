@@ -1,5 +1,21 @@
 {
     "@context": "000_context.jsonld",
     "id": "chl_tavg-ols-hxy-sea",
-    "type": "known_branded_variable"
+    "type": "known_branded_variable",
+    "description": "sum of chlorophyll from all phytoplankton group concentrations at the sea surface.  In most models this is equal to chldiat+chlmisc, that is the sum of \"Diatom Chlorophyll Mass Concentration\" plus \"Other Phytoplankton Chlorophyll Mass Concentration\"",
+    "long_name": "Surface Mass Concentration of Total Phytoplankton Expressed as Chlorophyll in Sea Water",
+    "table_id": [
+        "ocnbgchem"
+    ],
+    "compound_name": [
+        "ocnBgchem.chl.tavg-ols-hxy-sea.mon.glb",
+        "ocnBgchem.chl.tavg-ols-hxy-sea.day.glb",
+        "ocnBgchem.chl.tavg-ols-hxy-sea.mon.30S-90S"
+    ],
+    "frequency": [
+        "mon",
+        "day"
+    ],
+    "cell_measures": "area: areacello",
+    "realm": "ocnbgchem"
 }

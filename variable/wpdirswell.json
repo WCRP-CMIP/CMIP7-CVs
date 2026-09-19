@@ -1,5 +1,6 @@
 {
     "@context": "000_context.jsonld",
     "id": "wpdirswell",
-    "type": "variable"
+    "type": "variable",
+    "long_name": "Swell Peak Wave Direction"
 }

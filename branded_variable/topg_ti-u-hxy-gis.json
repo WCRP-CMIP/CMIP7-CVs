@@ -1,5 +1,19 @@
 {
     "@context": "000_context.jsonld",
     "id": "topg_ti-u-hxy-gis",
-    "type": "known_branded_variable"
+    "type": "known_branded_variable",
+    "description": "The bedrock topography beneath the land ice",
+    "long_name": "Bedrock Altitude",
+    "table_id": [
+        "landice"
+    ],
+    "compound_name": [
+        "landIce.topg.ti-u-hxy-gis.fx.ata",
+        "landIce.topg.ti-u-hxy-gis.fx.grl"
+    ],
+    "frequency": [
+        "fx"
+    ],
+    "cell_measures": "area: areacellg",
+    "realm": "landice"
 }

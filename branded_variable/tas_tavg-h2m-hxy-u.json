@@ -1,5 +1,25 @@
 {
     "@context": "000_context.jsonld",
     "id": "tas_tavg-h2m-hxy-u",
-    "type": "known_branded_variable"
+    "type": "known_branded_variable",
+    "description": "near-surface (usually, 2 meter) air temperature",
+    "long_name": "Near-Surface Air Temperature",
+    "table_id": [
+        "atmos"
+    ],
+    "compound_name": [
+        "atmos.tas.tavg-h2m-hxy-u.1hr.glb",
+        "atmos.tas.tavg-h2m-hxy-u.mon.30S-90S",
+        "atmos.tas.tavg-h2m-hxy-u.day.glb",
+        "atmos.tas.tavg-h2m-hxy-u.6hr.glb",
+        "atmos.tas.tavg-h2m-hxy-u.mon.glb"
+    ],
+    "frequency": [
+        "1hr",
+        "mon",
+        "day",
+        "6hr"
+    ],
+    "cell_measures": "area: areacella",
+    "realm": "atmos"
 }

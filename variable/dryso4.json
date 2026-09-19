@@ -1,5 +1,6 @@
 {
     "@context": "000_context.jsonld",
     "id": "dryso4",
-    "type": "variable"
+    "type": "variable",
+    "long_name": "Dry Deposition Rate of SO4"
 }

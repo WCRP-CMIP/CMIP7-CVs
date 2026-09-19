@@ -1,0 +1,6 @@
+{
+    "@context": "000_context.jsonld",
+    "id": "typebare",
+    "type": "data_coordinate",
+    "long_name": "surface type"
+}

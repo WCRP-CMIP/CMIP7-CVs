@@ -1,5 +1,6 @@
 {
     "@context": "000_context.jsonld",
     "id": "rls",
-    "type": "variable"
+    "type": "variable",
+    "long_name": "Net Longwave Surface Radiation"
 }

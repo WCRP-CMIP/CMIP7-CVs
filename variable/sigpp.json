@@ -1,5 +1,6 @@
 {
     "@context": "000_context.jsonld",
     "id": "sigpp",
-    "type": "variable"
+    "type": "variable",
+    "long_name": "Gross Primary Productivity in Sea Ice as Carbon Amount Flux"
 }

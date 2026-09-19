@@ -1,5 +1,21 @@
 {
     "@context": "000_context.jsonld",
     "id": "siv_tavg-u-hxy-si",
-    "type": "known_branded_variable"
+    "type": "known_branded_variable",
+    "description": "Y-component of sea-ice velocity on native model grid.",
+    "long_name": "Y-Component of Sea-Ice Velocity",
+    "table_id": [
+        "seaice"
+    ],
+    "compound_name": [
+        "seaIce.siv.tavg-u-hxy-si.mon.glb",
+        "seaIce.siv.tavg-u-hxy-si.day.glb",
+        "seaIce.siv.tavg-u-hxy-si.mon.30S-90S"
+    ],
+    "frequency": [
+        "mon",
+        "day"
+    ],
+    "cell_measures": "--MODEL",
+    "realm": "seaice"
 }

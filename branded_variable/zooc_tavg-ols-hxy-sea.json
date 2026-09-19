@@ -1,5 +1,18 @@
 {
     "@context": "000_context.jsonld",
     "id": "zooc_tavg-ols-hxy-sea",
-    "type": "known_branded_variable"
+    "type": "known_branded_variable",
+    "description": "sum of zooplankton carbon component concentrations",
+    "long_name": "Surface Zooplankton Carbon Concentration",
+    "table_id": [
+        "ocnbgchem"
+    ],
+    "compound_name": [
+        "ocnBgchem.zooc.tavg-ols-hxy-sea.mon.30S-90S"
+    ],
+    "frequency": [
+        "mon"
+    ],
+    "cell_measures": "area: areacello",
+    "realm": "ocnbgchem"
 }

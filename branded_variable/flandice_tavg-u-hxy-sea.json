@@ -1,5 +1,20 @@
 {
     "@context": "000_context.jsonld",
     "id": "flandice_tavg-u-hxy-sea",
-    "type": "known_branded_variable"
+    "type": "known_branded_variable",
+    "description": "Computed as the water flux into the ocean due to land ice (runoff water from surface and base of land ice or melt from base of ice shelf or vertical ice front) into the ocean divided by the area ocean portion of the grid cell.",
+    "long_name": "Water Flux into Sea Water from Land Ice",
+    "table_id": [
+        "ocean"
+    ],
+    "compound_name": [
+        "ocean.flandice.tavg-u-hxy-sea.3hr.glb",
+        "ocean.flandice.tavg-u-hxy-sea.mon.glb"
+    ],
+    "frequency": [
+        "3hr",
+        "mon"
+    ],
+    "cell_measures": "area: areacello",
+    "realm": "ocean"
 }

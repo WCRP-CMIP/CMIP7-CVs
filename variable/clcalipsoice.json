@@ -1,5 +1,6 @@
 {
     "@context": "000_context.jsonld",
     "id": "clcalipsoice",
-    "type": "variable"
+    "type": "variable",
+    "long_name": "CALIPSO Ice Cloud Percentage"
 }

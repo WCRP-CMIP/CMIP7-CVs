@@ -1,5 +1,18 @@
 {
     "@context": "000_context.jsonld",
     "id": "depdust_tavg-u-hxy-u",
-    "type": "known_branded_variable"
+    "type": "known_branded_variable",
+    "description": "Fdry mass deposition rate of dust",
+    "long_name": "Total Deposition Rate of Dust",
+    "table_id": [
+        "aerosol"
+    ],
+    "compound_name": [
+        "aerosol.depdust.tavg-u-hxy-u.mon.glb"
+    ],
+    "frequency": [
+        "mon"
+    ],
+    "cell_measures": "area: areacella",
+    "realm": "aerosol"
 }

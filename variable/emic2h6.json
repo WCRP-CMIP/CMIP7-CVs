@@ -1,5 +1,6 @@
 {
     "@context": "000_context.jsonld",
     "id": "emic2h6",
-    "type": "variable"
+    "type": "variable",
+    "long_name": "Total emission rate of ethane"
 }

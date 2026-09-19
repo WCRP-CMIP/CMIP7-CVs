@@ -1,5 +1,18 @@
 {
     "@context": "000_context.jsonld",
     "id": "ua_tpt-p7h-hxy-air",
-    "type": "known_branded_variable"
+    "type": "known_branded_variable",
+    "description": "Zonal wind (positive in a eastward direction).",
+    "long_name": "Eastward Wind",
+    "table_id": [
+        "atmos"
+    ],
+    "compound_name": [
+        "atmos.ua.tpt-p7h-hxy-air.6hr.glb"
+    ],
+    "frequency": [
+        "6hr"
+    ],
+    "cell_measures": "area: areacella",
+    "realm": "atmos"
 }

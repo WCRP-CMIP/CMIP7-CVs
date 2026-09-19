@@ -1,5 +1,18 @@
 {
     "@context": "000_context.jsonld",
     "id": "o3_tmax-h2m-hxy-u",
-    "type": "known_branded_variable"
+    "type": "known_branded_variable",
+    "description": "maximum near-surface ozone  (add cell_methods attribute \"time: maximum\")",
+    "long_name": "Daily Maximum O3 Volume Mixing Ratio near-surface",
+    "table_id": [
+        "aerosol"
+    ],
+    "compound_name": [
+        "aerosol.o3.tmax-h2m-hxy-u.day.glb"
+    ],
+    "frequency": [
+        "day"
+    ],
+    "cell_measures": "area: areacella",
+    "realm": "aerosol"
 }

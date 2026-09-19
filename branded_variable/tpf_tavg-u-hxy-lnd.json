@@ -1,5 +1,20 @@
 {
     "@context": "000_context.jsonld",
     "id": "tpf_tavg-u-hxy-lnd",
-    "type": "known_branded_variable"
+    "type": "known_branded_variable",
+    "description": "where land over land: This is the mean thickness of the permafrost layer in the land portion of the grid cell.  Reported as missing in permafrost-free regions.",
+    "long_name": "Permafrost Layer Thickness",
+    "table_id": [
+        "landice"
+    ],
+    "compound_name": [
+        "landIce.tpf.tavg-u-hxy-lnd.mon.glb",
+        "landIce.tpf.tavg-u-hxy-lnd.day.glb"
+    ],
+    "frequency": [
+        "mon",
+        "day"
+    ],
+    "cell_measures": "area: areacella",
+    "realm": "landice"
 }

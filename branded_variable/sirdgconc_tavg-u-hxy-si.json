@@ -1,5 +1,20 @@
 {
     "@context": "000_context.jsonld",
     "id": "sirdgconc_tavg-u-hxy-si",
-    "type": "known_branded_variable"
+    "type": "known_branded_variable",
+    "description": "Area fraction of sea-ice surface that is ridged sea ice.",
+    "long_name": "Fraction of Ridged Sea Ice",
+    "table_id": [
+        "seaice"
+    ],
+    "compound_name": [
+        "seaIce.sirdgconc.tavg-u-hxy-si.mon.glb",
+        "seaIce.sirdgconc.tavg-u-hxy-si.day.glb"
+    ],
+    "frequency": [
+        "mon",
+        "day"
+    ],
+    "cell_measures": "area: areacello",
+    "realm": "seaice"
 }

@@ -1,5 +1,18 @@
 {
     "@context": "000_context.jsonld",
     "id": "c14soil_tavg-u-hxy-lnd",
-    "type": "known_branded_variable"
+    "type": "known_branded_variable",
+    "description": "Carbon-14 mass content per unit area in soil.",
+    "long_name": "Mass of 14C in Soil Pool",
+    "table_id": [
+        "land"
+    ],
+    "compound_name": [
+        "land.c14Soil.tavg-u-hxy-lnd.mon.glb"
+    ],
+    "frequency": [
+        "mon"
+    ],
+    "cell_measures": "area: areacella",
+    "realm": "land"
 }

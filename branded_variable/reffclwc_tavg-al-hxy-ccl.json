@@ -1,5 +1,19 @@
 {
     "@context": "000_context.jsonld",
     "id": "reffclwc_tavg-al-hxy-ccl",
-    "type": "known_branded_variable"
+    "type": "known_branded_variable",
+    "description": "Droplets are liquid.  The effective radius is defined as the ratio of the third moment over the second moment of the particle size distribution and the time-mean should be calculated, weighting the individual samples by the cloudy fraction of the grid cell.",
+    "long_name": "Convective Cloud Liquid Droplet Effective Radius",
+    "table_id": [
+        "atmos"
+    ],
+    "compound_name": [
+        "atmos.reffclwc.tavg-al-hxy-ccl.mon.glb",
+        "atmos.reffclwc.tavg-al-hxy-ccl.mon.30S-90S"
+    ],
+    "frequency": [
+        "mon"
+    ],
+    "cell_measures": "area: areacella",
+    "realm": "atmos"
 }

@@ -1,5 +1,18 @@
 {
     "@context": "000_context.jsonld",
     "id": "sidmassgrowthwat_tavg-u-hxy-si",
-    "type": "known_branded_variable"
+    "type": "known_branded_variable",
+    "description": "Rate of change of sea-ice mass due to sea ice formation in supercooled water (often through frazil formation) divided by grid-cell area. Always positive or zero.",
+    "long_name": "Sea-Ice Mass Change Through Growth in Supercooled Open Water (Frazil)",
+    "table_id": [
+        "seaice"
+    ],
+    "compound_name": [
+        "seaIce.sidmassgrowthwat.tavg-u-hxy-si.mon.glb"
+    ],
+    "frequency": [
+        "mon"
+    ],
+    "cell_measures": "area: areacello",
+    "realm": "seaice"
 }

@@ -1,5 +1,17 @@
 {
     "@context": "000_context.jsonld",
     "id": "hfacrossline_tavg-u-ht-sea",
-    "type": "known_branded_variable"
+    "type": "known_branded_variable",
+    "description": "Depth-integrated total heat transport from resolved and parameterized processes across different lines on the Earth's surface (based on appendix J and table J1 of Griffies et al., 2016). Formally, this means the integral along the line of the normal component of the heat transport. Positive and negative numbers refer to total northward/eastward and southward/westward transports, respectively. The transport should be evaluated for the full depth of the ocean, except for the Pacific Equatorial Undercurrent, which is averaged from the surface to 350m. Use Celsius for temperature scale.",
+    "long_name": "Ocean Heat Transport across Lines",
+    "table_id": [
+        "ocean"
+    ],
+    "compound_name": [
+        "ocean.hfacrossline.tavg-u-ht-sea.mon.glb"
+    ],
+    "frequency": [
+        "mon"
+    ],
+    "realm": "ocean"
 }

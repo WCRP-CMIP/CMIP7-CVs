@@ -1,0 +1,7 @@
+{
+    "@context": "000_context.jsonld",
+    "id": "scatratio",
+    "type": "data_coordinate",
+    "long_name": "lidar backscattering ratio",
+    "tolerance": 1.0
+}

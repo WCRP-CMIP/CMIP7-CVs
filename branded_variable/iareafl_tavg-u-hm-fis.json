@@ -1,5 +1,18 @@
 {
     "@context": "000_context.jsonld",
     "id": "iareafl_tavg-u-hm-fis",
-    "type": "known_branded_variable"
+    "type": "known_branded_variable",
+    "description": "Antarctica",
+    "long_name": "Area Covered by Floating Ice Shelves",
+    "table_id": [
+        "landice"
+    ],
+    "compound_name": [
+        "landIce.iareafl.tavg-u-hm-fis.yr.grl",
+        "landIce.iareafl.tavg-u-hm-fis.yr.ata"
+    ],
+    "frequency": [
+        "yr"
+    ],
+    "realm": "landice"
 }

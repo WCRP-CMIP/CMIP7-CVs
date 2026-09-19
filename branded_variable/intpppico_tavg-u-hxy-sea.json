@@ -1,5 +1,19 @@
 {
     "@context": "000_context.jsonld",
     "id": "intpppico_tavg-u-hxy-sea",
-    "type": "known_branded_variable"
+    "type": "known_branded_variable",
+    "description": "Vertically integrated primary (organic carbon) production by the picophytoplankton component alone",
+    "long_name": "Net Primary Mole Productivity of Carbon by Picophytoplankton",
+    "table_id": [
+        "ocnbgchem"
+    ],
+    "compound_name": [
+        "ocnBgchem.intpppico.tavg-u-hxy-sea.mon.glb",
+        "ocnBgchem.intpppico.tavg-u-hxy-sea.mon.30S-90S"
+    ],
+    "frequency": [
+        "mon"
+    ],
+    "cell_measures": "area: areacello",
+    "realm": "ocnbgchem"
 }
