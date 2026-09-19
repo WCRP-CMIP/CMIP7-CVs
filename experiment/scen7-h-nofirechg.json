@@ -11,10 +11,10 @@
         "aer",
         "bgc"
     ],
-    "branch_information": "Branch from scen7-h at 2022-01-01",
+    "branch_information": "Branch from historical at 2021-12-31",
     "min_ensemble_size": 3,
-    "parent_activity": "scenariomip",
-    "parent_experiment": "scen7-h",
+    "parent_activity": "cmip",
+    "parent_experiment": "historical",
     "parent_mip_era": "cmip7",
     "required_model_components": [
         "aogcm"
