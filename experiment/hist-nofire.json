@@ -1,0 +1,24 @@
+{
+    "@context": "000_context.jsonld",
+    "id": "hist-nofire",
+    "type": "experiment",
+    "description": "1850\u20132021 historical coupled simulations with fires set to zero. In models that use prescribed fire emissions, both burned area in the model code and prescribed fire-emission fluxes in the forcing dataset are set to zero. In models with interactive fire modules, burned area is set to zero, and fire emissions are therefore diagnosed as zero. We encouraged modeling groups to perform an 1850 no-fire spin-up to generate the initial state and to provide at least three initial-condition ensemble members.",
+    "drs_name": "hist-nofire",
+    "start_timestamp": "1850-01-01",
+    "end_timestamp": "2021-12-31",
+    "activity": "firemip/id31",
+    "additional_allowed_model_components": [
+        "aer"
+    ],
+    "branch_information": null,
+    "min_ensemble_size": 3,
+    "parent_activity": "deck",
+    "parent_experiment": "historical  or esm-historical",
+    "parent_mip_era": null,
+    "required_model_components": [
+        "aogcm",
+        "bgc"
+    ],
+    "tier": 1,
+    "min_number_yrs_per_sim": 172.0
+}
