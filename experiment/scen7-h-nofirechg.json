@@ -6,7 +6,7 @@
     "drs_name": "scen7-h-nofirechg",
     "start_timestamp": "2022-01-01",
     "end_timestamp": "2060-12-31",
-    "activity": "firemip/id31",
+    "activity": "firemip",
     "additional_allowed_model_components": [
         "aer",
         "bgc"
