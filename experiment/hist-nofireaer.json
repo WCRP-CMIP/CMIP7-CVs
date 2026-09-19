@@ -12,7 +12,7 @@
     ],
     "branch_information": "Branch from historical at no later than 1920-01-01",
     "min_ensemble_size": 3,
-    "parent_activity": "deck",
+    "parent_activity": "cmip",
     "parent_experiment": "historical",
     "parent_mip_era": "cmip7",
     "required_model_components": [
