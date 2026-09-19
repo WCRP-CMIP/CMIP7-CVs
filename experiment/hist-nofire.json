@@ -6,7 +6,7 @@
     "drs_name": "hist-nofire",
     "start_timestamp": "1850-01-01",
     "end_timestamp": "2021-12-31",
-    "activity": "firemip/id31",
+    "activity": "firemip",
     "additional_allowed_model_components": [
         "aer"
     ],
