@@ -7,8 +7,8 @@
     "experiments": [
         "hist-nofire",
         "hist-nofireaer",
-        "scen7-h-nofirechange",
-        "scen7-h-nofireaerchange"
+        "scen7-h-nofirechg",
+        "scen7-h-nofireaerchg"
     ],
     "urls": [
         "https://wcrp-cmip.org/mips/firemip/"
