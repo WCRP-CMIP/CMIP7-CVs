@@ -12,7 +12,7 @@
     ],
     "branch_information": null,
     "min_ensemble_size": 3,
-    "parent_activity": "deck",
+    "parent_activity": "cmip",
     "parent_experiment": "picontrol-nofire is the best option; picontrol can be used if computational resources are limited.",
     "parent_mip_era": "cmip7",
     "required_model_components": [
