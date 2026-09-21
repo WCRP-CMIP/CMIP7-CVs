@@ -6,9 +6,13 @@
     "drs_name": "FireMIP",
     "experiments": [
         "hist-nofire",
+        "esm-hist-nofire",
         "hist-nofireaer",
-        "scen7-h-nofirechg",
-        "scen7-h-nfireaerch"
+        "esm-hist-nofireaer",
+        "scen7-h-nofirec",
+        "esm-scen7-h-nofirec",
+        "scen7-hnofireac",
+        "esm-scen7-hnofireac"
     ],
     "urls": [
         "https://wcrp-cmip.org/mips/firemip/"
