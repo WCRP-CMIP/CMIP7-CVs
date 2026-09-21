@@ -2,7 +2,7 @@
     "@context": "000_context.jsonld",
     "id": "hist-nofire",
     "type": "experiment",
-    "description": "1850\u20132021 historical coupled simulations with fires set to zero. In models that use prescribed fire emissions (fire emissions are also called open biomass burning emissions), both burned area in the model code and prescribed fire-emissions in the forcing dataset (at least BC, OC, SO4, CO, CO2, N2O, CH4, and NOx) are set to zero. In models with interactive fire modules, burned area is set to zero, and fire emissions are therefore diagnosed as zero. We encouraged modeling groups to perform an 1850 no-fire spin-up to generate the initial state and to provide at least three initial-condition ensemble members.",
+    "description": "1850\u20132021 historical coupled simulations with fires set to zero. In models that use prescribed fire emissions (fire emissions are also called open biomass burning emissions), both burned area in the model code and prescribed fire-emissions in the forcing dataset (at least BC, OC, SO4, CO, CO2, N2O, CH4, and NOx) are set to zero. In models with interactive fire modules, burned area is set to zero, and fire emissions are therefore diagnosed as zero. We encouraged modeling groups to perform an 1850 no-fire spin-up to generate the initial state and to provide at least three initial-condition ensemble members. Please see hist-no-fire in CMIP7 FireMIP protocol paper for details: https://gmd.copernicus.org/articles/19/3989/2026/",
     "drs_name": "hist-nofire",
     "start_timestamp": "1850-01-01",
     "end_timestamp": "2021-12-31",
