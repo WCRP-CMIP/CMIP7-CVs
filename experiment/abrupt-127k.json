@@ -2,7 +2,25 @@
     "@context": "000_context.jsonld",
     "id": "abrupt-127k",
     "type": "experiment",
-    "min_number_yrs_per_sim": 100.0,
-    "parent_mip_era": "cmip7",
-    "tier": 1
+    "description": "Abrupt perturbation of piControl to examine the response to orbital and greenhouse gas concentration changes (CO2, CH4, N2O) associated with the last interglacial (127 000 years before present). All other conditions are kept the same as piControl.",
+    "drs_name": "abrupt-127k",
+    "start_timestamp": null,
+    "end_timestamp": null,
+    "activity": "pmip",
+    "additional_allowed_model_components": [
+        "aer",
+        "chem",
+        "bgc",
+        "(vegetation dynamics allowed if picontrol uses it, as per the experiment description protocol)"
+    ],
+    "branch_information": "Branch from piControl at a time of your choosing, while taking into account the suggestion to have for the remaining piControl at least 100 model years for comparison.",
+    "min_ensemble_size": 1,
+    "parent_activity": "cmip",
+    "parent_experiment": "picontrol",
+    "parent_mip_era": null,
+    "required_model_components": [
+        "aogcm"
+    ],
+    "tier": 1,
+    "min_number_yrs_per_sim": 100.0
 }
