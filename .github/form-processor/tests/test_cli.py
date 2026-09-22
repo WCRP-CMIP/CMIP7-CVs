@@ -9,6 +9,7 @@ from github_form_processor.cli import (
     RepoTarget,
     _process_registration,
     app,
+    parse_mention_handles,
     repository_slug,
 )
 from github_form_processor.github_api import GitHubApiError
@@ -74,6 +75,8 @@ def test_process_accepts_repository_and_directory_options(tmp_path, monkeypatch)
             "custom-organisations",
             "--universe-institution-dir",
             "custom-members",
+            "--mention-handles",
+            "experiment=@alice,bob",
             "--cmip7-cvs-url",
             "https://example.test/cmip7-cvs/custom",
             "--cmip7-cvs-path",
@@ -114,6 +117,82 @@ def test_repository_slug_normalises_urls_and_slugs(value, expected):
 def test_repository_slug_rejects_unparseable_value():
     with pytest.raises(ValueError, match="repository slug"):
         repository_slug("not-a-repository")
+
+
+@pytest.mark.parametrize(
+    ("values", "expected"),
+    [
+        ([], {}),
+        (["experiment=@alice"], {"experiment": ["alice"]}),
+        # Handles may be written with or without a leading `@`, and surrounding
+        # whitespace is ignored so the workflow can wrap long lists.
+        (
+            ["experiment=@alice, bob", " activity =carol"],
+            {"experiment": ["alice", "bob"], "activity": ["carol"]},
+        ),
+        # Repeating a kind extends its handles, without duplicating them.
+        (
+            ["experiment=alice,bob", "experiment=bob,carol"],
+            {"experiment": ["alice", "bob", "carol"]},
+        ),
+        # Empty handle lists are tolerated, so a workflow can blank a kind out.
+        (["experiment="], {"experiment": []}),
+    ],
+)
+def test_parse_mention_handles(values, expected):
+    assert parse_mention_handles(values) == expected
+
+
+@pytest.mark.parametrize(
+    "value",
+    [
+        # No `=` separator.
+        "experiment",
+        # Not a registration kind, so most likely a typo in the workflow.
+        "experiments=@alice",
+    ],
+)
+def test_parse_mention_handles_rejects_unparseable_value(value):
+    with pytest.raises(ValueError, match="kind=handle"):
+        parse_mention_handles([value])
+
+
+def test_mention_handles_are_tagged_in_pull_request_body_and_issue_comment():
+    client = FakeClient(CMIP7_REPO)
+    prepared = _make_prepared()
+
+    result = _process_registration(
+        action="opened",
+        issue_client=client,
+        issue_number=1,
+        branch="registration/experiment-1-new",
+        prepared=prepared,
+        targets={CMIP7_REPO: RepoTarget(client=client, base_branch="esgvoc_dev")},
+        mention_handles=["alice", "bob"],
+    )
+
+    assert result == 0
+    create_call = _find_call(client, "create_pull_request")
+    assert create_call[3].endswith("\n\n@alice @bob")
+    assert client.comments[0][1].endswith("\n\n@alice @bob")
+
+
+def test_no_mention_handles_leaves_the_body_and_comment_untagged():
+    client = FakeClient(CMIP7_REPO)
+    prepared = _make_prepared()
+
+    _process_registration(
+        action="opened",
+        issue_client=client,
+        issue_number=1,
+        branch="registration/experiment-1-new",
+        prepared=prepared,
+        targets={CMIP7_REPO: RepoTarget(client=client, base_branch="esgvoc_dev")},
+        mention_handles=[],
+    )
+
+    assert "@" not in _find_call(client, "create_pull_request")[3]
+    assert "@" not in client.comments[0][1]
 
 
 def test_opened_registration_opens_single_pull_request():
