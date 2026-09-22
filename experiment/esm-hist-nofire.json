@@ -13,7 +13,7 @@
     "branch_information": null,
     "min_ensemble_size": 3,
     "parent_activity": "cmip",
-    "parent_experiment": "esm-picontrol-nofire is the best option; esm-picontrol can be used if computational resources are limited.",
+    "parent_experiment": null,
     "parent_mip_era": "cmip7",
     "required_model_components": [
         "aogcm",
