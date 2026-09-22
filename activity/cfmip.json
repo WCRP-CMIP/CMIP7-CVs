@@ -9,6 +9,7 @@
         "amip-piforcing"
     ],
     "references": [
-        "cfmip_cmip7_ref_000"
+        "cfmip_cmip7_ref_000",
+        "cfmip_cmip7_ref_001",
     ]
 }
