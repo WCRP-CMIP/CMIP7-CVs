@@ -6,6 +6,8 @@
         "abrupt-0p5xco2",
         "abrupt-2xco2",
         "amip-p4k",
+        "amip-p4k-sst-rad",
+        "amip-p4k-sst-turb",
         "amip-piforcing"
     ],
     "references": [
