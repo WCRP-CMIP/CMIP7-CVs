@@ -13,12 +13,14 @@ import typer
 from github_form_processor.cv import CvClient
 from github_form_processor.format import (
     format_edit_error_comment,
+    format_mention_line,
     format_output_path_for_identifier,
     format_success_comment,
     format_validation_comment,
 )
 from github_form_processor.github_api import GitHubApiError, GitHubClient
 from github_form_processor.processor import (
+    FORM_KINDS,
     PreparedRegistration,
     RegistrationOutput,
     prepare_registration,
@@ -43,6 +45,33 @@ def repository_slug(value: str) -> str:
     if len(segments) < 2:
         raise ValueError(f"Could not parse a repository slug from {value!r}.")
     return f"{segments[-2]}/{segments[-1]}"
+
+
+def parse_mention_handles(values: list[str]) -> dict[str, list[str]]:
+    """Parse `--mention-handles` values into a mapping of form kind to handles.
+
+    Each value is `kind=handle[,handle...]`, where the handles may be written
+    with or without a leading `@`. Repeating a kind extends its handles rather
+    than replacing them, so a workflow can build a list up over several options.
+
+    >>> parse_mention_handles(["experiment=@alice,bob", "experiment=bob,carol"])
+    {'experiment': ['alice', 'bob', 'carol']}
+    """
+    mentions: dict[str, list[str]] = {}
+    for value in values:
+        kind, separator, raw_handles = value.partition("=")
+        kind = kind.strip()
+        if not separator or kind not in FORM_KINDS:
+            raise ValueError(
+                f"Could not parse {value!r} as `kind=handle[,handle...]`, where "
+                f"kind is one of: {', '.join(FORM_KINDS)}."
+            )
+        handles = mentions.setdefault(kind, [])
+        for raw_handle in raw_handles.split(","):
+            handle = raw_handle.strip().lstrip("@")
+            if handle and handle not in handles:
+                handles.append(handle)
+    return mentions
 
 
 @dataclass(frozen=True)
@@ -112,6 +141,16 @@ def process_issue_form(
         "--universe-institution-dir",
         help="Directory for generated institution JSON files (WCRP universe).",
     ),
+    mention_handles: list[str] = typer.Option(
+        [],
+        "--mention-handles",
+        help=(
+            "Handles to tag on the pull request body and the issue comment for "
+            "one form kind, written `kind=handle[,handle...]` (for example "
+            "`experiment=@alice,@bob`). Repeat the option to configure more "
+            f"than one kind. Valid kinds: {', '.join(FORM_KINDS)}."
+        ),
+    ),
     skip_external_checks: bool = typer.Option(
         False,
         "--skip-external-checks",
@@ -153,6 +192,7 @@ def process_issue_form(
     try:
         cmip7_repository = repository_slug(cmip7_repository)
         universe_repository = repository_slug(universe_repository)
+        mentions = parse_mention_handles(list(mention_handles))
     except ValueError as exc:
         typer.echo(str(exc), err=True)
         raise typer.Exit(2) from exc
@@ -207,6 +247,7 @@ def process_issue_form(
         raise typer.Exit(0)
 
     prepared = preparation.prepared
+    kind_mention_handles = mentions.get(prepared.kind, [])
     targets = _resolve_targets(
         prepared=prepared,
         cmip7_repository=cmip7_repository,
@@ -233,6 +274,7 @@ def process_issue_form(
             branch=branch,
             prepared=prepared,
             targets=targets,
+            mention_handles=kind_mention_handles,
         )
     )
 
@@ -298,6 +340,7 @@ def _process_registration(
     branch: str,
     prepared: PreparedRegistration,
     targets: dict[str, RepoTarget],
+    mention_handles: list[str] | None = None,
 ) -> int:
     """Open or update one pull request per repository the registration targets."""
     pull_requests: list[dict[str, object]] = []
@@ -312,12 +355,13 @@ def _process_registration(
                 branch=branch,
                 outputs=outputs,
                 prepared=prepared,
+                mention_handles=mention_handles,
             )
         )
 
     issue_client.comment_issue(
         issue_number,
-        format_success_comment(pull_requests, prepared.notes),
+        format_success_comment(pull_requests, prepared.notes, mention_handles),
     )
     typer.echo(
         "Processed registration into "
@@ -347,6 +391,7 @@ def _sync_repository(
     branch: str,
     outputs: list[RegistrationOutput],
     prepared: PreparedRegistration,
+    mention_handles: list[str] | None = None,
 ) -> dict[str, object]:
     """Open or update the registration pull request in a single repository."""
     if action == "opened":
@@ -357,6 +402,7 @@ def _sync_repository(
             branch=branch,
             outputs=outputs,
             prepared=prepared,
+            mention_handles=mention_handles,
         )
 
     client = target.client
@@ -383,6 +429,7 @@ def _sync_repository(
             branch=branch,
             outputs=outputs,
             prepared=prepared,
+            mention_handles=mention_handles,
         )
 
     pull_request = open_pulls[0]
@@ -427,6 +474,7 @@ def _open_pull_request(
     branch: str,
     outputs: list[RegistrationOutput],
     prepared: PreparedRegistration,
+    mention_handles: list[str] | None = None,
 ) -> dict[str, object]:
     """Create the registration branch, commit the files and open a pull request."""
     client = target.client
@@ -453,6 +501,7 @@ def _open_pull_request(
             issue_number=issue_number,
             issue_repository=issue_client.repository,
             target_repository=client.repository,
+            mention_handles=mention_handles,
         ),
     )
     pr_number = int(pull_request["number"])
@@ -472,17 +521,24 @@ def _pull_request_body(
     issue_number: int,
     issue_repository: str,
     target_repository: str,
+    mention_handles: list[str] | None = None,
 ) -> str:
     """Build a pull request body that references the source issue.
 
     GitHub closing keywords only auto-close issues in the same repository, so a
     cross-repository pull request references the issue with its full slug instead.
+
+    `mention_handles` are the handles to tag on the pull request, configured per
+    form kind by the workflow.
     """
     lines = [f"Automated {kind} registration generated from #{issue_number}.", ""]
     if target_repository == issue_repository:
         lines.append(f"Closes #{issue_number}")
     else:
         lines.append(f"Generated from {issue_repository}#{issue_number}")
+    mention_line = format_mention_line(mention_handles)
+    if mention_line:
+        lines.extend(["", mention_line])
     return "\n".join(lines)
 
 

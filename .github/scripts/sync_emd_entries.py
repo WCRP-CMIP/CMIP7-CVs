@@ -52,6 +52,7 @@ from urllib.parse import quote, urlencode
 
 import typer
 from github_form_processor.github_api import GitHubApiError, GitHubClient
+from github_form_processor.text import dumps_json
 from pydantic import BaseModel, ConfigDict, Field, field_validator
 
 CONTEXT_FILE = "000_context.jsonld"
@@ -189,7 +190,7 @@ class EmdHorizontalGridCell(BaseModel):
 
 def _dumps(entry: dict[str, Any]) -> str:
     """Serialise a CV entry the way the existing entries are stored."""
-    return json.dumps(entry, indent=2) + "\n"
+    return dumps_json(entry, indent=2)
 
 
 def build_source_entry(model: EmdModel) -> tuple[str, str]:

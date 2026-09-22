@@ -2,10 +2,10 @@
 
 from __future__ import annotations
 
-import json
 from typing import Any
 
 from github_form_processor.models import ActivityRegistration, ExperimentRegistration
+from github_form_processor.text import dumps_json
 
 
 def render_experiment_json(experiment: ExperimentRegistration) -> str:
@@ -35,7 +35,7 @@ def render_experiment_json(experiment: ExperimentRegistration) -> str:
         "tier": experiment.tier,
         "min_number_yrs_per_sim": experiment.min_number_yrs_per_sim,
     }
-    return json.dumps(payload, indent=4) + "\n"
+    return dumps_json(payload)
 
 
 def render_activity_json(activity: ActivityRegistration) -> str:
@@ -49,4 +49,4 @@ def render_activity_json(activity: ActivityRegistration) -> str:
         "experiments": activity.experiments,
         "urls": activity.urls,
     }
-    return json.dumps(payload, indent=4) + "\n"
+    return dumps_json(payload)
