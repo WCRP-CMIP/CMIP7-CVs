@@ -2,12 +2,10 @@ schema_version: '1'
 project:
   id: cmip7
   name: CMIP7 Controlled Vocabulary
-cv_version: 2.3.3
-universe_version: 3.2.3
+cv_version: 2.3.4
+universe_version: 3.2.4
 esgvoc:
   min_version: 4.1.0
 release_notes: |
-  - activity: 1 added
-  - experiment: 4 added
-  - grid_label: 2 added
-  - source: 1 added
+  - activity: 1 modified
+  - experiment: 1 modified
