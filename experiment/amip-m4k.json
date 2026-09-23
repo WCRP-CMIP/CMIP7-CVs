@@ -1,0 +1,25 @@
+{
+    "@context": "000_context.jsonld",
+    "id": "amip-m4k",
+    "type": "experiment",
+    "description": "The same as the `amip` DECK experiment, except that SSTs are subject to a uniform cooling of 4K. This warming should be applied to the ice-free ocean surface only. Sea ice and SSTs in grid boxes containing sea ice remain the same as in the `amip` DECK experiment. \n\nReference: [Ceppi et al., 2026](https://doi.org/10.5194/gmd-19-8693-2026)",
+    "drs_name": "amip-m4k",
+    "start_timestamp": "1979-01-01",
+    "end_timestamp": "2021-12-31",
+    "activity": "cfmip",
+    "additional_allowed_model_components": [
+        "aer",
+        "bgc",
+        "chem"
+    ],
+    "branch_information": null,
+    "min_ensemble_size": 1,
+    "parent_activity": null,
+    "parent_experiment": null,
+    "parent_mip_era": null,
+    "required_model_components": [
+        "agcm"
+    ],
+    "tier": 1,
+    "min_number_yrs_per_sim": 43.0
+}
