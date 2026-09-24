@@ -30,6 +30,7 @@ python -m github_form_processor \
   --institution-output-dir institution \
   --universe-organisation-dir organisation \
   --universe-institution-dir institution \
+  --mention-handles "experiment=znichollscr,ltroussellier" \
   --cmip7-cvs-path "${GITHUB_WORKSPACE}"
 ```
 
@@ -47,6 +48,24 @@ The WCRP universe CV lookup URL is derived from `--universe-repository` and
 place. To check CMIP7 CV entries from a remote URL instead of a local checkout,
 use `--cmip7-cvs-url https://example.test/CMIP7-CVs`. That option is ignored when
 `--cmip7-cvs-path` is set.
+
+## Tagging people per form
+
+`--mention-handles` controls who is @-tagged when a registration is processed.
+Each value is `kind=handle[,handle...]`, where `kind` is one of `experiment`,
+`activity`, `institution` or `institution-member`, and the handles may be
+written with or without a leading `@`. Repeat the option to configure more than
+one kind; repeating a kind extends its list rather than replacing it.
+
+The resulting `@handle1 @handle2` line is appended to both the body of the
+registration pull request and the comment posted back on the issue. A kind with
+no configured handles gets no line at all, so leaving the option off keeps the
+previous, untagged output. An unrecognised kind is rejected, so a typo in the
+workflow fails the run rather than silently tagging nobody.
+
+The handles are set in `process-registration-forms.yml` (and
+`test-registration-forms.yml`) rather than here, so who gets tagged can be
+changed without touching this package.
 
 ## Registration targets
 
