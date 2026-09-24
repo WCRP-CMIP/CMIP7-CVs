@@ -37,6 +37,10 @@ ACTIVITY_LABEL = "registration: activity"
 INSTITUTION_LABEL = "registration: institution"
 INSTITUTION_MEMBER_LABEL = "registration: institution-member"
 
+# The registration kinds `detect_form_kind` can return. Used to validate the
+# per-form configuration supplied by the workflow.
+FORM_KINDS = ("experiment", "activity", "institution", "institution-member")
+
 
 @dataclass(frozen=True)
 class RegistrationOutput:
