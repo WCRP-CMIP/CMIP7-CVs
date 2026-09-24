@@ -1,0 +1,23 @@
+{
+    "@context": "000_context.jsonld",
+    "id": "tipmip",
+    "type": "activity",
+    "description": "TIPMIP is an international intercomparison project that aims to systematically advance our understanding of nonlinear tipping dynamics in various Earth system components, and assess the associated uncertainties and risks. At present, no MIP exists which focuses specifically on identifying and evaluating the risks of tipping dynamics in the Earth system. Filling this gap, TIPMIP will shed light on critical processes currently underrepresented in other MIPs and in Earth system models.",
+    "drs_name": "TIPMIP",
+    "experiments": [
+        "tip-esm-e-e",
+        "tip-esm-e-ec",
+        "tip-esm-e-ee",
+        "tip-esm-e-eg",
+        "tip-esm-e-ei",
+        "tip-esm-e-ek",
+        "tip-esm-e-ee50e",
+        "tip-esm-e-ei50e",
+        "tip-esm-e-ei50ee"
+    ],
+    "urls": [
+        "https://egusphere.copernicus.org/preprints/2025/egusphere-2025-1899/",
+        "https://gmd.copernicus.org/articles/19/6941/2026/",
+        "https://egusphere.copernicus.org/preprints/2026/egusphere-2026-1698/"
+    ]
+}
