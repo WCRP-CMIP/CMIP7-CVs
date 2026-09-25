@@ -2,7 +2,7 @@
     "@context": "000_context.jsonld",
     "id": "scen7-hnofireac",
     "type": "experiment",
-    "description": "2022\u20132060 simulation, the same as scen7-h, but with fire aerosol emissions in the inputs fixed at the 2001\u20132020 average.",
+    "description": "2022-2060 simulation, the same as scen7-h, but with fire aerosol emissions in the inputs fixed at the 2001-2020 average.",
     "drs_name": "scen7-hnofireac",
     "start_timestamp": "2022-01-01",
     "end_timestamp": "2060-12-31",
