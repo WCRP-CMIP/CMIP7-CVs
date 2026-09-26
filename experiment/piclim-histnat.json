@@ -1,0 +1,25 @@
+{
+    "@context": "000_context.jsonld",
+    "id": "piclim-histnat",
+    "type": "experiment",
+    "description": "An atmosphere only simulation from 1850-2100 with time-varying natural forcings.  From 1850 to 2021 the natural forcings should evolve following the historical scenario. From 2022 to 2100, they should evolve following the ScenarioMIP scen7-mc scenario.  All other forcings should be set to pre-industrial (1850) conditions, as in piClim-control. Interactive vegetation, if present in the model, should be turned on. Greenhouse gases should be prescribed concentrations. Sea Surface Temperatures and Sea Ice Concentrations should be prescribed with the same repeating climatology used in piClim-control. A minimum of one ensemble member is required, but three members is preferred.",
+    "drs_name": "piClim-histnat",
+    "start_timestamp": "1850-01-01",
+    "end_timestamp": "2100-12-31",
+    "activity": "rfmip",
+    "additional_allowed_model_components": [
+        "aer",
+        "chem",
+        "bgc"
+    ],
+    "branch_information": null,
+    "min_ensemble_size": 1,
+    "parent_activity": "rfmip",
+    "parent_experiment": null,
+    "parent_mip_era": "cmip7",
+    "required_model_components": [
+        "agcm"
+    ],
+    "tier": 2,
+    "min_number_yrs_per_sim": 251.0
+}
