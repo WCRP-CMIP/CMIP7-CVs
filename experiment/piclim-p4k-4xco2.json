@@ -14,8 +14,8 @@
     ],
     "branch_information": null,
     "min_ensemble_size": 1,
-    "parent_activity": "rfmip",
-    "parent_experiment": "piclim-control",
+    "parent_activity": "cmip",
+    "parent_experiment": "picontrol",
     "parent_mip_era": "cmip7",
     "required_model_components": [
         "agcm"
