@@ -1,0 +1,12 @@
+{
+    "@context": "000_context.jsonld",
+    "id": "piclim-p4k",
+    "type": "experiment",
+    "description": "Baseline for effective radiative forcing (ERF) calculations with a warmer background state. Same as `piClim-control`, except sea surface temperatures are increased by 4K in ice-free regions (sea ice and SSTs in grid boxes containing sea ice remain the same as in the `piClim-control` experiment).",
+    "branch_information": "Same as `piClim-control`",
+    "min_ensemble_size": 1,
+    "parent_activity": "cmip",
+    "parent_experiment": "picontrol",
+    "parent_mip_era": "cmip7",
+    "tier": 3
+}
