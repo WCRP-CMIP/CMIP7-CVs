@@ -1,9 +1,9 @@
 {
     "@context": "000_context.jsonld",
-    "id": "ssp2-com",
+    "id": "ssp2-com-CMIP7",
     "type": "experiment",
-    "description": "The SSP2-com is a policy-driven pathway aligned with China's carbon neutrality pledge, peaking carbon emissions before 2030 and achieving carbon neutrality before 2060. It is developed within the SSP2 socioeconomic framework and consistent with global Nationally Determined Contributions (NDCs) data.",
-    "drs_name": "SSP2-com",
+    "description": "The SSP2-com-CMIP7 is a policy-driven pathway aligned with China's carbon neutrality pledge, peaking carbon emissions before 2030 and achieving carbon neutrality before 2060. It is developed within the SSP2 socioeconomic framework and consistent with global Nationally Determined Contributions (NDCs) data.",
+    "drs_name": "SSP2-com-CMIP7",
     "start_timestamp": "2022-01-01",
     "end_timestamp": "2100-12-31",
     "activity": "polmip",
@@ -12,7 +12,7 @@
     "min_ensemble_size": 1,
     "parent_activity": "cmip",
     "parent_experiment": "historical",
-    "parent_mip_era": null,
+    "parent_mip_era": cmip7,
     "required_model_components": [],
     "tier": 1,
     "min_number_yrs_per_sim": 79.0
