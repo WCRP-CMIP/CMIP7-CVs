@@ -1,6 +1,6 @@
 {
     "@context": "000_context.jsonld",
-    "id": "ssp2-com-cmip7",
+    "id": "esm-ssp2-com-cmip7",
     "type": "experiment",
     "start_timestamp": "2022-01-01",
     "end_timestamp": "2100-12-31",
