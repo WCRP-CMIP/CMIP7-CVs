@@ -5,7 +5,7 @@ project:
 cv_version: 2.2.0
 universe_version: 3.1.1
 esgvoc:
-  min_version: 4.1.0
+  min_version: 6.2.0
 release_notes: |
   - model: references added for all EMD sources
   - universe updated to 3.1.1 (reference terms)
