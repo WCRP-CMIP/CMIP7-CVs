@@ -1,0 +1,25 @@
+{
+    "@context": "000_context.jsonld",
+    "id": "tip-esm-e-ee50e",
+    "type": "experiment",
+    "description": "Ramp-down experiment with CO2 emissions that are the negative of the emissions used in ramp-up, starting 50 years into the zero-emission run at GWL=2°C.",
+    "drs_name": "tip-esm-E-ee50e",
+    "start_timestamp": null,
+    "end_timestamp": null,
+    "activity": "tipmip",
+    "additional_allowed_model_components": [
+        "aer",
+        "chem"
+    ],
+    "branch_information": null,
+    "min_ensemble_size": 1,
+    "parent_activity": "tipmip",
+    "parent_experiment": "tip-esm-e-ee",
+    "parent_mip_era": null,
+    "required_model_components": [
+        "aogcm",
+        "bgc"
+    ],
+    "tier": 1,
+    "min_number_yrs_per_sim": 100.0
+}
