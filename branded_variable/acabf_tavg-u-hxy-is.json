@@ -2,8 +2,9 @@
     "@context": "000_context.jsonld",
     "id": "acabf_tavg-u-hxy-is",
     "type": "known_branded_variable",
-    "description": "quantity averaged over ice sheet (grounded ice sheet and floating ice shelf) only. Needed to analyse the impact of downscaling methods, and as forcing for ISM",
-    "long_name": "Ice Sheet Surface Mass Balance Flux",
+    "long_name": [
+        "Ice Sheet Surface Mass Balance Flux"
+    ],
     "table_id": [
         "landice"
     ],
@@ -18,6 +19,16 @@
         "yr",
         "mon"
     ],
-    "cell_measures": "area: areacella",
-    "realm": "landice"
+    "comment": [
+        "quantity averaged over ice sheet only, to avoid contamination from other surfaces (eg: permafrost)",
+        "quantity averaged over ice sheet (grounded ice sheet and floating ice shelf) only. Needed to analyse the impact of downscaling methods, and as forcing for ISM",
+        "quantity averaged over ice_sheet (meaning grounded ice sheet and floating ice shelf) only, to avoid contamination from other surfaces (eg: permafrost)"
+    ],
+    "cell_measures": [
+        "area: areacellg",
+        "area: areacella"
+    ],
+    "realm": [
+        "landice"
+    ]
 }

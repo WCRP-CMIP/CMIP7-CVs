@@ -2,8 +2,9 @@
     "@context": "000_context.jsonld",
     "id": "tntc_tpt-al-hs-u",
     "type": "known_branded_variable",
-    "description": "Tendencies from cumulus convection scheme.",
-    "long_name": "Tendency of Air Temperature Due to Convection",
+    "long_name": [
+        "Tendency of Air Temperature Due to Convection"
+    ],
     "table_id": [
         "atmos"
     ],
@@ -13,5 +14,10 @@
     "frequency": [
         "subhr"
     ],
-    "realm": "atmos"
+    "comment": [
+        "Tendencies from cumulus convection scheme."
+    ],
+    "realm": [
+        "atmos"
+    ]
 }

@@ -2,8 +2,9 @@
     "@context": "000_context.jsonld",
     "id": "rsut_tpt-u-hs-u",
     "type": "known_branded_variable",
-    "description": "at the top of the atmosphere",
-    "long_name": "TOA Outgoing Shortwave Radiation",
+    "long_name": [
+        "TOA Outgoing Shortwave Radiation"
+    ],
     "table_id": [
         "atmos"
     ],
@@ -13,5 +14,10 @@
     "frequency": [
         "subhr"
     ],
-    "realm": "atmos"
+    "comment": [
+        "at the top of the atmosphere"
+    ],
+    "realm": [
+        "atmos"
+    ]
 }

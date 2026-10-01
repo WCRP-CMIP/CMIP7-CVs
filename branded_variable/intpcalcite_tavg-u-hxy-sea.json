@@ -2,8 +2,9 @@
     "@context": "000_context.jsonld",
     "id": "intpcalcite_tavg-u-hxy-sea",
     "type": "known_branded_variable",
-    "description": "Vertically integrated calcite production",
-    "long_name": "Calcite Production",
+    "long_name": [
+        "Calcite Production"
+    ],
     "table_id": [
         "ocnbgchem"
     ],
@@ -13,6 +14,13 @@
     "frequency": [
         "mon"
     ],
-    "cell_measures": "area: areacello",
-    "realm": "ocnbgchem"
+    "comment": [
+        "Vertically integrated calcite production"
+    ],
+    "cell_measures": [
+        "area: areacello"
+    ],
+    "realm": [
+        "ocnbgchem"
+    ]
 }

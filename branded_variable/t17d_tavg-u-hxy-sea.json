@@ -2,8 +2,9 @@
     "@context": "000_context.jsonld",
     "id": "t17d_tavg-u-hxy-sea",
     "type": "known_branded_variable",
-    "description": "Monthly 17C isotherm depth",
-    "long_name": "Depth of 17 degree Celsius Isotherm",
+    "long_name": [
+        "Depth of 17 degree Celsius Isotherm"
+    ],
     "table_id": [
         "ocean"
     ],
@@ -13,6 +14,13 @@
     "frequency": [
         "mon"
     ],
-    "cell_measures": "area: areacello",
-    "realm": "ocean"
+    "comment": [
+        "Monthly 17C isotherm depth"
+    ],
+    "cell_measures": [
+        "area: areacello"
+    ],
+    "realm": [
+        "ocean"
+    ]
 }

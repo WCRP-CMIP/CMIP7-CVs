@@ -2,8 +2,9 @@
     "@context": "000_context.jsonld",
     "id": "ta_tpt-al-hs-u",
     "type": "known_branded_variable",
-    "description": "Air Temperature",
-    "long_name": "Air Temperature",
+    "long_name": [
+        "Air Temperature"
+    ],
     "table_id": [
         "atmos"
     ],
@@ -13,5 +14,10 @@
     "frequency": [
         "subhr"
     ],
-    "realm": "atmos"
+    "comment": [
+        "Air Temperature"
+    ],
+    "realm": [
+        "atmos"
+    ]
 }

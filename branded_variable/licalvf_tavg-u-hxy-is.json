@@ -2,8 +2,9 @@
     "@context": "000_context.jsonld",
     "id": "licalvf_tavg-u-hxy-is",
     "type": "known_branded_variable",
-    "description": "Loss of ice mass resulting from iceberg calving. Computed as the rate of mass loss by the ice shelf (in kg s-1) divided by the horizontal area of the ice sheet (m2) in the grid box.",
-    "long_name": "Land Ice Calving Flux",
+    "long_name": [
+        "Land Ice Calving Flux"
+    ],
     "table_id": [
         "landice"
     ],
@@ -17,6 +18,13 @@
         "yr",
         "mon"
     ],
-    "cell_measures": "area: areacellg",
-    "realm": "landice"
+    "comment": [
+        "Loss of ice mass resulting from iceberg calving. Computed as the rate of mass loss by the ice shelf (in kg s-1) divided by the horizontal area of the ice sheet (m2) in the grid box."
+    ],
+    "cell_measures": [
+        "area: areacellg"
+    ],
+    "realm": [
+        "landice"
+    ]
 }

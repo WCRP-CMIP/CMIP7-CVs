@@ -2,8 +2,9 @@
     "@context": "000_context.jsonld",
     "id": "tslut_tavg-u-hxy-multi",
     "type": "known_branded_variable",
-    "description": "Surface temperature (i.e. temperature at which long-wave radiation emitted)",
-    "long_name": "Surface Temperature on Landuse Tile",
+    "long_name": [
+        "Surface Temperature on Landuse Tile"
+    ],
     "table_id": [
         "land"
     ],
@@ -13,6 +14,13 @@
     "frequency": [
         "mon"
     ],
-    "cell_measures": "area: areacella",
-    "realm": "land"
+    "comment": [
+        "Surface temperature (i.e. temperature at which long-wave radiation emitted)"
+    ],
+    "cell_measures": [
+        "area: areacella"
+    ],
+    "realm": [
+        "land"
+    ]
 }

@@ -2,8 +2,9 @@
     "@context": "000_context.jsonld",
     "id": "sos_tavg-u-hm-sea",
     "type": "known_branded_variable",
-    "description": "Sea water salinity is the salt content of sea water, often on the Practical Salinity Scale of 1978. However, the unqualified term 'salinity' is generic and does not necessarily imply any particular method of calculation. The units of salinity are dimensionless and the units attribute should normally be given as 1e-3 or 0.001 i.e. parts per thousand.",
-    "long_name": "Global Average Sea Surface Salinity",
+    "long_name": [
+        "Global Average Sea Surface Salinity"
+    ],
     "table_id": [
         "ocean"
     ],
@@ -14,5 +15,10 @@
     "frequency": [
         "mon"
     ],
-    "realm": "ocean"
+    "comment": [
+        "Sea water salinity is the salt content of sea water, often on the Practical Salinity Scale of 1978. However, the unqualified term 'salinity' is generic and does not necessarily imply any particular method of calculation. The units of salinity are dimensionless and the units attribute should normally be given as 1e-3 or 0.001 i.e. parts per thousand."
+    ],
+    "realm": [
+        "ocean"
+    ]
 }

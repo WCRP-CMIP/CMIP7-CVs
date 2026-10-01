@@ -2,8 +2,9 @@
     "@context": "000_context.jsonld",
     "id": "uas_tpt-h10m-hs-u",
     "type": "known_branded_variable",
-    "description": "Eastward component of the near-surface (usually, 10 meters)  wind",
-    "long_name": "Eastward Near-Surface Wind",
+    "long_name": [
+        "Eastward Near-Surface Wind"
+    ],
     "table_id": [
         "atmos"
     ],
@@ -13,5 +14,10 @@
     "frequency": [
         "subhr"
     ],
-    "realm": "atmos"
+    "comment": [
+        "Eastward component of the near-surface (usually, 10 meters)  wind"
+    ],
+    "realm": [
+        "atmos"
+    ]
 }

@@ -2,8 +2,9 @@
     "@context": "000_context.jsonld",
     "id": "pbo_tavg-u-hxy-sea",
     "type": "known_branded_variable",
-    "description": "\"Sea water pressure\" is the pressure that exists in the medium of sea water.  It includes the pressure due to overlying sea water, sea ice, air and any other medium that may be present.",
-    "long_name": "Sea Water Pressure at Sea Floor",
+    "long_name": [
+        "Sea Water Pressure at Sea Floor"
+    ],
     "table_id": [
         "ocean"
     ],
@@ -13,6 +14,13 @@
     "frequency": [
         "mon"
     ],
-    "cell_measures": "area: areacello",
-    "realm": "ocean"
+    "comment": [
+        "\"Sea water pressure\" is the pressure that exists in the medium of sea water.  It includes the pressure due to overlying sea water, sea ice, air and any other medium that may be present."
+    ],
+    "cell_measures": [
+        "area: areacello"
+    ],
+    "realm": [
+        "ocean"
+    ]
 }

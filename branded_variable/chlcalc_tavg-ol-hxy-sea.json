@@ -2,8 +2,9 @@
     "@context": "000_context.jsonld",
     "id": "chlcalc_tavg-ol-hxy-sea",
     "type": "known_branded_variable",
-    "description": "chlorophyll concentration from the calcite-producing phytoplankton component alone",
-    "long_name": "Mass Concentration of Calcareous Phytoplankton Expressed as Chlorophyll in Sea Water",
+    "long_name": [
+        "Mass Concentration of Calcareous Phytoplankton Expressed as Chlorophyll in Sea Water"
+    ],
     "table_id": [
         "ocnbgchem"
     ],
@@ -13,6 +14,13 @@
     "frequency": [
         "mon"
     ],
-    "cell_measures": "area: areacello volume: volcello",
-    "realm": "ocnbgchem"
+    "comment": [
+        "chlorophyll concentration from the calcite-producing phytoplankton component alone"
+    ],
+    "cell_measures": [
+        "area: areacello volume: volcello"
+    ],
+    "realm": [
+        "ocnbgchem"
+    ]
 }

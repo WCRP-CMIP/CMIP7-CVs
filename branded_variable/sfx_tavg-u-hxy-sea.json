@@ -2,8 +2,9 @@
     "@context": "000_context.jsonld",
     "id": "sfx_tavg-u-hxy-sea",
     "type": "known_branded_variable",
-    "description": "Ocean salt mass x transport vertically integrated over the whole ocean depth. Contains all contributions to 'x-ward' salt mass transport from resolved and parameterized processes. Report on native horizontal grid.",
-    "long_name": "Vertically Integrated Ocean Salt Mass X Transport",
+    "long_name": [
+        "Vertically Integrated Ocean Salt Mass X Transport"
+    ],
     "table_id": [
         "ocean"
     ],
@@ -13,6 +14,13 @@
     "frequency": [
         "mon"
     ],
-    "cell_measures": "area: areacello",
-    "realm": "ocean"
+    "comment": [
+        "Ocean salt mass x transport vertically integrated over the whole ocean depth. Contains all contributions to 'x-ward' salt mass transport from resolved and parameterized processes. Report on native horizontal grid."
+    ],
+    "cell_measures": [
+        "area: areacello"
+    ],
+    "realm": [
+        "ocean"
+    ]
 }

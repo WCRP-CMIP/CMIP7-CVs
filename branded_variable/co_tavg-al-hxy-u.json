@@ -2,8 +2,9 @@
     "@context": "000_context.jsonld",
     "id": "co_tavg-al-hxy-u",
     "type": "known_branded_variable",
-    "description": "Mole fraction is used in the construction mole_fraction_of_X_in_Y, where X is a material constituent of Y.",
-    "long_name": "CO Volume Mixing Ratio",
+    "long_name": [
+        "CO Volume Mixing Ratio"
+    ],
     "table_id": [
         "aerosol"
     ],
@@ -13,6 +14,14 @@
     "frequency": [
         "mon"
     ],
-    "cell_measures": "area: areacella",
-    "realm": "aerosol"
+    "comment": [
+        "Mole fraction is used in the construction mole_fraction_of_X_in_Y, where X is a material constituent of Y."
+    ],
+    "cell_measures": [
+        "area: areacella"
+    ],
+    "realm": [
+        "aerosol",
+        "atmoschem"
+    ]
 }

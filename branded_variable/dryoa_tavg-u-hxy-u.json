@@ -2,8 +2,9 @@
     "@context": "000_context.jsonld",
     "id": "dryoa_tavg-u-hxy-u",
     "type": "known_branded_variable",
-    "description": "Dry Deposition Rate of Dry Aerosol Total Organic Matter",
-    "long_name": "Dry Deposition Rate of Dry Aerosol Total Organic Matter",
+    "long_name": [
+        "Dry Deposition Rate of Dry Aerosol Total Organic Matter"
+    ],
     "table_id": [
         "aerosol"
     ],
@@ -13,6 +14,13 @@
     "frequency": [
         "mon"
     ],
-    "cell_measures": "area: areacella",
-    "realm": "aerosol"
+    "comment": [
+        "Dry Deposition Rate of Dry Aerosol Total Organic Matter"
+    ],
+    "cell_measures": [
+        "area: areacella"
+    ],
+    "realm": [
+        "aerosol"
+    ]
 }

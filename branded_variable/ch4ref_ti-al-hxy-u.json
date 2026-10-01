@@ -2,8 +2,9 @@
     "@context": "000_context.jsonld",
     "id": "ch4ref_ti-al-hxy-u",
     "type": "known_branded_variable",
-    "description": "This is the methane mole fraction that is used in a diagnostic call to the model's radiation scheme. It is only applicable when a methane double call is active in the model.",
-    "long_name": "Reference mole fraction of methane in air",
+    "long_name": [
+        "Reference mole fraction of methane in air"
+    ],
     "table_id": [
         "atmoschem"
     ],
@@ -13,6 +14,14 @@
     "frequency": [
         "fx"
     ],
-    "cell_measures": "area: areacella",
-    "realm": "atmoschem"
+    "comment": [
+        "This is the methane mole fraction that is used in a diagnostic call to the model's radiation scheme. It is only applicable when a methane double call is active in the model."
+    ],
+    "cell_measures": [
+        "area: areacella"
+    ],
+    "realm": [
+        "atmoschem",
+        "aerosol"
+    ]
 }

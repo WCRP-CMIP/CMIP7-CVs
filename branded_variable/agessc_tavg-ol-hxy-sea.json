@@ -2,8 +2,9 @@
     "@context": "000_context.jsonld",
     "id": "agessc_tavg-ol-hxy-sea",
     "type": "known_branded_variable",
-    "description": "Time elapsed since water was last in surface layer of the ocean.",
-    "long_name": "Sea Water Age Since Surface Contact",
+    "long_name": [
+        "Sea Water Age Since Surface Contact"
+    ],
     "table_id": [
         "ocean"
     ],
@@ -13,6 +14,13 @@
     "frequency": [
         "mon"
     ],
-    "cell_measures": "area: areacello volume: volcello",
-    "realm": "ocean"
+    "comment": [
+        "Time elapsed since water was last in surface layer of the ocean."
+    ],
+    "cell_measures": [
+        "area: areacello volume: volcello"
+    ],
+    "realm": [
+        "ocean"
+    ]
 }

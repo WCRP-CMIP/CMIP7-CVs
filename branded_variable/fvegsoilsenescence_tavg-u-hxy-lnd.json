@@ -2,8 +2,9 @@
     "@context": "000_context.jsonld",
     "id": "fvegsoilsenescence_tavg-u-hxy-lnd",
     "type": "known_branded_variable",
-    "description": "needed to separate changing vegetation C turnover times resulting from changing allocation versus changing mortality",
-    "long_name": "Total Carbon Mass Flux from Vegetation to Soil as a Result of Leaf, Branch, and Root Senescence",
+    "long_name": [
+        "Total Carbon Mass Flux from Vegetation to Soil as a Result of Leaf, Branch, and Root Senescence"
+    ],
     "table_id": [
         "land"
     ],
@@ -13,6 +14,13 @@
     "frequency": [
         "mon"
     ],
-    "cell_measures": "area: areacella",
-    "realm": "land"
+    "comment": [
+        "needed to separate changing vegetation C turnover times resulting from changing allocation versus changing mortality"
+    ],
+    "cell_measures": [
+        "area: areacella"
+    ],
+    "realm": [
+        "land"
+    ]
 }

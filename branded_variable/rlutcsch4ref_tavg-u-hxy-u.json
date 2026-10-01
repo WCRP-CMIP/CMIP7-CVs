@@ -2,8 +2,9 @@
     "@context": "000_context.jsonld",
     "id": "rlutcsch4ref_tavg-u-hxy-u",
     "type": "known_branded_variable",
-    "description": "This is the outgoing longwave flux at the top-of-atmosphere for clear-sky conditions from a diagnostic call to the radiation scheme with a reference methane field",
-    "long_name": "TOA outgoing longwave flux assuming clear sky and reference methane field",
+    "long_name": [
+        "TOA outgoing longwave flux assuming clear sky and reference methane field"
+    ],
     "table_id": [
         "atmoschem"
     ],
@@ -13,6 +14,14 @@
     "frequency": [
         "mon"
     ],
-    "cell_measures": "area: areacella",
-    "realm": "atmoschem"
+    "comment": [
+        "This is the outgoing longwave flux at the top-of-atmosphere for clear-sky conditions from a diagnostic call to the radiation scheme with a reference methane field"
+    ],
+    "cell_measures": [
+        "area: areacella"
+    ],
+    "realm": [
+        "atmoschem",
+        "aerosol"
+    ]
 }

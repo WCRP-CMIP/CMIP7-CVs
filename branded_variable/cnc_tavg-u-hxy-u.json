@@ -2,8 +2,9 @@
     "@context": "000_context.jsonld",
     "id": "cnc_tavg-u-hxy-u",
     "type": "known_branded_variable",
-    "description": "Canopy covered fraction",
-    "long_name": "Canopy Covered Area Percentage",
+    "long_name": [
+        "Canopy Covered Area Percentage"
+    ],
     "table_id": [
         "land"
     ],
@@ -13,6 +14,13 @@
     "frequency": [
         "mon"
     ],
-    "cell_measures": "area: areacella",
-    "realm": "land"
+    "comment": [
+        "Canopy covered fraction"
+    ],
+    "cell_measures": [
+        "area: areacella"
+    ],
+    "realm": [
+        "land"
+    ]
 }

@@ -2,8 +2,9 @@
     "@context": "000_context.jsonld",
     "id": "wetso4_tavg-u-hxy-u",
     "type": "known_branded_variable",
-    "description": "proposed name: tendency_of_atmosphere_mass_content_of_sulfate_dry_aerosol_due_to_wet_deposition",
-    "long_name": "Wet Deposition Rate of SO4",
+    "long_name": [
+        "Wet Deposition Rate of SO4"
+    ],
     "table_id": [
         "aerosol"
     ],
@@ -13,6 +14,13 @@
     "frequency": [
         "mon"
     ],
-    "cell_measures": "area: areacella",
-    "realm": "aerosol"
+    "comment": [
+        "proposed name: tendency_of_atmosphere_mass_content_of_sulfate_dry_aerosol_due_to_wet_deposition"
+    ],
+    "cell_measures": [
+        "area: areacella"
+    ],
+    "realm": [
+        "aerosol"
+    ]
 }

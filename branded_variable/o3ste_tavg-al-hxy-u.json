@@ -2,8 +2,9 @@
     "@context": "000_context.jsonld",
     "id": "o3ste_tavg-al-hxy-u",
     "type": "known_branded_variable",
-    "description": "Ozone tracer intended to map out strat-trop exchange (STE) of ozone.",
-    "long_name": "Stratospheric Ozone Tracer Volume Mixing Ratio",
+    "long_name": [
+        "Stratospheric Ozone Tracer Volume Mixing Ratio"
+    ],
     "table_id": [
         "atmoschem"
     ],
@@ -13,6 +14,13 @@
     "frequency": [
         "mon"
     ],
-    "cell_measures": "area: areacella",
-    "realm": "atmoschem"
+    "comment": [
+        "Ozone tracer intended to map out strat-trop exchange (STE) of ozone."
+    ],
+    "cell_measures": [
+        "area: areacella"
+    ],
+    "realm": [
+        "atmoschem"
+    ]
 }

@@ -2,8 +2,9 @@
     "@context": "000_context.jsonld",
     "id": "phydiat_tavg-ol-hxy-sea",
     "type": "known_branded_variable",
-    "description": "carbon from the diatom phytoplankton component concentration alone",
-    "long_name": "Mole Concentration of Diatoms Expressed as Carbon in Sea Water",
+    "long_name": [
+        "Mole Concentration of Diatoms Expressed as Carbon in Sea Water"
+    ],
     "table_id": [
         "ocnbgchem"
     ],
@@ -13,6 +14,13 @@
     "frequency": [
         "mon"
     ],
-    "cell_measures": "area: areacello volume: volcello",
-    "realm": "ocnbgchem"
+    "comment": [
+        "carbon from the diatom phytoplankton component concentration alone"
+    ],
+    "cell_measures": [
+        "area: areacello volume: volcello"
+    ],
+    "realm": [
+        "ocnbgchem"
+    ]
 }

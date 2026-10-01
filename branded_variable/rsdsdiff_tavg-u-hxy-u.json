@@ -2,8 +2,9 @@
     "@context": "000_context.jsonld",
     "id": "rsdsdiff_tavg-u-hxy-u",
     "type": "known_branded_variable",
-    "description": "Surface downwelling solar irradiance from diffuse radiation for UV calculations.",
-    "long_name": "Surface Diffuse Downwelling Shortwave Radiation",
+    "long_name": [
+        "Surface Diffuse Downwelling Shortwave Radiation"
+    ],
     "table_id": [
         "atmos"
     ],
@@ -15,6 +16,14 @@
         "1hr",
         "day"
     ],
-    "cell_measures": "area: areacella",
-    "realm": "atmos"
+    "comment": [
+        "Surface Diffuse Downwelling Shortwave Radiation",
+        "Surface downwelling solar irradiance from diffuse radiation for UV calculations."
+    ],
+    "cell_measures": [
+        "area: areacella"
+    ],
+    "realm": [
+        "atmos"
+    ]
 }

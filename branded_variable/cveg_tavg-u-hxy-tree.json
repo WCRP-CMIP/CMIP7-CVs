@@ -2,8 +2,9 @@
     "@context": "000_context.jsonld",
     "id": "cveg_tavg-u-hxy-tree",
     "type": "known_branded_variable",
-    "description": "\"Content\" indicates a quantity per unit area. \"Vegetation\" means any plants e.g. trees, shrubs, grass. Plants are autotrophs i.e. \"producers\" of biomass using carbon obtained from carbon dioxide.",
-    "long_name": "Carbon Mass in Vegetation on Tree Tiles",
+    "long_name": [
+        "Carbon Mass in Vegetation on Tree Tiles"
+    ],
     "table_id": [
         "land"
     ],
@@ -13,6 +14,13 @@
     "frequency": [
         "mon"
     ],
-    "cell_measures": "area: areacella",
-    "realm": "land"
+    "comment": [
+        "\"Content\" indicates a quantity per unit area. \"Vegetation\" means any plants e.g. trees, shrubs, grass. Plants are autotrophs i.e. \"producers\" of biomass using carbon obtained from carbon dioxide."
+    ],
+    "cell_measures": [
+        "area: areacella"
+    ],
+    "realm": [
+        "land"
+    ]
 }

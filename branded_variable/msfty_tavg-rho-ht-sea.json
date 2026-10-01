@@ -2,8 +2,9 @@
     "@context": "000_context.jsonld",
     "id": "msfty_tavg-rho-ht-sea",
     "type": "known_branded_variable",
-    "description": "Overturning mass streamfunction arising from all advective mass transport processes, resolved and parameterized.",
-    "long_name": "Ocean Y Overturning Mass Streamfunction",
+    "long_name": [
+        "Ocean Y Overturning Mass Streamfunction"
+    ],
     "table_id": [
         "ocean"
     ],
@@ -13,5 +14,10 @@
     "frequency": [
         "mon"
     ],
-    "realm": "ocean"
+    "comment": [
+        "Overturning mass streamfunction arising from all advective mass transport processes, resolved and parameterized."
+    ],
+    "realm": [
+        "ocean"
+    ]
 }

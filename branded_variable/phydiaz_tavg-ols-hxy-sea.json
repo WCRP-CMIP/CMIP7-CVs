@@ -2,8 +2,9 @@
     "@context": "000_context.jsonld",
     "id": "phydiaz_tavg-ols-hxy-sea",
     "type": "known_branded_variable",
-    "description": "carbon concentration from the diazotrophic phytoplankton component alone",
-    "long_name": "Surface Mole Concentration of Diazotrophs Expressed as Carbon in Sea Water",
+    "long_name": [
+        "Surface Mole Concentration of Diazotrophs Expressed as Carbon in Sea Water"
+    ],
     "table_id": [
         "ocnbgchem"
     ],
@@ -15,6 +16,14 @@
         "day",
         "mon"
     ],
-    "cell_measures": "area: areacello",
-    "realm": "ocnbgchem"
+    "comment": [
+        "Mole Concentration of Diazotrophs Expressed as Carbon in Sea Water",
+        "carbon concentration from the diazotrophic phytoplankton component alone"
+    ],
+    "cell_measures": [
+        "area: areacello"
+    ],
+    "realm": [
+        "ocnbgchem"
+    ]
 }

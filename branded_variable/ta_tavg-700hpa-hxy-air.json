@@ -2,8 +2,9 @@
     "@context": "000_context.jsonld",
     "id": "ta_tavg-700hpa-hxy-air",
     "type": "known_branded_variable",
-    "description": "Air temperature at 700hPa",
-    "long_name": "Air Temperature",
+    "long_name": [
+        "Air Temperature"
+    ],
     "table_id": [
         "atmos"
     ],
@@ -13,6 +14,13 @@
     "frequency": [
         "day"
     ],
-    "cell_measures": "area: areacella",
-    "realm": "atmos"
+    "comment": [
+        "Air temperature at 700hPa"
+    ],
+    "cell_measures": [
+        "area: areacella"
+    ],
+    "realm": [
+        "atmos"
+    ]
 }

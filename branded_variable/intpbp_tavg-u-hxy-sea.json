@@ -2,8 +2,9 @@
     "@context": "000_context.jsonld",
     "id": "intpbp_tavg-u-hxy-sea",
     "type": "known_branded_variable",
-    "description": "Vertically integrated biogenic phosphorus production",
-    "long_name": "Phosphorus Production",
+    "long_name": [
+        "Phosphorus Production"
+    ],
     "table_id": [
         "ocnbgchem"
     ],
@@ -13,6 +14,13 @@
     "frequency": [
         "mon"
     ],
-    "cell_measures": "area: areacello",
-    "realm": "ocnbgchem"
+    "comment": [
+        "Vertically integrated biogenic phosphorus production"
+    ],
+    "cell_measures": [
+        "area: areacello"
+    ],
+    "realm": [
+        "ocnbgchem"
+    ]
 }

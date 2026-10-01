@@ -2,8 +2,9 @@
     "@context": "000_context.jsonld",
     "id": "difmxybo_tavg-ol-hxy-sea",
     "type": "known_branded_variable",
-    "description": "Lateral biharmonic viscosity applied to the momentum equations.",
-    "long_name": "Ocean Momentum XY Biharmonic Diffusivity",
+    "long_name": [
+        "Ocean Momentum XY Biharmonic Diffusivity"
+    ],
     "table_id": [
         "ocean"
     ],
@@ -13,6 +14,13 @@
     "frequency": [
         "yr"
     ],
-    "cell_measures": "area: areacello volume: volcello",
-    "realm": "ocean"
+    "comment": [
+        "Lateral biharmonic viscosity applied to the momentum equations."
+    ],
+    "cell_measures": [
+        "area: areacello volume: volcello"
+    ],
+    "realm": [
+        "ocean"
+    ]
 }

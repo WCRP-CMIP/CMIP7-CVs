@@ -2,8 +2,9 @@
     "@context": "000_context.jsonld",
     "id": "psitem_tavg-p39-hy-air",
     "type": "known_branded_variable",
-    "description": "zonal mean; hence YZT",
-    "long_name": "Transformed Eulerian Mean Mass Streamfunction",
+    "long_name": [
+        "Transformed Eulerian Mean Mass Streamfunction"
+    ],
     "table_id": [
         "atmos"
     ],
@@ -13,5 +14,10 @@
     "frequency": [
         "day"
     ],
-    "realm": "atmos"
+    "comment": [
+        "zonal mean; hence YZT"
+    ],
+    "realm": [
+        "atmos"
+    ]
 }

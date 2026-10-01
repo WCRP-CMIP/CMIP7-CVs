@@ -2,8 +2,9 @@
     "@context": "000_context.jsonld",
     "id": "tntrlcs_tavg-al-hxy-u",
     "type": "known_branded_variable",
-    "description": "Tendency of Air Temperature due to Clear Sky Longwave Radiative Heating",
-    "long_name": "Tendency of Air Temperature Due to Clear Sky Longwave Radiative Heating",
+    "long_name": [
+        "Tendency of Air Temperature Due to Clear Sky Longwave Radiative Heating"
+    ],
     "table_id": [
         "atmos"
     ],
@@ -13,6 +14,13 @@
     "frequency": [
         "mon"
     ],
-    "cell_measures": "area: areacella",
-    "realm": "atmos"
+    "comment": [
+        "Tendency of Air Temperature due to Clear Sky Longwave Radiative Heating"
+    ],
+    "cell_measures": [
+        "area: areacella"
+    ],
+    "realm": [
+        "atmos"
+    ]
 }

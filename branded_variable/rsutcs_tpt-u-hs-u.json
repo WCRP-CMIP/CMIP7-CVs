@@ -2,8 +2,9 @@
     "@context": "000_context.jsonld",
     "id": "rsutcs_tpt-u-hs-u",
     "type": "known_branded_variable",
-    "description": "Calculated in the absence of clouds.",
-    "long_name": "TOA Outgoing Clear-Sky Shortwave Radiation",
+    "long_name": [
+        "TOA Outgoing Clear-Sky Shortwave Radiation"
+    ],
     "table_id": [
         "atmos"
     ],
@@ -13,5 +14,10 @@
     "frequency": [
         "subhr"
     ],
-    "realm": "atmos"
+    "comment": [
+        "Calculated in the absence of clouds."
+    ],
+    "realm": [
+        "atmos"
+    ]
 }

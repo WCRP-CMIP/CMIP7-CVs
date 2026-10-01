@@ -2,8 +2,9 @@
     "@context": "000_context.jsonld",
     "id": "phycalc_tavg-ol-hxy-sea",
     "type": "known_branded_variable",
-    "description": "carbon concentration from calcareous (calcite-producing) phytoplankton component alone",
-    "long_name": "Mole Concentration of Calcareous Phytoplankton Expressed as Carbon in Sea Water",
+    "long_name": [
+        "Mole Concentration of Calcareous Phytoplankton Expressed as Carbon in Sea Water"
+    ],
     "table_id": [
         "ocnbgchem"
     ],
@@ -15,6 +16,14 @@
         "day",
         "mon"
     ],
-    "cell_measures": "area: areacello volume: volcello",
-    "realm": "ocnbgchem"
+    "comment": [
+        "Mole Concentration of Calcareous Phytoplankton Expressed as Carbon in Sea Water",
+        "carbon concentration from calcareous (calcite-producing) phytoplankton component alone"
+    ],
+    "cell_measures": [
+        "area: areacello volume: volcello"
+    ],
+    "realm": [
+        "ocnbgchem"
+    ]
 }

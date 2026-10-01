@@ -2,8 +2,9 @@
     "@context": "000_context.jsonld",
     "id": "gpp_tavg-u-hxy-shb",
     "type": "known_branded_variable",
-    "description": "Total GPP of shrubs in the grid cell",
-    "long_name": "Gross Primary Production on Shrub Tiles as Carbon Mass Flux [kgC m-2 s-1]",
+    "long_name": [
+        "Gross Primary Production on Shrub Tiles as Carbon Mass Flux [kgC m-2 s-1]"
+    ],
     "table_id": [
         "land"
     ],
@@ -13,6 +14,13 @@
     "frequency": [
         "mon"
     ],
-    "cell_measures": "area: areacella",
-    "realm": "land"
+    "comment": [
+        "Total GPP of shrubs in the grid cell"
+    ],
+    "cell_measures": [
+        "area: areacella"
+    ],
+    "realm": [
+        "land"
+    ]
 }

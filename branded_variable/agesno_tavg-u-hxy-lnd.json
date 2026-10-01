@@ -2,8 +2,9 @@
     "@context": "000_context.jsonld",
     "id": "agesno_tavg-u-hxy-lnd",
     "type": "known_branded_variable",
-    "description": "When computing the time-mean here, the time samples, weighted by the mass of snow on the land portion of the grid cell, are accumulated and then divided by the sum of the weights.  Reported as \"missing in regions free of snow on land.",
-    "long_name": "Mean Age of Snow",
+    "long_name": [
+        "Mean Age of Snow"
+    ],
     "table_id": [
         "landice"
     ],
@@ -13,6 +14,14 @@
     "frequency": [
         "mon"
     ],
-    "cell_measures": "area: areacella",
-    "realm": "landice"
+    "comment": [
+        "When computing the time-mean here, the time samples, weighted by the mass of snow on the land portion of the grid cell, are accumulated and then divided by the sum of the weights.  Reported as \"missing in regions free of snow on land."
+    ],
+    "cell_measures": [
+        "area: areacella"
+    ],
+    "realm": [
+        "landice",
+        "land"
+    ]
 }

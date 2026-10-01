@@ -2,8 +2,9 @@
     "@context": "000_context.jsonld",
     "id": "lossco_tavg-al-hxy-u",
     "type": "known_branded_variable",
-    "description": "monthly averaged atmospheric loss",
-    "long_name": "Monthly Loss of Atmospheric Carbon Monoxide",
+    "long_name": [
+        "Monthly Loss of Atmospheric Carbon Monoxide"
+    ],
     "table_id": [
         "aerosol"
     ],
@@ -13,6 +14,13 @@
     "frequency": [
         "mon"
     ],
-    "cell_measures": "area: areacella",
-    "realm": "aerosol"
+    "comment": [
+        "monthly averaged atmospheric loss"
+    ],
+    "cell_measures": [
+        "area: areacella"
+    ],
+    "realm": [
+        "aerosol"
+    ]
 }

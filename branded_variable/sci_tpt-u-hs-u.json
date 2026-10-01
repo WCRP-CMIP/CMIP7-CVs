@@ -2,8 +2,9 @@
     "@context": "000_context.jsonld",
     "id": "sci_tpt-u-hs-u",
     "type": "known_branded_variable",
-    "description": "Fraction of time that shallow convection occurs in the grid cell. Variable is binary, indicating whether at each time step convection occurs (1.0), or not (0.0).",
-    "long_name": "Fraction of Time Shallow Convection Occurs",
+    "long_name": [
+        "Fraction of Time Shallow Convection Occurs"
+    ],
     "table_id": [
         "atmos"
     ],
@@ -13,5 +14,10 @@
     "frequency": [
         "subhr"
     ],
-    "realm": "atmos"
+    "comment": [
+        "Fraction of time that shallow convection occurs in the grid cell. Variable is binary, indicating whether at each time step convection occurs (1.0), or not (0.0)."
+    ],
+    "realm": [
+        "atmos"
+    ]
 }

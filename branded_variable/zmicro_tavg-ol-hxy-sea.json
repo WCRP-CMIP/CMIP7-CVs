@@ -2,8 +2,9 @@
     "@context": "000_context.jsonld",
     "id": "zmicro_tavg-ol-hxy-sea",
     "type": "known_branded_variable",
-    "description": "carbon  concentration from the microzooplankton (<20 um) component alone",
-    "long_name": "Mole Concentration of Microzooplankton Expressed as Carbon in Sea Water",
+    "long_name": [
+        "Mole Concentration of Microzooplankton Expressed as Carbon in Sea Water"
+    ],
     "table_id": [
         "ocnbgchem"
     ],
@@ -15,6 +16,14 @@
         "day",
         "mon"
     ],
-    "cell_measures": "area: areacello volume: volcello",
-    "realm": "ocnbgchem"
+    "comment": [
+        "carbon concentration from the microzooplankton (<20 um) component alone",
+        "carbon  concentration from the microzooplankton (<20 um) component alone"
+    ],
+    "cell_measures": [
+        "area: areacello volume: volcello"
+    ],
+    "realm": [
+        "ocnbgchem"
+    ]
 }

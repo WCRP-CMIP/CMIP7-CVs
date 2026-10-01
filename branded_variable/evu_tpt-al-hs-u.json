@@ -2,8 +2,9 @@
     "@context": "000_context.jsonld",
     "id": "evu_tpt-al-hs-u",
     "type": "known_branded_variable",
-    "description": "Vertical diffusion coefficient for momentum due to parametrised eddies",
-    "long_name": "Eddy Viscosity Coefficient for Momentum",
+    "long_name": [
+        "Eddy Viscosity Coefficient for Momentum"
+    ],
     "table_id": [
         "atmos"
     ],
@@ -13,5 +14,10 @@
     "frequency": [
         "subhr"
     ],
-    "realm": "atmos"
+    "comment": [
+        "Vertical diffusion coefficient for momentum due to parametrised eddies"
+    ],
+    "realm": [
+        "atmos"
+    ]
 }

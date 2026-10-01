@@ -2,8 +2,9 @@
     "@context": "000_context.jsonld",
     "id": "ua_tavg-h100m-hxy-u",
     "type": "known_branded_variable",
-    "description": "Zonal wind (positive in a eastward direction) at 100m",
-    "long_name": "3-hourly u-wind at 100m",
+    "long_name": [
+        "3-hourly u-wind at 100m"
+    ],
     "table_id": [
         "atmos"
     ],
@@ -13,6 +14,13 @@
     "frequency": [
         "3hr"
     ],
-    "cell_measures": "area: areacella",
-    "realm": "atmos"
+    "comment": [
+        "Zonal wind (positive in a eastward direction) at 100m"
+    ],
+    "cell_measures": [
+        "area: areacella"
+    ],
+    "realm": [
+        "atmos"
+    ]
 }

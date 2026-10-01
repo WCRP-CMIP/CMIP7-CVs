@@ -2,8 +2,9 @@
     "@context": "000_context.jsonld",
     "id": "orog_tavg-u-hxy-is",
     "type": "known_branded_variable",
-    "description": "The surface called \"surface\" means the lower boundary of the atmosphere. Altitude is the (geometric) height above the geoid, which is the reference geopotential surface. The geoid is similar to mean sea level.",
-    "long_name": "Surface Altitude",
+    "long_name": [
+        "Surface Altitude"
+    ],
     "table_id": [
         "land",
         "landice"
@@ -19,6 +20,17 @@
         "mon",
         "yr"
     ],
-    "cell_measures": "area: areacella",
-    "realm": "land"
+    "comment": [
+        "The surface called \"surface\" means the lower boundary of the atmosphere. Altitude is the (geometric) height above the geoid, which is the reference geopotential surface. The geoid is similar to mean sea level.",
+        "This is needed in case the ice sheet elevation changes in time",
+        "quantity averaged over ice_sheet (meaning grounded ice sheet and floating ice shelf) only, to avoid contamination from other surfaces (eg: permafrost)"
+    ],
+    "cell_measures": [
+        "area: areacellg",
+        "area: areacella"
+    ],
+    "realm": [
+        "land",
+        "landice"
+    ]
 }

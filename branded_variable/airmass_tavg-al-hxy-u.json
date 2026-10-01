@@ -2,8 +2,9 @@
     "@context": "000_context.jsonld",
     "id": "airmass_tavg-al-hxy-u",
     "type": "known_branded_variable",
-    "description": "The mass of air in an atmospheric layer.",
-    "long_name": "Vertically Integrated Mass Content of Air in Layer",
+    "long_name": [
+        "Vertically Integrated Mass Content of Air in Layer"
+    ],
     "table_id": [
         "aerosol"
     ],
@@ -13,6 +14,13 @@
     "frequency": [
         "mon"
     ],
-    "cell_measures": "area: areacella",
-    "realm": "aerosol"
+    "comment": [
+        "The mass of air in an atmospheric layer."
+    ],
+    "cell_measures": [
+        "area: areacella"
+    ],
+    "realm": [
+        "aerosol"
+    ]
 }

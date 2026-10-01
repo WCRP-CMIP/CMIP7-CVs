@@ -2,8 +2,9 @@
     "@context": "000_context.jsonld",
     "id": "o3prod_tavg-al-hxy-u",
     "type": "known_branded_variable",
-    "description": "ONLY provide the sum of all the HO2/RO2 + NO reactions (as k*[HO2]*[NO])",
-    "long_name": "O3 Production Rate",
+    "long_name": [
+        "O3 Production Rate"
+    ],
     "table_id": [
         "aerosol"
     ],
@@ -13,6 +14,13 @@
     "frequency": [
         "mon"
     ],
-    "cell_measures": "area: areacella",
-    "realm": "aerosol"
+    "comment": [
+        "ONLY provide the sum of all the HO2/RO2 + NO reactions (as k*[HO2]*[NO])"
+    ],
+    "cell_measures": [
+        "area: areacella"
+    ],
+    "realm": [
+        "aerosol"
+    ]
 }

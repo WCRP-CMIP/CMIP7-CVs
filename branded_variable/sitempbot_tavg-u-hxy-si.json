@@ -2,8 +2,9 @@
     "@context": "000_context.jsonld",
     "id": "sitempbot_tavg-u-hxy-si",
     "type": "known_branded_variable",
-    "description": "Mean temperature at the base of the sea ice, NOT the temperature within lowermost sea-ice model layer.",
-    "long_name": "Temperature at Ice-Ocean Interface",
+    "long_name": [
+        "Temperature at Ice-Ocean Interface"
+    ],
     "table_id": [
         "seaice"
     ],
@@ -15,6 +16,13 @@
         "mon",
         "day"
     ],
-    "cell_measures": "area: areacello",
-    "realm": "seaice"
+    "comment": [
+        "Mean temperature at the base of the sea ice, NOT the temperature within lowermost sea-ice model layer."
+    ],
+    "cell_measures": [
+        "area: areacello"
+    ],
+    "realm": [
+        "seaice"
+    ]
 }

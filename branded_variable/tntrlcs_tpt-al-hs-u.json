@@ -2,8 +2,9 @@
     "@context": "000_context.jsonld",
     "id": "tntrlcs_tpt-al-hs-u",
     "type": "known_branded_variable",
-    "description": "alevel site time1",
-    "long_name": "Tendency of Air Temperature Due to Clear Sky Longwave Radiative Heating",
+    "long_name": [
+        "Tendency of Air Temperature Due to Clear Sky Longwave Radiative Heating"
+    ],
     "table_id": [
         "atmos"
     ],
@@ -13,5 +14,10 @@
     "frequency": [
         "subhr"
     ],
-    "realm": "atmos"
+    "comment": [
+        "alevel site time1"
+    ],
+    "realm": [
+        "atmos"
+    ]
 }

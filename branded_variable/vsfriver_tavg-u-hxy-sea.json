@@ -2,8 +2,9 @@
     "@context": "000_context.jsonld",
     "id": "vsfriver_tavg-u-hxy-sea",
     "type": "known_branded_variable",
-    "description": "zero for models using real water fluxes.",
-    "long_name": "Virtual Salt Flux into Sea Water from Rivers",
+    "long_name": [
+        "Virtual Salt Flux into Sea Water from Rivers"
+    ],
     "table_id": [
         "ocean"
     ],
@@ -13,6 +14,13 @@
     "frequency": [
         "mon"
     ],
-    "cell_measures": "area: areacello",
-    "realm": "ocean"
+    "comment": [
+        "zero for models using real water fluxes."
+    ],
+    "cell_measures": [
+        "area: areacello"
+    ],
+    "realm": [
+        "ocean"
+    ]
 }

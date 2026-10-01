@@ -2,8 +2,9 @@
     "@context": "000_context.jsonld",
     "id": "froc_tavg-u-hxy-sea",
     "type": "known_branded_variable",
-    "description": "Organic Carbon loss to sediments",
-    "long_name": "Downward Organic Carbon Flux at Ocean Bottom",
+    "long_name": [
+        "Downward Organic Carbon Flux at Ocean Bottom"
+    ],
     "table_id": [
         "ocnbgchem"
     ],
@@ -13,6 +14,13 @@
     "frequency": [
         "mon"
     ],
-    "cell_measures": "area: areacello",
-    "realm": "ocnbgchem"
+    "comment": [
+        "Organic Carbon loss to sediments"
+    ],
+    "cell_measures": [
+        "area: areacello"
+    ],
+    "realm": [
+        "ocnbgchem"
+    ]
 }

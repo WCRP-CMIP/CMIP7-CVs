@@ -2,8 +2,9 @@
     "@context": "000_context.jsonld",
     "id": "ch4losssoil_tavg-u-hxy-u",
     "type": "known_branded_variable",
-    "description": "Loss rate of methane from the atmosphere due to soil sink",
-    "long_name": "loss of methane from the atmosphere due to biological consumption in the soil",
+    "long_name": [
+        "loss of methane from the atmosphere due to biological consumption in the soil"
+    ],
     "table_id": [
         "atmoschem"
     ],
@@ -13,6 +14,14 @@
     "frequency": [
         "mon"
     ],
-    "cell_measures": "area: areacella",
-    "realm": "atmoschem"
+    "comment": [
+        "Loss rate of methane from the atmosphere due to soil sink"
+    ],
+    "cell_measures": [
+        "area: areacella"
+    ],
+    "realm": [
+        "atmoschem",
+        "aerosol"
+    ]
 }

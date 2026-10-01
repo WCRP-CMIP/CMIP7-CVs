@@ -2,8 +2,9 @@
     "@context": "000_context.jsonld",
     "id": "parasolrefl_tavg-u-hxy-sea",
     "type": "known_branded_variable",
-    "description": "PARASOL Reflectance",
-    "long_name": "PARASOL Reflectance",
+    "long_name": [
+        "PARASOL Reflectance"
+    ],
     "table_id": [
         "atmos"
     ],
@@ -15,6 +16,13 @@
         "day",
         "mon"
     ],
-    "cell_measures": "area: areacella",
-    "realm": "atmos"
+    "comment": [
+        "PARASOL Reflectance"
+    ],
+    "cell_measures": [
+        "area: areacella"
+    ],
+    "realm": [
+        "atmos"
+    ]
 }

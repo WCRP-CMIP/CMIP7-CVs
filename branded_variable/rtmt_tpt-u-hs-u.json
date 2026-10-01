@@ -2,8 +2,9 @@
     "@context": "000_context.jsonld",
     "id": "rtmt_tpt-u-hs-u",
     "type": "known_branded_variable",
-    "description": "i.e., at the top of that portion of the atmosphere where dynamics are explicitly treated by the model. This is reported only if it differs from the net downward radiative flux at the top of the atmosphere.",
-    "long_name": "Net Downward Radiative Flux at Top of Model",
+    "long_name": [
+        "Net Downward Radiative Flux at Top of Model"
+    ],
     "table_id": [
         "atmos"
     ],
@@ -13,5 +14,10 @@
     "frequency": [
         "subhr"
     ],
-    "realm": "atmos"
+    "comment": [
+        "i.e., at the top of that portion of the atmosphere where dynamics are explicitly treated by the model. This is reported only if it differs from the net downward radiative flux at the top of the atmosphere."
+    ],
+    "realm": [
+        "atmos"
+    ]
 }

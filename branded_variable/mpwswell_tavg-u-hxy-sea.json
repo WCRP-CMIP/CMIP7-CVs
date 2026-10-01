@@ -2,8 +2,9 @@
     "@context": "000_context.jsonld",
     "id": "mpwswell_tavg-u-hxy-sea",
     "type": "known_branded_variable",
-    "description": "Average wave period (i.e., time in-between two wave crests) of swell waves only (i.e., waves that have propagated away from their generation area). In spectral wind wave models, it is calculated using spectral moments, mathematical measures that describe the shape and characteristics of the wave spectrum.",
-    "long_name": "Swell Wave Mean Period",
+    "long_name": [
+        "Swell Wave Mean Period"
+    ],
     "table_id": [
         "ocean"
     ],
@@ -13,6 +14,14 @@
     "frequency": [
         "mon"
     ],
-    "cell_measures": "area: areacello",
-    "realm": "ocean"
+    "comment": [
+        "Average wave period (i.e., time in-between two wave crests) of swell waves only (i.e., waves that have propagated away from their generation area). In spectral wind wave models, it is calculated using spectral moments, mathematical measures that describe the shape and characteristics of the wave spectrum."
+    ],
+    "cell_measures": [
+        "area: areacello"
+    ],
+    "realm": [
+        "ocean",
+        "atmos"
+    ]
 }

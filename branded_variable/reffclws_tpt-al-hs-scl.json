@@ -2,8 +2,9 @@
     "@context": "000_context.jsonld",
     "id": "reffclws_tpt-al-hs-scl",
     "type": "known_branded_variable",
-    "description": "alevel site time1",
-    "long_name": "Stratiform Cloud Liquid Droplet Effective Radius",
+    "long_name": [
+        "Stratiform Cloud Liquid Droplet Effective Radius"
+    ],
     "table_id": [
         "atmos"
     ],
@@ -13,5 +14,10 @@
     "frequency": [
         "subhr"
     ],
-    "realm": "atmos"
+    "comment": [
+        "alevel site time1"
+    ],
+    "realm": [
+        "atmos"
+    ]
 }

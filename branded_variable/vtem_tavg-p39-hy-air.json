@@ -2,8 +2,9 @@
     "@context": "000_context.jsonld",
     "id": "vtem_tavg-p39-hy-air",
     "type": "known_branded_variable",
-    "description": "Transformed Eulerian Mean Diagnostics v*, meridional component of the residual meridional circulation (v*, w*) derived from 6 hr or higher frequency data fields (use instantaneous daily fields or 12 hr fields if the 6 hr data are not available).",
-    "long_name": "Transformed Eulerian Mean Northward Wind",
+    "long_name": [
+        "Transformed Eulerian Mean Northward Wind"
+    ],
     "table_id": [
         "atmos"
     ],
@@ -15,5 +16,11 @@
         "mon",
         "day"
     ],
-    "realm": "atmos"
+    "comment": [
+        "Transformed Eulerian Mean Diagnostics v*, meridional component of the residual meridional circulation (v*, w*) derived from 6 hr or higher frequency data fields (use instantaneous daily fields or 12 hr fields if the 6 hr data are not available).",
+        "zonal mean; hence YZT"
+    ],
+    "realm": [
+        "atmos"
+    ]
 }

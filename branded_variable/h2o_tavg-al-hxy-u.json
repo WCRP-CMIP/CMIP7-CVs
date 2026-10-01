@@ -2,8 +2,9 @@
     "@context": "000_context.jsonld",
     "id": "h2o_tavg-al-hxy-u",
     "type": "known_branded_variable",
-    "description": "includes all phases of water",
-    "long_name": "Mass Fraction of Water",
+    "long_name": [
+        "Mass Fraction of Water"
+    ],
     "table_id": [
         "aerosol"
     ],
@@ -13,6 +14,13 @@
     "frequency": [
         "mon"
     ],
-    "cell_measures": "area: areacella",
-    "realm": "aerosol"
+    "comment": [
+        "includes all phases of water"
+    ],
+    "cell_measures": [
+        "area: areacella"
+    ],
+    "realm": [
+        "aerosol"
+    ]
 }

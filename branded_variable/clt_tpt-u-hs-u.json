@@ -2,8 +2,9 @@
     "@context": "000_context.jsonld",
     "id": "clt_tpt-u-hs-u",
     "type": "known_branded_variable",
-    "description": "for the whole atmospheric column, as seen from the surface or the top of the atmosphere. Include both large-scale and convective cloud.",
-    "long_name": "Total Cloud Cover Percentage",
+    "long_name": [
+        "Total Cloud Cover Percentage"
+    ],
     "table_id": [
         "atmos"
     ],
@@ -13,5 +14,10 @@
     "frequency": [
         "subhr"
     ],
-    "realm": "atmos"
+    "comment": [
+        "for the whole atmospheric column, as seen from the surface or the top of the atmosphere. Include both large-scale and convective cloud."
+    ],
+    "realm": [
+        "atmos"
+    ]
 }

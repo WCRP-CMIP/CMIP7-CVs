@@ -2,8 +2,9 @@
     "@context": "000_context.jsonld",
     "id": "expcob_tavg-u-hxy-sea",
     "type": "known_branded_variable",
-    "description": "Downward sinking flux of particulate organic carbon at sea floor. Reported at the sea floor depth for present day relative to z=0 geoid. Reported as missing for land grid cells.",
-    "long_name": "Sinking Flux of Particulate Organic Carbon Reaching the Ocean Bottom",
+    "long_name": [
+        "Sinking Flux of Particulate Organic Carbon Reaching the Ocean Bottom"
+    ],
     "table_id": [
         "ocnbgchem"
     ],
@@ -15,6 +16,14 @@
         "day",
         "mon"
     ],
-    "cell_measures": "area: areacello",
-    "realm": "ocnbgchem"
+    "comment": [
+        "Downward sinking flux of particulate organic carbon at sea floor. Reported at the sea floor depth for present day relative to z=0 geoid. Reported as missing for land grid cells.",
+        "Downward sinking flux of particulate organic carbon at seafloor"
+    ],
+    "cell_measures": [
+        "area: areacello"
+    ],
+    "realm": [
+        "ocnbgchem"
+    ]
 }

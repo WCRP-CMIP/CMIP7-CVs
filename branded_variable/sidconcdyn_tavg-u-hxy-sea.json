@@ -2,8 +2,9 @@
     "@context": "000_context.jsonld",
     "id": "sidconcdyn_tavg-u-hxy-sea",
     "type": "known_branded_variable",
-    "description": "Total rate of change in sea-ice area fraction through dynamics-related processes (advection, divergence, etc.).",
-    "long_name": "Sea-Ice Area Fraction Tendency Due to Dynamics",
+    "long_name": [
+        "Sea-Ice Area Fraction Tendency Due to Dynamics"
+    ],
     "table_id": [
         "seaice"
     ],
@@ -13,6 +14,13 @@
     "frequency": [
         "mon"
     ],
-    "cell_measures": "area: areacello",
-    "realm": "seaice"
+    "comment": [
+        "Total rate of change in sea-ice area fraction through dynamics-related processes (advection, divergence, etc.)."
+    ],
+    "cell_measures": [
+        "area: areacello"
+    ],
+    "realm": [
+        "seaice"
+    ]
 }

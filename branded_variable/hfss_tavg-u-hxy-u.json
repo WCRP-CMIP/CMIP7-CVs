@@ -2,8 +2,9 @@
     "@context": "000_context.jsonld",
     "id": "hfss_tavg-u-hxy-u",
     "type": "known_branded_variable",
-    "description": "The surface sensible heat flux, also called turbulent heat flux, is the exchange of heat between the surface and the air by motion of air.",
-    "long_name": "Surface Upward Sensible Heat Flux",
+    "long_name": [
+        "Surface Upward Sensible Heat Flux"
+    ],
     "table_id": [
         "atmos"
     ],
@@ -20,6 +21,15 @@
         "1hr",
         "3hr"
     ],
-    "cell_measures": "area: areacella",
-    "realm": "atmos"
+    "comment": [
+        "The surface sensible heat flux, also called turbulent heat flux, is the exchange of heat between the surface and the air by motion of air.",
+        "Hourly surface upward sensible heat flux",
+        "This is the 3-hour mean flux."
+    ],
+    "cell_measures": [
+        "area: areacella"
+    ],
+    "realm": [
+        "atmos"
+    ]
 }
