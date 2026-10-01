@@ -422,9 +422,19 @@ def emit(
 
 def universe_base_payload(full_payload: dict[str, Any]) -> dict[str, Any]:
     excluded = set(PROJECT_ONLY_FIELDS)
-    if full_payload.get("type") == "known_branded_variable":
+    is_known_branded_variable = full_payload.get("type") == "known_branded_variable"
+    if is_known_branded_variable:
         excluded.update(KNOWN_BRANDED_VARIABLE_PROJECT_ONLY_FIELDS)
-    return {key: value for key, value in full_payload.items() if key not in excluded}
+    return {
+        key: value
+        for key, value in full_payload.items()
+        if key not in excluded
+        and (
+            not is_known_branded_variable
+            or key == "var_def_qualifier"
+            or not is_empty(value)
+        )
+    }
 
 
 def preserve_existing_universe_payload(
@@ -442,6 +452,10 @@ def project_overlay(
     differences: dict[str, dict[str, Any]] = {}
     for key, project_value in full_payload.items():
         if key in identity:
+            continue
+        # Project files are sparse overlays. Missing source metadata must
+        # inherit from the Universe rather than mask it with null/blank values.
+        if is_empty(project_value):
             continue
         universe_value = universe_payload.get(key)
         is_known_project_field = (

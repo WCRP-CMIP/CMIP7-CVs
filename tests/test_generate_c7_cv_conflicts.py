@@ -152,3 +152,50 @@ def test_existing_project_metadata_takes_precedence(tmp_path: Path) -> None:
         "degC",
         "existing CMIP7 variable/tas",
     )
+
+
+def test_project_overlay_omits_empty_values() -> None:
+    full_payload = {
+        "@context": "000_context.jsonld",
+        "id": "tas",
+        "type": "variable",
+        "description": "",
+        "drs_name": "tas",
+        "long_name": None,
+        "standard_name": "air_temperature",
+        "units": "K",
+    }
+    universe_payload = {
+        **full_payload,
+        "description": "Near-surface air temperature.",
+        "long_name": "Near-Surface Air Temperature",
+    }
+
+    overlay, differences = generator.project_overlay(
+        full_payload,
+        universe_payload,
+    )
+
+    assert "description" not in overlay
+    assert "long_name" not in overlay
+    assert "description" not in differences
+    assert "long_name" not in differences
+
+
+def test_known_branded_universe_payload_omits_optional_empty_values() -> None:
+    payload = generator.universe_base_payload(
+        {
+            "@context": "000_context.jsonld",
+            "id": "tas_tavg-h2m-hxy-u",
+            "type": "known_branded_variable",
+            "description": "",
+            "units": None,
+            "cell_methods": "",
+            "var_def_qualifier": None,
+        }
+    )
+
+    assert "description" not in payload
+    assert "units" not in payload
+    assert "cell_methods" not in payload
+    assert payload["var_def_qualifier"] is None
