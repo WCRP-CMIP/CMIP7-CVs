@@ -28,6 +28,7 @@ import data_request_api.query.dreq_query as dq
 DEFAULT_DREQ_VERSION = "v1.2.2.5"
 UNIVERSE_BASE = "https://esgvoc.ipsl.fr/resource/universe"
 KNOWN_BRANDED_VARIABLE_HISTORY = "registered"
+OBSOLETE_VARIABLE_IDS = {"lat", "lon"}
 
 # These fields describe a project's concrete request and are intentionally not
 # placed in a newly created Universe term.
@@ -302,6 +303,11 @@ def split_words(value: Any) -> list[str]:
     return result
 
 
+def is_obsolete_variable_identifier(identifier: str) -> bool:
+    """Return whether a Variable or branded-variable root is explicitly excluded."""
+    return identifier.split("_", 1)[0].lower() in OBSOLETE_VARIABLE_IDS
+
+
 def unique(values: Iterable[str]) -> list[str]:
     return list(dict.fromkeys(value for value in values if value))
 
@@ -476,9 +482,8 @@ def project_overlay(
 
 
 def validate_payload(descriptor: str, payload: dict[str, Any]) -> None:
-    from pydantic import TypeAdapter
-
     from esgvoc.api.pydantic_handler import get_pydantic_class
+    from pydantic import TypeAdapter
 
     TypeAdapter(get_pydantic_class(descriptor)).validate_python(payload)
 
@@ -957,6 +962,97 @@ def build_model_level_payload(
     return payload
 
 
+def select_referenced_formula_entries(
+    formula_entries: dict[str, dict[str, Any]],
+    model_level_payloads: dict[str, dict[str, Any]],
+    report: dict[str, Any],
+) -> dict[str, dict[str, Any]]:
+    """Keep formula terms referenced by at least one model-level coordinate."""
+    referenced = {
+        reference.lower()
+        for payload in model_level_payloads.values()
+        for field in ("z_factors", "z_bounds_factors")
+        for reference in split_words(payload.get(field))
+    }
+    selected: dict[str, dict[str, Any]] = {}
+    skipped: list[str] = []
+    for identifier, entry in sorted(formula_entries.items()):
+        out_name = optional_text(entry.get("out_name")) or identifier
+        if {identifier.lower(), out_name.lower()} & referenced:
+            selected[identifier] = entry
+            continue
+        skipped.append(identifier.lower())
+        warning = (
+            f"formula_term {identifier!r} is not referenced by any "
+            "model_level_coordinate entry and therefore skipped"
+        )
+        report["warnings"].append(warning)
+        print(f"WARNING: {warning}")
+    report["unreferenced_formula_terms"] = skipped
+    return selected
+
+
+def collect_referenced_coordinate_ids(
+    cmor_variables: list[CmorVariable],
+    known_payloads: dict[str, dict[str, Any]],
+    model_level_payloads: dict[str, dict[str, Any]],
+    formula_entries: dict[str, dict[str, Any]],
+    grid_content: dict[str, Any],
+) -> set[str]:
+    """Collect coordinate IDs referenced by emitted CMOR-derived descriptors."""
+    referenced = {
+        dimension.lower()
+        for record in cmor_variables
+        for dimension in split_words(record.entry.get("dimensions"))
+    }
+    referenced.update(
+        dimension.lower()
+        for payload in known_payloads.values()
+        for dimension in split_words(payload.get("dimensions"))
+    )
+    referenced.update(
+        dimension.lower()
+        for entry in formula_entries.values()
+        for dimension in split_words(entry.get("dimensions"))
+    )
+    referenced.update(
+        generic.lower()
+        for payload in model_level_payloads.values()
+        for generic in split_words(payload.get("generic_level_name"))
+    )
+    referenced.update(
+        dimension.lower()
+        for collection in ("axis_entry", "variable_entry")
+        for entry in grid_content.get(collection, {}).values()
+        for dimension in split_words(entry.get("dimensions"))
+    )
+    return referenced
+
+
+def select_referenced_coordinate_entries(
+    coordinate_entries: dict[str, dict[str, Any]],
+    referenced_ids: set[str],
+    report: dict[str, Any],
+) -> dict[str, dict[str, Any]]:
+    """Keep data coordinates referenced by another emitted descriptor."""
+    selected: dict[str, dict[str, Any]] = {}
+    skipped: list[str] = []
+    for identifier, entry in sorted(coordinate_entries.items()):
+        if identifier.lower() in referenced_ids:
+            selected[identifier] = entry
+            continue
+        skipped.append(identifier.lower())
+        warning = (
+            f"data_coordinate {identifier!r} is not referenced by any CMOR "
+            "variable, formula term, model-level coordinate, or grid descriptor "
+            "and therefore skipped"
+        )
+        report["warnings"].append(warning)
+        print(f"WARNING: {warning}")
+    report["unreferenced_data_coordinates"] = skipped
+    return selected
+
+
 def build_formula_term_payload(
     identifier: str, entry: dict[str, Any]
 ) -> dict[str, Any]:
@@ -1160,12 +1256,12 @@ def load_existing_conflict_defaults(
             for path in directory.glob("*.json")
         }
         for identifier in sorted(identifiers):
-            universe_payload = read_json_if_exists(
-                universe_dir / f"{identifier}.json"
-            ) or {}
-            project_payload = read_json_if_exists(
-                project_dir / f"{identifier}.json"
-            ) or {}
+            universe_payload = (
+                read_json_if_exists(universe_dir / f"{identifier}.json") or {}
+            )
+            project_payload = (
+                read_json_if_exists(project_dir / f"{identifier}.json") or {}
+            )
             for field in fields:
                 if field in project_payload and not is_empty(project_payload[field]):
                     defaults[(field, identifier.lower())] = (
@@ -1388,7 +1484,9 @@ def conflict_file_requires_review(
     previous_payload: dict[str, Any] | None, current_payload: dict[str, Any]
 ) -> bool:
     """Require review whenever a non-empty conflict file changed this run."""
-    return bool(current_payload.get("conflicts")) and previous_payload != current_payload
+    return (
+        bool(current_payload.get("conflicts")) and previous_payload != current_payload
+    )
 
 
 def build_cmip7_variable_payloads(
@@ -1448,6 +1546,8 @@ def build_cmip7_variable_payloads(
     variable_payloads: dict[str, dict[str, Any]] = {}
 
     for identifier, proposals in sorted(observations.items()):
+        if is_obsolete_variable_identifier(identifier):
+            continue
         resolved_values: dict[str, Any] = {}
         for field in VARIABLE_CONFLICT_FIELDS:
             resolved_values[field] = conflicts.resolve(
@@ -1605,8 +1705,7 @@ def build_known_payload(
         if cell_measure := optional_text(record.entry.get("cell_measures")):
             cell_measures_values.append(cell_measure)
         realm_values.extend(
-            realm.lower()
-            for realm in split_words(record.entry.get("modeling_realm"))
+            realm.lower() for realm in split_words(record.entry.get("modeling_realm"))
         )
 
     comments = unique(comments)
@@ -1819,8 +1918,19 @@ def main() -> None:
     }
     tables = load_dreq_tables(args.dreq_version, args.offline)
     cmor_variables = load_cmor_variables(cmor_dir)
-    cmor_by_branded = cmor_records_by_branded_name(cmor_variables)
-    dreq_by_branded = dreq_records_by_branded_name(tables["Variables"])
+    vocabulary_cmor_variables = [
+        record
+        for record in cmor_variables
+        if not is_obsolete_variable_identifier(record.variable_entry)
+    ]
+    cmor_by_branded = cmor_records_by_branded_name(vocabulary_cmor_variables)
+    dreq_by_branded = {
+        identifier: records
+        for identifier, records in dreq_records_by_branded_name(
+            tables["Variables"]
+        ).items()
+        if not is_obsolete_variable_identifier(identifier)
+    }
     missing_in_cmor = sorted(set(dreq_by_branded) - set(cmor_by_branded))
     missing_in_dreq = sorted(set(cmor_by_branded) - set(dreq_by_branded))
     if missing_in_cmor or missing_in_dreq:
@@ -1836,9 +1946,7 @@ def main() -> None:
     existing_conflict_defaults = load_existing_conflict_defaults(
         universe_root, project_root
     )
-    conflicts = ConflictRegistry(
-        previous_conflict_payload, existing_conflict_defaults
-    )
+    conflicts = ConflictRegistry(previous_conflict_payload, existing_conflict_defaults)
     variable_payloads, root_ids = build_cmip7_variable_payloads(
         dreq_by_branded,
         tables,
@@ -1994,22 +2102,52 @@ def main() -> None:
         for identifier, entry in cmor_coordinates.items()
         if not is_empty(entry.get("generic_level_name"))
     }
+    model_level_payloads = {
+        identifier: build_model_level_payload(identifier, entry, formula_term_ids)
+        for identifier, entry in model_level_entries.items()
+    }
+    referenced_formula_entries = select_referenced_formula_entries(
+        formula_entries, model_level_payloads, report
+    )
+    grid_content = read_json(cmor_dir / "CMIP7_grids.json")
     data_coordinate_ids = (set(dreq_coordinates) | set(cmor_coordinates)) - set(
         model_level_entries
     )
-    data_payloads = {
-        identifier: build_data_coordinate_payload(
-            identifier,
-            dreq_coordinates.get(identifier),
-            cmor_coordinates.get(identifier),
-        )
-        for identifier in sorted(data_coordinate_ids)
+    coordinate_candidates = {
+        identifier: cmor_coordinates.get(identifier)
+        or dreq_coordinates.get(identifier)
+        or {}
+        for identifier in data_coordinate_ids | set(GENERIC_LEVEL_METADATA)
     }
-    for identifier in GENERIC_LEVEL_METADATA:
-        data_payloads[identifier] = build_generic_coordinate_payload(
-            identifier, dreq_coordinates.get(identifier)
-        )
-    data_payloads["vertices"] = build_vertices_coordinate_payload()
+    coordinate_candidates["vertices"] = {}
+    referenced_coordinate_ids = collect_referenced_coordinate_ids(
+        # The lat/lon exclusion applies only to emitted Variable and
+        # KnownBrandedVariable terms. Their CMOR records still participate in
+        # coordinate reference discovery so coordinate/grid vocabulary is not
+        # pruned as an indirect consequence of that exclusion.
+        cmor_variables,
+        known_payloads,
+        model_level_payloads,
+        referenced_formula_entries,
+        grid_content,
+    )
+    selected_coordinate_entries = select_referenced_coordinate_entries(
+        coordinate_candidates, referenced_coordinate_ids, report
+    )
+    data_payloads: dict[str, dict[str, Any]] = {}
+    for identifier in selected_coordinate_entries:
+        if identifier == "vertices":
+            data_payloads[identifier] = build_vertices_coordinate_payload()
+        elif identifier in GENERIC_LEVEL_METADATA:
+            data_payloads[identifier] = build_generic_coordinate_payload(
+                identifier, dreq_coordinates.get(identifier)
+            )
+        else:
+            data_payloads[identifier] = build_data_coordinate_payload(
+                identifier,
+                dreq_coordinates.get(identifier),
+                cmor_coordinates.get(identifier),
+            )
     for payload in data_payloads.values():
         emit_layered_payload(
             "data_coordinate",
@@ -2020,17 +2158,17 @@ def main() -> None:
             report=report,
         )
 
-    for identifier, entry in sorted(model_level_entries.items()):
+    for identifier in sorted(model_level_payloads):
         emit_layered_payload(
             "model_level_coordinate",
-            build_model_level_payload(identifier, entry, formula_term_ids),
+            model_level_payloads[identifier],
             universe_root,
             project_root,
             dry_run=args.dry_run,
             report=report,
         )
 
-    for identifier, entry in sorted(formula_entries.items()):
+    for identifier, entry in sorted(referenced_formula_entries.items()):
         emit_layered_payload(
             "formula_term",
             build_formula_term_payload(identifier, entry),
@@ -2040,7 +2178,6 @@ def main() -> None:
             report=report,
         )
 
-    grid_content = read_json(cmor_dir / "CMIP7_grids.json")
     for identifier, entry in sorted(grid_content.get("axis_entry", {}).items()):
         emit_layered_payload(
             "grid_axis",

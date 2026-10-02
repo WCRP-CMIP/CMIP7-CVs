@@ -27,6 +27,81 @@ def load_generator() -> ModuleType:
 generator = load_generator()
 
 
+def test_unreferenced_formula_terms_are_skipped() -> None:
+    report = {"warnings": []}
+    selected = generator.select_referenced_formula_entries(
+        {
+            "a": {"out_name": "a"},
+            "a_time1": {"out_name": "a"},
+            "a_bnds": {"out_name": "a_bnds"},
+            "unused": {"out_name": "unused"},
+        },
+        {"lev": {"z_factors": ["a"], "z_bounds_factors": ["a_bnds"]}},
+        report,
+    )
+
+    assert selected == {
+        "a": {"out_name": "a"},
+        "a_time1": {"out_name": "a"},
+        "a_bnds": {"out_name": "a_bnds"},
+    }
+    assert report["unreferenced_formula_terms"] == ["unused"]
+    assert report["warnings"] == [
+        (
+            "formula_term 'unused' is not referenced by any "
+            "model_level_coordinate entry and therefore skipped"
+        )
+    ]
+
+
+def test_unreferenced_data_coordinates_are_skipped_by_id_not_out_name() -> None:
+    report = {"warnings": []}
+
+    selected = generator.select_referenced_coordinate_entries(
+        {
+            "time": {"out_name": "time"},
+            "timefxc": {"out_name": "time"},
+            "xant": {"out_name": "xant"},
+        },
+        {"time"},
+        report,
+    )
+
+    assert set(selected) == {"time"}
+    assert report["unreferenced_data_coordinates"] == ["timefxc", "xant"]
+    assert "data_coordinate 'timefxc'" in report["warnings"][0]
+
+
+def test_coordinate_references_include_indirect_dimensions() -> None:
+    references = generator.collect_referenced_coordinate_ids(
+        [
+            generator.CmorVariable(
+                "mon",
+                "tas",
+                {"dimensions": ["longitude", "latitude", "time"]},
+            )
+        ],
+        {"tas": {"dimensions": ["longitude", "latitude", "time"]}},
+        {"alev": {"generic_level_name": "alevel"}},
+        {"a": {"dimensions": "alevel"}},
+        {"variable_entry": {"bounds": {"dimensions": "vertices latitude"}}},
+    )
+
+    assert {
+        "alevel",
+        "latitude",
+        "longitude",
+        "time",
+        "vertices",
+    } <= references
+
+
+def test_latitude_and_longitude_data_variables_are_explicitly_obsolete() -> None:
+    assert generator.is_obsolete_variable_identifier("lat")
+    assert generator.is_obsolete_variable_identifier("lon_ti-u-hs-u")
+    assert not generator.is_obsolete_variable_identifier("latitude")
+
+
 def observations():
     return (
         ("K", "DReq candidate K", False),
@@ -61,9 +136,7 @@ def conflict_payload(selected: str | None) -> dict:
 
 def test_existing_metadata_preselects_new_conflict() -> None:
     registry = generator.ConflictRegistry(
-        existing_defaults={
-            ("units", "tas"): ("K", "existing Universe variable/tas")
-        }
+        existing_defaults={("units", "tas"): ("K", "existing Universe variable/tas")}
     )
 
     assert registry.resolve("tas", "units", observations()) == "K"
@@ -85,9 +158,7 @@ def test_existing_metadata_selection_is_stable_on_second_run() -> None:
     second.resolve("tas", "units", observations())
 
     assert second.payload() == first_payload
-    assert not generator.conflict_file_requires_review(
-        first_payload, second.payload()
-    )
+    assert not generator.conflict_file_requires_review(first_payload, second.payload())
 
 
 def test_conflict_file_choice_overrides_existing_metadata() -> None:
