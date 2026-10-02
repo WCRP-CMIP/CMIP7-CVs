@@ -2,8 +2,9 @@
     "@context": "000_context.jsonld",
     "id": "tos_tpt-u-hxy-sea",
     "type": "known_branded_variable",
-    "description": "temperature of surface of open ocean, sampled synoptically.",
-    "long_name": "Sea Surface Temperature",
+    "long_name": [
+        "Sea Surface Temperature"
+    ],
     "table_id": [
         "ocean"
     ],
@@ -13,6 +14,13 @@
     "frequency": [
         "3hr"
     ],
-    "cell_measures": "area: areacello",
-    "realm": "ocean"
+    "comment": [
+        "temperature of surface of open ocean, sampled synoptically."
+    ],
+    "cell_measures": [
+        "area: areacello"
+    ],
+    "realm": [
+        "ocean"
+    ]
 }

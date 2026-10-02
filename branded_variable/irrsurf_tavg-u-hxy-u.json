@@ -2,8 +2,9 @@
     "@context": "000_context.jsonld",
     "id": "irrsurf_tavg-u-hxy-u",
     "type": "known_branded_variable",
-    "description": "the amount of water withdrawal for irrigation from surface water, including rivers, lakes, reservoirs, etc.)",
-    "long_name": "irrigation water withdrawal from surface water",
+    "long_name": [
+        "irrigation water withdrawal from surface water"
+    ],
     "table_id": [
         "land"
     ],
@@ -13,6 +14,13 @@
     "frequency": [
         "day"
     ],
-    "cell_measures": "area: areacella",
-    "realm": "land"
+    "comment": [
+        "the amount of water withdrawal for irrigation from surface water, including rivers, lakes, reservoirs, etc.)"
+    ],
+    "cell_measures": [
+        "area: areacella"
+    ],
+    "realm": [
+        "land"
+    ]
 }

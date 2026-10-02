@@ -2,8 +2,9 @@
     "@context": "000_context.jsonld",
     "id": "fngas_tavg-u-hxy-lnd",
     "type": "known_branded_variable",
-    "description": "Total flux of Nitrogen from the land into the atmosphere.",
-    "long_name": "Total Nitrogen Lost to the Atmosphere (Sum of NHx, NOx, N2O, N2)",
+    "long_name": [
+        "Total Nitrogen Lost to the Atmosphere (Sum of NHx, NOx, N2O, N2)"
+    ],
     "table_id": [
         "land"
     ],
@@ -13,6 +14,13 @@
     "frequency": [
         "mon"
     ],
-    "cell_measures": "area: areacella",
-    "realm": "land"
+    "comment": [
+        "Total flux of Nitrogen from the land into the atmosphere."
+    ],
+    "cell_measures": [
+        "area: areacella"
+    ],
+    "realm": [
+        "land"
+    ]
 }

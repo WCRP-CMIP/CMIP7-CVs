@@ -2,8 +2,9 @@
     "@context": "000_context.jsonld",
     "id": "basin_ti-u-hxy-u",
     "type": "known_branded_variable",
-    "description": "A variable with the standard name of region contains strings which indicate geographical regions. These strings must be chosen from the standard region list.",
-    "long_name": "Region Selection Index",
+    "long_name": [
+        "Region Selection Index"
+    ],
     "table_id": [
         "ocean"
     ],
@@ -13,8 +14,15 @@
     "frequency": [
         "fx"
     ],
-    "cell_measures": "area: areacello",
-    "realm": "ocean",
+    "comment": [
+        "A variable with the standard name of region contains strings which indicate geographical regions. These strings must be chosen from the standard region list."
+    ],
+    "cell_measures": [
+        "area: areacello"
+    ],
+    "realm": [
+        "ocean"
+    ],
     "flag_values": [
         0,
         1,

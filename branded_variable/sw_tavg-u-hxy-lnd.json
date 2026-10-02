@@ -2,8 +2,9 @@
     "@context": "000_context.jsonld",
     "id": "sw_tavg-u-hxy-lnd",
     "type": "known_branded_variable",
-    "description": "Total liquid water storage, other than soil, snow or interception storage (i.e. lakes, river channel or depression storage).",
-    "long_name": "Surface Water Storage",
+    "long_name": [
+        "Surface Water Storage"
+    ],
     "table_id": [
         "land"
     ],
@@ -13,6 +14,13 @@
     "frequency": [
         "day"
     ],
-    "cell_measures": "area: areacella",
-    "realm": "land"
+    "comment": [
+        "Total liquid water storage, other than soil, snow or interception storage (i.e. lakes, river channel or depression storage)."
+    ],
+    "cell_measures": [
+        "area: areacella"
+    ],
+    "realm": [
+        "land"
+    ]
 }

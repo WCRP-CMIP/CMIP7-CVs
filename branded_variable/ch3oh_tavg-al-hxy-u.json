@@ -2,8 +2,9 @@
     "@context": "000_context.jsonld",
     "id": "ch3oh_tavg-al-hxy-u",
     "type": "known_branded_variable",
-    "description": "Mole fraction of methanol (CH3OH) in air",
-    "long_name": "CH3OH  volume mixing ratio",
+    "long_name": [
+        "CH3OH  volume mixing ratio"
+    ],
     "table_id": [
         "atmoschem"
     ],
@@ -13,6 +14,14 @@
     "frequency": [
         "mon"
     ],
-    "cell_measures": "area: areacella",
-    "realm": "atmoschem"
+    "comment": [
+        "Mole fraction of methanol (CH3OH) in air"
+    ],
+    "cell_measures": [
+        "area: areacella"
+    ],
+    "realm": [
+        "atmoschem",
+        "aerosol"
+    ]
 }

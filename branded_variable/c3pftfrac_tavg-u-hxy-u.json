@@ -2,8 +2,9 @@
     "@context": "000_context.jsonld",
     "id": "c3pftfrac_tavg-u-hxy-u",
     "type": "known_branded_variable",
-    "description": "Percentage of entire grid cell  that is covered by C3 PFTs (including grass, crops, and trees).",
-    "long_name": "Percentage Cover by C3 Plant Functional Type",
+    "long_name": [
+        "Percentage Cover by C3 Plant Functional Type"
+    ],
     "table_id": [
         "land"
     ],
@@ -13,6 +14,13 @@
     "frequency": [
         "mon"
     ],
-    "cell_measures": "area: areacella",
-    "realm": "land"
+    "comment": [
+        "Percentage of entire grid cell  that is covered by C3 PFTs (including grass, crops, and trees)."
+    ],
+    "cell_measures": [
+        "area: areacella"
+    ],
+    "realm": [
+        "land"
+    ]
 }

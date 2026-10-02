@@ -2,8 +2,9 @@
     "@context": "000_context.jsonld",
     "id": "rivo_tavg-u-hxy-lnd",
     "type": "known_branded_variable",
-    "description": "water_flux_from_upstream",
-    "long_name": "River Discharge",
+    "long_name": [
+        "River Discharge"
+    ],
     "table_id": [
         "land"
     ],
@@ -13,6 +14,13 @@
     "frequency": [
         "day"
     ],
-    "cell_measures": "area: areacellr",
-    "realm": "land"
+    "comment": [
+        "water_flux_from_upstream"
+    ],
+    "cell_measures": [
+        "area: areacellr"
+    ],
+    "realm": [
+        "land"
+    ]
 }

@@ -2,8 +2,9 @@
     "@context": "000_context.jsonld",
     "id": "chl_tavg-op20bar-hxy-sea",
     "type": "known_branded_variable",
-    "description": "Sum of chlorophyll from all phytoplankton group concentrations. In most models this is equal to chldiat+chlmisc, that is the sum of Diatom Chlorophyll Mass Concentration and Other Phytoplankton Chlorophyll Mass Concentration",
-    "long_name": "Mass Concentration of Total Phytoplankton Expressed as Chlorophyll in Sea Water at 200 meters",
+    "long_name": [
+        "Mass Concentration of Total Phytoplankton Expressed as Chlorophyll in Sea Water at 200 meters"
+    ],
     "table_id": [
         "ocnbgchem"
     ],
@@ -13,6 +14,13 @@
     "frequency": [
         "day"
     ],
-    "cell_measures": "area: areacello",
-    "realm": "ocnbgchem"
+    "comment": [
+        "Sum of chlorophyll from all phytoplankton group concentrations. In most models this is equal to chldiat+chlmisc, that is the sum of Diatom Chlorophyll Mass Concentration and Other Phytoplankton Chlorophyll Mass Concentration"
+    ],
+    "cell_measures": [
+        "area: areacello"
+    ],
+    "realm": [
+        "ocnbgchem"
+    ]
 }

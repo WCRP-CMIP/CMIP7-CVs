@@ -2,8 +2,9 @@
     "@context": "000_context.jsonld",
     "id": "bldep_tavg-u-hxy-u",
     "type": "known_branded_variable",
-    "description": "Boundary Layer depth",
-    "long_name": "Boundary Layer Depth",
+    "long_name": [
+        "Boundary Layer Depth"
+    ],
     "table_id": [
         "atmos"
     ],
@@ -15,6 +16,16 @@
         "1hr",
         "mon"
     ],
-    "cell_measures": "area: areacella",
-    "realm": "atmos"
+    "comment": [
+        "Boundary Layer depth",
+        "Boundary layer depth"
+    ],
+    "cell_measures": [
+        "area: areacella"
+    ],
+    "realm": [
+        "atmos",
+        "aerosol",
+        "land"
+    ]
 }

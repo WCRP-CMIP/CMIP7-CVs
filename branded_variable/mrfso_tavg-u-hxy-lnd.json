@@ -2,8 +2,9 @@
     "@context": "000_context.jsonld",
     "id": "mrfso_tavg-u-hxy-lnd",
     "type": "known_branded_variable",
-    "description": "the mass (summed over all all layers) of frozen water.",
-    "long_name": "Soil Frozen Water Content",
+    "long_name": [
+        "Soil Frozen Water Content"
+    ],
     "table_id": [
         "landice"
     ],
@@ -13,6 +14,14 @@
     "frequency": [
         "mon"
     ],
-    "cell_measures": "area: areacella",
-    "realm": "landice"
+    "comment": [
+        "the mass (summed over all all layers) of frozen water."
+    ],
+    "cell_measures": [
+        "area: areacella"
+    ],
+    "realm": [
+        "landice",
+        "land"
+    ]
 }

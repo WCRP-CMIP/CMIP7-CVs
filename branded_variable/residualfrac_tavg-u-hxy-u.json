@@ -2,8 +2,9 @@
     "@context": "000_context.jsonld",
     "id": "residualfrac_tavg-u-hxy-u",
     "type": "known_branded_variable",
-    "description": "fraction of entire grid cell  that is land and is covered by \"non-vegetation\" and \"non-bare-soil\" (e.g., urban, ice, lakes, etc.)",
-    "long_name": "Percentage of Grid Cell That Is Land but neither Vegetation Covered nor Bare Soil",
+    "long_name": [
+        "Percentage of Grid Cell That Is Land but neither Vegetation Covered nor Bare Soil"
+    ],
     "table_id": [
         "land"
     ],
@@ -15,6 +16,14 @@
         "mon",
         "yr"
     ],
-    "cell_measures": "area: areacella",
-    "realm": "land"
+    "comment": [
+        "fraction of entire grid cell  that is land and is covered by \"non-vegetation\" and \"non-bare-soil\" (e.g., urban, ice, lakes, etc.)",
+        "Percentage of entire grid cell  that is land and is covered by  neither vegetation nor bare-soil (e.g., urban, ice, lakes, etc.)"
+    ],
+    "cell_measures": [
+        "area: areacella"
+    ],
+    "realm": [
+        "land"
+    ]
 }

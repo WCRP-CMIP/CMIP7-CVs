@@ -2,8 +2,9 @@
     "@context": "000_context.jsonld",
     "id": "cropfrac_tavg-u-hxy-u",
     "type": "known_branded_variable",
-    "description": "Percentage of entire grid cell  that is covered by crop.",
-    "long_name": "Percentage Crop Cover",
+    "long_name": [
+        "Percentage Crop Cover"
+    ],
     "table_id": [
         "land"
     ],
@@ -15,6 +16,13 @@
         "mon",
         "yr"
     ],
-    "cell_measures": "area: areacella",
-    "realm": "land"
+    "comment": [
+        "Percentage of entire grid cell  that is covered by crop."
+    ],
+    "cell_measures": [
+        "area: areacella"
+    ],
+    "realm": [
+        "land"
+    ]
 }

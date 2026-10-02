@@ -2,8 +2,9 @@
     "@context": "000_context.jsonld",
     "id": "cveglut_tpt-u-hxy-multi",
     "type": "known_branded_variable",
-    "description": "end of year values (not annual mean)",
-    "long_name": "Carbon in Vegetation on Land-Use Tiles",
+    "long_name": [
+        "Carbon in Vegetation on Land-Use Tiles"
+    ],
     "table_id": [
         "land"
     ],
@@ -13,6 +14,13 @@
     "frequency": [
         "yr"
     ],
-    "cell_measures": "area: areacella",
-    "realm": "land"
+    "comment": [
+        "end of year values (not annual mean)"
+    ],
+    "cell_measures": [
+        "area: areacella"
+    ],
+    "realm": [
+        "land"
+    ]
 }

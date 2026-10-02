@@ -2,8 +2,9 @@
     "@context": "000_context.jsonld",
     "id": "albisccp_tavg-u-hxy-cl",
     "type": "known_branded_variable",
-    "description": "Time-means are weighted by the ISCCP Total Cloud Fraction - see  <https://www.cfmip.org/tools-and-data/cosp>. Values will be missing where there are no clouds or no sunlight.",
-    "long_name": "ISCCP Mean Cloud Albedo",
+    "long_name": [
+        "ISCCP Mean Cloud Albedo"
+    ],
     "table_id": [
         "atmos"
     ],
@@ -16,6 +17,13 @@
         "day",
         "mon"
     ],
-    "cell_measures": "area: areacella",
-    "realm": "atmos"
+    "comment": [
+        "Time-means are weighted by the ISCCP Total Cloud Fraction - see  <https://www.cfmip.org/tools-and-data/cosp>. Values will be missing where there are no clouds or no sunlight."
+    ],
+    "cell_measures": [
+        "area: areacella"
+    ],
+    "realm": [
+        "atmos"
+    ]
 }

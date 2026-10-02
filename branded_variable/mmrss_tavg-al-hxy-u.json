@@ -2,8 +2,9 @@
     "@context": "000_context.jsonld",
     "id": "mmrss_tavg-al-hxy-u",
     "type": "known_branded_variable",
-    "description": "Mass fraction in the atmosphere of sea salt aerosol (dry mass).",
-    "long_name": "Sea-Salt Aerosol Mass Mixing Ratio",
+    "long_name": [
+        "Sea-Salt Aerosol Mass Mixing Ratio"
+    ],
     "table_id": [
         "aerosol"
     ],
@@ -14,6 +15,14 @@
     "frequency": [
         "mon"
     ],
-    "cell_measures": "area: areacella",
-    "realm": "aerosol"
+    "comment": [
+        "Mass fraction in the atmosphere of sea salt aerosol (dry mass)."
+    ],
+    "cell_measures": [
+        "area: areacella"
+    ],
+    "realm": [
+        "aerosol",
+        "atmoschem"
+    ]
 }

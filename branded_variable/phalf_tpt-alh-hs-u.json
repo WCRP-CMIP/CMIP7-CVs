@@ -2,8 +2,9 @@
     "@context": "000_context.jsonld",
     "id": "phalf_tpt-alh-hs-u",
     "type": "known_branded_variable",
-    "description": "Air pressure on model half-levels",
-    "long_name": "Pressure on Model Half-Levels",
+    "long_name": [
+        "Pressure on Model Half-Levels"
+    ],
     "table_id": [
         "atmos"
     ],
@@ -13,5 +14,10 @@
     "frequency": [
         "subhr"
     ],
-    "realm": "atmos"
+    "comment": [
+        "Air pressure on model half-levels"
+    ],
+    "realm": [
+        "atmos"
+    ]
 }

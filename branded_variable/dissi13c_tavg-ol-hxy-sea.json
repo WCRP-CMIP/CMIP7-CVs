@@ -2,8 +2,9 @@
     "@context": "000_context.jsonld",
     "id": "dissi13c_tavg-ol-hxy-sea",
     "type": "known_branded_variable",
-    "description": "Dissolved inorganic 14carbon (CO3+HCO3+H2CO3) concentration",
-    "long_name": "Dissolved Inorganic Carbon-13 Concentration",
+    "long_name": [
+        "Dissolved Inorganic Carbon-13 Concentration"
+    ],
     "table_id": [
         "ocnbgchem"
     ],
@@ -13,6 +14,13 @@
     "frequency": [
         "mon"
     ],
-    "cell_measures": "area: areacello volume: volcello",
-    "realm": "ocnbgchem"
+    "comment": [
+        "Dissolved inorganic 14carbon (CO3+HCO3+H2CO3) concentration"
+    ],
+    "cell_measures": [
+        "area: areacello volume: volcello"
+    ],
+    "realm": [
+        "ocnbgchem"
+    ]
 }

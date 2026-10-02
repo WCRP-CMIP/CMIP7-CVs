@@ -2,8 +2,9 @@
     "@context": "000_context.jsonld",
     "id": "clt_tavg-u-hxy-lnd",
     "type": "known_branded_variable",
-    "description": "Total cloud fraction",
-    "long_name": "Total Cloud Cover Percentage",
+    "long_name": [
+        "Total Cloud Cover Percentage"
+    ],
     "table_id": [
         "atmos"
     ],
@@ -13,6 +14,13 @@
     "frequency": [
         "day"
     ],
-    "cell_measures": "area: areacella",
-    "realm": "atmos"
+    "comment": [
+        "Total cloud fraction"
+    ],
+    "cell_measures": [
+        "area: areacella"
+    ],
+    "realm": [
+        "atmos"
+    ]
 }

@@ -2,8 +2,9 @@
     "@context": "000_context.jsonld",
     "id": "t20d_tavg-u-hxy-sea",
     "type": "known_branded_variable",
-    "description": "Monthly 20C isotherm depth",
-    "long_name": "Depth of 20 degree Celsius Isotherm",
+    "long_name": [
+        "Depth of 20 degree Celsius Isotherm"
+    ],
     "table_id": [
         "ocean"
     ],
@@ -15,6 +16,14 @@
         "mon",
         "day"
     ],
-    "cell_measures": "area: areacello",
-    "realm": "ocean"
+    "comment": [
+        "Monthly 20C isotherm depth",
+        "Daily 20C isotherm depth"
+    ],
+    "cell_measures": [
+        "area: areacello"
+    ],
+    "realm": [
+        "ocean"
+    ]
 }

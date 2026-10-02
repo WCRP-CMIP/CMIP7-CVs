@@ -2,8 +2,9 @@
     "@context": "000_context.jsonld",
     "id": "rlutcs_tpt-u-hs-u",
     "type": "known_branded_variable",
-    "description": "Upwelling clear-sky longwave radiation at top of atmosphere",
-    "long_name": "TOA Outgoing Clear-Sky Longwave Radiation",
+    "long_name": [
+        "TOA Outgoing Clear-Sky Longwave Radiation"
+    ],
     "table_id": [
         "atmos"
     ],
@@ -13,5 +14,10 @@
     "frequency": [
         "subhr"
     ],
-    "realm": "atmos"
+    "comment": [
+        "Upwelling clear-sky longwave radiation at top of atmosphere"
+    ],
+    "realm": [
+        "atmos"
+    ]
 }

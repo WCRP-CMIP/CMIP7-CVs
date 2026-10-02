@@ -2,8 +2,9 @@
     "@context": "000_context.jsonld",
     "id": "tntrs_tavg-al-hxy-u",
     "type": "known_branded_variable",
-    "description": "shortwave heating rates",
-    "long_name": "Tendency of Air Temperature Due to Shortwave Radiative Heating",
+    "long_name": [
+        "Tendency of Air Temperature Due to Shortwave Radiative Heating"
+    ],
     "table_id": [
         "atmos"
     ],
@@ -13,6 +14,13 @@
     "frequency": [
         "mon"
     ],
-    "cell_measures": "area: areacella",
-    "realm": "atmos"
+    "comment": [
+        "shortwave heating rates"
+    ],
+    "cell_measures": [
+        "area: areacella"
+    ],
+    "realm": [
+        "atmos"
+    ]
 }

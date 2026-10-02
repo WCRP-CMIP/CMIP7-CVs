@@ -2,8 +2,9 @@
     "@context": "000_context.jsonld",
     "id": "drynh4_tavg-u-hxy-u",
     "type": "known_branded_variable",
-    "description": "Daily Dry Deposition Rate of NH4 at surface. Vertically integrated throughout the column to the surface.",
-    "long_name": "Dry Deposition Rate of NH4",
+    "long_name": [
+        "Dry Deposition Rate of NH4"
+    ],
     "table_id": [
         "atmoschem"
     ],
@@ -15,6 +16,15 @@
         "mon",
         "day"
     ],
-    "cell_measures": "area: areacella",
-    "realm": "atmoschem"
+    "comment": [
+        "Dry Deposition Rate of NH4",
+        "Daily Dry Deposition Rate of NH4 at surface. Vertically integrated throughout the column to the surface."
+    ],
+    "cell_measures": [
+        "area: areacella"
+    ],
+    "realm": [
+        "atmoschem",
+        "aerosol"
+    ]
 }

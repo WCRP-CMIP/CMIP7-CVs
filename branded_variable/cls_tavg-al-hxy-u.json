@@ -2,8 +2,9 @@
     "@context": "000_context.jsonld",
     "id": "cls_tavg-al-hxy-u",
     "type": "known_branded_variable",
-    "description": "Cloud area fraction (reported as a percentage) for the whole atmospheric column due to stratiform clouds, as seen from the surface or the top of the atmosphere. Includes both large-scale and convective cloud.",
-    "long_name": "Percentage Cover of Stratiform Cloud",
+    "long_name": [
+        "Percentage Cover of Stratiform Cloud"
+    ],
     "table_id": [
         "atmos"
     ],
@@ -14,6 +15,13 @@
     "frequency": [
         "mon"
     ],
-    "cell_measures": "area: areacella",
-    "realm": "atmos"
+    "comment": [
+        "Cloud area fraction (reported as a percentage) for the whole atmospheric column due to stratiform clouds, as seen from the surface or the top of the atmosphere. Includes both large-scale and convective cloud."
+    ],
+    "cell_measures": [
+        "area: areacella"
+    ],
+    "realm": [
+        "atmos"
+    ]
 }

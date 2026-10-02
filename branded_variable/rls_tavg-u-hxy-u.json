@@ -2,8 +2,9 @@
     "@context": "000_context.jsonld",
     "id": "rls_tavg-u-hxy-u",
     "type": "known_branded_variable",
-    "description": "Net longwave surface radiation",
-    "long_name": "Net Longwave Surface Radiation",
+    "long_name": [
+        "Net Longwave Surface Radiation"
+    ],
     "table_id": [
         "atmos"
     ],
@@ -15,6 +16,14 @@
         "mon",
         "day"
     ],
-    "cell_measures": "area: areacella",
-    "realm": "atmos"
+    "comment": [
+        "Net longwave surface radiation",
+        "Net longwave radiation"
+    ],
+    "cell_measures": [
+        "area: areacella"
+    ],
+    "realm": [
+        "atmos"
+    ]
 }

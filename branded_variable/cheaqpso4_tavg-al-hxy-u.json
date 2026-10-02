@@ -2,8 +2,9 @@
     "@context": "000_context.jsonld",
     "id": "cheaqpso4_tavg-al-hxy-u",
     "type": "known_branded_variable",
-    "description": "proposed name: tendency_of_atmosphere_mass_content_of_sulfate_dry_aerosol_due_to_aqueous_phase_net_chemical_production",
-    "long_name": "Aqueous-Phase Production Rate of SO4",
+    "long_name": [
+        "Aqueous-Phase Production Rate of SO4"
+    ],
     "table_id": [
         "aerosol"
     ],
@@ -13,6 +14,13 @@
     "frequency": [
         "mon"
     ],
-    "cell_measures": "area: areacella",
-    "realm": "aerosol"
+    "comment": [
+        "proposed name: tendency_of_atmosphere_mass_content_of_sulfate_dry_aerosol_due_to_aqueous_phase_net_chemical_production"
+    ],
+    "cell_measures": [
+        "area: areacella"
+    ],
+    "realm": [
+        "aerosol"
+    ]
 }

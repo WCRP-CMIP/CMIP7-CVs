@@ -2,8 +2,9 @@
     "@context": "000_context.jsonld",
     "id": "mrros_tavg-u-hxy-lnd",
     "type": "known_branded_variable",
-    "description": "the total surface runoff leaving the land portion of the grid cell.",
-    "long_name": "Surface Runoff",
+    "long_name": [
+        "Surface Runoff"
+    ],
     "table_id": [
         "land"
     ],
@@ -17,6 +18,14 @@
         "mon",
         "day"
     ],
-    "cell_measures": "area: areacella",
-    "realm": "land"
+    "comment": [
+        "surface_runoff_flux",
+        "the total surface runoff leaving the land portion of the grid cell."
+    ],
+    "cell_measures": [
+        "area: areacella"
+    ],
+    "realm": [
+        "land"
+    ]
 }

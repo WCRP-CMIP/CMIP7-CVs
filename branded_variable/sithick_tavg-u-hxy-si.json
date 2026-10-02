@@ -2,8 +2,9 @@
     "@context": "000_context.jsonld",
     "id": "sithick_tavg-u-hxy-si",
     "type": "known_branded_variable",
-    "description": "Actual (floe) thickness of sea ice averaged over the ice-covered part of a given grid cell, NOT volume divided by grid area.",
-    "long_name": "Sea-Ice Thickness",
+    "long_name": [
+        "Sea-Ice Thickness"
+    ],
     "table_id": [
         "seaice"
     ],
@@ -16,6 +17,14 @@
         "mon",
         "day"
     ],
-    "cell_measures": "area: areacello",
-    "realm": "seaice"
+    "comment": [
+        "Actual (floe) thickness of sea ice averaged over the ice-covered part of a given grid cell, NOT volume divided by grid area."
+    ],
+    "cell_measures": [
+        "area: areacello"
+    ],
+    "realm": [
+        "seaice",
+        "ocean"
+    ]
 }

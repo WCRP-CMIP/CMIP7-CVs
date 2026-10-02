@@ -2,8 +2,9 @@
     "@context": "000_context.jsonld",
     "id": "phcint_tavg-op4-hxy-sea",
     "type": "known_branded_variable",
-    "description": "This is the vertically-integrated heat content derived from potential temperature (thetao).",
-    "long_name": "Integrated Ocean Heat Content from Potential Temperature",
+    "long_name": [
+        "Integrated Ocean Heat Content from Potential Temperature"
+    ],
     "table_id": [
         "ocean"
     ],
@@ -13,6 +14,13 @@
     "frequency": [
         "mon"
     ],
-    "cell_measures": "area: areacello",
-    "realm": "ocean"
+    "comment": [
+        "This is the vertically-integrated heat content derived from potential temperature (thetao)."
+    ],
+    "cell_measures": [
+        "area: areacello"
+    ],
+    "realm": [
+        "ocean"
+    ]
 }

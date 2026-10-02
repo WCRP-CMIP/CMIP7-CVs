@@ -2,8 +2,9 @@
     "@context": "000_context.jsonld",
     "id": "abs550dust_tavg-u-hxy-u",
     "type": "known_branded_variable",
-    "description": "This is the dust aerosol optical depth at 550nm due to absorption",
-    "long_name": "dust absorption aerosol optical depth @550nm",
+    "long_name": [
+        "dust absorption aerosol optical depth @550nm"
+    ],
     "table_id": [
         "aerosol"
     ],
@@ -13,6 +14,14 @@
     "frequency": [
         "mon"
     ],
-    "cell_measures": "area: areacella",
-    "realm": "aerosol"
+    "comment": [
+        "This is the dust aerosol optical depth at 550nm due to absorption"
+    ],
+    "cell_measures": [
+        "area: areacella"
+    ],
+    "realm": [
+        "aerosol",
+        "atmoschem"
+    ]
 }

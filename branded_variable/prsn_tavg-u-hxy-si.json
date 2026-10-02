@@ -2,8 +2,9 @@
     "@context": "000_context.jsonld",
     "id": "prsn_tavg-u-hxy-si",
     "type": "known_branded_variable",
-    "description": "Rate of change of snow mass due to solid precipitation (i.e. snowfall) falling onto sea ice divided by grid-cell area. Always positive or zero.",
-    "long_name": "Snow Mass Change Through Snowfall",
+    "long_name": [
+        "Snow Mass Change Through Snowfall"
+    ],
     "table_id": [
         "seaice"
     ],
@@ -13,6 +14,13 @@
     "frequency": [
         "mon"
     ],
-    "cell_measures": "area: areacello",
-    "realm": "seaice"
+    "comment": [
+        "Rate of change of snow mass due to solid precipitation (i.e. snowfall) falling onto sea ice divided by grid-cell area. Always positive or zero."
+    ],
+    "cell_measures": [
+        "area: areacello"
+    ],
+    "realm": [
+        "seaice"
+    ]
 }

@@ -2,8 +2,9 @@
     "@context": "000_context.jsonld",
     "id": "sootsn_tavg-u-hxy-lnd",
     "type": "known_branded_variable",
-    "description": "the entire land portion of the grid cell is considered, with snow soot content set to 0.0 in regions free of snow.",
-    "long_name": "Snow Soot Content",
+    "long_name": [
+        "Snow Soot Content"
+    ],
     "table_id": [
         "landice"
     ],
@@ -13,6 +14,14 @@
     "frequency": [
         "mon"
     ],
-    "cell_measures": "area: areacella",
-    "realm": "landice"
+    "comment": [
+        "the entire land portion of the grid cell is considered, with snow soot content set to 0.0 in regions free of snow."
+    ],
+    "cell_measures": [
+        "area: areacella"
+    ],
+    "realm": [
+        "landice",
+        "land"
+    ]
 }

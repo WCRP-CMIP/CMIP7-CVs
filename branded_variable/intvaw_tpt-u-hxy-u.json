@@ -2,8 +2,9 @@
     "@context": "000_context.jsonld",
     "id": "intvaw_tpt-u-hxy-u",
     "type": "known_branded_variable",
-    "description": "Vertically integrated northward moisture transport (Mass_weighted_vertical integral of the product of northward wind by total water mass per unit mass)",
-    "long_name": "6 hourly instantaneous integral of meridional moisture flux",
+    "long_name": [
+        "6 hourly instantaneous integral of meridional moisture flux"
+    ],
     "table_id": [
         "atmos"
     ],
@@ -13,6 +14,13 @@
     "frequency": [
         "6hr"
     ],
-    "cell_measures": "area: areacella",
-    "realm": "atmos"
+    "comment": [
+        "Vertically integrated northward moisture transport (Mass_weighted_vertical integral of the product of northward wind by total water mass per unit mass)"
+    ],
+    "cell_measures": [
+        "area: areacella"
+    ],
+    "realm": [
+        "atmos"
+    ]
 }

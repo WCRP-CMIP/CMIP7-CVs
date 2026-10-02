@@ -2,8 +2,9 @@
     "@context": "000_context.jsonld",
     "id": "sfdsi_tavg-u-hxy-sea",
     "type": "known_branded_variable",
-    "description": "Basal salt flux into ocean from sea ice. This field is physical, and it arises since sea ice has a nonzero salt content, so it exchanges salt with the liquid ocean upon melting and freezing.",
-    "long_name": "Downward Sea Ice Basal Salt Flux",
+    "long_name": [
+        "Downward Sea Ice Basal Salt Flux"
+    ],
     "table_id": [
         "ocean"
     ],
@@ -15,6 +16,15 @@
         "3hr",
         "mon"
     ],
-    "cell_measures": "area: areacello",
-    "realm": "ocean"
+    "comment": [
+        "Basal salt flux into ocean from sea ice. This field is physical, and it arises since sea ice has a nonzero salt content, so it exchanges salt with the liquid ocean upon melting and freezing.",
+        "This field is physical, and it arises since sea ice has a nonzero salt content, so it exchanges salt with the liquid ocean upon melting and freezing."
+    ],
+    "cell_measures": [
+        "area: areacello"
+    ],
+    "realm": [
+        "ocean",
+        "seaice"
+    ]
 }

@@ -2,8 +2,9 @@
     "@context": "000_context.jsonld",
     "id": "sfdsi_tavg-u-hxy-si",
     "type": "known_branded_variable",
-    "description": "Total flux of salt from water into sea ice. This flux is upward (negative) during ice growth when salt is embedded into the ice and downward (positive) during melt when salt from sea ice is again released to the ocean.",
-    "long_name": "Salt Flux from Sea Ice",
+    "long_name": [
+        "Salt Flux from Sea Ice"
+    ],
     "table_id": [
         "seaice"
     ],
@@ -13,6 +14,13 @@
     "frequency": [
         "mon"
     ],
-    "cell_measures": "area: areacello",
-    "realm": "seaice"
+    "comment": [
+        "Total flux of salt from water into sea ice. This flux is upward (negative) during ice growth when salt is embedded into the ice and downward (positive) during melt when salt from sea ice is again released to the ocean."
+    ],
+    "cell_measures": [
+        "area: areacello"
+    ],
+    "realm": [
+        "seaice"
+    ]
 }

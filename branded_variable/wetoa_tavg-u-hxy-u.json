@@ -2,8 +2,9 @@
     "@context": "000_context.jsonld",
     "id": "wetoa_tavg-u-hxy-u",
     "type": "known_branded_variable",
-    "description": "Deposition rate of organic matter in aerosols (measured by the dry mass) due to wet processes",
-    "long_name": "Wet Deposition Rate of Dry Aerosol Total Organic Matter",
+    "long_name": [
+        "Wet Deposition Rate of Dry Aerosol Total Organic Matter"
+    ],
     "table_id": [
         "aerosol"
     ],
@@ -13,6 +14,13 @@
     "frequency": [
         "mon"
     ],
-    "cell_measures": "area: areacella",
-    "realm": "aerosol"
+    "comment": [
+        "Deposition rate of organic matter in aerosols (measured by the dry mass) due to wet processes"
+    ],
+    "cell_measures": [
+        "area: areacella"
+    ],
+    "realm": [
+        "aerosol"
+    ]
 }

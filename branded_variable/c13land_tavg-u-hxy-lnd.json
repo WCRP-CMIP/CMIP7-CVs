@@ -2,8 +2,9 @@
     "@context": "000_context.jsonld",
     "id": "c13land_tavg-u-hxy-lnd",
     "type": "known_branded_variable",
-    "description": "Carbon-13 mass content per unit area in vegetation (any living plants e.g. trees, shrubs, grass), litter (dead plant material in or above the soil), soil, and forestry and agricultural products (e.g. paper, cardboard, furniture, timber for construction, biofuels and food for both humans and livestock).",
-    "long_name": "Mass of 13C in All Terrestrial Carbon Pools",
+    "long_name": [
+        "Mass of 13C in All Terrestrial Carbon Pools"
+    ],
     "table_id": [
         "land"
     ],
@@ -13,6 +14,13 @@
     "frequency": [
         "mon"
     ],
-    "cell_measures": "area: areacella",
-    "realm": "land"
+    "comment": [
+        "Carbon-13 mass content per unit area in vegetation (any living plants e.g. trees, shrubs, grass), litter (dead plant material in or above the soil), soil, and forestry and agricultural products (e.g. paper, cardboard, furniture, timber for construction, biofuels and food for both humans and livestock)."
+    ],
+    "cell_measures": [
+        "area: areacella"
+    ],
+    "realm": [
+        "land"
+    ]
 }

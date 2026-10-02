@@ -2,8 +2,9 @@
     "@context": "000_context.jsonld",
     "id": "pp_tavg-ol-hxy-sea",
     "type": "known_branded_variable",
-    "description": "total primary (organic carbon) production by phytoplankton",
-    "long_name": "Primary Carbon Production by Phytoplankton",
+    "long_name": [
+        "Primary Carbon Production by Phytoplankton"
+    ],
     "table_id": [
         "ocnbgchem"
     ],
@@ -13,6 +14,13 @@
     "frequency": [
         "mon"
     ],
-    "cell_measures": "area: areacello volume: volcello",
-    "realm": "ocnbgchem"
+    "comment": [
+        "total primary (organic carbon) production by phytoplankton"
+    ],
+    "cell_measures": [
+        "area: areacello volume: volcello"
+    ],
+    "realm": [
+        "ocnbgchem"
+    ]
 }

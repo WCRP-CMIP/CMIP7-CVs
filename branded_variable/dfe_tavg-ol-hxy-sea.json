@@ -2,8 +2,9 @@
     "@context": "000_context.jsonld",
     "id": "dfe_tavg-ol-hxy-sea",
     "type": "known_branded_variable",
-    "description": "dissolved iron in sea water is meant to include both Fe2+ and Fe3+ ions (but not, e.g., particulate detrital iron)",
-    "long_name": "Dissolved Iron Concentration",
+    "long_name": [
+        "Dissolved Iron Concentration"
+    ],
     "table_id": [
         "ocnbgchem"
     ],
@@ -13,6 +14,13 @@
     "frequency": [
         "mon"
     ],
-    "cell_measures": "area: areacello volume: volcello",
-    "realm": "ocnbgchem"
+    "comment": [
+        "dissolved iron in sea water is meant to include both Fe2+ and Fe3+ ions (but not, e.g., particulate detrital iron)"
+    ],
+    "cell_measures": [
+        "area: areacello volume: volcello"
+    ],
+    "realm": [
+        "ocnbgchem"
+    ]
 }

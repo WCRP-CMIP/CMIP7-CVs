@@ -2,8 +2,9 @@
     "@context": "000_context.jsonld",
     "id": "co_tavg-h2m-hxy-u",
     "type": "known_branded_variable",
-    "description": "This is the daily mean for CO volume mixing ratio near surface.",
-    "long_name": "Daily mean near-surface CO",
+    "long_name": [
+        "Daily mean near-surface CO"
+    ],
     "table_id": [
         "aerosol"
     ],
@@ -13,6 +14,14 @@
     "frequency": [
         "day"
     ],
-    "cell_measures": "area: areacella",
-    "realm": "aerosol"
+    "comment": [
+        "This is the daily mean for CO volume mixing ratio near surface."
+    ],
+    "cell_measures": [
+        "area: areacella"
+    ],
+    "realm": [
+        "aerosol",
+        "atmoschem"
+    ]
 }

@@ -2,8 +2,9 @@
     "@context": "000_context.jsonld",
     "id": "fn2o_tavg-u-hxy-lnd",
     "type": "known_branded_variable",
-    "description": "Surface upward flux of nitrous oxide (N2O) from vegetation (any living plants e.g. trees, shrubs, grass), litter (dead plant material in or above the soil), soil.",
-    "long_name": "Total Land N2O Flux",
+    "long_name": [
+        "Total Land N2O Flux"
+    ],
     "table_id": [
         "land"
     ],
@@ -13,6 +14,13 @@
     "frequency": [
         "mon"
     ],
-    "cell_measures": "area: areacella",
-    "realm": "land"
+    "comment": [
+        "Surface upward flux of nitrous oxide (N2O) from vegetation (any living plants e.g. trees, shrubs, grass), litter (dead plant material in or above the soil), soil."
+    ],
+    "cell_measures": [
+        "area: areacella"
+    ],
+    "realm": [
+        "land"
+    ]
 }

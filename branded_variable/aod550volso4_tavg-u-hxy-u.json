@@ -2,8 +2,9 @@
     "@context": "000_context.jsonld",
     "id": "aod550volso4_tavg-u-hxy-u",
     "type": "known_branded_variable",
-    "description": "This is the monthly averaged aerosol optical thickness at 550 nm due to stratospheric volcanic sulphate aerosols",
-    "long_name": "Monthly Aerosol Optical Depth at 550nm Due to Stratospheric Volcanic Aerosols",
+    "long_name": [
+        "Monthly Aerosol Optical Depth at 550nm Due to Stratospheric Volcanic Aerosols"
+    ],
     "table_id": [
         "atmos"
     ],
@@ -13,6 +14,13 @@
     "frequency": [
         "mon"
     ],
-    "cell_measures": "area: areacella",
-    "realm": "atmos"
+    "comment": [
+        "This is the monthly averaged aerosol optical thickness at 550 nm due to stratospheric volcanic sulphate aerosols"
+    ],
+    "cell_measures": [
+        "area: areacella"
+    ],
+    "realm": [
+        "atmos"
+    ]
 }

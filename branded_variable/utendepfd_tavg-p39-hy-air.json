@@ -2,8 +2,9 @@
     "@context": "000_context.jsonld",
     "id": "utendepfd_tavg-p39-hy-air",
     "type": "known_branded_variable",
-    "description": "Tendency of the zonal mean zonal wind due to the divergence of the Eliassen-Palm flux.",
-    "long_name": "Tendency of Eastward Wind Due to Eliassen-Palm Flux Divergence",
+    "long_name": [
+        "Tendency of Eastward Wind Due to Eliassen-Palm Flux Divergence"
+    ],
     "table_id": [
         "atmos"
     ],
@@ -15,5 +16,11 @@
         "mon",
         "day"
     ],
-    "realm": "atmos"
+    "comment": [
+        "Tendency of the zonal mean zonal wind due to the divergence of the Eliassen-Palm flux.",
+        "Called \"acceldivf\" in CCMI table; we suggest new name. zonal mean; hence YZT"
+    ],
+    "realm": [
+        "atmos"
+    ]
 }

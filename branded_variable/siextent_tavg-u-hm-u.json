@@ -2,8 +2,11 @@
     "@context": "000_context.jsonld",
     "id": "siextent_tavg-u-hm-u",
     "type": "known_branded_variable",
-    "description": "Total integrated area of all Northern Hemisphere grid cells that are covered by at least 15% areal fraction of sea ice (siconc >= 15). Does not include grid cells partially covered by land.",
-    "long_name": "Sea-Ice Extent",
+    "long_name": [
+        "Sea-Ice Extent South",
+        "Sea-Ice Extent North",
+        "Sea-Ice Extent"
+    ],
     "table_id": [
         "seaice"
     ],
@@ -17,5 +20,11 @@
         "mon",
         "day"
     ],
-    "realm": "seaice"
+    "comment": [
+        "Total integrated area of all Southern Hemisphere grid cells that are covered by at least 15% areal fraction of sea ice (siconc >= 15). Does not include grid cells partially covered by land.",
+        "Total integrated area of all Northern Hemisphere grid cells that are covered by at least 15% areal fraction of sea ice (siconc >= 15). Does not include grid cells partially covered by land."
+    ],
+    "realm": [
+        "seaice"
+    ]
 }

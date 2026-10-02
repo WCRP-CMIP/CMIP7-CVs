@@ -2,8 +2,9 @@
     "@context": "000_context.jsonld",
     "id": "tnhus_tavg-al-hxy-u",
     "type": "known_branded_variable",
-    "description": "Tendency of Specific Humidity",
-    "long_name": "Tendency of Specific Humidity",
+    "long_name": [
+        "Tendency of Specific Humidity"
+    ],
     "table_id": [
         "atmos"
     ],
@@ -13,6 +14,13 @@
     "frequency": [
         "mon"
     ],
-    "cell_measures": "area: areacella",
-    "realm": "atmos"
+    "comment": [
+        "Tendency of Specific Humidity"
+    ],
+    "cell_measures": [
+        "area: areacella"
+    ],
+    "realm": [
+        "atmos"
+    ]
 }

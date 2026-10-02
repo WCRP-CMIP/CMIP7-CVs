@@ -2,8 +2,9 @@
     "@context": "000_context.jsonld",
     "id": "srfrad_tavg-u-hxy-u",
     "type": "known_branded_variable",
-    "description": "Net radiative flux at surface",
-    "long_name": "Net radiative flux at surface",
+    "long_name": [
+        "Net radiative flux at surface"
+    ],
     "table_id": [
         "land"
     ],
@@ -13,6 +14,13 @@
     "frequency": [
         "3hr"
     ],
-    "cell_measures": "area: areacella",
-    "realm": "land"
+    "comment": [
+        "Net radiative flux at surface"
+    ],
+    "cell_measures": [
+        "area: areacella"
+    ],
+    "realm": [
+        "land"
+    ]
 }

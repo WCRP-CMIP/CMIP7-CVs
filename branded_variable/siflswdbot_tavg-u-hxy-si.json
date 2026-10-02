@@ -2,8 +2,9 @@
     "@context": "000_context.jsonld",
     "id": "siflswdbot_tavg-u-hxy-si",
     "type": "known_branded_variable",
-    "description": "Downwelling shortwave flux underneath sea ice, i.e. the amount of shortwave radiation that penetrates the sea ice and reaches the sea ice-ocean interface (energy flow per sea ice area). Always positive or zero.",
-    "long_name": "Downwelling Shortwave Flux under Sea Ice",
+    "long_name": [
+        "Downwelling Shortwave Flux under Sea Ice"
+    ],
     "table_id": [
         "seaice"
     ],
@@ -15,6 +16,13 @@
         "mon",
         "day"
     ],
-    "cell_measures": "area: areacello",
-    "realm": "seaice"
+    "comment": [
+        "Downwelling shortwave flux underneath sea ice, i.e. the amount of shortwave radiation that penetrates the sea ice and reaches the sea ice-ocean interface (energy flow per sea ice area). Always positive or zero."
+    ],
+    "cell_measures": [
+        "area: areacello"
+    ],
+    "realm": [
+        "seaice"
+    ]
 }

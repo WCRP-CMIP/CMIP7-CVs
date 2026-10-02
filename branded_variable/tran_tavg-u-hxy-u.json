@@ -2,8 +2,9 @@
     "@context": "000_context.jsonld",
     "id": "tran_tavg-u-hxy-u",
     "type": "known_branded_variable",
-    "description": "Transpiration",
-    "long_name": "Transpiration",
+    "long_name": [
+        "Transpiration"
+    ],
     "table_id": [
         "land"
     ],
@@ -13,6 +14,13 @@
     "frequency": [
         "3hr"
     ],
-    "cell_measures": "area: areacella",
-    "realm": "land"
+    "comment": [
+        "Transpiration"
+    ],
+    "cell_measures": [
+        "area: areacella"
+    ],
+    "realm": [
+        "land"
+    ]
 }

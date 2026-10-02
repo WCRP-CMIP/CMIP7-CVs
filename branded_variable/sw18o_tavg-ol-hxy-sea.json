@@ -2,8 +2,9 @@
     "@context": "000_context.jsonld",
     "id": "sw18o_tavg-ol-hxy-sea",
     "type": "known_branded_variable",
-    "description": "Ratio of abundance of oxygen-18 (18O) atoms to oxygen-16 (16O) atoms in sea water",
-    "long_name": "Isotopic Ratio of Oxygen-18 in Sea Water",
+    "long_name": [
+        "Isotopic Ratio of Oxygen-18 in Sea Water"
+    ],
     "table_id": [
         "ocean"
     ],
@@ -13,6 +14,13 @@
     "frequency": [
         "mon"
     ],
-    "cell_measures": "area: areacello",
-    "realm": "ocean"
+    "comment": [
+        "Ratio of abundance of oxygen-18 (18O) atoms to oxygen-16 (16O) atoms in sea water"
+    ],
+    "cell_measures": [
+        "area: areacello"
+    ],
+    "realm": [
+        "ocean"
+    ]
 }

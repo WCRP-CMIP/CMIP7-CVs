@@ -2,8 +2,9 @@
     "@context": "000_context.jsonld",
     "id": "mrsol_tpt-d10cm-hxy-lnd",
     "type": "known_branded_variable",
-    "description": "the mass of water in all phases in a thin surface soil layer.",
-    "long_name": "Moisture in Upper Portion of Soil Column",
+    "long_name": [
+        "Moisture in Upper Portion of Soil Column"
+    ],
     "table_id": [
         "land"
     ],
@@ -13,6 +14,13 @@
     "frequency": [
         "3hr"
     ],
-    "cell_measures": "area: areacella",
-    "realm": "land"
+    "comment": [
+        "the mass of water in all phases in a thin surface soil layer."
+    ],
+    "cell_measures": [
+        "area: areacella"
+    ],
+    "realm": [
+        "land"
+    ]
 }

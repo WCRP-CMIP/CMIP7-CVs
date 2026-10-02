@@ -2,8 +2,9 @@
     "@context": "000_context.jsonld",
     "id": "intpbfe_tavg-u-hxy-sea",
     "type": "known_branded_variable",
-    "description": "Vertically integrated biogenic iron production",
-    "long_name": "Iron Production",
+    "long_name": [
+        "Iron Production"
+    ],
     "table_id": [
         "ocnbgchem"
     ],
@@ -13,6 +14,13 @@
     "frequency": [
         "mon"
     ],
-    "cell_measures": "area: areacello",
-    "realm": "ocnbgchem"
+    "comment": [
+        "Vertically integrated biogenic iron production"
+    ],
+    "cell_measures": [
+        "area: areacello"
+    ],
+    "realm": [
+        "ocnbgchem"
+    ]
 }

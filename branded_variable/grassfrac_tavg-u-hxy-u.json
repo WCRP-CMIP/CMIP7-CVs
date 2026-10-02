@@ -2,8 +2,9 @@
     "@context": "000_context.jsonld",
     "id": "grassfrac_tavg-u-hxy-u",
     "type": "known_branded_variable",
-    "description": "Percentage of entire grid cell that is covered by natural grass.",
-    "long_name": "Natural Grass Area Percentage",
+    "long_name": [
+        "Natural Grass Area Percentage"
+    ],
     "table_id": [
         "land"
     ],
@@ -15,6 +16,13 @@
         "mon",
         "yr"
     ],
-    "cell_measures": "area: areacella",
-    "realm": "land"
+    "comment": [
+        "Percentage of entire grid cell that is covered by natural grass."
+    ],
+    "cell_measures": [
+        "area: areacella"
+    ],
+    "realm": [
+        "land"
+    ]
 }

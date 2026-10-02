@@ -2,8 +2,9 @@
     "@context": "000_context.jsonld",
     "id": "pasturefrac_tavg-u-hxy-u",
     "type": "known_branded_variable",
-    "description": "fraction of entire grid cell  that is covered by anthropogenic pasture.",
-    "long_name": "Percentage of Land Which Is Anthropogenic Pasture",
+    "long_name": [
+        "Percentage of Land Which Is Anthropogenic Pasture"
+    ],
     "table_id": [
         "land"
     ],
@@ -13,6 +14,13 @@
     "frequency": [
         "mon"
     ],
-    "cell_measures": "area: areacella",
-    "realm": "land"
+    "comment": [
+        "fraction of entire grid cell  that is covered by anthropogenic pasture."
+    ],
+    "cell_measures": [
+        "area: areacella"
+    ],
+    "realm": [
+        "land"
+    ]
 }

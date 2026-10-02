@@ -2,8 +2,9 @@
     "@context": "000_context.jsonld",
     "id": "ts_tpt-u-hs-u",
     "type": "known_branded_variable",
-    "description": "Surface temperature (skin for open ocean)",
-    "long_name": "Surface Temperature",
+    "long_name": [
+        "Surface Temperature"
+    ],
     "table_id": [
         "atmos"
     ],
@@ -13,5 +14,10 @@
     "frequency": [
         "subhr"
     ],
-    "realm": "atmos"
+    "comment": [
+        "Surface temperature (skin for open ocean)"
+    ],
+    "realm": [
+        "atmos"
+    ]
 }

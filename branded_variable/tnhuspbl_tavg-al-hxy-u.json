@@ -2,8 +2,9 @@
     "@context": "000_context.jsonld",
     "id": "tnhuspbl_tavg-al-hxy-u",
     "type": "known_branded_variable",
-    "description": "Includes all boundary layer terms including diffusive terms.",
-    "long_name": "Tendency of Specific Humidity Due to Boundary Layer Mixing",
+    "long_name": [
+        "Tendency of Specific Humidity Due to Boundary Layer Mixing"
+    ],
     "table_id": [
         "atmos"
     ],
@@ -13,6 +14,13 @@
     "frequency": [
         "mon"
     ],
-    "cell_measures": "area: areacella",
-    "realm": "atmos"
+    "comment": [
+        "Includes all boundary layer terms including diffusive terms."
+    ],
+    "cell_measures": [
+        "area: areacella"
+    ],
+    "realm": [
+        "atmos"
+    ]
 }

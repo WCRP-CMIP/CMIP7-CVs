@@ -2,8 +2,9 @@
     "@context": "000_context.jsonld",
     "id": "intpp_tavg-u-hxy-sea",
     "type": "known_branded_variable",
-    "description": "Vertically integrated total primary (organic carbon) production by phytoplankton.  This should equal the sum of intpdiat+intpphymisc, but those individual components may be unavailable in some models.",
-    "long_name": "Primary Organic Carbon Production by All Types of Phytoplankton",
+    "long_name": [
+        "Primary Organic Carbon Production by All Types of Phytoplankton"
+    ],
     "table_id": [
         "ocnbgchem"
     ],
@@ -16,6 +17,14 @@
         "mon",
         "day"
     ],
-    "cell_measures": "area: areacello",
-    "realm": "ocnbgchem"
+    "comment": [
+        "Vertically integrated total primary (organic carbon) production by phytoplankton.  This should equal the sum of intpdiat+intpphymisc, but those individual components may be unavailable in some models.",
+        "Vertically integrated total primary (organic carbon) production by phytoplankton. This should equal the sum of intpdiat+intpphymisc, but those individual components may be unavailable in some models."
+    ],
+    "cell_measures": [
+        "area: areacello"
+    ],
+    "realm": [
+        "ocnbgchem"
+    ]
 }

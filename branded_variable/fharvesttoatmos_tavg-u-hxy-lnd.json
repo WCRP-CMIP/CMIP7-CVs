@@ -2,8 +2,9 @@
     "@context": "000_context.jsonld",
     "id": "fharvesttoatmos_tavg-u-hxy-lnd",
     "type": "known_branded_variable",
-    "description": "any harvested carbon that is assumed to decompose immediately into the atmosphere is reported here",
-    "long_name": "Harvested Biomass That Goes Straight into Atmosphere as Carbon Mass Flux [kgC m-2 s-1]",
+    "long_name": [
+        "Harvested Biomass That Goes Straight into Atmosphere as Carbon Mass Flux [kgC m-2 s-1]"
+    ],
     "table_id": [
         "land"
     ],
@@ -13,6 +14,13 @@
     "frequency": [
         "mon"
     ],
-    "cell_measures": "area: areacella",
-    "realm": "land"
+    "comment": [
+        "any harvested carbon that is assumed to decompose immediately into the atmosphere is reported here"
+    ],
+    "cell_measures": [
+        "area: areacella"
+    ],
+    "realm": [
+        "land"
+    ]
 }

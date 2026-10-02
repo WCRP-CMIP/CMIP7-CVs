@@ -2,8 +2,9 @@
     "@context": "000_context.jsonld",
     "id": "sftgif_tavg-u-hxy-u",
     "type": "known_branded_variable",
-    "description": "Percentage of grid cell covered by land ice (ice sheet, ice shelf, ice cap, glacier)",
-    "long_name": "Land Ice Area Percentage",
+    "long_name": [
+        "Land Ice Area Percentage"
+    ],
     "table_id": [
         "land"
     ],
@@ -16,6 +17,15 @@
         "mon",
         "yr"
     ],
-    "cell_measures": "area: areacella",
-    "realm": "land"
+    "comment": [
+        "Percentage of grid cell covered by land ice (ice sheet, ice shelf, ice cap, glacier)",
+        "This is needed in case the ice sheet area changes in time"
+    ],
+    "cell_measures": [
+        "area: areacella",
+        "area: areacellg"
+    ],
+    "realm": [
+        "land"
+    ]
 }

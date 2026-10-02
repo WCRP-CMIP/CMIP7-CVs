@@ -2,8 +2,9 @@
     "@context": "000_context.jsonld",
     "id": "intppnano_tavg-u-hxy-sea",
     "type": "known_branded_variable",
-    "description": "Vertically integrated total primary (organic carbon) production by nanophytoplankton.",
-    "long_name": "Net Primary Organic Carbon Production by Nanophytoplankton",
+    "long_name": [
+        "Net Primary Organic Carbon Production by Nanophytoplankton"
+    ],
     "table_id": [
         "ocnbgchem"
     ],
@@ -13,6 +14,13 @@
     "frequency": [
         "mon"
     ],
-    "cell_measures": "area: areacello",
-    "realm": "ocnbgchem"
+    "comment": [
+        "Vertically integrated total primary (organic carbon) production by nanophytoplankton."
+    ],
+    "cell_measures": [
+        "area: areacello"
+    ],
+    "realm": [
+        "ocnbgchem"
+    ]
 }

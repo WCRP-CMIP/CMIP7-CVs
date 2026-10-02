@@ -2,8 +2,9 @@
     "@context": "000_context.jsonld",
     "id": "prw_tpt-u-hs-u",
     "type": "known_branded_variable",
-    "description": "Vertically integrated mass of water vapour through the atmospheric column",
-    "long_name": "Water Vapor Path",
+    "long_name": [
+        "Water Vapor Path"
+    ],
     "table_id": [
         "atmos"
     ],
@@ -13,5 +14,10 @@
     "frequency": [
         "subhr"
     ],
-    "realm": "atmos"
+    "comment": [
+        "Vertically integrated mass of water vapour through the atmospheric column"
+    ],
+    "realm": [
+        "atmos"
+    ]
 }

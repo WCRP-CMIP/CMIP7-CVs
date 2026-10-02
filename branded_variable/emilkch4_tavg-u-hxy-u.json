@@ -2,8 +2,9 @@
     "@context": "000_context.jsonld",
     "id": "emilkch4_tavg-u-hxy-u",
     "type": "known_branded_variable",
-    "description": "This is the emission rate of methane (CH4) into the atmosphere from freshwater lakes",
-    "long_name": "lake emission rate of CH4",
+    "long_name": [
+        "lake emission rate of CH4"
+    ],
     "table_id": [
         "atmoschem"
     ],
@@ -13,6 +14,14 @@
     "frequency": [
         "mon"
     ],
-    "cell_measures": "area: areacella",
-    "realm": "atmoschem"
+    "comment": [
+        "This is the emission rate of methane (CH4) into the atmosphere from freshwater lakes"
+    ],
+    "cell_measures": [
+        "area: areacella"
+    ],
+    "realm": [
+        "atmoschem",
+        "aerosol"
+    ]
 }

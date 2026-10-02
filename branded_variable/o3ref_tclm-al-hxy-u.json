@@ -2,8 +2,9 @@
     "@context": "000_context.jsonld",
     "id": "o3ref_tclm-al-hxy-u",
     "type": "known_branded_variable",
-    "description": "This is the ozone mole fraction that is used in a diagnostic call to the model's radiation scheme. It is only applicable when an ozone double call is active in the model.",
-    "long_name": "Fixed Reference Climatology of Mole Fraction of Ozone in Air",
+    "long_name": [
+        "Fixed Reference Climatology of Mole Fraction of Ozone in Air"
+    ],
     "table_id": [
         "atmoschem"
     ],
@@ -13,6 +14,13 @@
     "frequency": [
         "mon"
     ],
-    "cell_measures": "area: areacella",
-    "realm": "atmoschem"
+    "comment": [
+        "This is the ozone mole fraction that is used in a diagnostic call to the model's radiation scheme. It is only applicable when an ozone double call is active in the model."
+    ],
+    "cell_measures": [
+        "area: areacella"
+    ],
+    "realm": [
+        "atmoschem"
+    ]
 }

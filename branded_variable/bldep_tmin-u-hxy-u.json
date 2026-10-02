@@ -2,8 +2,9 @@
     "@context": "000_context.jsonld",
     "id": "bldep_tmin-u-hxy-u",
     "type": "known_branded_variable",
-    "description": "minimum boundary layer height during the day (add cell_methods attribute: \"time: minimum\")",
-    "long_name": "Minimum PBL Height",
+    "long_name": [
+        "Minimum PBL Height"
+    ],
     "table_id": [
         "atmos"
     ],
@@ -13,6 +14,13 @@
     "frequency": [
         "day"
     ],
-    "cell_measures": "area: areacella",
-    "realm": "atmos"
+    "comment": [
+        "minimum boundary layer height during the day (add cell_methods attribute: \"time: minimum\")"
+    ],
+    "cell_measures": [
+        "area: areacella"
+    ],
+    "realm": [
+        "atmos"
+    ]
 }

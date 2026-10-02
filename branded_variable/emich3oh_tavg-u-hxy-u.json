@@ -2,8 +2,9 @@
     "@context": "000_context.jsonld",
     "id": "emich3oh_tavg-u-hxy-u",
     "type": "known_branded_variable",
-    "description": "This is the total emission rate of methanol (CH3OH) into the atmosphere",
-    "long_name": "total emission rate of CH3OH",
+    "long_name": [
+        "total emission rate of CH3OH"
+    ],
     "table_id": [
         "atmoschem"
     ],
@@ -13,6 +14,14 @@
     "frequency": [
         "mon"
     ],
-    "cell_measures": "area: areacella",
-    "realm": "atmoschem"
+    "comment": [
+        "This is the total emission rate of methanol (CH3OH) into the atmosphere"
+    ],
+    "cell_measures": [
+        "area: areacella"
+    ],
+    "realm": [
+        "atmoschem",
+        "aerosol"
+    ]
 }

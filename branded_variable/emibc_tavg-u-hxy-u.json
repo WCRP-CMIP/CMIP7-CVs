@@ -2,8 +2,9 @@
     "@context": "000_context.jsonld",
     "id": "emibc_tavg-u-hxy-u",
     "type": "known_branded_variable",
-    "description": "Integrate 3D emission field vertically to 2d field.",
-    "long_name": "Total Emission Rate of Black Carbon Aerosol Mass",
+    "long_name": [
+        "Total Emission Rate of Black Carbon Aerosol Mass"
+    ],
     "table_id": [
         "aerosol"
     ],
@@ -13,6 +14,13 @@
     "frequency": [
         "mon"
     ],
-    "cell_measures": "area: areacella",
-    "realm": "aerosol"
+    "comment": [
+        "Integrate 3D emission field vertically to 2d field."
+    ],
+    "cell_measures": [
+        "area: areacella"
+    ],
+    "realm": [
+        "aerosol"
+    ]
 }

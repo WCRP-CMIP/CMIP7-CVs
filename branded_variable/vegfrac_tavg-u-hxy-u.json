@@ -2,8 +2,9 @@
     "@context": "000_context.jsonld",
     "id": "vegfrac_tavg-u-hxy-u",
     "type": "known_branded_variable",
-    "description": "Percentage of grid cell that is covered by vegetation.This SHOULD be the sum of tree, grass (natural and pasture), crop and shrub fractions.",
-    "long_name": "Total Vegetated Percentage Cover",
+    "long_name": [
+        "Total Vegetated Percentage Cover"
+    ],
     "table_id": [
         "land"
     ],
@@ -15,6 +16,13 @@
         "yr",
         "mon"
     ],
-    "cell_measures": "area: areacella",
-    "realm": "land"
+    "comment": [
+        "Percentage of grid cell that is covered by vegetation.This SHOULD be the sum of tree, grass (natural and pasture), crop and shrub fractions."
+    ],
+    "cell_measures": [
+        "area: areacella"
+    ],
+    "realm": [
+        "land"
+    ]
 }

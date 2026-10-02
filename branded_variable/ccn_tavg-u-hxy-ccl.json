@@ -2,8 +2,9 @@
     "@context": "000_context.jsonld",
     "id": "ccn_tavg-u-hxy-ccl",
     "type": "known_branded_variable",
-    "description": "proposed name: number_concentration_of_ambient_aerosol_in_air_at_liquid_water_cloud_top",
-    "long_name": "Cloud Condensation Nuclei Concentration at Liquid Cloud Top",
+    "long_name": [
+        "Cloud Condensation Nuclei Concentration at Liquid Cloud Top"
+    ],
     "table_id": [
         "aerosol"
     ],
@@ -14,6 +15,13 @@
     "frequency": [
         "mon"
     ],
-    "cell_measures": "area: areacella",
-    "realm": "aerosol"
+    "comment": [
+        "proposed name: number_concentration_of_ambient_aerosol_in_air_at_liquid_water_cloud_top"
+    ],
+    "cell_measures": [
+        "area: areacella"
+    ],
+    "realm": [
+        "aerosol"
+    ]
 }

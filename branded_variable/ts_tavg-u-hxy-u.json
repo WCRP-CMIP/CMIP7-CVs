@@ -2,8 +2,9 @@
     "@context": "000_context.jsonld",
     "id": "ts_tavg-u-hxy-u",
     "type": "known_branded_variable",
-    "description": "Surface temperature (skin for open ocean)",
-    "long_name": "Surface Temperature",
+    "long_name": [
+        "Surface Temperature"
+    ],
     "table_id": [
         "atmos"
     ],
@@ -20,6 +21,13 @@
         "mon",
         "6hr"
     ],
-    "cell_measures": "area: areacella",
-    "realm": "atmos"
+    "comment": [
+        "Surface temperature (skin for open ocean)"
+    ],
+    "cell_measures": [
+        "area: areacella"
+    ],
+    "realm": [
+        "atmos"
+    ]
 }

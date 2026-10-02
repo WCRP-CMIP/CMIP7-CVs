@@ -2,8 +2,9 @@
     "@context": "000_context.jsonld",
     "id": "prc_tpt-u-hs-u",
     "type": "known_branded_variable",
-    "description": "at surface; includes both liquid and solid phases.",
-    "long_name": "Convective Precipitation",
+    "long_name": [
+        "Convective Precipitation"
+    ],
     "table_id": [
         "atmos"
     ],
@@ -13,5 +14,10 @@
     "frequency": [
         "subhr"
     ],
-    "realm": "atmos"
+    "comment": [
+        "at surface; includes both liquid and solid phases."
+    ],
+    "realm": [
+        "atmos"
+    ]
 }

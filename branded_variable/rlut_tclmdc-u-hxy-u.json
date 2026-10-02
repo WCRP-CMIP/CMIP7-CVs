@@ -2,8 +2,9 @@
     "@context": "000_context.jsonld",
     "id": "rlut_tclmdc-u-hxy-u",
     "type": "known_branded_variable",
-    "description": "at the top of the atmosphere (to be compared with satellite measurements)",
-    "long_name": "TOA Outgoing Longwave Radiation",
+    "long_name": [
+        "TOA Outgoing Longwave Radiation"
+    ],
     "table_id": [
         "atmos"
     ],
@@ -13,6 +14,13 @@
     "frequency": [
         "1hr"
     ],
-    "cell_measures": "area: areacella",
-    "realm": "atmos"
+    "comment": [
+        "at the top of the atmosphere (to be compared with satellite measurements)"
+    ],
+    "cell_measures": [
+        "area: areacella"
+    ],
+    "realm": [
+        "atmos"
+    ]
 }

@@ -2,8 +2,9 @@
     "@context": "000_context.jsonld",
     "id": "sicompstren_tavg-u-hxy-si",
     "type": "known_branded_variable",
-    "description": "Computed strength of the ice pack, defined as the energy (J m-2) dissipated per unit area removed from the ice pack under compression, and assumed proportional to the change in potential energy caused by ridging. For Hibler-type models, this is P = P* h exp(-C(1-A)) where P* is compressive strength, h is ice thickness, A is compactness and C is strength reduction constant.",
-    "long_name": "Compressive Sea Ice Strength",
+    "long_name": [
+        "Compressive Sea Ice Strength"
+    ],
     "table_id": [
         "seaice"
     ],
@@ -13,6 +14,13 @@
     "frequency": [
         "mon"
     ],
-    "cell_measures": "area: areacello",
-    "realm": "seaice"
+    "comment": [
+        "Computed strength of the ice pack, defined as the energy (J m-2) dissipated per unit area removed from the ice pack under compression, and assumed proportional to the change in potential energy caused by ridging. For Hibler-type models, this is P = P* h exp(-C(1-A)) where P* is compressive strength, h is ice thickness, A is compactness and C is strength reduction constant."
+    ],
+    "cell_measures": [
+        "area: areacello"
+    ],
+    "realm": [
+        "seaice"
+    ]
 }

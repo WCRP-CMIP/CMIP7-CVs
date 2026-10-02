@@ -2,8 +2,9 @@
     "@context": "000_context.jsonld",
     "id": "laivgt_tavg-u-hxy-multi",
     "type": "known_branded_variable",
-    "description": "A ratio obtained by dividing the total upper leaf surface area of vegetation by the (horizontal) surface area of the land on which it grows.",
-    "long_name": "Leaf Area Index on Vegetation type",
+    "long_name": [
+        "Leaf Area Index on Vegetation type"
+    ],
     "table_id": [
         "land"
     ],
@@ -13,6 +14,13 @@
     "frequency": [
         "day"
     ],
-    "cell_measures": "area: areacella",
-    "realm": "land"
+    "comment": [
+        "A ratio obtained by dividing the total upper leaf surface area of vegetation by the (horizontal) surface area of the land on which it grows."
+    ],
+    "cell_measures": [
+        "area: areacella"
+    ],
+    "realm": [
+        "land"
+    ]
 }

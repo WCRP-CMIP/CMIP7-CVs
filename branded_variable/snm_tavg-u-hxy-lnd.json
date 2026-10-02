@@ -2,8 +2,9 @@
     "@context": "000_context.jsonld",
     "id": "snm_tavg-u-hxy-lnd",
     "type": "known_branded_variable",
-    "description": "Computed as the total surface melt water on the land portion of the grid cell divided by the land area in the grid cell; report as 0.0 for snow-free land regions; report as missing where the land fraction is 0.",
-    "long_name": "Surface Snow Melt",
+    "long_name": [
+        "Surface Snow Melt"
+    ],
     "table_id": [
         "landice"
     ],
@@ -15,6 +16,15 @@
         "day",
         "mon"
     ],
-    "cell_measures": "area: areacella",
-    "realm": "landice"
+    "comment": [
+        "surface_snow_and_ice_melt_flux",
+        "Computed as the total surface melt water on the land portion of the grid cell divided by the land area in the grid cell; report as 0.0 for snow-free land regions; report as missing where the land fraction is 0."
+    ],
+    "cell_measures": [
+        "area: areacella"
+    ],
+    "realm": [
+        "landice",
+        "land"
+    ]
 }

@@ -2,8 +2,9 @@
     "@context": "000_context.jsonld",
     "id": "rsutcs_tavg-u-hxy-u",
     "type": "known_branded_variable",
-    "description": "Calculated in the absence of clouds.",
-    "long_name": "TOA Outgoing Clear-Sky Shortwave Radiation",
+    "long_name": [
+        "TOA Outgoing Clear-Sky Shortwave Radiation"
+    ],
     "table_id": [
         "atmos"
     ],
@@ -18,6 +19,14 @@
         "3hr",
         "day"
     ],
-    "cell_measures": "area: areacella",
-    "realm": "atmos"
+    "comment": [
+        "Calculated in the absence of clouds.",
+        "TOA outgoing clear sky shortwave"
+    ],
+    "cell_measures": [
+        "area: areacella"
+    ],
+    "realm": [
+        "atmos"
+    ]
 }

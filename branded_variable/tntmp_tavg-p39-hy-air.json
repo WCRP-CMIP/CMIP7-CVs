@@ -2,8 +2,9 @@
     "@context": "000_context.jsonld",
     "id": "tntmp_tavg-p39-hy-air",
     "type": "known_branded_variable",
-    "description": "Zonal mean tendency of air temperature due to model physics, with the extended number of vertical levels",
-    "long_name": "Zonal Mean Tendency of Air Temperature Due to Model Physics",
+    "long_name": [
+        "Zonal Mean Tendency of Air Temperature Due to Model Physics"
+    ],
     "table_id": [
         "atmos"
     ],
@@ -15,5 +16,10 @@
         "day",
         "mon"
     ],
-    "realm": "atmos"
+    "comment": [
+        "Zonal mean tendency of air temperature due to model physics, with the extended number of vertical levels"
+    ],
+    "realm": [
+        "atmos"
+    ]
 }

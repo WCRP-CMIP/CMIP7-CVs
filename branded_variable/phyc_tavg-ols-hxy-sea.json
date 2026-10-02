@@ -2,8 +2,9 @@
     "@context": "000_context.jsonld",
     "id": "phyc_tavg-ols-hxy-sea",
     "type": "known_branded_variable",
-    "description": "sum of phytoplankton carbon component concentrations.  In most (all?) cases this is the sum of phycdiat and phycmisc (i.e., \"Diatom Carbon Concentration\" and \"Non-Diatom Phytoplankton Carbon Concentration\"",
-    "long_name": "Sea Surface Phytoplankton Carbon Concentration",
+    "long_name": [
+        "Sea Surface Phytoplankton Carbon Concentration"
+    ],
     "table_id": [
         "ocnbgchem"
     ],
@@ -16,6 +17,14 @@
         "day",
         "mon"
     ],
-    "cell_measures": "area: areacello",
-    "realm": "ocnbgchem"
+    "comment": [
+        "sum of phytoplankton organic carbon component concentrations at the sea surface",
+        "sum of phytoplankton carbon component concentrations.  In most (all?) cases this is the sum of phycdiat and phycmisc (i.e., \"Diatom Carbon Concentration\" and \"Non-Diatom Phytoplankton Carbon Concentration\""
+    ],
+    "cell_measures": [
+        "area: areacello"
+    ],
+    "realm": [
+        "ocnbgchem"
+    ]
 }

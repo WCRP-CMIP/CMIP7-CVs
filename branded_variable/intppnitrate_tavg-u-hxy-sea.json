@@ -2,8 +2,9 @@
     "@context": "000_context.jsonld",
     "id": "intppnitrate_tavg-u-hxy-sea",
     "type": "known_branded_variable",
-    "description": "Vertically integrated primary (organic carbon) production by phytoplankton based on nitrate uptake alone",
-    "long_name": "Primary Organic Carbon Production by Phytoplankton Based on Nitrate Uptake Alone",
+    "long_name": [
+        "Primary Organic Carbon Production by Phytoplankton Based on Nitrate Uptake Alone"
+    ],
     "table_id": [
         "ocnbgchem"
     ],
@@ -14,6 +15,13 @@
     "frequency": [
         "mon"
     ],
-    "cell_measures": "area: areacello",
-    "realm": "ocnbgchem"
+    "comment": [
+        "Vertically integrated primary (organic carbon) production by phytoplankton based on nitrate uptake alone"
+    ],
+    "cell_measures": [
+        "area: areacello"
+    ],
+    "realm": [
+        "ocnbgchem"
+    ]
 }

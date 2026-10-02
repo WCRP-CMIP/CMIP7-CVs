@@ -2,8 +2,9 @@
     "@context": "000_context.jsonld",
     "id": "h2_tavg-al-hxy-u",
     "type": "known_branded_variable",
-    "description": "This is the mole fraction of molecular hydrogen (H2) in air",
-    "long_name": "H2 volume mixing ratio",
+    "long_name": [
+        "H2 volume mixing ratio"
+    ],
     "table_id": [
         "atmoschem"
     ],
@@ -13,6 +14,14 @@
     "frequency": [
         "mon"
     ],
-    "cell_measures": "area: areacella",
-    "realm": "atmoschem"
+    "comment": [
+        "This is the mole fraction of molecular hydrogen (H2) in air"
+    ],
+    "cell_measures": [
+        "area: areacella"
+    ],
+    "realm": [
+        "atmoschem",
+        "aerosol"
+    ]
 }

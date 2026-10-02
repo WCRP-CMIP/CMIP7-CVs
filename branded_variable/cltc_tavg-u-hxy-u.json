@@ -2,8 +2,9 @@
     "@context": "000_context.jsonld",
     "id": "cltc_tavg-u-hxy-u",
     "type": "known_branded_variable",
-    "description": "Convective cloud fraction",
-    "long_name": "Convective Cloud Cover Percentage",
+    "long_name": [
+        "Convective Cloud Cover Percentage"
+    ],
     "table_id": [
         "atmos"
     ],
@@ -13,6 +14,14 @@
     "frequency": [
         "mon"
     ],
-    "cell_measures": "area: areacella",
-    "realm": "atmos"
+    "comment": [
+        "Convective cloud fraction"
+    ],
+    "cell_measures": [
+        "area: areacella"
+    ],
+    "realm": [
+        "atmos",
+        "aerosol"
+    ]
 }

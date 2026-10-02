@@ -2,8 +2,9 @@
     "@context": "000_context.jsonld",
     "id": "huss_tpt-h2m-hs-u",
     "type": "known_branded_variable",
-    "description": "Near-surface (usually, 2 meter) specific humidity.",
-    "long_name": "Near-Surface Specific Humidity",
+    "long_name": [
+        "Near-Surface Specific Humidity"
+    ],
     "table_id": [
         "atmos"
     ],
@@ -13,5 +14,10 @@
     "frequency": [
         "subhr"
     ],
-    "realm": "atmos"
+    "comment": [
+        "Near-surface (usually, 2 meter) specific humidity."
+    ],
+    "realm": [
+        "atmos"
+    ]
 }

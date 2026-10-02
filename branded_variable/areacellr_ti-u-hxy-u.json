@@ -2,8 +2,9 @@
     "@context": "000_context.jsonld",
     "id": "areacellr_ti-u-hxy-u",
     "type": "known_branded_variable",
-    "description": "Cell areas for any grid used to report river model variables (may be the same as for atmospheric variables). These cell areas should be defined to enable exact calculation of area integrals (e.g., of vertical fluxes of energy at the surface and top of the atmosphere).",
-    "long_name": "Grid-Cell Area for River Model Variables",
+    "long_name": [
+        "Grid-Cell Area for River Model Variables"
+    ],
     "table_id": [
         "land"
     ],
@@ -13,5 +14,10 @@
     "frequency": [
         "fx"
     ],
-    "realm": "land"
+    "comment": [
+        "Cell areas for any grid used to report river model variables (may be the same as for atmospheric variables). These cell areas should be defined to enable exact calculation of area integrals (e.g., of vertical fluxes of energy at the surface and top of the atmosphere)."
+    ],
+    "realm": [
+        "land"
+    ]
 }

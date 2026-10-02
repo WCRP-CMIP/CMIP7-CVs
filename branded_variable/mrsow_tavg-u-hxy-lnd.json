@@ -2,8 +2,9 @@
     "@context": "000_context.jsonld",
     "id": "mrsow_tavg-u-hxy-lnd",
     "type": "known_branded_variable",
-    "description": "relative_soil_moisture_content_above_field_capacity",
-    "long_name": "Total Soil Wetness",
+    "long_name": [
+        "Total Soil Wetness"
+    ],
     "table_id": [
         "land"
     ],
@@ -13,6 +14,13 @@
     "frequency": [
         "day"
     ],
-    "cell_measures": "area: areacella",
-    "realm": "land"
+    "comment": [
+        "relative_soil_moisture_content_above_field_capacity"
+    ],
+    "cell_measures": [
+        "area: areacella"
+    ],
+    "realm": [
+        "land"
+    ]
 }

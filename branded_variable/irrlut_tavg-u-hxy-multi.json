@@ -2,8 +2,9 @@
     "@context": "000_context.jsonld",
     "id": "irrlut_tavg-u-hxy-multi",
     "type": "known_branded_variable",
-    "description": "Mass flux of water due to irrigation.",
-    "long_name": "Irrigation Flux Including any Irrigation for Crops, Trees, Pasture, or Urban Lawns",
+    "long_name": [
+        "Irrigation Flux Including any Irrigation for Crops, Trees, Pasture, or Urban Lawns"
+    ],
     "table_id": [
         "land"
     ],
@@ -13,6 +14,13 @@
     "frequency": [
         "mon"
     ],
-    "cell_measures": "area: areacella",
-    "realm": "land"
+    "comment": [
+        "Mass flux of water due to irrigation."
+    ],
+    "cell_measures": [
+        "area: areacella"
+    ],
+    "realm": [
+        "land"
+    ]
 }

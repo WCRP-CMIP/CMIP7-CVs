@@ -2,8 +2,9 @@
     "@context": "000_context.jsonld",
     "id": "rsd_tpt-alh-hs-u",
     "type": "known_branded_variable",
-    "description": "Downwelling shortwave radiation (includes the fluxes at the surface and top-of-atmosphere)",
-    "long_name": "Downwelling Shortwave Radiation",
+    "long_name": [
+        "Downwelling Shortwave Radiation"
+    ],
     "table_id": [
         "atmos"
     ],
@@ -13,5 +14,10 @@
     "frequency": [
         "subhr"
     ],
-    "realm": "atmos"
+    "comment": [
+        "Downwelling shortwave radiation (includes the fluxes at the surface and top-of-atmosphere)"
+    ],
+    "realm": [
+        "atmos"
+    ]
 }

@@ -2,8 +2,9 @@
     "@context": "000_context.jsonld",
     "id": "snw_tavg-u-hxy-lnd",
     "type": "known_branded_variable",
-    "description": "Computed as the mass of surface snow on the land portion of the grid cell divided by the land area in the grid cell; reported as missing where the land fraction is 0; excluded is snow on vegetation canopy or on sea ice.",
-    "long_name": "Surface Snow Amount",
+    "long_name": [
+        "Surface Snow Amount"
+    ],
     "table_id": [
         "landice"
     ],
@@ -15,6 +16,15 @@
         "mon",
         "day"
     ],
-    "cell_measures": "area: areacella",
-    "realm": "landice"
+    "comment": [
+        "Computed as the mass of surface snow on the land portion of the grid cell divided by the land area in the grid cell; reported as missing where the land fraction is 0; excluded is snow on vegetation canopy or on sea ice.",
+        "the mass of surface snow on the land portion of the grid cell divided by the land area in the grid cell; reported as missing where the land fraction is 0; excludes snow on vegetation canopy or on sea ice."
+    ],
+    "cell_measures": [
+        "area: areacella"
+    ],
+    "realm": [
+        "landice",
+        "land"
+    ]
 }

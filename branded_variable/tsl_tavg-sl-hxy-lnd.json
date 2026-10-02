@@ -2,8 +2,9 @@
     "@context": "000_context.jsonld",
     "id": "tsl_tavg-sl-hxy-lnd",
     "type": "known_branded_variable",
-    "description": "Temperature of each soil layer.  Reported as \"missing\" for grid cells occupied entirely by \"sea\".",
-    "long_name": "Temperature of Soil",
+    "long_name": [
+        "Temperature of Soil"
+    ],
     "table_id": [
         "land"
     ],
@@ -15,6 +16,13 @@
         "day",
         "mon"
     ],
-    "cell_measures": "area: areacella",
-    "realm": "land"
+    "comment": [
+        "Temperature of each soil layer.  Reported as \"missing\" for grid cells occupied entirely by \"sea\"."
+    ],
+    "cell_measures": [
+        "area: areacella"
+    ],
+    "realm": [
+        "land"
+    ]
 }
