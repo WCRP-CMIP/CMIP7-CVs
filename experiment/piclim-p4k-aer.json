@@ -1,0 +1,12 @@
+{
+    "@context": "000_context.jsonld",
+    "id": "piclim-p4k-aer",
+    "type": "experiment",
+    "description": "In combination with `piClim-p4K`, `piClim-control` and `piClim-aer`, this experiment can be used to evaluate the sensitivity of aerosol radiative forcing to a warmer background state. Same as `piClim-control`, except anthropogenic aerosol emissions use present-day values (2021 values for CMIP7).",
+    "branch_information": "Same as `piClim-control`",
+    "min_ensemble_size": 1,
+    "parent_activity": "cmip",
+    "parent_experiment": "picontrol",
+    "parent_mip_era": "cmip7",
+    "tier": 3
+}
