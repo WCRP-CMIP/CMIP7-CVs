@@ -1,0 +1,25 @@
+{
+    "@context": "000_context.jsonld",
+    "id": "pdclim-h2",
+    "type": "experiment",
+    "description": "In combination with `pdClim-control`, quantifies hydrogen (H2) effective radiative forcing (ERF) relative to a present-day base state. Same as `pdClim-control`, except the effects of H2 on CH4 and O3 chemistry use pre-industrial (1850) values. Requires models that include H2 emissions; the setup should be coordinated with the AerChemMIP2 co-chairs.",
+    "drs_name": "pdClim-H2",
+    "start_timestamp": null,
+    "end_timestamp": null,
+    "activity": "aerchemmip",
+    "additional_allowed_model_components": [
+        "bgc"
+    ],
+    "branch_information": "Same as `pdClim-control`",
+    "min_ensemble_size": 1,
+    "parent_activity": "cmip",
+    "parent_experiment": "historical",
+    "parent_mip_era": "cmip7",
+    "required_model_components": [
+        "agcm",
+        "aer",
+        "chem"
+    ],
+    "tier": 3,
+    "min_number_yrs_per_sim": 30.0
+}
