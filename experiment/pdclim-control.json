@@ -1,0 +1,25 @@
+{
+    "@context": "000_context.jsonld",
+    "id": "pdclim-control",
+    "type": "experiment",
+    "description": "Baseline for effective radiative forcing (ERF) calculations relative to a present-day base state. Atmosphere-only experiment with all forcings at present-day (2021) values, and sea-surface temperatures and sea-ice concentrations prescribed from a climatology of the last 30 years (1992-2021) of the model's own `historical` (or `esm-hist`) simulation.",
+    "drs_name": "pdClim-control",
+    "start_timestamp": null,
+    "end_timestamp": null,
+    "activity": "aerchemmip",
+    "additional_allowed_model_components": [
+        "chem",
+        "bgc"
+    ],
+    "branch_information": "Branch from `historical` (or `esm-hist`) at a time of your choosing. Given that you are using a climatology from your own model as boundary conditions, we recommend branching from within the period over which you calculated the climatology (1992-2021).",
+    "min_ensemble_size": 1,
+    "parent_activity": "cmip",
+    "parent_experiment": "historical",
+    "parent_mip_era": "cmip7",
+    "required_model_components": [
+        "agcm",
+        "aer"
+    ],
+    "tier": 2,
+    "min_number_yrs_per_sim": 30.0
+}
