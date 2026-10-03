@@ -1,0 +1,25 @@
+{
+    "@context": "000_context.jsonld",
+    "id": "histsst-dust",
+    "type": "experiment",
+    "description": "In combination with `histSST`, quantifies the transient effective radiative forcing (ERF) from historical changes in desert dust over the historical period. Same as `histSST`, except dust follows the historical dust emission dataset of Leung et al. (2025), which captures the observed increase in dust since pre-industrial times. Atmosphere-only counterpart of `hist-Dust`.",
+    "drs_name": "histSST-Dust",
+    "start_timestamp": "1850-01-01",
+    "end_timestamp": "2021-12-31",
+    "activity": "aerchemmip",
+    "additional_allowed_model_components": [
+        "chem",
+        "bgc"
+    ],
+    "branch_information": "Branch from `piControl` at a time of your choosing",
+    "min_ensemble_size": 1,
+    "parent_activity": "cmip",
+    "parent_experiment": "picontrol",
+    "parent_mip_era": "cmip7",
+    "required_model_components": [
+        "agcm",
+        "aer"
+    ],
+    "tier": 2,
+    "min_number_yrs_per_sim": 172.0
+}
