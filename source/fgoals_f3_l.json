@@ -1,0 +1,5 @@
+{
+  "@context": "000_context.jsonld",
+  "id": "fgoals_f3_l",
+  "type": "model"
+}
