@@ -6,7 +6,7 @@ import importlib.util
 import json
 import sys
 from pathlib import Path
-from types import ModuleType
+from types import ModuleType, SimpleNamespace
 
 
 def load_generator() -> ModuleType:
@@ -270,3 +270,72 @@ def test_known_branded_universe_payload_omits_optional_empty_values() -> None:
     assert "units" not in payload
     assert "cell_methods" not in payload
     assert payload["var_def_qualifier"] is None
+
+
+def test_known_branded_variable_preserves_unique_cell_method_variants() -> None:
+    class EmptyTable:
+        def get_record(self, _identifier):
+            raise AssertionError("The synthetic DReq record has no linked records")
+
+    identifier = "example_tavg-u-hxy-u"
+    tables = {
+        name: EmptyTable()
+        for name in (
+            "Physical Parameters",
+            "CF Standard Names",
+            "Coordinates and Dimensions",
+            "Cell Methods",
+            "Cell Measures",
+            "Modelling Realm",
+            "CMIP7 Frequency",
+        )
+    }
+    records = [
+        generator.CmorVariable(
+            "day",
+            identifier,
+            {
+                "standard_name": "example_standard_name",
+                "units": "1",
+                "dimensions": "longitude latitude time",
+                "cell_methods": "area: mean time: mean",
+                "out_name": "example",
+            },
+        ),
+        generator.CmorVariable(
+            "mon",
+            identifier,
+            {
+                "standard_name": "example_standard_name",
+                "units": "1",
+                "dimensions": "longitude latitude time",
+                "cell_methods": "time: mean",
+                "out_name": "example",
+            },
+        ),
+        generator.CmorVariable(
+            "sem",
+            identifier,
+            {
+                "standard_name": "example_standard_name",
+                "units": "1",
+                "dimensions": "longitude latitude time",
+                "cell_methods": "area: mean time: mean",
+                "out_name": "example",
+            },
+        ),
+    ]
+    registry = generator.ConflictRegistry()
+
+    payload = generator.build_known_payload(
+        identifier,
+        [SimpleNamespace(branded_variable_name=identifier)],
+        records,
+        {"drs_name": "example", "standard_name": "example_standard_name"},
+        tables,
+        {},
+        registry,
+    )
+
+    assert payload["cell_methods"] == ["area: mean time: mean", "time: mean"]
+    assert "cell_methods" not in registry.payload()["conflicts"]

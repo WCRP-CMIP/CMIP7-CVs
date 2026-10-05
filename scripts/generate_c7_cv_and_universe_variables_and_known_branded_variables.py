@@ -1217,7 +1217,6 @@ CONFLICT_FIELD_ORDER = (
     "standard_name",
     "units",
     "dimensions",
-    "cell_methods",
     "cell_measures",
     "realm",
     "out_name",
@@ -1235,7 +1234,6 @@ EXISTING_CONFLICT_FIELDS = {
         "cf_standard_name",
         "units",
         "out_name",
-        "cell_methods",
     ),
 }
 
@@ -1704,12 +1702,15 @@ def build_known_payload(
             long_names.append(long_name)
         if cell_measure := optional_text(record.entry.get("cell_measures")):
             cell_measures_values.append(cell_measure)
+        if cell_method := optional_text(record.entry.get("cell_methods")):
+            cell_methods_values.append(cell_method)
         realm_values.extend(
             realm.lower() for realm in split_words(record.entry.get("modeling_realm"))
         )
 
     comments = unique(comments)
     long_names = unique(long_names)
+    cell_methods_values = unique(cell_methods_values)
     cell_measures_values = unique(cell_measures_values)
     realm_values = unique(realm_values)
     frequencies = unique(
@@ -1789,15 +1790,7 @@ def build_known_payload(
         "frequency": frequencies or None,
     }
     add_optional(payload, "comment", comments)
-    add_optional(
-        payload,
-        "cell_methods",
-        conflicts.resolve(
-            identifier,
-            "cell_methods",
-            sourced_values(cell_methods_values, "cell_methods"),
-        ),
-    )
+    add_optional(payload, "cell_methods", cell_methods_values)
     add_optional(
         payload,
         "cell_measures",
