@@ -1,6 +1,6 @@
 # STAC CATALOG SPECIFICATIONS
 
-version: v3.0.6
+version: v3.1.0
 
 catalog_properties:
   name: stac
@@ -11,7 +11,7 @@ catalog_properties:
     - name: alternate-assets
       version: v1.2.0
   regex_id: '^MIP-DRS7\.CMIP7(\.[A-Za-z0-9-]+){10}\.v[0-9]{8}$'
-  regex_base_id: '^MIP-DRS7\.CMIP7(\.[A-Za-z0-9-]+){10}$'
+  regex_title: '^MIP-DRS7\.CMIP7(\.[A-Za-z0-9-]+){10}$'
 
 dataset_properties:
   - source_collection: activity

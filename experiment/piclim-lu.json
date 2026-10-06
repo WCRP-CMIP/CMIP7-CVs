@@ -1,0 +1,12 @@
+{
+    "@context": "000_context.jsonld",
+    "id": "piclim-lu",
+    "type": "experiment",
+    "description": "In combination with `piClim-control`, quantifies present-day land-use change effective radiative forcing (ERF). Same as `piClim-control`, except land states use present-day values (2021 values for CMIP7).",
+    "branch_information": "Same as `piClim-control`",
+    "min_ensemble_size": 1,
+    "parent_activity": "cmip",
+    "parent_experiment": "picontrol",
+    "parent_mip_era": "cmip7",
+    "tier": 1
+}

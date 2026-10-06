@@ -1,0 +1,13 @@
+{
+    "@context": "000_context.jsonld",
+    "id": "piclim-histghg",
+    "type": "experiment",
+    "description": "In combination with `piClim-control`, quantifies transient well-mixed (non-ozone) greenhouse gas effective radiative forcing (ERF) due to changes in concentrations of these gases (not emissions) over the historical period and the `scen7-m` experiment. This complements the `piClim-*` experiments which provide a more precise quantification of present-day ERF for various greenhouse gas components.",
+    "start_timestamp": "1850-01-01",
+    "end_timestamp": "2100-12-31",
+    "min_number_yrs_per_sim": 251.0,
+    "parent_activity": "cmip",
+    "parent_experiment": "picontrol",
+    "parent_mip_era": "cmip7",
+    "tier": 2
+}

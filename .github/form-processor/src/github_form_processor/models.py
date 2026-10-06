@@ -2,7 +2,6 @@
 
 from __future__ import annotations
 
-import json
 import re
 from datetime import date
 from typing import Any
@@ -16,6 +15,8 @@ from pydantic import (
     field_validator,
     model_validator,
 )
+
+from github_form_processor.text import dumps_json
 
 NAME_PATTERN = re.compile(r"^[A-Za-z0-9-]+$")
 ROR_ID_PATTERN = re.compile(r"^https://ror\.org/[0-9a-z]{9}$")
@@ -195,7 +196,7 @@ class ExperimentRegistration(RegistrationBase):
             "tier": self.tier,
             "min_number_yrs_per_sim": self.min_number_yrs_per_sim,
         }
-        return json.dumps(payload, indent=4) + "\n"
+        return dumps_json(payload)
 
 
 class ActivityRegistration(RegistrationBase):
@@ -256,7 +257,7 @@ class ActivityRegistration(RegistrationBase):
             "experiments": self.experiments,
             "urls": self.urls,
         }
-        return json.dumps(payload, indent=4) + "\n"
+        return dumps_json(payload)
 
 
 class Location(BaseModel):
@@ -311,7 +312,7 @@ class InstitutionRegistration(RegistrationBase):
             "members": self.members,
             "description": self.description,
         }
-        return json.dumps(payload, indent=4) + "\n"
+        return dumps_json(payload)
 
     def render_cmip7_stub_json(self) -> str:
         """Render the CMIP7-CVs institution stub referencing the organisation.
@@ -324,7 +325,7 @@ class InstitutionRegistration(RegistrationBase):
             "id": self.identifier,
             "type": "organisation",
         }
-        return json.dumps(payload, indent=4) + "\n"
+        return dumps_json(payload)
 
 
 class InstitutionMemberRegistration(RegistrationBase):
@@ -413,7 +414,7 @@ class InstitutionMemberRegistration(RegistrationBase):
             "ror": self.ror_id.removeprefix("https://ror.org/"),
             "urls": self.urls,
         }
-        return json.dumps(payload, indent=4) + "\n"
+        return dumps_json(payload)
 
 
 def parse_list(value: Any) -> list[str]:
