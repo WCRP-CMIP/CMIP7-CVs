@@ -91,6 +91,10 @@ jobs:
           # back once that access exists.
           # UNIVERSE_REPOSITORY="https://github.com/znichollscr/WCRP-universe"
           UNIVERSE_REPOSITORY="https://github.com/WCRP-CMIP/WCRP-universe"
+          # `--mention-handles` sets who is @-tagged on the registration pull
+          # request and on the comment posted back on the issue, per form.
+          # Edit a list to change who is notified for that form, or drop the
+          # line entirely to tag nobody.
           python -m github_form_processor \
             --event-path "${{ github.workspace }}/event.json" \
             --cmip7-repository "${{ github.server_url }}/${{ github.repository }}" \
@@ -102,4 +106,8 @@ jobs:
             --institution-output-dir institution \
             --universe-organisation-dir organisation \
             --universe-institution-dir institution \
+            --mention-handles "experiment=znichollscr,ltroussellier" \
+            --mention-handles "activity=znichollscr,ltroussellier" \
+            --mention-handles "institution=znichollscr,ltroussellier" \
+            --mention-handles "institution-member=znichollscr,ltroussellier" \
             --cmip7-cvs-path "${{ github.workspace }}"

@@ -3,9 +3,19 @@
     "id": "rfmip",
     "type": "activity",
     "experiments": [
+        "piclim-0p5xco2",
+        "piclim-2xco2",
+        "piclim-4xco2-bgc",
+        "piclim-4xco2-rad",
         "piclim-aer",
+        "piclim-ghg",
         "piclim-histaer",
-        "piclim-histall"
+        "piclim-histall",
+        "piclim-histghg",
+        "piclim-histnat",
+        "piclim-lu",
+        "piclim-p4k-4xco2",
+        "piclim-p4k-aer"
     ],
     "references": [
         "rfmip_cmip7_ref_000",

@@ -28,6 +28,20 @@ def format_output_path_for_identifier(output_path: Path, identifier: str) -> str
     return (output_path.parent / f"{identifier}.json").as_posix()
 
 
+def format_mention_line(handles: list[str] | None) -> str:
+    """Format handles as a single line of GitHub mentions.
+
+    Returns an empty string when there is nobody to tag, so callers can skip
+    the line entirely rather than appending a blank one.
+
+    >>> format_mention_line(["alice", "bob"])
+    '@alice @bob'
+    >>> format_mention_line([])
+    ''
+    """
+    return " ".join(f"@{handle}" for handle in handles or [])
+
+
 def format_validation_comment(errors: list[str], notes: list[str] | None = None) -> str:
     """Format a validation failure comment for the source issue."""
     lines = [
@@ -49,11 +63,15 @@ def format_validation_comment(errors: list[str], notes: list[str] | None = None)
 def format_success_comment(
     pull_requests: list[dict[str, object]],
     notes: list[str],
+    mention_handles: list[str] | None = None,
 ) -> str:
     """Format a success comment for the source issue.
 
     `pull_requests` is a list of mappings, one per opened or updated pull
     request, each with `repository`, `number`, `html_url` and `updated` keys.
+
+    `mention_handles` are the handles to tag on the comment, configured per
+    form kind by the workflow.
     """
     lines: list[str] = []
     for pull_request in pull_requests:
@@ -66,6 +84,9 @@ def format_success_comment(
     if notes:
         lines.extend(["", "Notes:"])
         lines.extend(f"- {note}" for note in notes)
+    mention_line = format_mention_line(mention_handles)
+    if mention_line:
+        lines.extend(["", mention_line])
     return "\n".join(lines)
 
 
