@@ -1,0 +1,12 @@
+{
+    "@context": "000_context.jsonld",
+    "id": "piclim-2xco2",
+    "type": "experiment",
+    "description": "In combination with `piClim-control`, quantifies a doubling of atmospheric carbon dioxide's (2xCO2's) effective radiative forcing (ERF). Same as `piClim-control`, except atmospheric carbon dioxide concentrations are set to two times `piControl` levels.",
+    "branch_information": "Same as `piClim-control`",
+    "min_ensemble_size": 1,
+    "parent_activity": "cmip",
+    "parent_experiment": "picontrol",
+    "parent_mip_era": "cmip7",
+    "tier": 3
+}

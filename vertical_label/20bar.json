@@ -1,5 +1,0 @@
-{
-    "@context": "000_context.jsonld",
-    "id": "20bar",
-    "type": "vertical_label"
-}
