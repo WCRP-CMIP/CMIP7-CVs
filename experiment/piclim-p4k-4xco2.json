@@ -1,0 +1,12 @@
+{
+    "@context": "000_context.jsonld",
+    "id": "piclim-p4k-4xco2",
+    "type": "experiment",
+    "description": "In combination with `piClim-p4K`, `piClim-control` and `piClim-4xCO2`, this experiment can be used to evaluate the sensitivity of 4xCO2 radiative forcing to a warmer background state. Same as `piClim-p4K`, except atmospheric carbon dioxide concentrations are set to four times `piControl` levels.",
+    "branch_information": "Same as `piClim-control`",
+    "min_ensemble_size": 1,
+    "parent_activity": "cmip",
+    "parent_experiment": "picontrol",
+    "parent_mip_era": "cmip7",
+    "tier": 3
+}
