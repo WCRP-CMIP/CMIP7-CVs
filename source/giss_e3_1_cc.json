@@ -1,0 +1,5 @@
+{
+  "@context": "000_context.jsonld",
+  "id": "giss_e3_1_cc",
+  "type": "model"
+}
