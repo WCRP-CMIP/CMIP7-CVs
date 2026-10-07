@@ -2,10 +2,9 @@
     "@context": "000_context.jsonld",
     "id": "esm-scen7-h-ca2010fire",
     "type": "experiment",
-    "start_timestamp": "1850-01-01",
+    "start_timestamp": "2022-01-01",
     "end_timestamp": "2060-12-31",
     "min_number_yrs_per_sim": 39.0,
-    "parent_experiment": "esm-dont_write",
     "parent_mip_era": "cmip7",
     "tier": 2
 }
