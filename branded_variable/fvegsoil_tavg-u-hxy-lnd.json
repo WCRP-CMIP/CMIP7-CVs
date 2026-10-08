@@ -2,8 +2,9 @@
     "@context": "000_context.jsonld",
     "id": "fvegsoil_tavg-u-hxy-lnd",
     "type": "known_branded_variable",
-    "description": "In some models part of carbon (e.g., root exudate) can go directly into the soil pool without entering litter.",
-    "long_name": "Total Carbon Mass Flux from Vegetation Directly to Soil",
+    "long_name": [
+        "Total Carbon Mass Flux from Vegetation Directly to Soil"
+    ],
     "table_id": [
         "land"
     ],
@@ -13,6 +14,13 @@
     "frequency": [
         "mon"
     ],
-    "cell_measures": "area: areacella",
-    "realm": "land"
+    "comment": [
+        "In some models part of carbon (e.g., root exudate) can go directly into the soil pool without entering litter."
+    ],
+    "cell_measures": [
+        "area: areacella"
+    ],
+    "realm": [
+        "land"
+    ]
 }

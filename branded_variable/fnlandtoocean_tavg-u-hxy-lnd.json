@@ -2,8 +2,9 @@
     "@context": "000_context.jsonld",
     "id": "fnlandtoocean_tavg-u-hxy-lnd",
     "type": "known_branded_variable",
-    "description": "leached nitrogen etc that goes into run off or river routing and finds its way into ocean should be reported here.",
-    "long_name": "Lateral Transfer of Nitrogen out of Grid Cell That Eventually Goes into Ocean",
+    "long_name": [
+        "Lateral Transfer of Nitrogen out of Grid Cell That Eventually Goes into Ocean"
+    ],
     "table_id": [
         "land"
     ],
@@ -13,6 +14,13 @@
     "frequency": [
         "mon"
     ],
-    "cell_measures": "area: areacella",
-    "realm": "land"
+    "comment": [
+        "leached nitrogen etc that goes into run off or river routing and finds its way into ocean should be reported here."
+    ],
+    "cell_measures": [
+        "area: areacella"
+    ],
+    "realm": [
+        "land"
+    ]
 }

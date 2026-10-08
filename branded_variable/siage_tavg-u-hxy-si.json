@@ -2,8 +2,9 @@
     "@context": "000_context.jsonld",
     "id": "siage_tavg-u-hxy-si",
     "type": "known_branded_variable",
-    "description": "Age of sea ice since its formation in open water.",
-    "long_name": "Age of Sea Ice",
+    "long_name": [
+        "Age of Sea Ice"
+    ],
     "table_id": [
         "seaice"
     ],
@@ -16,6 +17,13 @@
         "mon",
         "day"
     ],
-    "cell_measures": "area: areacello",
-    "realm": "seaice"
+    "comment": [
+        "Age of sea ice since its formation in open water."
+    ],
+    "cell_measures": [
+        "area: areacello"
+    ],
+    "realm": [
+        "seaice"
+    ]
 }

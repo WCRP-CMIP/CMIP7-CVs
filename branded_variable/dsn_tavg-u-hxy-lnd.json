@@ -2,8 +2,9 @@
     "@context": "000_context.jsonld",
     "id": "dsn_tavg-u-hxy-lnd",
     "type": "known_branded_variable",
-    "description": "Change in Snow Water Equivalent",
-    "long_name": "Change in Snow Water Equivalent",
+    "long_name": [
+        "Change in Snow Water Equivalent"
+    ],
     "table_id": [
         "land"
     ],
@@ -13,6 +14,13 @@
     "frequency": [
         "day"
     ],
-    "cell_measures": "area: areacella",
-    "realm": "land"
+    "comment": [
+        "Change in Snow Water Equivalent"
+    ],
+    "cell_measures": [
+        "area: areacella"
+    ],
+    "realm": [
+        "land"
+    ]
 }

@@ -2,8 +2,9 @@
     "@context": "000_context.jsonld",
     "id": "abs550aer_tavg-u-hxy-u",
     "type": "known_branded_variable",
-    "description": "Optical thickness of atmospheric aerosols at wavelength 550 nanometers.",
-    "long_name": "Ambient Aerosol Absorption Optical Thickness at 550nm",
+    "long_name": [
+        "Ambient Aerosol Absorption Optical Thickness at 550nm"
+    ],
     "table_id": [
         "aerosol"
     ],
@@ -13,6 +14,13 @@
     "frequency": [
         "mon"
     ],
-    "cell_measures": "area: areacella",
-    "realm": "aerosol"
+    "comment": [
+        "Optical thickness of atmospheric aerosols at wavelength 550 nanometers."
+    ],
+    "cell_measures": [
+        "area: areacella"
+    ],
+    "realm": [
+        "aerosol"
+    ]
 }

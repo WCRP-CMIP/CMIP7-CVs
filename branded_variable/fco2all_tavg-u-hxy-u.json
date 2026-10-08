@@ -2,8 +2,9 @@
     "@context": "000_context.jsonld",
     "id": "fco2all_tavg-u-hxy-u",
     "type": "known_branded_variable",
-    "description": "This field should be equivalent to the combined fluxes of carbon that account for all exchanges between the atmosphere and land or ocean.",
-    "long_name": "Carbon Mass Flux into Atmosphere Due to All Emissions of CO2 from All Sources [kgC m-2 s-1]",
+    "long_name": [
+        "Carbon Mass Flux into Atmosphere Due to All Emissions of CO2 from All Sources [kgC m-2 s-1]"
+    ],
     "table_id": [
         "atmos"
     ],
@@ -13,6 +14,13 @@
     "frequency": [
         "mon"
     ],
-    "cell_measures": "area: areacella",
-    "realm": "atmos"
+    "comment": [
+        "This field should be equivalent to the combined fluxes of carbon that account for all exchanges between the atmosphere and land or ocean."
+    ],
+    "cell_measures": [
+        "area: areacella"
+    ],
+    "realm": [
+        "atmos"
+    ]
 }

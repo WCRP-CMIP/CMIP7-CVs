@@ -2,8 +2,9 @@
     "@context": "000_context.jsonld",
     "id": "evspsbl_tavg-u-hxy-ifs",
     "type": "known_branded_variable",
-    "description": "computed as the total mass of water vapor evaporating from the ice-free portion of the ocean  divided by the area of the ocean portion of the grid cell.",
-    "long_name": "Water Evaporation Flux Where Ice Free Ocean over Sea",
+    "long_name": [
+        "Water Evaporation Flux Where Ice Free Ocean over Sea"
+    ],
     "table_id": [
         "ocean"
     ],
@@ -13,6 +14,13 @@
     "frequency": [
         "mon"
     ],
-    "cell_measures": "area: areacello",
-    "realm": "ocean"
+    "comment": [
+        "computed as the total mass of water vapor evaporating from the ice-free portion of the ocean  divided by the area of the ocean portion of the grid cell."
+    ],
+    "cell_measures": [
+        "area: areacello"
+    ],
+    "realm": [
+        "ocean"
+    ]
 }

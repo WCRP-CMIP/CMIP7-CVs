@@ -2,8 +2,9 @@
     "@context": "000_context.jsonld",
     "id": "od550soa_tavg-u-hxy-u",
     "type": "known_branded_variable",
-    "description": "total organic aerosol AOD due to secondary aerosol formation",
-    "long_name": "Particulate Organic Aerosol Optical Depth at 550nm",
+    "long_name": [
+        "Particulate Organic Aerosol Optical Depth at 550nm"
+    ],
     "table_id": [
         "aerosol"
     ],
@@ -13,6 +14,13 @@
     "frequency": [
         "mon"
     ],
-    "cell_measures": "area: areacella",
-    "realm": "aerosol"
+    "comment": [
+        "total organic aerosol AOD due to secondary aerosol formation"
+    ],
+    "cell_measures": [
+        "area: areacella"
+    ],
+    "realm": [
+        "aerosol"
+    ]
 }

@@ -2,8 +2,9 @@
     "@context": "000_context.jsonld",
     "id": "wetnh3_tavg-u-hxy-u",
     "type": "known_branded_variable",
-    "description": "Daily Wet Deposition Rate of NH3 at surface. Vertically integrated throughout the column to the surface.",
-    "long_name": "Wet Deposition Rate of NH3",
+    "long_name": [
+        "Wet Deposition Rate of NH3"
+    ],
     "table_id": [
         "atmoschem"
     ],
@@ -15,6 +16,15 @@
         "mon",
         "day"
     ],
-    "cell_measures": "area: areacella",
-    "realm": "atmoschem"
+    "comment": [
+        "Surface deposition rate of ammonia (NH3) due to wet processes",
+        "Daily Wet Deposition Rate of NH3 at surface. Vertically integrated throughout the column to the surface."
+    ],
+    "cell_measures": [
+        "area: areacella"
+    ],
+    "realm": [
+        "atmoschem",
+        "aerosol"
+    ]
 }

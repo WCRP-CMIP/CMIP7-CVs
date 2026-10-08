@@ -2,8 +2,9 @@
     "@context": "000_context.jsonld",
     "id": "tatp_tavg-u-hxy-u",
     "type": "known_branded_variable",
-    "description": "2D monthly mean thermal tropopause calculated using WMO tropopause definition on 3d temperature",
-    "long_name": "Tropopause Air Temperature",
+    "long_name": [
+        "Tropopause Air Temperature"
+    ],
     "table_id": [
         "aerosol"
     ],
@@ -13,6 +14,13 @@
     "frequency": [
         "mon"
     ],
-    "cell_measures": "area: areacella",
-    "realm": "aerosol"
+    "comment": [
+        "2D monthly mean thermal tropopause calculated using WMO tropopause definition on 3d temperature"
+    ],
+    "cell_measures": [
+        "area: areacella"
+    ],
+    "realm": [
+        "aerosol"
+    ]
 }

@@ -2,8 +2,9 @@
     "@context": "000_context.jsonld",
     "id": "hfls_tpt-u-hs-u",
     "type": "known_branded_variable",
-    "description": "includes both evaporation and sublimation",
-    "long_name": "Surface Upward Latent Heat Flux",
+    "long_name": [
+        "Surface Upward Latent Heat Flux"
+    ],
     "table_id": [
         "atmos"
     ],
@@ -13,5 +14,10 @@
     "frequency": [
         "subhr"
     ],
-    "realm": "atmos"
+    "comment": [
+        "includes both evaporation and sublimation"
+    ],
+    "realm": [
+        "atmos"
+    ]
 }

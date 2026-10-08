@@ -1,0 +1,21 @@
+{
+    "@context": "000_context.jsonld",
+    "id": "firemip",
+    "type": "activity",
+    "description": "Fire Model Intercomparison Project. In CMIP7, FireMIP expands into the fully coupled Earth system modeling framework to: (1) evaluate fire simulations in state-of-the-art fully coupled Earth system models (ESMs); (2) assess fire regime changes in the past, present, and future, and identify their primary natural and anthropogenic forcings and causal pathways within the Earth system, including the associated uncertainties; and (3) quantify the impacts of fires and fire changes on climate, ecosystems, and society across Earth system components, regions, and timescales, and elucidate the underlying mechanisms. FireMIP in CMIP7 will advance fire and fire-related modeling in fully coupled ESMs, and provide a quantitative, comprehensive, and process-based understanding of fire's role in the Earth system by using models that incorporate critical climate feedbacks and CMIP7 multi-model, multi-initial-condition, and multi-scenario ensembles.",
+    "experiments": [
+        "esm-hist-nofire",
+        "esm-hist-nofireaer",
+        "esm-picontrol-nofire",
+        "esm-scen7-h-ca2010fire",
+        "esm-scen7-h-ca2010fireaer",
+        "hist-nofire",
+        "hist-nofireaer",
+        "picontrol-nofire",
+        "scen7-h-ca2010fire",
+        "scen7-h-ca2010fireaer"
+    ],
+    "references": [
+        "firemip_cmip7_ref_000"
+    ]
+}

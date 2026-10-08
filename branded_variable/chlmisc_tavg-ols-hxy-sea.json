@@ -2,8 +2,9 @@
     "@context": "000_context.jsonld",
     "id": "chlmisc_tavg-ols-hxy-sea",
     "type": "known_branded_variable",
-    "description": "chlorophyll from additional phytoplankton component concentrations alone",
-    "long_name": "Surface Mass Concentration of Other Phytoplankton Expressed as Chlorophyll in Sea Water",
+    "long_name": [
+        "Surface Mass Concentration of Other Phytoplankton Expressed as Chlorophyll in Sea Water"
+    ],
     "table_id": [
         "ocnbgchem"
     ],
@@ -13,6 +14,13 @@
     "frequency": [
         "mon"
     ],
-    "cell_measures": "area: areacello",
-    "realm": "ocnbgchem"
+    "comment": [
+        "chlorophyll from additional phytoplankton component concentrations alone"
+    ],
+    "cell_measures": [
+        "area: areacello"
+    ],
+    "realm": [
+        "ocnbgchem"
+    ]
 }

@@ -2,8 +2,9 @@
     "@context": "000_context.jsonld",
     "id": "ttop_tavg-u-hxy-cl",
     "type": "known_branded_variable",
-    "description": "cloud_top refers to the top of the highest cloud. Air temperature is the bulk temperature of the air, not the surface (skin) temperature.",
-    "long_name": "Air Temperature at Cloud Top",
+    "long_name": [
+        "Air Temperature at Cloud Top"
+    ],
     "table_id": [
         "aerosol"
     ],
@@ -13,6 +14,13 @@
     "frequency": [
         "mon"
     ],
-    "cell_measures": "area: areacella",
-    "realm": "aerosol"
+    "comment": [
+        "cloud_top refers to the top of the highest cloud. Air temperature is the bulk temperature of the air, not the surface (skin) temperature."
+    ],
+    "cell_measures": [
+        "area: areacella"
+    ],
+    "realm": [
+        "aerosol"
+    ]
 }

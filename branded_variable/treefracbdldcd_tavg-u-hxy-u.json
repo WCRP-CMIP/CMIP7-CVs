@@ -2,8 +2,9 @@
     "@context": "000_context.jsonld",
     "id": "treefracbdldcd_tavg-u-hxy-u",
     "type": "known_branded_variable",
-    "description": "This is the percentage of the entire grid cell that is covered by broadleaf deciduous trees.",
-    "long_name": "Broadleaf Deciduous Tree Area Percentage",
+    "long_name": [
+        "Broadleaf Deciduous Tree Area Percentage"
+    ],
     "table_id": [
         "land"
     ],
@@ -13,6 +14,13 @@
     "frequency": [
         "mon"
     ],
-    "cell_measures": "area: areacella",
-    "realm": "land"
+    "comment": [
+        "This is the percentage of the entire grid cell that is covered by broadleaf deciduous trees."
+    ],
+    "cell_measures": [
+        "area: areacella"
+    ],
+    "realm": [
+        "land"
+    ]
 }

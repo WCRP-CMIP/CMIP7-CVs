@@ -2,8 +2,9 @@
     "@context": "000_context.jsonld",
     "id": "epfy_tavg-p39-hy-air",
     "type": "known_branded_variable",
-    "description": "Transformed Eulerian Mean Diagnostics Meridional component Fy of Eliassen-Palm (EP) flux (Fy, Fz) derived from 6hr or higher frequency fields (use daily fields or 12 hr fields if the 6 hr are not available). Please use the definitions given by equation 3.5.3a of Andrews, Holton and Leovy text book, but scaled by density to have units m3 s-2.",
-    "long_name": "Northward Component of the Eliassen-Palm Flux",
+    "long_name": [
+        "Northward Component of the Eliassen-Palm Flux"
+    ],
     "table_id": [
         "atmos"
     ],
@@ -15,5 +16,11 @@
         "mon",
         "day"
     ],
-    "realm": "atmos"
+    "comment": [
+        "Transformed Eulerian Mean Diagnostics Meridional component Fy of Eliassen-Palm (EP) flux (Fy, Fz) derived from 6hr or higher frequency fields (use daily fields or 12 hr fields if the 6 hr are not available). Please use the definitions given by equation 3.5.3a of Andrews, Holton and Leovy text book, but scaled by density to have units m3 s-2.",
+        "zonal mean; hence YZT"
+    ],
+    "realm": [
+        "atmos"
+    ]
 }

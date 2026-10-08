@@ -2,8 +2,9 @@
     "@context": "000_context.jsonld",
     "id": "od550aerh2o_tavg-u-hxy-u",
     "type": "known_branded_variable",
-    "description": "proposed name: atmosphere_optical_thickness_due_to_water_ambient_aerosol",
-    "long_name": "Aerosol Water Optical Thickness at 550nm",
+    "long_name": [
+        "Aerosol Water Optical Thickness at 550nm"
+    ],
     "table_id": [
         "aerosol"
     ],
@@ -13,6 +14,13 @@
     "frequency": [
         "mon"
     ],
-    "cell_measures": "area: areacella",
-    "realm": "aerosol"
+    "comment": [
+        "proposed name: atmosphere_optical_thickness_due_to_water_ambient_aerosol"
+    ],
+    "cell_measures": [
+        "area: areacella"
+    ],
+    "realm": [
+        "aerosol"
+    ]
 }

@@ -2,8 +2,9 @@
     "@context": "000_context.jsonld",
     "id": "taslut_tavg-h2m-hxy-multi",
     "type": "known_branded_variable",
-    "description": "Air temperature is the bulk temperature of the air, not the surface (skin) temperature.",
-    "long_name": "Near-Surface Air Temperature on Land Use Tile",
+    "long_name": [
+        "Near-Surface Air Temperature on Land Use Tile"
+    ],
     "table_id": [
         "land"
     ],
@@ -13,6 +14,13 @@
     "frequency": [
         "mon"
     ],
-    "cell_measures": "area: areacella",
-    "realm": "land"
+    "comment": [
+        "Air temperature is the bulk temperature of the air, not the surface (skin) temperature."
+    ],
+    "cell_measures": [
+        "area: areacella"
+    ],
+    "realm": [
+        "land"
+    ]
 }

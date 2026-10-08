@@ -2,8 +2,9 @@
     "@context": "000_context.jsonld",
     "id": "bs550aer_tpt-al-hxy-u",
     "type": "known_branded_variable",
-    "description": "Aerosol  Backscatter at wavelength 550nm and scattering angle 180 degrees, computed from extinction and lidar ratio",
-    "long_name": "Aerosol Backscatter Coefficient",
+    "long_name": [
+        "Aerosol Backscatter Coefficient"
+    ],
     "table_id": [
         "aerosol"
     ],
@@ -13,6 +14,13 @@
     "frequency": [
         "6hr"
     ],
-    "cell_measures": "area: areacella",
-    "realm": "aerosol"
+    "comment": [
+        "Aerosol  Backscatter at wavelength 550nm and scattering angle 180 degrees, computed from extinction and lidar ratio"
+    ],
+    "cell_measures": [
+        "area: areacella"
+    ],
+    "realm": [
+        "aerosol"
+    ]
 }

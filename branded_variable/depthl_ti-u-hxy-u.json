@@ -2,8 +2,9 @@
     "@context": "000_context.jsonld",
     "id": "depthl_ti-u-hxy-u",
     "type": "known_branded_variable",
-    "description": "Depth of lakes, if this quantity is present in the model. If computed via volume and area, then this is lake volume divided by lake area.",
-    "long_name": "Depth of Lake Below the Surface",
+    "long_name": [
+        "Depth of Lake Below the Surface"
+    ],
     "table_id": [
         "land"
     ],
@@ -13,6 +14,13 @@
     "frequency": [
         "fx"
     ],
-    "cell_measures": "area: areacella",
-    "realm": "land"
+    "comment": [
+        "Depth of lakes, if this quantity is present in the model. If computed via volume and area, then this is lake volume divided by lake area."
+    ],
+    "cell_measures": [
+        "area: areacella"
+    ],
+    "realm": [
+        "land"
+    ]
 }

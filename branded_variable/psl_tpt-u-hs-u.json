@@ -2,8 +2,9 @@
     "@context": "000_context.jsonld",
     "id": "psl_tpt-u-hs-u",
     "type": "known_branded_variable",
-    "description": "not, in general, the same as surface pressure",
-    "long_name": "Sea Level Pressure",
+    "long_name": [
+        "Sea Level Pressure"
+    ],
     "table_id": [
         "atmos"
     ],
@@ -13,5 +14,10 @@
     "frequency": [
         "subhr"
     ],
-    "realm": "atmos"
+    "comment": [
+        "not, in general, the same as surface pressure"
+    ],
+    "realm": [
+        "atmos"
+    ]
 }

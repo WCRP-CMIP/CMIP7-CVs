@@ -2,8 +2,9 @@
     "@context": "000_context.jsonld",
     "id": "rlus_tavg-u-hxy-si",
     "type": "known_branded_variable",
-    "description": "Upward longwave flux from the sea-ice surface to the atmosphere (energy flow per sea ice area). Always positive or zero.",
-    "long_name": "Upwelling Longwave Flux over Sea Ice",
+    "long_name": [
+        "Upwelling Longwave Flux over Sea Ice"
+    ],
     "table_id": [
         "seaice"
     ],
@@ -15,6 +16,13 @@
         "mon",
         "day"
     ],
-    "cell_measures": "area: areacella",
-    "realm": "seaice"
+    "comment": [
+        "Upward longwave flux from the sea-ice surface to the atmosphere (energy flow per sea ice area). Always positive or zero."
+    ],
+    "cell_measures": [
+        "area: areacella"
+    ],
+    "realm": [
+        "seaice"
+    ]
 }

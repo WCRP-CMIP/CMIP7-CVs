@@ -2,8 +2,9 @@
     "@context": "000_context.jsonld",
     "id": "jpdftaureliqmodis_tavg-u-hxy-u",
     "type": "known_branded_variable",
-    "description": "MODIS Optical Thickness-Particle Size joint  distribution, liquid",
-    "long_name": "MODIS Optical Thickness-Particle Size Joint Distribution, Liquid",
+    "long_name": [
+        "MODIS Optical Thickness-Particle Size Joint Distribution, Liquid"
+    ],
     "table_id": [
         "atmos"
     ],
@@ -15,6 +16,14 @@
         "mon",
         "day"
     ],
-    "cell_measures": "area: areacella",
-    "realm": "atmos"
+    "comment": [
+        "MODIS Optical Thickness-Particle Size joint distribution, liquid",
+        "MODIS Optical Thickness-Particle Size joint  distribution, liquid"
+    ],
+    "cell_measures": [
+        "area: areacella"
+    ],
+    "realm": [
+        "atmos"
+    ]
 }

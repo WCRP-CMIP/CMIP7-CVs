@@ -2,8 +2,9 @@
     "@context": "000_context.jsonld",
     "id": "sftof_ti-u-hxy-u",
     "type": "known_branded_variable",
-    "description": "This is the area fraction at the ocean surface.",
-    "long_name": "Sea Area Percentage",
+    "long_name": [
+        "Sea Area Percentage"
+    ],
     "table_id": [
         "ocean"
     ],
@@ -13,6 +14,13 @@
     "frequency": [
         "fx"
     ],
-    "cell_measures": "area: areacello",
-    "realm": "ocean"
+    "comment": [
+        "This is the area fraction at the ocean surface."
+    ],
+    "cell_measures": [
+        "area: areacello"
+    ],
+    "realm": [
+        "ocean"
+    ]
 }

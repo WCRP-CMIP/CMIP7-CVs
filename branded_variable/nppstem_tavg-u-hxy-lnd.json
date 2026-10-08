@@ -2,8 +2,9 @@
     "@context": "000_context.jsonld",
     "id": "nppstem_tavg-u-hxy-lnd",
     "type": "known_branded_variable",
-    "description": "added for completeness with npp_root",
-    "long_name": "Net Primary Production Allocated to Stem as Carbon Mass Flux [kgC m-2 s-1]",
+    "long_name": [
+        "Net Primary Production Allocated to Stem as Carbon Mass Flux [kgC m-2 s-1]"
+    ],
     "table_id": [
         "land"
     ],
@@ -13,6 +14,13 @@
     "frequency": [
         "mon"
     ],
-    "cell_measures": "area: areacella",
-    "realm": "land"
+    "comment": [
+        "added for completeness with npp_root"
+    ],
+    "cell_measures": [
+        "area: areacella"
+    ],
+    "realm": [
+        "land"
+    ]
 }

@@ -2,8 +2,9 @@
     "@context": "000_context.jsonld",
     "id": "toz_tavg-u-hxy-u",
     "type": "known_branded_variable",
-    "description": "total ozone column in DU",
-    "long_name": "Total Column Ozone",
+    "long_name": [
+        "Total Column Ozone"
+    ],
     "table_id": [
         "aerosol"
     ],
@@ -15,6 +16,14 @@
         "day",
         "mon"
     ],
-    "cell_measures": "area: areacella",
-    "realm": "aerosol"
+    "comment": [
+        "Total ozone column",
+        "total ozone column in DU"
+    ],
+    "cell_measures": [
+        "area: areacella"
+    ],
+    "realm": [
+        "aerosol"
+    ]
 }

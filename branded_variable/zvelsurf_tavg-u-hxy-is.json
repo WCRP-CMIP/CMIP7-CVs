@@ -2,8 +2,9 @@
     "@context": "000_context.jsonld",
     "id": "zvelsurf_tavg-u-hxy-is",
     "type": "known_branded_variable",
-    "description": "A velocity is a vector quantity. \"Upward\" indicates a vector component which is positive when directed upward (negative downward). The surface called \"surface\" means the lower boundary of the atmosphere",
-    "long_name": "Upward Component of Land-Ice Surface Velocity",
+    "long_name": [
+        "Upward Component of Land-Ice Surface Velocity"
+    ],
     "table_id": [
         "landice"
     ],
@@ -14,6 +15,13 @@
     "frequency": [
         "yr"
     ],
-    "cell_measures": "area: areacellg",
-    "realm": "landice"
+    "comment": [
+        "A velocity is a vector quantity. \"Upward\" indicates a vector component which is positive when directed upward (negative downward). The surface called \"surface\" means the lower boundary of the atmosphere"
+    ],
+    "cell_measures": [
+        "area: areacellg"
+    ],
+    "realm": [
+        "landice"
+    ]
 }

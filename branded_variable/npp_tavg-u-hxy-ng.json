@@ -2,8 +2,9 @@
     "@context": "000_context.jsonld",
     "id": "npp_tavg-u-hxy-ng",
     "type": "known_branded_variable",
-    "description": "Total NPP of grass in the grid cell",
-    "long_name": "Net Primary Production on Grass Tiles as Carbon Mass Flux [kgC m-2 s-1]",
+    "long_name": [
+        "Net Primary Production on Grass Tiles as Carbon Mass Flux [kgC m-2 s-1]"
+    ],
     "table_id": [
         "land"
     ],
@@ -13,6 +14,13 @@
     "frequency": [
         "mon"
     ],
-    "cell_measures": "area: areacella",
-    "realm": "land"
+    "comment": [
+        "Total NPP of grass in the grid cell"
+    ],
+    "cell_measures": [
+        "area: areacella"
+    ],
+    "realm": [
+        "land"
+    ]
 }

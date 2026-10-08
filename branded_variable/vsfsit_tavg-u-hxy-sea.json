@@ -2,8 +2,9 @@
     "@context": "000_context.jsonld",
     "id": "vsfsit_tavg-u-hxy-sea",
     "type": "known_branded_variable",
-    "description": "This variable measures the virtual salt flux into sea water due to the melting of sea ice. It is set to zero in models which receive a real water flux.",
-    "long_name": "Virtual Salt Flux into Sea Water Due to Sea Ice Thermodynamics",
+    "long_name": [
+        "Virtual Salt Flux into Sea Water Due to Sea Ice Thermodynamics"
+    ],
     "table_id": [
         "ocean"
     ],
@@ -13,6 +14,14 @@
     "frequency": [
         "mon"
     ],
-    "cell_measures": "area: areacello",
-    "realm": "ocean"
+    "comment": [
+        "This variable measures the virtual salt flux into sea water due to the melting of sea ice. It is set to zero in models which receive a real water flux."
+    ],
+    "cell_measures": [
+        "area: areacello"
+    ],
+    "realm": [
+        "ocean",
+        "seaice"
+    ]
 }

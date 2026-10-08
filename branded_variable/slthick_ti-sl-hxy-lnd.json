@@ -2,8 +2,9 @@
     "@context": "000_context.jsonld",
     "id": "slthick_ti-sl-hxy-lnd",
     "type": "known_branded_variable",
-    "description": "Thickness of Soil Layers",
-    "long_name": "Thickness of Soil Layers",
+    "long_name": [
+        "Thickness of Soil Layers"
+    ],
     "table_id": [
         "land"
     ],
@@ -13,6 +14,13 @@
     "frequency": [
         "fx"
     ],
-    "cell_measures": "area: areacella",
-    "realm": "land"
+    "comment": [
+        "Thickness of Soil Layers"
+    ],
+    "cell_measures": [
+        "area: areacella"
+    ],
+    "realm": [
+        "land"
+    ]
 }

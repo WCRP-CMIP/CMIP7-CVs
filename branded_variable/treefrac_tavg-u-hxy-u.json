@@ -2,8 +2,9 @@
     "@context": "000_context.jsonld",
     "id": "treefrac_tavg-u-hxy-u",
     "type": "known_branded_variable",
-    "description": "Percentage of entire grid cell  that is covered by trees.",
-    "long_name": "Tree Cover Percentage",
+    "long_name": [
+        "Tree Cover Percentage"
+    ],
     "table_id": [
         "land"
     ],
@@ -15,6 +16,14 @@
         "mon",
         "yr"
     ],
-    "cell_measures": "area: areacella",
-    "realm": "land"
+    "comment": [
+        "fraction of entire grid cell  that is covered by trees.",
+        "Percentage of entire grid cell  that is covered by trees."
+    ],
+    "cell_measures": [
+        "area: areacella"
+    ],
+    "realm": [
+        "land"
+    ]
 }

@@ -2,8 +2,9 @@
     "@context": "000_context.jsonld",
     "id": "emiavnox_tavg-u-hxy-u",
     "type": "known_branded_variable",
-    "description": "Emission rate of NOx from aircraft",
-    "long_name": "Emission rate of NOx from aviation",
+    "long_name": [
+        "Emission rate of NOx from aviation"
+    ],
     "table_id": [
         "atmoschem"
     ],
@@ -13,6 +14,14 @@
     "frequency": [
         "mon"
     ],
-    "cell_measures": "area: areacella",
-    "realm": "atmoschem"
+    "comment": [
+        "Emission rate of NOx from aircraft"
+    ],
+    "cell_measures": [
+        "area: areacella"
+    ],
+    "realm": [
+        "atmoschem",
+        "aerosol"
+    ]
 }

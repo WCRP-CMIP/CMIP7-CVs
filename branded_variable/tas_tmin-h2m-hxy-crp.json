@@ -2,8 +2,9 @@
     "@context": "000_context.jsonld",
     "id": "tas_tmin-h2m-hxy-crp",
     "type": "known_branded_variable",
-    "description": "minimum near-surface (usually, 2 meter) air temperature (add cell_method attribute \"time: min\")",
-    "long_name": "Daily Minimum Near-Surface Air Temperature over Crop Tile",
+    "long_name": [
+        "Daily Minimum Near-Surface Air Temperature over Crop Tile"
+    ],
     "table_id": [
         "atmos"
     ],
@@ -13,6 +14,13 @@
     "frequency": [
         "day"
     ],
-    "cell_measures": "area: areacella",
-    "realm": "atmos"
+    "comment": [
+        "minimum near-surface (usually, 2 meter) air temperature (add cell_method attribute \"time: min\")"
+    ],
+    "cell_measures": [
+        "area: areacella"
+    ],
+    "realm": [
+        "atmos"
+    ]
 }

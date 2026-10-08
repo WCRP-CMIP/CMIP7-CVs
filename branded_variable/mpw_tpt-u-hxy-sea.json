@@ -2,8 +2,9 @@
     "@context": "000_context.jsonld",
     "id": "mpw_tpt-u-hxy-sea",
     "type": "known_branded_variable",
-    "description": "Average wave period (i.e., time in-between two wave crests) across the entire two-dimensional wave spectrum, incorporating both wind-sea and swell waves. In spectral wind wave models, it is calculated using spectral moments, mathematical measures that describe the shape and characteristics of the wave spectrum.",
-    "long_name": "Total Wave Mean Period",
+    "long_name": [
+        "Total Wave Mean Period"
+    ],
     "table_id": [
         "ocean"
     ],
@@ -13,6 +14,14 @@
     "frequency": [
         "3hr"
     ],
-    "cell_measures": "area: areacello",
-    "realm": "ocean"
+    "comment": [
+        "Average wave period (i.e., time in-between two wave crests) across the entire two-dimensional wave spectrum, incorporating both wind-sea and swell waves. In spectral wind wave models, it is calculated using spectral moments, mathematical measures that describe the shape and characteristics of the wave spectrum."
+    ],
+    "cell_measures": [
+        "area: areacello"
+    ],
+    "realm": [
+        "ocean",
+        "atmos"
+    ]
 }

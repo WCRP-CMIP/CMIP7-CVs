@@ -2,8 +2,9 @@
     "@context": "000_context.jsonld",
     "id": "expc_tavg-d100m-hxy-sea",
     "type": "known_branded_variable",
-    "description": "The phrase 'expressed_as' is used in the construction A_expressed_as_B, where B is a chemical constituent of A. It means that the quantity indicated by the standard name is calculated solely with respect to the B contained in A, neglecting all other chemical constituents of A. In accordance with common usage in geophysical disciplines, \"flux\" implies per unit area, called \"flux density\" in physics.   'Sinking' is the gravitational settling of particulate matter suspended in a liquid. A sinking flux is positive downwards and is calculated relative to the movement of the surrounding fluid.",
-    "long_name": "Downward Flux of Particulate Organic Carbon",
+    "long_name": [
+        "Downward Flux of Particulate Organic Carbon"
+    ],
     "table_id": [
         "ocnbgchem"
     ],
@@ -13,6 +14,13 @@
     "frequency": [
         "mon"
     ],
-    "cell_measures": "area: areacello",
-    "realm": "ocnbgchem"
+    "comment": [
+        "The phrase 'expressed_as' is used in the construction A_expressed_as_B, where B is a chemical constituent of A. It means that the quantity indicated by the standard name is calculated solely with respect to the B contained in A, neglecting all other chemical constituents of A. In accordance with common usage in geophysical disciplines, \"flux\" implies per unit area, called \"flux density\" in physics.   'Sinking' is the gravitational settling of particulate matter suspended in a liquid. A sinking flux is positive downwards and is calculated relative to the movement of the surrounding fluid."
+    ],
+    "cell_measures": [
+        "area: areacello"
+    ],
+    "realm": [
+        "ocnbgchem"
+    ]
 }

@@ -2,8 +2,9 @@
     "@context": "000_context.jsonld",
     "id": "sifllattop_tavg-u-hxy-si",
     "type": "known_branded_variable",
-    "description": "Net latent heat flux over sea ice (energy flow per sea ice area). Positive for a downward heat flux.",
-    "long_name": "Net Latent Heat Flux over Sea Ice",
+    "long_name": [
+        "Net Latent Heat Flux over Sea Ice"
+    ],
     "table_id": [
         "seaice"
     ],
@@ -15,6 +16,13 @@
         "mon",
         "day"
     ],
-    "cell_measures": "area: areacella",
-    "realm": "seaice"
+    "comment": [
+        "Net latent heat flux over sea ice (energy flow per sea ice area). Positive for a downward heat flux."
+    ],
+    "cell_measures": [
+        "area: areacella"
+    ],
+    "realm": [
+        "seaice"
+    ]
 }

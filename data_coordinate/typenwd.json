@@ -1,6 +1,0 @@
-{
-    "@context": "000_context.jsonld",
-    "id": "typenwd",
-    "type": "data_coordinate",
-    "long_name": "Non-Woody Vegetation area type"
-}

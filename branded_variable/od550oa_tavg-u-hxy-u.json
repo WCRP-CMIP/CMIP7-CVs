@@ -2,8 +2,9 @@
     "@context": "000_context.jsonld",
     "id": "od550oa_tavg-u-hxy-u",
     "type": "known_branded_variable",
-    "description": "total organic aerosol AOD, comprises all organic aerosols, primary + secondary ; natural + anthropogenic including biomasss burning organic aerosol",
-    "long_name": "Total Organic Aerosol Optical Depth at 550nm",
+    "long_name": [
+        "Total Organic Aerosol Optical Depth at 550nm"
+    ],
     "table_id": [
         "aerosol"
     ],
@@ -13,6 +14,13 @@
     "frequency": [
         "mon"
     ],
-    "cell_measures": "area: areacella",
-    "realm": "aerosol"
+    "comment": [
+        "total organic aerosol AOD, comprises all organic aerosols, primary + secondary ; natural + anthropogenic including biomasss burning organic aerosol"
+    ],
+    "cell_measures": [
+        "area: areacella"
+    ],
+    "realm": [
+        "aerosol"
+    ]
 }

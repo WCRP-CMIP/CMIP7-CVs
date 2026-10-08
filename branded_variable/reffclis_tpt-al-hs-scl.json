@@ -2,8 +2,9 @@
     "@context": "000_context.jsonld",
     "id": "reffclis_tpt-al-hs-scl",
     "type": "known_branded_variable",
-    "description": "alevel site time1",
-    "long_name": "Hydrometeor Effective Radius of Stratiform Cloud Ice",
+    "long_name": [
+        "Hydrometeor Effective Radius of Stratiform Cloud Ice"
+    ],
     "table_id": [
         "atmos"
     ],
@@ -13,5 +14,10 @@
     "frequency": [
         "subhr"
     ],
-    "realm": "atmos"
+    "comment": [
+        "alevel site time1"
+    ],
+    "realm": [
+        "atmos"
+    ]
 }

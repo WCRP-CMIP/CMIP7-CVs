@@ -2,8 +2,9 @@
     "@context": "000_context.jsonld",
     "id": "sithick_tavg-u-hxy-sir",
     "type": "known_branded_variable",
-    "description": "Total volume of ridged sea ice divided by area of ridges, i.e. mean thickness of ridged sea ice.",
-    "long_name": "Ridged Ice Thickness",
+    "long_name": [
+        "Ridged Ice Thickness"
+    ],
     "table_id": [
         "seaice"
     ],
@@ -15,6 +16,13 @@
         "mon",
         "day"
     ],
-    "cell_measures": "area: areacello",
-    "realm": "seaice"
+    "comment": [
+        "Total volume of ridged sea ice divided by area of ridges, i.e. mean thickness of ridged sea ice."
+    ],
+    "cell_measures": [
+        "area: areacello"
+    ],
+    "realm": [
+        "seaice"
+    ]
 }

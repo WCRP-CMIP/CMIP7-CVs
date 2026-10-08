@@ -2,8 +2,9 @@
     "@context": "000_context.jsonld",
     "id": "fndep_tavg-u-hxy-lnd",
     "type": "known_branded_variable",
-    "description": "Surface deposition rate of nitrogen.",
-    "long_name": "Dry and Wet Deposition of Reactive Nitrogen onto Land",
+    "long_name": [
+        "Dry and Wet Deposition of Reactive Nitrogen onto Land"
+    ],
     "table_id": [
         "land"
     ],
@@ -13,6 +14,13 @@
     "frequency": [
         "mon"
     ],
-    "cell_measures": "area: areacella",
-    "realm": "land"
+    "comment": [
+        "Surface deposition rate of nitrogen."
+    ],
+    "cell_measures": [
+        "area: areacella"
+    ],
+    "realm": [
+        "land"
+    ]
 }

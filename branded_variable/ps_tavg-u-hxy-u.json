@@ -2,8 +2,9 @@
     "@context": "000_context.jsonld",
     "id": "ps_tavg-u-hxy-u",
     "type": "known_branded_variable",
-    "description": "surface pressure (not mean sea-level pressure), 2-D field to calculate the 3-D pressure field from hybrid coordinates",
-    "long_name": "Surface Air Pressure",
+    "long_name": [
+        "Surface Air Pressure"
+    ],
     "table_id": [
         "atmos"
     ],
@@ -20,6 +21,15 @@
         "1hr",
         "6hr"
     ],
-    "cell_measures": "area: areacella",
-    "realm": "atmos"
+    "comment": [
+        "not, in general, the same as mean sea-level pressure",
+        "surface pressure (not mean sea-level pressure), 2-D field to calculate the 3-D pressure field from hybrid coordinates",
+        "Surface pressure, not mean sea level pressure"
+    ],
+    "cell_measures": [
+        "area: areacella"
+    ],
+    "realm": [
+        "atmos"
+    ]
 }

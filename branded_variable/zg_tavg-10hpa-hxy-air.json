@@ -2,8 +2,9 @@
     "@context": "000_context.jsonld",
     "id": "zg_tavg-10hpa-hxy-air",
     "type": "known_branded_variable",
-    "description": "Geopotential height on the 10 hPa surface",
-    "long_name": "Geopotential Height at 10hPa",
+    "long_name": [
+        "Geopotential Height at 10hPa"
+    ],
     "table_id": [
         "aerosol"
     ],
@@ -13,6 +14,13 @@
     "frequency": [
         "day"
     ],
-    "cell_measures": "area: areacella",
-    "realm": "aerosol"
+    "comment": [
+        "Geopotential height on the 10 hPa surface"
+    ],
+    "cell_measures": [
+        "area: areacella"
+    ],
+    "realm": [
+        "aerosol"
+    ]
 }

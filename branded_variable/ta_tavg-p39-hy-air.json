@@ -2,8 +2,9 @@
     "@context": "000_context.jsonld",
     "id": "ta_tavg-p39-hy-air",
     "type": "known_branded_variable",
-    "description": "Zonal mean temperature of air with the extended number of vertical levels.",
-    "long_name": "Zonal Mean Air Temperature",
+    "long_name": [
+        "Zonal Mean Air Temperature"
+    ],
     "table_id": [
         "atmos"
     ],
@@ -15,5 +16,11 @@
         "mon",
         "day"
     ],
-    "realm": "atmos"
+    "comment": [
+        "Air Temperature",
+        "Zonal mean temperature of air with the extended number of vertical levels."
+    ],
+    "realm": [
+        "atmos"
+    ]
 }

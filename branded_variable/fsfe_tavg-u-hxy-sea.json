@@ -2,8 +2,9 @@
     "@context": "000_context.jsonld",
     "id": "fsfe_tavg-u-hxy-sea",
     "type": "known_branded_variable",
-    "description": "Iron supply through deposition flux onto sea surface, runoff, coasts, sediments, etc",
-    "long_name": "Surface Downward Net Flux of Iron",
+    "long_name": [
+        "Surface Downward Net Flux of Iron"
+    ],
     "table_id": [
         "ocnbgchem"
     ],
@@ -13,6 +14,13 @@
     "frequency": [
         "mon"
     ],
-    "cell_measures": "area: areacello",
-    "realm": "ocnbgchem"
+    "comment": [
+        "Iron supply through deposition flux onto sea surface, runoff, coasts, sediments, etc"
+    ],
+    "cell_measures": [
+        "area: areacello"
+    ],
+    "realm": [
+        "ocnbgchem"
+    ]
 }

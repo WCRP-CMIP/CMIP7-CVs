@@ -2,8 +2,9 @@
     "@context": "000_context.jsonld",
     "id": "zossq_tavg-u-hxy-sea",
     "type": "known_branded_variable",
-    "description": "Surface ocean geoid defines z=0.",
-    "long_name": "Square of Sea Surface Height Above Geoid",
+    "long_name": [
+        "Square of Sea Surface Height Above Geoid"
+    ],
     "table_id": [
         "ocean"
     ],
@@ -13,6 +14,13 @@
     "frequency": [
         "mon"
     ],
-    "cell_measures": "area: areacello",
-    "realm": "ocean"
+    "comment": [
+        "Surface ocean geoid defines z=0."
+    ],
+    "cell_measures": [
+        "area: areacello"
+    ],
+    "realm": [
+        "ocean"
+    ]
 }

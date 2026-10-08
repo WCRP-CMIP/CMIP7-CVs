@@ -2,8 +2,9 @@
     "@context": "000_context.jsonld",
     "id": "rivi_tavg-u-hxy-lnd",
     "type": "known_branded_variable",
-    "description": "water_flux_to_downstream",
-    "long_name": "River Inflow",
+    "long_name": [
+        "River Inflow"
+    ],
     "table_id": [
         "land"
     ],
@@ -13,6 +14,13 @@
     "frequency": [
         "day"
     ],
-    "cell_measures": "area: areacellr",
-    "realm": "land"
+    "comment": [
+        "water_flux_to_downstream"
+    ],
+    "cell_measures": [
+        "area: areacellr"
+    ],
+    "realm": [
+        "land"
+    ]
 }

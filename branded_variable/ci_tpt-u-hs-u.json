@@ -2,8 +2,9 @@
     "@context": "000_context.jsonld",
     "id": "ci_tpt-u-hs-u",
     "type": "known_branded_variable",
-    "description": "Fraction of time that convection occurs in the grid cell .",
-    "long_name": "Fraction of Time Convection Occurs in Cell",
+    "long_name": [
+        "Fraction of Time Convection Occurs in Cell"
+    ],
     "table_id": [
         "atmos"
     ],
@@ -13,5 +14,10 @@
     "frequency": [
         "subhr"
     ],
-    "realm": "atmos"
+    "comment": [
+        "Fraction of time that convection occurs in the grid cell ."
+    ],
+    "realm": [
+        "atmos"
+    ]
 }

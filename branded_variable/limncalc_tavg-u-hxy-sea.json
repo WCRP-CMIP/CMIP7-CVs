@@ -2,8 +2,9 @@
     "@context": "000_context.jsonld",
     "id": "limncalc_tavg-u-hxy-sea",
     "type": "known_branded_variable",
-    "description": "\"Calcareous phytoplankton\" are phytoplankton that produce calcite. Calcite is a mineral that is a polymorph of calcium carbonate. The chemical formula of calcite is CaCO3. Phytoplankton are algae that grow where there is sufficient light to support photosynthesis. \"Nitrogen growth limitation\" means the ratio of the growth rate of a species population in the environment (where there is a finite availability of nitrogen) to the theoretical growth rate if there were no such limit on nitrogen availability.",
-    "long_name": "Nitrogen Limitation of Calcareous Phytoplankton",
+    "long_name": [
+        "Nitrogen Limitation of Calcareous Phytoplankton"
+    ],
     "table_id": [
         "ocnbgchem"
     ],
@@ -13,6 +14,13 @@
     "frequency": [
         "mon"
     ],
-    "cell_measures": "area: areacello",
-    "realm": "ocnbgchem"
+    "comment": [
+        "\"Calcareous phytoplankton\" are phytoplankton that produce calcite. Calcite is a mineral that is a polymorph of calcium carbonate. The chemical formula of calcite is CaCO3. Phytoplankton are algae that grow where there is sufficient light to support photosynthesis. \"Nitrogen growth limitation\" means the ratio of the growth rate of a species population in the environment (where there is a finite availability of nitrogen) to the theoretical growth rate if there were no such limit on nitrogen availability."
+    ],
+    "cell_measures": [
+        "area: areacello"
+    ],
+    "realm": [
+        "ocnbgchem"
+    ]
 }

@@ -2,8 +2,9 @@
     "@context": "000_context.jsonld",
     "id": "flashrate_tavg-u-hxy-u",
     "type": "known_branded_variable",
-    "description": "Lightning Flash Rate",
-    "long_name": "Lightning Flash Rate",
+    "long_name": [
+        "Lightning Flash Rate"
+    ],
     "table_id": [
         "atmoschem"
     ],
@@ -15,6 +16,13 @@
         "day",
         "mon"
     ],
-    "cell_measures": "area: areacella",
-    "realm": "atmoschem"
+    "comment": [
+        "Lightning Flash Rate"
+    ],
+    "cell_measures": [
+        "area: areacella"
+    ],
+    "realm": [
+        "atmoschem"
+    ]
 }

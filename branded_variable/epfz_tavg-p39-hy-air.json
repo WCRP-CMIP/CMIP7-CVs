@@ -2,8 +2,9 @@
     "@context": "000_context.jsonld",
     "id": "epfz_tavg-p39-hy-air",
     "type": "known_branded_variable",
-    "description": "zonal mean; hence YZT",
-    "long_name": "Upward Component of the Eliassen-Palm Flux",
+    "long_name": [
+        "Upward Component of the Eliassen-Palm Flux"
+    ],
     "table_id": [
         "atmos"
     ],
@@ -15,5 +16,10 @@
         "mon",
         "day"
     ],
-    "realm": "atmos"
+    "comment": [
+        "zonal mean; hence YZT"
+    ],
+    "realm": [
+        "atmos"
+    ]
 }

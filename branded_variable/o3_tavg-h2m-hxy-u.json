@@ -2,8 +2,9 @@
     "@context": "000_context.jsonld",
     "id": "o3_tavg-h2m-hxy-u",
     "type": "known_branded_variable",
-    "description": "Mole fraction is used in the construction mole_fraction_of_X_in_Y, where X is a material constituent of Y.",
-    "long_name": "O3 Volume Mixing Ratio near surface",
+    "long_name": [
+        "O3 Volume Mixing Ratio near surface"
+    ],
     "table_id": [
         "aerosol"
     ],
@@ -13,6 +14,13 @@
     "frequency": [
         "1hr"
     ],
-    "cell_measures": "area: areacella",
-    "realm": "aerosol"
+    "comment": [
+        "Mole fraction is used in the construction mole_fraction_of_X_in_Y, where X is a material constituent of Y."
+    ],
+    "cell_measures": [
+        "area: areacella"
+    ],
+    "realm": [
+        "aerosol"
+    ]
 }

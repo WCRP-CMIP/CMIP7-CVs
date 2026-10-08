@@ -2,8 +2,9 @@
     "@context": "000_context.jsonld",
     "id": "rsdscs_tpt-u-hs-u",
     "type": "known_branded_variable",
-    "description": "Surface solar irradiance clear sky for UV calculations",
-    "long_name": "Surface Downwelling Clear-Sky Shortwave Radiation",
+    "long_name": [
+        "Surface Downwelling Clear-Sky Shortwave Radiation"
+    ],
     "table_id": [
         "atmos"
     ],
@@ -13,5 +14,10 @@
     "frequency": [
         "subhr"
     ],
-    "realm": "atmos"
+    "comment": [
+        "Surface solar irradiance clear sky for UV calculations"
+    ],
+    "realm": [
+        "atmos"
+    ]
 }

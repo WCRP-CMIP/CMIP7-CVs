@@ -2,8 +2,9 @@
     "@context": "000_context.jsonld",
     "id": "tntr_tpt-al-hs-u",
     "type": "known_branded_variable",
-    "description": "Tendency of Air Temperature due to Radiative Heating",
-    "long_name": "Tendency of Air Temperature Due to Radiative Heating",
+    "long_name": [
+        "Tendency of Air Temperature Due to Radiative Heating"
+    ],
     "table_id": [
         "atmos"
     ],
@@ -13,5 +14,10 @@
     "frequency": [
         "subhr"
     ],
-    "realm": "atmos"
+    "comment": [
+        "Tendency of Air Temperature due to Radiative Heating"
+    ],
+    "realm": [
+        "atmos"
+    ]
 }

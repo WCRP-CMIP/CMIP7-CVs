@@ -2,8 +2,9 @@
     "@context": "000_context.jsonld",
     "id": "tauv_tpt-u-hs-u",
     "type": "known_branded_variable",
-    "description": "Downward northward wind stress at the surface",
-    "long_name": "Surface Downward Northward Wind Stress",
+    "long_name": [
+        "Surface Downward Northward Wind Stress"
+    ],
     "table_id": [
         "atmos"
     ],
@@ -13,5 +14,10 @@
     "frequency": [
         "subhr"
     ],
-    "realm": "atmos"
+    "comment": [
+        "Downward northward wind stress at the surface"
+    ],
+    "realm": [
+        "atmos"
+    ]
 }

@@ -5,7 +5,7 @@ project:
 cv_version: 2.4.1
 universe_version: 3.2.7
 esgvoc:
-  min_version: 6.2.0
+  min_version: 7.0.0
 release_notes: |
   - activity: 2 modified
   - experiment: 10 added, 1 modified

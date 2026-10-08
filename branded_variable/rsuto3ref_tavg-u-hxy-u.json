@@ -2,8 +2,9 @@
     "@context": "000_context.jsonld",
     "id": "rsuto3ref_tavg-u-hxy-u",
     "type": "known_branded_variable",
-    "description": "This is top-of-atmosphere outgoing shortwave flux for all-sky conditions from a diagnostic call to the radiation scheme, using a reference ozone field",
-    "long_name": "TOA shortwave flux assuming reference ozone field",
+    "long_name": [
+        "TOA shortwave flux assuming reference ozone field"
+    ],
     "table_id": [
         "atmoschem"
     ],
@@ -13,6 +14,14 @@
     "frequency": [
         "mon"
     ],
-    "cell_measures": "area: areacella",
-    "realm": "atmoschem"
+    "comment": [
+        "This is top-of-atmosphere outgoing shortwave flux for all-sky conditions from a diagnostic call to the radiation scheme, using a reference ozone field"
+    ],
+    "cell_measures": [
+        "area: areacella"
+    ],
+    "realm": [
+        "atmoschem",
+        "aerosol"
+    ]
 }

@@ -1,0 +1,6 @@
+__pycache__/
+*.py[cod]
+
+# Content generator reports and local conflict selections
+scripts/c7_cv_universe_overlay_report.json
+scripts/CMIP7_conflicts.json

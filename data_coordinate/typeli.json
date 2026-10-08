@@ -1,6 +1,0 @@
-{
-    "@context": "000_context.jsonld",
-    "id": "typeli",
-    "type": "data_coordinate",
-    "long_name": "Land Ice area type"
-}

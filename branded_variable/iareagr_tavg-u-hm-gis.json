@@ -2,8 +2,9 @@
     "@context": "000_context.jsonld",
     "id": "iareagr_tavg-u-hm-gis",
     "type": "known_branded_variable",
-    "description": "Antarctica",
-    "long_name": "Area Covered by Grounded Ice Sheet",
+    "long_name": [
+        "Area Covered by Grounded Ice Sheet"
+    ],
     "table_id": [
         "landice"
     ],
@@ -14,5 +15,11 @@
     "frequency": [
         "yr"
     ],
-    "realm": "landice"
+    "comment": [
+        "Greenland",
+        "Antarctica"
+    ],
+    "realm": [
+        "landice"
+    ]
 }

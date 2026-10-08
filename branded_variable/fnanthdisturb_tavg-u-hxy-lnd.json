@@ -2,8 +2,9 @@
     "@context": "000_context.jsonld",
     "id": "fnanthdisturb_tavg-u-hxy-lnd",
     "type": "known_branded_variable",
-    "description": "will require some careful definition to make sure we capture everything - any human activity that releases nitrogen from land  instead of into product pool goes here. E.g. Deforestation fire, harvest assumed to decompose straight away, grazing...",
-    "long_name": "Nitrogen Mass Flux out of Land Due to any Human Activity",
+    "long_name": [
+        "Nitrogen Mass Flux out of Land Due to any Human Activity"
+    ],
     "table_id": [
         "land"
     ],
@@ -13,6 +14,13 @@
     "frequency": [
         "mon"
     ],
-    "cell_measures": "area: areacella",
-    "realm": "land"
+    "comment": [
+        "will require some careful definition to make sure we capture everything - any human activity that releases nitrogen from land  instead of into product pool goes here. E.g. Deforestation fire, harvest assumed to decompose straight away, grazing..."
+    ],
+    "cell_measures": [
+        "area: areacella"
+    ],
+    "realm": [
+        "land"
+    ]
 }

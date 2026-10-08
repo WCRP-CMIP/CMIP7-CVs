@@ -2,8 +2,9 @@
     "@context": "000_context.jsonld",
     "id": "swhmax_tmax-u-hxy-sea",
     "type": "known_branded_variable",
-    "description": "Highest value of the significant wave height simulated within a given time range (e.g., daily or monthly). The significant wave height (swh) is derived from the wave spectrum using spectral moments. Specifically, swh is four times the square root of the integral over all directions and all frequencies of the two-dimensional wave spectrum.",
-    "long_name": "Maximum Significant Wave Height",
+    "long_name": [
+        "Maximum Significant Wave Height"
+    ],
     "table_id": [
         "ocean"
     ],
@@ -13,6 +14,14 @@
     "frequency": [
         "mon"
     ],
-    "cell_measures": "area: areacello",
-    "realm": "ocean"
+    "comment": [
+        "Highest value of the significant wave height simulated within a given time range (e.g., daily or monthly). The significant wave height (swh) is derived from the wave spectrum using spectral moments. Specifically, swh is four times the square root of the integral over all directions and all frequencies of the two-dimensional wave spectrum."
+    ],
+    "cell_measures": [
+        "area: areacello"
+    ],
+    "realm": [
+        "ocean",
+        "atmos"
+    ]
 }

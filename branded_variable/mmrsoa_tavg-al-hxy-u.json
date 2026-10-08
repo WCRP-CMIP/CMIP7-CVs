@@ -2,8 +2,9 @@
     "@context": "000_context.jsonld",
     "id": "mmrsoa_tavg-al-hxy-u",
     "type": "known_branded_variable",
-    "description": "Mass fraction in the atmosphere of secondary organic aerosols (particulate organic matter formed within the atmosphere from gaseous precursors; dry mass).",
-    "long_name": "Secondary Organic Aerosol Mass Mixing Ratio",
+    "long_name": [
+        "Secondary Organic Aerosol Mass Mixing Ratio"
+    ],
     "table_id": [
         "aerosol"
     ],
@@ -14,6 +15,14 @@
     "frequency": [
         "mon"
     ],
-    "cell_measures": "area: areacella",
-    "realm": "aerosol"
+    "comment": [
+        "Mass fraction in the atmosphere of secondary organic aerosols (particulate organic matter formed within the atmosphere from gaseous precursors; dry mass)."
+    ],
+    "cell_measures": [
+        "area: areacella"
+    ],
+    "realm": [
+        "aerosol",
+        "atmoschem"
+    ]
 }

@@ -2,8 +2,9 @@
     "@context": "000_context.jsonld",
     "id": "sfcwind_tpt-h10m-hs-u",
     "type": "known_branded_variable",
-    "description": "This is the mean of the speed, not the speed computed from the mean u and v components of wind",
-    "long_name": "Near-Surface Wind Speed",
+    "long_name": [
+        "Near-Surface Wind Speed"
+    ],
     "table_id": [
         "atmos"
     ],
@@ -13,5 +14,10 @@
     "frequency": [
         "subhr"
     ],
-    "realm": "atmos"
+    "comment": [
+        "This is the mean of the speed, not the speed computed from the mean u and v components of wind"
+    ],
+    "realm": [
+        "atmos"
+    ]
 }

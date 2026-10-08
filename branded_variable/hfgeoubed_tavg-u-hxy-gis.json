@@ -2,8 +2,9 @@
     "@context": "000_context.jsonld",
     "id": "hfgeoubed_tavg-u-hxy-gis",
     "type": "known_branded_variable",
-    "description": "Geothermal Heat Flux Beneath Land Ice",
-    "long_name": "Geothermal Heat Flux Beneath Land Ice",
+    "long_name": [
+        "Geothermal Heat Flux Beneath Land Ice"
+    ],
     "table_id": [
         "landice"
     ],
@@ -14,6 +15,13 @@
     "frequency": [
         "yr"
     ],
-    "cell_measures": "area: areacellg",
-    "realm": "landice"
+    "comment": [
+        "Geothermal Heat Flux Beneath Land Ice"
+    ],
+    "cell_measures": [
+        "area: areacellg"
+    ],
+    "realm": [
+        "landice"
+    ]
 }

@@ -2,8 +2,9 @@
     "@context": "000_context.jsonld",
     "id": "hfsnthermds_tavg-ol-hxy-sea",
     "type": "known_branded_variable",
-    "description": "In accordance with common usage in geophysical disciplines, \"flux\" implies per unit area, called \"flux density\" in physics.  The specification of a physical process by the phrase due_to_process means that the quantity named is a  single term in a sum of terms which together compose the general quantity  named by omitting the phrase.  \"Snow thermodynamics\" refers to the addition or subtraction of mass due to surface and basal fluxes, i.e., due to melting, sublimation and fusion.",
-    "long_name": "Heat Flux into Sea Water Due to Snow Thermodynamics",
+    "long_name": [
+        "Heat Flux into Sea Water Due to Snow Thermodynamics"
+    ],
     "table_id": [
         "ocean"
     ],
@@ -13,6 +14,13 @@
     "frequency": [
         "mon"
     ],
-    "cell_measures": "area: areacello volume: volcello",
-    "realm": "ocean"
+    "comment": [
+        "In accordance with common usage in geophysical disciplines, \"flux\" implies per unit area, called \"flux density\" in physics.  The specification of a physical process by the phrase due_to_process means that the quantity named is a  single term in a sum of terms which together compose the general quantity  named by omitting the phrase.  \"Snow thermodynamics\" refers to the addition or subtraction of mass due to surface and basal fluxes, i.e., due to melting, sublimation and fusion."
+    ],
+    "cell_measures": [
+        "area: areacello volume: volcello"
+    ],
+    "realm": [
+        "ocean"
+    ]
 }

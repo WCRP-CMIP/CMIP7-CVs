@@ -2,8 +2,9 @@
     "@context": "000_context.jsonld",
     "id": "od443aer_tavg-u-hxy-u",
     "type": "known_branded_variable",
-    "description": "This is the aerosol optical depth (AOD) from the ambient aerosls (i.e., includes aerosol water).  Does not include AOD from stratospheric aerosols if these are prescribed but includes other possible background aerosol types. Needs a comment attribute \"wavelength: 443 nm\"",
-    "long_name": "Ambient Aerosol Optical Thickness at 443nm",
+    "long_name": [
+        "Ambient Aerosol Optical Thickness at 443nm"
+    ],
     "table_id": [
         "aerosol"
     ],
@@ -13,6 +14,13 @@
     "frequency": [
         "mon"
     ],
-    "cell_measures": "area: areacella",
-    "realm": "aerosol"
+    "comment": [
+        "This is the aerosol optical depth (AOD) from the ambient aerosls (i.e., includes aerosol water).  Does not include AOD from stratospheric aerosols if these are prescribed but includes other possible background aerosol types. Needs a comment attribute \"wavelength: 443 nm\""
+    ],
+    "cell_measures": [
+        "area: areacella"
+    ],
+    "realm": [
+        "aerosol"
+    ]
 }

@@ -2,8 +2,9 @@
     "@context": "000_context.jsonld",
     "id": "snrefr_tavg-u-hxy-is",
     "type": "known_branded_variable",
-    "description": "Mass flux of surface meltwater which refreezes within the snowpack. Computed as the total refreezing on the land ice portion of the grid cell divided by land ice area in the grid cell.",
-    "long_name": "Ice Sheet Surface Snow and Ice Refreeze Flux",
+    "long_name": [
+        "Ice Sheet Surface Snow and Ice Refreeze Flux"
+    ],
     "table_id": [
         "landice"
     ],
@@ -15,6 +16,15 @@
     "frequency": [
         "mon"
     ],
-    "cell_measures": "area: areacella",
-    "realm": "landice"
+    "comment": [
+        "Mass flux of surface meltwater which refreezes within the snowpack. Computed as the total refreezing on the land ice portion of the grid cell divided by land ice area in the grid cell.",
+        "quantity averaged over ice_sheet (meaning grounded ice sheet and floating ice shelf) only, to avoid contamination from other surfaces (eg: permafrost)"
+    ],
+    "cell_measures": [
+        "area: areacellg",
+        "area: areacella"
+    ],
+    "realm": [
+        "landice"
+    ]
 }
