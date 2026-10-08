@@ -2,8 +2,9 @@
     "@context": "000_context.jsonld",
     "id": "rsdoabsorb_tavg-ol-hxy-sea",
     "type": "known_branded_variable",
-    "description": "Tendency of heat content for a grid cell from penetrative shortwave radiation within a grid cell.",
-    "long_name": "Net Rate of Absorption of Shortwave Energy in Ocean Layer",
+    "long_name": [
+        "Net Rate of Absorption of Shortwave Energy in Ocean Layer"
+    ],
     "table_id": [
         "ocean"
     ],
@@ -13,6 +14,13 @@
     "frequency": [
         "yr"
     ],
-    "cell_measures": "area: areacello volume: volcello",
-    "realm": "ocean"
+    "comment": [
+        "Tendency of heat content for a grid cell from penetrative shortwave radiation within a grid cell."
+    ],
+    "cell_measures": [
+        "area: areacello volume: volcello"
+    ],
+    "realm": [
+        "ocean"
+    ]
 }

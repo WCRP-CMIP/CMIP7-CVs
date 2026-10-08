@@ -2,8 +2,9 @@
     "@context": "000_context.jsonld",
     "id": "so2_tavg-h2m-hxy-u",
     "type": "known_branded_variable",
-    "description": "Daily mean SO2 volume mixing ratio near surface.",
-    "long_name": "Near-surface daily mean SO2",
+    "long_name": [
+        "Near-surface daily mean SO2"
+    ],
     "table_id": [
         "aerosol"
     ],
@@ -13,6 +14,14 @@
     "frequency": [
         "day"
     ],
-    "cell_measures": "area: areacella",
-    "realm": "aerosol"
+    "comment": [
+        "Daily mean SO2 volume mixing ratio near surface."
+    ],
+    "cell_measures": [
+        "area: areacella"
+    ],
+    "realm": [
+        "aerosol",
+        "atmoschem"
+    ]
 }

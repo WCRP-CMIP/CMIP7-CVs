@@ -2,8 +2,9 @@
     "@context": "000_context.jsonld",
     "id": "ua_tavg-10hpa-hxy-air",
     "type": "known_branded_variable",
-    "description": "Zonal wind on the 10 hPa surface",
-    "long_name": "Eastward Wind at 10hPa",
+    "long_name": [
+        "Eastward Wind at 10hPa"
+    ],
     "table_id": [
         "aerosol"
     ],
@@ -13,6 +14,13 @@
     "frequency": [
         "day"
     ],
-    "cell_measures": "area: areacella",
-    "realm": "aerosol"
+    "comment": [
+        "Zonal wind on the 10 hPa surface"
+    ],
+    "cell_measures": [
+        "area: areacella"
+    ],
+    "realm": [
+        "aerosol"
+    ]
 }

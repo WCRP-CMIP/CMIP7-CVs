@@ -2,8 +2,9 @@
     "@context": "000_context.jsonld",
     "id": "chegph2oo1d_tavg-al-hxy-u",
     "type": "known_branded_variable",
-    "description": "Primary production rate of the hydroxy (OH) radical via H2O+O1D",
-    "long_name": "Primary production of OH (H2O+O1D)",
+    "long_name": [
+        "Primary production of OH (H2O+O1D)"
+    ],
     "table_id": [
         "atmoschem"
     ],
@@ -13,6 +14,14 @@
     "frequency": [
         "mon"
     ],
-    "cell_measures": "area: areacella",
-    "realm": "atmoschem"
+    "comment": [
+        "Primary production rate of the hydroxy (OH) radical via H2O+O1D"
+    ],
+    "cell_measures": [
+        "area: areacella"
+    ],
+    "realm": [
+        "atmoschem",
+        "aerosol"
+    ]
 }

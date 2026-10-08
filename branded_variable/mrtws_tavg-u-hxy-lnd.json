@@ -2,8 +2,9 @@
     "@context": "000_context.jsonld",
     "id": "mrtws_tavg-u-hxy-lnd",
     "type": "known_branded_variable",
-    "description": "requested for C4MIP, OCMIP/OMIP, LUMIP, ScenarioMIP, DECK, DAMIP, GeoMIP, LS3MIP, ??",
-    "long_name": "Terrestrial Water Storage",
+    "long_name": [
+        "Terrestrial Water Storage"
+    ],
     "table_id": [
         "land"
     ],
@@ -15,6 +16,14 @@
         "mon",
         "day"
     ],
-    "cell_measures": "area: areacella",
-    "realm": "land"
+    "comment": [
+        "requested for C4MIP, OCMIP/OMIP, LUMIP, ScenarioMIP, DECK, DAMIP, GeoMIP, LS3MIP, ??",
+        "canopy_and_surface_and_subsurface_water_amount"
+    ],
+    "cell_measures": [
+        "area: areacella"
+    ],
+    "realm": [
+        "land"
+    ]
 }

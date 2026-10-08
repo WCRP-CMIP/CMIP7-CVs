@@ -2,8 +2,9 @@
     "@context": "000_context.jsonld",
     "id": "rsdt_tclmdc-u-hxy-u",
     "type": "known_branded_variable",
-    "description": "Shortwave radiation incident at the top of the atmosphere",
-    "long_name": "TOA Incident Shortwave Radiation",
+    "long_name": [
+        "TOA Incident Shortwave Radiation"
+    ],
     "table_id": [
         "atmos"
     ],
@@ -13,6 +14,13 @@
     "frequency": [
         "1hr"
     ],
-    "cell_measures": "area: areacella",
-    "realm": "atmos"
+    "comment": [
+        "Shortwave radiation incident at the top of the atmosphere"
+    ],
+    "cell_measures": [
+        "area: areacella"
+    ],
+    "realm": [
+        "atmos"
+    ]
 }

@@ -2,8 +2,9 @@
     "@context": "000_context.jsonld",
     "id": "vegheight_tavg-u-hxy-tree",
     "type": "known_branded_variable",
-    "description": "Vegetation height averaged over the tree fraction of a grid cell.",
-    "long_name": "Height of Trees",
+    "long_name": [
+        "Height of Trees"
+    ],
     "table_id": [
         "land"
     ],
@@ -13,6 +14,13 @@
     "frequency": [
         "mon"
     ],
-    "cell_measures": "area: areacella",
-    "realm": "land"
+    "comment": [
+        "Vegetation height averaged over the tree fraction of a grid cell."
+    ],
+    "cell_measures": [
+        "area: areacella"
+    ],
+    "realm": [
+        "land"
+    ]
 }

@@ -2,8 +2,9 @@
     "@context": "000_context.jsonld",
     "id": "tauuogw_tavg-p39-hy-air",
     "type": "known_branded_variable",
-    "description": "Zonal mean of the vertical flux of zonal momentum within the orographic gravity wave parameterization",
-    "long_name": "Zonal mean eastward Reynolds stress from orographic gravity wave parameterization",
+    "long_name": [
+        "Zonal mean eastward Reynolds stress from orographic gravity wave parameterization"
+    ],
     "table_id": [
         "atmos"
     ],
@@ -13,5 +14,10 @@
     "frequency": [
         "day"
     ],
-    "realm": "atmos"
+    "comment": [
+        "Zonal mean of the vertical flux of zonal momentum within the orographic gravity wave parameterization"
+    ],
+    "realm": [
+        "atmos"
+    ]
 }

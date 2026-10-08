@@ -2,8 +2,9 @@
     "@context": "000_context.jsonld",
     "id": "pfull_tavg-al-hxy-u",
     "type": "known_branded_variable",
-    "description": "The atmospheric pressure at the model layer midpoints for all times and levels in the associated output variables",
-    "long_name": "Pressure at Model Full-Levels",
+    "long_name": [
+        "Pressure at Model Full-Levels"
+    ],
     "table_id": [
         "atmos"
     ],
@@ -15,6 +16,14 @@
         "mon",
         "day"
     ],
-    "cell_measures": "area: areacella",
-    "realm": "atmos"
+    "comment": [
+        "The atmospheric pressure at the model layer midpoints for all times and levels in the associated output variables",
+        "Air pressure on model levels"
+    ],
+    "cell_measures": [
+        "area: areacella"
+    ],
+    "realm": [
+        "atmos"
+    ]
 }

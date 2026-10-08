@@ -2,8 +2,9 @@
     "@context": "000_context.jsonld",
     "id": "siu_tavg-u-hxy-si",
     "type": "known_branded_variable",
-    "description": "X-component of sea-ice velocity on native model grid.",
-    "long_name": "X-Component of Sea-Ice Velocity",
+    "long_name": [
+        "X-Component of Sea-Ice Velocity"
+    ],
     "table_id": [
         "seaice"
     ],
@@ -16,6 +17,13 @@
         "day",
         "mon"
     ],
-    "cell_measures": "--MODEL",
-    "realm": "seaice"
+    "comment": [
+        "X-component of sea-ice velocity on native model grid."
+    ],
+    "cell_measures": [
+        "--MODEL"
+    ],
+    "realm": [
+        "seaice"
+    ]
 }

@@ -2,8 +2,9 @@
     "@context": "000_context.jsonld",
     "id": "evspsblveg_tavg-u-hxy-u",
     "type": "known_branded_variable",
-    "description": "The same as the current variable evspsblveg but defined on daily timescales.",
-    "long_name": "Water evaporation from canopy",
+    "long_name": [
+        "Water evaporation from canopy"
+    ],
     "table_id": [
         "land"
     ],
@@ -15,6 +16,14 @@
         "day",
         "3hr"
     ],
-    "cell_measures": "area: areacella",
-    "realm": "land"
+    "comment": [
+        "The same as the current variable evspsblveg but defined on daily timescales.",
+        "Evaporation from canopy"
+    ],
+    "cell_measures": [
+        "area: areacella"
+    ],
+    "realm": [
+        "land"
+    ]
 }

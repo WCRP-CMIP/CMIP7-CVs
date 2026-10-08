@@ -2,8 +2,9 @@
     "@context": "000_context.jsonld",
     "id": "sitempsnic_tavg-u-hxy-si",
     "type": "known_branded_variable",
-    "description": "Mean temperature at the snow-ice interface. This is the surface temperature of ice where snow thickness is zero.",
-    "long_name": "Temperature at Snow-Ice Interface",
+    "long_name": [
+        "Temperature at Snow-Ice Interface"
+    ],
     "table_id": [
         "seaice"
     ],
@@ -15,6 +16,13 @@
         "mon",
         "day"
     ],
-    "cell_measures": "area: areacello",
-    "realm": "seaice"
+    "comment": [
+        "Mean temperature at the snow-ice interface. This is the surface temperature of ice where snow thickness is zero."
+    ],
+    "cell_measures": [
+        "area: areacello"
+    ],
+    "realm": [
+        "seaice"
+    ]
 }

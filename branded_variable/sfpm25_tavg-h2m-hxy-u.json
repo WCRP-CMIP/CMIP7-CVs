@@ -2,8 +2,9 @@
     "@context": "000_context.jsonld",
     "id": "sfpm25_tavg-h2m-hxy-u",
     "type": "known_branded_variable",
-    "description": "Mass fraction of atmospheric particulate compounds with an aerodynamic diameter of less than or equal to 2.5 micrometers. To specify the relative humidity and temperature at which the particle size applies, provide scalar coordinate variables with the standard names of \"relative_humidity\" and \"air_temperature\".",
-    "long_name": "Near-surface PM2.5 Mixing Ratio",
+    "long_name": [
+        "Near-surface PM2.5 Mixing Ratio"
+    ],
     "table_id": [
         "aerosol"
     ],
@@ -15,6 +16,15 @@
         "1hr",
         "day"
     ],
-    "cell_measures": "area: areacella",
-    "realm": "aerosol"
+    "comment": [
+        "Mass fraction of atmospheric particulate compounds with an aerodynamic diameter of less than or equal to 2.5 micrometers. To specify the relative humidity and temperature at which the particle size applies, provide scalar coordinate variables with the standard names of \"relative_humidity\" and \"air_temperature\".",
+        "Daily mean PM2.5 mass mixing ratio near surface."
+    ],
+    "cell_measures": [
+        "area: areacella"
+    ],
+    "realm": [
+        "aerosol",
+        "atmoschem"
+    ]
 }

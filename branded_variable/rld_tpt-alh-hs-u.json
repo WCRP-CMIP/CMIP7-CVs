@@ -2,8 +2,9 @@
     "@context": "000_context.jsonld",
     "id": "rld_tpt-alh-hs-u",
     "type": "known_branded_variable",
-    "description": "Downwelling Longwave Radiation (includes the fluxes at the surface and TOA)",
-    "long_name": "Downwelling Longwave Radiation",
+    "long_name": [
+        "Downwelling Longwave Radiation"
+    ],
     "table_id": [
         "atmos"
     ],
@@ -13,5 +14,10 @@
     "frequency": [
         "subhr"
     ],
-    "realm": "atmos"
+    "comment": [
+        "Downwelling Longwave Radiation (includes the fluxes at the surface and TOA)"
+    ],
+    "realm": [
+        "atmos"
+    ]
 }

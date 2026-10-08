@@ -2,8 +2,9 @@
     "@context": "000_context.jsonld",
     "id": "snw_tavg-u-hxy-si",
     "type": "known_branded_variable",
-    "description": "Total mass of snow on sea ice divided by grid-cell area. This then allows one to analyse the storage of latent heat in the snow, and to calculate the snow-water equivalent.",
-    "long_name": "Snow Mass per Area",
+    "long_name": [
+        "Snow Mass per Area"
+    ],
     "table_id": [
         "seaice"
     ],
@@ -13,6 +14,13 @@
     "frequency": [
         "mon"
     ],
-    "cell_measures": "area: areacello",
-    "realm": "seaice"
+    "comment": [
+        "Total mass of snow on sea ice divided by grid-cell area. This then allows one to analyse the storage of latent heat in the snow, and to calculate the snow-water equivalent."
+    ],
+    "cell_measures": [
+        "area: areacello"
+    ],
+    "realm": [
+        "seaice"
+    ]
 }

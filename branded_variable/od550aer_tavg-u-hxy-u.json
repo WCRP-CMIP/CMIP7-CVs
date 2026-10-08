@@ -2,8 +2,9 @@
     "@context": "000_context.jsonld",
     "id": "od550aer_tavg-u-hxy-u",
     "type": "known_branded_variable",
-    "description": "AOD from the ambient aerosls (i.e., includes aerosol water).  Does not include AOD from stratospheric aerosols if these are prescribed but includes other possible background aerosol types. Needs a comment attribute \"wavelength: 550 nm\"",
-    "long_name": "Ambient Aerosol Optical Thickness at 550nm",
+    "long_name": [
+        "Ambient Aerosol Optical Thickness at 550nm"
+    ],
     "table_id": [
         "aerosol"
     ],
@@ -16,6 +17,14 @@
         "mon",
         "day"
     ],
-    "cell_measures": "area: areacella",
-    "realm": "aerosol"
+    "comment": [
+        "AOD from ambient aerosols (i.e., includes aerosol water).  Does not include AOD from stratospheric aerosols if these are prescribed but includes other possible background aerosol types. Needs a comment attribute \"wavelength: 550 nm\"",
+        "AOD from the ambient aerosls (i.e., includes aerosol water).  Does not include AOD from stratospheric aerosols if these are prescribed but includes other possible background aerosol types. Needs a comment attribute \"wavelength: 550 nm\""
+    ],
+    "cell_measures": [
+        "area: areacella"
+    ],
+    "realm": [
+        "aerosol"
+    ]
 }

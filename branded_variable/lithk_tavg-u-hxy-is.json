@@ -2,8 +2,9 @@
     "@context": "000_context.jsonld",
     "id": "lithk_tavg-u-hxy-is",
     "type": "known_branded_variable",
-    "description": "This is needed in case ice sheet thickness changes in time",
-    "long_name": "Ice Sheet Thickness",
+    "long_name": [
+        "Ice Sheet Thickness"
+    ],
     "table_id": [
         "landice"
     ],
@@ -14,6 +15,14 @@
     "frequency": [
         "yr"
     ],
-    "cell_measures": "area: areacellg",
-    "realm": "landice"
+    "comment": [
+        "This is needed in case ice sheet thickness changes in time"
+    ],
+    "cell_measures": [
+        "area: areacellg"
+    ],
+    "realm": [
+        "landice",
+        "land"
+    ]
 }

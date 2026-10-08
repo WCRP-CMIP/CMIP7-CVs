@@ -2,8 +2,9 @@
     "@context": "000_context.jsonld",
     "id": "pfscint_tavg-op4-hxy-sea",
     "type": "known_branded_variable",
-    "description": "This is a fundamental aspect of the changes in the hydrological cycle and their impact on the oceans, and due to new numerical schemes and vertical discretizations, it is important to calculate it consistently with the model formulation.",
-    "long_name": "Integral wrt depth of seawater preformed salinity expressed as salt mass content",
+    "long_name": [
+        "Integral wrt depth of seawater preformed salinity expressed as salt mass content"
+    ],
     "table_id": [
         "ocean"
     ],
@@ -13,6 +14,13 @@
     "frequency": [
         "mon"
     ],
-    "cell_measures": "area: areacello",
-    "realm": "ocean"
+    "comment": [
+        "This is a fundamental aspect of the changes in the hydrological cycle and their impact on the oceans, and due to new numerical schemes and vertical discretizations, it is important to calculate it consistently with the model formulation."
+    ],
+    "cell_measures": [
+        "area: areacello"
+    ],
+    "realm": [
+        "ocean"
+    ]
 }

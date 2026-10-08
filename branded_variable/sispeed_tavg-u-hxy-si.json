@@ -2,8 +2,9 @@
     "@context": "000_context.jsonld",
     "id": "sispeed_tavg-u-hxy-si",
     "type": "known_branded_variable",
-    "description": "Speed of ice (i.e. mean absolute velocity) to account for back-and-forth movement of the ice.",
-    "long_name": "Sea-Ice Speed",
+    "long_name": [
+        "Sea-Ice Speed"
+    ],
     "table_id": [
         "seaice"
     ],
@@ -15,6 +16,13 @@
         "mon",
         "day"
     ],
-    "cell_measures": "area: areacello",
-    "realm": "seaice"
+    "comment": [
+        "Speed of ice (i.e. mean absolute velocity) to account for back-and-forth movement of the ice."
+    ],
+    "cell_measures": [
+        "area: areacello"
+    ],
+    "realm": [
+        "seaice"
+    ]
 }

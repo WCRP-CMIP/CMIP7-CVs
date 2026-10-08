@@ -2,8 +2,9 @@
     "@context": "000_context.jsonld",
     "id": "hus_tpt-al-hxy-u",
     "type": "known_branded_variable",
-    "description": "Specific humidity is the mass fraction of water vapor in (moist) air.",
-    "long_name": "Specific Humidity",
+    "long_name": [
+        "Specific Humidity"
+    ],
     "table_id": [
         "atmos"
     ],
@@ -15,6 +16,14 @@
         "3hr",
         "6hr"
     ],
-    "cell_measures": "area: areacella",
-    "realm": "atmos"
+    "comment": [
+        "Specific Humidity",
+        "Specific humidity is the mass fraction of water vapor in (moist) air."
+    ],
+    "cell_measures": [
+        "area: areacella"
+    ],
+    "realm": [
+        "atmos"
+    ]
 }

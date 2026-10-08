@@ -2,8 +2,9 @@
     "@context": "000_context.jsonld",
     "id": "sftlaf_ti-u-hxy-u",
     "type": "known_branded_variable",
-    "description": "Fraction of horizontal land grid cell area occupied by lake.",
-    "long_name": "Fraction of the Grid Cell Occupied by Lake",
+    "long_name": [
+        "Fraction of the Grid Cell Occupied by Lake"
+    ],
     "table_id": [
         "land"
     ],
@@ -13,6 +14,13 @@
     "frequency": [
         "fx"
     ],
-    "cell_measures": "area: areacella",
-    "realm": "land"
+    "comment": [
+        "Fraction of horizontal land grid cell area occupied by lake."
+    ],
+    "cell_measures": [
+        "area: areacella"
+    ],
+    "realm": [
+        "land"
+    ]
 }

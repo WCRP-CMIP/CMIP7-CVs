@@ -2,8 +2,9 @@
     "@context": "000_context.jsonld",
     "id": "lithk_ti-u-hxy-is",
     "type": "known_branded_variable",
-    "description": "The thickness of the ice sheet",
-    "long_name": "Ice Sheet Thickness",
+    "long_name": [
+        "Ice Sheet Thickness"
+    ],
     "table_id": [
         "landice"
     ],
@@ -14,6 +15,14 @@
     "frequency": [
         "fx"
     ],
-    "cell_measures": "area: areacellg",
-    "realm": "landice"
+    "comment": [
+        "The thickness of the ice sheet"
+    ],
+    "cell_measures": [
+        "area: areacellg"
+    ],
+    "realm": [
+        "landice",
+        "land"
+    ]
 }

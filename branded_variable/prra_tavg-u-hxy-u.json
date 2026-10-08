@@ -2,8 +2,9 @@
     "@context": "000_context.jsonld",
     "id": "prra_tavg-u-hxy-u",
     "type": "known_branded_variable",
-    "description": "Precipitation rate at surface: Includes precipitation of all forms of water in the liquid phase",
-    "long_name": "Rainfall Flux",
+    "long_name": [
+        "Rainfall Flux"
+    ],
     "table_id": [
         "atmos"
     ],
@@ -16,6 +17,14 @@
         "6hr",
         "mon"
     ],
-    "cell_measures": "area: areacella",
-    "realm": "atmos"
+    "comment": [
+        "Precipitation rate at surface: Includes precipitation of all forms of water in the liquid phase",
+        "Rainfall rate at surface: Includes precipitation of all forms of water in the liquid phase"
+    ],
+    "cell_measures": [
+        "area: areacella"
+    ],
+    "realm": [
+        "atmos"
+    ]
 }

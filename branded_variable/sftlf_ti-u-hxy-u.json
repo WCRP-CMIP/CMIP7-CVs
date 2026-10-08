@@ -2,8 +2,9 @@
     "@context": "000_context.jsonld",
     "id": "sftlf_ti-u-hxy-u",
     "type": "known_branded_variable",
-    "description": "Percentage of horizontal area occupied by land.",
-    "long_name": "Percentage of the Grid Cell Occupied by Land (Including Lakes)",
+    "long_name": [
+        "Percentage of the Grid Cell Occupied by Land (Including Lakes)"
+    ],
     "table_id": [
         "atmos"
     ],
@@ -13,6 +14,13 @@
     "frequency": [
         "fx"
     ],
-    "cell_measures": "area: areacella",
-    "realm": "atmos"
+    "comment": [
+        "Percentage of horizontal area occupied by land."
+    ],
+    "cell_measures": [
+        "area: areacella"
+    ],
+    "realm": [
+        "atmos"
+    ]
 }

@@ -2,8 +2,9 @@
     "@context": "000_context.jsonld",
     "id": "nland_tavg-u-hxy-lnd",
     "type": "known_branded_variable",
-    "description": "Report missing data over ocean grid cells. For fractional land report value averaged over the land fraction.",
-    "long_name": "Total Nitrogen in All Terrestrial Nitrogen Pools",
+    "long_name": [
+        "Total Nitrogen in All Terrestrial Nitrogen Pools"
+    ],
     "table_id": [
         "land"
     ],
@@ -13,6 +14,13 @@
     "frequency": [
         "mon"
     ],
-    "cell_measures": "area: areacella",
-    "realm": "land"
+    "comment": [
+        "Report missing data over ocean grid cells. For fractional land report value averaged over the land fraction."
+    ],
+    "cell_measures": [
+        "area: areacella"
+    ],
+    "realm": [
+        "land"
+    ]
 }

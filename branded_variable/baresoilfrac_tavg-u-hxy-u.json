@@ -2,8 +2,9 @@
     "@context": "000_context.jsonld",
     "id": "baresoilfrac_tavg-u-hxy-u",
     "type": "known_branded_variable",
-    "description": "Percentage of entire grid cell  that is covered by bare soil.",
-    "long_name": "Bare Soil Percentage Area Coverage",
+    "long_name": [
+        "Bare Soil Percentage Area Coverage"
+    ],
     "table_id": [
         "land"
     ],
@@ -15,6 +16,13 @@
         "mon",
         "yr"
     ],
-    "cell_measures": "area: areacella",
-    "realm": "land"
+    "comment": [
+        "Percentage of entire grid cell  that is covered by bare soil."
+    ],
+    "cell_measures": [
+        "area: areacella"
+    ],
+    "realm": [
+        "land"
+    ]
 }

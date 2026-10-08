@@ -2,8 +2,9 @@
     "@context": "000_context.jsonld",
     "id": "cstem_tavg-u-hxy-lnd",
     "type": "known_branded_variable",
-    "description": "including sapwood and hardwood.",
-    "long_name": "Carbon Mass in Stem",
+    "long_name": [
+        "Carbon Mass in Stem"
+    ],
     "table_id": [
         "land"
     ],
@@ -13,6 +14,13 @@
     "frequency": [
         "mon"
     ],
-    "cell_measures": "area: areacella",
-    "realm": "land"
+    "comment": [
+        "including sapwood and hardwood."
+    ],
+    "cell_measures": [
+        "area: areacella"
+    ],
+    "realm": [
+        "land"
+    ]
 }

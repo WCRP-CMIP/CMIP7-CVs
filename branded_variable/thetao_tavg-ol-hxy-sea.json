@@ -2,8 +2,9 @@
     "@context": "000_context.jsonld",
     "id": "thetao_tavg-ol-hxy-sea",
     "type": "known_branded_variable",
-    "description": "Diagnostic should be contributed even for models using conservative temperature as prognostic field.",
-    "long_name": "Sea Water Potential Temperature",
+    "long_name": [
+        "Sea Water Potential Temperature"
+    ],
     "table_id": [
         "ocean"
     ],
@@ -16,6 +17,13 @@
         "mon",
         "dec"
     ],
-    "cell_measures": "area: areacello volume: volcello",
-    "realm": "ocean"
+    "comment": [
+        "Diagnostic should be contributed even for models using conservative temperature as prognostic field."
+    ],
+    "cell_measures": [
+        "area: areacello volume: volcello"
+    ],
+    "realm": [
+        "ocean"
+    ]
 }

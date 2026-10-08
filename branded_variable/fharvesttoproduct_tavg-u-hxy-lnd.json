@@ -2,8 +2,9 @@
     "@context": "000_context.jsonld",
     "id": "fharvesttoproduct_tavg-u-hxy-lnd",
     "type": "known_branded_variable",
-    "description": "be it food or wood harvest, any carbon that is subsequently stored is reported here",
-    "long_name": "Harvested Biomass That Goes into Product Pool",
+    "long_name": [
+        "Harvested Biomass That Goes into Product Pool"
+    ],
     "table_id": [
         "land"
     ],
@@ -13,6 +14,13 @@
     "frequency": [
         "mon"
     ],
-    "cell_measures": "area: areacella",
-    "realm": "land"
+    "comment": [
+        "be it food or wood harvest, any carbon that is subsequently stored is reported here"
+    ],
+    "cell_measures": [
+        "area: areacella"
+    ],
+    "realm": [
+        "land"
+    ]
 }

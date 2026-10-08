@@ -2,8 +2,9 @@
     "@context": "000_context.jsonld",
     "id": "c13soil_tavg-u-hxy-lnd",
     "type": "known_branded_variable",
-    "description": "Carbon-13 mass content per unit area in soil.",
-    "long_name": "Mass of 13C in Soil Pool",
+    "long_name": [
+        "Mass of 13C in Soil Pool"
+    ],
     "table_id": [
         "land"
     ],
@@ -13,6 +14,13 @@
     "frequency": [
         "mon"
     ],
-    "cell_measures": "area: areacella",
-    "realm": "land"
+    "comment": [
+        "Carbon-13 mass content per unit area in soil."
+    ],
+    "cell_measures": [
+        "area: areacella"
+    ],
+    "realm": [
+        "land"
+    ]
 }

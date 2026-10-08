@@ -2,8 +2,9 @@
     "@context": "000_context.jsonld",
     "id": "prra_tavg-u-hxy-lnd",
     "type": "known_branded_variable",
-    "description": "rainfall_flux",
-    "long_name": "Rainfall Flux over Land",
+    "long_name": [
+        "Rainfall Flux over Land"
+    ],
     "table_id": [
         "atmos"
     ],
@@ -13,6 +14,13 @@
     "frequency": [
         "day"
     ],
-    "cell_measures": "area: areacella",
-    "realm": "atmos"
+    "comment": [
+        "rainfall_flux"
+    ],
+    "cell_measures": [
+        "area: areacella"
+    ],
+    "realm": [
+        "atmos"
+    ]
 }

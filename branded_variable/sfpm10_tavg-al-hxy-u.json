@@ -2,8 +2,9 @@
     "@context": "000_context.jsonld",
     "id": "sfpm10_tavg-al-hxy-u",
     "type": "known_branded_variable",
-    "description": "Mass fraction atmospheric particulate compounds with an aerodynamic diameter of less than or equal to 10 micrometers",
-    "long_name": "PM10 Mass Mixing Ratio",
+    "long_name": [
+        "PM10 Mass Mixing Ratio"
+    ],
     "table_id": [
         "aerosol"
     ],
@@ -14,6 +15,13 @@
     "frequency": [
         "mon"
     ],
-    "cell_measures": "area: areacella",
-    "realm": "aerosol"
+    "comment": [
+        "Mass fraction atmospheric particulate compounds with an aerodynamic diameter of less than or equal to 10 micrometers"
+    ],
+    "cell_measures": [
+        "area: areacella"
+    ],
+    "realm": [
+        "aerosol"
+    ]
 }

@@ -2,8 +2,9 @@
     "@context": "000_context.jsonld",
     "id": "prsn_tpt-u-hs-u",
     "type": "known_branded_variable",
-    "description": "at surface; includes precipitation of all forms of water in the solid phase",
-    "long_name": "Snowfall Flux",
+    "long_name": [
+        "Snowfall Flux"
+    ],
     "table_id": [
         "atmos"
     ],
@@ -13,5 +14,10 @@
     "frequency": [
         "subhr"
     ],
-    "realm": "atmos"
+    "comment": [
+        "at surface; includes precipitation of all forms of water in the solid phase"
+    ],
+    "realm": [
+        "atmos"
+    ]
 }

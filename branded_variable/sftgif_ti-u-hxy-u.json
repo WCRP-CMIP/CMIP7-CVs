@@ -2,8 +2,9 @@
     "@context": "000_context.jsonld",
     "id": "sftgif_ti-u-hxy-u",
     "type": "known_branded_variable",
-    "description": "fraction of grid cell occupied by \"permanent\" ice (i.e., glaciers).",
-    "long_name": "Land Ice Area Percentage",
+    "long_name": [
+        "Land Ice Area Percentage"
+    ],
     "table_id": [
         "land"
     ],
@@ -13,6 +14,13 @@
     "frequency": [
         "fx"
     ],
-    "cell_measures": "area: areacella",
-    "realm": "land"
+    "comment": [
+        "fraction of grid cell occupied by \"permanent\" ice (i.e., glaciers)."
+    ],
+    "cell_measures": [
+        "area: areacella"
+    ],
+    "realm": [
+        "land"
+    ]
 }

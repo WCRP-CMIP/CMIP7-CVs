@@ -2,8 +2,9 @@
     "@context": "000_context.jsonld",
     "id": "jno2_tavg-al-hxy-u",
     "type": "known_branded_variable",
-    "description": "Photolysis rate of nitrogen dioxide (NO2)",
-    "long_name": "Photolysis Rate of NO2",
+    "long_name": [
+        "Photolysis Rate of NO2"
+    ],
     "table_id": [
         "aerosol"
     ],
@@ -13,6 +14,13 @@
     "frequency": [
         "mon"
     ],
-    "cell_measures": "area: areacella",
-    "realm": "aerosol"
+    "comment": [
+        "Photolysis rate of nitrogen dioxide (NO2)"
+    ],
+    "cell_measures": [
+        "area: areacella"
+    ],
+    "realm": [
+        "aerosol"
+    ]
 }

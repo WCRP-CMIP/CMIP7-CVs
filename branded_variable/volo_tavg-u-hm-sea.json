@@ -2,8 +2,9 @@
     "@context": "000_context.jsonld",
     "id": "volo_tavg-u-hm-sea",
     "type": "known_branded_variable",
-    "description": "Total volume of liquid sea water.",
-    "long_name": "Sea Water Volume",
+    "long_name": [
+        "Sea Water Volume"
+    ],
     "table_id": [
         "ocean"
     ],
@@ -15,5 +16,10 @@
         "mon",
         "dec"
     ],
-    "realm": "ocean"
+    "comment": [
+        "Total volume of liquid sea water."
+    ],
+    "realm": [
+        "ocean"
+    ]
 }

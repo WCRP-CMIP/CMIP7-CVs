@@ -2,8 +2,11 @@
     "@context": "000_context.jsonld",
     "id": "sivol_tavg-u-hm-u",
     "type": "known_branded_variable",
-    "description": "Total integrated volume of sea ice in the Northern Hemisphere.",
-    "long_name": "Sea-Ice Volume",
+    "long_name": [
+        "Sea-Ice Volume North",
+        "Sea-Ice Volume South",
+        "Sea-Ice Volume"
+    ],
     "table_id": [
         "seaice"
     ],
@@ -17,5 +20,11 @@
         "mon",
         "day"
     ],
-    "realm": "seaice"
+    "comment": [
+        "Total integrated volume of sea ice in the Northern Hemisphere.",
+        "Total integrated volume of sea ice in the Southern Hemisphere."
+    ],
+    "realm": [
+        "seaice"
+    ]
 }

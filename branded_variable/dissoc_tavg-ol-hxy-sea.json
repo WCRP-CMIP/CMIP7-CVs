@@ -2,8 +2,9 @@
     "@context": "000_context.jsonld",
     "id": "dissoc_tavg-ol-hxy-sea",
     "type": "known_branded_variable",
-    "description": "Sum of dissolved carbon component concentrations explicitly represented (i.e. not ~40 uM refractory unless explicit)",
-    "long_name": "Dissolved Organic Carbon Concentration",
+    "long_name": [
+        "Dissolved Organic Carbon Concentration"
+    ],
     "table_id": [
         "ocnbgchem"
     ],
@@ -15,6 +16,13 @@
         "mon",
         "day"
     ],
-    "cell_measures": "area: areacello volume: volcello",
-    "realm": "ocnbgchem"
+    "comment": [
+        "Sum of dissolved carbon component concentrations explicitly represented (i.e. not ~40 uM refractory unless explicit)"
+    ],
+    "cell_measures": [
+        "area: areacello volume: volcello"
+    ],
+    "realm": [
+        "ocnbgchem"
+    ]
 }

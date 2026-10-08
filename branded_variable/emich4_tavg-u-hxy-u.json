@@ -2,8 +2,9 @@
     "@context": "000_context.jsonld",
     "id": "emich4_tavg-u-hxy-u",
     "type": "known_branded_variable",
-    "description": "This is the total emission rate of methane (CH4) into the atmosphere",
-    "long_name": "total emission rate of CH4",
+    "long_name": [
+        "total emission rate of CH4"
+    ],
     "table_id": [
         "atmoschem"
     ],
@@ -13,6 +14,14 @@
     "frequency": [
         "mon"
     ],
-    "cell_measures": "area: areacella",
-    "realm": "atmoschem"
+    "comment": [
+        "This is the total emission rate of methane (CH4) into the atmosphere"
+    ],
+    "cell_measures": [
+        "area: areacella"
+    ],
+    "realm": [
+        "atmoschem",
+        "aerosol"
+    ]
 }

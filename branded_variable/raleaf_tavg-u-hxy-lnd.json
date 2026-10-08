@@ -2,8 +2,9 @@
     "@context": "000_context.jsonld",
     "id": "raleaf_tavg-u-hxy-lnd",
     "type": "known_branded_variable",
-    "description": "added for completeness with Ra_root",
-    "long_name": "Total Respiration from Leaves as Carbon Mass Flux [kgC m-2 s-1]",
+    "long_name": [
+        "Total Respiration from Leaves as Carbon Mass Flux [kgC m-2 s-1]"
+    ],
     "table_id": [
         "land"
     ],
@@ -13,6 +14,13 @@
     "frequency": [
         "mon"
     ],
-    "cell_measures": "area: areacella",
-    "realm": "land"
+    "comment": [
+        "added for completeness with Ra_root"
+    ],
+    "cell_measures": [
+        "area: areacella"
+    ],
+    "realm": [
+        "land"
+    ]
 }

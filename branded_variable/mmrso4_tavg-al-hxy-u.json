@@ -2,8 +2,9 @@
     "@context": "000_context.jsonld",
     "id": "mmrso4_tavg-al-hxy-u",
     "type": "known_branded_variable",
-    "description": "Dry mass of sulfate (SO4) in aerosol particles as a fraction of air mass.",
-    "long_name": "Aerosol Sulfate Mass Mixing Ratio",
+    "long_name": [
+        "Aerosol Sulfate Mass Mixing Ratio"
+    ],
     "table_id": [
         "aerosol"
     ],
@@ -14,6 +15,14 @@
     "frequency": [
         "mon"
     ],
-    "cell_measures": "area: areacella",
-    "realm": "aerosol"
+    "comment": [
+        "Dry mass of sulfate (SO4) in aerosol particles as a fraction of air mass."
+    ],
+    "cell_measures": [
+        "area: areacella"
+    ],
+    "realm": [
+        "aerosol",
+        "atmoschem"
+    ]
 }

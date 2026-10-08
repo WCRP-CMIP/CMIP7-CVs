@@ -2,8 +2,9 @@
     "@context": "000_context.jsonld",
     "id": "tnhusa_tpt-al-hs-u",
     "type": "known_branded_variable",
-    "description": "Tendency of Specific Humidity due to Advection",
-    "long_name": "Tendency of Specific Humidity Due to Advection",
+    "long_name": [
+        "Tendency of Specific Humidity Due to Advection"
+    ],
     "table_id": [
         "atmos"
     ],
@@ -13,5 +14,10 @@
     "frequency": [
         "subhr"
     ],
-    "realm": "atmos"
+    "comment": [
+        "Tendency of Specific Humidity due to Advection"
+    ],
+    "realm": [
+        "atmos"
+    ]
 }

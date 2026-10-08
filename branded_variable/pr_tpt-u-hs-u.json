@@ -2,8 +2,9 @@
     "@context": "000_context.jsonld",
     "id": "pr_tpt-u-hs-u",
     "type": "known_branded_variable",
-    "description": "at surface; includes both liquid and solid phases from all types of clouds (both large-scale and convective)",
-    "long_name": "Precipitation",
+    "long_name": [
+        "Precipitation"
+    ],
     "table_id": [
         "atmos"
     ],
@@ -13,5 +14,10 @@
     "frequency": [
         "subhr"
     ],
-    "realm": "atmos"
+    "comment": [
+        "at surface; includes both liquid and solid phases from all types of clouds (both large-scale and convective)"
+    ],
+    "realm": [
+        "atmos"
+    ]
 }

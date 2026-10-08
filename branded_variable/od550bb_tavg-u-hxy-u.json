@@ -2,8 +2,9 @@
     "@context": "000_context.jsonld",
     "id": "od550bb_tavg-u-hxy-u",
     "type": "known_branded_variable",
-    "description": "total organic aerosol AOD due to biomass burning (excluding so4, nitrate BB components)",
-    "long_name": "Aerosol Optical Depth at 550nm Due to Biomass Burning",
+    "long_name": [
+        "Aerosol Optical Depth at 550nm Due to Biomass Burning"
+    ],
     "table_id": [
         "aerosol"
     ],
@@ -13,6 +14,13 @@
     "frequency": [
         "mon"
     ],
-    "cell_measures": "area: areacella",
-    "realm": "aerosol"
+    "comment": [
+        "total organic aerosol AOD due to biomass burning (excluding so4, nitrate BB components)"
+    ],
+    "cell_measures": [
+        "area: areacella"
+    ],
+    "realm": [
+        "aerosol"
+    ]
 }

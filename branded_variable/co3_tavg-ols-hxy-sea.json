@@ -2,8 +2,9 @@
     "@context": "000_context.jsonld",
     "id": "co3_tavg-ols-hxy-sea",
     "type": "known_branded_variable",
-    "description": "Near surface mole concentration (number of moles per unit volume: molarity) of the carbonate anion (CO3).",
-    "long_name": "Surface Carbonate Ion Concentration",
+    "long_name": [
+        "Surface Carbonate Ion Concentration"
+    ],
     "table_id": [
         "ocnbgchem"
     ],
@@ -13,6 +14,13 @@
     "frequency": [
         "day"
     ],
-    "cell_measures": "area: areacello",
-    "realm": "ocnbgchem"
+    "comment": [
+        "Near surface mole concentration (number of moles per unit volume: molarity) of the carbonate anion (CO3)."
+    ],
+    "cell_measures": [
+        "area: areacello"
+    ],
+    "realm": [
+        "ocnbgchem"
+    ]
 }

@@ -2,8 +2,9 @@
     "@context": "000_context.jsonld",
     "id": "tendacabf_tavg-u-hm-is",
     "type": "known_branded_variable",
-    "description": "Antarctica",
-    "long_name": "Total Surface Mass Balance Flux",
+    "long_name": [
+        "Total Surface Mass Balance Flux"
+    ],
     "table_id": [
         "landice"
     ],
@@ -14,5 +15,11 @@
     "frequency": [
         "yr"
     ],
-    "realm": "landice"
+    "comment": [
+        "Greenland",
+        "Antarctica"
+    ],
+    "realm": [
+        "landice"
+    ]
 }

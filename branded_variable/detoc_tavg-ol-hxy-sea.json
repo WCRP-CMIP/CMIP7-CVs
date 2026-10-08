@@ -2,8 +2,9 @@
     "@context": "000_context.jsonld",
     "id": "detoc_tavg-ol-hxy-sea",
     "type": "known_branded_variable",
-    "description": "sum of detrital organic carbon component concentrations",
-    "long_name": "Detrital Organic Carbon Concentration",
+    "long_name": [
+        "Detrital Organic Carbon Concentration"
+    ],
     "table_id": [
         "ocnbgchem"
     ],
@@ -15,6 +16,13 @@
         "day",
         "mon"
     ],
-    "cell_measures": "area: areacello volume: volcello",
-    "realm": "ocnbgchem"
+    "comment": [
+        "sum of detrital organic carbon component concentrations"
+    ],
+    "cell_measures": [
+        "area: areacello volume: volcello"
+    ],
+    "realm": [
+        "ocnbgchem"
+    ]
 }

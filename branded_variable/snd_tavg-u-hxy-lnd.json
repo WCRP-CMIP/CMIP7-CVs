@@ -2,8 +2,9 @@
     "@context": "000_context.jsonld",
     "id": "snd_tavg-u-hxy-lnd",
     "type": "known_branded_variable",
-    "description": "where land over land, this is computed as the mean thickness of snow in the land portion of the grid cell (averaging over the entire land portion, including the snow-free fraction).  Reported as missing where the land fraction is 0.",
-    "long_name": "Snow Depth",
+    "long_name": [
+        "Snow Depth"
+    ],
     "table_id": [
         "landice"
     ],
@@ -15,6 +16,15 @@
         "day",
         "mon"
     ],
-    "cell_measures": "area: areacella",
-    "realm": "landice"
+    "comment": [
+        "where land over land, this is computed as the mean thickness of snow in the land portion of the grid cell (averaging over the entire land portion, including the snow-free fraction).  Reported as 0.0 where the land fraction is 0.",
+        "where land over land, this is computed as the mean thickness of snow in the land portion of the grid cell (averaging over the entire land portion, including the snow-free fraction).  Reported as missing where the land fraction is 0."
+    ],
+    "cell_measures": [
+        "area: areacella"
+    ],
+    "realm": [
+        "landice",
+        "land"
+    ]
 }

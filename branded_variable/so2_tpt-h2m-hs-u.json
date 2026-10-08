@@ -2,8 +2,9 @@
     "@context": "000_context.jsonld",
     "id": "so2_tpt-h2m-hs-u",
     "type": "known_branded_variable",
-    "description": "This variable represents the instantaneous near surface so2 volume mixing ration at CF sites, sampled every 3 hours",
-    "long_name": "Surface SO2 volume mixing ratio at CF sites near-surface",
+    "long_name": [
+        "Surface SO2 volume mixing ratio at CF sites near-surface"
+    ],
     "table_id": [
         "aerosol"
     ],
@@ -13,6 +14,14 @@
     "frequency": [
         "3hr"
     ],
-    "cell_measures": "--MODEL",
-    "realm": "aerosol"
+    "comment": [
+        "This variable represents the instantaneous near surface so2 volume mixing ration at CF sites, sampled every 3 hours"
+    ],
+    "cell_measures": [
+        "--MODEL"
+    ],
+    "realm": [
+        "aerosol",
+        "atmoschem"
+    ]
 }

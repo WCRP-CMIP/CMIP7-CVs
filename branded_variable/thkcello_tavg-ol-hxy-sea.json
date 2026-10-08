@@ -2,8 +2,9 @@
     "@context": "000_context.jsonld",
     "id": "thkcello_tavg-ol-hxy-sea",
     "type": "known_branded_variable",
-    "description": "The time varying thickness of ocean cells. \"Thickness\" means the vertical extent of a layer. \"Cell\" refers to a model grid-cell.",
-    "long_name": "Ocean Model Cell Thickness",
+    "long_name": [
+        "Ocean Model Cell Thickness"
+    ],
     "table_id": [
         "ocean"
     ],
@@ -15,6 +16,13 @@
         "mon",
         "dec"
     ],
-    "cell_measures": "area: areacello volume: volcello",
-    "realm": "ocean"
+    "comment": [
+        "The time varying thickness of ocean cells. \"Thickness\" means the vertical extent of a layer. \"Cell\" refers to a model grid-cell."
+    ],
+    "cell_measures": [
+        "area: areacello volume: volcello"
+    ],
+    "realm": [
+        "ocean"
+    ]
 }

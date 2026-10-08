@@ -2,8 +2,9 @@
     "@context": "000_context.jsonld",
     "id": "evspsbl_tavg-u-hxy-lnd",
     "type": "known_branded_variable",
-    "description": "Evaporation at surface (also known as evapotranspiration): flux of water into the atmosphere due to conversion of both liquid and solid phases to vapor (from underlying surface and vegetation)",
-    "long_name": "Evaporation Including Sublimation and Transpiration",
+    "long_name": [
+        "Evaporation Including Sublimation and Transpiration"
+    ],
     "table_id": [
         "atmos"
     ],
@@ -13,6 +14,14 @@
     "frequency": [
         "day"
     ],
-    "cell_measures": "area: areacella",
-    "realm": "atmos"
+    "comment": [
+        "Evaporation at surface (also known as evapotranspiration): flux of water into the atmosphere due to conversion of both liquid and solid phases to vapor (from underlying surface and vegetation)"
+    ],
+    "cell_measures": [
+        "area: areacella"
+    ],
+    "realm": [
+        "atmos",
+        "land"
+    ]
 }

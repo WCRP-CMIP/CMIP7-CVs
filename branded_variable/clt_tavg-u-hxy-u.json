@@ -2,8 +2,9 @@
     "@context": "000_context.jsonld",
     "id": "clt_tavg-u-hxy-u",
     "type": "known_branded_variable",
-    "description": "Total cloud area fraction (reported as a percentage) for the whole atmospheric column, as seen from the surface or the top of the atmosphere. Includes both large-scale and convective cloud.",
-    "long_name": "Total Cloud Cover Percentage",
+    "long_name": [
+        "Total Cloud Cover Percentage"
+    ],
     "table_id": [
         "atmos"
     ],
@@ -20,6 +21,16 @@
         "3hr",
         "day"
     ],
-    "cell_measures": "area: areacella",
-    "realm": "atmos"
+    "comment": [
+        "Total cloud area fraction (reported as a percentage) for the whole atmospheric column, as seen from the surface or the top of the atmosphere. Includes both large-scale and convective cloud.",
+        "for the whole atmospheric column, as seen from the surface or the top of the atmosphere. Include both large-scale and convective cloud.",
+        "for the whole atmospheric column, as seen from the surface or the top of the atmosphere. Include both large-scale and convective cloud.  This is a 3-hour mean.",
+        "for the whole atmospheric column, as seen from the surface or the top of the atmosphere. Includes both large-scale and convective cloud."
+    ],
+    "cell_measures": [
+        "area: areacella"
+    ],
+    "realm": [
+        "atmos"
+    ]
 }

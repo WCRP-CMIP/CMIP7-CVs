@@ -2,8 +2,9 @@
     "@context": "000_context.jsonld",
     "id": "esn_tavg-u-hxy-lnd",
     "type": "known_branded_variable",
-    "description": "The flux due to conversion of liquid or solid water into vapor at the surface where there is snow on land",
-    "long_name": "Snow Evaporation",
+    "long_name": [
+        "Snow Evaporation"
+    ],
     "table_id": [
         "land"
     ],
@@ -13,6 +14,13 @@
     "frequency": [
         "day"
     ],
-    "cell_measures": "area: areacella",
-    "realm": "land"
+    "comment": [
+        "The flux due to conversion of liquid or solid water into vapor at the surface where there is snow on land"
+    ],
+    "cell_measures": [
+        "area: areacella"
+    ],
+    "realm": [
+        "land"
+    ]
 }

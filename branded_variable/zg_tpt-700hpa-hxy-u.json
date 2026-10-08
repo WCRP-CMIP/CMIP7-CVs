@@ -2,8 +2,9 @@
     "@context": "000_context.jsonld",
     "id": "zg_tpt-700hpa-hxy-u",
     "type": "known_branded_variable",
-    "description": "700 hPa geopotential height at 6 hourly instantaneous frequency",
-    "long_name": "zg700",
+    "long_name": [
+        "zg700"
+    ],
     "table_id": [
         "atmos"
     ],
@@ -13,6 +14,13 @@
     "frequency": [
         "6hr"
     ],
-    "cell_measures": "area: areacella",
-    "realm": "atmos"
+    "comment": [
+        "700 hPa geopotential height at 6 hourly instantaneous frequency"
+    ],
+    "cell_measures": [
+        "area: areacella"
+    ],
+    "realm": [
+        "atmos"
+    ]
 }

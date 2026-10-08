@@ -2,8 +2,9 @@
     "@context": "000_context.jsonld",
     "id": "mmroa_tavg-al-hxy-u",
     "type": "known_branded_variable",
-    "description": "We recommend a scale factor of POM=1.4*OC, unless your model has more detailed info available.",
-    "long_name": "Total Organic Aerosol Mass Mixing Ratio",
+    "long_name": [
+        "Total Organic Aerosol Mass Mixing Ratio"
+    ],
     "table_id": [
         "aerosol"
     ],
@@ -14,6 +15,14 @@
     "frequency": [
         "mon"
     ],
-    "cell_measures": "area: areacella",
-    "realm": "aerosol"
+    "comment": [
+        "We recommend a scale factor of POM=1.4*OC, unless your model has more detailed info available."
+    ],
+    "cell_measures": [
+        "area: areacella"
+    ],
+    "realm": [
+        "aerosol",
+        "atmoschem"
+    ]
 }

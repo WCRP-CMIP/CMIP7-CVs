@@ -2,8 +2,9 @@
     "@context": "000_context.jsonld",
     "id": "lithk_ti-u-hxy-u",
     "type": "known_branded_variable",
-    "description": "This variable identifies the thickness of a prescribed ice sheet. This information is relevant to better understand how different models treat ice. For models where an ice sheet is just orography + an ice sheet mask, the value should be set to zero. For models that explicitly resolve an ice sheet thickness, the thickness of the ice sheet should be provided.",
-    "long_name": "Ice sheet thickness",
+    "long_name": [
+        "Ice sheet thickness"
+    ],
     "table_id": [
         "landice"
     ],
@@ -13,6 +14,14 @@
     "frequency": [
         "fx"
     ],
-    "cell_measures": "area: areacella",
-    "realm": "landice"
+    "comment": [
+        "This variable identifies the thickness of a prescribed ice sheet. This information is relevant to better understand how different models treat ice. For models where an ice sheet is just orography + an ice sheet mask, the value should be set to zero. For models that explicitly resolve an ice sheet thickness, the thickness of the ice sheet should be provided."
+    ],
+    "cell_measures": [
+        "area: areacella"
+    ],
+    "realm": [
+        "landice",
+        "land"
+    ]
 }

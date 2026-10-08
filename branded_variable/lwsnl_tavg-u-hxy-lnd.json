@@ -2,8 +2,9 @@
     "@context": "000_context.jsonld",
     "id": "lwsnl_tavg-u-hxy-lnd",
     "type": "known_branded_variable",
-    "description": "where land over land: this is computed as the total mass of liquid water contained interstitially within the snow layer of the land portion of a grid cell divided by the area of the land portion of the cell.",
-    "long_name": "Liquid Water Content of Snow Layer",
+    "long_name": [
+        "Liquid Water Content of Snow Layer"
+    ],
     "table_id": [
         "landice"
     ],
@@ -15,6 +16,15 @@
         "mon",
         "day"
     ],
-    "cell_measures": "area: areacella",
-    "realm": "landice"
+    "comment": [
+        "where land over land: this is computed as the total mass of liquid water contained interstitially within the snow layer of the land portion of a grid cell divided by the area of the land portion of the cell.",
+        "liquid_water_content_of_snow_layer"
+    ],
+    "cell_measures": [
+        "area: areacella"
+    ],
+    "realm": [
+        "landice",
+        "land"
+    ]
 }

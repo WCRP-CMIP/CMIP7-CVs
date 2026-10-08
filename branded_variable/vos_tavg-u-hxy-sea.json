@@ -2,8 +2,9 @@
     "@context": "000_context.jsonld",
     "id": "vos_tavg-u-hxy-sea",
     "type": "known_branded_variable",
-    "description": "Daily surface prognostic y-ward velocity component resolved by the model.",
-    "long_name": "Daily Surface Sea Water Y Velocity",
+    "long_name": [
+        "Daily Surface Sea Water Y Velocity"
+    ],
     "table_id": [
         "ocean"
     ],
@@ -13,6 +14,13 @@
     "frequency": [
         "day"
     ],
-    "cell_measures": "area: areacello",
-    "realm": "ocean"
+    "comment": [
+        "Daily surface prognostic y-ward velocity component resolved by the model."
+    ],
+    "cell_measures": [
+        "area: areacello"
+    ],
+    "realm": [
+        "ocean"
+    ]
 }

@@ -2,8 +2,9 @@
     "@context": "000_context.jsonld",
     "id": "zfullo_tavg-ol-hxy-sea",
     "type": "known_branded_variable",
-    "description": "Depth below geoid",
-    "long_name": "Depth Below Geoid of Ocean Layer",
+    "long_name": [
+        "Depth Below Geoid of Ocean Layer"
+    ],
     "table_id": [
         "ocean"
     ],
@@ -13,6 +14,13 @@
     "frequency": [
         "yr"
     ],
-    "cell_measures": "area: areacello volume: volcello",
-    "realm": "ocean"
+    "comment": [
+        "Depth below geoid"
+    ],
+    "cell_measures": [
+        "area: areacello volume: volcello"
+    ],
+    "realm": [
+        "ocean"
+    ]
 }

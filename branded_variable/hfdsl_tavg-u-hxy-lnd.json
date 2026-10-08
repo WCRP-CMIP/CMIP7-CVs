@@ -2,8 +2,9 @@
     "@context": "000_context.jsonld",
     "id": "hfdsl_tavg-u-hxy-lnd",
     "type": "known_branded_variable",
-    "description": "Ground heat flux at 3hr",
-    "long_name": "Ground heat flux at 3hr",
+    "long_name": [
+        "Ground heat flux at 3hr"
+    ],
     "table_id": [
         "land"
     ],
@@ -13,6 +14,13 @@
     "frequency": [
         "3hr"
     ],
-    "cell_measures": "area: areacella",
-    "realm": "land"
+    "comment": [
+        "Ground heat flux at 3hr"
+    ],
+    "cell_measures": [
+        "area: areacella"
+    ],
+    "realm": [
+        "land"
+    ]
 }

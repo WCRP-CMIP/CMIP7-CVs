@@ -2,8 +2,9 @@
     "@context": "000_context.jsonld",
     "id": "conccn_tavg-al-hxy-u",
     "type": "known_branded_variable",
-    "description": "This is the number concentration of air particles in air",
-    "long_name": "Aerosol Number Concentration",
+    "long_name": [
+        "Aerosol Number Concentration"
+    ],
     "table_id": [
         "aerosol"
     ],
@@ -13,6 +14,14 @@
     "frequency": [
         "mon"
     ],
-    "cell_measures": "area: areacella",
-    "realm": "aerosol"
+    "comment": [
+        "This is the number concentration of air particles in air"
+    ],
+    "cell_measures": [
+        "area: areacella"
+    ],
+    "realm": [
+        "aerosol",
+        "atmoschem"
+    ]
 }

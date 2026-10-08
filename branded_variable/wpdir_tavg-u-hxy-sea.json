@@ -2,8 +2,9 @@
     "@context": "000_context.jsonld",
     "id": "wpdir_tavg-u-hxy-sea",
     "type": "known_branded_variable",
-    "description": "Direction of wave propagation (direction from which the wave is coming) derived from the total wave energy spectrum, incorporating both wind-sea and swell waves, by identifying the direction associated with the peak (maximum) energy density. This variable is usually expressed in degrees relative to true north.",
-    "long_name": "Total Peak Wave Direction",
+    "long_name": [
+        "Total Peak Wave Direction"
+    ],
     "table_id": [
         "ocean"
     ],
@@ -13,6 +14,13 @@
     "frequency": [
         "mon"
     ],
-    "cell_measures": "area: areacello",
-    "realm": "ocean"
+    "comment": [
+        "Direction of wave propagation (direction from which the wave is coming) derived from the total wave energy spectrum, incorporating both wind-sea and swell waves, by identifying the direction associated with the peak (maximum) energy density. This variable is usually expressed in degrees relative to true north."
+    ],
+    "cell_measures": [
+        "area: areacello"
+    ],
+    "realm": [
+        "ocean"
+    ]
 }

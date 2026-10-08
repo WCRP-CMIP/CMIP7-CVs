@@ -2,8 +2,9 @@
     "@context": "000_context.jsonld",
     "id": "nleaf_tavg-u-hxy-lnd",
     "type": "known_branded_variable",
-    "description": "\"Content\" indicates a quantity per unit area.",
-    "long_name": "Nitrogen Mass in Leaves",
+    "long_name": [
+        "Nitrogen Mass in Leaves"
+    ],
     "table_id": [
         "land"
     ],
@@ -13,6 +14,13 @@
     "frequency": [
         "mon"
     ],
-    "cell_measures": "area: areacella",
-    "realm": "land"
+    "comment": [
+        "\"Content\" indicates a quantity per unit area."
+    ],
+    "cell_measures": [
+        "area: areacella"
+    ],
+    "realm": [
+        "land"
+    ]
 }

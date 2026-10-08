@@ -2,8 +2,9 @@
     "@context": "000_context.jsonld",
     "id": "ph_tavg-ols-hxy-sea",
     "type": "known_branded_variable",
-    "description": "Near surface negative log10 of hydrogen ion concentration with the concentration expressed as mol H kg-1.",
-    "long_name": "Surface pH",
+    "long_name": [
+        "Surface pH"
+    ],
     "table_id": [
         "ocnbgchem"
     ],
@@ -15,6 +16,14 @@
         "day",
         "mon"
     ],
-    "cell_measures": "area: areacello",
-    "realm": "ocnbgchem"
+    "comment": [
+        "Near surface negative log10 of hydrogen ion concentration with the concentration expressed as mol H kg-1.",
+        "negative log10 of hydrogen ion concentration with the concentration expressed as mol H kg-1."
+    ],
+    "cell_measures": [
+        "area: areacello"
+    ],
+    "realm": [
+        "ocnbgchem"
+    ]
 }

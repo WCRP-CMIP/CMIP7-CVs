@@ -2,8 +2,9 @@
     "@context": "000_context.jsonld",
     "id": "ho2_tavg-p39-hy-air",
     "type": "known_branded_variable",
-    "description": "Mole fraction is used in the construction mole_fraction_of_X_in_Y, where X is a material constituent of Y.  The chemical formula of hydroperoxyl radical is HO2.",
-    "long_name": "HO2 Volume Mixing Ratio",
+    "long_name": [
+        "HO2 Volume Mixing Ratio"
+    ],
     "table_id": [
         "aerosol"
     ],
@@ -13,5 +14,10 @@
     "frequency": [
         "mon"
     ],
-    "realm": "aerosol"
+    "comment": [
+        "Mole fraction is used in the construction mole_fraction_of_X_in_Y, where X is a material constituent of Y.  The chemical formula of hydroperoxyl radical is HO2."
+    ],
+    "realm": [
+        "aerosol"
+    ]
 }

@@ -2,8 +2,9 @@
     "@context": "000_context.jsonld",
     "id": "tnhusscpbl_tpt-al-hs-u",
     "type": "known_branded_variable",
-    "description": "To be specified only in  models which do not separate budget terms for stratiform cloud, precipitation and boundary layer schemes.  Includes all bounday layer terms including and diffusive terms.",
-    "long_name": "Tendency of Specific Humidity Due to Stratiform Cloud and Precipitation and Boundary Layer Mixing",
+    "long_name": [
+        "Tendency of Specific Humidity Due to Stratiform Cloud and Precipitation and Boundary Layer Mixing"
+    ],
     "table_id": [
         "atmos"
     ],
@@ -13,5 +14,10 @@
     "frequency": [
         "subhr"
     ],
-    "realm": "atmos"
+    "comment": [
+        "To be specified only in  models which do not separate budget terms for stratiform cloud, precipitation and boundary layer schemes.  Includes all bounday layer terms including and diffusive terms."
+    ],
+    "realm": [
+        "atmos"
+    ]
 }

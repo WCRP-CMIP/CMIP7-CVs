@@ -2,8 +2,9 @@
     "@context": "000_context.jsonld",
     "id": "wetnh4_tavg-u-hxy-u",
     "type": "known_branded_variable",
-    "description": "Daily Wet Deposition Rate of NH4 at surface. Vertically integrated throughout the column to the surface.",
-    "long_name": "Wet Deposition Rate of NH4",
+    "long_name": [
+        "Wet Deposition Rate of NH4"
+    ],
     "table_id": [
         "atmoschem"
     ],
@@ -15,6 +16,15 @@
         "day",
         "mon"
     ],
-    "cell_measures": "area: areacella",
-    "realm": "atmoschem"
+    "comment": [
+        "Daily Wet Deposition Rate of NH4 at surface. Vertically integrated throughout the column to the surface.",
+        "Surface deposition rate of ammonium (NH4) due to wet processes"
+    ],
+    "cell_measures": [
+        "area: areacella"
+    ],
+    "realm": [
+        "atmoschem",
+        "aerosol"
+    ]
 }

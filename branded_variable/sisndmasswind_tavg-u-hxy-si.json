@@ -2,8 +2,9 @@
     "@context": "000_context.jsonld",
     "id": "sisndmasswind_tavg-u-hxy-si",
     "type": "known_branded_variable",
-    "description": "Rate of change of snow mass due to wind-driven transport into the ocean divided by grid-cell area.",
-    "long_name": "Snow Mass Rate of Change Through Wind Drift of Snow",
+    "long_name": [
+        "Snow Mass Rate of Change Through Wind Drift of Snow"
+    ],
     "table_id": [
         "seaice"
     ],
@@ -13,6 +14,13 @@
     "frequency": [
         "mon"
     ],
-    "cell_measures": "area: areacello",
-    "realm": "seaice"
+    "comment": [
+        "Rate of change of snow mass due to wind-driven transport into the ocean divided by grid-cell area."
+    ],
+    "cell_measures": [
+        "area: areacello"
+    ],
+    "realm": [
+        "seaice"
+    ]
 }

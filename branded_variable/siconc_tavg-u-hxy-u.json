@@ -2,8 +2,9 @@
     "@context": "000_context.jsonld",
     "id": "siconc_tavg-u-hxy-u",
     "type": "known_branded_variable",
-    "description": "Percentage of a given grid cell that is covered by sea ice on the ocean grid, independent of the thickness of that ice.",
-    "long_name": "Sea-Ice Area Percentage (Ocean Grid)",
+    "long_name": [
+        "Sea-Ice Area Percentage (Ocean Grid)"
+    ],
     "table_id": [
         "seaice"
     ],
@@ -16,6 +17,13 @@
         "mon",
         "day"
     ],
-    "cell_measures": "area: areacello",
-    "realm": "seaice"
+    "comment": [
+        "Percentage of a given grid cell that is covered by sea ice on the ocean grid, independent of the thickness of that ice."
+    ],
+    "cell_measures": [
+        "area: areacello"
+    ],
+    "realm": [
+        "seaice"
+    ]
 }

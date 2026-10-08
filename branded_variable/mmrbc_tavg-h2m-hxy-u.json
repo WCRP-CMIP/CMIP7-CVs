@@ -2,8 +2,9 @@
     "@context": "000_context.jsonld",
     "id": "mmrbc_tavg-h2m-hxy-u",
     "type": "known_branded_variable",
-    "description": "Daily mean elemental carbon mass mixing ratio near surface.",
-    "long_name": "Daily mean near-surface BC",
+    "long_name": [
+        "Daily mean near-surface BC"
+    ],
     "table_id": [
         "aerosol"
     ],
@@ -13,6 +14,14 @@
     "frequency": [
         "day"
     ],
-    "cell_measures": "area: areacella",
-    "realm": "aerosol"
+    "comment": [
+        "Daily mean elemental carbon mass mixing ratio near surface."
+    ],
+    "cell_measures": [
+        "area: areacella"
+    ],
+    "realm": [
+        "aerosol",
+        "atmoschem"
+    ]
 }
