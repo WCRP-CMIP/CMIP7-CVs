@@ -339,7 +339,8 @@ If in doubt, put the field in the project-specific CVs repository
 
 The decision about where to alter the existing CMIP7 CVs entries and where to alter universe CVs entries was based on our own judgement.
 If you look at the [the universe CVs pull request](https://github.com/WCRP-CMIP/WCRP-universe/pull/118),
-then you will see that there are also alterations to `scripts/generate-experiments.py`.
+then you will see that there are also alterations to `scripts/generate-experiments.py`
+(since renamed to `scripts/generate-cmip7-experiments.py`).
 This is because we didn't update these entries by hand.
 Instead, we did this via a script.
 We do this because we find it simpler to use a script
@@ -363,7 +364,7 @@ effectively registering these as CMIP7 experiments.
 You will also notice that we added these new experiments to the list of experiments registered under AerChemMIP
 (see the modifications to the file `activity/aerchemmip.json`).
 Here you see another reason that we make these alterations using scripts
-(see the changes to `scripts/generate-experiments.py` in the [universe CVs pull request](https://github.com/WCRP-CMIP/WCRP-universe/pull/133)):
+(see the changes to `scripts/generate-experiments.py`, since renamed to `scripts/generate-cmip7-experiments.py`, in the [universe CVs pull request](https://github.com/WCRP-CMIP/WCRP-universe/pull/133)):
 there are couplings between different parts of the CVs
 and these couplings are much easier to manage using a script than trying to keep track of them all by hand.
 
