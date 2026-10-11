@@ -20,3 +20,17 @@ jobs:
       - name: Check all files have same name as ID
         run: |
           python scripts/check-cv-entry-filenames.py
+
+  check-all-entries-are-ascii:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.13"
+
+      - name: Check no entries contain unicode (i.e. non-ASCII) characters
+        run: |
+          python scripts/check-cv-entries-are-ascii.py

@@ -17,7 +17,7 @@
         "day"
     ],
     "comment": [
-        "Upward longwave flux from the sea-ice surface to the atmosphere (energy flow per sea ice area). Always positive or zero."
+        "Upward longwave flux from the sea-ice surface to the atmosphere (energy flow per sea ice area). Always positive or zero."
     ],
     "cell_measures": [
         "area: areacella"
