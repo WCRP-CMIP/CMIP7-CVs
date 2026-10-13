@@ -300,6 +300,70 @@ We go through some examples here.
 If you want to understand the underlying structure a bit more,
 see the 'theory' header below.
 
+#### Character encoding: ASCII only, non-ASCII as LaTeX
+
+All values in the CVs (in this repository and in the WCRP-universe)
+are written using only ASCII characters.
+Text which contains non-ASCII characters is converted in two steps:
+
+1. Typographic characters, typically introduced by copy-pasting from word processors
+   (curly quotes, dashes, special spaces etc.), are replaced by their plain ASCII equivalent.
+   The full list is `ASCII_REPLACEMENTS` in
+   [`.github/form-processor/src/github_form_processor/text.py`](.github/form-processor/src/github_form_processor/text.py).
+1. All other non-ASCII characters (e.g. accented letters, symbols)
+   are encoded as their LaTeX equivalent, as produced by
+   [pylatexenc](https://pypi.org/project/pylatexenc/).
+
+For example:
+
+| Original | Value in the CVs | As written in the JSON file |
+|----------|------------------|-----------------------------|
+| `fire’s “role”` | `fire's "role"` | `"fire's \"role\""` |
+| `2001–2020` (en dash) | `2001-2020` | `"2001-2020"` |
+| `Earth’s…` | `Earth's...` | `"Earth's..."` |
+| `Université` | `Universit\'e` | `"Universit\\'e"` |
+| `Türkiye` | `T\"urkiye` | `"T\\\"urkiye"` |
+| `Gießen` | `Gie{\ss}en` | `"Gie{\\ss}en"` |
+| `Tromsø` | `Troms{\o}` | `"Troms{\\o}"` |
+| `0.5°` | `0.5{\textdegree}` | `"0.5{\\textdegree}"` |
+| `CO₂` | `CO\ensuremath{_2}` | `"CO\\ensuremath{_2}"` |
+
+Only non-ASCII characters are encoded.
+ASCII characters which have a special meaning in LaTeX
+(e.g. `%`, `&`, `_`, `$`, `~`, `\`) are left exactly as they are.
+DOIs, URLs and IDs are therefore unaffected
+(e.g. a DOI copied with a typographic hyphen just ends up with a normal `-`).
+
+The registration forms, the sync from the Essential Model Documentation (EMD)
+and the scripts which generate entries do this conversion automatically.
+If you edit the CVs by hand, the CI check (`scripts/check-cv-entries-are-ascii.py`)
+tells you exactly which values to change and what to change them to.
+You can also convert a value yourself with
+
+```sh
+uv run --project .github/form-processor python -c 'from github_form_processor.text import to_ascii_latex; print(to_ascii_latex("Université de Montréal"))'
+```
+
+The only exceptions are names written in a native script
+which has no LaTeX equivalent (e.g. Chinese, Japanese, Korean, Arabic or Devanagari script).
+These are kept as they are (in UTF-8), but each one must be explicitly listed
+in `EXEMPTIONS` in the check script.
+Where a LaTeX equivalent exists (e.g. for Greek and Cyrillic), it is used.
+
+To turn the values back into unicode, you can use pylatexenc, e.g.
+
+```python
+>>> from pylatexenc.latex2text import LatexNodes2Text
+>>> LatexNodes2Text().latex_to_text(r"Universit\'e de Montr\'eal")
+'Université de Montréal'
+```
+
+However, be careful: the values are not full LaTeX documents,
+because ASCII characters which are special in LaTeX are not escaped.
+As a result, converting arbitrary values with a LaTeX parser can mangle them
+(e.g. `%` starts a comment in LaTeX,
+so `LatexNodes2Text().latex_to_text("50% of a_b cases")` returns `'50'`).
+
 #### Examples
 
 ##### Adding a term to the CMIP7 CVs that is already in the universe CVs

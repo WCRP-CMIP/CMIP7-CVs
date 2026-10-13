@@ -9,6 +9,12 @@ Existing Universe terms are deliberately immutable.  When a term already
 exists, differences from the generated CMIP7 definition are written only to
 the CMIP7 project overlay.  This makes repeated runs safe while projects are
 integrated sequentially into the shared Universe.
+
+All text is converted to ASCII, with non-ASCII characters encoded as LaTeX
+(see `github_form_processor.text.to_ascii_latex`), before it is compared with
+existing entries or written. As a result, this script needs the form processor
+(`.github/form-processor`) installed in its environment
+(in addition to the CMIP7 Data Request API and esgvoc).
 """
 
 from __future__ import annotations
@@ -24,6 +30,7 @@ from typing import Any
 
 import data_request_api.content.dreq_content as dc
 import data_request_api.query.dreq_query as dq
+from github_form_processor.text import to_ascii_latex_recursive
 
 DEFAULT_DREQ_VERSION = "v1.2.2.5"
 UNIVERSE_BASE = "https://esgvoc.ipsl.fr/resource/universe"
@@ -417,6 +424,7 @@ def emit(
     report: dict[str, Any],
     category: str,
 ) -> None:
+    payload = to_ascii_latex_recursive(payload)
     existing = read_json_if_exists(path)
     if existing == payload:
         return
@@ -497,7 +505,9 @@ def emit_layered_payload(
     dry_run: bool,
     report: dict[str, Any],
 ) -> None:
-    full_payload = omit_blank_optional_text(descriptor, full_payload)
+    full_payload = to_ascii_latex_recursive(
+        omit_blank_optional_text(descriptor, full_payload)
+    )
     identifier = str(full_payload["id"]).lower()
     validate_payload(descriptor, full_payload)
     universe_path = universe_root / descriptor / f"{identifier}.json"
