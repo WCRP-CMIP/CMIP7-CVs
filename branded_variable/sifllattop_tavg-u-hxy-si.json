@@ -17,7 +17,7 @@
         "day"
     ],
     "comment": [
-        "Net latent heat flux over sea ice (energy flow per sea ice area). Positive for a downward heat flux."
+        "Net latent heat flux over sea ice (energy flow per sea ice area). Positive for a downward heat flux."
     ],
     "cell_measures": [
         "area: areacella"

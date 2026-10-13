@@ -17,7 +17,7 @@
         "day"
     ],
     "comment": [
-        "Net heat conduction flux at the ice base, i.e. the conductive heat flux from the centre of the lowermost vertical sea-ice grid box to the base of the sea ice (energy flow per sea ice area). Positive for a downward heat flux."
+        "Net heat conduction flux at the ice base, i.e. the conductive heat flux from the centre of the lowermost vertical sea-ice grid box to the base of the sea ice (energy flow per sea ice area). Positive for a downward heat flux."
     ],
     "cell_measures": [
         "area: areacello"

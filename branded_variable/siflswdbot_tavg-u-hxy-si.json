@@ -17,7 +17,7 @@
         "day"
     ],
     "comment": [
-        "Downwelling shortwave flux underneath sea ice, i.e. the amount of shortwave radiation that penetrates the sea ice and reaches the sea ice-ocean interface (energy flow per sea ice area). Always positive or zero."
+        "Downwelling shortwave flux underneath sea ice, i.e. the amount of shortwave radiation that penetrates the sea ice and reaches the sea ice-ocean interface (energy flow per sea ice area). Always positive or zero."
     ],
     "cell_measures": [
         "area: areacello"

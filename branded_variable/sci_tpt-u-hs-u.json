@@ -15,7 +15,7 @@
         "subhr"
     ],
     "comment": [
-        "Fraction of time that shallow convection occurs in the grid cell. Variable is binary, indicating whether at each time step convection occurs (1.0), or not (0.0)."
+        "Fraction of time that shallow convection occurs in the grid cell. Variable is binary, indicating whether at each time step convection occurs (1.0), or not (0.0)."
     ],
     "realm": [
         "atmos"
