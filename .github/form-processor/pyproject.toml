@@ -5,6 +5,7 @@ authors = [
 requires-python = ">=3.9"
 dependencies = [
     "pydantic>=2.7",
+    "pylatexenc>=2.10,<3",
     "typer>=0.12",
 ]
 name = "github-form-processor"
