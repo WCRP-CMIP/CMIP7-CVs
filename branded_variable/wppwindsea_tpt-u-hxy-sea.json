@@ -15,7 +15,7 @@
         "3hr"
     ],
     "comment": [
-        "Wave period associated with the most energetic wind-sea waves (i.e., local wind waves). In spectral wind wave models, this represents the spectral peak across part of the two-dimensional wave spectrum, incorporating just wind-sea waves."
+        "Wave period associated with the most energetic wind-sea waves (i.e., local wind waves). In spectral wind wave models, this represents the spectral peak across part of the two-dimensional wave spectrum, incorporating just wind-sea waves."
     ],
     "cell_measures": [
         "area: areacello"

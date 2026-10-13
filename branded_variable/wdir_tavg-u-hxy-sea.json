@@ -15,7 +15,7 @@
         "mon"
     ],
     "comment": [
-        "Mean direction of wave propagation (direction from which the wave is coming) derived from the total wave energy spectrum, incorporating both wind-sea and swell waves. This variable is usually expressed in degrees relative to true north."
+        "Mean direction of wave propagation (direction from which the wave is coming) derived from the total wave energy spectrum, incorporating both wind-sea and swell waves. This variable is usually expressed in degrees relative to true north."
     ],
     "cell_measures": [
         "area: areacello"

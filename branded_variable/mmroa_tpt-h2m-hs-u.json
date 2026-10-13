@@ -15,7 +15,7 @@
         "3hr"
     ],
     "comment": [
-        "This variable represents the instantaneous near surface organic aerosol Mass Mixing Ratio at CF sites, sampled every 3 hours."
+        "This variable represents the instantaneous near surface organic aerosol Mass Mixing Ratio at CF sites, sampled every 3 hours."
     ],
     "cell_measures": [
         "--MODEL"

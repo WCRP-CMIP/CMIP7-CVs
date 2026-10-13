@@ -17,7 +17,6 @@
         "day"
     ],
     "comment": [
-        "Downwelling shortwave flux from the atmosphere to the sea-ice surface (energy flow per sea ice area). Always positive or zero.",
         "Downwelling shortwave flux from the atmosphere to the sea-ice surface (energy flow per sea ice area). Always positive or zero."
     ],
     "cell_measures": [

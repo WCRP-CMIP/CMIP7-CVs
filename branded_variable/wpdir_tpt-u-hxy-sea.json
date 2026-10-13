@@ -15,7 +15,7 @@
         "3hr"
     ],
     "comment": [
-        "Direction of wave propagation (direction from which the wave is coming) derived from the total wave energy spectrum, incorporating both wind-sea and swell waves, by identifying the direction associated with the peak (maximum) energy density. This variable is usually expressed in degrees relative to true north."
+        "Direction of wave propagation (direction from which the wave is coming) derived from the total wave energy spectrum, incorporating both wind-sea and swell waves, by identifying the direction associated with the peak (maximum) energy density. This variable is usually expressed in degrees relative to true north."
     ],
     "cell_measures": [
         "area: areacello"

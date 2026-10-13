@@ -17,7 +17,7 @@
         "day"
     ],
     "comment": [
-        "Net sensible heat flux under sea ice from or to the ocean (energy flow per sea ice area). Per sign convention, heat from the ocean is counted as negative since it describes an upward heat flux."
+        "Net sensible heat flux under sea ice from or to the ocean (energy flow per sea ice area). Per sign convention, heat from the ocean is counted as negative since it describes an upward heat flux."
     ],
     "cell_measures": [
         "area: areacello"
