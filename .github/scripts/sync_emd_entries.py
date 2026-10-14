@@ -141,6 +141,42 @@ class EmdHorizontalGridCell(BaseModel):
     id: str = Field(alias="@id")
     ui_label: str = ""
     region: list[str] = Field(default_factory=list)
+    grid_type: str | None = None
+    # Checked by ``n_cells_int`` when building the entry, so that a bad value
+    # only skips this grid instead of stopping the whole sync
+    n_cells: int | str | None = None
+    grid_mapping: str | None = None
+
+    @field_validator("grid_type", "n_cells", "grid_mapping", mode="before")
+    @classmethod
+    def _empty_to_none(cls, value: Any) -> Any:
+        # EMD uses "" for values which are not applicable
+        if isinstance(value, str) and not value.strip():
+            return None
+        return value
+
+    @field_validator("grid_type", "grid_mapping")
+    @classmethod
+    def _to_universe_id(cls, value: str | None) -> str | None:
+        # EMD term ids use hyphens, the universe ones use underscores
+        if value is None:
+            return None
+        return value.strip().replace("-", "_")
+
+    @property
+    def n_cells_int(self) -> int | None:
+        """``n_cells`` as a positive integer (EMD sometimes stores it as a string)."""
+        if self.n_cells is None:
+            return None
+        try:
+            n_cells = int(self.n_cells)
+        except ValueError:
+            raise ValueError(
+                f"EMD grid cell {self.id!r} has a non-integer n_cells {self.n_cells!r}"
+            ) from None
+        if n_cells < 1:
+            raise ValueError(f"EMD grid cell {self.id!r} has n_cells {n_cells} < 1")
+        return n_cells
 
     @field_validator("region", mode="before")
     @classmethod
@@ -287,6 +323,10 @@ def build_universe_grid_entry(grid: EmdHorizontalGridCell) -> tuple[str, str]:
         "description": grid.ui_label,
         "drs_name": grid.id,
         "region": grid.region_string,
+        # Used by the CV task team: EMD must tell the CV TT before changing these
+        "grid_type": grid.grid_type,
+        "n_cells": grid.n_cells_int,
+        "grid_mapping": grid.grid_mapping,
     }
     return f"{grid.id}.json", _dumps(entry)
 
