@@ -1,0 +1,21 @@
+{
+    "@context": "000_context.jsonld",
+    "id": "hist-noirr",
+    "type": "experiment",
+    "description": "_hist-noirr_ is one experiment under the framework of IRRMIP historical simulations (also including _hist-irr_, _amip-irr_, _amip-noirr_), whose objective is to assess the impacts of historical irrigation on climate, energy balance, water balance, and carbon cycle. By comparing the _amip-_ and _hist-_ experiments, we can also explore the role of the ocean in the spread of irrigation-induced impacts. The first phase of IRRMIP is described in [Yao et al. (2025a)](https://www.nature.com/articles/s41467-025-56356-1)  and [Yao et al. (2025b)](https://www.nature.com/articles/s44221-025-00529-1). The protocol of _hist_noirr_ requires the modelers to run the simulations with cmip mode (all components active) for the historical period with transient greenhouse gas emissions/concentrations and land-use, etc, **with the irrigation deactivated**. If limited by resources, a 30-year simulation representing the present-day climate and human activities is also welcome, but please keep it consistent with _hist-irr_, _amip-irr_, _amip-noirr_.",
+    "drs_name": "hist-noirr",
+    "start_timestamp": null,
+    "end_timestamp": null,
+    "activity": "irrmip",
+    "additional_allowed_model_components": [
+        "bgc"
+    ],
+    "branch_information": null,
+    "min_ensemble_size": 1,
+    "parent_activity": null,
+    "parent_experiment": null,
+    "parent_mip_era": null,
+    "required_model_components": [],
+    "tier": 1,
+    "min_number_yrs_per_sim": 30.0
+}
