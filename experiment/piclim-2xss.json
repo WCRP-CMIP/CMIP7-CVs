@@ -1,0 +1,25 @@
+{
+    "@context": "000_context.jsonld",
+    "id": "piclim-2xss",
+    "type": "experiment",
+    "description": "In combination with `piClim-control`, quantifies the radiative effect of natural sea salt emissions, to estimate the strength of the associated climate feedback. Same as `piClim-control`, except sea salt emissions are doubled.",
+    "drs_name": "piClim-2xss",
+    "start_timestamp": null,
+    "end_timestamp": null,
+    "activity": "aerchemmip",
+    "additional_allowed_model_components": [
+        "chem",
+        "bgc"
+    ],
+    "branch_information": "Same as `piClim-control`",
+    "min_ensemble_size": 1,
+    "parent_activity": "cmip",
+    "parent_experiment": "picontrol",
+    "parent_mip_era": "cmip7",
+    "required_model_components": [
+        "agcm",
+        "aer"
+    ],
+    "tier": 1,
+    "min_number_yrs_per_sim": 30.0
+}
