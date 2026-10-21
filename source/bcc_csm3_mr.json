@@ -1,0 +1,5 @@
+{
+  "@context": "000_context.jsonld",
+  "id": "bcc_csm3_mr",
+  "type": "model"
+}

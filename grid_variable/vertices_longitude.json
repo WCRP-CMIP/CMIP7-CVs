@@ -2,6 +2,6 @@
     "@context": "000_context.jsonld",
     "id": "vertices_longitude",
     "type": "grid_variable",
-    "valid_min": 0.0,
+    "valid_min": -180.0,
     "valid_max": 360.0
 }
