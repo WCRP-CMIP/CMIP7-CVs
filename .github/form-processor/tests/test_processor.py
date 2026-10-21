@@ -653,8 +653,8 @@ def test_prepare_institution_member_renders_json_with_ror_location():
         "id": "cnrm",
         "type": "institution",
         "drs_name": "CNRM",
-        "acronyms": ["CNRM", "Météo-France/CNRM"],
-        "labels": ["Centre National de Recherches Météorologiques"],
+        "acronyms": ["CNRM", "M\\'et\\'eo-France/CNRM"],
+        "labels": ["Centre National de Recherches M\\'et\\'eorologiques"],
         "description": "A short member description.",
         "location": [
             {
@@ -720,7 +720,7 @@ def test_prepare_institution_member_adds_ror_names_and_links_without_duplicates(
     assert result.prepared is not None
     payload = json.loads(result.prepared.outputs[0].content)
     assert payload["labels"] == [
-        "Centre National de Recherches Météorologiques",
+        "Centre National de Recherches M\\'et\\'eorologiques",
         "National Centre for Meteorological Research",
     ]
     assert payload["acronyms"] == ["CNRM", "MF/CNRM"]

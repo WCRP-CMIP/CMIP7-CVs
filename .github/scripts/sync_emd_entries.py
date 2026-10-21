@@ -240,6 +240,21 @@ def _build_reference_id(model_cv_id: str, index: int) -> str:
     return f"{model_cv_id}_ref_{index:03d}"
 
 
+CITATION_FIXES: dict[str, str] = {
+    # Corrupted character in the EMD source data
+    "D\N{REPLACEMENT CHARACTER}menil": "D\N{LATIN SMALL LETTER U WITH DIAERESIS}menil",
+}
+"""Hard-coded fixes applied to citations (substring to replace: replacement)"""
+
+
+def _fix_citation(citation: str) -> str:
+    """Apply [CITATION_FIXES][] to a citation."""
+    for old, new in CITATION_FIXES.items():
+        citation = citation.replace(old, new)
+
+    return citation
+
+
 def _build_reference_entry(ref_id: str, ref_value: str) -> dict[str, Any]:
     """Build a single reference term dict from a DOI/URL/text value."""
     if ref_value.startswith("http"):
@@ -260,7 +275,7 @@ def _build_reference_entry(ref_id: str, ref_value: str) -> dict[str, Any]:
         "@context": CONTEXT_FILE,
         "id": ref_id,
         "type": "reference",
-        "citation": citation,
+        "citation": _fix_citation(citation),
         "doi": doi,
         "drs_name": ref_id,
     }
