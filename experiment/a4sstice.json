@@ -1,0 +1,25 @@
+{
+    "@context": "000_context.jsonld",
+    "id": "a4sstice",
+    "type": "experiment",
+    "description": "`a4SSTice` is part of a set of AGCM timeslice experiments (also including `piSST-pxK` and `a4SSTice-4xCO2`) designed to examine regional climate responses to CO2 forcing. `a4SSTice` minus `piSST-pxK` provides the response to the (zero-mean) pattern of SST change combined with the change in sea-ice. The CMIP5/CMIP6 versions of these experiments are described in [Chadwick et al. (2017)](https://doi.org/10.1007/s00382-016-3488-6) and [Webb et al. (2017)](https://doi.org/10.5194/gmd-10-359-2017) but note that there have been significant changes made to the experimental protocol for CMIP7 [Ceppi et al. (2026)](https://doi.org/10.5194/gmd-19-8693-2026).\n\n`a4SSTice` uses monthly time-varying SST and sea-ice from years 111-140 of each model's own `abrupt-4xCO2` run, while keeping atmospheric constituents to pre-industrial levels. To set up the experiment, it is recommended to start from a `piSST-pxK` configuration, then to change the SSTs and sea-ice.",
+    "drs_name": "a4SSTice",
+    "start_timestamp": null,
+    "end_timestamp": null,
+    "activity": "cfmip",
+    "additional_allowed_model_components": [
+        "aer",
+        "bgc",
+        "chem"
+    ],
+    "branch_information": null,
+    "min_ensemble_size": 1,
+    "parent_activity": null,
+    "parent_experiment": null,
+    "parent_mip_era": null,
+    "required_model_components": [
+        "agcm"
+    ],
+    "tier": 1,
+    "min_number_yrs_per_sim": 30.0
+}
