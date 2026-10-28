@@ -1,0 +1,5 @@
+{
+  "@context": "000_context.jsonld",
+  "id": "awi_esm3_5_2_cc_lr",
+  "type": "model"
+}
