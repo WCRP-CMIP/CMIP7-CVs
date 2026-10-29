@@ -1,0 +1,25 @@
+{
+    "@context": "000_context.jsonld",
+    "id": "scen7-vl-sst-aer",
+    "type": "experiment",
+    "description": "In combination with `scen7-vl-SST`, quantifies the effective radiative forcing (ERF) of a failure of aerosol mitigation. Same as `scen7-vl-SST`, except anthropogenic aerosol and aerosol precursor (BC, OC, NH3, SO2) emissions follow `scen7-h` instead of `scen7-vl`. Atmosphere-only counterpart of `scen7-vl-Aer`.",
+    "drs_name": "scen7-vl-SST-Aer",
+    "start_timestamp": "2022-01-01",
+    "end_timestamp": "2100-12-31",
+    "activity": "aerchemmip",
+    "additional_allowed_model_components": [
+        "chem",
+        "bgc"
+    ],
+    "branch_information": "Branch from `historical` at 2022-01-01.",
+    "min_ensemble_size": 1,
+    "parent_activity": "cmip",
+    "parent_experiment": "historical",
+    "parent_mip_era": "cmip7",
+    "required_model_components": [
+        "agcm",
+        "aer"
+    ],
+    "tier": 1,
+    "min_number_yrs_per_sim": 79.0
+}
