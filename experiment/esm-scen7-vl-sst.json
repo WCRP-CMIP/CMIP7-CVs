@@ -1,0 +1,25 @@
+{
+    "@context": "000_context.jsonld",
+    "id": "esm-scen7-vl-sst",
+    "type": "experiment",
+    "description": "Reference for the `esm-scen7-vl-SST-*` experiments and atmosphere-only counterpart of `esm-scen7-vl`. All forcings evolve as in `esm-scen7-vl`, with time-evolving monthly sea-surface temperatures and sea ice prescribed from the model's own `esm-scen7-vl` simulation. Models with emissions that depend on the sea-surface state (e.g. DMS) should also prescribe these from the same simulation. Also the reference for the afforestation/reforestation experiments, so BVOC, fire and dust emissions should be interactive where the model allows.",
+    "drs_name": "esm-scen7-vl-SST",
+    "start_timestamp": "2022-01-01",
+    "end_timestamp": "2100-12-31",
+    "activity": "aerchemmip",
+    "additional_allowed_model_components": [
+        "aer",
+        "chem",
+        "bgc"
+    ],
+    "branch_information": "Branch from `esm-hist` at 2022-01-01.",
+    "min_ensemble_size": 1,
+    "parent_activity": "cmip",
+    "parent_experiment": "esm-hist",
+    "parent_mip_era": "cmip7",
+    "required_model_components": [
+        "agcm"
+    ],
+    "tier": 1,
+    "min_number_yrs_per_sim": 79.0
+}
