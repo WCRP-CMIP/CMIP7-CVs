@@ -1,0 +1,25 @@
+{
+    "@context": "000_context.jsonld",
+    "id": "scen7-h-sst-aq",
+    "type": "experiment",
+    "description": "In combination with `scen7-h-SST`, quantifies the effective radiative forcing (ERF) of future changes in anthropogenic non-CH4 short-lived climate forcer emissions. Same as `scen7-h-SST`, except anthropogenic non-CH4 tropospheric O3 precursor (NMVOCs, CO, NOx) and aerosol and aerosol precursor (BC, OC, NH3, SO2) emissions are held at present-day (2021) values. Atmosphere-only counterpart of `scen7-h-AQ`.",
+    "drs_name": "scen7-h-SST-AQ",
+    "start_timestamp": "2022-01-01",
+    "end_timestamp": "2100-12-31",
+    "activity": "aerchemmip",
+    "additional_allowed_model_components": [
+        "bgc"
+    ],
+    "branch_information": "Branch from `historical` at 2022-01-01.",
+    "min_ensemble_size": 1,
+    "parent_activity": "cmip",
+    "parent_experiment": "historical",
+    "parent_mip_era": "cmip7",
+    "required_model_components": [
+        "agcm",
+        "aer",
+        "chem"
+    ],
+    "tier": 1,
+    "min_number_yrs_per_sim": 79.0
+}
