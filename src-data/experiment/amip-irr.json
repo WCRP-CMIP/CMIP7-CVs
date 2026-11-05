@@ -1,0 +1,34 @@
+{
+    "id": "amip-irr",
+    "type": [
+        "wcrp:experiment",
+        "cmip7"
+    ],
+    "activity": [
+        "irrmip"
+    ],
+    "description": "1. switching on the irrigation in the experiment amip 2. All irrigation-related parameters should be set as the models default values. Other settings should be the same as the reference simulations amip. 3. This is only for model groups whose AMIP simulations do not include irrigation.",
+    "label": "amip-irr",
+    "long-label": "AMIP plus irrigation",
+    "minimum-number-of-years": "122",
+    "model-realms": [
+        {
+            "id": "agcm",
+            "is-required": true
+        },
+        {
+            "id": "bgc",
+            "is-required": true
+        },
+        {
+            "id": "land",
+            "is-required": true
+        }
+    ],
+    "parent-experiment": [
+        "amip"
+    ],
+    "start-date": "1901-01-01",
+    "sub-experiment": "none",
+    "tier": "2"
+}
