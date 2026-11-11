@@ -1,0 +1,25 @@
+{
+    "@context": "000_context.jsonld",
+    "id": "histsst-pinox",
+    "type": "experiment",
+    "description": "In combination with `histSST`, quantifies the transient effective radiative forcing (ERF) and composition changes from anthropogenic NOx over the historical period. Same as `histSST`, except anthropogenic NOx emissions are held at 1850 values.",
+    "drs_name": "histSST-piNOx",
+    "start_timestamp": "1850-01-01",
+    "end_timestamp": "2021-12-31",
+    "activity": "aerchemmip",
+    "additional_allowed_model_components": [
+        "bgc"
+    ],
+    "branch_information": "Branch from `piControl` at a time of your choosing",
+    "min_ensemble_size": 1,
+    "parent_activity": "cmip",
+    "parent_experiment": "picontrol",
+    "parent_mip_era": "cmip7",
+    "required_model_components": [
+        "agcm",
+        "aer",
+        "chem"
+    ],
+    "tier": 3,
+    "min_number_yrs_per_sim": 172.0
+}
