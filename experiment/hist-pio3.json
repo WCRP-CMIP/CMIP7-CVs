@@ -1,0 +1,25 @@
+{
+    "@context": "000_context.jsonld",
+    "id": "hist-pio3",
+    "type": "experiment",
+    "description": "In combination with `historical`, quantifies the climate response to tropospheric ozone changes from all precursors (CH4, NMVOCs, CO, NOx). Same as `historical`, except anthropogenic non-CH4 tropospheric O3 precursor (NMVOCs, CO, NOx) emissions are held at 1850 values, and methane is held at 1850 values in the chemistry scheme only (it evolves as in `historical` in the radiation scheme).",
+    "drs_name": "hist-piO3",
+    "start_timestamp": "1850-01-01",
+    "end_timestamp": "2021-12-31",
+    "activity": "aerchemmip",
+    "additional_allowed_model_components": [
+        "bgc"
+    ],
+    "branch_information": "Branch from `piControl` at a time of your choosing",
+    "min_ensemble_size": 3,
+    "parent_activity": "cmip",
+    "parent_experiment": "picontrol",
+    "parent_mip_era": "cmip7",
+    "required_model_components": [
+        "aogcm",
+        "aer",
+        "chem"
+    ],
+    "tier": 2,
+    "min_number_yrs_per_sim": 172.0
+}
