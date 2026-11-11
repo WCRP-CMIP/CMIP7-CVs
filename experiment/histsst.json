@@ -1,0 +1,25 @@
+{
+    "@context": "000_context.jsonld",
+    "id": "histsst",
+    "type": "experiment",
+    "description": "Reference for the `histSST-*` experiments. Atmosphere-only historical simulation with all forcings as in `historical`, and time-varying sea-surface temperatures and sea ice prescribed from the model's own `historical` simulation.",
+    "drs_name": "histSST",
+    "start_timestamp": "1850-01-01",
+    "end_timestamp": "2021-12-31",
+    "activity": "aerchemmip",
+    "additional_allowed_model_components": [
+        "chem",
+        "bgc"
+    ],
+    "branch_information": "Branch from `piControl` at a time of your choosing",
+    "min_ensemble_size": 1,
+    "parent_activity": "cmip",
+    "parent_experiment": "picontrol",
+    "parent_mip_era": "cmip7",
+    "required_model_components": [
+        "agcm",
+        "aer"
+    ],
+    "tier": 1,
+    "min_number_yrs_per_sim": 172.0
+}
