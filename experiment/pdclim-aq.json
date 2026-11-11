@@ -1,0 +1,25 @@
+{
+    "@context": "000_context.jsonld",
+    "id": "pdclim-aq",
+    "type": "experiment",
+    "description": "In combination with `pdClim-control`, quantifies non-CH4 tropospheric ozone and aerosol effective radiative forcing (ERF) relative to a present-day base state. Same as `pdClim-control`, except anthropogenic non-CH4 tropospheric O3 precursor and aerosol (including aerosol precursor) emissions use pre-industrial (1850) values.",
+    "drs_name": "pdClim-AQ",
+    "start_timestamp": null,
+    "end_timestamp": null,
+    "activity": "aerchemmip",
+    "additional_allowed_model_components": [
+        "bgc"
+    ],
+    "branch_information": "Same as `pdClim-control`",
+    "min_ensemble_size": 1,
+    "parent_activity": "cmip",
+    "parent_experiment": "historical",
+    "parent_mip_era": "cmip7",
+    "required_model_components": [
+        "agcm",
+        "aer",
+        "chem"
+    ],
+    "tier": 3,
+    "min_number_yrs_per_sim": 30.0
+}
