@@ -2,5 +2,6 @@
     "@context": "000_context.jsonld",
     "id": "effectradli",
     "type": "data_coordinate",
-    "long_name": "Effective Radius for Liquid Aerosols"
+    "long_name": "Effective Radius for Liquid Aerosols",
+    "tolerance": 1.0
 }
