@@ -1,0 +1,25 @@
+{
+    "@context": "000_context.jsonld",
+    "id": "esm-scen7-vl-sst-o3",
+    "type": "experiment",
+    "description": "In combination with `esm-scen7-vl-SST`, quantifies the effective radiative forcing (ERF) of a failure of ozone precursor mitigation. Same as `esm-scen7-vl-SST`, except anthropogenic non-CH4 tropospheric O3 precursor (NMVOCs, CO, NOx) emissions follow `esm-scen7-h`, and methane follows `esm-scen7-h` in the chemistry scheme only (it follows `esm-scen7-vl` in the radiation scheme).",
+    "drs_name": "esm-scen7-vl-SST-O3",
+    "start_timestamp": "2022-01-01",
+    "end_timestamp": "2100-12-31",
+    "activity": "aerchemmip",
+    "additional_allowed_model_components": [
+        "bgc"
+    ],
+    "branch_information": "Branch from `esm-hist` at 2022-01-01.",
+    "min_ensemble_size": 1,
+    "parent_activity": "cmip",
+    "parent_experiment": "esm-hist",
+    "parent_mip_era": "cmip7",
+    "required_model_components": [
+        "agcm",
+        "aer",
+        "chem"
+    ],
+    "tier": 3,
+    "min_number_yrs_per_sim": 79.0
+}
