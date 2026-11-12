@@ -49,8 +49,9 @@ jobs:
         env:
           # Pull requests into this repository.
           GITHUB_TOKEN: "${{ secrets.GITHUB_TOKEN }}"
-          # Pull requests into the WCRP universe repository.
-          UNIVERSE_ACCESS_TOKEN: "${{ secrets.UNIVERSE_ACCESS_TOKEN }}"
+          # Pull requests into the WCRP universe repository,
+          # made by the CMIP-IPO bot account rather than a personal account.
+          UNIVERSE_ACCESS_TOKEN: "${{ secrets.CMIP_IPO_BOT_TOKEN }}"
         run: |
           # Pull request events always run as a dry run; manual runs honour the
           # workflow_dispatch input.
