@@ -1,0 +1,22 @@
+{
+    "@context": "000_context.jsonld",
+    "id": "esm-hist-ghg",
+    "type": "experiment",
+    "description": "Interactive-CO2 greenhouse gas emissions only experiment with historical CO2 emissions and changes in other well-mixed greenhouse gases only with all other forcings held fixed at piControl levels (an ESM version of hist-GHG).",
+    "drs_name": "esm-hist-GHG",
+    "start_timestamp": "1850-01-01",
+    "end_timestamp": "2035-12-31",
+    "activity": "damip",
+    "additional_allowed_model_components": [],
+    "branch_information": "Initialize from an equilibrated pre-industrial control state from a simulation that has been run with interactive CO2 at a specified branch time.  Use independent initial conditions for ensemble members.",
+    "min_ensemble_size": 3,
+    "parent_activity": "cmip",
+    "parent_experiment": "esm-picontrol",
+    "parent_mip_era": "cmip7",
+    "required_model_components": [
+        "aogcm",
+        "bgc"
+    ],
+    "tier": 2,
+    "min_number_yrs_per_sim": 186.0
+}
