@@ -1,0 +1,22 @@
+{
+    "@context": "000_context.jsonld",
+    "id": "esm-hist-o3",
+    "type": "experiment",
+    "description": "Interactive-CO2 experiment with prescribed changes in tropospheric and stratospheric ozone concentrations only with other forcings held fixed at piControl levels, allowing carbon-cycle feedbacks.  For 1850-2021 use CMIP7 historical forcing datasets and for 2022-2035 use the Medium scenario.",
+    "drs_name": "esm-hist-O3",
+    "start_timestamp": "1850-01-01",
+    "end_timestamp": "2035-12-31",
+    "activity": "damip",
+    "additional_allowed_model_components": [],
+    "branch_information": "Initialize from an equilibrated pre-industrial control state from a simulation that included interactive-CO2 at a model-specified branch time.  Use independent initial conditions for ensemble members.",
+    "min_ensemble_size": 3,
+    "parent_activity": "cmip",
+    "parent_experiment": "esm-picontrol",
+    "parent_mip_era": "cmip7",
+    "required_model_components": [
+        "aogcm",
+        "bgc"
+    ],
+    "tier": 2,
+    "min_number_yrs_per_sim": 186.0
+}
