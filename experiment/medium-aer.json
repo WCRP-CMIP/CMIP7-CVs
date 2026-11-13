@@ -1,0 +1,21 @@
+{
+    "@context": "000_context.jsonld",
+    "id": "medium-aer",
+    "type": "experiment",
+    "description": "Extension of hist-aer using aerosol and aerosol precursor emissions from the CMIP7 Medium scenario through 2100; all other forcings remain at pre-industrial levels.",
+    "drs_name": "Medium-aer",
+    "start_timestamp": "2036-01-01",
+    "end_timestamp": "2100-12-31",
+    "activity": "damip",
+    "additional_allowed_model_components": [],
+    "branch_information": "Continue from hist-aer at the end of 2035 (branch at 2036-01-01), retaining the corresponding ensemble member.",
+    "min_ensemble_size": 1,
+    "parent_activity": "damip",
+    "parent_experiment": "hist-aer",
+    "parent_mip_era": "cmip7",
+    "required_model_components": [
+        "aogcm"
+    ],
+    "tier": 3,
+    "min_number_yrs_per_sim": 65.0
+}
