@@ -1,0 +1,11 @@
+{
+    "@context": "000_context.jsonld",
+    "id": "pdclim-control",
+    "type": "experiment",
+    "branch_information": "Branch from `historical` (or `esm-hist`) at a time of your choosing. Given that you are using a climatology from your own model as boundary conditions, we recommend branching from within the period over which you calculated the climatology (1992-2021).",
+    "min_ensemble_size": 1,
+    "parent_activity": "cmip",
+    "parent_experiment": "historical",
+    "parent_mip_era": "cmip7",
+    "tier": 2
+}

@@ -1,0 +1,12 @@
+{
+    "@context": "000_context.jsonld",
+    "id": "piclim-o3",
+    "type": "experiment",
+    "description": "In combination with `piClim-control`, quantifies present-day tropospheric ozone effective radiative forcing (ERF). Same as `piClim-control`, except anthropogenic non-CH4 tropospheric O3 precursor (NMVOCs, CO, NOx) emissions use present-day values (2021 values for CMIP7). Methane uses present-day values in the chemistry scheme only (to capture CH4-driven O3 production) and remains at 1850 values in the radiation scheme.",
+    "branch_information": "Same as `piClim-control`",
+    "min_ensemble_size": 1,
+    "parent_activity": "cmip",
+    "parent_experiment": "picontrol",
+    "parent_mip_era": "cmip7",
+    "tier": 1
+}
