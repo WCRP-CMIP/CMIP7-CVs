@@ -1,0 +1,22 @@
+{
+    "@context": "000_context.jsonld",
+    "id": "esm-medium-ghg",
+    "type": "experiment",
+    "description": "Extension of esm-hist-GHG to 2100 with fossil fuel CO2 emissions and other well-mixed greenhouse gases following the Medium scenario and other forcings fixed at pre-industrial levels.  CO2 evolves interactively.",
+    "drs_name": "esm-Medium-GHG",
+    "start_timestamp": "2036-01-01",
+    "end_timestamp": "2100-12-31",
+    "activity": "damip",
+    "additional_allowed_model_components": [],
+    "branch_information": "Continue from esm-hist-GHG at the end of 2035 (branch at 2036-01-01), retaining the corresponding ensemble member name.",
+    "min_ensemble_size": 1,
+    "parent_activity": "damip",
+    "parent_experiment": "esm-hist-ghg",
+    "parent_mip_era": "cmip7",
+    "required_model_components": [
+        "aogcm",
+        "bgc"
+    ],
+    "tier": 3,
+    "min_number_yrs_per_sim": 65.0
+}
