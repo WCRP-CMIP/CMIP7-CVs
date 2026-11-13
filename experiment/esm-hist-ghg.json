@@ -2,7 +2,7 @@
     "@context": "000_context.jsonld",
     "id": "esm-hist-ghg",
     "type": "experiment",
-    "description": "Interactive-CO2 greenhouse gas emissions only experiment with historical CO2 emissions and changes in other well-mixed greenhouse gases only with all other forcings held fixed at piControl levels (an ESM version of hist-GHG).",
+    "description": "Interactive-CO2 greenhouse gas emissions only experiment with historical fossil fule CO2 emissions and changes in other well-mixed greenhouse gases only with all other forcings held fixed at piControl levels (an ESM version of hist-GHG).",
     "drs_name": "esm-hist-GHG",
     "start_timestamp": "1850-01-01",
     "end_timestamp": "2035-12-31",
