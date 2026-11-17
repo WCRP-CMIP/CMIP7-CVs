@@ -1,0 +1,5 @@
+{
+  "@context": "000_context.jsonld",
+  "id": "kiost_esm2",
+  "type": "model"
+}
