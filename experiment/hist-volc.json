@@ -1,0 +1,21 @@
+{
+    "@context": "000_context.jsonld",
+    "id": "hist-volc",
+    "type": "experiment",
+    "description": "Historical experiment with time-varying volcanic stratospheric aerosol forcing only; all other forcings held at pre-industrial levels.  For 1850-2021 use CMIP7 historical forcing datasets and for 2022-2035 use the Medium scenario.",
+    "drs_name": "hist-volc",
+    "start_timestamp": "1850-01-01",
+    "end_timestamp": "2035-12-31",
+    "activity": "damip",
+    "additional_allowed_model_components": [],
+    "branch_information": "Initialize from an equilibrated pre-industrial control state at a specified branch time; use independent initial conditions for ensemble members",
+    "min_ensemble_size": 3,
+    "parent_activity": "cmip",
+    "parent_experiment": "picontrol",
+    "parent_mip_era": "cmip7",
+    "required_model_components": [
+        "aogcm"
+    ],
+    "tier": 3,
+    "min_number_yrs_per_sim": 186.0
+}
