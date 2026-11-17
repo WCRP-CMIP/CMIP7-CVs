@@ -1,0 +1,22 @@
+{
+    "@context": "000_context.jsonld",
+    "id": "esm-medium-o3",
+    "type": "experiment",
+    "description": "Extension of esm-hist-O3 to 2100 with prescribed full-column ozone concentrations following the Medium scenario and other forcings held fixed at pre-industrial values.  Atmospheric CO2 evolves interactively.",
+    "drs_name": "esm-Medium-O3",
+    "start_timestamp": "2036-01-01",
+    "end_timestamp": "2100-12-31",
+    "activity": "damip",
+    "additional_allowed_model_components": [],
+    "branch_information": "Continue from esm-hist-O3 at the end of 2035 (branch at 2036-01-01) and retain the corresponding ensemble member name.",
+    "min_ensemble_size": 1,
+    "parent_activity": "damip",
+    "parent_experiment": "esm-hist-o3",
+    "parent_mip_era": "cmip7",
+    "required_model_components": [
+        "aogcm",
+        "bgc"
+    ],
+    "tier": 3,
+    "min_number_yrs_per_sim": 65.0
+}
