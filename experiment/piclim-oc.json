@@ -3,10 +3,8 @@
     "id": "piclim-oc",
     "type": "experiment",
     "description": "In combination with `piClim-control`, quantifies present-day organic carbon (OC) aerosol effective radiative forcing (ERF). Same as `piClim-control`, except anthropogenic OC emissions use present-day values (2021 values for CMIP7). All other aerosol precursor emissions remain at 1850 values.",
-    "branch_information": "Same as `piClim-control`",
+    "branch_information": "Use the same branch point as you used for `piClim-control`",
     "min_ensemble_size": 1,
-    "parent_activity": "cmip",
-    "parent_experiment": "picontrol",
     "parent_mip_era": "cmip7",
     "tier": 1
 }
