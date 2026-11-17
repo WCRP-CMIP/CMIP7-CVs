@@ -1,0 +1,22 @@
+{
+    "@context": "000_context.jsonld",
+    "id": "flat10-rad",
+    "type": "experiment",
+    "description": "Radiatively coupled (RAD) version of esm-flat10. Driven by prescribed CO2 concentration taken from the esm-flat10 of the ESM (i.e. the carbon cycle only 'sees' the change in climate, not any change in atmospheric carbon dioxide). All other conditions are kept the same as piControl.\".\n\nThis provides the opportunity to diagnose climate-carbon cycle feedbacks from the flat10 simulations by having a RAD variant with identical CO2 concentration. It partners the flat10-bgc variant.",
+    "drs_name": "flat10-rad",
+    "start_timestamp": "1850-01-01",
+    "end_timestamp": "1999-12-31",
+    "activity": "c4mip",
+    "additional_allowed_model_components": [],
+    "branch_information": "this experiment should run exactly parallel to the esm-flat10 simulation, branching from the same point of esm-piControl. It should run for 150 years using prescribed CO2 concentration taken from the ESM's esm-flat10 simulation, run in RAD mode (only radiation scheme sees changing CO2).",
+    "min_ensemble_size": 1,
+    "parent_activity": "cmip",
+    "parent_experiment": "esm-picontrol",
+    "parent_mip_era": null,
+    "required_model_components": [
+        "aogcm",
+        "bgc"
+    ],
+    "tier": 1,
+    "min_number_yrs_per_sim": 150.0
+}
