@@ -3,13 +3,16 @@
     "id": "cfmip",
     "type": "activity",
     "experiments": [
+        "a4sstice",
+        "a4sstice-4xco2",
         "abrupt-0p5xco2",
         "abrupt-2xco2",
         "amip-m4k",
         "amip-p4k",
         "amip-p4k-sst-rad",
         "amip-p4k-sst-turb",
-        "amip-piforcing"
+        "amip-piforcing",
+        "pisst-pxk"
     ],
     "references": [
         "cfmip_cmip7_ref_000",
