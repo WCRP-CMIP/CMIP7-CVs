@@ -3,9 +3,24 @@
     "id": "damip",
     "type": "activity",
     "experiments": [
+        "esm-hist-aer",
+        "esm-hist-ghg",
+        "esm-hist-lu",
+        "esm-hist-nat",
+        "esm-hist-o3",
+        "esm-hist-volc",
+        "esm-medium-aer",
+        "esm-medium-ghg",
+        "esm-medium-o3",
         "hist-aer",
         "hist-ghg",
-        "hist-nat"
+        "hist-lu",
+        "hist-nat",
+        "hist-o3",
+        "hist-volc",
+        "medium-aer",
+        "medium-ghg",
+        "medium-o3"
     ],
     "references": [
         "damip_cmip7_ref_000"
