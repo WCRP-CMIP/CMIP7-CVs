@@ -1,0 +1,24 @@
+{
+    "@context": "000_context.jsonld",
+    "id": "highresmip",
+    "type": "activity",
+    "description": "HighResMIP is an international intercomparison project, developed initially for CMIP6, focussing on understanding the role of horizontal resolution in climate simulation. In CMIP6 we requested pairs of low and high resolution simulations with minimal model tuning. In CMIP7 we encourage groups to produce the best high resolution simulation they can, with a lower resolution counterpart as optional, and fewer compromises in experimental designs.",
+    "drs_name": "HighResMIP",
+    "experiments": [
+        "highressst-present",
+        "spinup-1950",
+        "control-1950",
+        "hist-1950",
+        "highres-future-scen7-m",
+        "highressst-p4k-uni",
+        "abrupt-4xco2-1950",
+        "highres-yr2020",
+        "highres-yr2020-p4kuni",
+        "highressst-p2k-pat",
+        "highressst-p4k-pat"
+    ],
+    "urls": [
+        "https://gmd.copernicus.org/articles/9/4185/2016/",
+        "https://gmd.copernicus.org/articles/18/1307/2025/"
+    ]
+}
