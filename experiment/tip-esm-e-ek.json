@@ -1,0 +1,25 @@
+{
+    "@context": "000_context.jsonld",
+    "id": "tip-esm-e-ek",
+    "type": "experiment",
+    "description": "Zero CO2 emissions simulation starting at 5° GWL, branching off from ramp-up.",
+    "drs_name": "tip-esm-E-ek",
+    "start_timestamp": null,
+    "end_timestamp": null,
+    "activity": "tipmip",
+    "additional_allowed_model_components": [
+        "aer",
+        "chem"
+    ],
+    "branch_information": null,
+    "min_ensemble_size": 1,
+    "parent_activity": "tipmip",
+    "parent_experiment": "tip-esm-e-e",
+    "parent_mip_era": null,
+    "required_model_components": [
+        "aogcm",
+        "bgc"
+    ],
+    "tier": 1,
+    "min_number_yrs_per_sim": 300.0
+}
