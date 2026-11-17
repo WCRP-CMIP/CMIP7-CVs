@@ -1,0 +1,21 @@
+{
+    "@context": "000_context.jsonld",
+    "id": "medium-o3",
+    "type": "experiment",
+    "description": "Extension of hist-O3 using tropospheric and stratospheric ozone concentrations from the CMIP7 Medium scenario through 2100; all other forcings remain at pre-industrial levels.",
+    "drs_name": "Medium-O3",
+    "start_timestamp": "2036-01-01",
+    "end_timestamp": "2100-12-31",
+    "activity": "damip",
+    "additional_allowed_model_components": [],
+    "branch_information": "Continue from hist-O3 at the end of 2035 (branch at 2036-01-01) and retain the corresponding ensemble member name.",
+    "min_ensemble_size": 1,
+    "parent_activity": "damip",
+    "parent_experiment": "hist-o3",
+    "parent_mip_era": "cmip7",
+    "required_model_components": [
+        "aogcm"
+    ],
+    "tier": 3,
+    "min_number_yrs_per_sim": 65.0
+}
