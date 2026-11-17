@@ -1,0 +1,12 @@
+{
+    "@context": "000_context.jsonld",
+    "id": "piclim-2xbvoc",
+    "type": "experiment",
+    "description": "In combination with `piClim-control`, quantifies the radiative effect of natural biogenic volatile organic compound (BVOC) emissions, to estimate the strength of the associated climate feedback. Same as `piClim-control`, except BVOC emissions are doubled.",
+    "branch_information": "Same as `piClim-control`",
+    "min_ensemble_size": 1,
+    "parent_activity": "cmip",
+    "parent_experiment": "picontrol",
+    "parent_mip_era": "cmip7",
+    "tier": 1
+}
