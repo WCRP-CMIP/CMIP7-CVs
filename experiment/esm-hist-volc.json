@@ -1,0 +1,22 @@
+{
+    "@context": "000_context.jsonld",
+    "id": "esm-hist-volc",
+    "type": "experiment",
+    "description": "Interactive-CO2 experiment with historical volcanic forcing only and other forcings held fixed at 1850's levels, allowing carbon-cycle feedbacks.  For 1850-2021 use CMIP7 historical forcing datasets and for 2022-2035 use the Medium scenario.",
+    "drs_name": "esm-hist-volc",
+    "start_timestamp": "1850-01-01",
+    "end_timestamp": "2035-12-31",
+    "activity": "damip",
+    "additional_allowed_model_components": [],
+    "branch_information": "Initialize from an equilibrated pre-industrial control that has been run with interactive-CO2 at a specific branch time.  Use independent initial conditions for ensemble members.",
+    "min_ensemble_size": 3,
+    "parent_activity": "cmip",
+    "parent_experiment": "esm-picontrol",
+    "parent_mip_era": "cmip7",
+    "required_model_components": [
+        "aogcm",
+        "bgc"
+    ],
+    "tier": 3,
+    "min_number_yrs_per_sim": 186.0
+}
