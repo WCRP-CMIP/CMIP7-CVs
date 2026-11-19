@@ -1,0 +1,8 @@
+{
+    "@context": "000_context.jsonld",
+    "id": "a4sstice-4xco2",
+    "type": "experiment",
+    "min_number_yrs_per_sim": 30.0,
+    "min_ensemble_size": 1,
+    "tier": 1
+}
