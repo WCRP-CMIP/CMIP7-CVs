@@ -1,0 +1,12 @@
+{
+    "@context": "000_context.jsonld",
+    "id": "medium-ghg",
+    "type": "experiment",
+    "description": "Response to greenhouse gas forcing in the `scen7-m` scenario. All other conditions are kept the same as piControl.",
+    "start_timestamp": "2036-01-01",
+    "end_timestamp": "2100-12-31",
+    "min_number_yrs_per_sim": 65.0,
+    "min_ensemble_size": 1,
+    "parent_mip_era": "cmip7",
+    "tier": 3
+}
