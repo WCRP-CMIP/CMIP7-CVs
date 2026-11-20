@@ -33,7 +33,9 @@ jobs:
           # GITHUB_TOKEN: "${{ secrets.FORM_ACCESS_TOKEN }}"
           GITHUB_TOKEN: "${{ secrets.GITHUB_TOKEN }}"
           # Token authorising pull requests into the WCRP universe repository.
-          UNIVERSE_ACCESS_TOKEN: "${{ secrets.UNIVERSE_ACCESS_TOKEN }}"
+          # Uses the CMIP-IPO bot account so the pull requests and commits
+          # are made by the bot rather than a personal account.
+          UNIVERSE_ACCESS_TOKEN: "${{ secrets.CMIP_IPO_BOT_TOKEN }}"
           # Use the fork for testing if universe access token isn't working
           # UNIVERSE_ACCESS_TOKEN: "${{ secrets.UNIVERSE_ZNICHOLLSCR_ACCESS_TOKEN }}"
           GITHUB_REPOSITORY: ${{ github.repository }}
