@@ -7,7 +7,9 @@
         "1pctco2-rad",
         "esm-flat10",
         "esm-flat10-cdr",
-        "esm-flat10-zec"
+        "esm-flat10-zec",
+        "flat10-bgc",
+        "flat10-rad"
     ],
     "references": [
         "c4mip_cmip7_ref_000",
