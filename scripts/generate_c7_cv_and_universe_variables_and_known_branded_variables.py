@@ -54,6 +54,30 @@ PROJECT_ONLY_FIELDS = {
 }
 KNOWN_BRANDED_VARIABLE_PROJECT_ONLY_FIELDS = {"description", "frequency"}
 
+# Fields may be added here if a list is explicitly defined to be set-like and
+# list order should not trigger a project override.
+# ! Separate from the KnownBrandedVariable output-order preservation below.
+# Currently all shared Universe/project list fields are compared in order.
+UNORDERED_OVERLAY_LIST_FIELDS: set[str] = set()
+
+# These KnownBrandedVariable lists contain alternative metadata
+# values rather than an ordered sequence. Preserve their existing project-file
+# order when regeneration finds the same members in a different order,
+# to not trigger a seemingly CV update.
+UNORDERED_KNOWN_BRANDED_VARIABLE_LIST_FIELDS = {
+    "cell_measures",
+    "cell_methods",
+    "comment",
+    "compound_name",
+    "frequency",
+    "long_name",
+    # A branded variable may combine variants from different tables with different
+    # primary realms, so the aggregate list has (currently) no authoritative primary
+    # ordering:
+    "realm",
+    "table_id",
+}
+
 # Optional fields whose schema accepts a non-empty string or no value. Source
 # tables commonly represent the latter as ""; omit those values from emitted
 # JSON rather than relying on consumers to treat an empty string like null.
@@ -293,6 +317,22 @@ def clean_text(value: Any) -> str | None:
     return re.sub(r"\\(?![nrt\"\\/bfu])", "", text)
 
 
+def normalize_for_comparison(value: Any) -> Any:
+    """Return the emitted representation with horizontal whitespace normalized."""
+    value = to_ascii_latex_recursive(value)
+    if isinstance(value, str):
+        return re.sub(r"[^\S\r\n]+", " ", value)
+    if isinstance(value, list):
+        return [normalize_for_comparison(item) for item in value]
+    if isinstance(value, tuple):
+        return tuple(normalize_for_comparison(item) for item in value)
+    if isinstance(value, dict):
+        return {
+            key: normalize_for_comparison(item) for key, item in value.items()
+        }
+    return value
+
+
 def as_list(value: Any) -> list[Any]:
     if is_empty(value):
         return []
@@ -476,17 +516,45 @@ def project_overlay(
             full_payload.get("type") == "known_branded_variable"
             and key in KNOWN_BRANDED_VARIABLE_PROJECT_ONLY_FIELDS
         )
+        comparable_project_value = normalize_for_comparison(project_value)
+        comparable_universe_value = normalize_for_comparison(universe_value)
+        values_match = comparable_project_value == comparable_universe_value
         if (
-            key in PROJECT_ONLY_FIELDS
-            or is_known_project_field
-            or project_value != universe_value
+            key in UNORDERED_OVERLAY_LIST_FIELDS
+            and isinstance(comparable_project_value, list)
+            and isinstance(comparable_universe_value, list)
         ):
+            values_match = set(comparable_project_value) == set(
+                comparable_universe_value
+            )
+        if key in PROJECT_ONLY_FIELDS or is_known_project_field or not values_match:
             overlay[key] = project_value
             differences[key] = {
                 "universe": universe_value,
                 "cmip7": project_value,
             }
     return overlay, differences
+
+
+def preserve_existing_unordered_list_order(
+    candidate: dict[str, Any],
+    existing: dict[str, Any] | None,
+    fields: set[str],
+) -> dict[str, Any]:
+    """Retain existing order for set-like lists with unchanged membership."""
+    if existing is None:
+        return candidate
+    preserved = dict(candidate)
+    for field in fields:
+        candidate_value = candidate.get(field)
+        existing_value = existing.get(field)
+        if (
+            isinstance(candidate_value, list)
+            and isinstance(existing_value, list)
+            and set(candidate_value) == set(existing_value)
+        ):
+            preserved[field] = existing_value
+    return preserved
 
 
 def validate_payload(descriptor: str, payload: dict[str, Any]) -> None:
@@ -535,8 +603,15 @@ def emit_layered_payload(
     )
     overlay, differences = project_overlay(full_payload, universe_payload)
     report["overlay_differences"].setdefault(descriptor, {})[identifier] = differences
+    project_path = project_root / PROJECT_COLLECTIONS[descriptor] / f"{identifier}.json"
+    if descriptor == "known_branded_variable":
+        overlay = preserve_existing_unordered_list_order(
+            overlay,
+            read_json_if_exists(project_path),
+            UNORDERED_KNOWN_BRANDED_VARIABLE_LIST_FIELDS,
+        )
     emit(
-        project_root / PROJECT_COLLECTIONS[descriptor] / f"{identifier}.json",
+        project_path,
         overlay,
         dry_run=dry_run,
         report=report,
@@ -1663,6 +1738,9 @@ def build_known_payload(
                 cell_measures_values.append(add_measure)
         if cell_measures:
             cell_measures_values.append(cell_measures)
+        # Data Request primary realms are collected before supplemental CMOR
+        # modeling realms below. Preserve this order because consumers may
+        # interpret the first entry as the primary realm.
         realm = resolve_primary_realm(var, tables["Modelling Realm"])
         if realm:
             realm_values.append(realm)
