@@ -1738,9 +1738,10 @@ def build_known_payload(
                 cell_measures_values.append(add_measure)
         if cell_measures:
             cell_measures_values.append(cell_measures)
-        # Data Request primary realms are collected before supplemental CMOR
-        # modeling realms below. Preserve this order because consumers may
-        # interpret the first entry as the primary realm.
+        # Collect Data Request realms before supplemental CMOR modeling realms
+        # for deterministic output only. The aggregate realm list is
+        # membership-only; its first entry (currently) is not an authoritative
+        # primary realm.
         realm = resolve_primary_realm(var, tables["Modelling Realm"])
         if realm:
             realm_values.append(realm)
