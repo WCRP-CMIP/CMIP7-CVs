@@ -1,0 +1,18 @@
+{
+    "@context": "000_context.jsonld",
+    "id": "irrmip",
+    "type": "activity",
+    "description": "IRRMIP is an international intercomparison project dedicated to understand the impacts of irrigation on the Earth system. It was initially launched after CMIP6 and two experiments were required. In CMIP7, we encourage the groups to use the new version of their models to do Amip- and Cmip-style historical simulations.",
+    "drs_name": "IRRMIP",
+    "experiments": [
+        "amip-irr",
+        "amip-noirr",
+        "hist-irr",
+        "hist-noirr"
+    ],
+    "urls": [
+        "https://www.nature.com/articles/s41467-025-56356-1",
+        "https://www.nature.com/articles/s44221-025-00529-1",
+        "https://hydr.vub.be/projects/irrmip"
+    ]
+}
