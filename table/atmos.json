@@ -4,7 +4,7 @@
     "type": "table",
     "description": "CMIP7 atmos CMOR table.",
     "product": "model-output",
-    "table_date": "2026-07-21 13:16:24",
+    "table_date": "2026-11-19 11:22:16",
     "variable_entry": [
         "albisccp_tavg-u-hxy-cl",
         "aod550volso4_tavg-u-hxy-u",
@@ -164,6 +164,7 @@
         "phalf_tavg-alh-hxy-u",
         "phalf_tclm-alh-hxy-u",
         "phalf_tpt-alh-hs-u",
+        "phalf_tpt-alh-hxy-u",
         "pr17O_tavg-u-hxy-u",
         "pr18O_tavg-u-hxy-u",
         "pr2h_tavg-u-hxy-u",

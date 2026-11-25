@@ -1,0 +1,26 @@
+{
+    "@context": "000_context.jsonld",
+    "id": "phalf_tpt-alh-hxy-u",
+    "type": "known_branded_variable",
+    "long_name": [
+        "Pressure on Model Half-Levels"
+    ],
+    "table_id": [
+        "atmos"
+    ],
+    "compound_name": [
+        "atmos.phalf.tpt-alh-hxy-u.3hr.glb"
+    ],
+    "frequency": [
+        "3hr"
+    ],
+    "comment": [
+        "Air pressure on model half-levels"
+    ],
+    "cell_measures": [
+        "area: areacella"
+    ],
+    "realm": [
+        "atmos"
+    ]
+}

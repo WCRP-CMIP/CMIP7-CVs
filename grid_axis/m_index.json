@@ -2,5 +2,5 @@
     "@context": "000_context.jsonld",
     "id": "m_index",
     "type": "grid_axis",
-    "long_name": "fifth spatial index for variables stored on an unstructured grid"
+    "long_name": "cell index along fifth dimension"
 }
