@@ -1,8 +1,8 @@
 {
     "@context": "000_context.jsonld",
-    "id": "medium-aer",
+    "id": "scen7-m-ghg",
     "type": "experiment",
-    "description": "Response to aerosol forcing in the `scen7-m` scenario. All other conditions are kept the same as piControl.",
+    "description": "Response to greenhouse gas forcing in the `scen7-m` scenario. All other conditions are kept the same as piControl.",
     "start_timestamp": "2036-01-01",
     "end_timestamp": "2100-12-31",
     "min_number_yrs_per_sim": 65.0,

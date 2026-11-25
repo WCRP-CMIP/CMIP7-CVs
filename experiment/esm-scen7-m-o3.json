@@ -1,6 +1,6 @@
 {
     "@context": "000_context.jsonld",
-    "id": "esm-medium-o3",
+    "id": "esm-scen7-m-o3",
     "type": "experiment",
     "description": "Response to tropospheric and stratospheric ozone concentration changes (these are prescribed throughout the atmospheric column) forcing in the `esm-scen7-m` scenario. All other conditions are kept the same as esm-piControl.",
     "start_timestamp": "2036-01-01",
