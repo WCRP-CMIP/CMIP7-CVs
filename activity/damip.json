@@ -9,18 +9,18 @@
         "esm-hist-nat",
         "esm-hist-o3",
         "esm-hist-volc",
-        "esm-medium-aer",
-        "esm-medium-ghg",
-        "esm-medium-o3",
+        "esm-scen7-m-aer",
+        "esm-scen7-m-ghg",
+        "esm-scen7-m-o3",
         "hist-aer",
         "hist-ghg",
         "hist-lu",
         "hist-nat",
         "hist-o3",
         "hist-volc",
-        "medium-aer",
-        "medium-ghg",
-        "medium-o3"
+        "scen7-m-aer",
+        "scen7-m-ghg",
+        "scen7-m-o3"
     ],
     "references": [
         "damip_cmip7_ref_000"
