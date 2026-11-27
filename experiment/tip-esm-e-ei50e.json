@@ -1,0 +1,9 @@
+{
+    "@context": "000_context.jsonld",
+    "id": "tip-esm-e-ei50e",
+    "type": "experiment",
+    "min_number_yrs_per_sim": 200.0,
+    "min_ensemble_size": 1,
+    "parent_mip_era": "cmip7",
+    "tier": 1
+}

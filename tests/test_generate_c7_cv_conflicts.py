@@ -253,6 +253,141 @@ def test_project_overlay_omits_empty_values() -> None:
     assert "long_name" not in differences
 
 
+def test_project_overlay_ignores_emission_normalization_differences() -> None:
+    full_payload = {
+        "@context": "000_context.jsonld",
+        "id": "zos",
+        "type": "variable",
+        "description": "Converted to liquid seawater. \u00a0The liquid equivalent.",
+    }
+    universe_payload = {
+        **full_payload,
+        "description": "Converted to liquid seawater. The liquid equivalent.",
+    }
+
+    overlay, differences = generator.project_overlay(full_payload, universe_payload)
+
+    assert "description" not in overlay
+    assert "description" not in differences
+
+
+def test_project_overlay_keeps_formula_term_references_order_sensitive() -> None:
+    full_payload = {
+        "@context": "000_context.jsonld",
+        "id": "hybrid_sigma_ln_pressure_half",
+        "type": "model_level_coordinate",
+        "z_factors": ["b_half", "ps", "p0"],
+    }
+    universe_payload = {
+        **full_payload,
+        "z_factors": ["p0", "b_half", "ps"],
+    }
+
+    overlay, differences = generator.project_overlay(full_payload, universe_payload)
+
+    assert overlay["z_factors"] == ["b_half", "ps", "p0"]
+    assert "z_factors" in differences
+
+
+def test_project_overlay_can_compare_configured_lists_by_membership(
+    monkeypatch,
+) -> None:
+    monkeypatch.setattr(generator, "UNORDERED_OVERLAY_LIST_FIELDS", {"aliases"})
+    full_payload = {
+        "@context": "000_context.jsonld",
+        "id": "example",
+        "type": "variable",
+        "aliases": ["second", "first"],
+    }
+    universe_payload = {
+        **full_payload,
+        "aliases": ["first", "second"],
+    }
+
+    overlay, differences = generator.project_overlay(full_payload, universe_payload)
+
+    assert "aliases" not in overlay
+    assert "aliases" not in differences
+
+
+def test_project_overlay_retains_incomplete_formula_term_override() -> None:
+    full_payload = {
+        "@context": "000_context.jsonld",
+        "id": "hybrid_sigma_ln_pressure_half",
+        "type": "model_level_coordinate",
+        "z_factors": ["b_half", "ps"],
+    }
+    universe_payload = {
+        **full_payload,
+        "z_factors": ["p0", "b_half", "ps"],
+    }
+
+    overlay, differences = generator.project_overlay(full_payload, universe_payload)
+
+    assert overlay["z_factors"] == ["b_half", "ps"]
+    assert differences["z_factors"] == {
+        "universe": ["p0", "b_half", "ps"],
+        "cmip7": ["b_half", "ps"],
+    }
+
+
+def test_project_overlay_keeps_dimensions_order_sensitive() -> None:
+    full_payload = {
+        "@context": "000_context.jsonld",
+        "id": "tas",
+        "type": "known_branded_variable",
+        "dimensions": ["time", "latitude", "longitude"],
+    }
+    universe_payload = {
+        **full_payload,
+        "dimensions": ["time", "longitude", "latitude"],
+    }
+
+    overlay, differences = generator.project_overlay(full_payload, universe_payload)
+
+    assert overlay["dimensions"] == ["time", "latitude", "longitude"]
+    assert "dimensions" in differences
+
+
+def test_preserve_existing_unordered_branded_variable_list_order() -> None:
+    candidate = {
+        "compound_name": ["mon.tas", "day.tas"],
+        "frequency": ["mon", "day"],
+        "realm": ["atmos", "land"],
+        "dimensions": ["time", "latitude", "longitude"],
+    }
+    existing = {
+        "compound_name": ["day.tas", "mon.tas"],
+        "frequency": ["day", "mon"],
+        "realm": ["land", "atmos"],
+        "dimensions": ["time", "longitude", "latitude"],
+    }
+
+    preserved = generator.preserve_existing_unordered_list_order(
+        candidate,
+        existing,
+        generator.UNORDERED_KNOWN_BRANDED_VARIABLE_LIST_FIELDS,
+    )
+
+    assert preserved["compound_name"] == ["day.tas", "mon.tas"]
+    assert preserved["frequency"] == ["day", "mon"]
+    assert preserved["realm"] == ["land", "atmos"]
+    assert preserved["dimensions"] == ["time", "latitude", "longitude"]
+
+
+def test_changed_unordered_branded_variable_members_are_not_preserved() -> None:
+    candidate = {"comment": ["corrected comment"]}
+    existing = {"comment": ["old comment"]}
+
+    preserved = generator.preserve_existing_unordered_list_order(
+        candidate,
+        existing,
+        generator.UNORDERED_KNOWN_BRANDED_VARIABLE_LIST_FIELDS,
+    )
+
+    assert preserved["comment"] == ["corrected comment"]
+
+
 def test_known_branded_universe_payload_omits_optional_empty_values() -> None:
     payload = generator.universe_base_payload(
         {

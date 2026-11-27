@@ -1,0 +1,21 @@
+{
+    "@context": "000_context.jsonld",
+    "id": "tipmip",
+    "type": "activity",
+    "experiments": [
+        "tip-esm-e-e",
+        "tip-esm-e-ec",
+        "tip-esm-e-ee",
+        "tip-esm-e-ee50e",
+        "tip-esm-e-eg",
+        "tip-esm-e-ei",
+        "tip-esm-e-ei50e",
+        "tip-esm-e-ei50ee",
+        "tip-esm-e-ek"
+    ],
+    "references": [
+        "tipmip_cmip7_ref_000",
+        "tipmip_cmip7_ref_001",
+        "tipmip_cmip7_ref_002"
+    ]
+}

@@ -4,7 +4,7 @@
     "type": "table",
     "description": "CMIP7 ocnBgchem CMOR table.",
     "product": "model-output",
-    "table_date": "2026-07-21 13:16:24",
+    "table_date": "2026-11-19 11:22:16",
     "variable_entry": [
         "arag_tavg-ol-hxy-sea",
         "arag_tavg-ols-hxy-sea",
